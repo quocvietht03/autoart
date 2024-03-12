@@ -8,5 +8,5 @@
 </head>
 <body <?php body_class() ?>>
 	<?php wp_body_open(); ?>
-	<div class="bt-site">
+	<div class="bt-site bt-site-main">
 		<?php get_template_part( 'framework/templates/site', 'header'); ?>
