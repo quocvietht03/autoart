@@ -19,18 +19,34 @@
       <!--View current page-->
       <input type="hidden" class="bt-car-current-page" name="current_page" value="<?php echo isset($_GET['current_page']) ? $_GET['current_page'] : 1; ?>">
 
-      <!--Min-Max Year-->
-      <input type="hidden" class="bt-car-min-year" name="min_year" value="<?php if(isset($_GET['min_year'])) echo $_GET['min_year']; ?>">
-      <input type="hidden" class="bt-car-max-year" name="max_year" value="<?php if(isset($_GET['max_year'])) echo $_GET['max_year']; ?>">
-      <?php autoart_cars_field_slider_html(); ?>
+      <?php
+        $field_title = __('Filter by Year', 'autoart');
+        $field_min_value = (isset($_GET['year_min'])) ? $_GET['year_min'] : '';
+        $field_max_value = (isset($_GET['year_max'])) ? $_GET['year_max'] : '';
+        autoart_cars_field_slider_html('car_year', $field_title, $field_min_value, $field_max_value);
 
-      <!--Min-Max Price-->
-      <input type="hidden" class="bt-car-min-price" name="min_price" value="<?php if(isset($_GET['min_price'])) echo $_GET['min_price']; ?>">
-      <input type="hidden" class="bt-car-max-price" name="max_price" value="<?php if(isset($_GET['max_price'])) echo $_GET['max_price']; ?>">
+        $field_title = __('Filter by Price', 'autoart');
+        $field_min_value = (isset($_GET['price_min'])) ? $_GET['price_min'] : '';
+        $field_max_value = (isset($_GET['price_max'])) ? $_GET['price_max'] : '';
+        autoart_cars_field_slider_html('car_price', $field_title, $field_min_value, $field_max_value);
 
-      <!--Min-Max Mileage-->
-      <input type="hidden" class="bt-car-min-mileage" name="min_mileage" value="<?php if(isset($_GET['min_mileage'])) echo $_GET['min_mileage']; ?>">
-      <input type="hidden" class="bt-car-max-mileage" name="max_mileage" value="<?php if(isset($_GET['max_mileage'])) echo $_GET['max_mileage']; ?>">
+        $field_title = __('Filter by Mileage', 'autoart');
+        $field_min_value = (isset($_GET['mileage_min'])) ? $_GET['mileage_min'] : '';
+        $field_max_value = (isset($_GET['mileage_max'])) ? $_GET['price_max'] : '';
+        autoart_cars_field_slider_html('car_mileage', $field_title, $field_min_value, $field_max_value);
+
+        $field_name = __('Body', 'autoart');
+        $field_value = (isset($_GET['body'])) ? $_GET['body'] : '';
+        autoart_cars_field_select_html('car_body', $field_name, $field_value);
+
+        $field_name = __('Condition', 'autoart');
+        $field_value = (isset($_GET['condition'])) ? $_GET['condition'] : '';
+        autoart_cars_field_select_html('car_condition', $field_name, $field_value);
+
+        $field_name = __('Model', 'autoart');
+        $field_value = (isset($_GET['model'])) ? $_GET['model'] : '';
+        autoart_cars_field_select_html('car_model', $field_name, $field_value);
+      ?>
 
       <div class="bt-car-action-units">
         <a href="#" class="bt-reset-btn disable">

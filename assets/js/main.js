@@ -78,6 +78,53 @@
 		}
 	}
 
+	/*  */
+	function AutoArtCarsFilter() {
+		if (!$('body').hasClass('post-type-archive-car')) {
+			return;
+		}
+
+		if($('.bt-field-type-slider').length > 0) {
+			$('.bt-field-type-slider').each(function(){
+				var metaKey = $(this).data('meta-key'),
+						slider = document.getElementById('bt_field_slider_' + metaKey),
+	          startMin = $(this).data('start-min'),
+	          startMax = $(this).data('start-max'),
+	          rangeMin = $(this).data('range-min'),
+	          rangeMax = $(this).data('range-max');
+
+	      noUiSlider.create(slider, {
+	          start: [startMin, startMax],
+	          step: 1,
+	          connect: true,
+	          range: {
+	              'min': rangeMin,
+	              'max': rangeMax
+	          }
+	      });
+
+	      slider.noUiSlider.on('update', function(values, handle) {
+					document.getElementById('bt_min_value_' + metaKey).innerHTML = parseInt(values[0]);
+        	document.getElementById('bt_max_value_' + metaKey).innerHTML = parseInt(values[1]);
+	      });
+
+	      slider.noUiSlider.on('change', function(values, handle) {
+	        $('#bt_field_min_value_' + metaKey).val(parseInt(values[0]));
+	        $('#bt_field_max_value_' + metaKey).val(parseInt(values[1]));
+	        $('.bt-car-filter-form').submit();
+	      });
+			});
+    }
+
+		if($('.bt-field-type-select').length > 0) {
+			$('.bt-field-type-select select').select2();
+
+			$('.bt-field-type-select select').on('change', function() {
+	      $('.bt-car-filter-form').submit();
+	    });
+		}
+	}
+
 	/* Orbit effect */
 	function AutoArtOrbitEffect() {
 		if($('.bt-orbit-enable').length > 0) {
@@ -168,6 +215,7 @@
     AutoArtToggleSubMenuMobile();
 		AutoArtTabs();
 		AutoArtCloseSection();
+		AutoArtCarsFilter();
 		AutoArtOrbitEffect();
 		AutoArtCursorEffect();
 		AutoArtBubleEffect();

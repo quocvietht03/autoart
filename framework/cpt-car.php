@@ -239,52 +239,96 @@ function autoart_car_column_display( $car_columns, $post_id ) {
 add_action( 'manage_car_posts_custom_column', 'autoart_car_column_display', 10, 2 );
 
 /* Cars filter on archive page */
-function autoart_cars_field_slider_html($slug = '', $title = '', $params = array()) {
-    if(empty($slug)) {
-      return;
+function autoart_end_meta_value($end = 'max', $meta_key) {
+	if(empty($meta_key)) {
+		return;
+	}
+
+	$query_args = array(
+		'post_type' => 'car',
+		'post_status' => 'publish',
+		'posts_per_page' => 1,
+		'meta_key' => $meta_key,
+		'orderby' => 'meta_value_num',
+		'order' => $end == 'max' ? 'DESC' : 'ASC',
+	);
+
+	$wp_query = new \WP_Query($query_args);
+	if ( $wp_query->have_posts() ) {
+    while ( $wp_query->have_posts() ) { $wp_query->the_post();
+      return get_field($meta_key, get_the_ID()) ;
     }
+	}
 
-    $terms = get_terms( array(
-      'taxonomy' => $slug,
-      'hide_empty' => false
-    ) );
+	return 0;
+}
 
-    if(!empty($terms)) {
-      $min_value = $max_value = $count = 0;
+function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $field_min_value = '', $field_max_value = '') {
+	if(empty($meta_key)) {
+	  return;
+	}
 
-        foreach ($terms as $term) {
-          if($count == 0) {
-            $min_value = $max_value = intval(trim($term->name));
-          } else {
-            if($min_value > intval(trim($term->name))) {
-              $min_value = intval(trim($term->name));
-            }
+	$min_value = autoart_end_meta_value('min', $meta_key);
+	$max_value = autoart_end_meta_value('max', $meta_key);
 
-            if($max_value < intval(trim($term->name))) {
-              $max_value = intval(trim($term->name));
-            }
-          }
-          $count++;
-        }
-    }
+	if($min_value == $max_value) {
+		return;
+	}
 
-    $start_min_value = !empty($params['min_value']) ? intval(trim($params['min_value'])) : $min_value;
-    $start_max_value = !empty($params['max_value']) ? intval(trim($params["max_value"])) : $max_value;
-    
+  $start_min_value = !empty($field_min_value) ? $field_min_value : $min_value;
+  $start_max_value = !empty($field_max_value) ? $field_max_value : $max_value;
+
+  ?>
+	<input type="hidden" id="<?php echo 'bt_field_min_value_' . $meta_key; ?>" name="<?php echo str_replace('car_', '', $meta_key). '_min'; ?>" value="<?php echo esc_attr($field_min_value); ?>">
+	<input type="hidden" id="<?php echo 'bt_field_max_value_' . $meta_key; ?>" name="<?php echo str_replace('car_', '', $meta_key). '_max'; ?>" value="<?php echo esc_attr($field_max_value); ?>">
+
+	<div class="bt-form-field bt-field-type-slider <?php echo 'bt-field-' . $meta_key; ?>" data-meta-key= "<?php echo esc_attr($meta_key); ?>" data-range-min="<?php echo intval($min_value); ?>" data-range-max="<?php echo intval($max_value); ?>"  data-start-min="<?php echo intval($start_min_value); ?>" data-start-max="<?php echo intval($start_max_value); ?>">
+    <?php
+      if(!empty($field_title)) {
+        echo '<h3 class="bt-field-title">' . $field_title . '</h3>';
+      }
     ?>
-    <div class="bt-field-slider <?php echo 'bt-field-' . $slug; ?>" data-range-min="<?php echo $min_value; ?>" data-range-max="<?php echo $max_value; ?>"  data-start-min="<?php echo $start_min_value; ?>" data-start-max="<?php echo $start_max_value; ?>">
-      <?php
-        if(!empty($title)) {
-          echo '<h3 class="bt-field-title">' . $title . '</h3>';
-        }
-      ?>
-      <div class="bt-field-slider"></div>
-      <div class="bt-labels-slide">
-        <span class="bt-min-value"></span>
-        <span class="bt-max-value"></span>
-      </div>
+    <div id="<?php echo 'bt_field_slider_' . $meta_key; ?>" class="bt-field-slider"></div>
+    <div class="bt-labels-slider">
+      <span  id="<?php echo 'bt_min_value_' . $meta_key; ?>" class="bt-min-value"></span>
+      <span  id="<?php echo 'bt_max_value_' . $meta_key; ?>" class="bt-max-value"></span>
     </div>
+  </div>
   <?php
+}
+
+function autoart_cars_field_select_html($slug = '', $field_name = '', $field_value = '') {
+	if(empty($slug)) {
+    return;
+  }
+
+	$terms = get_terms( array(
+	  'taxonomy' => $slug,
+	  'hide_empty' => true
+	) );
+
+	if(!empty($terms)) {
+	  ?>
+		<div class="bt-form-field bt-field-type-select <?php echo 'bt-field-' . $slug; ?>">
+			<select name="<?php echo str_replace('car_', '', $slug); ?>">
+		    <option value="">
+		      <?php echo $field_name; ?>
+		    </option>
+		    <?php foreach ($terms as $term) { ?>
+		      <?php if($term->slug == $field_value){ ?>
+		        <option value="<?php echo $term->slug; ?>" selected="selected">
+		          <?php echo $term->name; ?>
+		        </option>
+		      <?php } else { ?>
+		        <option value="<?php echo $term->slug; ?>">
+		          <?php echo $term->name; ?>
+		        </option>
+		      <?php } ?>
+		    <?php } ?>
+		  </select>
+		</div>
+	  <?php
+	}
 }
 
 function autoart_cars_pagination($current_page, $total_page) {

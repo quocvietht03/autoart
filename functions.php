@@ -41,13 +41,17 @@ if (!function_exists('autoart_enqueue_scripts')) {
 		global $autoart_options;
 
 		if(is_singular('product')) {
-			/* Slick Slider */
 			wp_enqueue_script('slick-slider', get_template_directory_uri().'/assets/libs/slick/slick.min.js', array('jquery'), '', true);
 			wp_enqueue_style('slick-slider', get_template_directory_uri(). '/assets/libs/slick/slick.css',array(), false);
 
-			/* Slick Slider */
 			wp_enqueue_script('zoom-master', get_template_directory_uri().'/assets/libs/zoom-master/jquery.zoom.min.js', array('jquery'), '', true);
 		}
+
+		wp_enqueue_script('select2', get_template_directory_uri().'/assets/libs/nouislider/select2.min.js', array('jquery'), '', true);
+		wp_enqueue_style('select2', get_template_directory_uri(). '/assets/libs/nouislider/select2.min.css',array(), false);
+
+		wp_enqueue_script('nouislider', get_template_directory_uri().'/assets/libs/nouislider/nouislider.min.js', array('jquery'), '', true);
+		wp_enqueue_style('nouislider', get_template_directory_uri(). '/assets/libs/nouislider/nouislider.min.css',array(), false);
 
 		/* Fonts */
 		wp_enqueue_style('autoart-fonts', autoart_fonts_url(), false );
