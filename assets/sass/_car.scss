@@ -1,0 +1,47 @@
+.bt-car-search-box {
+  .bt-car-search-title {
+
+  }
+  .bt-car-search-form {
+
+  }
+  .bt-car-search-button {
+    svg {
+      width: 24px;
+      height: auto;
+    }
+  }
+}
+
+.bt-car-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .bt-car-sort-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .bt-car-view-block {
+    display: flex;
+    gap: 10px;
+    .bt-view-type {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      &.active {
+        background: #f0f2f5;
+      }
+      svg {
+        width: 24px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.post-type-archive-car {
+
+}

@@ -102,7 +102,7 @@ function autoart_car_taxonomy() {
 	);
 
   register_taxonomy(
-		"car_trans",
+		"car_transmission",
 		array("car"),
 		array(
 			"hierarchical"   => true,
@@ -312,20 +312,51 @@ function autoart_cars_field_select_html($slug = '', $field_name = '', $field_val
 		<div class="bt-form-field bt-field-type-select <?php echo 'bt-field-' . $slug; ?>">
 			<select name="<?php echo str_replace('car_', '', $slug); ?>">
 		    <option value="">
-		      <?php echo $field_name; ?>
+		      <?php echo esc_html($field_name); ?>
 		    </option>
 		    <?php foreach ($terms as $term) { ?>
 		      <?php if($term->slug == $field_value){ ?>
-		        <option value="<?php echo $term->slug; ?>" selected="selected">
-		          <?php echo $term->name; ?>
+		        <option value="<?php echo esc_attr($term->slug); ?>" selected="selected">
+		          <?php echo esc_html($term->name); ?>
 		        </option>
 		      <?php } else { ?>
-		        <option value="<?php echo $term->slug; ?>">
-		          <?php echo $term->name; ?>
+		        <option value="<?php echo esc_attr($term->slug); ?>">
+		          <?php echo esc_html($term->name); ?>
 		        </option>
 		      <?php } ?>
 		    <?php } ?>
 		  </select>
+		</div>
+	  <?php
+	}
+}
+
+function autoart_cars_field_multiple_html($slug = '', $field_title = '', $field_value = '') {
+	if(empty($slug)) {
+    return;
+  }
+
+	$terms = get_terms( array(
+	  'taxonomy' => $slug,
+	  'hide_empty' => true
+	) );
+
+	if(!empty($terms)) {
+		if(!empty($field_title)) {
+			echo '<h3 class="bt-field-title">' . $field_title . '</h3>';
+		}
+	  ?>
+		<div class="bt-form-field bt-field-type-multi" data-name="<?php echo str_replace('car_', '', $slug); ?>">
+			<?php foreach ($terms as $term) { ?>
+				<div class="bt-field-item <?php echo 'bt-field-' . $term->slug; ?>">
+					<?php if(str_contains($field_value, $term->slug)){ ?>
+						<input type="checkbox" id="<?php echo 'bt-field-' . $term->slug; ?>" name="<?php echo str_replace('car_', '', $slug); ?>" value="<?php echo esc_attr($term->slug); ?>" checked>
+					<?php } else { ?>
+						<input type="checkbox" id="<?php echo 'bt-field-' . $term->slug; ?>" name="<?php echo str_replace('car_', '', $slug); ?>" value="<?php echo esc_attr($term->slug); ?>">
+					<?php } ?>
+				  <label for="<?php echo 'bt-field-' . $term->slug; ?>"> <?php echo esc_html($term->name); ?></label>
+				</div>
+			<?php } ?>
 		</div>
 	  <?php
 	}
@@ -338,7 +369,7 @@ function autoart_cars_pagination($current_page, $total_page) {
 
   ob_start();
   ?>
-    <nav class="bt-pagination" role="navigation">
+    <nav class="bt-pagination bt-car-pagination" role="navigation">
       <?php if(1 != $current_page){ ?>
         <a class="prev page-numbers" href="#" data-page="<?php echo $current_page - 1; ?>"><svg width="19" height="16" viewBox="0 0 19 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.71889 15.782L10.4536 15.0749C10.6275 14.9076 10.6275 14.6362 10.4536 14.4688L4.69684 8.92851L17.3672 8.92852C17.6131 8.92852 17.8125 8.73662 17.8125 8.49994L17.8125 7.49994C17.8125 7.26326 17.6131 7.07137 17.3672 7.07137L4.69684 7.07137L10.4536 1.53101C10.6275 1.36366 10.6275 1.0923 10.4536 0.924907L9.71889 0.2178C9.545 0.0504438 9.26304 0.0504438 9.08911 0.2178L1.31792 7.69691C1.14403 7.86426 1.14403 8.13562 1.31792 8.30301L9.08914 15.782C9.26304 15.9494 9.545 15.9494 9.71889 15.782Z"></path></svg> <?php echo esc_html__('Prev', 'autoart'); ?></a>
@@ -348,104 +379,58 @@ function autoart_cars_pagination($current_page, $total_page) {
         for($i = 1; $i <= $total_page; $i++){
           if(7 > $total_page){
             if($i == $current_page){
-              ?>
-                <span class="page-numbers current">
-                  <?php echo $i; ?>
-                </span>
-              <?php
+              echo '<span class="page-numbers current">' . $i . '</span>';
             } else {
-              ?>
-                <a class="page-numbers" href="#" data-page="<?php echo $i; ?>">
-                  <?php echo $i; ?>
-                </a>
-              <?php
+              echo '<a class="page-numbers" href="#" data-page="' . $i . '">' . $i . '</a>';
             }
           } else {
             if($i == $current_page){
-              ?>
-                <span class="page-numbers current">
-                  <?php echo $i; ?>
-                </span>
-              <?php
+              echo '<span class="page-numbers current">' . $i . '</span>';
             }
 
             if(5 > $current_page){
               if($i != $current_page && $i < $current_page + 3){
-                ?>
-                  <a class="page-numbers" href="#" data-page="<?php echo $i; ?>">
-                    <?php echo $i; ?>
-                  </a>
-                <?php
+                echo '<a class="page-numbers" href="#" data-page="' . $i . '">' . $i . '</a>';
               }
 
               if($i == $current_page + 3){
-                ?>
-                  <span class="page-numbers dots">...</span>
-                <?php
+                echo '<span class="page-numbers dots">...</span>';
               }
 
               if($i == $total_page ){
-                ?>
-                  <a class="page-numbers" href="#" data-page="<?php echo $i; ?>">
-                    <?php echo $i; ?>
-                  </a>
-                <?php
+                echo '<a class="page-numbers" href="#" data-page="' . $i . '">' . $i . '</a>';
               }
             }
 
             if($total_page - 4 < $current_page){
               if($i != $current_page && $i > $current_page - 3){
-                ?>
-                  <a class="page-numbers" href="#" data-page="<?php echo $i; ?>">
-                    <?php echo $i; ?>
-                  </a>
-                <?php
+                echo '<a class="page-numbers" href="#" data-page="' . $i . '">' . $i . '</a>';
               }
 
               if($i == $current_page - 3){
-                ?>
-                  <span class="page-numbers dots">...</span>
-                <?php
+                echo '<span class="page-numbers dots">...</span>';
               }
 
               if($i == 1 ){
-                ?>
-                  <a class="page-numbers" href="#" data-page="<?php echo $i; ?>">
-                    <?php echo $i; ?>
-                  </a>
-                <?php
+                echo '<a class="page-numbers" href="#" data-page="' . $i . '">' . $i . '</a>';
               }
             }
 
             if($total_page - 4 >= $current_page && 5 <= $current_page ){
               if($i != $current_page && $i > $current_page - 3 && $i < $current_page + 3){
-                ?>
-                  <a class="page-numbers" href="#" data-page="<?php echo $i; ?>">
-                    <?php echo $i; ?>
-                  </a>
-                <?php
+                echo '<a class="page-numbers" href="#" data-page="' . $i . '">' . $i . '</a>';
               }
 
               if($i == $current_page - 3 || $i == $current_page + 3){
-                ?>
-                  <span class="page-numbers dots">...</span>
-                <?php
+                echo '<span class="page-numbers dots">...</span>';
               }
 
               if($i == 1 ){
-                ?>
-                  <a class="page-numbers" href="#" data-page="<?php echo $i; ?>">
-                    <?php echo $i; ?>
-                  </a>
-                <?php
+                echo '<a class="page-numbers" href="#" data-page="' . $i . '">' . $i . '</a>';
               }
 
               if($i == $total_page ){
-                ?>
-                  <a class="page-numbers" href="#" data-page="<?php echo $i; ?>">
-                    <?php echo $i; ?>
-                  </a>
-                <?php
+                echo '<a class="page-numbers" href="#" data-page="' . $i . '">' . $i . '</a>';
               }
             }
           }
@@ -465,9 +450,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
   $query_args = array(
     'post_type' => 'car',
     'post_status' => 'publish',
-    'posts_per_page' => $limit,
-    'orderby' => 'date',
-    'order' => 'DESC',
+    'posts_per_page' => $limit
   );
 
   if(isset($params['current_page']) && $params['current_page'] != '') {
@@ -478,36 +461,51 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_args['s'] = $params['search_keyword'];
   }
 
-  if(isset($params['sort']) && $params['sort'] == 'date_low') {
-    $query_args['orderby'] = 'date';
-    $query_args['order'] = 'ASC';
-  }
+	if(isset($params['sort_order']) && $params['sort_order'] != '') {
+		if($params['sort_order'] == 'date_high' || $params['sort_order'] == 'date_low') {
+	    $query_args['orderby'] = 'date';
 
-  if(isset($params['sort']) && ($params['sort'] == 'mileage_high' || $params['sort'] == 'mileage_low')) {
-    $query_args['meta_key'] = 'car_mileage';
-    $query_args['orderby'] = 'meta_value_num';
+			if($params['sort_order'] == 'date_high') {
+		    $query_args['order'] = 'DESC';
+			} else {
+				$query_args['order'] = 'ASC';
+			}
+	  }
 
-    if($params['sort'] == 'mileage_high') {
-      $query_args['order'] = 'DESC';
-    } else {
-      $query_args['order'] = 'ASC';
-    }
-  }
+		if($params['sort_order'] == 'mileage_high' || $params['sort_order'] == 'mileage_low') {
+	    $query_args['meta_key'] = 'car_mileage';
+	    $query_args['orderby'] = 'meta_value_num';
 
-  if(isset($params['sort']) && ($params['sort'] == 'price_high' || $params['sort'] == 'price_low')) {
-    $query_args['meta_key'] = 'car_price';
-    $query_args['orderby'] = 'meta_value_num';
+	    if($params['sort_order'] == 'mileage_high') {
+	      $query_args['order'] = 'DESC';
+	    } else {
+	      $query_args['order'] = 'ASC';
+	    }
+	  }
 
-    if($params['sort'] == 'price_high') {
-      $query_args['order'] = 'DESC';
-    } else {
-      $query_args['order'] = 'ASC';
-    }
-  }
+		if($params['sort_order'] == 'price_high' || $params['sort_order'] == 'price_low') {
+	    $query_args['meta_key'] = 'car_price';
+	    $query_args['orderby'] = 'meta_value_num';
+
+	    if($params['sort_order'] == 'price_high') {
+	      $query_args['order'] = 'DESC';
+	    } else {
+	      $query_args['order'] = 'ASC';
+	    }
+	  }
+	}
 
   $query_tax = array();
 
-  if(isset($params['body']) && !empty($params['body'])) {
+	if(isset($params['categories']) && $params['categories'] != '') {
+    $query_tax[] = array(
+      'taxonomy' => 'car_categories',
+      'field' => 'slug',
+      'terms' => explode(',', $params['categories'])
+    );
+  }
+
+  if(isset($params['body']) && $params['body'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_body',
       'field' => 'slug',
@@ -515,7 +513,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['condition']) && !empty($params['condition'])) {
+  if(isset($params['condition']) && $params['condition'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_condition',
       'field' => 'slug',
@@ -523,7 +521,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['make']) && !empty($params['make'])) {
+  if(isset($params['make']) && $params['make'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_make',
       'field' => 'slug',
@@ -531,7 +529,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['model']) && !empty($params['model'])) {
+  if(isset($params['model']) && $params['model'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_model',
       'field' => 'slug',
@@ -539,7 +537,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['fuel_type']) && !empty($params['fuel_type'])) {
+  if(isset($params['fuel_type']) && $params['fuel_type'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_fuel_type',
       'field' => 'slug',
@@ -547,15 +545,15 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['transmission']) && !empty($params['transmission'])) {
+  if(isset($params['transmission']) && $params['transmission'] != '') {
     $query_tax[] = array(
-      'taxonomy' => 'car_trans',
+      'taxonomy' => 'car_transmission',
       'field' => 'slug',
       'terms' => $params['transmission']
     );
   }
 
-  if(isset($params['drive']) && !empty($params['drive'])) {
+  if(isset($params['drive']) && $params['drive'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_drive',
       'field' => 'slug',
@@ -563,7 +561,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['engine']) && !empty($params['engine'])) {
+  if(isset($params['engine']) && $params['engine'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_engine',
       'field' => 'slug',
@@ -571,7 +569,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['ex_color']) && !empty($params['ex_color'])) {
+  if(isset($params['ex_color']) && $params['ex_color'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_ex_color',
       'field' => 'slug',
@@ -579,7 +577,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['in_color']) && !empty($params['in_color'])) {
+  if(isset($params['in_color']) && $params['in_color'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_in_color',
       'field' => 'slug',
@@ -593,7 +591,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
 
   $query_meta = array();
 
-  if(isset($params['mileage_min']) && isset($params['mileage_max'])) {
+  if(isset($params['mileage_min']) && $params['mileage_min'] != '' && isset($params['mileage_max']) && $params['mileage_max'] != '') {
     $query_meta['mileage_clause'] = array(
       'relation' => 'AND',
   		array(
@@ -611,7 +609,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['price_min']) && isset($params['price_max'])) {
+  if(isset($params['price_min']) && $params['price_min'] != '' && isset($params['price_max']) && $params['price_max'] != '') {
     $query_meta['price_clause'] = array(
       'relation' => 'AND',
   		array(
@@ -629,7 +627,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['year_min']) && isset($params['year_max'])) {
+  if(isset($params['year_min']) && $params['year_min'] != '' && isset($params['year_max']) && $params['year_max'] != '') {
     $query_meta['year_clause'] = array(
       'relation' => 'AND',
   		array(
@@ -660,8 +658,6 @@ function autoart_cars_filter($params = array(), $limit) {
   $wp_query = new \WP_Query($query_args);
   $current_page = isset($params['current_page']) ? absint($params['current_page']) : 1;
   $total_page = $wp_query->max_num_pages;
-
-  // $output['remaining'] = autoart_listing_form_fields_ajax($filter_taxs, $params_get);
 
   if ( $wp_query->have_posts() ) {
     ob_start();

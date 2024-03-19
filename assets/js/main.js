@@ -78,12 +78,79 @@
 		}
 	}
 
-	/*  */
+	/* Cars Filter */
 	function AutoArtCarsFilter() {
 		if (!$('body').hasClass('post-type-archive-car')) {
 			return;
 		}
 
+		// Search by keywords
+		$('.bt-car-search-box .bt-car-search-field').on('keyup', function (e) {
+	    if (e.key === 'Enter' || e.keyCode === 13) {
+				var search_key = $(this).parents('.bt-car-search-box').find('.bt-car-search-field').val();
+
+				$('.bt-car-filter-form .bt-car-search-key').val(search_key);
+	      $('.bt-car-filter-form .bt-car-current-page').val('');
+	      $('.bt-car-filter-form').submit();
+	    }
+		});
+
+    $('.bt-car-search-box .bt-car-search-button').on('click', function() {
+			var search_key = $(this).parents('.bt-car-search-box').find('.bt-car-search-field').val();
+
+			$('.bt-car-filter-form .bt-car-search-key').val(search_key);
+			$('.bt-car-filter-form .bt-car-current-page').val('');
+			$('.bt-car-filter-form').submit();
+    });
+
+		// Sort order
+		$('.bt-car-sort-block select').select2();
+    $('.bt-car-sort-block select').on('change', function() {
+      var sort_val = $(this).val();
+
+      $('.bt-car-filter-form .bt-car-sort-order').val(sort_val);
+      $('.bt-car-filter-form').submit();
+    });
+
+    // View type
+    $('.bt-car-view-block .bt-view-type').on('click', function(e) {
+			e.preventDefault();
+
+      var view_type = $(this).data('view');
+
+      if('list' == view_type) {
+        $('.bt-car-filter-form .bt-car-view-type').val(view_type);
+      } else {
+        $('.bt-car-filter-form .bt-car-view-type').val('');
+      }
+			$('.bt-car-filter-form').submit();
+    });
+
+		// Filter units
+    $('.bt-car-chosen-units .bt-clear-unit').on('click', function(e) {
+			e.preventDefault();
+
+      var tax_name = $(this).parent().data('name');
+
+      $('.bt-car-filter-form select[name="' + tax_name + '"]').select2().val('').trigger('change');
+    });
+
+		// Pagination
+    $('.bt-car-pagination a').on('click', function(e) {
+      e.preventDefault();
+
+      var current_page = $(this).data('page');
+
+      if(1 < current_page) {
+        $('.bt-car-filter-form .bt-car-current-page').val(current_page);
+      } else {
+        $('.bt-car-filter-form .bt-car-current-page').val('');
+      }
+
+      $('.bt-car-filter-form').submit();
+    });
+
+		// Filter meta
 		if($('.bt-field-type-slider').length > 0) {
 			$('.bt-field-type-slider').each(function(){
 				var metaKey = $(this).data('meta-key'),
@@ -116,6 +183,7 @@
 			});
     }
 
+		// Filter single tax
 		if($('.bt-field-type-select').length > 0) {
 			$('.bt-field-type-select select').select2();
 
@@ -123,6 +191,44 @@
 	      $('.bt-car-filter-form').submit();
 	    });
 		}
+
+		// Filter multiple tax
+		if($('.bt-field-type-multi').length > 0) {
+			$('.bt-filter-multi').each(function(){
+				var slug = $(this).find('.bt-field-type-multi').data('name');
+
+				$(this).find('input[name="' + slug + '"]').on('change', function() {
+					var value_arr = [];
+					$('input[name="' + slug + '"]').each(function() {
+		        if ($(this).is(":checked")) {
+							value_arr.push($(this).val());
+		        }
+			    });
+
+					$('.bt-car-filter-form .bt-car-categories').val(value_arr.toString());
+		      $('.bt-car-filter-form').submit();
+		    });
+			});
+		}
+
+		// Filter reset
+    if(window.location.href.includes('?')){
+      $('.bt-car-filter-form .bt-reset-btn').removeClass('disable');
+    }
+
+    $('.bt-car-filter-form .bt-reset-btn').on('click', function(e) {
+      e.preventDefault();
+
+			if($(this).hasClass('disable')) {
+				return;
+			}
+
+			window.history.replaceState(null, null, window.location.pathname);
+			$('.bt-car-filter-form input').val('');
+      $('.bt-car-filter-form select').select2().val('').trigger('change');
+
+      $('.bt-car-filter-form').submit();
+    });
 	}
 
 	/* Orbit effect */
