@@ -17,7 +17,7 @@ add_action('acf/init', 'autoart_add_theme_options_page');
 add_filter( 'acf/settings/save_json', 'autoart_acf_json_save_point' );
 function autoart_acf_json_save_point( $path ) {
 	// update path
-	$path = get_stylesheet_directory() . '/framework/acf-options';
+	$path = get_template_directory() . '/framework/acf-options';
 
 	// return
 	return $path;
@@ -28,7 +28,7 @@ function autoart_acf_json_load_point( $paths ) {
 	// reautoartve original path (optional)
 	unset( $paths[0] );
 	// append path
-	$paths[] = get_stylesheet_directory() . '/framework/acf-options';
+	$paths[] = get_template_directory() . '/framework/acf-options';
 
 	// return
 	return $paths;
