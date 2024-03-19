@@ -53,20 +53,6 @@ if ( ! function_exists( 'autoart_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'autoart_setup' );
 
-/* Add Theme Options Page */
-function autoart_add_theme_options_page() {
-  if( function_exists('acf_add_options_page') ) {
-    $option_page = acf_add_options_page(array(
-			'page_title'    => esc_html__('Theme Options', 'autoart'),
-      'menu_title'    => esc_html__('Theme Options', 'autoart'),
-      'menu_slug'     => 'theme-options-page',
-      'capability'    => 'edit_posts',
-      'redirect'      => false
-    ));
-  }
-}
-add_action('acf/init', 'autoart_add_theme_options_page');
-
 /* Custom Site Title */
 if ( ! function_exists( 'autoart_wp_title' ) ) {
 	function autoart_wp_title( $title, $sep ) {
