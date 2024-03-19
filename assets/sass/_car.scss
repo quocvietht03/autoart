@@ -19,7 +19,7 @@
   justify-content: space-between;
   .bt-car-sort-block {
     display: flex;
-    align-items: center; 
+    align-items: center;
     gap: 10px;
   }
   .bt-car-view-block {
@@ -40,6 +40,25 @@
       }
     }
   }
+}
+
+.bt-car-sidebar {
+  .bt-filter-options {
+    .bt-car-filter-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      svg {
+        width: 40px;
+        height: auto;
+      }
+      .bt-car-filter-title {
+        font-size: 24px;
+        margin: 0;
+      }
+    }
+  }
+
 }
 
 .post-type-archive-car {
