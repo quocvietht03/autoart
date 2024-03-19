@@ -169,12 +169,8 @@
         }
       }
     }
-    &__text-button {
-      .wp-block-search {
-        &__input {
-          padding-right: 100px;
-        }
-      }
+    &__button-outside {
+      
     }
     &__button-inside {
       .wp-block-search {
@@ -184,6 +180,7 @@
         }
         &__input {
           width: 100%;
+          padding-right: 100px;
         }
         &__button {
           position: absolute;

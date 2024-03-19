@@ -199,8 +199,10 @@ if (!function_exists('autoart_page_breadcrumb')) {
 			$thisCat = get_category(get_query_var('cat'), false);
 			if ($thisCat->parent != 0) echo get_category_parents($thisCat->parent, TRUE, ' <span class="bt-deli">' . $delimiter . '</span> ');
 			echo '<span class="current">' . single_cat_title(esc_html__('Archive by category: ', 'autoart'), false) . '</span>';
-		}elseif ( is_tag() ) {
+		}elseif (is_tag()) {
 			echo '<span class="current">' . single_tag_title(esc_html__('Posts tagged: ', 'autoart'), false) . '</span>';
+		}elseif(is_post_type_archive()){
+			echo '<span class="current">' . post_type_archive_title( esc_html__('Archive: ', 'autoart'), false ) . '</span>';
 		}elseif(is_tax()){
 			echo '<span class="current">' . single_term_title(esc_html__('Archive by taxonomy: ', 'autoart'), false) . '</span>';
 		}elseif(is_search()){
@@ -235,7 +237,7 @@ if (!function_exists('autoart_page_breadcrumb')) {
 				echo ''.$cats;
 				echo '<span class="current">' . get_the_title() . '</span>';
 			}
-		}elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
+		}elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
 			$post_type = get_post_type_object(get_post_type());
 			if($post_type) echo '<span class="current">' . $post_type->labels->name . '</span>';
 		}elseif ( is_attachment() ) {

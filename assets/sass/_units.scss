@@ -64,17 +64,13 @@ ol, ul {
 	margin: 0 0 30px;
 	padding: 0 0 0 20px;
 }
-input, input[type="search"], input[type="text"], input[type="password"],
-input[type="email"], input[type="tel"], select, textarea {
+input:not([type="checkbox"], [type="radio"]), select, textarea {
   font-size: 16px;
   line-height: 24px;
   background: #FFFFFF;
   padding: 16px 24px;
   border: 1px solid #C7C7C7;
   border-radius: 15px;
-}
-input {
-  min-height: 58px;
 }
 select {
   height: 58px;
