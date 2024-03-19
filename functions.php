@@ -132,6 +132,9 @@ require_once get_template_directory().'/framework/block-load.php';
 /* Widgets Load */
 require_once get_template_directory().'/framework/widget-load.php';
 
+/* ACF Options */
+require_once get_template_directory().'/framework/acf-options.php';
+
 /* Woocommerce functions */
 if (class_exists('Woocommerce')) {
     require_once get_template_directory().'/woocommerce/shop-helper.php';
