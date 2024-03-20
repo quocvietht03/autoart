@@ -238,7 +238,33 @@ function autoart_car_column_display( $car_columns, $post_id ) {
 }
 add_action( 'manage_car_posts_custom_column', 'autoart_car_column_display', 10, 2 );
 
-/* Cars filter on archive page */
+/* Cars wishlist */
+function autoart_is_wishlist($post_id) {
+	if(isset($_COOKIE['carwishlistcookie']) && $_COOKIE['carwishlistcookie'] != '') {
+		$car_wishlist = explode(',', $_COOKIE['carwishlistcookie']);
+
+		if(in_array((string)$post_id, $car_wishlist)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+/* Cars compare */
+function autoart_is_compare($post_id) {
+	if(isset($_COOKIE['carcomparecookie']) && $_COOKIE['carcomparecookie'] != '') {
+		$car_compare = explode(',', $_COOKIE['carcomparecookie']);
+
+		if(in_array((string)$post_id, $car_compare)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+/* Cars filter */
 function autoart_end_meta_value($end = 'max', $meta_key) {
 	if(empty($meta_key)) {
 		return;

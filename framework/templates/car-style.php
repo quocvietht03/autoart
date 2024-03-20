@@ -14,8 +14,8 @@ $job = get_field('job');
       <?php echo autoart_post_title_render(); ?>
 
       <div class="bt-post--btn">
-        <a class="bt-car-wishlist-btn" href="#" data-id="<?php echo get_the_ID(); ?>">W</a>
-        <a class="bt-car-compare-btn" href="#" data-id="<?php echo get_the_ID(); ?>">C</a>
+        <a class="bt-car-wishlist-btn <?php if(autoart_is_wishlist(get_the_ID())) echo 'added'; ?>" href="#" data-id="<?php echo get_the_ID(); ?>">W</a>
+        <a class="bt-car-compare-btn <?php if(autoart_is_compare(get_the_ID())) echo 'added'; ?>" href="#" data-id="<?php echo get_the_ID(); ?>">C</a>
       </div>
     </div>
   </div>

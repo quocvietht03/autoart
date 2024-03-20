@@ -121,32 +121,46 @@
 					var wishlist_arr = wishlist_cookie.split(',');
 
 					if(wishlist_arr.includes(post_id)) {
-					  console.log(1);
+						var wishlist_str = wishlist_arr.filter(function(e) { return e !== post_id });
+
+						setCookie('carwishlistcookie', wishlist_str, 7);
+						$(this).removeClass('added');
 					} else {
 						setCookie('carwishlistcookie', wishlist_cookie + ',' + post_id, 7);
 						$(this).addClass('added');
 					}
-
 				}
+			});
+		}
+	}
 
-				//
-				// if($(this).hasClass('added')) {
-				// 	var wishlist_arr = wishlist_cookie.split(',');
-				//
-				// 	const index = wishlist_arr.indexOf(post_id);
-				// 	console.log(index);
-				// 	if (index > -1) {
-				// 	  wishlist_arr.splice(index, 1);
-				// 	}
-				//
-				// 	setCookie('carwishlistcookie', wishlist_arr.toString(), 7);
-				// 	$(this).removeClass('added');
-				// } else {
-				//
-				// }
-				//
-				// wishlist_cookie = getCookie('carwishlistcookie');
-				// console.log(wishlist_cookie);
+	/* Car compare */
+	function AutoArtCarCompare() {
+		if($('.bt-car-compare-btn').length > 0) {
+			// setCookie('carwishlistcookie', '', 7);
+
+			$('.bt-car-compare-btn').on('click', function(e) {
+				e.preventDefault();
+
+				var post_id = $(this).data('id').toString(),
+						compare_cookie = getCookie('carcomparecookie');
+
+				if (compare_cookie == '' ) {
+					setCookie('carcomparecookie', post_id, 7);
+					$(this).addClass('added');
+				} else {
+					var compare_arr = compare_cookie.split(',');
+
+					if(compare_arr.includes(post_id)) {
+						var compare_str = compare_arr.filter(function(e) { return e !== post_id });
+
+						setCookie('carcomparecookie', compare_str, 7);
+						$(this).removeClass('added');
+					} else {
+						setCookie('carcomparecookie', compare_cookie + ',' + post_id, 7);
+						$(this).addClass('added');
+					}
+				}
 			});
 		}
 	}
@@ -395,6 +409,7 @@
 		AutoArtTabs();
 		AutoArtCloseSection();
 		AutoArtCarWishlist();
+		AutoArtCarCompare();
 		AutoArtCarsFilter();
 		AutoArtOrbitEffect();
 		AutoArtCursorEffect();
