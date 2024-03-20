@@ -5601,4 +5601,32 @@ body {
     max-width: 142px;
     width: 100%; }
 
+.bt-elwg-account-login {
+  display: flex;
+  width: 100%; }
+  .bt-elwg-account-login-inner {
+    width: 100%; }
+    .bt-elwg-account-login-inner ul {
+      width: 100%;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      align-content: center; }
+      .bt-elwg-account-login-inner ul li {
+        list-style-type: none;
+        position: relative; }
+        .bt-elwg-account-login-inner ul li a, .bt-elwg-account-login-inner ul li span {
+          color: #fff; }
+        .bt-elwg-account-login-inner ul li:not(:first-child)::before {
+          content: " ";
+          display: inline-block;
+          width: 2px;
+          height: 50%;
+          background-color: #fff;
+          position: absolute;
+          left: -10px;
+          top: 50%;
+          transform: translateY(-50%); }
+
 /*# sourceMappingURL=main.css.map */

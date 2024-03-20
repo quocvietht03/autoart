@@ -66,13 +66,11 @@ class ElementorWidgets {
 			'client-loop-item',
 			'service-loop-item',
 			'pricing-tabs',
-
 			'orbit-circle',
 			'pattern-background',
 			'buble-background',
-
 			'product-loop-item',
-
+			'account-login'
 		);
 
 		return $this->widgets;
@@ -187,6 +185,8 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\BubleBackground\Widget_BubleBackground());
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ProductLoopItem\Widget_ProductLoopItem());
+
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\AccountLogin\Widget_AccountLogin());
 
 	}
 
