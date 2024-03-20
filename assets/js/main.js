@@ -78,7 +78,80 @@
 		}
 	}
 
-	/* Cars Filter */
+	/* Set cookie */
+	function setCookie(cname, cvalue, exdays) {
+	  const d = new Date();
+	  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	  let expires = "expires="+ d.toUTCString();
+	  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	/* Get cookie */
+	function getCookie(cname) {
+	  let name = cname + "=";
+	  let decodedCookie = decodeURIComponent(document.cookie);
+	  let ca = decodedCookie.split(';');
+	  for(let i = 0; i <ca.length; i++) {
+	    let c = ca[i];
+	    while (c.charAt(0) == ' ') {
+	      c = c.substring(1);
+	    }
+	    if (c.indexOf(name) == 0) {
+	      return c.substring(name.length, c.length);
+	    }
+	  }
+	  return "";
+	}
+
+	/* Car wishlist */
+	function AutoArtCarWishlist() {
+		if($('.bt-car-wishlist-btn').length > 0) {
+			// setCookie('carwishlistcookie', '', 7);
+
+			$('.bt-car-wishlist-btn').on('click', function(e) {
+				e.preventDefault();
+
+				var post_id = $(this).data('id').toString(),
+						wishlist_cookie = getCookie('carwishlistcookie');
+
+				if (wishlist_cookie == '' ) {
+					setCookie('carwishlistcookie', post_id, 7);
+					$(this).addClass('added');
+				} else {
+					var wishlist_arr = wishlist_cookie.split(',');
+
+					if(wishlist_arr.includes(post_id)) {
+					  console.log(1);
+					} else {
+						setCookie('carwishlistcookie', wishlist_cookie + ',' + post_id, 7);
+						$(this).addClass('added');
+					}
+
+				}
+
+				//
+				// if($(this).hasClass('added')) {
+				// 	var wishlist_arr = wishlist_cookie.split(',');
+				//
+				// 	const index = wishlist_arr.indexOf(post_id);
+				// 	console.log(index);
+				// 	if (index > -1) {
+				// 	  wishlist_arr.splice(index, 1);
+				// 	}
+				//
+				// 	setCookie('carwishlistcookie', wishlist_arr.toString(), 7);
+				// 	$(this).removeClass('added');
+				// } else {
+				//
+				// }
+				//
+				// wishlist_cookie = getCookie('carwishlistcookie');
+				// console.log(wishlist_cookie);
+			});
+		}
+	}
+
+	/* Cars filter */
 	function AutoArtCarsFilter() {
 		if (!$('body').hasClass('post-type-archive-car')) {
 			return;
@@ -205,7 +278,7 @@
 		        }
 			    });
 
-					$('.bt-car-filter-form .bt-car-categories').val(value_arr.toString());
+					$('.bt-car-filter-form .bt-car-' + slug).val(value_arr.toString());
 		      $('.bt-car-filter-form').submit();
 		    });
 			});
@@ -321,6 +394,7 @@
     AutoArtToggleSubMenuMobile();
 		AutoArtTabs();
 		AutoArtCloseSection();
+		AutoArtCarWishlist();
 		AutoArtCarsFilter();
 		AutoArtOrbitEffect();
 		AutoArtCursorEffect();

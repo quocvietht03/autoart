@@ -509,7 +509,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_tax[] = array(
       'taxonomy' => 'car_body',
       'field' => 'slug',
-      'terms' => $params['body']
+      'terms' => explode(',', $params['body'])
     );
   }
 
@@ -517,7 +517,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_tax[] = array(
       'taxonomy' => 'car_condition',
       'field' => 'slug',
-      'terms' => $params['condition']
+      'terms' => explode(',', $params['condition'])
     );
   }
 
@@ -525,7 +525,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_tax[] = array(
       'taxonomy' => 'car_make',
       'field' => 'slug',
-      'terms' => $params['make']
+      'terms' => explode(',', $params['make'])
     );
   }
 
@@ -533,7 +533,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_tax[] = array(
       'taxonomy' => 'car_model',
       'field' => 'slug',
-      'terms' => $params['model']
+      'terms' => explode(',', $params['model'])
     );
   }
 
@@ -541,7 +541,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_tax[] = array(
       'taxonomy' => 'car_fuel_type',
       'field' => 'slug',
-      'terms' => $params['fuel_type']
+      'terms' => explode(',', $params['fuel_type'])
     );
   }
 
@@ -549,7 +549,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_tax[] = array(
       'taxonomy' => 'car_transmission',
       'field' => 'slug',
-      'terms' => $params['transmission']
+      'terms' => explode(',', $params['transmission'])
     );
   }
 
@@ -557,7 +557,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_tax[] = array(
       'taxonomy' => 'car_drive',
       'field' => 'slug',
-      'terms' => $params['drive']
+      'terms' => explode(',', $params['drive'])
     );
   }
 
@@ -565,7 +565,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_tax[] = array(
       'taxonomy' => 'car_engine',
       'field' => 'slug',
-      'terms' => $params['engine']
+      'terms' => explode(',', $params['engine'])
     );
   }
 
@@ -573,7 +573,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_tax[] = array(
       'taxonomy' => 'car_ex_color',
       'field' => 'slug',
-      'terms' => $params['ex_color']
+      'terms' => explode(',', $params['ex_color'])
     );
   }
 
@@ -581,7 +581,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     $query_tax[] = array(
       'taxonomy' => 'car_in_color',
       'field' => 'slug',
-      'terms' => $params['in_color']
+      'terms' => explode(',', $params['in_color'])
     );
   }
 

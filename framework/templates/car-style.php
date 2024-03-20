@@ -13,7 +13,10 @@ $job = get_field('job');
     <div class="bt-post--infor">
       <?php echo autoart_post_title_render(); ?>
 
-
+      <div class="bt-post--btn">
+        <a class="bt-car-wishlist-btn" href="#" data-id="<?php echo get_the_ID(); ?>">W</a>
+        <a class="bt-car-compare-btn" href="#" data-id="<?php echo get_the_ID(); ?>">C</a>
+      </div>
     </div>
   </div>
 </article>
