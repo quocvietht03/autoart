@@ -1,5 +1,5 @@
 <?php
-$job = get_field('job');
+// $job = get_field('job');
 
 ?>
 <article <?php post_class('bt-post'); ?>>
