@@ -114,6 +114,9 @@ require_once get_template_directory().'/framework/cpt-podcast.php';
 require_once get_template_directory().'/framework/cpt-client.php';
 require_once get_template_directory().'/framework/cpt-pricing.php';
 
+/* ACF Options */
+require_once get_template_directory().'/framework/acf-options.php';
+
 /* Shortcodes */
 require_once get_template_directory().'/framework/shortcodes.php';
 
@@ -131,9 +134,6 @@ require_once get_template_directory().'/framework/block-load.php';
 
 /* Widgets Load */
 require_once get_template_directory().'/framework/widget-load.php';
-
-/* ACF Options */
-require_once get_template_directory().'/framework/acf-options.php';
 
 /* Woocommerce functions */
 if (class_exists('Woocommerce')) {

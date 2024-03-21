@@ -265,7 +265,7 @@ function autoart_is_compare($post_id) {
 }
 
 /* Cars filter */
-function autoart_end_meta_value($end = 'max', $meta_key) {
+function autoart_end_meta_value($end = 'max', $meta_key = '') {
 	if(empty($meta_key)) {
 		return;
 	}
@@ -282,7 +282,9 @@ function autoart_end_meta_value($end = 'max', $meta_key) {
 	$wp_query = new \WP_Query($query_args);
 	if ( $wp_query->have_posts() ) {
     while ( $wp_query->have_posts() ) { $wp_query->the_post();
-      return get_field($meta_key, get_the_ID()) ;
+			if(function_exists('get_field')){
+				return get_field($meta_key, get_the_ID()) ;
+			}
     }
 	}
 
@@ -679,7 +681,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
   return $query_args;
 }
 
-function autoart_cars_filter($params = array(), $limit) {
+function autoart_cars_filter($params = array(), $limit = 12) {
   $query_args = autoart_cars_query_args($params, $limit);
   $wp_query = new \WP_Query($query_args);
   $current_page = isset($params['current_page']) ? absint($params['current_page']) : 1;
