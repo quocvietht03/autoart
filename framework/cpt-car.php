@@ -313,7 +313,7 @@ function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $fiel
 	<div class="bt-form-field bt-field-type-slider <?php echo 'bt-field-' . $meta_key; ?>" data-meta-key= "<?php echo esc_attr($meta_key); ?>" data-range-min="<?php echo intval($min_value); ?>" data-range-max="<?php echo intval($max_value); ?>"  data-start-min="<?php echo intval($start_min_value); ?>" data-start-max="<?php echo intval($start_max_value); ?>">
     <?php
       if(!empty($field_title)) {
-        echo '<h3 class="bt-field-title">' . $field_title . '</h3>';
+        echo '<div class="bt-field-title">' . $field_title . '</div>';
       }
     ?>
     <div id="<?php echo 'bt_field_slider_' . $meta_key; ?>" class="bt-field-slider"></div>

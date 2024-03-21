@@ -43,22 +43,100 @@
 }
 
 .bt-car-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .bt-car-filter-block {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
   .bt-filter-options {
     .bt-car-filter-header {
       display: flex;
       align-items: center;
       gap: 15px;
+      background: $color-secondary;
+      padding: 20px;
       svg {
+        fill: #fff;
         width: 40px;
         height: auto;
       }
       .bt-car-filter-title {
         font-size: 24px;
+        color: #fff;
+        margin: 0;
+      }
+    }
+    .bt-car-filter-form {
+      padding: 20px;
+    }
+    .bt-car-filter-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .bt-form-field {
+      .bt-field-title {
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+      .bt-field-slider {
+        padding: 0 16px;
+      }
+
+    }
+    .bt-form-action {
+
+    }
+    .bt-reset-btn {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      background: $color-secondary;
+      padding: 15px;
+      border-radius: 15px;
+      &.disable {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.5;
+      }
+    }
+  }
+  .bt-filter-multi {
+    position: relative;
+    padding: 20px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: $color-secondary;
+    }
+    .bt-field-title {
+      font-size: 24px;
+      margin: 0 0 15px;
+    }
+    .bt-form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .bt-field-item {
+      display: flex;
+      gap: 10px;
+      label {
+        line-height: 1.5;
         margin: 0;
       }
     }
   }
-
 }
 
 .post-type-archive-car {

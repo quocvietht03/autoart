@@ -314,7 +314,7 @@
 			$('.bt-car-filter-form input').val('');
       $('.bt-car-filter-form select').select2().val('').trigger('change');
 
-      $('.bt-car-filter-form').submit();
+      window.location.reload();
     });
 	}
 
