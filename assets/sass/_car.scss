@@ -51,23 +51,6 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   .bt-filter-options {
-    .bt-car-filter-header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      background: $color-secondary;
-      padding: 20px;
-      svg {
-        fill: #fff;
-        width: 40px;
-        height: auto;
-      }
-      .bt-car-filter-title {
-        font-size: 24px;
-        color: #fff;
-        margin: 0;
-      }
-    }
     .bt-car-filter-form {
       padding: 20px;
     }

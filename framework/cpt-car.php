@@ -113,12 +113,12 @@ function autoart_car_taxonomy() {
 	);
 
   register_taxonomy(
-		"car_drive",
+		"car_door",
 		array("car"),
 		array(
 			"hierarchical"   => true,
-			"label"          => __( 'Drive', 'autoart' ),
-			"singular_label" => __( 'Drive', 'autoart' ),
+			"label"          => __( 'Door', 'autoart' ),
+			"singular_label" => __( 'Door', 'autoart' ),
 			"rewrite"        => true
 		)
 	);
@@ -135,23 +135,12 @@ function autoart_car_taxonomy() {
 	);
 
   register_taxonomy(
-		"car_ex_color",
+		"car_color",
 		array("car"),
 		array(
 			"hierarchical"   => true,
-			"label"          => __( 'Exterior Color', 'autoart' ),
-			"singular_label" => __( 'Exterior Color', 'autoart' ),
-			"rewrite"        => true
-		)
-	);
-
-  register_taxonomy(
-		"car_in_color",
-		array("car"),
-		array(
-			"hierarchical"   => true,
-			"label"          => __( 'Interior Color', 'autoart' ),
-			"singular_label" => __( 'Interior Color', 'autoart' ),
+			"label"          => __( 'Color', 'autoart' ),
+			"singular_label" => __( 'Color', 'autoart' ),
 			"rewrite"        => true
 		)
 	);
@@ -325,7 +314,7 @@ function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $fiel
   <?php
 }
 
-function autoart_cars_field_select_html($slug = '', $field_name = '', $field_value = '') {
+function autoart_cars_field_select_html($slug = '', $field_title = '', $field_value = '') {
 	if(empty($slug)) {
     return;
   }
@@ -338,9 +327,14 @@ function autoart_cars_field_select_html($slug = '', $field_name = '', $field_val
 	if(!empty($terms)) {
 	  ?>
 		<div class="bt-form-field bt-field-type-select <?php echo 'bt-field-' . $slug; ?>">
+			<?php
+				if(!empty($field_title)) {
+					echo '<div class="bt-field-title">' . $field_title . '</div>';
+				}
+			?>
 			<select name="<?php echo str_replace('car_', '', $slug); ?>">
 		    <option value="">
-		      <?php echo esc_html($field_name); ?>
+		      <?php echo esc_html('Select', 'autoart'); ?>
 		    </option>
 		    <?php foreach ($terms as $term) { ?>
 		      <?php if($term->slug == $field_value){ ?>
@@ -370,21 +364,21 @@ function autoart_cars_field_multiple_html($slug = '', $field_title = '', $field_
 	) );
 
 	if(!empty($terms)) {
-		if(!empty($field_title)) {
-			echo '<h3 class="bt-field-title">' . $field_title . '</h3>';
-		}
 	  ?>
 		<div class="bt-form-field bt-field-type-multi" data-name="<?php echo str_replace('car_', '', $slug); ?>">
-			<?php foreach ($terms as $term) { ?>
-				<div class="bt-field-item <?php echo 'bt-field-' . $term->slug; ?>">
-					<?php if(str_contains($field_value, $term->slug)){ ?>
-						<input type="checkbox" id="<?php echo 'bt-field-' . $term->slug; ?>" name="<?php echo str_replace('car_', '', $slug); ?>" value="<?php echo esc_attr($term->slug); ?>" checked>
-					<?php } else { ?>
-						<input type="checkbox" id="<?php echo 'bt-field-' . $term->slug; ?>" name="<?php echo str_replace('car_', '', $slug); ?>" value="<?php echo esc_attr($term->slug); ?>">
-					<?php } ?>
-				  <label for="<?php echo 'bt-field-' . $term->slug; ?>"> <?php echo esc_html($term->name); ?></label>
+			<?php
+				if(!empty($field_title)) {
+					echo '<div class="bt-field-title">' . $field_title . '</div>';
+				}
+
+				foreach ($terms as $term) {
+			?>
+				<div class="<?php echo (str_contains($field_value, $term->slug)) ? 'bt-field-item checked' : 'bt-field-item' ?>">
+					<a href="#" data-slug="<?php echo esc_attr($term->slug); ?>"> <?php echo esc_html($term->name); ?></a>
 				</div>
 			<?php } ?>
+
+			<input type="hidden" name="<?php echo str_replace('car_', '', $slug); ?>" value="<?php echo $field_value; ?>">
 		</div>
 	  <?php
 	}
@@ -581,11 +575,11 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['drive']) && $params['drive'] != '') {
+  if(isset($params['door']) && $params['door'] != '') {
     $query_tax[] = array(
-      'taxonomy' => 'car_drive',
+      'taxonomy' => 'car_door',
       'field' => 'slug',
-      'terms' => explode(',', $params['drive'])
+      'terms' => explode(',', $params['door'])
     );
   }
 
@@ -597,19 +591,11 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['ex_color']) && $params['ex_color'] != '') {
+  if(isset($params['color']) && $params['color'] != '') {
     $query_tax[] = array(
-      'taxonomy' => 'car_ex_color',
+      'taxonomy' => 'car_color',
       'field' => 'slug',
-      'terms' => explode(',', $params['ex_color'])
-    );
-  }
-
-  if(isset($params['in_color']) && $params['in_color'] != '') {
-    $query_tax[] = array(
-      'taxonomy' => 'car_in_color',
-      'field' => 'slug',
-      'terms' => explode(',', $params['in_color'])
+      'terms' => explode(',', $params['color'])
     );
   }
 

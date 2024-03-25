@@ -11,13 +11,9 @@ $total_page = $wp_query->max_num_pages;
 <main id="bt_main" class="bt-site-main">
 	<div class="bt-main-content-ss">
 		<div class="bt-container">
-			<?php get_template_part( 'framework/templates/car', 'search-box'); ?>
-
 			<div class="bt-main-post-row">
 				<div class="bt-main-post-col">
 					<?php get_template_part( 'framework/templates/car', 'topbar'); ?>
-
-					<?php get_template_part( 'framework/templates/car', 'chosen-units'); ?>
 
 					<div class="bt-filter-results <?php echo isset($_GET['view_type']) && $_GET['view_type'] != '' ? 'bt-view-' . $_GET['view_type'] : 'bt-view-grid' ?>">
 						<?php
