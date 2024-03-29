@@ -1479,12 +1479,33 @@ img.alignright {
       padding: 10px;
       transition: all .3s; } }
 .elementor-location-header .elementor-element.bt-header-nav {
-  max-width: 1550px;
-  width: calc(100% - 30px);
+  max-width: 1480px;
+  width: calc(100% - 130px);
   margin-left: auto;
   margin-right: auto;
+  fill: #FFF;
   filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.1));
-  position: relative; }
+  position: relative;
+  box-sizing: border-box; }
+  .elementor-location-header .elementor-element.bt-header-nav::before, .elementor-location-header .elementor-element.bt-header-nav::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 107px;
+    top: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: none;
+    border-radius: 0;
+    border: none; }
+  .elementor-location-header .elementor-element.bt-header-nav::before {
+    background-image: url(../images/image-graphic-before-header.png);
+    left: -50px; }
+  .elementor-location-header .elementor-element.bt-header-nav::after {
+    background-image: url(../images/image-graphic-after-header.png);
+    right: -50px; }
   .elementor-location-header .elementor-element.bt-header-nav .elementor-widget-button .elementor-button .elementor-button-icon {
     font-size: 120%; }
   @media (max-width: 767.98px) {
