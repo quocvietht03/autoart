@@ -1265,6 +1265,10 @@
         position: relative;
         a, span{
           color: #fff;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
         }
 
         &:not(:first-child){
