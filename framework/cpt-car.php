@@ -113,12 +113,12 @@ function autoart_car_taxonomy() {
 	);
 
   register_taxonomy(
-		"car_drive",
+		"car_door",
 		array("car"),
 		array(
 			"hierarchical"   => true,
-			"label"          => __( 'Drive', 'autoart' ),
-			"singular_label" => __( 'Drive', 'autoart' ),
+			"label"          => __( 'Door', 'autoart' ),
+			"singular_label" => __( 'Door', 'autoart' ),
 			"rewrite"        => true
 		)
 	);
@@ -135,23 +135,12 @@ function autoart_car_taxonomy() {
 	);
 
   register_taxonomy(
-		"car_ex_color",
+		"car_color",
 		array("car"),
 		array(
 			"hierarchical"   => true,
-			"label"          => __( 'Exterior Color', 'autoart' ),
-			"singular_label" => __( 'Exterior Color', 'autoart' ),
-			"rewrite"        => true
-		)
-	);
-
-  register_taxonomy(
-		"car_in_color",
-		array("car"),
-		array(
-			"hierarchical"   => true,
-			"label"          => __( 'Interior Color', 'autoart' ),
-			"singular_label" => __( 'Interior Color', 'autoart' ),
+			"label"          => __( 'Color', 'autoart' ),
+			"singular_label" => __( 'Color', 'autoart' ),
 			"rewrite"        => true
 		)
 	);
@@ -238,8 +227,34 @@ function autoart_car_column_display( $car_columns, $post_id ) {
 }
 add_action( 'manage_car_posts_custom_column', 'autoart_car_column_display', 10, 2 );
 
-/* Cars filter on archive page */
-function autoart_end_meta_value($end = 'max', $meta_key) {
+/* Cars wishlist */
+function autoart_is_wishlist($post_id) {
+	if(isset($_COOKIE['carwishlistcookie']) && $_COOKIE['carwishlistcookie'] != '') {
+		$car_wishlist = explode(',', $_COOKIE['carwishlistcookie']);
+
+		if(in_array((string)$post_id, $car_wishlist)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+/* Cars compare */
+function autoart_is_compare($post_id) {
+	if(isset($_COOKIE['carcomparecookie']) && $_COOKIE['carcomparecookie'] != '') {
+		$car_compare = explode(',', $_COOKIE['carcomparecookie']);
+
+		if(in_array((string)$post_id, $car_compare)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+/* Cars filter */
+function autoart_end_meta_value($end = 'max', $meta_key = '') {
 	if(empty($meta_key)) {
 		return;
 	}
@@ -256,7 +271,9 @@ function autoart_end_meta_value($end = 'max', $meta_key) {
 	$wp_query = new \WP_Query($query_args);
 	if ( $wp_query->have_posts() ) {
     while ( $wp_query->have_posts() ) { $wp_query->the_post();
-      return get_field($meta_key, get_the_ID()) ;
+			if(function_exists('get_field')){
+				return get_field($meta_key, get_the_ID()) ;
+			}
     }
 	}
 
@@ -285,7 +302,7 @@ function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $fiel
 	<div class="bt-form-field bt-field-type-slider <?php echo 'bt-field-' . $meta_key; ?>" data-meta-key= "<?php echo esc_attr($meta_key); ?>" data-range-min="<?php echo intval($min_value); ?>" data-range-max="<?php echo intval($max_value); ?>"  data-start-min="<?php echo intval($start_min_value); ?>" data-start-max="<?php echo intval($start_max_value); ?>">
     <?php
       if(!empty($field_title)) {
-        echo '<h3 class="bt-field-title">' . $field_title . '</h3>';
+        echo '<div class="bt-field-title">' . $field_title . '</div>';
       }
     ?>
     <div id="<?php echo 'bt_field_slider_' . $meta_key; ?>" class="bt-field-slider"></div>
@@ -297,7 +314,7 @@ function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $fiel
   <?php
 }
 
-function autoart_cars_field_select_html($slug = '', $field_name = '', $field_value = '') {
+function autoart_cars_field_select_html($slug = '', $field_title = '', $field_value = '') {
 	if(empty($slug)) {
     return;
   }
@@ -310,9 +327,14 @@ function autoart_cars_field_select_html($slug = '', $field_name = '', $field_val
 	if(!empty($terms)) {
 	  ?>
 		<div class="bt-form-field bt-field-type-select <?php echo 'bt-field-' . $slug; ?>">
+			<?php
+				if(!empty($field_title)) {
+					echo '<div class="bt-field-title">' . $field_title . '</div>';
+				}
+			?>
 			<select name="<?php echo str_replace('car_', '', $slug); ?>">
 		    <option value="">
-		      <?php echo esc_html($field_name); ?>
+		      <?php echo esc_html('Select', 'autoart'); ?>
 		    </option>
 		    <?php foreach ($terms as $term) { ?>
 		      <?php if($term->slug == $field_value){ ?>
@@ -342,21 +364,21 @@ function autoart_cars_field_multiple_html($slug = '', $field_title = '', $field_
 	) );
 
 	if(!empty($terms)) {
-		if(!empty($field_title)) {
-			echo '<h3 class="bt-field-title">' . $field_title . '</h3>';
-		}
 	  ?>
 		<div class="bt-form-field bt-field-type-multi" data-name="<?php echo str_replace('car_', '', $slug); ?>">
-			<?php foreach ($terms as $term) { ?>
-				<div class="bt-field-item <?php echo 'bt-field-' . $term->slug; ?>">
-					<?php if(str_contains($field_value, $term->slug)){ ?>
-						<input type="checkbox" id="<?php echo 'bt-field-' . $term->slug; ?>" name="<?php echo str_replace('car_', '', $slug); ?>" value="<?php echo esc_attr($term->slug); ?>" checked>
-					<?php } else { ?>
-						<input type="checkbox" id="<?php echo 'bt-field-' . $term->slug; ?>" name="<?php echo str_replace('car_', '', $slug); ?>" value="<?php echo esc_attr($term->slug); ?>">
-					<?php } ?>
-				  <label for="<?php echo 'bt-field-' . $term->slug; ?>"> <?php echo esc_html($term->name); ?></label>
+			<?php
+				if(!empty($field_title)) {
+					echo '<div class="bt-field-title">' . $field_title . '</div>';
+				}
+
+				foreach ($terms as $term) {
+			?>
+				<div class="<?php echo (str_contains($field_value, $term->slug)) ? 'bt-field-item checked' : 'bt-field-item' ?>">
+					<a href="#" data-slug="<?php echo esc_attr($term->slug); ?>"> <?php echo esc_html($term->name); ?></a>
 				</div>
 			<?php } ?>
+
+			<input type="hidden" name="<?php echo str_replace('car_', '', $slug); ?>" value="<?php echo $field_value; ?>">
 		</div>
 	  <?php
 	}
@@ -553,11 +575,11 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['drive']) && $params['drive'] != '') {
+  if(isset($params['door']) && $params['door'] != '') {
     $query_tax[] = array(
-      'taxonomy' => 'car_drive',
+      'taxonomy' => 'car_door',
       'field' => 'slug',
-      'terms' => explode(',', $params['drive'])
+      'terms' => explode(',', $params['door'])
     );
   }
 
@@ -569,19 +591,11 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
-  if(isset($params['ex_color']) && $params['ex_color'] != '') {
+  if(isset($params['color']) && $params['color'] != '') {
     $query_tax[] = array(
-      'taxonomy' => 'car_ex_color',
+      'taxonomy' => 'car_color',
       'field' => 'slug',
-      'terms' => explode(',', $params['ex_color'])
-    );
-  }
-
-  if(isset($params['in_color']) && $params['in_color'] != '') {
-    $query_tax[] = array(
-      'taxonomy' => 'car_in_color',
-      'field' => 'slug',
-      'terms' => explode(',', $params['in_color'])
+      'terms' => explode(',', $params['color'])
     );
   }
 
@@ -653,7 +667,7 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
   return $query_args;
 }
 
-function autoart_cars_filter($params = array(), $limit) {
+function autoart_cars_filter($params = array(), $limit = 12) {
   $query_args = autoart_cars_query_args($params, $limit);
   $wp_query = new \WP_Query($query_args);
   $current_page = isset($params['current_page']) ? absint($params['current_page']) : 1;

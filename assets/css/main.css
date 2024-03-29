@@ -2956,16 +2956,63 @@ body {
         width: 24px;
         height: auto; }
 
-.bt-car-sidebar .bt-filter-options .bt-car-filter-header {
+.bt-car-sidebar {
   display: flex;
-  align-items: center;
-  gap: 15px; }
-  .bt-car-sidebar .bt-filter-options .bt-car-filter-header svg {
-    width: 40px;
-    height: auto; }
-  .bt-car-sidebar .bt-filter-options .bt-car-filter-header .bt-car-filter-title {
-    font-size: 24px;
-    margin: 0; }
+  flex-direction: column;
+  gap: 30px; }
+  .bt-car-sidebar .bt-car-filter-block {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+  .bt-car-sidebar .bt-filter-options .bt-car-filter-form {
+    padding: 20px; }
+  .bt-car-sidebar .bt-filter-options .bt-car-filter-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; }
+  .bt-car-sidebar .bt-filter-options .bt-form-field .bt-field-title {
+    font-weight: 500;
+    margin-bottom: 12px; }
+  .bt-car-sidebar .bt-filter-options .bt-form-field .bt-field-slider {
+    padding: 0 16px; }
+  .bt-car-sidebar .bt-filter-options .bt-reset-btn {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background: var(--e-global-color-secondary, #111);
+    padding: 15px;
+    border-radius: 15px; }
+    .bt-car-sidebar .bt-filter-options .bt-reset-btn.disable {
+      pointer-events: none;
+      cursor: default;
+      opacity: 0.5; }
+  .bt-car-sidebar .bt-filter-multi {
+    position: relative;
+    padding: 20px; }
+    .bt-car-sidebar .bt-filter-multi:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--e-global-color-secondary, #111); }
+    .bt-car-sidebar .bt-filter-multi .bt-field-title {
+      font-size: 24px;
+      margin: 0 0 15px; }
+    .bt-car-sidebar .bt-filter-multi .bt-form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; }
+    .bt-car-sidebar .bt-filter-multi .bt-field-item {
+      display: flex;
+      gap: 10px; }
+      .bt-car-sidebar .bt-filter-multi .bt-field-item label {
+        line-height: 1.5;
+        margin: 0; }
 
 .__bt-team-style-default .bt-post--inner, .search-results .bt-post--inner,
 .tax-team_categories .bt-post--inner, .single-team .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-team-loop-item--default .bt-post--inner {

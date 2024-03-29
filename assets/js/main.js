@@ -121,32 +121,46 @@
 					var wishlist_arr = wishlist_cookie.split(',');
 
 					if(wishlist_arr.includes(post_id)) {
-					  console.log(1);
+						var wishlist_str = wishlist_arr.filter(function(e) { return e !== post_id });
+
+						setCookie('carwishlistcookie', wishlist_str, 7);
+						$(this).removeClass('added');
 					} else {
 						setCookie('carwishlistcookie', wishlist_cookie + ',' + post_id, 7);
 						$(this).addClass('added');
 					}
-
 				}
+			});
+		}
+	}
 
-				//
-				// if($(this).hasClass('added')) {
-				// 	var wishlist_arr = wishlist_cookie.split(',');
-				//
-				// 	const index = wishlist_arr.indexOf(post_id);
-				// 	console.log(index);
-				// 	if (index > -1) {
-				// 	  wishlist_arr.splice(index, 1);
-				// 	}
-				//
-				// 	setCookie('carwishlistcookie', wishlist_arr.toString(), 7);
-				// 	$(this).removeClass('added');
-				// } else {
-				//
-				// }
-				//
-				// wishlist_cookie = getCookie('carwishlistcookie');
-				// console.log(wishlist_cookie);
+	/* Car compare */
+	function AutoArtCarCompare() {
+		if($('.bt-car-compare-btn').length > 0) {
+			// setCookie('carwishlistcookie', '', 7);
+
+			$('.bt-car-compare-btn').on('click', function(e) {
+				e.preventDefault();
+
+				var post_id = $(this).data('id').toString(),
+						compare_cookie = getCookie('carcomparecookie');
+
+				if (compare_cookie == '' ) {
+					setCookie('carcomparecookie', post_id, 7);
+					$(this).addClass('added');
+				} else {
+					var compare_arr = compare_cookie.split(',');
+
+					if(compare_arr.includes(post_id)) {
+						var compare_str = compare_arr.filter(function(e) { return e !== post_id });
+
+						setCookie('carcomparecookie', compare_str, 7);
+						$(this).removeClass('added');
+					} else {
+						setCookie('carcomparecookie', compare_cookie + ',' + post_id, 7);
+						$(this).addClass('added');
+					}
+				}
 			});
 		}
 	}
@@ -158,20 +172,14 @@
 		}
 
 		// Search by keywords
-		$('.bt-car-search-box .bt-car-search-field').on('keyup', function (e) {
+		$('.bt-car-filter-form .bt-field-type-search input').on('keyup', function (e) {
 	    if (e.key === 'Enter' || e.keyCode === 13) {
-				var search_key = $(this).parents('.bt-car-search-box').find('.bt-car-search-field').val();
-
-				$('.bt-car-filter-form .bt-car-search-key').val(search_key);
 	      $('.bt-car-filter-form .bt-car-current-page').val('');
 	      $('.bt-car-filter-form').submit();
 	    }
 		});
 
-    $('.bt-car-search-box .bt-car-search-button').on('click', function() {
-			var search_key = $(this).parents('.bt-car-search-box').find('.bt-car-search-field').val();
-
-			$('.bt-car-filter-form .bt-car-search-key').val(search_key);
+    $('.bt-car-filter-form  .bt-field-type-search a').on('click', function() {
 			$('.bt-car-filter-form .bt-car-current-page').val('');
 			$('.bt-car-filter-form').submit();
     });
@@ -197,15 +205,6 @@
         $('.bt-car-filter-form .bt-car-view-type').val('');
       }
 			$('.bt-car-filter-form').submit();
-    });
-
-		// Filter units
-    $('.bt-car-chosen-units .bt-clear-unit').on('click', function(e) {
-			e.preventDefault();
-
-      var tax_name = $(this).parent().data('name');
-
-      $('.bt-car-filter-form select[name="' + tax_name + '"]').select2().val('').trigger('change');
     });
 
 		// Pagination
@@ -267,20 +266,25 @@
 
 		// Filter multiple tax
 		if($('.bt-field-type-multi').length > 0) {
-			$('.bt-filter-multi').each(function(){
-				var slug = $(this).find('.bt-field-type-multi').data('name');
+			$('.bt-field-type-multi a').on('click', function(e) {
+				e.preventDefault();
 
-				$(this).find('input[name="' + slug + '"]').on('change', function() {
-					var value_arr = [];
-					$('input[name="' + slug + '"]').each(function() {
-		        if ($(this).is(":checked")) {
-							value_arr.push($(this).val());
-		        }
-			    });
+				if($(this).parent().hasClass('checked')) {
+					$(this).parent().removeClass('checked');
+				} else {
+					$(this).parent().addClass('checked');
+				}
 
-					$('.bt-car-filter-form .bt-car-' + slug).val(value_arr.toString());
-		      $('.bt-car-filter-form').submit();
+				var value_arr = [];
+
+				$(this).parents('.bt-form-field').find('.bt-field-item').each(function() {
+		      if ($(this).hasClass('checked')) {
+						value_arr.push($(this).children().data('slug'));
+		      }
 		    });
+
+				$(this).parents('.bt-form-field').find('input').val(value_arr.toString());
+		    $('.bt-car-filter-form').submit();
 			});
 		}
 
@@ -300,7 +304,7 @@
 			$('.bt-car-filter-form input').val('');
       $('.bt-car-filter-form select').select2().val('').trigger('change');
 
-      $('.bt-car-filter-form').submit();
+      window.location.reload();
     });
 	}
 
@@ -395,6 +399,7 @@
 		AutoArtTabs();
 		AutoArtCloseSection();
 		AutoArtCarWishlist();
+		AutoArtCarCompare();
 		AutoArtCarsFilter();
 		AutoArtOrbitEffect();
 		AutoArtCursorEffect();
