@@ -1478,6 +1478,9 @@ img.alignright {
       margin-right: -10px;
       padding: 10px;
       transition: all .3s; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-location-header .elementor-element.bt-header-top-bar > .e-con-inner > .elementor-element:last-child {
+    gap: 40px; } }
 .elementor-location-header .elementor-element.bt-header-nav {
   max-width: 1480px;
   width: calc(100% - 130px);
@@ -1506,29 +1509,25 @@ img.alignright {
   .elementor-location-header .elementor-element.bt-header-nav::after {
     background-image: url(../images/image-graphic-after-header.png);
     right: -50px; }
-  .elementor-location-header .elementor-element.bt-header-nav .elementor-widget-button .elementor-button .elementor-button-icon {
-    font-size: 120%; }
-  @media (max-width: 767.98px) {
-    .elementor-location-header .elementor-element.bt-header-nav {
-      width: calc(100% - 15px);
-      margin-right: 0; }
-      .elementor-location-header .elementor-element.bt-header-nav.elementor-sticky--active .elementor-widget-button {
-        display: none; }
-      .elementor-location-header .elementor-element.bt-header-nav .elementor-widget-button {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        min-width: 160px;
-        text-align: right; }
-        .elementor-location-header .elementor-element.bt-header-nav .elementor-widget-button .elementor-button {
-          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); } }
-  @media (min-width: 1025px) and (max-width: 1160px) {
-    .elementor-location-header .elementor-element.bt-header-nav .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li:not(:first-child) > a {
-      margin-inline-start: calc(var(--e-nav-menu-horizontal-menu-item-margin)/2); }
+  @media (min-width: 1200px) and (max-width: 1279.98px) {
+    .elementor-location-header .elementor-element.bt-header-nav > .e-con-inner > .elementor-element:last-child {
+      gap: 40px; } }
+  @media (min-width: 1025px) and (max-width: 1199.98px) {
+    .elementor-location-header .elementor-element.bt-header-nav > .e-con-inner > .elementor-element:last-child {
+      gap: 20px; } }
+  .elementor-location-header .elementor-element.bt-header-nav .elementor-widget-nav-menu.bt-nav-primary nav.elementor-nav-menu--main > ul > li > a {
+    padding-top: 0; }
+    .elementor-location-header .elementor-element.bt-header-nav .elementor-widget-nav-menu.bt-nav-primary nav.elementor-nav-menu--main > ul > li > a .sub-arrow {
+      display: none; }
+  @media (max-width: 1199.98px) {
+    .elementor-location-header .elementor-element.bt-header-nav .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li a {
+      font-size: 18px; } }
+  @media (min-width: 1025px) and (max-width: 1199.98px) {
     .elementor-location-header .elementor-element.bt-header-nav .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li:not(:last-child) > a {
-      margin-inline-end: calc(var(--e-nav-menu-horizontal-menu-item-margin)/2); }
-    .elementor-location-header .elementor-element.bt-header-nav .elementor-widget-button .elementor-button {
-      font-size: 14px !important; } }
+      margin-inline-end: calc(var(--e-nav-menu-horizontal-menu-item-margin) / 2); } }
+  @media (min-width: 1025px) and (max-width: 1199.98px) {
+    .elementor-location-header .elementor-element.bt-header-nav .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li:not(:first-child) > a {
+      margin-inline-start: calc(var(--e-nav-menu-horizontal-menu-item-margin) / 2); } }
 @media (max-width: 1460px) {
   .elementor-location-header .elementor-element.bt-header-nav-style-1.elementor-sticky--active .elementor-widget-icon-box {
     display: none; } }
