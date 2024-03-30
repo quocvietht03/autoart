@@ -97,7 +97,7 @@ class Widget_AccountLogin extends Widget_Base {
 				[
 					'label' => __( 'Color', 'autoart' ),
 					'type' => Controls_Manager::COLOR,
-					'default' => '#fff',
+					'default' => '#222',
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-account-login-inner ul li a' => 'color: {{VALUE}};',
 						'{{WRAPPER}} .bt-elwg-account-login-inner ul li span' => 'color: {{VALUE}};',
@@ -128,19 +128,17 @@ class Widget_AccountLogin extends Widget_Base {
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-
 		?>
 			<div class="bt-elwg-account-login">
 				<div class="bt-elwg-account-login-inner"> 
 					<?php if ( is_user_logged_in() ) { ?>
 						<?php  $current_user = wp_get_current_user();?>
-						
 						<ul class="logout-menu">
 							<li>
-								<span>Hi, <?php echo esc_html($current_user->display_name) ?></span>
+								<span><?php esc_html_e( 'Hi', 'autoart' ); ?>, <?php echo esc_html($current_user->display_name) ?></span>
 							</li>
 							<li> 
-								<a href="<?php echo esc_url( wp_logout_url() ); ?>">Logout</a>
+								<a href="<?php echo esc_url( wp_logout_url() ); ?>"><?php esc_html_e( 'Logout', 'autoart' ); ?></a>
 							</li>
 						</ul>
 					<?php } else { ?>
