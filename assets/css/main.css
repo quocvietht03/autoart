@@ -1481,34 +1481,44 @@ img.alignright {
 @media (min-width: 1025px) and (max-width: 1199.98px) {
   .elementor-location-header .elementor-element.bt-header-top-bar > .e-con-inner > .elementor-element:last-child {
     gap: 40px; } }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .elementor-location-header .elementor-element.bt-header-top-bar > .e-con-inner .elementor-widget-bt-site-information .bt-elwg-site-infor--item {
+    width: 100%; }
+    .elementor-location-header .elementor-element.bt-header-top-bar > .e-con-inner .elementor-widget-bt-site-information .bt-elwg-site-infor--item:not(:last-child) {
+      margin-bottom: 10px; } }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .elementor-location-header .elementor-element.bt-header-top-bar > .e-con-inner .elementor-widget-bt-site-social {
+    width: 100%; } }
 .elementor-location-header .elementor-element.bt-header-nav {
   max-width: 1480px;
-  width: calc(100% - 130px);
   margin-left: auto;
   margin-right: auto;
   fill: #FFF;
   filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.1));
   position: relative;
   box-sizing: border-box; }
-  .elementor-location-header .elementor-element.bt-header-nav::before, .elementor-location-header .elementor-element.bt-header-nav::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    width: 50px;
-    height: 107px;
-    top: 0px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    mix-blend-mode: none;
-    border-radius: 0;
-    border: none; }
-  .elementor-location-header .elementor-element.bt-header-nav::before {
-    background-image: url(../images/image-graphic-before-header.png);
-    left: -50px; }
-  .elementor-location-header .elementor-element.bt-header-nav::after {
-    background-image: url(../images/image-graphic-after-header.png);
-    right: -50px; }
+  @media (min-width: 481px) {
+    .elementor-location-header .elementor-element.bt-header-nav {
+      width: calc(100% - 130px); }
+      .elementor-location-header .elementor-element.bt-header-nav::before, .elementor-location-header .elementor-element.bt-header-nav::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 50px;
+        height: 107px;
+        top: 0px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        mix-blend-mode: none;
+        border-radius: 0;
+        border: none; }
+      .elementor-location-header .elementor-element.bt-header-nav::before {
+        background-image: url(../images/image-graphic-before-header.png);
+        left: -50px; }
+      .elementor-location-header .elementor-element.bt-header-nav::after {
+        background-image: url(../images/image-graphic-after-header.png);
+        right: -50px; } }
   @media (min-width: 1200px) and (max-width: 1279.98px) {
     .elementor-location-header .elementor-element.bt-header-nav > .e-con-inner > .elementor-element:last-child {
       gap: 40px; } }
@@ -1517,8 +1527,6 @@ img.alignright {
       gap: 20px; } }
   .elementor-location-header .elementor-element.bt-header-nav .elementor-widget-nav-menu.bt-nav-primary nav.elementor-nav-menu--main > ul > li > a {
     padding-top: 0; }
-    .elementor-location-header .elementor-element.bt-header-nav .elementor-widget-nav-menu.bt-nav-primary nav.elementor-nav-menu--main > ul > li > a .sub-arrow {
-      display: none; }
   @media (max-width: 1199.98px) {
     .elementor-location-header .elementor-element.bt-header-nav .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li a {
       font-size: 18px; } }
