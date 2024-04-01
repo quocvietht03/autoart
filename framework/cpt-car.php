@@ -35,7 +35,7 @@ function autoart_car_register() {
     'has_archive'     => true,
 		'menu_icon'       => 'dashicons-admin-post',
 		'rewrite'         => array('slug' => $cpt_slug), // Permalinks format
-		'supports'        => array('title', 'editor')
+		'supports'        => array('title', 'editor', 'thumbnail')
   );
 
   add_filter( 'enter_title_here',  'autoart_car_change_default_title');

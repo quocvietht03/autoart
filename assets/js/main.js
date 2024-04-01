@@ -165,6 +165,18 @@
 		}
 	}
 
+	/* Cars sidebar toggle */
+	function AutoArtCarSidebarToggle() {
+		if($('.bt-car-sidebar-toggle').length > 0) {
+			$('.bt-car-sidebar-toggle').on('click', function() {
+				$(this).parents('.bt-main-post-row').find('.bt-sidebar-col').addClass('active');
+			});
+			$('.bt-sidebar-overlay').on('click', function() {
+				$(this).parents('.bt-main-post-row').find('.bt-sidebar-col').removeClass('active');
+			});
+		}
+	}
+
 	/* Cars filter */
 	function AutoArtCarsFilter() {
 		if (!$('body').hasClass('post-type-archive-car')) {
@@ -400,6 +412,7 @@
 		AutoArtCloseSection();
 		AutoArtCarWishlist();
 		AutoArtCarCompare();
+		AutoArtCarSidebarToggle();
 		AutoArtCarsFilter();
 		AutoArtOrbitEffect();
 		AutoArtCursorEffect();

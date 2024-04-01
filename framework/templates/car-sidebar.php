@@ -84,3 +84,5 @@
     </div>
   </form>
 </div>
+
+<div class="bt-sidebar-overlay"></div>

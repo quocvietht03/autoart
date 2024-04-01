@@ -20,10 +20,10 @@
   flex-wrap: wrap;
   gap: 30px;
   .bt-main-post-col {
-    width: calc(66% - 15px);
+    width: calc(66.66% - 15px);
   }
   .bt-sidebar-col {
-    width: calc(34% - 15px);
+    width: calc(33.33% - 15px);
   }
   @media(max-width: $break-md) {
     flex-direction: column;
