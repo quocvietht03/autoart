@@ -221,6 +221,9 @@
   color: $color-primary;
   a {
     color: $color-accent;
+    .elementor & {
+      text-decoration: underline;
+    }
   }
 }
 
