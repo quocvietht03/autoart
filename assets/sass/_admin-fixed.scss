@@ -1,6 +1,7 @@
 html :where(.editor-styles-wrapper) {
   font-family: $text-font;
 }
+
 .widget {
   *:focus {
     outline: 0;

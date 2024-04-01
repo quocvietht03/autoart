@@ -77,6 +77,22 @@
     border-color: $color-secondary;
   }
 }
+.__scrollbar_style {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+  	width: 3px;
+    border-radius: 10px;
+  	background-color: #F1F1F1;
+  }
+  &::-webkit-scrollbar-thumb {
+  	border-radius: 10px;
+  	background-color: $color-accent;
+  }
+  &::-webkit-scrollbar-track {
+  	border-radius: 10px;
+  	background-color: #F1F1F1;
+  }
+}
 .__bt-format-post-content {
   > *:first-child {
     margin-top: 0 !important;

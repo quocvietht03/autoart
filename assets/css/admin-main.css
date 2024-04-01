@@ -264,6 +264,19 @@ html :where(.editor-styles-wrapper) {
     background: var(--e-global-color-secondary, #111);
     border-color: var(--e-global-color-secondary, #111); }
 
+.__scrollbar_style {
+  overflow-y: auto; }
+  .__scrollbar_style::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 10px;
+    background-color: #F1F1F1; }
+  .__scrollbar_style::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--e-global-color-accent, #1FBECD); }
+  .__scrollbar_style::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #F1F1F1; }
+
 .__bt-format-post-content > *:first-child {
   margin-top: 0 !important; }
 .__bt-format-post-content > *:last-child {
