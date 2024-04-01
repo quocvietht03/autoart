@@ -887,7 +887,7 @@ img.alignright {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px; }
+  gap: 5px; }
   .__bt-socials-style span, .bt-post-author--socials span, .bt-elwg-site-social span {
     display: inline-block;
     font-family: var(--e-global-typography-primary-font-family, "DM Sans");
@@ -895,7 +895,7 @@ img.alignright {
     font-weight: 700;
     line-height: 150%;
     color: var(--e-global-color-primary, #222);
-    margin-right: 8px; }
+    margin-right: 9.88px; }
   .__bt-socials-style a, .bt-post-author--socials a, .bt-elwg-site-social a {
     display: flex;
     align-items: center;
