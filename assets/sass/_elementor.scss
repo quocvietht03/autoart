@@ -94,11 +94,14 @@
 }
 
 .elementor-widget-shortcode {
+  width: 100%;    
+
   &.bt-sc-dark-bg {
     .tnp-subscription-minimal form input.tnp-submit {
       background: $color-secondary;
     }
   }
+
   .tnp-subscription-minimal {
     margin: 0;
     form {
@@ -106,35 +109,51 @@
       text-align: left !important;
       input.tnp-email {
         width: 100%;
-        max-width: calc(100% - 70px);
-        font-size: 16px;
-        line-height: 20px;
+        max-width: calc(100% - 30px);
         border-radius: 15px;
-        border: 1px solid #DFDFDF;
+        border:none;
         background-color: #FFF;
         background-image: url('../images/envelope.svg');
         background-repeat: no-repeat;
-        background-position: center left 25px;
+        background-position: center left 37px;
         margin: 0;
-        padding: 25px 150px 25px 55px;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 29.22px 210px 27.78px 66.7px;
+        height: 79px;
       }
+
+      input.tnp-email, input.tnp-email::placeholder{
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $color-text;
+        font-family: $text-font;
+      }
+
       input.tnp-submit {
         position: absolute;
         top: 50%;
         right: 0;
         width: unset;
-        min-width: 200px;
+        min-width: 216px;         
         font-size: 16px;
+        font-family: $text-font;
+        font-style: normal;
         font-weight: 700;
-        line-height: 20px;
+        line-height: 160.2%;
         text-transform: uppercase;
         color: #FFF;
-        background: $color-accent;
-        padding: 15px;
-        border-radius: 15px;
+        background: $color-secondary;
+        padding: 0px 43px;
+        border-radius: 10px;
         transform: translateY(-50%);
+        height:57px;
+        min-height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+      
       @media(max-width: $break-xs) {
         input.tnp-email {
           padding-right: 80px;

@@ -324,7 +324,11 @@
     position: relative;
     box-sizing: border-box;
 
-    @media (min-width: 481px){
+    .e--pointer-underline .elementor-item:after{
+      width: calc(100% + 16px);
+    }
+
+    @media (min-width: 768px){
       width: calc(100% - 130px);
 
       &::before, &::after{
