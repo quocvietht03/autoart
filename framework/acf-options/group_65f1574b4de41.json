@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_65f1574b49a3d",
-            "label": "Mileage",
+            "label": "Mileage (km)",
             "name": "car_mileage",
             "aria-label": "",
             "type": "number",
@@ -173,5 +173,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711379066
+    "modified": 1711977337
 }

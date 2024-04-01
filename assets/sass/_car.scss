@@ -250,7 +250,7 @@
   color: #ffffff;
   background: $color-accent;
   margin-bottom: 20px;
-  padding: 9px 20px; 
+  padding: 9px 20px;
   border-radius: 10px;
   @media(max-width: $break-md) {
     display: block;
@@ -364,6 +364,7 @@
   }
   .bt-post {
     background: #FFFFFF;
+    overflow: hidden;
     &--thumbnail {
       position: relative;
       .bt-cover-image {
@@ -417,6 +418,9 @@
       padding: 10px 30px;
       border-radius: 0 10px 10px 0;
       transform: translateY(-50%);
+      a {
+        color: inherit;
+      }
     }
     &--info-inner {
       padding: 40px 30px 24px;
@@ -427,6 +431,15 @@
       line-height: 150%;
       color: $color-accent;
       margin-bottom: 8px;
+      a {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 150%;
+        color: inherit;
+        background: #F1F1F1;
+        padding: 8px 15px;
+        border-radius: 10px;
+      }
     }
     &--title {
       @extend .__bt-max-line-ellipsis;
@@ -497,6 +510,14 @@
       border-radius: 0 0 20px 20px;
       svg path {
         stroke: $color-accent;
+        transition: all .3s;
+      }
+      &:hover {
+        color: #FFFFFF;
+        background: $color-accent;
+        svg path {
+          stroke: #FFFFFF;
+        }
       }
     }
   }
