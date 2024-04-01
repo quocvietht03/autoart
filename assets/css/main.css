@@ -4934,52 +4934,66 @@ body {
   .elementor-widget-form .elementor-form[name="Contact With Us"] .elementor-field-type-submit .elementor-button {
     flex-basis: auto; }
 
-.elementor-widget-shortcode.bt-sc-dark-bg .tnp-subscription-minimal form input.tnp-submit {
-  background: var(--e-global-color-secondary, #111); }
-.elementor-widget-shortcode .tnp-subscription-minimal {
-  margin: 0; }
-  .elementor-widget-shortcode .tnp-subscription-minimal form {
-    position: relative;
-    text-align: left !important; }
-    .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
-      width: 100%;
-      max-width: calc(100% - 70px);
-      font-size: 16px;
-      line-height: 20px;
-      border-radius: 15px;
-      border: 1px solid #DFDFDF;
-      background-color: #FFF;
-      background-image: url("../images/envelope.svg");
-      background-repeat: no-repeat;
-      background-position: center left 25px;
-      margin: 0;
-      padding: 25px 150px 25px 55px;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); }
-    .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      width: unset;
-      min-width: 200px;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 20px;
-      text-transform: uppercase;
-      color: #FFF;
-      background: var(--e-global-color-accent, #1FBECD);
-      padding: 15px;
-      border-radius: 15px;
-      transform: translateY(-50%); }
-    @media (max-width: 519.98px) {
+.elementor-widget-shortcode {
+  width: 100%; }
+  .elementor-widget-shortcode.bt-sc-dark-bg .tnp-subscription-minimal form input.tnp-submit {
+    background: var(--e-global-color-secondary, #111); }
+  .elementor-widget-shortcode .tnp-subscription-minimal {
+    margin: 0; }
+    .elementor-widget-shortcode .tnp-subscription-minimal form {
+      position: relative;
+      text-align: left !important; }
       .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
-        padding-right: 80px; }
+        width: 100%;
+        max-width: calc(100% - 30px);
+        border-radius: 15px;
+        border: none;
+        background-color: #FFF;
+        background-image: url("../images/envelope.svg");
+        background-repeat: no-repeat;
+        background-position: center left 37px;
+        margin: 0;
+        padding: 29.22px 210px 27.78px 66.7px;
+        height: 79px; }
+      .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email::placeholder {
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: var(--e-global-color-text, #555);
+        font-family: var(--e-global-typography-text-font-family, "DM Sans"); }
       .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
-        font-size: 14px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        min-width: unset;
-        width: 140px; } }
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: unset;
+        min-width: 216px;
+        font-size: 16px;
+        font-family: var(--e-global-typography-text-font-family, "DM Sans");
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160.2%;
+        text-transform: uppercase;
+        color: #FFF;
+        background: var(--e-global-color-secondary, #111);
+        padding: 0px 43px;
+        border-radius: 10px;
+        transform: translateY(-50%);
+        height: 57px;
+        min-height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      @media (max-width: 519.98px) {
+        .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
+          padding-right: 80px; }
+        .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+          font-size: 14px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          min-width: unset;
+          width: 140px; } }
 
 .elementor-widget-loop-grid .elementor-posts-masonry .bt-post--featured .bt-cover-image, .elementor-widget-loop-grid .elementor-posts-masonry .bt-post--featured .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .elementor-widget-loop-grid .elementor-posts-masonry .bt-post--featured .wc-cover-image {
   padding-bottom: 0 !important; }
