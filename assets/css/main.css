@@ -5213,8 +5213,32 @@ body {
   margin: 0; }
 
 .elementor-widget-heading .elementor-heading-title span {
-  font-family: var(--e-global-typography-secondary-font-family, "DM Sans");
-  color: var(--e-global-color-accent, #1FBECD); }
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit; }
+  .elementor-widget-heading .elementor-heading-title span:not(.bt-small) {
+    color: var(--e-global-color-accent, #1FBECD);
+    position: relative;
+    z-index: 9;
+    display: inline-block; }
+    .elementor-widget-heading .elementor-heading-title span:not(.bt-small)::before {
+      content: " ";
+      display: inline-block;
+      width: calc(100% + 50px);
+      height: 100%;
+      background-image: url("../images/img-graphic-heading.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50%); }
+  .elementor-widget-heading .elementor-heading-title span.bt-small {
+    font-size: 72%; }
 .elementor-widget-heading .elementor-heading-title a {
   display: inline-block;
   color: var(--e-global-color-accent, #1FBECD) !important;
@@ -6156,5 +6180,23 @@ body {
           left: -10px;
           top: 50%;
           transform: translateY(-50%); }
+
+@media (min-width: 1200px) and (max-width: 1439.98px) {
+  .elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title {
+    font-size: 55px; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title {
+    font-size: 45px; } }
+.elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title span:not(.bt-small)::before {
+  background-image: url("../images/img-graphic-heading-hero.svg"); }
+@media (min-width: 1025px) and (max-width: 1600.98px) {
+  .elementor-element.bt-hero-home .elementor-widget-image.bt-hero-image > .elementor-widget-container {
+    margin-right: 0; } }
+.elementor-element.bt-we-offer .elementor-widget-image-box > .elementor-widget-container {
+  transition: all .3s; }
+  .elementor-element.bt-we-offer .elementor-widget-image-box > .elementor-widget-container:hover {
+    background-color: #F0F0F0;
+    cursor: pointer;
+    border-color: #F0F0F0; }
 
 /*# sourceMappingURL=main.css.map */
