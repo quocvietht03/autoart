@@ -465,7 +465,7 @@ html :where(.editor-styles-wrapper) {
     .__bt-socials-style a.bt-twitter {
       background: #00B3D3; }
     .__bt-socials-style a.bt-google {
-      background: transparent; }
+      background: var(--e-global-color-accent, #1FBECD); }
     .__bt-socials-style a svg {
       fill: currentColor; }
 

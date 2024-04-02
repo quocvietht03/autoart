@@ -96,11 +96,11 @@
 .elementor-widget-shortcode {
   width: 100%;    
 
-  &.bt-sc-dark-bg {
-    .tnp-subscription-minimal form input.tnp-submit {
-      background: $color-secondary;
-    }
-  }
+  // &.bt-sc-dark-bg {
+  //   .tnp-subscription-minimal form input.tnp-submit {
+  //     background: $color-secondary;
+  //   }
+  // }
 
   .tnp-subscription-minimal {
     margin: 0;
@@ -119,6 +119,22 @@
         margin: 0;
         padding: 29.22px 210px 27.78px 66.7px;
         height: 79px;
+
+        @media (max-width: 1024.98px) {
+          padding: 29.22px 160px 27.78px 50.7px;
+          background-position: center left 20px;
+        }
+
+        @media (max-width: 767.98px) {
+          height: 70px;
+          padding: 20px 105px 20px 42px;
+          background-position: center left 15px;
+        }
+
+        @media (max-width: 359.98px) {
+          max-width: 100%;
+          padding-right: 15px;
+        }
       }
 
       input.tnp-email, input.tnp-email::placeholder{
@@ -128,6 +144,9 @@
         line-height: normal;
         color: $color-text;
         font-family: $text-font;
+        @media (max-width: 767.98px) {
+          font-size: 16px;
+        }
       }
 
       input.tnp-submit {
@@ -152,19 +171,33 @@
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-      
-      @media(max-width: $break-xs) {
-        input.tnp-email {
-          padding-right: 80px;
+        margin: 0;
+        @media (max-width: 1024.98px) {
+          min-width: 150px;
+          padding: 0 22px;
         }
-        input.tnp-submit {
+
+        @media (max-width: 767.98px) {
+          height: 47px;
+        }
+
+        @media (max-width: 575.98px) {
           font-size: 14px;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
           min-width: unset;
-          width: 140px;
+          width: 130px;
+          padding: 0 5px;
+        }
+
+        @media (max-width: 359.98px) {
+          position: relative;
+          top: inherit;
+          bottom: inherit;
+          transform: translate(0, 0);
+          width: 100%;
+          margin-top: 16px;
         }
       }
     }

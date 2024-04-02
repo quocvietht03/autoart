@@ -959,7 +959,7 @@ img.alignright {
     .__bt-socials-style a.bt-twitter, .bt-post-author--socials a.bt-twitter, .bt-elwg-site-social a.bt-twitter {
       background: #00B3D3; }
     .__bt-socials-style a.bt-google, .bt-post-author--socials a.bt-google, .bt-elwg-site-social a.bt-google {
-      background: transparent; }
+      background: var(--e-global-color-accent, #1FBECD); }
     .__bt-socials-style a svg, .bt-post-author--socials a svg, .bt-elwg-site-social a svg {
       fill: currentColor; }
 
@@ -1670,10 +1670,33 @@ img.alignright {
     height: 1px;
     background: #707070; }
 
-.bt-site-footer-bottom .elementor-widget-social-icons .elementor-grid-item .elementor-social-icon.elementor-social-icon-linkedin-in {
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-element.bt-site-footer-top > .e-con-inner > .elementor-element {
+    padding-left: 15px;
+    padding-right: 15px; } }
+
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-element.bt-site-footer-bottom > .e-con-inner {
+    gap: 15px 15px; } }
+@media (min-width: 480px) and (max-width: 767.98px) {
+  .elementor-element.bt-site-footer-bottom > .e-con-inner > .elementor-element:nth-child(2) {
+    flex-wrap: nowrap;
+    gap: 15px; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-element.bt-site-footer-bottom > .e-con-inner .elementor-widget-heading .elementor-heading-title {
+    font-size: 20px; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-element.bt-site-footer-bottom > .e-con-inner .elementor-nav-menu--main li a {
+    font-size: 18px !important; } }
+.elementor-element.bt-site-footer-bottom .bt-elwg-site-social a {
+  width: 43px;
+  height: 43px; }
+  .elementor-element.bt-site-footer-bottom .bt-elwg-site-social a:nth-child(4) {
+    display: none; }
+.elementor-element.bt-site-footer-bottom .elementor-widget-social-icons .elementor-grid-item .elementor-social-icon.elementor-social-icon-linkedin-in {
   box-sizing: border-box;
   border: 2px solid #4D93E9; }
-.bt-site-footer-bottom .bt-elwg-site-infor a:hover {
+.elementor-element.bt-site-footer-bottom .bt-elwg-site-infor a:hover {
   text-decoration: underline; }
 
 .bt-site-titlebar {
@@ -5247,8 +5270,6 @@ body {
 
 .elementor-widget-shortcode {
   width: 100%; }
-  .elementor-widget-shortcode.bt-sc-dark-bg .tnp-subscription-minimal form input.tnp-submit {
-    background: var(--e-global-color-secondary, #111); }
   .elementor-widget-shortcode .tnp-subscription-minimal {
     margin: 0; }
     .elementor-widget-shortcode .tnp-subscription-minimal form {
@@ -5266,6 +5287,19 @@ body {
         margin: 0;
         padding: 29.22px 210px 27.78px 66.7px;
         height: 79px; }
+        @media (max-width: 1024.98px) {
+          .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
+            padding: 29.22px 160px 27.78px 50.7px;
+            background-position: center left 20px; } }
+        @media (max-width: 767.98px) {
+          .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
+            height: 70px;
+            padding: 20px 105px 20px 42px;
+            background-position: center left 15px; } }
+        @media (max-width: 359.98px) {
+          .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
+            max-width: 100%;
+            padding-right: 15px; } }
       .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email::placeholder {
         font-size: 17px;
         font-style: normal;
@@ -5273,6 +5307,9 @@ body {
         line-height: normal;
         color: var(--e-global-color-text, #555);
         font-family: var(--e-global-typography-text-font-family, "DM Sans"); }
+        @media (max-width: 767.98px) {
+          .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email::placeholder {
+            font-size: 16px; } }
       .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
         position: absolute;
         top: 50%;
@@ -5294,17 +5331,32 @@ body {
         min-height: auto;
         display: flex;
         align-items: center;
-        justify-content: center; }
-      @media (max-width: 519.98px) {
-        .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
-          padding-right: 80px; }
-        .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
-          font-size: 14px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          min-width: unset;
-          width: 140px; } }
+        justify-content: center;
+        margin: 0; }
+        @media (max-width: 1024.98px) {
+          .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+            min-width: 150px;
+            padding: 0 22px; } }
+        @media (max-width: 767.98px) {
+          .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+            height: 47px; } }
+        @media (max-width: 575.98px) {
+          .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+            font-size: 14px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            min-width: unset;
+            width: 130px;
+            padding: 0 5px; } }
+        @media (max-width: 359.98px) {
+          .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+            position: relative;
+            top: inherit;
+            bottom: inherit;
+            transform: translate(0, 0);
+            width: 100%;
+            margin-top: 16px; } }
 
 .elementor-widget-loop-grid .elementor-posts-masonry .bt-post--featured .bt-cover-image, .elementor-widget-loop-grid .elementor-posts-masonry .bt-post--featured .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .elementor-widget-loop-grid .elementor-posts-masonry .bt-post--featured .wc-cover-image {
   padding-bottom: 0 !important; }
