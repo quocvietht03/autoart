@@ -28,11 +28,11 @@
             "preview_size": "thumbnail"
         },
         {
-            "key": "field_6530d43c36cc1",
-            "label": "Book Link",
-            "name": "book_link",
+            "key": "field_660d08320394d",
+            "label": "Description",
+            "name": "description_service",
             "aria-label": "",
-            "type": "link",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -41,7 +41,11 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -62,5 +66,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710857431
+    "modified": 1712130124
 }

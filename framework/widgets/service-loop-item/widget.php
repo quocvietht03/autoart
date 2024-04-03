@@ -240,48 +240,6 @@ class Widget_ServiceLoopItem extends Widget_Base {
 			]
 		);
 
-		$this->add_control(
-			'readmore_link_style',
-			[
-				'label' => __( 'Read More Link', 'autoart' ),
-				'type' => Controls_Manager::HEADING,
-			]
-		);
-
-		$this->add_control(
-			'readmore_link_color',
-			[
-				'label' => __( 'Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-post--readmore a' => 'color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'readmore_link_color_hover',
-			[
-				'label' => __( 'Color Hover', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-post--readmore a:hover' => 'color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'readmore_link_typography',
-				'label' => __( 'Typography', 'autoart' ),
-				'default' => '',
-				'selector' => '{{WRAPPER}} .bt-post--readmore a',
-			]
-		);
-
 		$this->end_controls_section();
 
 	}
