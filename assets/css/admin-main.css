@@ -748,6 +748,30 @@ html :where(.editor-styles-wrapper) {
       .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading {
         max-width: 430px; } }
 
+.elementor-widget-heading.bt-heading-hero .elementor-heading-title b {
+  font-size: 72%;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit; }
+.elementor-widget-heading.bt-heading-hero .elementor-heading-title span {
+  position: relative;
+  z-index: 9;
+  display: inline-block; }
+  .elementor-widget-heading.bt-heading-hero .elementor-heading-title span::before {
+    content: " ";
+    display: inline-block;
+    width: calc(100% + 50px);
+    height: 100%;
+    background-image: url(http://auto-art-theme-dev.local/wp-content/uploads/2024/04/XMLID_202_.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%); }
+
 /*
 * Import
 */
