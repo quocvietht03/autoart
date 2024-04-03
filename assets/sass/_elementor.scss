@@ -5,8 +5,37 @@
 }
 .elementor-widget-heading .elementor-heading-title {
   span {
-    font-family: $secondary-font;
-    color: $color-accent;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+
+    &:not(.bt-small){
+      color: $color-accent;
+      position: relative;
+      z-index: 9;
+      display: inline-block;
+      &::before{
+          content: " ";
+          display: inline-block;
+          width: calc(100% + 50px);
+          height: 100%;
+          background-image: url('../images/img-graphic-heading.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          z-index: -1;
+          transform: translate(-50%, -50%);
+      }
+    }
+
+    &.bt-small{
+      font-size: 72%;
+    }
   }
   a {
     display: inline-block;
