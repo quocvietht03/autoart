@@ -124,13 +124,6 @@
 
 .elementor-widget-shortcode {
   width: 100%;    
-
-  // &.bt-sc-dark-bg {
-  //   .tnp-subscription-minimal form input.tnp-submit {
-  //     background: $color-secondary;
-  //   }
-  // }
-
   .tnp-subscription-minimal {
     margin: 0;
     form {
@@ -1368,6 +1361,51 @@
             transform: translateY(-50%);
           }
         }
+      }
+    }
+  }
+}
+
+.bt-elwg-highlighted-heading{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-image: url(var(--v));
+  h1, h2, h3, h4, h5, h6{
+    width: 100%;
+    max-width: fit-content;
+    a, span{
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      display: inline-block;
+    }
+  }
+
+  .__text-highlighted{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    img{
+      position: absolute;
+      min-width: calc(100% + 70%);
+      height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      cursor: pointer;
+    }
+  }
+
+  &.animationed{
+    .__text-highlighted{
+      img{
+        animation: effectScaleAnimation 2s ease-in-out infinite;
       }
     }
   }
