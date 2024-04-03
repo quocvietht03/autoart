@@ -6182,21 +6182,16 @@ body {
           transform: translateY(-50%); }
 
 @media (min-width: 1200px) and (max-width: 1439.98px) {
-  .elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title {
+  .__bt-heading-style, .elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title {
     font-size: 55px; } }
 @media (min-width: 1025px) and (max-width: 1199.98px) {
-  .elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title {
+  .__bt-heading-style, .elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title {
     font-size: 45px; } }
+
 .elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title span:not(.bt-small)::before {
   background-image: url("../images/img-graphic-heading-hero.svg"); }
 @media (min-width: 1025px) and (max-width: 1600.98px) {
   .elementor-element.bt-hero-home .elementor-widget-image.bt-hero-image > .elementor-widget-container {
     margin-right: 0; } }
-.elementor-element.bt-we-offer .elementor-widget-image-box > .elementor-widget-container {
-  transition: all .3s; }
-  .elementor-element.bt-we-offer .elementor-widget-image-box > .elementor-widget-container:hover {
-    background-color: #F0F0F0;
-    cursor: pointer;
-    border-color: #F0F0F0; }
 
 /*# sourceMappingURL=main.css.map */

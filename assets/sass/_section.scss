@@ -1,0 +1,37 @@
+.__bt-heading-style{
+    @media (min-width: 1200px) and (max-width: 1439.98px) { 
+        font-size: 55px;
+    }
+
+    @media (min-width: 1025px) and (max-width: 1199.98px) { 
+        font-size: 45px;
+    }
+}
+
+.elementor-element{
+    &.bt-hero-home{
+        .elementor-widget-heading{
+            h1.elementor-heading-title{
+                @extend .__bt-heading-style;
+                span{
+                    &:not(.bt-small){
+                        &::before{
+                            background-image: url('../images/img-graphic-heading-hero.svg');
+                        }
+                      }
+                }
+            }
+        }
+
+        .elementor-widget-image{
+            &.bt-hero-image{
+                > .elementor-widget-container{
+                    @media (min-width: 1025px) and (max-width: 1600.98px) { 
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+    }
+}
