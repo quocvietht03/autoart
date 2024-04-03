@@ -6180,8 +6180,7 @@ body {
 .bt-elwg-highlighted-heading {
   display: flex;
   justify-content: start;
-  align-items: center;
-  background-image: url(var(--v)); }
+  align-items: center; }
   .bt-elwg-highlighted-heading h1, .bt-elwg-highlighted-heading h2, .bt-elwg-highlighted-heading h3, .bt-elwg-highlighted-heading h4, .bt-elwg-highlighted-heading h5, .bt-elwg-highlighted-heading h6 {
     width: 100%;
     max-width: fit-content; }
@@ -6193,6 +6192,8 @@ body {
       letter-spacing: inherit;
       color: inherit;
       display: inline-block; }
+    .bt-elwg-highlighted-heading h1 .bt-small, .bt-elwg-highlighted-heading h2 .bt-small, .bt-elwg-highlighted-heading h3 .bt-small, .bt-elwg-highlighted-heading h4 .bt-small, .bt-elwg-highlighted-heading h5 .bt-small, .bt-elwg-highlighted-heading h6 .bt-small {
+      font-size: 72%; }
   .bt-elwg-highlighted-heading .__text-highlighted {
     position: relative;
     background-repeat: no-repeat;
@@ -6211,14 +6212,12 @@ body {
     animation: effectScaleAnimation 2s ease-in-out infinite; }
 
 @media (min-width: 1200px) and (max-width: 1439.98px) {
-  .__bt-heading-style, .elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title {
+  .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h3, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h4, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h5, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h6 {
     font-size: 55px; } }
 @media (min-width: 1025px) and (max-width: 1199.98px) {
-  .__bt-heading-style, .elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title {
+  .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h3, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h4, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h5, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h6 {
     font-size: 45px; } }
 
-.elementor-element.bt-hero-home .elementor-widget-heading h1.elementor-heading-title span:not(.bt-small)::before {
-  background-image: url("../images/img-graphic-heading-hero.svg"); }
 @media (min-width: 1025px) and (max-width: 1600.98px) {
   .elementor-element.bt-hero-home .elementor-widget-image.bt-hero-image > .elementor-widget-container {
     margin-right: 0; } }

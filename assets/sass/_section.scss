@@ -10,16 +10,10 @@
 
 .elementor-element{
     &.bt-hero-home{
-        .elementor-widget-heading{
-            h1.elementor-heading-title{
+
+        .bt-elwg-highlighted-heading {
+            h1, h2, h3, h4, h5, h6{
                 @extend .__bt-heading-style;
-                span{
-                    &:not(.bt-small){
-                        &::before{
-                            background-image: url('../images/img-graphic-heading-hero.svg');
-                        }
-                    }
-                }
             }
         }
 

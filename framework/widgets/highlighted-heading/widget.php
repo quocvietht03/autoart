@@ -135,7 +135,7 @@ class Widget_HighlightedHeading extends Widget_Base {
 			);
 
 			$this->add_control(
-				'account_login_color',[
+				'text_color',[
 					'label' => __( 'Color', 'autoart' ),
 					'type' => Controls_Manager::COLOR,
 					'default' => '#222',
@@ -152,10 +152,28 @@ class Widget_HighlightedHeading extends Widget_Base {
 
 			$this->add_group_control(
 				Group_Control_Typography::get_type(),[
-					'name'     => 'account_login_typography',
+					'name'     => 'text_typography',
 					'label'    => __( 'Typography', 'autoart' ),
 					'default'  => '',
 					'selector' => '{{WRAPPER}} .bt-elwg-highlighted-heading h1, {{WRAPPER}} .bt-elwg-highlighted-heading h2, {{WRAPPER}} .bt-elwg-highlighted-heading h3, {{WRAPPER}} .bt-elwg-highlighted-heading h4, {{WRAPPER}} .bt-elwg-highlighted-heading h5, {{WRAPPER}} .bt-elwg-highlighted-heading h6',
+				]
+			);
+
+			$this->add_control(
+				'highlighted_text_style',[
+					'label' => __( 'Highlighted Text', 'autoart' ),
+					'type' => Controls_Manager::HEADING,
+				]
+			);
+
+			$this->add_control(
+				'highlighted_text_color',[
+					'label' => __( 'Color Highlighted Text', 'autoart' ),
+					'type' => Controls_Manager::COLOR,
+					'default' => '#1FBECD',
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-highlighted-heading .__text-highlighted' => 'color: {{VALUE}};'
+					],
 				]
 			);
 
