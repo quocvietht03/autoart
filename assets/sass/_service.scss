@@ -25,9 +25,10 @@
     }
 
     &--inner {
+      box-sizing: border-box;
       text-align: center;
       background: #FFF;
-      padding: 53px 43px 55px 43px;
+      padding: 48px 8% 50px 8%;
       border-radius: 20px;
       border: 5px solid #F0F0F0;
     }
