@@ -2,7 +2,8 @@
 get_header();
 get_template_part( 'framework/templates/site', 'titlebar');
 
-$query_args = autoart_cars_query_args($_GET, $limit = 12);
+$limit = 1;
+$query_args = autoart_cars_query_args($_GET, $limit);
 $wp_query = new \WP_Query($query_args);
 $current_page = isset($_GET['current_page']) && $_GET['current_page'] != '' ? $_GET['current_page'] : 1;
 $total_page = $wp_query->max_num_pages;
@@ -17,6 +18,8 @@ $of = $wp_query->found_posts;
 <main id="bt_main" class="bt-site-main">
 	<div class="bt-main-content-ss">
 		<div class="bt-container">
+			<div class="bt-filter-scroll-pos"></div>
+
 			<div class="bt-main-post-row">
 				<div class="bt-main-post-col">
 					<div class="bt-car-sidebar-toggle">
@@ -34,14 +37,22 @@ $of = $wp_query->found_posts;
 
 					<?php get_template_part( 'framework/templates/car', 'topbar', array('from' => $from, 'to' => $to, 'of' => $of)); ?>
 
-					<div class="bt-filter-results <?php echo isset($_GET['view_type']) && $_GET['view_type'] != '' ? 'bt-view-' . $_GET['view_type'] : 'bt-view-grid' ?>">
+					<div class="bt-filter-results">
 						<?php
 	            if ( $wp_query->have_posts() ) {
-	              while ( $wp_query->have_posts() ) { $wp_query->the_post();
-	                get_template_part( 'framework/templates/car', 'style', array('image-size' => 'medium_large'));
-	              }
+								?>
+								<div class="bt-car-layout <?php echo isset($_GET['view_type']) && $_GET['view_type'] != '' ? 'bt-view-' . $_GET['view_type'] : 'bt-view-grid' ?>" data-limit="<?php echo esc_attr($limit); ?>">
+									<?php
+			              while ( $wp_query->have_posts() ) { $wp_query->the_post();
+			                get_template_part( 'framework/templates/car', 'style', array('image-size' => 'medium_large'));
+			              }
+									?>
+								</div>
 
-	              echo autoart_cars_pagination($current_page, $total_page);
+								<div class="bt-car-pagination-wrap">
+									<?php echo autoart_cars_pagination($current_page, $total_page); ?>
+								</div>
+								<?php
 	            } else {
 	              echo '<h3 class="not-found-post">' . esc_html__('Sorry, No results', 'autoart') . '</h3>';
 	            }

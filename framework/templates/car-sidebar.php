@@ -8,7 +8,7 @@
       <input type="hidden" class="bt-car-view-type" name="view_type" value="<?php if(isset($_GET['view_type'])) echo $_GET['view_type']; ?>">
 
       <!--View current page-->
-      <input type="hidden" class="bt-car-current-page" name="current_page" value="<?php echo isset($_GET['current_page']) ? $_GET['current_page'] : 1; ?>">
+      <input type="hidden" class="bt-car-current-page" name="current_page" value="<?php echo isset($_GET['current_page']) ? $_GET['current_page'] : ''; ?>">
 
       <div class="bt-form-field bt-field-type-search">
         <input type="text" name="search_keyword" value="<?php if(isset($_GET['search_keyword'])) echo $_GET['search_keyword']; ?>" placeholder="<?php esc_html_e('Search …', 'autoart'); ?>">
@@ -20,69 +20,73 @@
       </div>
 
       <?php
-        $field_title = __('Filter by Year', 'autoart');
-        $field_min_value = (isset($_GET['year_min'])) ? $_GET['year_min'] : '';
-        $field_max_value = (isset($_GET['year_max'])) ? $_GET['year_max'] : '';
-        autoart_cars_field_slider_html('car_year', $field_title, $field_min_value, $field_max_value);
+        // $field_title = __('Filter by Year', 'autoart');
+        // $field_min_value = (isset($_GET['car_year_min'])) ? $_GET['car_year_min'] : '';
+        // $field_max_value = (isset($_GET['car_year_max'])) ? $_GET['car_year_max'] : '';
+        // autoart_cars_field_slider_html('car_year', $field_title, $field_min_value, $field_max_value);
 
-        $field_title = __('Filter by Price ($)', 'autoart');
-        $field_min_value = (isset($_GET['price_min'])) ? $_GET['price_min'] : '';
-        $field_max_value = (isset($_GET['price_max'])) ? $_GET['price_max'] : '';
-        autoart_cars_field_slider_html('car_price', $field_title, $field_min_value, $field_max_value);
+        $field_title = __('Year', 'autoart');
+        $field_value = (isset($_GET['car_year'])) ? $_GET['car_year'] : '';
+        autoart_cars_field_select_number_html('car_year', $field_title, $field_value);
+
+        // $field_title = __('Filter by Price ($)', 'autoart');
+        // $field_min_value = (isset($_GET['car_price_min'])) ? $_GET['car_price_min'] : '';
+        // $field_max_value = (isset($_GET['car_price_max'])) ? $_GET['car_price_max'] : '';
+        // autoart_cars_field_slider_html('car_price', $field_title, $field_min_value, $field_max_value);
 
         $field_title = __('Price ($)', 'autoart');
-        $field_value = (isset($_GET['price'])) ? $_GET['price'] : '';
+        $field_value = (isset($_GET['car_price'])) ? $_GET['car_price'] : '';
         $field_step = 1000;
-        autoart_cars_field_range_html('car_price', $field_title, $field_value, $field_step);
+        autoart_cars_field_select_range_html('car_price', $field_title, $field_value, $field_step);
 
-        $field_title = __('Filter by Mileage (km)', 'autoart');
-        $field_min_value = (isset($_GET['mileage_min'])) ? $_GET['mileage_min'] : '';
-        $field_max_value = (isset($_GET['mileage_max'])) ? $_GET['mileage_max'] : '';
-        autoart_cars_field_slider_html('car_mileage', $field_title, $field_min_value, $field_max_value);
+        // $field_title = __('Filter by Mileage (km)', 'autoart');
+        // $field_min_value = (isset($_GET['car_mileage_min'])) ? $_GET['car_mileage_min'] : '';
+        // $field_max_value = (isset($_GET['car_mileage_max'])) ? $_GET['car_mileage_max'] : '';
+        // autoart_cars_field_slider_html('car_mileage', $field_title, $field_min_value, $field_max_value);
 
         $field_title = __('Mileage (km)', 'autoart');
-        $field_value = (isset($_GET['mileage'])) ? $_GET['mileage'] : '';
+        $field_value = (isset($_GET['car_mileage'])) ? $_GET['car_mileage'] : '';
         $field_step = 10;
-        autoart_cars_field_range_html('car_mileage', $field_title, $field_value, $field_step);
+        autoart_cars_field_select_range_html('car_mileage', $field_title, $field_value, $field_step);
 
         $field_name = __('Condition', 'autoart');
-        $field_value = (isset($_GET['condition'])) ? $_GET['condition'] : '';
+        $field_value = (isset($_GET['car_condition'])) ? $_GET['car_condition'] : '';
         autoart_cars_field_select_html('car_condition', $field_name, $field_value);
 
         $field_title = __('Body', 'autoart');
-        $field_value = (isset($_GET['body'])) ? $_GET['body'] : '';
+        $field_value = (isset($_GET['car_body'])) ? $_GET['car_body'] : '';
         autoart_cars_field_multiple_html('car_body', $field_title, $field_value);
 
         $field_name = __('Make', 'autoart');
-        $field_value = (isset($_GET['make'])) ? $_GET['make'] : '';
+        $field_value = (isset($_GET['car_make'])) ? $_GET['car_make'] : '';
         autoart_cars_field_select_html('car_make', $field_name, $field_value);
 
         $field_name = __('Model', 'autoart');
-        $field_value = (isset($_GET['model'])) ? $_GET['model'] : '';
+        $field_value = (isset($_GET['car_model'])) ? $_GET['car_model'] : '';
         autoart_cars_field_select_html('car_model', $field_name, $field_value);
 
         $field_name = __('Fuel Type', 'autoart');
-        $field_value = (isset($_GET['fuel_type'])) ? $_GET['fuel_type'] : '';
+        $field_value = (isset($_GET['car_fuel_type'])) ? $_GET['car_fuel_type'] : '';
         autoart_cars_field_select_html('car_fuel_type', $field_name, $field_value);
 
         $field_name = __('Transmission', 'autoart');
-        $field_value = (isset($_GET['transmission'])) ? $_GET['transmission'] : '';
+        $field_value = (isset($_GET['car_transmission'])) ? $_GET['car_transmission'] : '';
         autoart_cars_field_select_html('car_transmission', $field_name, $field_value);
 
         $field_name = __('Number of Doors', 'autoart');
-        $field_value = (isset($_GET['door'])) ? $_GET['door'] : '';
+        $field_value = (isset($_GET['car_door'])) ? $_GET['car_door'] : '';
         autoart_cars_field_select_html('car_door', $field_name, $field_value);
 
         $field_name = __('Engine', 'autoart');
-        $field_value = (isset($_GET['engine'])) ? $_GET['engine'] : '';
+        $field_value = (isset($_GET['car_engine'])) ? $_GET['car_engine'] : '';
         autoart_cars_field_select_html('car_engine', $field_name, $field_value);
 
         $field_name = __('Body Color', 'autoart');
-        $field_value = (isset($_GET['color'])) ? $_GET['color'] : '';
+        $field_value = (isset($_GET['car_color'])) ? $_GET['car_color'] : '';
         autoart_cars_field_multiple_html('car_color', $field_name, $field_value);
 
         $field_title = __('Category', 'autoart');
-        $field_value = (isset($_GET['categories'])) ? $_GET['categories'] : '';
+        $field_value = (isset($_GET['car_categories'])) ? $_GET['car_categories'] : '';
         autoart_cars_field_multiple_html('car_categories', $field_title, $field_value);
 
       ?>
