@@ -118,50 +118,89 @@ class Widget_ListImageText extends Widget_Base {
 			]
 		);
 
-		$this->add_responsive_control(
-			'image_ratio',
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'section_layout',
 			[
-				'label' => __( 'Image Ratio', 'autoart' ),
-				'type' => Controls_Manager::SLIDER,
-				'default' => [
-					'size' => 0.58,
-				],
-				'range' => [
-					'px' => [
-						'min' => 0.3,
-						'max' => 2,
-						'step' => 0.01,
+				'label' => __( 'Layout', 'autoart' ),
+			]
+		);
+
+			$this->add_responsive_control(
+				'lit_columns',
+				[
+					'label' => __( 'Columns', 'bearsthemes-addons' ),
+					'type' => Controls_Manager::SELECT,
+					'default' => '5',
+					'tablet_default' => '3',
+					'mobile_default' => '2',
+					'options' => [
+						'1' => '1',
+						'2' => '2',
+						'3' => '3',
+						'4' => '4',
+						'5' => '5',
+						'6' => '6',
 					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-item--image .bt-cover-image' => 'padding-bottom: calc( {{SIZE}} * 100% );',
-				],
-			]
-		);
+					'selectors' => [
+						'{WRAPPER} .bt-elwg-list-image-text-inner' => 'grid-template-columns: repeat({{VALUE}}, 1fr)',
+					],
+				]
+			);
 
-		$this->add_control(
-			'show_more_button',
-			[
-				'label' => __( 'Show More Button', 'autoart' ),
-				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'autoart' ),
-				'label_off' => __( 'Hide', 'autoart' ),
-				'default' => 'yes',
-			]
-		);
 
-		$this->add_control(
-			'show_more_button_text',
-			[
-				'label' => __( 'Show More Text', 'autoart' ),
-				'type' => Controls_Manager::TEXT,
-				'show_label' => true,
-				'default' => __( 'More Steps', 'autoart' ),
-				'condition' => [
-					'show_more_button!' => '',
-				],
-			]
-		);
+			$this->add_responsive_control(
+				'lit_gap_col',[
+					'label' => __( 'Gap between columns', 'autoart' ),
+					'type'  => Controls_Manager::SLIDER,
+					'size_units' => [ 'px', '%'],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+							'step' => 1,
+						],
+						'%' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'default' => [
+						'unit' => 'px',
+						'size' => 20,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-list-image-text-inner' => 'column-gap: {{SIZE}}{{UNIT}}',
+					],
+				]
+			);
+
+			$this->add_responsive_control(
+				'lit_gap_row',[
+					'label' => __( 'Gap between rows', 'autoart' ),
+					'type'  => Controls_Manager::SLIDER,
+					'size_units' => [ 'px', '%'],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+							'step' => 1,
+						],
+						'%' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'default' => [
+						'unit' => 'px',
+						'size' => 20,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-list-image-text-inner' => 'row-gap: {{SIZE}}{{UNIT}}',
+					],
+				]
+			);
 
 		$this->end_controls_section();
 	}
@@ -176,8 +215,28 @@ class Widget_ListImageText extends Widget_Base {
 		);
 
 			$this->add_control(
-				'button_border_width',
-				[
+				'lit_bg_color',[
+					'label' => __( 'Background Color', 'autoart' ),
+					'type' => Controls_Manager::COLOR,
+					'default' => '#fff',
+					'selectors' => [
+						'{{WRAPPER}} .item-image-text-inner' => 'background-color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
+				'lit_border_color',[
+					'label' => __( 'Border Color', 'autoart' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .item-image-text-inner' => 'border-color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_responsive_control(
+				'lit_border_width',[
 					'label' => __( 'Border Width', 'autoart' ),
 					'type' => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px' ],
@@ -188,12 +247,12 @@ class Widget_ListImageText extends Widget_Base {
 						],
 					],
 					'selectors' => [
-						'{{WRAPPER}} .bt-step-item--button' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+						'{{WRAPPER}} .item-image-text-inner' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 					],
 				]
 			);
 
-			$this->add_control(
+			$this->add_responsive_control(
 				'box_border_radius',[
 					'label' => __( 'Border Radius', 'autoart' ),
 					'type' => Controls_Manager::DIMENSIONS,
@@ -205,11 +264,10 @@ class Widget_ListImageText extends Widget_Base {
 			);
 
 			$this->add_responsive_control(
-				'button_padding',
-				[
+				'lit_padding',[
 					'label' => __( 'Padding', 'autoart' ),
 					'type' => Controls_Manager::DIMENSIONS,
-					'size_units' => [ 'px' ],
+					'size_units' => [ 'px', '%' ],
 					'range' => [
 						'px' => [
 							'min' => 0,
@@ -222,88 +280,12 @@ class Widget_ListImageText extends Widget_Base {
 				]
 			);
 
-
-			$this->start_controls_tabs( 'tabs_box_style' );
-
-				$this->start_controls_tab(
-					'tab_button_normal',
-					[
-						'label' => __( 'Normal', 'autoart' ),
-					]
-				);
-	
-					$this->add_control(
-						'box_bg_color',[
-							'label' => __( 'Background Color', 'autoart' ),
-							'type' => Controls_Manager::COLOR,
-							'default' => '#fff',
-							'selectors' => [
-								'{{WRAPPER}} .item-image-text-inner' => 'background-color: {{VALUE}};',
-							],
-						]
-					);
-	
-					$this->add_control(
-						'box_border_color',[
-							'label' => __( 'Border Color', 'autoart' ),
-							'type' => Controls_Manager::COLOR,
-							'selectors' => [
-								'{{WRAPPER}} .item-image-text-inner' => 'border-color: {{VALUE}};',
-							],
-						]
-					);
-	
-					$this->add_group_control(
-						Group_Control_Box_Shadow::get_type(),
-						[
-							'name' => 'bx_box_shadow',
-							'selector' => '{{WRAPPER}} .item-image-text-inner',
-						]
-					);
-	
-				$this->end_controls_tab();
-	
-				$this->start_controls_tab(
-					'tab_button_hover',[
-						'label' => __( 'Hover', 'autoart' ),
-					]
-				); 
-	
-					$this->add_control(
-						'box_bg_color_hover',[
-							'label' => __( 'Background Color', 'autoart' ),
-							'type' => Controls_Manager::COLOR,
-							'default' => '#fff',
-							'selectors' => [
-								'{{WRAPPER}} .item-image-text-inner:hover' => 'background-color: {{VALUE}};',
-							],
-						]
-					);
-	
-					$this->add_control(
-						'box_border_color_hover',
-						[
-							'label' => __( 'Border Color', 'autoart' ),
-							'type' => Controls_Manager::COLOR,
-							'selectors' => [
-								'{{WRAPPER}} .item-image-text-inner:hover' => 'border-color: {{VALUE}};',
-							],
-						]
-					);
-	
-					$this->add_group_control(
-						Group_Control_Box_Shadow::get_type(),
-						[
-							'name' => 'bx_box_shadow_hover',
-							'selector' => '{{WRAPPER}} .item-image-text-inner:hover',
-						]
-					);
-	
-				$this->end_controls_tab();
-	
-			$this->end_controls_tabs();
-
-		
+			$this->add_group_control(
+				Group_Control_Box_Shadow::get_type(),[
+					'name' => 'lit_box_shadow',
+					'selector' => '{{WRAPPER}} .item-image-text-inner',
+				]
+			);
 
 		$this->end_controls_section();
 
@@ -316,90 +298,43 @@ class Widget_ListImageText extends Widget_Base {
 			]
 		);
 
-		$this->add_control(
-			'box_border_width',
-			[
-				'label' => __( 'Border Width', 'autoart' ),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 50,
+			$this->add_responsive_control(
+				'lit_image_width',[
+					'label' => __( 'Width', 'autoart' ),
+					'type'  => Controls_Manager::SLIDER,
+					'size_units' => [ 'px', '%'],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 200,
+							'step' => 1,
+						],
+						'%' => [
+							'min' => 0,
+							'max' => 100,
+						],
 					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-item--image .bt-cover-image' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-				],
-			]
-		);
+					'selectors' => [
+						'{{WRAPPER}} .item-image-text--thumbnail img' => 'width: {{SIZE}}{{UNIT}}',
+					],
+				]
+			);
 
-		$this->add_control(
-			'img_border_radius',
-			[
-				'label' => __( 'Border Radius', 'autoart' ),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px', '%' ],
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-item--image .bt-cover-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-				],
-			]
-		);
+			$this->add_group_control(
+				Group_Control_Box_Shadow::get_type(),
+				[
+					'name' => 'lit_image_box_shadow',
+					'selector' => '{{WRAPPER}} .item-image-text--thumbnail img',
+				]
+			);
 
-		$this->add_group_control(
-			Group_Control_Box_Shadow::get_type(),
-			[
-				'name' => 'box_shadow',
-				'selector' => '{{WRAPPER}} .bt-step-item--image .bt-cover-image',
-			]
-		);
-
-		$this->add_control(
-			'box_border_color',
-			[
-				'label' => __( 'Border Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-item--image .bt-cover-image' => 'border-color: {{VALUE}}',
-				],
-			]
-		);
-
-		$this->start_controls_tabs( 'thumbnail_effects_tabs' );
-
-		$this->start_controls_tab( 'thumbnail_tab_normal',
-			[
-				'label' => __( 'Normal', 'autoart' ),
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name' => 'thumbnail_filters',
-				'selector' => '{{WRAPPER}} .bt-step-item--image img',
-			]
-		);
-
-		$this->end_controls_tab();
-
-		$this->start_controls_tab( 'thumbnail_tab_hover',
-			[
-				'label' => __( 'Hover', 'autoart' ),
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name' => 'thumbnail_hover_filters',
-				'selector' => '{{WRAPPER}} .bt-step-item:hover .bt-step-item--image img',
-			]
-		);
-
-		$this->end_controls_tab();
-
-		$this->end_controls_tabs();
+			$this->add_group_control(
+				Group_Control_Css_Filter::get_type(),
+				[
+					'name' => 'lit_thumbnail_filters',
+					'selector' => '{{WRAPPER}} .item-image-text--thumbnail img',
+				]
+			);
 
 		$this->end_controls_section();
 
@@ -411,7 +346,7 @@ class Widget_ListImageText extends Widget_Base {
 		);
 
 			$this->add_control(
-				'text_color',[
+				'lit_text_color',[
 					'label' => __( 'Color', 'autoart' ),
 					'type' => Controls_Manager::COLOR,
 					'default' => '',
@@ -423,218 +358,36 @@ class Widget_ListImageText extends Widget_Base {
 
 			$this->add_group_control(
 				Group_Control_Typography::get_type(),[
-					'name' => 'text_typography',
+					'name' => 'lit_text_typography',
 					'label' => __( 'Typography', 'autoart' ),
 					'default' => '',
 					'selector' => '{{WRAPPER}} .item-image-text h3 ',
 				]
 			);
 
-		$this->end_controls_section();
-
-		$this->start_controls_section(
-			'section_style_show_more_btn',
-			[
-				'label' => esc_html__( 'Show More Button', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
-				'condition' => [
-					'show_more_button!' => '',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'show_more_btn_typography',
-				'label' => __( 'Typography', 'autoart' ),
-				'default' => '',
-				'selector' => '{{WRAPPER}} .bt-step-show-more--button',
-			]
-		);
-
-		$this->add_control(
-			'show_more_btn_border_width',
-			[
-				'label' => __( 'Border Width', 'autoart' ),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 10,
+			$this->add_responsive_control(
+				'lit_content_spacing',[
+					'label' => __( 'Content Spacing', 'autoart' ),
+					'type'  => Controls_Manager::SLIDER,
+					'size_units' => [ 'px'],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+							'step' => 1,
+						],
 					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-				],
-			]
-		);
-
-		$this->add_control(
-			'show_more_btn_border_radius',
-			[
-				'label' => __( 'Border Radius', 'autoart' ),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px', '%', 'em' ],
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'show_more_btn_padding',
-			[
-				'label' => __( 'Padding', 'autoart' ),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 50,
+					'default' => [
+						'unit' => 'px',
+						'size' => 19,
 					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-				],
-			]
-		);
-
-    $this->start_controls_tabs( 'tabs_show_more_btn_style' );
-
-		$this->start_controls_tab(
-			'tab_show_more_btn_normal',
-			[
-				'label' => __( 'Normal', 'autoart' ),
-			]
-		);
-
-    $this->add_control(
-			'show_more_btn_text_color',
-			[
-				'label' => __( 'Text Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button' => 'color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'show_more_btn_icon_color',
-			[
-				'label' => __( 'Icon Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button svg' => 'fill: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'show_more_btn_bg_color',
-			[
-				'label' => __( 'Background Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button' => 'background-color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'show_more_btn_border_color',
-			[
-				'label' => __( 'Border Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button' => 'border-color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Box_Shadow::get_type(),
-			[
-				'name' => 'show_more_btn_box_shadow',
-				'selector' => '{{WRAPPER}} .bt-step-show-more--button',
-			]
-		);
-
-		$this->end_controls_tab();
-
-		$this->start_controls_tab(
-			'tab_show_more_btn_hover',
-			[
-				'label' => __( 'Hover', 'autoart' ),
-			]
-		);
-
-		$this->add_control(
-			'show_more_btn_text_color_hover',
-			[
-				'label' => __( 'Text Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button:hover' => 'color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'show_more_btn_icon_color_hover',
-			[
-				'label' => __( 'Icon Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button:hover svg' => 'fill: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'show_more_btn_bg_color_hover',
-			[
-				'label' => __( 'Background Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button:hover' => 'background-color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'show_more_btn_border_color_hover',
-			[
-				'label' => __( 'Border Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .bt-step-show-more--button:hover' => 'border-color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Box_Shadow::get_type(),
-			[
-				'name' => 'show_more_btn_box_shadow_hover',
-				'selector' => '{{WRAPPER}} .bt-step-show-more--button:hover',
-			]
-		);
-
-		$this->end_controls_tab();
-
-		$this->end_controls_tabs();
+					'selectors' => [
+						'{{WRAPPER}} .item-image-text-inner' => 'gap: {{SIZE}}{{UNIT}}',
+					],
+				]
+			);
 
 		$this->end_controls_section();
-
 	}
 
 	protected function register_controls() {
@@ -653,12 +406,16 @@ class Widget_ListImageText extends Widget_Base {
 			<div class="bt-elwg-list-image-text--default">
 				<div class="bt-elwg-list-image-text-inner"> 
 					<?php foreach ( $settings['list'] as $index => $item ): ?>
-						<?php $attachment = wp_get_attachment_image_src( $item['lit_image']['id'], $settings['thumbnail_size'] ); ?>
+						<?php 
+							$attachment = wp_get_attachment_image_src( $item['lit_image']['id'], $settings['thumbnail_size'] ); 
+							$delay      = ($index + 1) * 100;
+							$animation  = 'fadeInUp';
+						?>
 						<div class="item-image-text"> 
-							<div class="item-image-text-inner"> 
+							<div class="item-image-text-inner elementor-invisible " data-settings='<?php echo json_encode(["_animation" => $animation, "_animation_delay" => $delay]); ?>'>
 								<?php if(!empty($attachment)): ?>
 									<div class="item-image-text--thumbnail"> 
-										<?php echo '<img src=" ' . esc_url( $item['lit_image']['url'] ) . ' " alt="image">'; ?>
+										<?php echo '<img src=" ' . esc_url( $item['lit_image']['url'] ) . ' " alt="image" />'; ?>
 									</div>
 								<?php endif;?>
 
@@ -669,7 +426,6 @@ class Widget_ListImageText extends Widget_Base {
 								<?php if(!empty($item['lit_link'])): ?>
 									<a href="<?php echo esc_url($item['lit_link']) ?>"> </a>
 								<?php endif;?>		
-
 							</div>
 						</div>
 				    <?php endforeach;?>		
