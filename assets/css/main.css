@@ -755,7 +755,7 @@ img.alignright {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-.__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title, .__bt-post-style-default .bt-post--title a, .bt-related-posts--list .bt-post--title a, .bt-elwg-post-grid--default .bt-post--title a, .bt-elwg-post-loop-item--default .bt-post--title a, .__bt-post-style-1 .bt-post--title a, .bt-elwg-post-grid--style-1 .bt-post--title a, .bt-elwg-post-loop-item--style-1 .bt-post--title a, .__bt-post-style-2 .bt-post--title a, .bt-elwg-post-grid--style-2 .bt-post--title a, .bt-elwg-post-loop-item--style-2 .bt-post--title a, .bt-filter-results .bt-post--title, .__bt-service-style-default .bt-post--excerpt, .single-service .bt-related-posts-ss--list .bt-post--excerpt, .bt-elwg-service-loop-item--default .bt-post--excerpt {
+.__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title, .__bt-post-style-default .bt-post--title a, .bt-related-posts--list .bt-post--title a, .bt-elwg-post-grid--default .bt-post--title a, .bt-elwg-post-loop-item--default .bt-post--title a, .__bt-post-style-1 .bt-post--title a, .bt-elwg-post-grid--style-1 .bt-post--title a, .bt-elwg-post-loop-item--style-1 .bt-post--title a, .__bt-post-style-2 .bt-post--title a, .bt-elwg-post-grid--style-2 .bt-post--title a, .bt-elwg-post-loop-item--style-2 .bt-post--title a, .bt-filter-results .bt-post--title, .__bt-service-style-default .bt-post--excerpt, .single-service .bt-related-posts-ss--list .bt-post--excerpt, .bt-elwg-service-loop-item--default .bt-post--excerpt, .bt-elwg-service-loop-item--style-1 .bt-post--excerpt, .bt-elwg-service-loop-item--style-2 .bt-post--excerpt {
   overflow: hidden;
   width: 100%;
   display: -webkit-box;
@@ -2208,6 +2208,11 @@ body {
   100% {
     transform: translate(-50%, -50%) scale(1.08);
     opacity: 0; } }
+@keyframes effectRotateAnimation {
+  0% {
+    transform: translateX(-50%) rotate(0deg); }
+  100% {
+    transform: translateX(-50%) rotate(360deg); } }
 .bt-orbit-wrap {
   position: relative;
   width: var(--circle-diameter);
@@ -3734,44 +3739,41 @@ body {
   .single-team .bt-main-content-ss .bt-post--contact a {
     font-size: 16px; } }
 
-.__bt-service-style-default .bt-post:hover .bt-post--inner, .single-service .bt-related-posts-ss--list .bt-post:hover .bt-post--inner, .bt-elwg-service-loop-item--default .bt-post:hover .bt-post--inner {
+.__bt-service-style-default .bt-post:hover .bt-post--inner, .single-service .bt-related-posts-ss--list .bt-post:hover .bt-post--inner, .bt-elwg-service-loop-item--default .bt-post:hover .bt-post--inner, .bt-elwg-service-loop-item--style-1 .bt-post:hover .bt-post--inner, .bt-elwg-service-loop-item--style-2 .bt-post:hover .bt-post--inner {
   background: #F0F0F0;
   border-color: #F0F0F0; }
-.__bt-service-style-default .bt-post:hover .bt-post--icon, .single-service .bt-related-posts-ss--list .bt-post:hover .bt-post--icon, .bt-elwg-service-loop-item--default .bt-post:hover .bt-post--icon {
-  transform: translateY(-10px); }
-.__bt-service-style-default .bt-post:hover .bt-post--title a, .single-service .bt-related-posts-ss--list .bt-post:hover .bt-post--title a, .bt-elwg-service-loop-item--default .bt-post:hover .bt-post--title a {
+.__bt-service-style-default .bt-post:hover .bt-post--title a, .single-service .bt-related-posts-ss--list .bt-post:hover .bt-post--title a, .bt-elwg-service-loop-item--default .bt-post:hover .bt-post--title a, .bt-elwg-service-loop-item--style-1 .bt-post:hover .bt-post--title a, .bt-elwg-service-loop-item--style-2 .bt-post:hover .bt-post--title a {
   color: inherit; }
-.__bt-service-style-default .bt-post--inner, .single-service .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-service-loop-item--default .bt-post--inner, .__bt-service-style-default .bt-post--icon, .single-service .bt-related-posts-ss--list .bt-post--icon, .bt-elwg-service-loop-item--default .bt-post--icon {
+.__bt-service-style-default .bt-post--inner, .single-service .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-service-loop-item--default .bt-post--inner, .bt-elwg-service-loop-item--style-1 .bt-post--inner, .bt-elwg-service-loop-item--style-2 .bt-post--inner, .__bt-service-style-default .bt-post--icon, .single-service .bt-related-posts-ss--list .bt-post--icon, .bt-elwg-service-loop-item--default .bt-post--icon, .bt-elwg-service-loop-item--style-1 .bt-post--icon, .bt-elwg-service-loop-item--style-2 .bt-post--icon {
   -webkit-transition: all .3s;
   transition: all .3s; }
-.__bt-service-style-default .bt-post--inner, .single-service .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-service-loop-item--default .bt-post--inner {
+.__bt-service-style-default .bt-post--inner, .single-service .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-service-loop-item--default .bt-post--inner, .bt-elwg-service-loop-item--style-1 .bt-post--inner, .bt-elwg-service-loop-item--style-2 .bt-post--inner {
   box-sizing: border-box;
   text-align: center;
   background: #FFF;
   padding: 48px 8% 50px 8%;
   border-radius: 20px;
   border: 5px solid #F0F0F0; }
-.__bt-service-style-default .bt-post--icon, .single-service .bt-related-posts-ss--list .bt-post--icon, .bt-elwg-service-loop-item--default .bt-post--icon {
+.__bt-service-style-default .bt-post--icon, .single-service .bt-related-posts-ss--list .bt-post--icon, .bt-elwg-service-loop-item--default .bt-post--icon, .bt-elwg-service-loop-item--style-1 .bt-post--icon, .bt-elwg-service-loop-item--style-2 .bt-post--icon {
   width: 100%;
   text-align: center;
   display: flex;
   justify-content: center; }
-  .__bt-service-style-default .bt-post--icon img, .single-service .bt-related-posts-ss--list .bt-post--icon img, .bt-elwg-service-loop-item--default .bt-post--icon img {
-    width: auto;
-    height: 100%;
-    max-height: 85px; }
-.__bt-service-style-default .bt-post--title, .single-service .bt-related-posts-ss--list .bt-post--title, .bt-elwg-service-loop-item--default .bt-post--title {
+.__bt-service-style-default .bt-post--title, .single-service .bt-related-posts-ss--list .bt-post--title, .bt-elwg-service-loop-item--default .bt-post--title, .bt-elwg-service-loop-item--style-1 .bt-post--title, .bt-elwg-service-loop-item--style-2 .bt-post--title {
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: 133.2%;
   margin: 21px 0 0 0; }
-.__bt-service-style-default .bt-post--excerpt, .single-service .bt-related-posts-ss--list .bt-post--excerpt, .bt-elwg-service-loop-item--default .bt-post--excerpt {
+.__bt-service-style-default .bt-post--excerpt, .single-service .bt-related-posts-ss--list .bt-post--excerpt, .bt-elwg-service-loop-item--default .bt-post--excerpt, .bt-elwg-service-loop-item--style-1 .bt-post--excerpt, .bt-elwg-service-loop-item--style-2 .bt-post--excerpt, .__bt-service-style-default .bt-post--descc, .single-service .bt-related-posts-ss--list .bt-post--descc, .bt-elwg-service-loop-item--default .bt-post--descc, .bt-elwg-service-loop-item--style-1 .bt-post--descc, .bt-elwg-service-loop-item--style-2 .bt-post--descc {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 165%;
+  line-height: 165%; }
+.__bt-service-style-default .bt-post--excerpt, .single-service .bt-related-posts-ss--list .bt-post--excerpt, .bt-elwg-service-loop-item--default .bt-post--excerpt, .bt-elwg-service-loop-item--style-1 .bt-post--excerpt, .bt-elwg-service-loop-item--style-2 .bt-post--excerpt {
   margin: 8px  0 0 0; }
+.__bt-service-style-default .bt-post--desc, .single-service .bt-related-posts-ss--list .bt-post--desc, .bt-elwg-service-loop-item--default .bt-post--desc, .bt-elwg-service-loop-item--style-1 .bt-post--desc, .bt-elwg-service-loop-item--style-2 .bt-post--desc {
+  margin: 10px 0 0 0; }
 
 .single-service .bt-main-content-ss .bt-post--thumbnail {
   position: relative;
@@ -6145,6 +6147,87 @@ body {
   .bt-elwg-client-loop-item--default .bt-post--inner img {
     max-width: 142px;
     width: 100%; }
+
+.bt-elwg-service-loop-item--default .bt-post:hover--icon {
+  transform: translateY(-10px); }
+.bt-elwg-service-loop-item--default .bt-post--icon-bg {
+  display: none; }
+.bt-elwg-service-loop-item--default .bt-post--icon img {
+  width: auto;
+  height: 100%;
+  max-height: 85px; }
+.bt-elwg-service-loop-item--style-1 .bt-post {
+  padding-top: 59px; }
+  .bt-elwg-service-loop-item--style-1 .bt-post:hover .bt-post--icon-bg {
+    height: 100%;
+    animation: effectRotateAnimation 2s linear infinite; }
+  .bt-elwg-service-loop-item--style-1 .bt-post--inner {
+    position: relative;
+    padding: 62px 8% 38px 8%; }
+  .bt-elwg-service-loop-item--style-1 .bt-post--title {
+    margin: 0 auto;
+    max-width: 200px; }
+  .bt-elwg-service-loop-item--style-1 .bt-post--icon {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    position: absolute;
+    top: -59px;
+    left: 50%;
+    transform: translateX(-50%); }
+    .bt-elwg-service-loop-item--style-1 .bt-post--icon-inner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+      width: 91px;
+      height: 91px;
+      background-color: var(--e-global-color-accent, #1FBECD);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .bt-elwg-service-loop-item--style-1 .bt-post--icon-inner img {
+        width: auto;
+        height: 100%;
+        max-height: 44px;
+        filter: brightness(0) invert(1); }
+    .bt-elwg-service-loop-item--style-1 .bt-post--icon-bg {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: calc(50% - 7px);
+      overflow: hidden; }
+.bt-elwg-service-loop-item--style-2 .bt-post:hover .bt-post--inner:hover {
+  background-color: #fff; }
+.bt-elwg-service-loop-item--style-2 .bt-post--inner {
+  border: none;
+  text-align: left; }
+.bt-elwg-service-loop-item--style-2 .bt-post--icon {
+  justify-content: start;
+  width: 109px;
+  height: 90px;
+  position: relative; }
+  .bt-elwg-service-loop-item--style-2 .bt-post--icon img {
+    width: 100%;
+    height: auto;
+    max-width: 50px; }
+  .bt-elwg-service-loop-item--style-2 .bt-post--icon-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .bt-elwg-service-loop-item--style-2 .bt-post--icon-bg {
+    position: absolute;
+    left: 0;
+    top: 0; }
 
 .bt-elwg-account-login {
   display: flex;

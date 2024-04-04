@@ -1,5 +1,5 @@
 <?php
-namespace AutoArtElementorWidgets\Widgets\ServiceLoopItem;
+namespace AutoArtElementorWidgets\Widgets\ServiceLoopItemStyle2;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -9,14 +9,14 @@ use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 
-class Widget_ServiceLoopItem extends Widget_Base {
+class Widget_ServiceLoopItemStyle2 extends Widget_Base {
 
 	public function get_name() {
-		return 'bt-service-loop-item';
+		return 'bt-service-loop-item-style-2';
 	}
 
 	public function get_title() {
-		return __( 'Service Loop Item', 'autoart' );
+		return __( 'Service Loop Item Style 2', 'autoart' );
 	}
 
 	public function get_icon() {
@@ -28,7 +28,7 @@ class Widget_ServiceLoopItem extends Widget_Base {
 	}
 
 	protected function register_layout_section_controls() {
-
+	
 	}
 
 	protected function register_style_section_controls() {
@@ -212,11 +212,10 @@ class Widget_ServiceLoopItem extends Widget_Base {
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-
 		?>
-			<div class="bt-elwg-service-loop-item--default">
-				<?php get_template_part( 'framework/templates/service', 'style', array('layout' => 'style-default')); ?>
-	    </div>
+			<div class="bt-elwg-service-loop-item--style-2">
+				<?php get_template_part( 'framework/templates/service', 'style', array('layout' => 'style-2')); ?>
+	    	</div>
 		<?php
 	}
 
