@@ -73,7 +73,8 @@ class ElementorWidgets {
 			'buble-background',
 			'product-loop-item',
 			'account-login',
-			'highlighted-heading'
+			'highlighted-heading',
+			'list-image-text'
 		);
 
 		return $this->widgets;
@@ -194,6 +195,7 @@ class ElementorWidgets {
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\AccountLogin\Widget_AccountLogin());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\HighlightedHeading\Widget_HighlightedHeading());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListImageText\Widget_ListImageText());
 
 	}
 
