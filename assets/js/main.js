@@ -320,7 +320,7 @@
 			$('.bt-car-filter-form .bt-field-item').removeClass('checked');
       $('.bt-car-filter-form select').select2().val('').trigger('change');
 			$(this).addClass('disable')
-			
+
       $('.bt-car-filter-form').submit();
     });
 
@@ -381,6 +381,20 @@
               $('.bt-car-pagination-wrap').html(response.data['pagination']).fadeIn('slow');
 
               $('.bt-filter-results').removeClass('loading');
+
+							// View type
+					    // $('.bt-car-view-block .bt-view-type').on('click', function(e) {
+							// 	e.preventDefault();
+							//
+					    //   var view_type = $(this).data('view');
+							//
+					    //   if('list' == view_type) {
+					    //     $('.bt-car-filter-form .bt-car-view-type').val(view_type);
+					    //   } else {
+					    //     $('.bt-car-filter-form .bt-car-view-type').val('');
+					    //   }
+							// 	$('.bt-car-filter-form').submit();
+					    // });
 
               // Pagination
               $('.bt-car-pagination a').on('click', function(e) {
