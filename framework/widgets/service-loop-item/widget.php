@@ -212,13 +212,11 @@ class Widget_ServiceLoopItem extends Widget_Base {
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-
-		?>
+	?>
 			<div class="bt-elwg-service-loop-item--default">
 				<?php get_template_part( 'framework/templates/service', 'style', array('layout' => 'style-default')); ?>
-	    </div>
-		<?php
-	}
+	    	</div>
+	<?php }
 
 	protected function content_template() {
 

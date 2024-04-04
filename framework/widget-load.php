@@ -74,7 +74,8 @@ class ElementorWidgets {
 			'product-loop-item',
 			'account-login',
 			'highlighted-heading',
-			'list-image-text'
+			'list-image-text',
+			'list-image-text-style-1'
 		);
 
 		return $this->widgets;
@@ -195,7 +196,9 @@ class ElementorWidgets {
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\AccountLogin\Widget_AccountLogin());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\HighlightedHeading\Widget_HighlightedHeading());
+
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListImageText\Widget_ListImageText());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListImageTextStyle1\Widget_ListImageTextStyle1());
 
 	}
 

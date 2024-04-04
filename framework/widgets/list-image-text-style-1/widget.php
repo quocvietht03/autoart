@@ -1,5 +1,5 @@
 <?php
-namespace AutoArtElementorWidgets\Widgets\ListImageText;
+namespace AutoArtElementorWidgets\Widgets\ListImageTextStyle1;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -11,14 +11,14 @@ use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 
-class Widget_ListImageText extends Widget_Base {
+class Widget_ListImageTextStyle1 extends Widget_Base {
 
 	public function get_name() {
-		return 'bt-list-image-text';
+		return 'bt-list-image-text-style-1';
 	}
 
 	public function get_title() {
-		return __( 'List Image Text', 'autoart' );
+		return __( 'List Image Text Style 1', 'autoart' );
 	}
 
 	public function get_icon() {
@@ -45,7 +45,17 @@ class Widget_ListImageText extends Widget_Base {
 
 		$repeater->add_control(
 			'lit_image', [
-				'label' => __( 'Image', 'autoart' ),
+				'label' => __( 'Image Normal', 'autoart' ),
+				'type' => Controls_Manager::MEDIA,
+				'default' => [
+					'url' => Utils::get_placeholder_image_src(),
+				],
+			]
+		);
+
+		$repeater->add_control(
+			'lit_image_hover', [
+				'label' => __( 'Image Hover', 'autoart' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -78,29 +88,34 @@ class Widget_ListImageText extends Widget_Base {
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'lit_image' => Utils::get_placeholder_image_src(),
-						'lit_text' => __( 'This is text 01', 'autoart' ),
-						'lit_link' => '#'
+						'lit_image'       => Utils::get_placeholder_image_src(),
+						'lit_image_hover' => Utils::get_placeholder_image_src(),
+						'lit_text'        => __( 'This is text 05', 'autoart' ),
+						'lit_link'        => '#'
 					],
 					[
-						'lit_image' => Utils::get_placeholder_image_src(),
-						'lit_text' => __( 'This is text 02', 'autoart' ),
-						'lit_link' => '#'
+						'lit_image'       => Utils::get_placeholder_image_src(),
+						'lit_image_hover' => Utils::get_placeholder_image_src(),
+						'lit_text'        => __( 'This is text 05', 'autoart' ),
+						'lit_link'        => '#'
 					],
 					[
-						'lit_image' => Utils::get_placeholder_image_src(),
-						'lit_text' => __( 'This is text 03', 'autoart' ),
-						'lit_link' => '#'
+						'lit_image'       => Utils::get_placeholder_image_src(),
+						'lit_image_hover' => Utils::get_placeholder_image_src(),
+						'lit_text'        => __( 'This is text 05', 'autoart' ),
+						'lit_link'        => '#'
 					],
 					[
-						'lit_image' => Utils::get_placeholder_image_src(),
-						'lit_text' => __( 'This is text 04', 'autoart' ),
-						'lit_link' => '#'
+						'lit_image'       => Utils::get_placeholder_image_src(),
+						'lit_image_hover' => Utils::get_placeholder_image_src(),
+						'lit_text'        => __( 'This is text 05', 'autoart' ),
+						'lit_link'        => '#'
 					],
 					[
-						'lit_image' => Utils::get_placeholder_image_src(),
-						'lit_text' => __( 'This is text 05', 'autoart' ),
-						'lit_link' => '#'
+						'lit_image'       => Utils::get_placeholder_image_src(),
+						'lit_image_hover' => Utils::get_placeholder_image_src(),
+						'lit_text'        => __( 'This is text 05', 'autoart' ),
+						'lit_link'        => '#'
 					],
 				],
 				'title_field' => '{{{ lit_text }}}',
@@ -403,9 +418,9 @@ class Widget_ListImageText extends Widget_Base {
 		}
 
 	?>
-		<div class="bt-elwg-list-image-text--default">
-			<?php get_template_part( 'framework/templates/list-image-text', 'style', array('layout' => 'style-default', 'data' => $settings['list'], 'thumbnail-size' => $settings['thumbnail_size'])); ?>	
-	    </div>
+		<div class="bt-elwg-list-image-text--style-1">
+			<?php get_template_part( 'framework/templates/list-image-text', 'style', array('layout' => 'style-1', 'data' => $settings['list'], 'thumbnail-size' => $settings['thumbnail_size'])); ?>	
+		</div>
 	<?php }
 
 	protected function content_template() {
