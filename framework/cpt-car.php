@@ -314,6 +314,75 @@ function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $fiel
   <?php
 }
 
+function autoart_cars_field_range_html($meta_key = '', $field_title = '', $field_value = '', $field_step = 10) {
+	if(empty($meta_key)) {
+	  return;
+	}
+
+	$min_value = autoart_end_meta_value('min', $meta_key);
+	$max_value = autoart_end_meta_value('max', $meta_key);
+
+	if($min_value == $max_value) {
+		return;
+	}
+
+	?>
+	<div class="bt-form-field bt-field-type-select <?php echo 'bt-field-' . $meta_key; ?>">
+		<select name="<?php echo str_replace('car_', '', $meta_key); ?>">
+			<option value="">
+				<?php
+					if(!empty($field_title)) {
+						echo esc_html($field_title);
+					} else {
+						echo esc_html('Select', 'autoart');
+					}
+				?>
+			</option>
+			<?php
+				$step_value = array(1, 10, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 100000);
+				$start_value = 0;
+
+				for ($i = 0 ; $i <= count($step_value); $i++) {
+					$end_value = $field_step * $step_value[$i];
+					if($i == count($step_value) || $end_value > $max_value) {
+						if($field_value == $start_value . '-over') {
+							?>
+								<option value="<?php echo esc_attr($start_value . '-over'); ?>" selected="selected">
+									<?php echo esc_html__('Over ', 'autoart') . number_format($start_value, 0); ?>
+								</option>
+							<?php
+						} else {
+							?>
+								<option value="<?php echo esc_attr($start_value . '-over'); ?>">
+									<?php echo esc_html__('Over ', 'autoart') . number_format($start_value, 0); ?>
+								</option>
+							<?php
+						}
+						break;
+					} else {
+						if($field_value == $start_value . '-' . $end_value) {
+							?>
+								<option value="<?php echo esc_attr($start_value . '-' . $end_value); ?>" selected="selected">
+									<?php echo number_format($start_value, 0) . ' - ' . number_format($end_value, 0); ?>
+								</option>
+							<?php
+						} else {
+							?>
+								<option value="<?php echo esc_attr($start_value . '-' . $end_value); ?>">
+									<?php echo number_format($start_value, 0) . ' - ' . number_format($end_value, 0); ?>
+								</option>
+							<?php
+						}
+
+					}
+					$start_value = $end_value;
+				}
+			?>
+		</select>
+	</div>
+	<?php
+}
+
 function autoart_cars_field_select_html($slug = '', $field_title = '', $field_value = '') {
 	if(empty($slug)) {
     return;
