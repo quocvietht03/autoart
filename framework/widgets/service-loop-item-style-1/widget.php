@@ -1,5 +1,5 @@
 <?php
-namespace AutoArtElementorWidgets\Widgets\ServiceLoopItem;
+namespace AutoArtElementorWidgets\Widgets\ServiceLoopItemStyle1;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -9,14 +9,14 @@ use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 
-class Widget_ServiceLoopItem extends Widget_Base {
+class Widget_ServiceLoopItemStyle1 extends Widget_Base {
 
 	public function get_name() {
-		return 'bt-service-loop-item';
+		return 'bt-service-loop-item-style-1';
 	}
 
 	public function get_title() {
-		return __( 'Service Loop Item', 'autoart' );
+		return __( 'Service Loop Item Style 1', 'autoart' );
 	}
 
 	public function get_icon() {
@@ -28,7 +28,6 @@ class Widget_ServiceLoopItem extends Widget_Base {
 	}
 
 	protected function register_layout_section_controls() {
-
 	}
 
 	protected function register_style_section_controls() {
@@ -172,21 +171,21 @@ class Widget_ServiceLoopItem extends Widget_Base {
 		);
 
 		$this->add_control(
-			'excerpt_style',
+			'desc_style',
 			[
-				'label' => __( 'Excerpt', 'autoart' ),
+				'label' => __( 'Description', 'autoart' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 
 		$this->add_control(
-			'excerpt_color',
+			'desc_color',
 			[
 				'label' => __( 'Color', 'autoart' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .bt-post--excerpt' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .bt-post--desc' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -194,10 +193,10 @@ class Widget_ServiceLoopItem extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'excerpt_typography',
+				'name' => 'desc_typography',
 				'label' => __( 'Typography', 'autoart' ),
 				'default' => '',
-				'selector' => '{{WRAPPER}} .bt-post--excerpt',
+				'selector' => '{{WRAPPER}} .bt-post--desc',
 			]
 		);
 
@@ -214,8 +213,8 @@ class Widget_ServiceLoopItem extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 
 		?>
-			<div class="bt-elwg-service-loop-item--default">
-				<?php get_template_part( 'framework/templates/service', 'style', array('layout' => 'style-default')); ?>
+			<div class="bt-elwg-service-loop-item--style-1">
+				<?php get_template_part( 'framework/templates/service', 'style', array('layout' => 'style-1')); ?>
 	    </div>
 		<?php
 	}
