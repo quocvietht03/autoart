@@ -1554,3 +1554,40 @@
     }
   }
 }
+
+.bt-elwg-list-image-text{
+  &-inner{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+
+    .item-image-text{
+      &-inner{
+        border-radius: 20px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: center;
+        padding: 23px 10px 29px 10px;
+        position: relative;
+      }
+
+      h3{
+        font-family: "DM Sans";
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      
+      a{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

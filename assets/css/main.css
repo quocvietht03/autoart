@@ -6295,6 +6295,32 @@ body {
   .bt-elwg-highlighted-heading.animationed .__text-highlighted img {
     animation: effectScaleAnimation 2s ease-in-out infinite; }
 
+.bt-elwg-list-image-text-inner {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px; }
+  .bt-elwg-list-image-text-inner .item-image-text-inner {
+    border-radius: 20px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    padding: 23px 10px 29px 10px;
+    position: relative; }
+  .bt-elwg-list-image-text-inner .item-image-text h3 {
+    font-family: "DM Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; }
+  .bt-elwg-list-image-text-inner .item-image-text a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+
 @media (min-width: 1200px) and (max-width: 1439.98px) {
   .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h3, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h4, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h5, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h6 {
     font-size: 55px; } }
