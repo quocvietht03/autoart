@@ -220,19 +220,19 @@
     });
 
 		// Pagination
-    $('.bt-car-pagination a').on('click', function(e) {
-      e.preventDefault();
+		$('.bt-car-pagination a').on('click', function(e) {
+			e.preventDefault();
 
-      var current_page = $(this).data('page');
+			var current_page = $(this).data('page');
 
-      if(1 < current_page) {
-        $('.bt-car-filter-form .bt-car-current-page').val(current_page);
-      } else {
-        $('.bt-car-filter-form .bt-car-current-page').val('');
-      }
+			if(1 < current_page) {
+				$('.bt-car-filter-form .bt-car-current-page').val(current_page);
+			} else {
+				$('.bt-car-filter-form .bt-car-current-page').val('');
+			}
 
-      $('.bt-car-filter-form').submit();
-    });
+			$('.bt-car-filter-form').submit();
+		});
 
 		// Filter meta
 		if($('.bt-field-type-slider').length > 0) {
@@ -262,6 +262,7 @@
 	      slider.noUiSlider.on('change', function(values, handle) {
 	        $('#bt_field_min_value_' + metaKey).val(parseInt(values[0]));
 	        $('#bt_field_max_value_' + metaKey).val(parseInt(values[1]));
+					$('.bt-car-filter-form .bt-car-current-page').val('');
 	        $('.bt-car-filter-form').submit();
 	      });
 			});
@@ -272,6 +273,7 @@
 			$('.bt-field-type-select select').select2();
 
 			$('.bt-field-type-select select').on('change', function() {
+				$('.bt-car-filter-form .bt-car-current-page').val('');
 	      $('.bt-car-filter-form').submit();
 	    });
 		}
@@ -296,6 +298,7 @@
 		    });
 
 				$(this).parents('.bt-form-field').find('input').val(value_arr.toString());
+				$('.bt-car-filter-form .bt-car-current-page').val('');
 		    $('.bt-car-filter-form').submit();
 			});
 		}
@@ -314,10 +317,96 @@
 
 			window.history.replaceState(null, null, window.location.pathname);
 			$('.bt-car-filter-form input').val('');
+			$('.bt-car-filter-form .bt-field-item').removeClass('checked');
       $('.bt-car-filter-form select').select2().val('').trigger('change');
-
-      window.location.reload();
+			$(this).addClass('disable')
+			
+      $('.bt-car-filter-form').submit();
     });
+
+		// Ajax filter
+		$('.bt-car-filter-form').submit(function() {
+      var param_str = '',
+          param_out = [],
+          param_in = $(this).serialize().split('&');
+
+      var param_ajax = {
+            action: 'autoart_cars_filter',
+          };
+
+      param_in.forEach(function(param){
+        var param_key = param.split('=')[0],
+            param_val = param.split('=')[1];
+
+				if('' !== param_val) {
+					param_out.push(param);
+					param_ajax[param_key] = param_val.replace(/%2C/g, ',');
+				}
+      });
+
+      if(0 < param_out.length) {
+        param_str = param_out.join('&');
+      }
+
+      if('' !== param_str) {
+        window.history.replaceState(null, null, `?${param_str}`);
+        $(this).find('.bt-reset-btn').removeClass('disable');
+      } else {
+        window.history.replaceState(null, null, window.location.pathname);
+        $(this).find('bt-reset-btn').addClass('disable');
+      }
+
+      // console.log(param_ajax);
+
+      $.ajax({
+          type: 'POST',
+          dataType: 'json',
+          url: AJ_Options.ajax_url,
+          data: param_ajax,
+          context: this,
+          beforeSend: function(){
+            document.querySelector('.bt-filter-scroll-pos').scrollIntoView({
+              behavior: 'smooth'
+            });
+
+            $('.bt-filter-results').addClass('loading');
+            $('.bt-car-layout').fadeOut('fast');
+            $('.bt-car-pagination-wrap').fadeOut('fast');
+          },
+          success: function(response) {
+            if(response.success) {
+              console.log(response.data);
+							$('.bt-car-results-block').html(response.data['results']).fadeIn('slow');
+              $('.bt-car-layout').html(response.data['items']).fadeIn('slow');
+              $('.bt-car-pagination-wrap').html(response.data['pagination']).fadeIn('slow');
+
+              $('.bt-filter-results').removeClass('loading');
+
+              // Pagination
+              $('.bt-car-pagination a').on('click', function(e) {
+                e.preventDefault();
+
+                var current_page = $(this).data('page');
+
+                if(1 < current_page) {
+                  $('.bt-car-filter-form .bt-car-current-page').val(current_page);
+                } else {
+                  $('.bt-car-filter-form .bt-car-current-page').val('');
+                }
+
+                $('.bt-car-filter-form').submit();
+              });
+            } else {
+              console.log('error');
+            }
+          },
+          error: function( jqXHR, textStatus, errorThrown ){
+            console.log( 'The following error occured: ' + textStatus, errorThrown );
+          }
+      });
+
+      return false;
+		});
 	}
 
 	/* Orbit effect */

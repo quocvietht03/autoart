@@ -272,12 +272,40 @@ function autoart_end_meta_value($end = 'max', $meta_key = '') {
 	if ( $wp_query->have_posts() ) {
     while ( $wp_query->have_posts() ) { $wp_query->the_post();
 			if(function_exists('get_field')){
-				return get_field($meta_key, get_the_ID()) ;
+				return get_field($meta_key, get_the_ID());
 			}
     }
 	}
 
 	return 0;
+}
+
+function autoart_list_meta_value($meta_key = '') {
+	if(empty($meta_key)) {
+		return;
+	}
+
+	$value_arr = array();
+
+	$query_args = array(
+		'post_type' => 'car',
+		'post_status' => 'publish',
+		'meta_key' => $meta_key,
+	);
+
+	$wp_query = new \WP_Query($query_args);
+	if ( $wp_query->have_posts() ) {
+    while ( $wp_query->have_posts() ) { $wp_query->the_post();
+			if(function_exists('get_field')){
+				$meta_value = get_field($meta_key, get_the_ID());
+				if(!empty($meta_value) && !in_array($meta_value, $value_arr)) {
+					$value_arr[] = $meta_value;
+				}
+			}
+    }
+	}
+
+	return $value_arr;
 }
 
 function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $field_min_value = '', $field_max_value = '') {
@@ -296,8 +324,8 @@ function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $fiel
   $start_max_value = !empty($field_max_value) ? $field_max_value : $max_value;
 
   ?>
-	<input type="hidden" id="<?php echo 'bt_field_min_value_' . $meta_key; ?>" name="<?php echo str_replace('car_', '', $meta_key). '_min'; ?>" value="<?php echo esc_attr($field_min_value); ?>">
-	<input type="hidden" id="<?php echo 'bt_field_max_value_' . $meta_key; ?>" name="<?php echo str_replace('car_', '', $meta_key). '_max'; ?>" value="<?php echo esc_attr($field_max_value); ?>">
+	<input type="hidden" id="<?php echo 'bt_field_min_value_' . $meta_key; ?>" name="<?php echo esc_attr($meta_key)  . '_min'; ?>" value="<?php echo esc_attr($field_min_value); ?>">
+	<input type="hidden" id="<?php echo 'bt_field_max_value_' . $meta_key; ?>" name="<?php echo esc_attr($meta_key). '_max'; ?>" value="<?php echo esc_attr($field_max_value); ?>">
 
 	<div class="bt-form-field bt-field-type-slider <?php echo 'bt-field-' . $meta_key; ?>" data-meta-key= "<?php echo esc_attr($meta_key); ?>" data-range-min="<?php echo intval($min_value); ?>" data-range-max="<?php echo intval($max_value); ?>"  data-start-min="<?php echo intval($start_min_value); ?>" data-start-max="<?php echo intval($start_max_value); ?>">
     <?php
@@ -314,7 +342,7 @@ function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $fiel
   <?php
 }
 
-function autoart_cars_field_range_html($meta_key = '', $field_title = '', $field_value = '', $field_step = 10) {
+function autoart_cars_field_select_range_html($meta_key = '', $field_title = '', $field_value = '', $field_step = 10) {
 	if(empty($meta_key)) {
 	  return;
 	}
@@ -328,7 +356,7 @@ function autoart_cars_field_range_html($meta_key = '', $field_title = '', $field
 
 	?>
 	<div class="bt-form-field bt-field-type-select <?php echo 'bt-field-' . $meta_key; ?>">
-		<select name="<?php echo str_replace('car_', '', $meta_key); ?>">
+		<select name="<?php echo esc_attr($meta_key); ?>">
 			<option value="">
 				<?php
 					if(!empty($field_title)) {
@@ -383,6 +411,43 @@ function autoart_cars_field_range_html($meta_key = '', $field_title = '', $field
 	<?php
 }
 
+function autoart_cars_field_select_number_html($meta_key = '', $field_title = '', $field_value = '') {
+	if(empty($meta_key)) {
+    return;
+  }
+
+	$value_arr = autoart_list_meta_value($meta_key);
+
+	if(!empty($value_arr)) {
+	  ?>
+		<div class="bt-form-field bt-field-type-select <?php echo 'bt-field-' . $meta_key; ?>">
+			<select name="<?php echo esc_attr($meta_key); ?>">
+		    <option value="">
+					<?php
+						if(!empty($field_title)) {
+							echo esc_html($field_title);
+						} else {
+							echo esc_html('Select', 'autoart');
+						}
+					?>
+		    </option>
+		    <?php foreach ($value_arr as $value) { ?>
+		      <?php if($value == $field_value){ ?>
+		        <option value="<?php echo esc_attr($value); ?>" selected="selected">
+		          <?php echo esc_html($value); ?>
+		        </option>
+		      <?php } else { ?>
+		        <option value="<?php echo esc_attr($value); ?>">
+		          <?php echo esc_html($value); ?>
+		        </option>
+		      <?php } ?>
+		    <?php } ?>
+		  </select>
+		</div>
+	  <?php
+	}
+}
+
 function autoart_cars_field_select_html($slug = '', $field_title = '', $field_value = '') {
 	if(empty($slug)) {
     return;
@@ -396,7 +461,7 @@ function autoart_cars_field_select_html($slug = '', $field_title = '', $field_va
 	if(!empty($terms)) {
 	  ?>
 		<div class="bt-form-field bt-field-type-select <?php echo 'bt-field-' . $slug; ?>">
-			<select name="<?php echo str_replace('car_', '', $slug); ?>">
+			<select name="<?php echo esc_attr($slug); ?>">
 		    <option value="">
 					<?php
 						if(!empty($field_title)) {
@@ -435,7 +500,7 @@ function autoart_cars_field_multiple_html($slug = '', $field_title = '', $field_
 
 	if(!empty($terms)) {
 	  ?>
-		<div class="bt-form-field bt-field-type-multi" data-name="<?php echo str_replace('car_', '', $slug); ?>">
+		<div class="bt-form-field bt-field-type-multi" data-name="<?php echo esc_attr($slug); ?>">
 			<?php
 				if(!empty($field_title)) {
 					echo '<div class="bt-field-title">' . $field_title . '</div>';
@@ -457,7 +522,7 @@ function autoart_cars_field_multiple_html($slug = '', $field_title = '', $field_
 				<?php } ?>
 			</div>
 
-			<input type="hidden" name="<?php echo str_replace('car_', '', $slug); ?>" value="<?php echo $field_value; ?>">
+			<input type="hidden" name="<?php echo esc_attr($slug); ?>" value="<?php echo $field_value; ?>">
 		</div>
 	  <?php
 	}
@@ -598,83 +663,83 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
 
   $query_tax = array();
 
-	if(isset($params['categories']) && $params['categories'] != '') {
+	if(isset($params['car_categories']) && $params['car_categories'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_categories',
       'field' => 'slug',
-      'terms' => explode(',', $params['categories'])
+      'terms' => explode(',', $params['car_categories'])
     );
   }
 
-  if(isset($params['body']) && $params['body'] != '') {
+  if(isset($params['car_body']) && $params['car_body'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_body',
       'field' => 'slug',
-      'terms' => explode(',', $params['body'])
+      'terms' => explode(',', $params['car_body'])
     );
   }
 
-  if(isset($params['condition']) && $params['condition'] != '') {
+  if(isset($params['car_condition']) && $params['car_condition'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_condition',
       'field' => 'slug',
-      'terms' => explode(',', $params['condition'])
+      'terms' => explode(',', $params['car_condition'])
     );
   }
 
-  if(isset($params['make']) && $params['make'] != '') {
+  if(isset($params['car_make']) && $params['car_make'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_make',
       'field' => 'slug',
-      'terms' => explode(',', $params['make'])
+      'terms' => explode(',', $params['car_make'])
     );
   }
 
-  if(isset($params['model']) && $params['model'] != '') {
+  if(isset($params['car_model']) && $params['car_model'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_model',
       'field' => 'slug',
-      'terms' => explode(',', $params['model'])
+      'terms' => explode(',', $params['car_model'])
     );
   }
 
-  if(isset($params['fuel_type']) && $params['fuel_type'] != '') {
+  if(isset($params['car_fuel_type']) && $params['car_fuel_type'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_fuel_type',
       'field' => 'slug',
-      'terms' => explode(',', $params['fuel_type'])
+      'terms' => explode(',', $params['car_fuel_type'])
     );
   }
 
-  if(isset($params['transmission']) && $params['transmission'] != '') {
+  if(isset($params['car_transmission']) && $params['car_transmission'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_transmission',
       'field' => 'slug',
-      'terms' => explode(',', $params['transmission'])
+      'terms' => explode(',', $params['car_transmission'])
     );
   }
 
-  if(isset($params['door']) && $params['door'] != '') {
+  if(isset($params['car_door']) && $params['car_door'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_door',
       'field' => 'slug',
-      'terms' => explode(',', $params['door'])
+      'terms' => explode(',', $params['car_door'])
     );
   }
 
-  if(isset($params['engine']) && $params['engine'] != '') {
+  if(isset($params['car_engine']) && $params['car_engine'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_engine',
       'field' => 'slug',
-      'terms' => explode(',', $params['engine'])
+      'terms' => explode(',', $params['car_engine'])
     );
   }
 
-  if(isset($params['color']) && $params['color'] != '') {
+  if(isset($params['car_color']) && $params['car_color'] != '') {
     $query_tax[] = array(
       'taxonomy' => 'car_color',
       'field' => 'slug',
-      'terms' => explode(',', $params['color'])
+      'terms' => explode(',', $params['car_color'])
     );
   }
 
@@ -684,55 +749,130 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
 
   $query_meta = array();
 
-  if(isset($params['mileage_min']) && $params['mileage_min'] != '' && isset($params['mileage_max']) && $params['mileage_max'] != '') {
+  if(isset($params['car_mileage_min']) && $params['car_mileage_min'] != '' && isset($params['car_mileage_max']) && $params['car_mileage_max'] != '') {
     $query_meta['mileage_clause'] = array(
       'relation' => 'AND',
   		array(
   			'key'     => 'car_mileage',
-  			'value'   => absint($params['mileage_min']),
+  			'value'   => absint($params['car_mileage_min']),
   			'compare' => '>=',
         'type'    => 'numeric'
   		),
   		array(
   			'key'     => 'car_mileage',
-  			'value'   => absint($params['mileage_max']),
-  			'compare' => '<=',
+  			'value'   => absint($params['car_mileage_max']),
+  			'compare' => '<',
         'type'    => 'numeric'
   		)
     );
   }
 
-  if(isset($params['price_min']) && $params['price_min'] != '' && isset($params['price_max']) && $params['price_max'] != '') {
+	if(isset($params['car_mileage']) && $params['car_mileage'] != '') {
+		$mileage = explode('-', $params['car_mileage']);
+
+		if($mileage[1] == 'over') {
+			$query_meta['mileage_clause'] = array(
+	  		array(
+	  			'key'     => 'car_mileage',
+	  			'value'   => absint($mileage[0]),
+	  			'compare' => '>=',
+	        'type'    => 'numeric'
+	  		)
+	    );
+		} else {
+			$query_meta['mileage_clause'] = array(
+	      'relation' => 'AND',
+	  		array(
+	  			'key'     => 'car_mileage',
+	  			'value'   => absint($mileage[0]),
+	  			'compare' => '>=',
+	        'type'    => 'numeric'
+	  		),
+	  		array(
+	  			'key'     => 'car_mileage',
+	  			'value'   => absint($mileage[1]),
+	  			'compare' => '<',
+	        'type'    => 'numeric'
+	  		)
+	    );
+		}
+
+  }
+
+  if(isset($params['car_price_min']) && $params['car_price_min'] != '' && isset($params['car_price_max']) && $params['car_price_max'] != '') {
     $query_meta['price_clause'] = array(
       'relation' => 'AND',
   		array(
   			'key'     => 'car_price',
-  			'value'   => absint($params['price_min']),
+  			'value'   => absint($params['car_price_min']),
   			'compare' => '>=',
         'type'    => 'numeric'
   		),
   		array(
   			'key'     => 'car_price',
-  			'value'   => absint($params['price_max']),
-  			'compare' => '<=',
+  			'value'   => absint($params['car_price_max']),
+  			'compare' => '<',
         'type'    => 'numeric'
   		)
     );
   }
 
-  if(isset($params['year_min']) && $params['year_min'] != '' && isset($params['year_max']) && $params['year_max'] != '') {
+	if(isset($params['car_price']) && $params['car_price'] != '') {
+		$price = explode('-', $params['car_price']);
+
+		if($price[1] == 'over') {
+			$query_meta['price_clause'] = array(
+	  		array(
+	  			'key'     => 'car_price',
+	  			'value'   => absint($price[0]),
+	  			'compare' => '>=',
+	        'type'    => 'numeric'
+	  		)
+	    );
+		} else {
+			$query_meta['price_clause'] = array(
+	      'relation' => 'AND',
+	  		array(
+	  			'key'     => 'car_price',
+	  			'value'   => absint($price[0]),
+	  			'compare' => '>=',
+	        'type'    => 'numeric'
+	  		),
+	  		array(
+	  			'key'     => 'car_price',
+	  			'value'   => absint($price[1]),
+	  			'compare' => '<',
+	        'type'    => 'numeric'
+	  		)
+	    );
+		}
+
+  }
+
+  if(isset($params['car_year_min']) && $params['car_year_min'] != '' && isset($params['car_year_max']) && $params['car_year_max'] != '') {
     $query_meta['year_clause'] = array(
       'relation' => 'AND',
   		array(
   			'key'     => 'car_year',
-  			'value'   => absint($params['year_min']),
+  			'value'   => absint($params['car_year_min']),
   			'compare' => '>=',
         'type'    => 'numeric'
   		),
   		array(
   			'key'     => 'car_year',
-  			'value'   => absint($params['year_max']),
-  			'compare' => '<=',
+  			'value'   => absint($params['car_year_max']),
+  			'compare' => '<',
+        'type'    => 'numeric'
+  		)
+    );
+  }
+
+	if(isset($params['car_year']) && $params['car_year'] != '') {
+    $query_meta['year_clause'] = array(
+  		array(
+  			'key'     => 'car_year',
+  			'value'   => absint($params['car_year']),
+  			'compare' => '=',
         'type'    => 'numeric'
   		)
     );
@@ -746,11 +886,26 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
   return $query_args;
 }
 
-function autoart_cars_filter($params = array(), $limit = 12) {
-  $query_args = autoart_cars_query_args($params, $limit);
-  $wp_query = new \WP_Query($query_args);
-  $current_page = isset($params['current_page']) ? absint($params['current_page']) : 1;
-  $total_page = $wp_query->max_num_pages;
+function autoart_cars_filter() {
+	$limit = 1;
+	$query_args = autoart_cars_query_args($_POST, $limit);
+	$wp_query = new \WP_Query($query_args);
+	$current_page = isset($_POST['current_page']) && $_POST['current_page'] != '' ? absint($_POST['current_page']) : 1;
+	$total_page = $wp_query->max_num_pages;
+
+	$paged = !empty($wp_query->query_vars['paged']) ? $wp_query->query_vars['paged'] : 1;
+	$prev_posts = ( $paged - 1 ) * $wp_query->query_vars['posts_per_page'];
+	$from = 1 + $prev_posts;
+	$to = count( $wp_query->posts ) + $prev_posts;
+	$of = $wp_query->found_posts;
+
+	ob_start();
+	if($of > 0) {
+		printf(esc_html__('Showing %s - %s of %s results', 'autoart'), $from, $to, $of );
+	} else {
+		echo esc_html__('No results', 'autoart');
+	}
+	$output['results'] = ob_get_clean();
 
   if ( $wp_query->have_posts() ) {
     ob_start();
