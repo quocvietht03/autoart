@@ -1,0 +1,31 @@
+.__bt-heading-style{
+    @media (min-width: 1200px) and (max-width: 1439.98px) { 
+        font-size: 55px;
+    }
+
+    @media (min-width: 1025px) and (max-width: 1199.98px) { 
+        font-size: 45px;
+    }
+}
+
+.elementor-element{
+    &.bt-hero-home{
+
+        .bt-elwg-highlighted-heading {
+            h1, h2, h3, h4, h5, h6{
+                @extend .__bt-heading-style;
+            }
+        }
+
+        .elementor-widget-image{
+            &.bt-hero-image{
+                > .elementor-widget-container{
+                    @media (min-width: 1025px) and (max-width: 1600.98px) { 
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+    }
+}

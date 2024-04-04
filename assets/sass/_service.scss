@@ -3,74 +3,63 @@
     &:hover {
       .bt-post {
         &--inner {
-          background: $color-accent;
-          border-color: $color-accent;
+          background: #F0F0F0;
+          border-color: #F0F0F0;
         }
-        &--icon svg {
-          fill: #FFF;
+
+        &--icon{
+          transform: translateY(-10px);
         }
-        &--title,
-        &--excerpt,
-        &--readmore a {
-          color: #FFF;
-        }
-        &--title a {
-          color: inherit;
+
+        &--title{
+          a{
+            color: inherit;
+          }
         }
       }
     }
+
+    &--inner, &--icon{
+      -webkit-transition: all .3s;
+      transition: all .3s;
+    }
+
     &--inner {
+      box-sizing: border-box;
       text-align: center;
       background: #FFF;
-      padding: 45px 40px;
-      border: 1px solid #C6C6C6;
-      border-radius: 15px;
-      -webkit-transition: all .3s;
-      transition: all .3s;
+      padding: 48px 8% 50px 8%;
+      border-radius: 20px;
+      border: 5px solid #F0F0F0;
     }
+
     &--icon {
-      position: relative;
-      display: inline-block;
-      line-height: 0;
-      width: 122px;
-      height: 113px;
-      margin-bottom: 24px;
-      img {
-        width: 63px;
-        height: auto;
-      }
-      svg {
-        -webkit-transition: all .3s;
-        transition: all .3s;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      img{
+        width: auto;
+        height: 100%;
+        max-height: 85px;
       }
     }
+
     &--title {
       font-size: 22px;
-      margin: 0 0 8px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 133.2%;
+      margin: 21px 0 0 0;
     }
+
     &--excerpt {
       @extend .__bt-max-line-ellipsis;
-      margin-bottom: 24px;
-      -webkit-transition: all .3s;
-      transition: all .3s;
-    }
-    &--readmore a {
-      display: inline-block;
-      font-family: $primary-font;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 150%;
-      text-transform: uppercase;
-      text-decoration: underline;
-      color: $color-accent;
-    }
-    @media(max-width: $break-xs) {
-      &--inner {
-        padding: 30px 15px;
-      }
-      &--readmore a {
-        font-size: 14px;
-      }
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 165%;
+      margin: 8px  0 0 0;
     }
   }
 }
