@@ -41,7 +41,7 @@ $of = $wp_query->found_posts;
 						<?php
 	            if ( $wp_query->have_posts() ) {
 								?>
-								<div class="bt-car-layout <?php echo isset($_GET['view_type']) && $_GET['view_type'] != '' ? 'bt-view-' . $_GET['view_type'] : 'bt-view-grid' ?>" data-limit="<?php echo esc_attr($limit); ?>">
+								<div class="bt-car-layout" data-view="<?php echo isset($_GET['view_type']) && $_GET['view_type'] != '' ? $_GET['view_type'] : 'grid' ?>" data-limit="<?php echo esc_attr($limit); ?>">
 									<?php
 			              while ( $wp_query->have_posts() ) { $wp_query->the_post();
 			                get_template_part( 'framework/templates/car', 'style', array('image-size' => 'medium_large'));

@@ -87,6 +87,10 @@
   }
 }
 
+.bt-filter-scroll-pos {
+  transform: translateY(-30px); 
+}
+
 .bt-car-sidebar {
   @extend .__scrollbar_style;
   .bt-car-filter-form {
@@ -219,9 +223,6 @@
       margin-bottom: 8px;
     }
   }
-  .bt-form-action {
-
-  }
   .bt-reset-btn {
     display: block;
     font-size: 14px;
@@ -311,7 +312,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  &.bt-view-grid {
+  &[data-view="grid"] {
     .bt-post {
       width: calc(50% - 15px);
       @media(max-width: $break-sm) {
@@ -319,7 +320,7 @@
       }
     }
   }
-  &.bt-view-list {
+  &[data-view="list"] {
     @media(min-width: $break-sm  + 0.02) {
       .bt-post {
         width: 100%;
