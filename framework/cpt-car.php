@@ -899,6 +899,7 @@ function autoart_cars_filter() {
 	$to = count( $wp_query->posts ) + $prev_posts;
 	$of = $wp_query->found_posts;
 
+	// Update Results Block
 	ob_start();
 	if($of > 0) {
 		printf(esc_html__('Showing %s - %s of %s results', 'autoart'), $from, $to, $of );
@@ -907,6 +908,11 @@ function autoart_cars_filter() {
 	}
 	$output['results'] = ob_get_clean();
 
+	// Update Layout view
+	$view = isset($_POST['view_type']) && $_POST['view_type'] != '' ? $_POST['view_type'] : '';
+	$output['view'] = $view;
+
+	// Update Loop Post
   if ( $wp_query->have_posts() ) {
     ob_start();
       while ( $wp_query->have_posts() ) { $wp_query->the_post();

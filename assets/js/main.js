@@ -206,18 +206,23 @@
     });
 
     // View type
-    $('.bt-car-view-block .bt-view-type').on('click', function(e) {
+		$('.bt-car-view-block .bt-view-type').on('click', function(e) {
 			e.preventDefault();
 
-      var view_type = $(this).data('view');
+			var view_type = $(this).data('view');
 
-      if('list' == view_type) {
-        $('.bt-car-filter-form .bt-car-view-type').val(view_type);
-      } else {
-        $('.bt-car-filter-form .bt-car-view-type').val('');
-      }
+			if('list' == view_type) {
+				$('.bt-car-filter-form .bt-car-view-type').val(view_type);
+				$('.bt-car-layout').attr('data-view', view_type);
+			} else {
+				$('.bt-car-filter-form .bt-car-view-type').val('');
+				$('.bt-car-layout').attr('data-view', '');
+			}
+
+			$('.bt-car-view-block .bt-view-type').removeClass('active');
+			$(this).addClass('active');
 			$('.bt-car-filter-form').submit();
-    });
+		});
 
 		// Pagination
 		$('.bt-car-pagination a').on('click', function(e) {
@@ -356,7 +361,7 @@
         $(this).find('bt-reset-btn').addClass('disable');
       }
 
-      // console.log(param_ajax);
+      console.log(param_ajax);
 
       $.ajax({
           type: 'POST',
@@ -377,24 +382,30 @@
             if(response.success) {
               console.log(response.data);
 							$('.bt-car-results-block').html(response.data['results']).fadeIn('slow');
+							$('.bt-car-layout').data(response.data['view']);
               $('.bt-car-layout').html(response.data['items']).fadeIn('slow');
               $('.bt-car-pagination-wrap').html(response.data['pagination']).fadeIn('slow');
 
               $('.bt-filter-results').removeClass('loading');
 
 							// View type
-					    // $('.bt-car-view-block .bt-view-type').on('click', function(e) {
-							// 	e.preventDefault();
-							//
-					    //   var view_type = $(this).data('view');
-							//
-					    //   if('list' == view_type) {
-					    //     $('.bt-car-filter-form .bt-car-view-type').val(view_type);
-					    //   } else {
-					    //     $('.bt-car-filter-form .bt-car-view-type').val('');
-					    //   }
-							// 	$('.bt-car-filter-form').submit();
-					    // });
+							$('.bt-car-view-block .bt-view-type').on('click', function(e) {
+								e.preventDefault();
+
+								var view_type = $(this).data('view');
+
+								if('list' == view_type) {
+									$('.bt-car-filter-form .bt-car-view-type').val(view_type);
+									$('.bt-car-layout').attr('data-view', view_type);
+								} else {
+									$('.bt-car-filter-form .bt-car-view-type').val('');
+									$('.bt-car-layout').attr('data-view', '');
+								}
+
+								$('.bt-car-view-block .bt-view-type').removeClass('active');
+								$(this).addClass('active');
+								$('.bt-car-filter-form').submit();
+							});
 
               // Pagination
               $('.bt-car-pagination a').on('click', function(e) {
