@@ -9,6 +9,34 @@
 }
 
 .elementor-element{
+
+    &.bt-ss-buy-sell-car{
+        > .elementor-element {
+            &:first-child{
+                > .elementor-element {
+                    &:first-child{
+                        @media (min-width: 1450px) {
+                            padding-left: calc((100% - var(--container-max-width)) / 2);
+                        }
+                        
+                    }
+
+                    &:last-child{
+                        @media (min-width: 1450px) {
+                            padding-right: calc((100% - var(--container-max-width)) / 2);
+                        }
+                    }
+                }
+            }
+
+            .elementor-widget-image{
+                @media(max-width: 767.98px) {
+                   position: relative;
+                }
+            }
+        }
+    }
+
     &.bt-hero-home{
 
         .bt-elwg-highlighted-heading {

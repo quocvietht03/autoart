@@ -1544,8 +1544,6 @@ img.alignright {
   filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.1));
   position: relative;
   box-sizing: border-box; }
-  .elementor-location-header .elementor-element.bt-header-nav .e--pointer-underline .elementor-item:after {
-    width: calc(100% + 16px); }
   @media (min-width: 768px) {
     .elementor-location-header .elementor-element.bt-header-nav {
       width: calc(100% - 130px); }
@@ -6309,7 +6307,8 @@ body {
     position: relative; }
   .bt-elwg-list-image-text-inner .item-image-text--thumbnail {
     width: 100%;
-    text-align: center; }
+    display: flex;
+    justify-content: center; }
   .bt-elwg-list-image-text-inner .item-image-text h3 {
     width: 100%;
     text-align: center;
@@ -6344,6 +6343,9 @@ body {
 .bt-elwg-list-image-text--style-2 .bt-elwg-list-image-text-inner .item-image-text-inner {
   gap: 13px; }
 
+.elementor-widget-button .elementor-button-icon svg {
+  width: fit-content; }
+
 @media (min-width: 1200px) and (max-width: 1439.98px) {
   .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h3, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h4, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h5, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h6 {
     font-size: 55px; } }
@@ -6351,6 +6353,15 @@ body {
   .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h3, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h4, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h5, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h6 {
     font-size: 45px; } }
 
+@media (min-width: 1450px) {
+  .elementor-element.bt-ss-buy-sell-car > .elementor-element:first-child > .elementor-element:first-child {
+    padding-left: calc((100% - var(--container-max-width)) / 2); } }
+@media (min-width: 1450px) {
+  .elementor-element.bt-ss-buy-sell-car > .elementor-element:first-child > .elementor-element:last-child {
+    padding-right: calc((100% - var(--container-max-width)) / 2); } }
+@media (max-width: 767.98px) {
+  .elementor-element.bt-ss-buy-sell-car > .elementor-element .elementor-widget-image {
+    position: relative; } }
 @media (min-width: 1025px) and (max-width: 1600.98px) {
   .elementor-element.bt-hero-home .elementor-widget-image.bt-hero-image > .elementor-widget-container {
     margin-right: 0; } }
