@@ -88,7 +88,7 @@
 }
 
 .bt-filter-scroll-pos {
-  transform: translateY(-30px); 
+  transform: translateY(-30px);
 }
 
 .bt-car-sidebar {
@@ -312,6 +312,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  &[data-view=""],
   &[data-view="grid"] {
     .bt-post {
       width: calc(50% - 15px);

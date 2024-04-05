@@ -887,7 +887,8 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
 }
 
 function autoart_cars_filter() {
-	$limit = 1;
+	$archive_page = get_field('car_archive_page', 'options');
+	$limit = !empty($archive_page['number_posts']) ? $archive_page['number_posts'] : 12;
 	$query_args = autoart_cars_query_args($_POST, $limit);
 	$wp_query = new \WP_Query($query_args);
 	$current_page = isset($_POST['current_page']) && $_POST['current_page'] != '' ? absint($_POST['current_page']) : 1;
