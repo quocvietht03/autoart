@@ -2,7 +2,8 @@
 get_header();
 get_template_part( 'framework/templates/site', 'titlebar');
 
-$limit = 1;
+$archive_page = get_field('car_archive_page', 'options');
+$limit = !empty($archive_page['number_posts']) ? $archive_page['number_posts'] : 12;
 $query_args = autoart_cars_query_args($_GET, $limit);
 $wp_query = new \WP_Query($query_args);
 $current_page = isset($_GET['current_page']) && $_GET['current_page'] != '' ? $_GET['current_page'] : 1;
@@ -38,6 +39,7 @@ $of = $wp_query->found_posts;
 					<?php get_template_part( 'framework/templates/car', 'topbar', array('from' => $from, 'to' => $to, 'of' => $of)); ?>
 
 					<div class="bt-filter-results">
+						<span class="bt-loading-wave"></span>
 						<?php
 	            if ( $wp_query->have_posts() ) {
 								?>
