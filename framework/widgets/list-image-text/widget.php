@@ -79,28 +79,28 @@ class Widget_ListImageText extends Widget_Base {
 				'default' => [
 					[
 						'lit_image' => Utils::get_placeholder_image_src(),
-						'lit_text' => __( 'This is text 01', 'autoart' ),
-						'lit_link' => '#'
+						'lit_text'  => __( 'This is text 01', 'autoart' ),
+						'lit_link'  => '#'
 					],
 					[
 						'lit_image' => Utils::get_placeholder_image_src(),
-						'lit_text' => __( 'This is text 02', 'autoart' ),
-						'lit_link' => '#'
+						'lit_text'  => __( 'This is text 02', 'autoart' ),
+						'lit_link'  => '#'
 					],
 					[
 						'lit_image' => Utils::get_placeholder_image_src(),
-						'lit_text' => __( 'This is text 03', 'autoart' ),
-						'lit_link' => '#'
+						'lit_text'  => __( 'This is text 03', 'autoart' ),
+						'lit_link'  => '#'
 					],
 					[
 						'lit_image' => Utils::get_placeholder_image_src(),
-						'lit_text' => __( 'This is text 04', 'autoart' ),
-						'lit_link' => '#'
+						'lit_text'  => __( 'This is text 04', 'autoart' ),
+						'lit_link'  => '#'
 					],
 					[
 						'lit_image' => Utils::get_placeholder_image_src(),
-						'lit_text' => __( 'This is text 05', 'autoart' ),
-						'lit_link' => '#'
+						'lit_text'  => __( 'This is text 05', 'autoart' ),
+						'lit_link'  => '#'
 					],
 				],
 				'title_field' => '{{{ lit_text }}}',
@@ -108,29 +108,39 @@ class Widget_ListImageText extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Image_Size::get_type(),
-			[
-				'name' => 'thumbnail',
-				'label' => __( 'Image Size', 'autoart' ),
+			Group_Control_Image_Size::get_type(),[
+				'name'       => 'thumbnail',
+				'label'      => __( 'Image Size', 'autoart' ),
 				'show_label' => true,
-				'default' => 'medium_large',
-				'exclude' => [ 'custom' ],
+				'default'    => 'medium_large',
+				'exclude'    => [ 'custom' ],
 			]
 		);
 
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'section_layout',
-			[
+			'section_layout',[
 				'label' => __( 'Layout', 'autoart' ),
 			]
 		);
 
+			$this->add_control(
+				'lit_layout_style',[
+					'label' => __( 'Layout Style', 'autoart' ),
+					'type' => Controls_Manager::SELECT,
+					'default' => 'default',
+					'options' => [
+						'default' => 'Default',
+						'style-1' => 'Style 1',
+						'style-2' => 'Style 2',
+					],
+				]
+			);
+
 			$this->add_responsive_control(
-				'lit_columns',
-				[
-					'label' => __( 'Columns', 'bearsthemes-addons' ),
+				'lit_columns',[
+					'label' => __( 'Columns', 'autoart' ),
 					'type' => Controls_Manager::SELECT,
 					'default' => '5',
 					'tablet_default' => '3',
@@ -148,7 +158,6 @@ class Widget_ListImageText extends Widget_Base {
 					],
 				]
 			);
-
 
 			$this->add_responsive_control(
 				'lit_gap_col',[
@@ -291,8 +300,7 @@ class Widget_ListImageText extends Widget_Base {
 
 
 		$this->start_controls_section(
-			'section_style_image',
-			[
+			'section_style_image',[
 				'label' => esc_html__( 'Image', 'autoart' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
@@ -365,28 +373,6 @@ class Widget_ListImageText extends Widget_Base {
 				]
 			);
 
-			$this->add_responsive_control(
-				'lit_content_spacing',[
-					'label' => __( 'Content Spacing', 'autoart' ),
-					'type'  => Controls_Manager::SLIDER,
-					'size_units' => [ 'px'],
-					'range' => [
-						'px' => [
-							'min' => 0,
-							'max' => 100,
-							'step' => 1,
-						],
-					],
-					'default' => [
-						'unit' => 'px',
-						'size' => 19,
-					],
-					'selectors' => [
-						'{{WRAPPER}} .item-image-text-inner' => 'gap: {{SIZE}}{{UNIT}}',
-					],
-				]
-			);
-
 		$this->end_controls_section();
 	}
 
@@ -403,8 +389,35 @@ class Widget_ListImageText extends Widget_Base {
 		}
 
 	?>
-		<div class="bt-elwg-list-image-text--default">
-			<?php get_template_part( 'framework/templates/list-image-text', 'style', array('layout' => 'style-default', 'data' => $settings['list'], 'thumbnail-size' => $settings['thumbnail_size'])); ?>	
+		<div class="bt-elwg-list-image-text--<?php echo $settings['lit_layout_style'] ?>">
+			<div class="bt-elwg-list-image-text-inner"> 
+				<?php foreach ( $settings['list'] as $index => $item ): ?>
+					<?php 
+						$attachment = wp_get_attachment_image_src( $item['lit_image']['id'], $settings['thumbnail_size'] ); 
+						$delay      = ($index + 1) * 100;
+						$animation  = 'fadeInUp';
+					?>
+					<div class="item-image-text"> 
+						<div class="item-image-text-inner" data-settings='<?php echo json_encode(["_animation" => $animation, "_animation_delay" => $delay]); ?>'>
+							<div class="item-image-text--thumbnail">
+								<?php if( !empty( $attachment ) ) {
+										echo '<img src=" ' . esc_url( $attachment[0] ) . ' " alt="">';
+									} else {
+										echo '<img src=" ' . esc_url( $item['lit_image']['url'] ) . ' " alt="">';
+								} ?>
+							</div>
+
+							<?php if(!empty($item['lit_text'])): ?>
+								<h3> <?php echo $item['lit_text'] ?> </h3>
+							<?php endif;?>	
+							
+							<?php if(!empty($item['lit_link'])): ?>
+								<a href="<?php echo esc_url($item['lit_link']) ?>"> </a>
+							<?php endif;?>		
+						</div>
+					</div>
+				<?php endforeach;?>		
+			</div>	
 	    </div>
 	<?php }
 
