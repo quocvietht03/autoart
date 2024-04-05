@@ -3,6 +3,61 @@
     "title": "Car Options",
     "fields": [
         {
+            "key": "field_660fa62ef816f",
+            "label": "Featured Status",
+            "name": "car_featured_status",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "trending": "Trending",
+                "popular": "Popular",
+                "upcoming": "Upcoming"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_660fa49463366",
+            "label": "Stock Status",
+            "name": "car_stock_status",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "in_stock": "In Stock",
+                "out_of_stock": "Out Of Stock",
+                "on_backorder": "On Backorder"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_65f1574b49a3d",
             "label": "Mileage (km)",
             "name": "car_mileage",
@@ -153,6 +208,61 @@
             "mime_types": "",
             "insert": "append",
             "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_660fa85b1eb7a",
+            "label": "Dealer",
+            "name": "car_dealer",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "dealer"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_660faf2468b69",
+            "label": "Layout",
+            "name": "car_layout",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "style1": "Layout Style 01",
+                "style2": "Layout Style 02",
+                "style3": "Layout Style 03"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -173,5 +283,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711977337
+    "modified": 1712305483
 }
