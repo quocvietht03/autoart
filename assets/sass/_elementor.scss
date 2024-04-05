@@ -1606,10 +1606,10 @@
             transform: translateY(5px);
           }
         }
-        
-        &--thumbnail, h3{
-          transition: all .3s;
-        }
+      }
+
+      &--thumbnail, h3{
+        transition: all .3s;
       }
     }
   }

@@ -6326,7 +6326,7 @@ body {
   transform: translateY(-5px); }
 .bt-elwg-list-image-text--default .item-image-text-inner:hover h3, .bt-elwg-list-image-text--style-2 .item-image-text-inner:hover h3 {
   transform: translateY(5px); }
-.bt-elwg-list-image-text--default .item-image-text-inner--thumbnail, .bt-elwg-list-image-text--default .item-image-text-inner h3, .bt-elwg-list-image-text--style-2 .item-image-text-inner--thumbnail, .bt-elwg-list-image-text--style-2 .item-image-text-inner h3 {
+.bt-elwg-list-image-text--default .item-image-text--thumbnail, .bt-elwg-list-image-text--default .item-image-text h3, .bt-elwg-list-image-text--style-2 .item-image-text--thumbnail, .bt-elwg-list-image-text--style-2 .item-image-text h3 {
   transition: all .3s; }
 .bt-elwg-list-image-text--default .bt-elwg-list-image-text-inner .item-image-text-inner {
   gap: 19px; }
