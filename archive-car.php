@@ -39,6 +39,7 @@ $of = $wp_query->found_posts;
 					<?php get_template_part( 'framework/templates/car', 'topbar', array('from' => $from, 'to' => $to, 'of' => $of)); ?>
 
 					<div class="bt-filter-results">
+						<span class="bt-loading-wave"></span>
 						<?php
 	            if ( $wp_query->have_posts() ) {
 								?>

@@ -308,6 +308,22 @@
   }
 }
 
+.bt-filter-results {
+  position: relative;
+  min-height: 540px;
+  &.loading {
+    .bt-loading-wave {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .bt-loading-wave {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+  }
+}
+
 .bt-car-layout {
   display: flex;
   flex-wrap: wrap;

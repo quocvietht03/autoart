@@ -361,7 +361,7 @@
         $(this).find('bt-reset-btn').addClass('disable');
       }
 
-      console.log(param_ajax);
+      // console.log(param_ajax);
 
       $.ajax({
           type: 'POST',
@@ -380,13 +380,19 @@
           },
           success: function(response) {
             if(response.success) {
-              console.log(response.data);
-							$('.bt-car-results-block').html(response.data['results']).fadeIn('slow');
-							$('.bt-car-layout').data(response.data['view']);
-              $('.bt-car-layout').html(response.data['items']).fadeIn('slow');
-              $('.bt-car-pagination-wrap').html(response.data['pagination']).fadeIn('slow');
+              // console.log(response.data);
 
-              $('.bt-filter-results').removeClass('loading');
+							setTimeout(function() {
+								$('.bt-car-results-block').html(response.data['results']).fadeIn('slow');
+								$('.bt-car-layout').data(response.data['view']);
+	              $('.bt-car-layout').html(response.data['items']).fadeIn('slow');
+	              $('.bt-car-pagination-wrap').html(response.data['pagination']).fadeIn('slow');
+								$('.bt-filter-results').removeClass('loading');
+
+								// Wishlist & Compare
+								AutoArtCarWishlist();
+								AutoArtCarCompare();
+							}, 500);
 
 							// View type
 							$('.bt-car-view-block .bt-view-type').on('click', function(e) {
