@@ -1558,8 +1558,6 @@
 .bt-elwg-list-image-text{
   &-inner{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
 
     .item-image-text{
       &-inner{
@@ -1573,10 +1571,15 @@
         position: relative;
       }
 
+      &--thumbnail{
+        width: 100%;
+        text-align: center;
+      }
+
       h3{
-        font-family: "DM Sans";
+        width: 100%;
+        text-align: center;
         font-size: 22px;
-        font-style: normal;
         font-weight: 500;
         line-height: normal;
       }
