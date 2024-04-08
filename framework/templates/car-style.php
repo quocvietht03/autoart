@@ -53,7 +53,7 @@ $transmission = get_the_terms( get_the_ID(), 'car_transmission' );
             </svg>
 
             <?php
-              echo '<span class="bt-label">' . esc_html__('Fuel type', 'autoart') . '</span>';
+              echo '<span class="bt-label">' . esc_html__('Fuel Type', 'autoart') . '</span>';
 
               if(!empty($fuel_type)) {
                 $term = array_pop($fuel_type);

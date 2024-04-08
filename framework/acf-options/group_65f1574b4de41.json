@@ -144,6 +144,46 @@
             "append": ""
         },
         {
+            "key": "field_661366f92ed19",
+            "label": "Map Link",
+            "name": "car_map_link",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_661367142ed1a",
+            "label": "Map Iframe",
+            "name": "car_map_iframe",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_65f162e1eca20",
             "label": "Features",
             "name": "car_features",
@@ -174,7 +214,7 @@
                 "sunroof": "Sunroof"
             },
             "default_value": [],
-            "return_format": "value",
+            "return_format": "array",
             "allow_custom": 0,
             "layout": "vertical",
             "toggle": 0,
@@ -283,5 +323,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712305483
+    "modified": 1712548251
 }

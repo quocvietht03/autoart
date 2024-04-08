@@ -134,6 +134,17 @@ function autoart_car_taxonomy() {
 		)
 	);
 
+	register_taxonomy(
+		"car_cylinder",
+		array("car"),
+		array(
+			"hierarchical"   => true,
+			"label"          => __( 'Cylinder', 'autoart' ),
+			"singular_label" => __( 'Cylinder', 'autoart' ),
+			"rewrite"        => true
+		)
+	);
+
   register_taxonomy(
 		"car_color",
 		array("car"),
