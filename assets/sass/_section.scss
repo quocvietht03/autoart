@@ -30,9 +30,7 @@
             }
 
             .elementor-widget-image{
-                @media(max-width: 767.98px) {
-                   position: relative;
-                }
+                transform: translateX(-50%);
             }
         }
     }
