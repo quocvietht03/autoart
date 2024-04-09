@@ -1733,6 +1733,21 @@ img.alignright {
   border: 2px solid #4D93E9; }
 .elementor-element.bt-site-footer-bottom .bt-elwg-site-infor a:hover {
   text-decoration: underline; }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-element.bt-footer-style-1 > .elementor-element:first-child h2.elementor-heading-title {
+    font-size: 20px; } }
+@media (min-width: 1200px) and (max-width: 1379.98px) {
+  .elementor-element.bt-footer-style-1 > .elementor-element:first-child .elementor-widget-icon-list > .elementor-widget-container {
+    padding-left: 15px; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-element.bt-footer-style-1 > .elementor-element:first-child .elementor-widget-icon-list > .elementor-widget-container {
+    padding-left: 10px; } }
+@media (min-width: 1200px) and (max-width: 1379.98px) {
+  .elementor-element.bt-footer-style-1 > .elementor-element:first-child .elementor-widget-icon-list .elementor-icon-list-item > a {
+    font-size: 16px; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-element.bt-footer-style-1 > .elementor-element:first-child .elementor-widget-icon-list .elementor-icon-list-item > a {
+    font-size: 14px; } }
 
 .bt-site-titlebar {
   position: relative;
@@ -5462,6 +5477,27 @@ body {
       fill: var(--e-global-color-accent, #1FBECD);
       display: inline-block;
       margin: 0 4px -1px 0; }
+  .bt-elwg-site-infor--style-1 .bt-elwg-site-infor--item > a {
+    display: flex;
+    align-items: center;
+    gap: 12px; }
+  .bt-elwg-site-infor--style-1 .bt-elwg-site-infor--item-icon {
+    min-width: 54px;
+    min-height: 54px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; }
+    .bt-elwg-site-infor--style-1 .bt-elwg-site-infor--item-icon svg {
+      width: 100%;
+      height: auto;
+      max-width: 24px;
+      margin: 0; }
+  .bt-elwg-site-infor--style-1 .bt-elwg-site-infor--item.address {
+    display: flex;
+    align-items: center;
+    gap: 12px; }
 
 .bt-elwg-site-copyright {
   font-family: var(--e-global-typography-primary-font-family, "DM Sans");

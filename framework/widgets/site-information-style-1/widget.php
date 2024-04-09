@@ -1,18 +1,18 @@
 <?php
-namespace AutoArtElementorWidgets\Widgets\SiteInformation;
+namespace AutoArtElementorWidgets\Widgets\SiteInformationStyle1;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
-class Widget_SiteInformation extends Widget_Base {
+class Widget_SiteInformationStyle1 extends Widget_Base {
 
 	public function get_name() {
-		return 'bt-site-information';
+		return 'bt-site-information-style-1';
 	}
 
 	public function get_title() {
-		return __( 'Site Information', 'autoart' );
+		return __( 'Site Information Style 1', 'autoart' );
 	}
 
 	public function get_icon() {
@@ -148,7 +148,7 @@ class Widget_SiteInformation extends Widget_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .bt-elwg-site-infor--item svg' => 'fill: {{VALUE}};',
+					'{{WRAPPER}} .bt-elwg-site-infor--item svg path' => 'fill: {{VALUE}};',
 				],
 			]
 		);
@@ -204,9 +204,9 @@ class Widget_SiteInformation extends Widget_Base {
 			return;
 		}
 	?>
-			<div class="bt-elwg-site-infor bt-elwg-site-infor--default">
-			<?php get_template_part( 'framework/templates/site-information', 'style', array('layout' => 'default', 'data' => $settings['list'])); ?>
-	    </div>
+			<div class="bt-elwg-site-infor bt-elwg-site-infor--style-1">  
+				<?php get_template_part( 'framework/templates/site-information', 'style', array('layout' => 'style-1', 'data' => $settings['list'])); ?>
+			</div>
 		<?php
 	}
 
