@@ -263,6 +263,40 @@
       margin: 0 4px -1px 0;
     }
   }
+
+  &--style-1{
+    .bt-elwg-site-infor{
+      &--item {
+        > a{
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
+        &-icon{
+          min-width: 54px;
+          min-height: 54px;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          svg{
+            width: 100%;
+            height: auto;
+            max-width: 24px;
+            margin: 0;
+          }
+        }
+
+        &.address{
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+      }
+    }
+  }
 }
 
 .bt-elwg-site-social {
