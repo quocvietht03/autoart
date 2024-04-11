@@ -143,10 +143,11 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
+  text-transform: uppercase;
   color: #FFFFFF;
   background: $color-accent;
   padding: 16px 35px;
-  border: 1px solid $color-accent;
+  border: 3px solid $color-accent;
   border-radius: 15px;
   &:hover,
   &:focus {
@@ -161,13 +162,34 @@
 .__bt-button-dark-style {
   @extend .__bt-button-style;
   background: $color-secondary;
-  border-color: $color-secondary;
   &:hover,
   &:focus {
     background: $color-secondary;
     border-color: $color-secondary;
   }
 }
+.__bt-button-outline-style {
+  @extend .__bt-button-style;
+  color: $color-accent;
+  background: #FFFFFF;
+  &:hover,
+  &:focus {
+    color: #FFFFFF;
+    background: $color-accent;
+  }
+}
+.__bt-button-outline-dark-style {
+  @extend .__bt-button-style;
+  color: $color-secondary;
+  background: #FFFFFF;
+  border-color: $color-secondary;
+  &:hover,
+  &:focus {
+    color: #FFFFFF;
+    background: $color-secondary;
+  }
+}
+
 .__scrollbar_style {
   overflow-y: auto;
   &::-webkit-scrollbar {

@@ -622,7 +622,7 @@
           border-radius: 20px;
         }
       }
-      &--section { 
+      &--section {
         &:not(:last-child) {
           margin-bottom: 80px;
         }
@@ -708,7 +708,6 @@
           margin-bottom: 25px;
           .bt-location-text {
             position: relative;
-            margin-bottom: 32px;
             padding-left: 28px;
             svg {
               position: absolute;
@@ -717,6 +716,122 @@
               width: 22px;
               height: auto;
               fill: $color-accent;
+            }
+          }
+          .bt-location-link {
+            @extend .__bt-button-outline-dark-style;
+          }
+        }
+      }
+      .bt-sidebar-wrap {
+        position: sticky;
+        top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .bt-sidebar-block {
+          background: #FFFFFF;
+          overflow: hidden;
+          border: 1px solid #DADADA;
+          border-radius: 20px;
+          .bt-sale-car {
+            position: relative;
+            color: #FFFFFF;
+            background: $color-accent;
+            padding: 30px;
+            .bt-sale-body {
+              position: absolute;
+              top: 30px;
+              left: -1px;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 150%;
+              color: #FFFFFF;
+              background: $color-secondary;
+              padding: 10px 30px;
+              border-radius: 0 10px 10px 0;
+              a {
+                color: inherit;
+              }
+            }
+            .bt-sale-icon-btn {
+              display: flex;
+              justify-content: flex-end;
+              gap: 5px;
+              margin-bottom: 25px;
+              .bt-icon-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                background: #FFF;
+                border: 1px solid #D6D6D6;
+                border-radius: 100px;
+                transition: all .3s;
+                &.added {
+                  background: $color-accent;
+                  svg {
+                    fill: #FFFFFF;
+                  }
+                }
+                svg {
+                  fill: $color-accent;
+                }
+              }
+            }
+            .bt-sale-price {
+              font-size: 30px;
+              font-weight: 700;
+              line-height: 150%;
+              margin-bottom: 10px;
+              a {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 150%;
+                color: $color-accent;
+                background: #FFFFFF;
+                padding: 8px 15px;
+                border-radius: 10px;
+              }
+            }
+            .bt-offer-btn {
+              display: inline-flex;
+              align-items: center;
+              gap: 10px;
+              font-weight: 500;
+              color: #FFFFFF;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+            }
+          }
+          .bt-sale-dealer {
+            padding: 30px;
+            .bt-dealer-title {
+              font-size: 18px;
+              font-weight: 500;
+              color: $color-primary;
+              margin-bottom: 25px;
+            }
+            .bt-dealer-infor {
+              position: relative;
+              padding-left: 76px;
+            }
+            .bt-dealer-avatar {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 64px;
+              .bt-cover-image {
+                padding-bottom: 100%;
+                border-radius: 100%;
+              }
+            }
+            .bt-dealer-name {
+              font-size: 22px;
+              font-weight: 500;
+              margin: 0 0 15px;
             }
           }
         }
