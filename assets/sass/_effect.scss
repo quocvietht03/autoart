@@ -84,7 +84,7 @@ body {
     &.red {
       animation: effectOrbit 10s linear infinite;
       span {
-        background: #FB0F5A;
+        background: $color-accent;
         animation: effectOrbitScale 10s linear infinite;
       }
     }
