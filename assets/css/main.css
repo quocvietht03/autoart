@@ -1776,6 +1776,51 @@ img.alignright {
 @media (min-width: 1025px) and (max-width: 1199.98px) {
   .elementor-element.bt-footer-style-1 > .elementor-element:first-child .elementor-widget-icon-list .elementor-icon-list-item > a {
     font-size: 14px; } }
+.elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::before, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::after {
+  content: " ";
+  display: inline-block;
+  position: absolute; }
+.elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::before {
+  width: 12px;
+  height: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/arrow-chevron-right.svg);
+  bottom: 8px;
+  right: 28px;
+  z-index: 9; }
+.elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::after {
+  width: 45px;
+  height: 48px;
+  background-color: var(--e-global-color-secondary, #111);
+  bottom: 8px;
+  right: 28px;
+  bottom: -9px;
+  right: 13px;
+  border-radius: 10px;
+  z-index: 8; }
+.elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email::placeholder {
+  font-size: 16px;
+  line-height: normal; }
+.elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
+  height: 53px;
+  padding: 16px 67px 16px 58px;
+  max-width: 100%;
+  background-position: center left 26px; }
+.elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+  font-size: 0;
+  width: 45px;
+  height: 48px;
+  border-radius: 10px;
+  min-width: 45px;
+  padding: 0;
+  top: inherit;
+  transform: translateY(0);
+  bottom: -9px;
+  right: 13px;
+  background-color: transparent;
+  z-index: 10; }
 
 .bt-site-titlebar {
   position: relative;
