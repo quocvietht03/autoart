@@ -258,6 +258,19 @@ html :where(.editor-styles-wrapper) {
     object-fit: cover;
     margin: 0; }
 
+.bt-cover-iframe {
+  position: relative;
+  overflow: hidden;
+  background: #CDCDCD;
+  padding-bottom: 46.5%; }
+  .bt-cover-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0; }
+
 .bt-ab-center {
   position: absolute;
   top: 50%;
@@ -301,30 +314,45 @@ html :where(.editor-styles-wrapper) {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical; }
 
-.__bt-button-style, .widget button, .widget input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-srq-box--book-link {
+.__bt-button-style, .widget button, .widget input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .bt-srq-box--book-link {
   display: inline-block;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
+  text-transform: uppercase;
   color: #FFFFFF;
   background: var(--e-global-color-accent, #1FBECD);
   padding: 16px 35px;
-  border: 1px solid var(--e-global-color-accent, #1FBECD);
+  border: 3px solid var(--e-global-color-accent, #1FBECD);
   border-radius: 15px; }
-  .__bt-button-style:hover, .widget button:hover, .widget input[type="submit"]:hover, .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-block-contact-information .bt-contact-information--button:hover, .bt-srq-box--book-link:hover, .__bt-button-style:focus, .widget button:focus, .widget input[type="submit"]:focus, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-block-contact-information .bt-contact-information--button:focus, .bt-srq-box--book-link:focus {
+  .__bt-button-style:hover, .widget button:hover, .widget input[type="submit"]:hover, .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-block-contact-information .bt-contact-information--button:hover, .__bt-button-outline-style:hover, .__bt-button-outline-dark-style:hover, .bt-srq-box--book-link:hover, .__bt-button-style:focus, .widget button:focus, .widget input[type="submit"]:focus, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-block-contact-information .bt-contact-information--button:focus, .__bt-button-outline-style:focus, .__bt-button-outline-dark-style:focus, .bt-srq-box--book-link:focus {
     color: #FFFFFF;
     background: var(--e-global-color-accent, #1FBECD); }
   @media (max-width: 519.98px) {
-    .__bt-button-style, .widget button, .widget input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-srq-box--book-link {
+    .__bt-button-style, .widget button, .widget input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .bt-srq-box--book-link {
       font-size: 14px;
       padding: 12px 30px; } }
 
 .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button {
-  background: var(--e-global-color-secondary, #111);
-  border-color: var(--e-global-color-secondary, #111); }
+  background: var(--e-global-color-secondary, #111); }
   .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-block-contact-information .bt-contact-information--button:hover, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-block-contact-information .bt-contact-information--button:focus {
     background: var(--e-global-color-secondary, #111);
     border-color: var(--e-global-color-secondary, #111); }
+
+.__bt-button-outline-style {
+  color: var(--e-global-color-accent, #1FBECD);
+  background: #FFFFFF; }
+  .__bt-button-outline-style:hover, .__bt-button-outline-style:focus {
+    color: #FFFFFF;
+    background: var(--e-global-color-accent, #1FBECD); }
+
+.__bt-button-outline-dark-style {
+  color: var(--e-global-color-secondary, #111);
+  background: #FFFFFF;
+  border-color: var(--e-global-color-secondary, #111); }
+  .__bt-button-outline-dark-style:hover, .__bt-button-outline-dark-style:focus {
+    color: #FFFFFF;
+    background: var(--e-global-color-secondary, #111); }
 
 .__scrollbar_style, .select2-container--default .select2-results > .select2-results__options {
   overflow-y: auto; }
@@ -375,7 +403,7 @@ html :where(.editor-styles-wrapper) {
   text-align: center;
   margin-bottom: 40px; }
   .__bt-section-heading-style .bt-sub-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-sub-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-sub-text {
-    color: #FB0F5A;
+    color: var(--e-global-color-accent, #1FBECD);
     font-family: var(--e-global-typography-primary-font-family, "DM Sans");
     font-size: 18px;
     font-weight: 700;

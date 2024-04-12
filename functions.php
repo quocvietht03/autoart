@@ -170,22 +170,5 @@ if(function_exists('get_field')){
 		return $classes;
 	}
 	add_filter('body_class', 'autoart_body_class');
-
-	/* Search filter results */
-	function autoart_search_filter_results($query) {
-		if ( !is_admin() && $query->is_main_query() ) {
-			if ($query->is_search) {
-				$query->set('post_type', array('team'));
-				$query->set('posts_per_page', 8);
-			}
-			if (is_tax('team_categories')) {
-			 $query->set( 'posts_per_page', 8 );
-			}
-		}
-	}
-
-	$team_sft = get_field('team_search_filter_results', 'options');
-	if($team_sft || is_tax('team_categories')) {
-		add_action('pre_get_posts','autoart_search_filter_results');
-	}
+	
 }

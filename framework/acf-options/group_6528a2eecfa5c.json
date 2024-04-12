@@ -3,6 +3,31 @@
     "title": "Dealer Options",
     "fields": [
         {
+            "key": "field_661636cf5a2e1",
+            "label": "Avatar",
+            "name": "avatar",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "thumbnail"
+        },
+        {
             "key": "field_6528a2ef02aa5",
             "label": "Job",
             "name": "job",
@@ -43,6 +68,26 @@
             "append": ""
         },
         {
+            "key": "field_66163861fe544",
+            "label": "Map Iframe",
+            "name": "map_iframe",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_660f9fbdcd6f1",
             "label": "Phone",
             "name": "phone",
@@ -66,6 +111,46 @@
             "key": "field_660f9feccd6f2",
             "label": "Email",
             "name": "email",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_661633bb2b6f1",
+            "label": "Message Link",
+            "name": "message_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_661633ecb3385",
+            "label": "Whatsapp Link",
+            "name": "whatsapp_link",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -172,5 +257,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712301155
+    "modified": 1712732359
 }
