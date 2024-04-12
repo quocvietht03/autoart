@@ -59,8 +59,7 @@ class Widget_SiteInformation extends Widget_Base {
 		);
 
 		$this->add_control(
-			'style',
-			[
+			'style',[
 				'label' => esc_html__( 'Layout Style', 'autoart' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
@@ -97,6 +96,7 @@ class Widget_SiteInformation extends Widget_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .bt-elwg-site-infor' => 'column-gap: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .bt-elwg-site-infor--item:not(:last-child)::before' => 'right: calc( ({{SIZE}}{{UNIT}} / 2) * -1 )',
 				],
 
 				'condition' => [
@@ -124,6 +124,19 @@ class Widget_SiteInformation extends Widget_Base {
 				],
 				'condition' => [
 					'style' => 'column',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'separator',[
+				'label'    => __( 'Separator', 'autoart' ),
+				'type'     => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'autoart' ),
+				'label_off'=> __( 'Hide', 'autoart' ),
+				'default'  => '',
+				'condition' => [
+					'style' => 'row',
 				],
 			]
 		);
@@ -187,6 +200,54 @@ class Widget_SiteInformation extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'separator_style',[
+				'label' => __( 'Separator', 'autoart' ),
+				'type' => Controls_Manager::HEADING,
+				'condition' => [
+					'separator' => 'yes',
+				],
+			]
+		);
+
+		$this->add_control(
+			'separator_color',[
+				'label' => __( 'Color', 'autoart' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#000',
+				'selectors' => [
+					'{{WRAPPER}} .bt-elwg-site-infor--item:not(:last-child)::before' => 'background-color: {{VALUE}};',
+				],
+				'condition' => [
+					'separator' => 'yes',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'separator_width',[
+				'label' => __( 'Width', 'autoart' ),
+				'type'  => Controls_Manager::SLIDER,
+				'size_units' => [ 'px',],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 10,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'size' => 1,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .bt-elwg-site-infor--item:not(:last-child)::before' => 'width: {{SIZE}}{{UNIT}}',
+				],
+				'condition' => [
+					'separator' => 'yes',
+				],
+			]
+		);
+
 		$this->end_controls_section();
 
 	}
@@ -199,16 +260,37 @@ class Widget_SiteInformation extends Widget_Base {
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
+		
+		if(isset($settings['separator']) && $settings['separator'] == 'yes'){
+			$separator = 'separator';
+		}else{
+			$separator = '';
+		}
+
+		if(isset($settings['separator_tablet']) && $settings['separator_tablet'] == 'yes'){
+			$separator_tb = '';
+		}else{
+			$separator_tb = 'separator-tb-hide';
+		}
+
+		if(isset($settings['separator_mobile']) && $settings['separator_mobile'] == 'yes'){
+			$separator_mb = '';
+		}else{
+			$separator_mb = 'separator-mb-hide';
+		}
+
+		$classes  = implode(' ', [$separator, $separator_tb, $separator_mb]);
 
 		if(empty($settings['list'])) {
 			return;
 		}
 	?>
-			<div class="bt-elwg-site-infor bt-elwg-site-infor--default">
+	
+		<div class="bt-elwg-site-infor bt-elwg-site-infor--default <?php echo $classes ?>">
 			<?php get_template_part( 'framework/templates/site-information', 'style', array('layout' => 'default', 'data' => $settings['list'])); ?>
 	    </div>
-		<?php
-	}
+	
+	<?php }
 
 	protected function content_template() {
 
