@@ -201,6 +201,7 @@
         min-height: unset;
       }
       input[type="submit"] {
+        font-family: $primary-font;
         text-transform: uppercase;
       }
     }

@@ -66,7 +66,7 @@ class Widget_HighlightedHeading extends Widget_Base {
 					'label'   => esc_html__( 'Highlighted Image', 'autoart' ),
 					'type'    => Controls_Manager::MEDIA,
 					'default' => [
-						'url' => get_template_directory_uri() . '/assets/images/img-graphic-highlighted-heading.svg',
+						'url' => get_template_directory_uri() . '/assets/images/text-highlighted-bg.svg',
 					],
 				]
 			);
@@ -78,7 +78,7 @@ class Widget_HighlightedHeading extends Widget_Base {
 					'input_type'  => 'url',
 					'default'     => '',
 				]
-			);		
+			);
 
 			$this->add_control(
 				'html_tag',[
@@ -230,42 +230,42 @@ class Widget_HighlightedHeading extends Widget_Base {
 		$after_text  = isset($settings['after_text']) ? $settings['after_text'] : '';
 		$hl_text     = isset($settings['highlighted_text']) ? $settings['highlighted_text'] : '';
 		$hl_image    = (isset($settings['highlighted_image']) && !empty($settings['highlighted_image'])) ? $settings['highlighted_image']['url'] : '';
-		$animation   = (isset($settings['show_animation'] ) && $settings['show_animation'] == 'yes') ? 'animationed' : ''; 
+		$animation   = (isset($settings['show_animation'] ) && $settings['show_animation'] == 'yes') ? 'animationed' : '';
 	?>
-	
+
 		<div class="bt-elwg-highlighted-heading <?php echo $animation ?>">
 			<?php echo "<$html_tag>"; ?>
-	
+
 			<?php if (!empty($link)): ?>
 				<a href="<?php echo esc_url($link); ?>">
 					<?php echo !empty($before_text) ? $before_text : ''; ?>
-	
+
 					<?php if (!empty($hl_text)): ?>
 						<span class="__text-highlighted">
 							<?php echo $hl_text; ?>
 							<img src='<?php echo esc_url($hl_image)?>' alt="img" />
 						</span>
 					<?php endif; ?>
-	
+
 					<?php echo !empty($after_text) ? $after_text : ''; ?>
 				</a>
 			<?php else: ?>
 				<?php echo !empty($before_text) ? $before_text : ''; ?>
-	
+
 				<?php if (!empty($hl_text)): ?>
 					<span class="__text-highlighted">
 						<?php echo $hl_text; ?>
 						<img src='<?php echo esc_url($hl_image)?>' alt="img" />
 					</span>
 				<?php endif; ?>
-	
+
 				<?php echo !empty($after_text) ? $after_text : ''; ?>
 			<?php endif; ?>
-	
+
 			<?php echo "</$html_tag>"; ?>
 		</div>
 	<?php
-	}	
+	}
 
 	protected function content_template() {
 

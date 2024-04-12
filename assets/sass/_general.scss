@@ -142,8 +142,9 @@
   display: inline-block;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
+  text-align: center;
   color: #FFFFFF;
   background: $color-accent;
   padding: 16px 35px;
@@ -253,20 +254,40 @@
   .bt-sub-text {
     color: $color-accent;
     font-family: $primary-font;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 150%;
-    text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .bt-main-text {
-    font-size: 40px;
+    position: relative;
+    font-size: 60px;
     text-transform: capitalize;
     margin: 0;
+    z-index: 1;
     span {
+      position: relative;
+      display: inline-block;
       font-family: $secondary-font;
       color: $color-accent;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -20%;
+        width: 140%;
+        height: 100%;
+        background-image: url('../images/text-highlighted-bg.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+      }
     }
+  }
+  .bt-head-text {
+    font-size: 20px;
+    max-width: 640px;
+    margin: 10px auto 0;
   }
   @media(max-width: $break-xs) {
     .bt-sub-text {
@@ -277,6 +298,7 @@
     }
   }
 }
+
 .__bt-block-heading-style {
   position: relative;
   font-size: 24px;

@@ -355,25 +355,21 @@
         content: "";
         display: inline-block;
         position: absolute;
-        width: 50px;
-        height: 107px;
         top: 0px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        mix-blend-mode: none;
-        border-radius: 0;
-        border: none;
-      }
-      
-      &::before{
-        background-image: url(../images/image-graphic-before-header.png);
         left: -50px;
+        width: 70px;
+        height: 107px;
+        border: none;
+        background: #FFF;
+        border-radius: 20px 0 0 20px;
+        transform: skewX(-15deg);
       }
-  
+
       &::after{
-        background-image: url(../images/image-graphic-after-header.png);
-        right:-50px;
+        left: auto;
+        right: -50px;
+        border-radius: 0 20px 20px 0;
+        transform: skewX(15deg);
       }
     }
 
@@ -414,7 +410,7 @@
       }
     }
   }
-  
+
   &.bt-header-top-bar-style-1{
     > .e-con-inner{
       @media(min-width: 1025px) and (max-width: 1199.98px) {
