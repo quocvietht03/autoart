@@ -168,7 +168,7 @@ class Widget_HighlightedHeading extends Widget_Base {
 
 			$this->add_control(
 				'highlighted_text_color',[
-					'label' => __( 'Color Highlighted Text', 'autoart' ),
+					'label' => __( 'Color', 'autoart' ),
 					'type' => Controls_Manager::COLOR,
 					'default' => '#1FBECD',
 					'selectors' => [
