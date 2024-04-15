@@ -5779,7 +5779,8 @@ body {
       height: 100%;
       position: absolute;
       top: 50%;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      background-color: var(--e-global-color-secondary, #111); }
   @media (min-width: 768px) and (max-width: 1024.98px) {
     .bt-elwg-site-infor.separator-tb-hide .bt-elwg-site-infor--item:not(:last-child)::before {
       content: none !important; } }
@@ -6647,7 +6648,7 @@ body {
         list-style-type: none;
         position: relative; }
         .bt-elwg-account-login-inner ul li a, .bt-elwg-account-login-inner ul li span {
-          color: #fff;
+          color: var(--e-global-color-primary, #222);
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
@@ -6657,7 +6658,7 @@ body {
           display: inline-block;
           width: 2px;
           height: 50%;
-          background-color: #fff;
+          background-color: var(--e-global-color-primary, #222);
           position: absolute;
           left: -10px;
           top: 50%;
@@ -6670,7 +6671,8 @@ body {
   .bt-elwg-highlighted-heading h1, .bt-elwg-highlighted-heading h2, .bt-elwg-highlighted-heading h3, .bt-elwg-highlighted-heading h4, .bt-elwg-highlighted-heading h5, .bt-elwg-highlighted-heading h6 {
     width: 100%;
     max-width: fit-content;
-    z-index: 9; }
+    z-index: 9;
+    color: var(--e-global-color-primary, #222); }
     .bt-elwg-highlighted-heading h1 a, .bt-elwg-highlighted-heading h1 span, .bt-elwg-highlighted-heading h2 a, .bt-elwg-highlighted-heading h2 span, .bt-elwg-highlighted-heading h3 a, .bt-elwg-highlighted-heading h3 span, .bt-elwg-highlighted-heading h4 a, .bt-elwg-highlighted-heading h4 span, .bt-elwg-highlighted-heading h5 a, .bt-elwg-highlighted-heading h5 span, .bt-elwg-highlighted-heading h6 a, .bt-elwg-highlighted-heading h6 span {
       font-family: inherit;
       font-size: inherit;
@@ -6682,7 +6684,8 @@ body {
     .bt-elwg-highlighted-heading h1 .bt-small, .bt-elwg-highlighted-heading h2 .bt-small, .bt-elwg-highlighted-heading h3 .bt-small, .bt-elwg-highlighted-heading h4 .bt-small, .bt-elwg-highlighted-heading h5 .bt-small, .bt-elwg-highlighted-heading h6 .bt-small {
       font-size: 72%; }
   .bt-elwg-highlighted-heading .__text-highlighted {
-    position: relative; }
+    position: relative;
+    color: var(--e-global-color-accent, #1FBECD); }
     .bt-elwg-highlighted-heading .__text-highlighted img {
       position: absolute;
       min-width: calc(100% + 70%);
