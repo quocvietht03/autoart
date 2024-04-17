@@ -97,7 +97,7 @@ class Widget_AccountLogin extends Widget_Base {
 				[
 					'label' => __( 'Color', 'autoart' ),
 					'type' => Controls_Manager::COLOR,
-					'default' => '#222',
+					'default' => '',
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-account-login-inner ul li a' => 'color: {{VALUE}};',
 						'{{WRAPPER}} .bt-elwg-account-login-inner ul li span' => 'color: {{VALUE}};',

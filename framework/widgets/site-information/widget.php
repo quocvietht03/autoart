@@ -214,7 +214,7 @@ class Widget_SiteInformation extends Widget_Base {
 			'separator_color',[
 				'label' => __( 'Color', 'autoart' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '#000',
+				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-elwg-site-infor--item:not(:last-child)::before' => 'background-color: {{VALUE}};',
 				],

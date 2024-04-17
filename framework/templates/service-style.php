@@ -30,9 +30,10 @@
       <?php echo autoart_post_title_render(); ?>
       
       <?php if($args['layout'] != 'style-1'): ?>
-        <?php echo autoart_post_content_render() ?>
+        <div class="bt-post--excerpt">
+          <?php echo get_the_excerpt(); ?>
+        </div>
       <?php endif;?>
-
 
       <?php if($args['layout'] == 'style-1' && isset($desc) && !empty($desc)): ?>
           <p class="bt-post--desc"> <?php echo $desc ?> </p>

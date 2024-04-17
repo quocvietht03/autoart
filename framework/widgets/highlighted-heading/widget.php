@@ -138,7 +138,7 @@ class Widget_HighlightedHeading extends Widget_Base {
 				'text_color',[
 					'label' => __( 'Color', 'autoart' ),
 					'type' => Controls_Manager::COLOR,
-					'default' => '#222',
+					'default' => '',
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-highlighted-heading h1' => 'color: {{VALUE}};',
 						'{{WRAPPER}} .bt-elwg-highlighted-heading h2' => 'color: {{VALUE}};',
@@ -170,7 +170,7 @@ class Widget_HighlightedHeading extends Widget_Base {
 				'highlighted_text_color',[
 					'label' => __( 'Color', 'autoart' ),
 					'type' => Controls_Manager::COLOR,
-					'default' => '#1FBECD',
+					'default' => '',
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-highlighted-heading .__text-highlighted' => 'color: {{VALUE}};'
 					],

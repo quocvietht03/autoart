@@ -107,6 +107,53 @@
     }
   } 
 
+  &.bt-footer-style-3{
+    > .e-con-inner{
+      > .elementor-element{
+        &:last-child{
+          .elementor-element{
+            &:first-child{
+              @media (min-width: 1025px) and (max-width: 1279.98px) { 
+                gap: 20px;
+              }
+
+              .bt-elwg-site-copyright {
+                @media (min-width: 1025px) and (max-width: 1279.98px) { 
+                  font-size: 17px;
+                }
+              }
+            }
+
+            .elementor-nav-menu--layout-horizontal .elementor-nav-menu>li{
+              > a{
+                @media (min-width: 1025px) and (max-width: 1279.98px) { 
+                  font-size: 17px;
+                }
+              }
+
+              &:not(:last-child){
+                > a{
+                  @media (min-width: 1025px) and (max-width: 1199.98px) { 
+                    margin-inline-end: calc(var(--e-nav-menu-horizontal-menu-item-margin) / 2);
+                  }
+                }
+              }
+
+              &:not(:first-child){
+                > a{
+                  @media (min-width: 1025px) and (max-width: 1199.98px) { 
+                    margin-inline-start:calc(var(--e-nav-menu-horizontal-menu-item-margin) / 2);
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+  
   &.bt-newsletter-footer-style-3{
     .elementor-widget-shortcode{
       .tnp-subscription-minimal {
