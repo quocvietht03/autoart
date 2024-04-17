@@ -1,6 +1,10 @@
 <?php 
   $icon = get_field('icon'); 
   $desc = get_field('description_service');
+
+  // echo "<pre>";
+  // echo print_r($icon);
+  // echo "</pre>";
 ?>
 
 <article <?php post_class('bt-post'); ?>>
@@ -8,7 +12,11 @@
       <?php if(!empty($icon) && isset($icon)): ?>
         <div class="bt-post--icon"> 
           <div class="bt-post--icon-inner"> 
-            <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['title']); ?>" />
+            <?php if($icon['subtype'] == 'svg+xml'){
+              echo file_get_contents( $icon['url'] );
+            }else{ ?>
+              <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['title']); ?>" />
+            <?php }?>
           </div>
 
           <div class="bt-post--icon-bg"> 

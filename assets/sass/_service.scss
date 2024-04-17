@@ -34,17 +34,13 @@
       text-align: center;
       display: flex;
       justify-content: center;
-      // &-inner{
-      //   z-index: 99;
-      //   display: flex;
-      //   justify-content: center;
-      //   align-items: center;
-      //   position: absolute;
-      // }
-
-      // &-bg{
-      //   position: absolute;
-      // }
+      &-inner{
+        svg{
+          path{
+            fill:$color-accent;
+          }
+        }
+      }
     }
 
     &--title {
