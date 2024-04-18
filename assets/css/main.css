@@ -6750,6 +6750,10 @@ body {
 .elementor-widget-button .elementor-button-icon svg {
   width: fit-content; }
 
+.elementor-widget-image-box .elementor-image-box-description a {
+  font-weight: 700;
+  text-decoration: underline; }
+
 @media (min-width: 1200px) and (max-width: 1439.98px) {
   .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h3, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h4, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h5, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h6 {
     font-size: 55px; } }
