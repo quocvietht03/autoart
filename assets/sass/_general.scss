@@ -62,19 +62,23 @@
   }
 }
 
+.bt-image-absolute{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  margin: 0;
+}
+
 .bt-cover-image {
   position: relative;
   overflow: hidden;
   background: #CDCDCD;
   padding-bottom: 66.66%;
   img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    margin: 0;
+    @extend .bt-image-absolute;
   }
 }
 
@@ -84,12 +88,7 @@
   background: #CDCDCD;
   padding-bottom: 46.5%;
   iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0;
+    @extend .bt-image-absolute;
   }
 }
 

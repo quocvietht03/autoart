@@ -632,32 +632,26 @@ img.alignright {
 .bt-fl-no-mg > *:last-child {
   margin-bottom: 0 !important; }
 
+.bt-image-absolute, .bt-cover-image img, .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image img, .bt-cover-iframe iframe, .bt-elwg-card-image-text-grid-inner .item-card-image-text--thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  margin: 0; }
+
 .bt-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image {
   position: relative;
   overflow: hidden;
   background: #CDCDCD;
   padding-bottom: 66.66%; }
-  .bt-cover-image img, .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    margin: 0; }
 
 .bt-cover-iframe {
   position: relative;
   overflow: hidden;
   background: #CDCDCD;
   padding-bottom: 46.5%; }
-  .bt-cover-iframe iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0; }
 
 .bt-ab-center, .woocommerce .woocommerce-loop-product__thumbnail .button,
 .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart {
@@ -6751,6 +6745,67 @@ body {
   transition: all .3s; }
 .bt-elwg-list-image-text--style-2 .bt-elwg-list-image-text-inner .item-image-text-inner {
   gap: 13px; }
+
+.bt-elwg-card-image-text-grid-inner {
+  display: grid; }
+  @media (min-width: 641px) and (max-width: 767.98px) {
+    .bt-elwg-card-image-text-grid-inner {
+      grid-template-columns: repeat(2, 1fr) !important; } }
+  .bt-elwg-card-image-text-grid-inner .item-card-image-text {
+    position: relative; }
+    .bt-elwg-card-image-text-grid-inner .item-card-image-text:hover .item-card-image-text--thumbnail img {
+      transform: scale(1.1); }
+    .bt-elwg-card-image-text-grid-inner .item-card-image-text-inner {
+      position: relative;
+      overflow: hidden; }
+    .bt-elwg-card-image-text-grid-inner .item-card-image-text--thumbnail {
+      width: 100%;
+      height: auto; }
+      .bt-elwg-card-image-text-grid-inner .item-card-image-text--thumbnail img {
+        object-position: center;
+        transition: all 0.25s ease-in-out; }
+    .bt-elwg-card-image-text-grid-inner .item-card-image-text--content {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      left: 0;
+      bottom: 16px;
+      background: rgba(31, 190, 205, 0.5);
+      text-align: center; }
+      .bt-elwg-card-image-text-grid-inner .item-card-image-text--content h3 {
+        color: #fff;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase; }
+      .bt-elwg-card-image-text-grid-inner .item-card-image-text--content a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 9; }
+.bt-elwg-card-image-text-grid.--style-1 .bt-elwg-card-image-text-grid-inner {
+  padding-top: 60px; }
+  @media (max-width: 1023.98px) {
+    .bt-elwg-card-image-text-grid.--style-1 .bt-elwg-card-image-text-grid-inner {
+      padding-top: 48px; } }
+  @media (max-width: 640.98px) {
+    .bt-elwg-card-image-text-grid.--style-1 .bt-elwg-card-image-text-grid-inner {
+      padding-top: 0; } }
+  .bt-elwg-card-image-text-grid.--style-1 .bt-elwg-card-image-text-grid-inner .item-card-image-text:nth-child(odd) {
+    margin-top: -60px; }
+    @media (max-width: 1023.98px) {
+      .bt-elwg-card-image-text-grid.--style-1 .bt-elwg-card-image-text-grid-inner .item-card-image-text:nth-child(odd) {
+        margin-top: -48px; } }
+    @media (max-width: 640.98px) {
+      .bt-elwg-card-image-text-grid.--style-1 .bt-elwg-card-image-text-grid-inner .item-card-image-text:nth-child(odd) {
+        margin-top: 0; } }
+  .bt-elwg-card-image-text-grid.--style-1 .bt-elwg-card-image-text-grid-inner .item-card-image-text--content {
+    bottom: 0;
+    background-color: var(--e-global-color-accent, #1FBECD); }
+    .bt-elwg-card-image-text-grid.--style-1 .bt-elwg-card-image-text-grid-inner .item-card-image-text--content h3 {
+      font-size: 20px; }
 
 .elementor-widget-button .elementor-button-icon svg {
   width: fit-content; }

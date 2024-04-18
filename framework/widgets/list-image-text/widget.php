@@ -154,7 +154,7 @@ class Widget_ListImageText extends Widget_Base {
 						'6' => '6',
 					],
 					'selectors' => [
-						'{WRAPPER} .bt-elwg-list-image-text-inner' => 'grid-template-columns: repeat({{VALUE}}, 1fr)',
+						'{{WRAPPER}} .bt-elwg-list-image-text-inner' => 'grid-template-columns: repeat({{VALUE}}, 1fr)',
 					],
 				]
 			);
