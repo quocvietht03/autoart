@@ -4125,6 +4125,8 @@ body {
   text-align: center;
   display: flex;
   justify-content: center; }
+  .__bt-service-style-default .bt-post--icon-inner svg path, .single-service .bt-related-posts-ss--list .bt-post--icon-inner svg path, .bt-elwg-service-loop-item--default .bt-post--icon-inner svg path, .bt-elwg-service-loop-item--style-1 .bt-post--icon-inner svg path, .bt-elwg-service-loop-item--style-2 .bt-post--icon-inner svg path {
+    fill: var(--e-global-color-accent, #1FBECD); }
 .__bt-service-style-default .bt-post--title, .single-service .bt-related-posts-ss--list .bt-post--title, .bt-elwg-service-loop-item--default .bt-post--title, .bt-elwg-service-loop-item--style-1 .bt-post--title, .bt-elwg-service-loop-item--style-2 .bt-post--title {
   font-size: 22px;
   font-style: normal;
@@ -6555,7 +6557,7 @@ body {
   transform: translateY(-10px); }
 .bt-elwg-service-loop-item--default .bt-post--icon-bg {
   display: none; }
-.bt-elwg-service-loop-item--default .bt-post--icon img {
+.bt-elwg-service-loop-item--default .bt-post--icon img, .bt-elwg-service-loop-item--default .bt-post--icon svg {
   width: auto;
   height: 100%;
   max-height: 85px; }
@@ -6591,11 +6593,13 @@ body {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .bt-elwg-service-loop-item--style-1 .bt-post--icon-inner img {
+      .bt-elwg-service-loop-item--style-1 .bt-post--icon-inner img, .bt-elwg-service-loop-item--style-1 .bt-post--icon-inner svg {
         width: auto;
         height: 100%;
         max-height: 44px;
         filter: brightness(0) invert(1); }
+      .bt-elwg-service-loop-item--style-1 .bt-post--icon-inner svg path {
+        fill: #fff; }
     .bt-elwg-service-loop-item--style-1 .bt-post--icon-bg {
       position: absolute;
       left: 50%;
@@ -6613,10 +6617,9 @@ body {
   width: 109px;
   height: 90px;
   position: relative; }
-  .bt-elwg-service-loop-item--style-2 .bt-post--icon img {
+  .bt-elwg-service-loop-item--style-2 .bt-post--icon img, .bt-elwg-service-loop-item--style-2 .bt-post--icon svg {
     width: 100%;
-    height: auto;
-    max-width: 50px; }
+    height: auto; }
   .bt-elwg-service-loop-item--style-2 .bt-post--icon-inner {
     position: absolute;
     left: 0;
@@ -6627,6 +6630,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .bt-elwg-service-loop-item--style-2 .bt-post--icon-inner svg {
+      max-width: 50px; }
   .bt-elwg-service-loop-item--style-2 .bt-post--icon-bg {
     position: absolute;
     left: 0;

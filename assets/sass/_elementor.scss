@@ -1403,7 +1403,7 @@
       }
 
       &--icon{
-        img{
+        img, svg{
           width: auto;
           height: 100%;
           max-height: 85px;
@@ -1460,11 +1460,17 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          img{
+          img, svg{
             width: auto;
             height: 100%;
             max-height: 44px;
             filter: brightness(0) invert(1);
+          }
+
+          svg{
+            path{
+              fill: #fff;
+            }
           }
         }
 
@@ -1505,10 +1511,9 @@
         height: 90px;
         position: relative;
 
-        img{
+        img, svg{
           width: 100%;
           height: auto;
-          max-width: 50px;
         }
         
         &-inner{
@@ -1521,6 +1526,9 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          svg{
+            max-width: 50px;
+          }
         }
 
         &-bg{
@@ -1749,5 +1757,16 @@
 .elementor-widget-button{
   .elementor-button-icon svg{
     width: fit-content;
+  }
+}
+
+.elementor-widget-image-box{
+  .elementor-image-box{
+    &-description{
+      a{
+        font-weight: 700;
+        text-decoration:underline;
+      }
+    }
   }
 }
