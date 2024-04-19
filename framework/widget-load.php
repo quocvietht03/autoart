@@ -76,6 +76,7 @@ class ElementorWidgets {
 			'account-login',
 			'highlighted-heading',
 			'list-image-text',
+			'card-image-text-grid',
 		);
 
 		return $this->widgets;
@@ -200,6 +201,7 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\HighlightedHeading\Widget_HighlightedHeading());
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListImageText\Widget_ListImageText());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CardImageTextGrid\Widget_CardImageTextGrid());
 
 	}
 
