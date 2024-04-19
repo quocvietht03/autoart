@@ -11,12 +11,12 @@ $layout = !empty($layout) ? $layout : 'style1';
 
 ?>
 <main id="bt_main" class="bt-site-main">
-	<div class="bt-main-content-ss">
+	<div class="bt-main-content-ss <?php echo 'bt-layout-' . $layout; ?>">
     <div class="bt-container">
 	    <?php
         while ( have_posts() ) : the_post();
           get_template_part( 'framework/templates/car-single', $layout);
-        endwhile; 
+        endwhile;
       ?>
     </div>
 	</div>

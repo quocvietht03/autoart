@@ -35,7 +35,7 @@ if(!empty($color_term)) {
 }
 
 ?>
-<article <?php post_class('bt-post bt-post--style-1'); ?>>
+<article <?php post_class('bt-post'); ?>>
   <div class="bt-post--main">
     <h3 class="bt-post--title">
       <?php the_title(); ?>
@@ -524,7 +524,7 @@ if(!empty($color_term)) {
                     </a>
                   <?php } ?>
 
-                  <a class="bt-view-all-link" href="#">
+                  <a class="bt-view-all-link" href="<?php echo esc_url('/cars?car_dealer=' . $dealer); ?>">
                     <?php echo esc_html__('View All stock at this dealer', 'autoart'); ?>
                   </a>
                 </div>
@@ -534,27 +534,38 @@ if(!empty($color_term)) {
         ?>
       </div>
 
-      <div class="bt-sidebar-block bt-safety-block">
-        <div class="bt-safety-title">
-          <h3>Safety Tips For Transaction:</h3>
-        </div>
+      <?php
+        $safety_tips = get_field('car_safety_tips', 'options');
 
-        <div class="bt-safety-content">
-          <ul>
-            <li>Use a safe location to meet seller</li>
-            <li>Avoid cash transactions</li>
-            <li>Beware of unrealistic offers</li>
-          </ul>
-        </div>
-        <div class="bt-safety-view-detail">
-          <a class="bt-view-detail-btn" href="#">
-            <span>View Details</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-      </div>
+        if(!empty($safety_tips) && (!empty($safety_tips['heading']) || !empty($safety_tips['content']) || !empty($safety_tips['link']))) {
+          ?>
+            <div class="bt-sidebar-block bt-safety-block">
+              <?php if(!empty($safety_tips['heading'])) { ?>
+                <div class="bt-safety-title">
+                  <?php echo '<h3>' . $safety_tips['heading'] . '</h3>'; ?>
+                </div>
+              <?php } ?>
+
+              <?php
+                if(!empty($safety_tips['content'])) {
+                  echo '<div class="bt-safety-content">' . $safety_tips['content'] . '</div>';
+                }
+              ?>
+
+              <?php if(!empty($safety_tips['link'])) { ?>
+                <div class="bt-safety-view-detail">
+                  <a class="bt-view-detail-btn" href="<?php echo esc_url($safety_tips['link']['url']); ?>" target="<?php echo esc_attr($safety_tips['link']['target']); ?>">
+                    <?php echo '<span>' . $safety_tips['link']['title'] . '</span>'; ?>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+              <?php } ?>
+            </div>
+          <?php
+        }
+      ?>
     </div>
   </div>
 </article>

@@ -10,6 +10,9 @@
       <!--View current page-->
       <input type="hidden" class="bt-car-current-page" name="current_page" value="<?php echo isset($_GET['current_page']) ? $_GET['current_page'] : ''; ?>">
 
+      <!--Car Dealer-->
+      <input type="hidden" class="bt-car-dealer" name="car_dealer" value="<?php if(isset($_GET['car_dealer'])) echo $_GET['car_dealer']; ?>">
+
       <div class="bt-form-field bt-field-type-search">
         <input type="text" name="search_keyword" value="<?php if(isset($_GET['search_keyword'])) echo $_GET['search_keyword']; ?>" placeholder="<?php esc_html_e('Search …', 'autoart'); ?>">
         <a href="#">
