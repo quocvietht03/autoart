@@ -1,6 +1,6 @@
 .bt-site-titlebar {
   position: relative;
-  background-color: #1B1A27;
+  background-color: $color-secondary;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,7 +18,7 @@
   }
   .bt-page-title {
     position: relative;
-    font-size: 48px;
+    font-size: 50px;
     color: #FFF;
     word-break: break-word;
     margin: 0;
@@ -26,7 +26,7 @@
   }
   .bt-page-breadcrumb {
     position: relative;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 150%;
     color: #FFF;
     word-break: break-word;
@@ -38,9 +38,14 @@
       margin-right: 4px;
     }
   }
+  @media(max-width: $break-lg) {
+    .bt-page-title {
+      font-size: 46px;
+    }
+  }
   @media(max-width: $break-md) {
     .bt-page-title {
-      font-size: 42px;
+      font-size: 40px;
     }
   }
   @media(max-width: $break-sm) {
@@ -50,6 +55,14 @@
     }
     .bt-page-title {
       font-size: 36px;
+    }
+    .bt-page-breadcrumb {
+      font-size: 16px;
+    }
+  }
+  @media(max-width: $break-sm) {
+    .bt-page-title {
+      font-size: 32px;
     }
   }
 }

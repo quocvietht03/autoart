@@ -40,19 +40,16 @@ if (!function_exists('autoart_enqueue_scripts')) {
 	function autoart_enqueue_scripts() {
 		global $autoart_options;
 
-		if(is_singular('product')) {
+		if(is_singular('car') || is_singular('product')) {
 			wp_enqueue_script('slick-slider', get_template_directory_uri().'/assets/libs/slick/slick.min.js', array('jquery'), '', true);
 			wp_enqueue_style('slick-slider', get_template_directory_uri(). '/assets/libs/slick/slick.css',array(), false);
 
 			wp_enqueue_script('zoom-master', get_template_directory_uri().'/assets/libs/zoom-master/jquery.zoom.min.js', array('jquery'), '', true);
 		}
 
-		wp_enqueue_script('select2', get_template_directory_uri().'/assets/libs/nouislider/select2.min.js', array('jquery'), '', true);
-		wp_enqueue_style('select2', get_template_directory_uri(). '/assets/libs/nouislider/select2.min.css',array(), false);
-
-		wp_enqueue_script('nouislider', get_template_directory_uri().'/assets/libs/nouislider/nouislider.min.js', array('jquery'), '', true);
-		wp_enqueue_style('nouislider', get_template_directory_uri(). '/assets/libs/nouislider/nouislider.min.css',array(), false);
-
+		wp_enqueue_script('select2', get_template_directory_uri().'/assets/libs/select2/select2.min.js', array('jquery'), '', true);
+		wp_enqueue_style('select2', get_template_directory_uri(). '/assets/libs/select2/select2.min.css',array(), false);
+		
 		/* Fonts */
 		wp_enqueue_style( 'autoart-fonts', autoart_fonts_url(), false );
 		wp_enqueue_style( 'autoart-main', get_template_directory_uri().'/assets/css/main.css',  array(), false );
@@ -170,5 +167,5 @@ if(function_exists('get_field')){
 		return $classes;
 	}
 	add_filter('body_class', 'autoart_body_class');
-	
+
 }

@@ -60,11 +60,43 @@
 
 	/* Tabs */
 	function AutoArtTabs() {
-		$('.bt-tabs-js .bt-nav-item').on('click', function(e) {
-			e.preventDefault();
-			$(this).addClass('bt-is-active').siblings().removeClass('bt-is-active');
-			$($.attr(this, 'href')).addClass('bt-is-active').siblings().removeClass('bt-is-active');
-		});
+		if($('.bt-tabs-js').length > 0) {
+			$('.bt-tabs-js .bt-nav-item').on('click', function(e) {
+				e.preventDefault();
+				$(this).addClass('bt-is-active').siblings().removeClass('bt-is-active');
+				$($.attr(this, 'href')).addClass('bt-is-active').siblings().removeClass('bt-is-active');
+			});
+		}
+	}
+
+	/* Gallery Slider */
+	function AutoArtGallerSlider() {
+		if($('.js-gallery-slider').length > 0) {
+			$('.js-gallery-slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				arrows: false,
+				asNavFor: '.js-gallery-slider-nav',
+				prevArrow: '<button type=\"button\" class=\"slick-prev\">Prev</button>',
+				nextArrow: '<button type=\"button\" class=\"slick-next\">Next</button>'
+			});
+			$('.js-gallery-slider-nav').slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				arrows: false,
+				focusOnSelect: true,
+				asNavFor: '.js-gallery-slider-for',
+				responsive: [
+			    {
+			      breakpoint: 600,
+			      settings: {
+			        slidesToShow: 3
+			      }
+			    }
+			  ]
+			});
+		}
 	}
 
 	/* Close section */
@@ -530,6 +562,7 @@
     AutoArtToggleSubMenuMobile();
 		AutoArtTabs();
 		AutoArtCloseSection();
+		AutoArtGallerSlider();
 		AutoArtCarWishlist();
 		AutoArtCarCompare();
 		AutoArtCarSidebarToggle();

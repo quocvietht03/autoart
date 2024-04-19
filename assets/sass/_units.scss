@@ -12,7 +12,7 @@ html :where(.editor-styles-wrapper) {
   font-weight: 400;
   line-height: 167%;
   color: $color-text;
-  @media(max-width: $break-xs) {
+  @media(max-width: $break-lg) {
     font-size: 16px;
   }
 }

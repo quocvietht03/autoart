@@ -552,6 +552,7 @@
 
 .__bt-single-car-style-1 {
   .bt-post {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -582,6 +583,7 @@
     }
     &--meta {
       display: flex;
+      flex-wrap: wrap;
       background: #FFFFFF;
       overflow: hidden;
       margin-bottom: 50px;
@@ -589,19 +591,22 @@
       border-radius: 10px;
     }
     &--meta-col {
-      width: 33.33%;
-      padding: 18px 30px;
+      width: 25%;
       &:not(:last-child) {
+        width: calc(25% - 1px);
         border-right: 1px solid #DADADA;
       }
     }
     &--meta-item {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      font-size: 16px;
-      line-height: 150%;
-      padding-left: 32px;
+      padding: 18px 30px;
+      .bt-meta-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        line-height: 150%;
+        padding-left: 32px;
+      }
       svg {
         position: absolute;
         top: 5px;
@@ -613,6 +618,29 @@
       .bt-label {
         font-size: 14px;
         color: #848484;
+      }
+    }
+    &--gallery {
+      line-height: 0;
+      margin-bottom: 72px;
+      .bt-gallery-slider {
+        margin: 0 -10px;
+        &.bt-slider-nav {
+          margin-top: 20px;
+          .bt-slider-item {
+            .bt-cover-image {
+              cursor: pointer;
+              padding-bottom: 78%;
+            }
+          }
+        }
+        .bt-slider-item {
+          padding: 0 10px;
+          .bt-cover-image {
+            border-radius: 20px;
+          }
+        }
+
       }
     }
     &--thumbnail {
@@ -915,30 +943,106 @@
         }
       }
     }
+
+    @media(max-width: $break-lg) {
+      &--meta-item {
+        padding: 15px 20px;
+      }
+    }
+
+    @media(max-width: $break-md) {
+      &--main,
+      &--sidebar {
+        width: 100%;
+      }
+    }
+
+    @media(max-width: $break-sm) {
+      &--title {
+        font-size: 28px;
+      }
+      &--location {
+        font-size: 18px;
+      }
+      &--meta-col {
+        width: 50%;
+        &:first-child {
+          border-bottom: 1px solid #D9D9D9;
+        }
+        &:nth-child(2) {
+          width: 50%;
+          border-right: none;
+          border-bottom: 1px solid #D9D9D9;
+        }
+        &:not(:last-child, :nth-child(2)) {
+          width: calc(50% - 1px);
+        }
+      }
+      &--section {
+        .bt-meta-list .bt-meta-item,
+        .bt-feature-list .bt-feature-item {
+          width: calc(100% - 36px);
+        }
+        .bt-location-title {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    @media(max-width: $break-xs) {
+      &--title {
+        font-size: 24px;
+      }
+      &--location {
+        font-size: 16px;
+      }
+      .bt-sidebar-wrap .bt-sidebar-block {
+        &.bt-sale-block {
+          .bt-sale-car,
+          .bt-sale-dealer {
+            padding: 30px 15px;
+          }
+        }
+        &.bt-safety-block .bt-safety-content {
+          padding: 25px 15px;
+        }
+      }
+    }
+
+    @media(max-width: 420px) {
+      &--meta-col {
+        width: 100% !important;
+        border-right: none !important;
+        &:not(:last-child) {
+          border-bottom: 1px solid #D9D9D9 !important;
+        }
+      }
+    }
   }
 }
 
 .__bt-single-car-style-2 {
   .bt-post {
-
+    position: relative;
   }
 }
 
 .__bt-single-car-style-3 {
   .bt-post {
-
+    position: relative;
   }
 }
 
 .single-car {
   .bt-main-content-ss {
-    .bt-layout-style1 {
+    &.bt-layout-style1 {
       @extend .__bt-single-car-style-1;
     }
-    .bt-layout-style2 {
+    &.bt-layout-style2 {
       @extend .__bt-single-car-style-2;
     }
-    .bt-layout-style3 {
+    &.bt-layout-style3 {
       @extend .__bt-single-car-style-3;
     }
   }
@@ -964,6 +1068,22 @@
         text-decoration: underline;
         text-underline-offset: 3px;
         color: $color-accent;
+      }
+    }
+
+    @media(max-width: $break-md) {
+      &--list {
+        .bt-post {
+          width: calc(50% - 15px);
+        }
+      }
+    }
+
+    @media(max-width: $break-sm) {
+      &--list {
+        .bt-post {
+          width: 100%;
+        }
       }
     }
   }
