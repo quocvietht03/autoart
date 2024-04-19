@@ -45,8 +45,9 @@ class Widget_ListImageText extends Widget_Base {
 
 		$repeater->add_control(
 			'lit_image', [
-				'label' => __( 'Image', 'autoart' ),
-				'type' => Controls_Manager::MEDIA,
+				'label'   => __( 'Image', 'autoart' ),
+				'type'    => Controls_Manager::MEDIA,
+				'media_types' => [ 'svg', 'image' ],
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
 				],
@@ -55,10 +56,10 @@ class Widget_ListImageText extends Widget_Base {
 
 		$repeater->add_control(
 			'lit_text', [
-				'label' => __( 'Text', 'autoart' ),
-				'type' => Controls_Manager::TEXT,
+				'label'       => __( 'Text', 'autoart' ),
+				'type'        => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => '',
+				'default'     => 'This is text',
 			]
 		);
 
@@ -324,6 +325,7 @@ class Widget_ListImageText extends Widget_Base {
 					],
 					'selectors' => [
 						'{{WRAPPER}} .item-image-text--thumbnail img' => 'width: {{SIZE}}{{UNIT}}',
+						'{{WRAPPER}} .item-image-text--thumbnail svg' => 'max-width: {{SIZE}}{{UNIT}}',
 					],
 				]
 			);
@@ -394,16 +396,19 @@ class Widget_ListImageText extends Widget_Base {
 				<?php foreach ( $settings['list'] as $index => $item ): ?>
 					<?php 
 						$attachment = wp_get_attachment_image_src( $item['lit_image']['id'], $settings['thumbnail_size'] ); 
-						$delay      = ($index + 1) * 100;
-						$animation  = 'fadeInUp';
+						$path_info = pathinfo($item['lit_image']['url']);
 					?>
 					<div class="item-image-text"> 
-						<div class="item-image-text-inner" data-settings='<?php echo json_encode(["_animation" => $animation, "_animation_delay" => $delay]); ?>'>
+						<div class="item-image-text-inner">
 							<div class="item-image-text--thumbnail">
 								<?php if( !empty( $attachment ) ) {
-										echo '<img src=" ' . esc_url( $attachment[0] ) . ' " alt="">';
+									if (strtolower($path_info['extension']) === 'svg') {
+										echo file_get_contents( $item['lit_image']['url'] );
 									} else {
-										echo '<img src=" ' . esc_url( $item['lit_image']['url'] ) . ' " alt="">';
+										echo '<img src=" ' . esc_url( $attachment[0] ) . ' " alt="image">';
+									}
+								} else {
+									echo '<img src=" ' . esc_url( $item['lit_image']['url'] ) . ' " alt="image">';
 								} ?>
 							</div>
 

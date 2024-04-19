@@ -6712,6 +6712,10 @@ body {
     width: 100%;
     display: flex;
     justify-content: center; }
+    .bt-elwg-list-image-text-inner .item-image-text--thumbnail svg {
+      width: 100%;
+      height: auto;
+      max-width: 60px; }
   .bt-elwg-list-image-text-inner .item-image-text h3 {
     width: 100%;
     text-align: center;
@@ -6729,7 +6733,7 @@ body {
 .bt-elwg-list-image-text--default .item-image-text-inner:hover h3, .bt-elwg-list-image-text--style-2 .item-image-text-inner:hover h3 {
   transform: translateY(5px); }
 .bt-elwg-list-image-text--default .item-image-text--thumbnail, .bt-elwg-list-image-text--default .item-image-text h3, .bt-elwg-list-image-text--style-2 .item-image-text--thumbnail, .bt-elwg-list-image-text--style-2 .item-image-text h3 {
-  transition: all .3s; }
+  transition: all 0.25s ease-in-out; }
 .bt-elwg-list-image-text--default .bt-elwg-list-image-text-inner .item-image-text-inner {
   gap: 19px; }
 .bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text-inner {
@@ -6741,10 +6745,28 @@ body {
       font-weight: 400; }
   .elementor-widget-bt-list-image-text .bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text-inner:hover .item-image-text--thumbnail img {
     filter: brightness(0) invert(1); }
-.bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text--thumbnail img, .bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text-inner {
-  transition: all .3s; }
+  .bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text-inner:hover .item-image-text--thumbnail svg {
+    fill: #ffff; }
+    .bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text-inner:hover .item-image-text--thumbnail svg path {
+      fill: #fff; }
+    .bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text-inner:hover .item-image-text--thumbnail svg > g path {
+      stroke: #fff !important; }
+.bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text--thumbnail img, .bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text-inner, .bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text svg {
+  transition: all 0.25s ease-in-out; }
+.bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text--thumbnail svg {
+  fill: var(--e-global-color-accent, #1FBECD); }
+  .bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text--thumbnail svg path {
+    fill: var(--e-global-color-accent, #1FBECD); }
+  .bt-elwg-list-image-text--style-1 .bt-elwg-list-image-text-inner .item-image-text--thumbnail svg > g path {
+    stroke: var(--e-global-color-accent, #1FBECD) !important; }
 .bt-elwg-list-image-text--style-2 .bt-elwg-list-image-text-inner .item-image-text-inner {
   gap: 13px; }
+.bt-elwg-list-image-text--style-2 .bt-elwg-list-image-text-inner .item-image-text--thumbnail svg {
+  fill: var(--e-global-color-primary, #222); }
+  .bt-elwg-list-image-text--style-2 .bt-elwg-list-image-text-inner .item-image-text--thumbnail svg path {
+    fill: var(--e-global-color-primary, #222); }
+  .bt-elwg-list-image-text--style-2 .bt-elwg-list-image-text-inner .item-image-text--thumbnail svg > g path {
+    stroke: var(--e-global-color-primary, #222) !important; }
 
 .bt-elwg-card-image-text-grid-inner {
   display: grid; }

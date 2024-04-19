@@ -350,7 +350,7 @@ class Widget_CardImageTextGrid extends Widget_Base {
 								<?php if( !empty( $attachment ) ) {
 										echo '<img src=" ' . esc_url( $attachment[0] ) . ' " alt="">';
 									} else {
-										echo '<img src=" ' . esc_url( $item['citg_image']['url'] ) . ' " alt="">';
+										echo '<img src=" ' . esc_url( $item['citg_image']['url'] ) . ' " alt="image">';
 								} ?>
 							</div>
 
