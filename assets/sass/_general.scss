@@ -127,7 +127,15 @@
   &::after {
     animation-delay: 1s;
   }
+}
 
+.bt-tabs {
+  .bt-panel-item {
+    display: none;
+    &.bt-is-active {
+      display: block;
+    }
+  }
 }
 
 .__bt-max-line-ellipsis {
@@ -288,12 +296,38 @@
     max-width: 640px;
     margin: 10px auto 0;
   }
+  @media(max-width: $break-lg) { 
+    .bt-main-text {
+      font-size: 46px;
+    }
+  }
+  @media(max-width: $break-md) {
+    .bt-sub-text {
+      font-size: 18px;
+    }
+    .bt-main-text {
+      font-size: 40px;
+    }
+    .bt-head-text {
+      font-size: 18px;
+      max-width: 560px;
+    }
+  }
+  @media(max-width: $break-sm) {
+    .bt-main-text {
+      font-size: 36px;
+    }
+  }
   @media(max-width: $break-xs) {
     .bt-sub-text {
       font-size: 16px;
     }
     .bt-main-text {
       font-size: 32px;
+    }
+    .bt-head-text {
+      font-size: 16px;
+      max-width: 560px;
     }
   }
 }

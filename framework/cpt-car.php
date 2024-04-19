@@ -889,6 +889,17 @@ function autoart_cars_query_args($params = array(), $limit = 12) {
     );
   }
 
+	if(isset($params['car_dealer']) && $params['car_dealer'] != '') {
+    $query_meta['dealer_clause'] = array(
+  		array(
+  			'key'     => 'car_dealer',
+  			'value'   => absint($params['car_dealer']),
+  			'compare' => '=',
+        'type'    => 'numeric'
+  		)
+    );
+  }
+
   if(!empty($query_meta)) {
     $query_args['meta_query'] = $query_meta;
     $query_args['relation'] = 'AND';

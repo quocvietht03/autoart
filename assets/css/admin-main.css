@@ -200,6 +200,11 @@ html :where(.editor-styles-wrapper) {
   .bt-loading-wave::after {
     animation-delay: 1s; }
 
+.bt-tabs .bt-panel-item {
+  display: none; }
+  .bt-tabs .bt-panel-item.bt-is-active {
+    display: block; }
+
 .__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title {
   overflow: hidden;
   width: 100%;
@@ -329,11 +334,28 @@ html :where(.editor-styles-wrapper) {
     font-size: 20px;
     max-width: 640px;
     margin: 10px auto 0; }
+  @media (max-width: 1199.98px) {
+    .__bt-section-heading-style .bt-main-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-main-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-main-text {
+      font-size: 46px; } }
+  @media (max-width: 991.98px) {
+    .__bt-section-heading-style .bt-sub-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-sub-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-sub-text {
+      font-size: 18px; }
+    .__bt-section-heading-style .bt-main-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-main-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-main-text {
+      font-size: 40px; }
+    .__bt-section-heading-style .bt-head-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-head-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-head-text {
+      font-size: 18px;
+      max-width: 560px; } }
+  @media (max-width: 767.98px) {
+    .__bt-section-heading-style .bt-main-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-main-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-main-text {
+      font-size: 36px; } }
   @media (max-width: 519.98px) {
     .__bt-section-heading-style .bt-sub-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-sub-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-sub-text {
       font-size: 16px; }
     .__bt-section-heading-style .bt-main-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-main-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-main-text {
-      font-size: 32px; } }
+      font-size: 32px; }
+    .__bt-section-heading-style .bt-head-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-head-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-head-text {
+      font-size: 16px;
+      max-width: 560px; } }
 
 .__bt-block-heading-style, .widget .wp-block-heading,
 .widget .wg-title, .widget .widget-title {
