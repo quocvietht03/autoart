@@ -296,7 +296,7 @@
     max-width: 640px;
     margin: 10px auto 0;
   }
-  @media(max-width: $break-lg) { 
+  @media(max-width: $break-lg) {
     .bt-main-text {
       font-size: 46px;
     }
@@ -327,7 +327,7 @@
     }
     .bt-head-text {
       font-size: 16px;
-      max-width: 560px;
+      max-width: 560px; 
     }
   }
 }

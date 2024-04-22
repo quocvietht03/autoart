@@ -148,15 +148,39 @@ if(!empty($color_term)) {
       </div>
     </div>
 
-    <div class="bt-post--thumbnail">
-      <div class="bt-cover-image">
-        <?php
-          if (has_post_thumbnail()){
-            the_post_thumbnail('full');
-          }
-        ?>
+    <?php if(!empty($gallery)){ ?>
+      <div class="bt-post--gallery js-gallery-carousel">
+        <?php if (has_post_thumbnail()){ ?>
+          <div class="bt-slider-item-wrap">
+            <div class="bt-slider-item">
+              <div class="bt-cover-image">
+                <?php the_post_thumbnail('full'); ?>
+              </div>
+            </div>
+          </div>
+        <?php } ?>
+
+        <?php foreach ($gallery as $key => $item) { ?>
+          <div class="bt-slider-item-wrap">
+            <div class="bt-slider-item">
+              <div class="bt-cover-image">
+                <?php echo '<img src="' . esc_url($item['url']) . '" alt="' . esc_url($item['title']) . '" />'; ?>
+              </div>
+            </div>
+          </div>
+        <?php } ?>
       </div>
-    </div>
+    <?php } else { ?>
+      <div class="bt-post--thumbnail">
+        <div class="bt-cover-image">
+          <?php
+            if (has_post_thumbnail()){
+              the_post_thumbnail('full');
+            }
+          ?>
+        </div>
+      </div>
+    <?php } ?>
 
     <div class="bt-post--section bt-section-overview">
       <h3 class="bt-title-ss">

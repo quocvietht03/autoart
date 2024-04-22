@@ -69,6 +69,19 @@
 		}
 	}
 
+	/* Gallery Carousel */
+	function AutoArtGallerCarousel() {
+		if($('.js-gallery-carousel').length > 0) {
+			$('.js-gallery-carousel').slick({
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				arrows: true,
+				prevArrow: '<button type=\"button\" class=\"slick-prev\">Prev</button>',
+				nextArrow: '<button type=\"button\" class=\"slick-next\">Next</button>'
+			});
+		}
+	}
+
 	/* Gallery Slider */
 	function AutoArtGallerSlider() {
 		if($('.js-gallery-slider').length > 0) {
@@ -563,6 +576,7 @@
 		AutoArtTabs();
 		AutoArtCloseSection();
 		AutoArtGallerSlider();
+		AutoArtGallerCarousel();
 		AutoArtCarWishlist();
 		AutoArtCarCompare();
 		AutoArtCarSidebarToggle();
