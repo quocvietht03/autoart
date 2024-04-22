@@ -56,6 +56,8 @@ class ElementorWidgets {
 			'post-loop-item',
 			'post-loop-item-style-1',
 			'post-loop-item-style-2',
+			'cars-wishlist',
+			'cars-compare',
 			'podcast-grid',
 			'podcast-grid-style-1',
 			'podcast-grid-style-2',
@@ -170,6 +172,8 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ContactInformation\Widget_ContactInformation());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PageBreadcrumb\Widget_PageBreadcrumb());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\StepList\Widget_StepList());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsWishlist\Widget_CarsWishlist());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsCompare\Widget_CarsCompare());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGrid\Widget_PostGrid());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGridStyle1\Widget_PostGridStyle1());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGridStyle2\Widget_PostGridStyle2());
