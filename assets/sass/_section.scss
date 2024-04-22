@@ -8,6 +8,23 @@
     }
 }
 
+.__bt-pd-container-full-width{
+    > .elementor-element {
+        &:first-child{
+            @media (min-width: 1450px) {
+                padding-left: calc((100% - var(--container-max-width)) / 2);
+            }
+        }
+
+        &:last-child{
+            @media (min-width: 1450px) {
+                padding-right: calc((100% - var(--container-max-width)) / 2);
+            }
+        }
+    }
+}
+
+
 .elementor-element{
     &.bt-browse-used-cars{
         .elementor-tabs{
@@ -71,20 +88,7 @@
     &.bt-ss-buy-sell-car{
         > .elementor-element {
             &:first-child{
-                > .elementor-element {
-                    &:first-child{
-                        @media (min-width: 1450px) {
-                            padding-left: calc((100% - var(--container-max-width)) / 2);
-                        }
-                        
-                    }
-
-                    &:last-child{
-                        @media (min-width: 1450px) {
-                            padding-right: calc((100% - var(--container-max-width)) / 2);
-                        }
-                    }
-                }
+                @extend .__bt-pd-container-full-width;
             }
 
             .elementor-widget-image{
@@ -128,6 +132,77 @@
 
             @media(max-width: $break-sm) {
                 height: 30px;
+            }
+        }
+    }
+
+    &.bt-find-your-dream-cars-home-3{
+
+        @extend .__bt-pd-container-full-width;
+
+        > .elementor-element{
+            &:first-child{
+                clip-path: polygon(0 0, 100% 0, 91% 100%, 0% 100%);
+
+                @media(max-width: $break-tl) {
+                    clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
+                }
+                
+                .elementor-widget-heading{
+                    h2.elementor-heading-title{
+                        position: relative;
+                        padding-left: 25.45px;
+                        z-index: 9;
+
+                        @media(max-width: $break-sm) {
+                            padding-left: 15px;
+                        }
+
+                        &::after, &::before{
+                            content: " ";
+                            display: inline-block;
+                            position: absolute;
+                            left: 0;
+                        }
+
+                        &::before{
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 0px 10px 10px 10px;
+                            background: #FFF;
+                            top:50%;
+                            transform: translateY(-50%);
+                            z-index: -1;
+
+                            @media(max-width: $break-sm) {
+                                width: 70px;
+                                height: 70px;
+                            }
+                        }
+
+                        &::after{
+                            width: 17px;
+                            height: 17px;
+                            background-color: $color-accent;
+                            top:0;
+                        }
+                    }
+                }
+            }   
+        }
+
+        .elementor-widget-icon-box{
+            .elementor-icon-box-icon{
+                a{
+                    width: 48px;
+                    height: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    border:6px solid $color-accent;
+                    border-radius: 50%;
+                }
             }
         }
     }
