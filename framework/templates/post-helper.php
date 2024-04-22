@@ -212,7 +212,7 @@ if ( ! function_exists( 'autoart_post_content_render' ) ) {
       ?>
         <div class="bt-post--content">
           <?php
-            echo get_the_content();
+            the_content();
             wp_link_pages(array(
               'before' => '<div class="page-links">' . esc_html__('Pages:', 'autoart'),
               'after' => '</div>',
