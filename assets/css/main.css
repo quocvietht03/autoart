@@ -5853,6 +5853,14 @@ body {
   padding-bottom: 0 !important; }
   .elementor-widget-loop-grid .elementor-posts-masonry .bt-post--featured .bt-cover-image img, .elementor-widget-loop-grid .elementor-posts-masonry .bt-post--featured .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image img, .woocommerce .woocommerce-loop-product__thumbnail .elementor-widget-loop-grid .elementor-posts-masonry .bt-post--featured .wc-cover-image img {
     position: static; }
+.elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent {
+  height: 100%; }
+  .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .elementor-widget, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .bt-elwg-service-loop-item--style-2, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .bt-elwg-service-loop-item--default, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .bt-elwg-service-loop-item--style-1, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .elementor-widget, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .bt-elwg-service-loop-item--style-2, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .bt-elwg-service-loop-item--default, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .bt-elwg-service-loop-item--style-1 {
+    height: 100%; }
+    .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .elementor-widget article.bt-post, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .bt-elwg-service-loop-item--style-2 article.bt-post, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .bt-elwg-service-loop-item--default article.bt-post, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .bt-elwg-service-loop-item--style-1 article.bt-post, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .elementor-widget article.bt-post, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .bt-elwg-service-loop-item--style-2 article.bt-post, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .bt-elwg-service-loop-item--default article.bt-post, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .bt-elwg-service-loop-item--style-1 article.bt-post {
+      height: 100%; }
+      .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .elementor-widget article.bt-post .bt-post--inner, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .bt-elwg-service-loop-item--style-2 article.bt-post .bt-post--inner, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .bt-elwg-service-loop-item--default article.bt-post .bt-post--inner, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item > .elementor-section-wrap .bt-elwg-service-loop-item--style-1 article.bt-post .bt-post--inner, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .elementor-widget article.bt-post .bt-post--inner, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .bt-elwg-service-loop-item--style-2 article.bt-post .bt-post--inner, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .bt-elwg-service-loop-item--default article.bt-post .bt-post--inner, .elementor-widget-loop-grid .elementor-loop-container .e-loop-item .e-parent .bt-elwg-service-loop-item--style-1 article.bt-post .bt-post--inner {
+        height: 100%; }
 
 .bt-align-left .elementor-counter .elementor-counter-number-prefix,
 .bt-align-left .elementor-counter .elementor-counter-number-suffix {
@@ -6730,7 +6738,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
-    .bt-elwg-service-loop-item--style-2 .bt-post--icon-inner svg {
+    .bt-elwg-service-loop-item--style-2 .bt-post--icon-inner svg, .bt-elwg-service-loop-item--style-2 .bt-post--icon-inner img {
       max-width: 50px; }
   .bt-elwg-service-loop-item--style-2 .bt-post--icon-bg {
     position: absolute;
@@ -7000,5 +7008,21 @@ body {
 @media (min-width: 1025px) and (max-width: 1600.98px) {
   .elementor-element.bt-hero-home .elementor-widget-image.bt-hero-image > .elementor-widget-container {
     margin-right: 0; } }
+.elementor-element.bt-what-we-offer-home-3 {
+  position: relative; }
+  .elementor-element.bt-what-we-offer-home-3::after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    z-index: 9;
+    width: 100%;
+    height: 60px;
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    background: #fff; }
+    @media (max-width: 767.98px) {
+      .elementor-element.bt-what-we-offer-home-3::after {
+        height: 30px; } }
 
 /*# sourceMappingURL=main.css.map */
