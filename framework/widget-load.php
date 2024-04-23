@@ -79,6 +79,7 @@ class ElementorWidgets {
 			'highlighted-heading',
 			'list-image-text',
 			'card-image-text-grid',
+			'cars-search',
 		);
 
 		return $this->widgets;
@@ -107,8 +108,8 @@ class ElementorWidgets {
 	 */
 	public function widget_scripts() {
 		wp_register_script('slick-slider', get_template_directory_uri().'/assets/libs/slick/slick.min.js', array('jquery'), '', true);
-
-    wp_register_script( 'elementor-widgets',  get_stylesheet_directory_uri() . '/framework/widgets/frontend.js', [ 'jquery' ], '', true );
+		wp_register_script('select2-min', get_template_directory_uri().'/assets/libs/select2/select2.min.js', array('jquery'), '', true);
+		wp_register_script('elementor-widgets',  get_stylesheet_directory_uri() . '/framework/widgets/frontend.js', [ 'jquery' ], '', true );
 	}
 
 	/**
@@ -174,6 +175,7 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\StepList\Widget_StepList());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsWishlist\Widget_CarsWishlist());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsCompare\Widget_CarsCompare());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsSearch\Widget_CarsSearch());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGrid\Widget_PostGrid());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGridStyle1\Widget_PostGridStyle1());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGridStyle2\Widget_PostGridStyle2());

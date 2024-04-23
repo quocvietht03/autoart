@@ -6943,6 +6943,101 @@ body {
     .bt-elwg-card-image-text-grid.--style-1 .bt-elwg-card-image-text-grid-inner .item-card-image-text--content h3 {
       font-size: 20px; }
 
+.bt-elwg-cars-search-inner {
+  padding: 30px; }
+  .bt-elwg-cars-search-inner form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden; }
+    .bt-elwg-cars-search-inner form .bt-field-submit {
+      position: relative; }
+.bt-elwg-cars-search--top-search {
+  display: flex;
+  align-items: center; }
+  .bt-elwg-cars-search--top-search a {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    color: #fff; }
+.bt-elwg-cars-search--default .bt-elwg-cars-search-inner .select2-container .select2-selection--single, .bt-elwg-cars-search--style-3 .bt-elwg-cars-search-inner .select2-container .select2-selection--single {
+  border: none;
+  border-radius: 0; }
+.bt-elwg-cars-search--default .bt-elwg-cars-search-inner {
+  border-radius: 10px; }
+  .bt-elwg-cars-search--default .bt-elwg-cars-search-inner form {
+    padding-right: 5px; }
+  .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-form-field {
+    width: calc(100% / 3); }
+  .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select:not(:first-child) .select2-container {
+    border-left: 1px solid #E4ECFF; }
+  .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select .select2-container {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px; }
+    .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow b {
+      transform: translate(-50%, -50%) rotate(315deg);
+      margin-top: 2px; }
+    .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select .select2-container .selection {
+      height: 64px; }
+    .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select .select2-container .select2-selection--single {
+      display: flex;
+      align-items: center;
+      height: 64px;
+      gap: 18px; }
+      .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select .select2-container .select2-selection--single .select2-selection__arrow {
+        position: relative;
+        width: auto;
+        height: auto; }
+        .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select .select2-container .select2-selection--single .select2-selection__arrow b {
+          width: 11px;
+          height: 11px;
+          border-top: 2px solid var(--e-global-color-accent, #1FBECD);
+          border-right: 2px solid var(--e-global-color-accent, #1FBECD);
+          transition: 0.3s all cubic-bezier(1, 0.25, 0.25, 0.8);
+          will-change: transform;
+          transform: rotate(135deg);
+          border-left: none;
+          border-bottom: none;
+          margin: -3px 0 0 0;
+          transform: translate(-50%, -50%) rotate(135deg);
+          padding: 0;
+          transition: all 0.25s ease-in-out;
+          border-radius: 0 3px 0px 0; }
+      .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select .select2-container .select2-selection--single .select2-selection__rendered {
+        padding: 0;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-style: normal; }
+  .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-submit {
+    width: 56px;
+    height: 54px;
+    overflow: hidden;
+    background-color: var(--e-global-color-accent, #1FBECD);
+    border-radius: 10px; }
+    .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-submit input[type="submit"] {
+      background-color: transparent;
+      font-size: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 9;
+      width: 100%;
+      height: 100%; }
+    .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-submit svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 8; }
+
 .elementor-widget-button .elementor-button-icon svg {
   width: fit-content; }
 
