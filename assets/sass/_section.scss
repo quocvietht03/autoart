@@ -147,48 +147,48 @@
                 @media(max-width: $break-tl) {
                     clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
                 }
-                
-                .elementor-widget-heading{
-                    h2.elementor-heading-title{
-                        position: relative;
-                        padding-left: 25.45px;
-                        z-index: 9;
+            }   
+
+            .elementor-widget-heading{
+                h2.elementor-heading-title{
+                    position: relative;
+                    padding-left: 25.45px;
+                    z-index: 9;
+
+                    @media(max-width: $break-sm) {
+                        padding-left: 15px;
+                    }
+
+                    &::after, &::before{
+                        content: " ";
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                    }
+
+                    &::before{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 0px 10px 10px 10px;
+                        background: #FFF;
+                        top:50%;
+                        transform: translateY(-50%);
+                        z-index: -1;
 
                         @media(max-width: $break-sm) {
-                            padding-left: 15px;
-                        }
-
-                        &::after, &::before{
-                            content: " ";
-                            display: inline-block;
-                            position: absolute;
-                            left: 0;
-                        }
-
-                        &::before{
-                            width: 100px;
-                            height: 100px;
-                            border-radius: 0px 10px 10px 10px;
-                            background: #FFF;
-                            top:50%;
-                            transform: translateY(-50%);
-                            z-index: -1;
-
-                            @media(max-width: $break-sm) {
-                                width: 70px;
-                                height: 70px;
-                            }
-                        }
-
-                        &::after{
-                            width: 17px;
-                            height: 17px;
-                            background-color: $color-accent;
-                            top:0;
+                            width: 70px;
+                            height: 70px;
                         }
                     }
+
+                    &::after{
+                        width: 17px;
+                        height: 17px;
+                        background-color: $color-accent;
+                        top:0;
+                    }
                 }
-            }   
+            }
         }
 
         .elementor-widget-icon-box{
