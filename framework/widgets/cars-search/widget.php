@@ -158,6 +158,75 @@ class Widget_CarsSearch extends Widget_Base {
 
 	protected function register_style_content_section_controls() {
 		$this->start_controls_section(
+			'ss_cars_search_general',[
+				'label' => esc_html__( 'General', 'autoart' ),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+			$this->add_control(
+				'ss_cars_search_general_bcl',[
+					'label' => __( 'Border Color', 'autoart' ),
+					'type' => Controls_Manager::COLOR,
+					'default' => '#fff',
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'border-color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_responsive_control(
+				'ss_cars_search_general_bdw',[
+					'label' => __( 'Border Width', 'autoart' ),
+					'type' => Controls_Manager::DIMENSIONS,
+					'size_units' => [ 'px', '%' ],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'default' => [
+						'top'    => 10,
+						'right'  => 10,
+						'bottom' => 10,
+						'left'   => 10,
+						'unit'   => 'px',
+					],
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+					],
+				]
+			);
+
+			$this->add_responsive_control(
+				'ss_cars_search_general_bri',[
+					'label' => __( 'Border Radius', 'autoart' ),
+					'type' => Controls_Manager::DIMENSIONS,
+					'size_units' => [ 'px', '%' ],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'default' => [
+						'top'    => 10,
+						'right'  => 10,
+						'bottom' => 10,
+						'left'   => 10,
+						'unit'   => 'px',
+					],
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+					],
+				]
+			);
+
+		$this->end_controls_section();
+
+
+		$this->start_controls_section(
 			'ss_style_form_bg',[
 				'label' => esc_html__( 'Background', 'autoart' ),
 				'tab' => Controls_Manager::TAB_STYLE,
@@ -169,7 +238,7 @@ class Widget_CarsSearch extends Widget_Base {
 					'name'     => 'elwg_cars_search_bg',
 					'label'    => __( 'Color', 'autoart' ),
 					'types'    => [ 'classic', 'gradient' ],
-					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner',
+					'selector' => '{{WRAPPER}} .bt-elwg-cars-search--form',
 				]
 			);
 
@@ -194,11 +263,46 @@ class Widget_CarsSearch extends Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'section_style_content',[
-				'label' => esc_html__( 'Content', 'autoart' ),
+			'ss_style_form_search',[
+				'label' => esc_html__( 'Form', 'autoart' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
+
+
+			$this->add_responsive_control(
+				'ss_style_form_search_pd',[
+					'label' => __( 'Padding', 'autoart' ),
+					'type'  => Controls_Manager::DIMENSIONS,
+					'size_units' => [ 'px', '%' ],
+					'range' => [
+						'px' => [
+							'min' => 0,
+							'max' => 100,
+						],
+					],
+					'default' => [
+						'top'    => 30,
+						'right'  => 30,
+						'bottom' => 27,
+						'left'   => 30,
+						'unit'   => 'px',
+					],
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-cars-search--form' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+					],
+				]
+			);
+
+			$this->add_group_control(
+				Group_Control_Typography::get_type(),
+				[
+					'name' => 'ss_style_form_search_typography',
+					'label' => __( 'Typography', 'autoart' ),
+					'default' => '',
+					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner .bt-field-type-select .select2-container .select2-selection--single .select2-selection__rendered',
+				]
+			);
 
 			$this->add_control(
 				'account_login_color',
@@ -211,16 +315,6 @@ class Widget_CarsSearch extends Widget_Base {
 						'{{WRAPPER}} .bt-elwg-cars-search-inner ul li span' => 'color: {{VALUE}};',
 						'{{WRAPPER}} .bt-elwg-cars-search-inner ul li:before' => 'background-color: {{VALUE}};',
 					],
-				]
-			);
-
-			$this->add_group_control(
-				Group_Control_Typography::get_type(),
-				[
-					'name' => 'account_login_typography',
-					'label' => __( 'Typography', 'autoart' ),
-					'default' => '',
-					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner ul li a, {{WRAPPER}} .bt-elwg-cars-search-inner ul li span',
 				]
 			);
 
@@ -263,23 +357,27 @@ class Widget_CarsSearch extends Widget_Base {
 								</svg>
 							</div>
 						</form>
-					</div>
 
-					<?php if(!empty($top_search) && isset($top_search)): ?>
-						<div class="bt-elwg-cars-search--top-search">  
-							<?php foreach ( $top_search as $index => $item ): ?>
-								 
-								<?php if(!empty($item['top_search_text']) && !empty($item['top_search_link'])): ?>
-									<div class="item-top-search"> 
-										<a href="<?php echo esc_url($item['top_search_link']) ?>"> 
-											<?php echo esc_html_e($item['top_search_text']) ?>
-										</a>
-									</div>
-								<?php endif;?>	
-								
-							<?php endforeach; ?>	
-						</div>
-					<?php endif;?>		
+						<?php if(!empty($top_search) && isset($top_search)): ?>
+							<div class="bt-elwg-cars-search--form-top-search">  
+								<?php if(!empty($settings['top_search_title']) && isset($settings['top_search_title'])): ?>
+									<p> <?php echo $settings['top_search_title']  ?> </p>
+								<?php endif; ?>	
+
+								<div class="bt-elwg-cars-search--form-top-search-inner">
+									<?php foreach ( $top_search as $index => $item ): ?>			
+										<?php if(!empty($item['top_search_text']) && !empty($item['top_search_link'])): ?>
+											<div class="item-top-search"> 
+												<a href="<?php echo esc_url($item['top_search_link']) ?>"> 
+													<?php echo esc_html_e($item['top_search_text']) ?>
+												</a>
+											</div>
+										<?php endif;?>	
+									<?php endforeach; ?>	
+								</div>	
+							</div>
+						<?php endif;?>	
+					</div>	
 				</div>
 			</div>
 		<?php

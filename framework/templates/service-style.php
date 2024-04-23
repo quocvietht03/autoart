@@ -1,10 +1,6 @@
 <?php 
   $icon = get_field('icon'); 
   $desc = get_field('description_service');
-
-  // echo "<pre>";
-  // echo print_r($icon);
-  // echo "</pre>";
 ?>
 
 <article <?php post_class('bt-post'); ?>>
