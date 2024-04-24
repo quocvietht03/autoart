@@ -1964,6 +1964,10 @@
 
   &--default{
     .bt-elwg-cars-search{
+      &--header{
+        display: none;
+      }
+
       &--form{
         position: relative;
         z-index: 9;
@@ -2138,6 +2142,137 @@
             top: 50%;
             transform: translate(-50%, -50%);
             z-index: 8;
+          }
+        }
+      }
+    }
+  }
+
+  &--style-1{
+    .select2-container--default, .elementor-editor-active .select2-container--default{
+      .select2-selection{
+        &--single{
+          background:transparent;
+          border: 2px solid #fff;
+          padding-left: 27px;
+          height: 60px;
+        }
+
+        &__rendered{
+          color: #ffff !important;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        &__arrow{
+          b{
+            border-color: #fff !important;
+          }
+        }
+      }
+    }
+
+    .bt-elwg-cars-search{
+      &-inner{
+        background-color: $color-accent;
+        padding: 49px 12% 54.71px 12%;
+        form{
+          background:transparent;
+          flex-wrap: wrap;
+          .bt-form-field{
+            width: 100%;
+            &:not(:last-child){
+              margin-bottom: 20px;
+            }
+          }
+
+          .bt-field-submit{
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            border-radius: 10px;
+            min-height: 60px;
+
+            input[type="submit"]{
+              background-color: transparent;
+              padding: 0;
+              width: auto;
+              height: auto;
+              font-size: 17px;
+              font-weight: 700;
+              line-height: 211.765%;
+              color: $color-secondary;
+              border: none;
+            }
+
+            svg{
+              path{
+                stroke: $color-secondary;
+              }
+            }
+          }
+        }
+      }
+
+      &--header{
+        text-align: center;
+        padding-bottom: 30px;
+        svg, img{
+          width: 100%;
+          height: auto;
+          margin-bottom: -18px;
+        }
+
+        svg{
+          path{
+            fill: #fff;
+          }
+
+          > g{
+            path{
+              stroke: #fff !important;
+            }
+          }
+        }
+
+        h3{
+          line-height:111.111%;
+        }
+
+        p{
+          margin: 10px 0 0 0;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+
+      &--cta{
+        a{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 16px;
+          margin-top: 18.29px;
+          span{
+            color: #FFF;
+            font-size: 17.988px;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration-line: underline;
+          }
+
+          svg{
+            width: 100%;
+            height: auto;
+            max-width: 20px;
+            path{
+              fill: #fff;
+            }
           }
         }
       }

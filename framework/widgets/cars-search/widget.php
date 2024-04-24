@@ -32,10 +32,6 @@ class Widget_CarsSearch extends Widget_Base {
 	public function get_script_depends() {
 		return ['select2-min', 'elementor-widgets' ];
 	}
-
-	public function get_style_depends() {
-		return [ 'select2-min', 'bt-main'];
-	}
 	
 	protected function register_content_section_controls() {
 		$this->start_controls_section(
@@ -393,56 +389,9 @@ class Widget_CarsSearch extends Widget_Base {
 
 	protected function render() {
 		$settings  = $this->get_settings_for_display();
-		$top_search = $settings['cars_top_search'];
 		?>
 			<div class="bt-elwg-cars-search--default">
-				<div class="bt-elwg-cars-search-inner"> 
-					<div class="bt-elwg-cars-search--form"> 
-						<form class="bt-car-search-form" action="<?php echo esc_url( home_url( '/cars' ) ); ?>" method="get">
-							<?php 
-								$field_name  = __('Any Makes', 'autoart');
-								$field_value = (isset($_GET['car_make'])) ? $_GET['car_make'] : '';
-								autoart_cars_field_select_html('car_make', $field_name, $field_value);
-
-								$field_name  = __('Any Models', 'autoart');
-								$field_value = (isset($_GET['car_model'])) ? $_GET['car_model'] : '';
-								autoart_cars_field_select_html('car_model', $field_name, $field_value);
-
-								$field_title = __('All Price', 'autoart');
-								$field_value = (isset($_GET['car_price'])) ? $_GET['car_price'] : '';
-								$field_step  = 1000;
-								autoart_cars_field_select_range_html('car_price', $field_title, $field_value, $field_step);
-							?> 
-
-							<div class="bt-form-field bt-field-submit"> 
-								<input type="submit"  class="btn btn-primary" value="Search Now">
-								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-									<path d="M14.4792 14.4935L19.25 19.25M16.5 9.625C16.5 13.4219 13.4219 16.5 9.625 16.5C5.82804 16.5 2.75 13.4219 2.75 9.625C2.75 5.82804 5.82804 2.75 9.625 2.75C13.4219 2.75 16.5 5.82804 16.5 9.625Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-							</div>
-						</form>
-
-						<?php if(!empty($top_search) && isset($top_search)): ?>
-							<div class="bt-elwg-cars-search--form-top-search">  
-								<?php if(!empty($settings['top_search_title']) && isset($settings['top_search_title'])): ?>
-									<p> <?php echo $settings['top_search_title']  ?> </p>
-								<?php endif; ?>	
-
-								<div class="bt-elwg-cars-search--form-top-search-inner">
-									<?php foreach ( $top_search as $index => $item ): ?>			
-										<?php if(!empty($item['top_search_text']) && !empty($item['top_search_link'])): ?>
-											<div class="item-top-search"> 
-												<a href="<?php echo esc_url($item['top_search_link']) ?>"> 
-													<?php echo esc_html_e($item['top_search_text']) ?>
-												</a>
-											</div>
-										<?php endif;?>	
-									<?php endforeach; ?>	
-								</div>	
-							</div>
-						<?php endif;?>	
-					</div>	
-				</div>
+				<?php get_template_part( 'framework/templates/car-search', 'style', array('layout' => 'style-default', 'data' => $settings)); ?>
 			</div>
 		<?php
 	}

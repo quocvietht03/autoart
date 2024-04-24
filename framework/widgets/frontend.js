@@ -143,12 +143,51 @@
 		})
 	}
 
+	var CarsSearchStyle1Handler = function( $scope, $ ) {
+
+		const $formSearch = $scope.find('.bt-car-search-form');
+		if (!$formSearch.length) return;
+
+		const $fieldSelect = $formSearch.find('.bt-field-type-select select')
+
+		if($fieldSelect.length > 0) {
+			$fieldSelect.select2();
+		}
+		
+		$formSearch.on('submit', function(event) {
+			event.preventDefault();
+			
+			const car_make = $(this).find('select[name="car_make"]').val();
+			const car_price = $(this).find('select[name="car_price"]').val();
+			const car_model = $(this).find('select[name="car_model"]').val();
+
+			let url = '/cars?';
+
+			if (car_make) {
+				url += 'car_make=' + car_make + '&';
+			}
+	
+			if (car_price) {
+				url += 'car_price=' + car_price + '&';
+			}
+	
+			if (car_model) {
+				url += 'car_model=' + car_model + '&';
+			}
+	
+			url = url.slice(0, -1);
+	
+			window.location.href = url;
+		})
+	}
+
 	// Make sure you run this code under Elementor.
 	$( window ).on( 'elementor/frontend/init', function() {
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-testimonial-slider.default', SliderSyncingHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-step-list.default', MoreStepsHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-pricing-tabs.default', TabsHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search.default', CarsSearchHandler );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search-style-1.default', CarsSearchStyle1Handler );
 	} );
 
 } )( jQuery );

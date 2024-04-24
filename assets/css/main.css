@@ -7016,6 +7016,8 @@ body {
 @media (max-width: 640.98px) {
   .bt-elwg-cars-search--default .bt-car-search-form .bt-form-field:not(:last-child), .bt-elwg-cars-search--style-3 .bt-car-search-form .bt-form-field:not(:last-child) {
     border-bottom: 1px solid var(--e-global-color-accent, #1FBECD); } }
+.bt-elwg-cars-search--default .bt-elwg-cars-search--header {
+  display: none; }
 .bt-elwg-cars-search--default .bt-elwg-cars-search--form {
   position: relative;
   z-index: 9;
@@ -7144,6 +7146,85 @@ body {
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 8; }
+.bt-elwg-cars-search--style-1 .select2-container--default .select2-selection--single, .bt-elwg-cars-search--style-1 .elementor-editor-active .select2-container--default .select2-selection--single {
+  background: transparent;
+  border: 2px solid #fff;
+  padding-left: 27px;
+  height: 60px; }
+.bt-elwg-cars-search--style-1 .select2-container--default .select2-selection__rendered, .bt-elwg-cars-search--style-1 .elementor-editor-active .select2-container--default .select2-selection__rendered {
+  color: #ffff !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal; }
+.bt-elwg-cars-search--style-1 .select2-container--default .select2-selection__arrow b, .bt-elwg-cars-search--style-1 .elementor-editor-active .select2-container--default .select2-selection__arrow b {
+  border-color: #fff !important; }
+.bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner {
+  background-color: var(--e-global-color-accent, #1FBECD);
+  padding: 49px 12% 54.71px 12%; }
+  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner form {
+    background: transparent;
+    flex-wrap: wrap; }
+    .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner form .bt-form-field {
+      width: 100%; }
+      .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner form .bt-form-field:not(:last-child) {
+        margin-bottom: 20px; }
+    .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner form .bt-field-submit {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      border-radius: 10px;
+      min-height: 60px; }
+      .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner form .bt-field-submit input[type="submit"] {
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+        height: auto;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 211.765%;
+        color: var(--e-global-color-secondary, #111);
+        border: none; }
+      .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner form .bt-field-submit svg path {
+        stroke: var(--e-global-color-secondary, #111); }
+.bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header {
+  text-align: center;
+  padding-bottom: 30px; }
+  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header svg, .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header img {
+    width: 100%;
+    height: auto;
+    margin-bottom: -18px; }
+  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header svg path {
+    fill: #fff; }
+  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header svg > g path {
+    stroke: #fff !important; }
+  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header h3 {
+    line-height: 111.111%; }
+  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header p {
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal; }
+.bt-elwg-cars-search--style-1 .bt-elwg-cars-search--cta a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 18.29px; }
+  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--cta a span {
+    color: #FFF;
+    font-size: 17.988px;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline; }
+  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--cta a svg {
+    width: 100%;
+    height: auto;
+    max-width: 20px; }
+    .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--cta a svg path {
+      fill: #fff; }
 
 .elementor-widget-button .elementor-button-icon svg {
   width: fit-content; }
