@@ -2626,6 +2626,19 @@ body {
 .bt-effect-overflow {
   overflow-x: clip !important; }
 
+@keyframes effectMoveHorizontal {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); }
+  50% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); } }
+.bt-effect-move-horizontal {
+  animation: effectMoveHorizontal 2s linear infinite; }
+
 .bt-page--content:after {
   content: "";
   display: block; }
@@ -7065,7 +7078,7 @@ body {
       padding-right: 5px; } }
   @media (min-width: 641px) {
     .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-form-field {
-      width: calc(100% / 3); } }
+      width: calc((100% - 56px) / 3); } }
   .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select:not(:first-child) .select2-container {
     border-left: 1px solid #E4ECFF; }
   .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select .select2-container {
