@@ -106,46 +106,15 @@
  	};
 
 	var CarsSearchHandler = function( $scope, $ ) {
-
-		const $formSearch = $scope.find('.bt-car-search-form');
-		if (!$formSearch.length) return;
-
-		const $fieldSelect = $formSearch.find('.bt-field-type-select select')
-
-		if($fieldSelect.length > 0) {
-			$fieldSelect.select2();
-		}
-		
-		$formSearch.on('submit', function(event) {
-			event.preventDefault();
-			
-			const car_make = $(this).find('select[name="car_make"]').val();
-			const car_price = $(this).find('select[name="car_price"]').val();
-			const car_model = $(this).find('select[name="car_model"]').val();
-
-			let url = '/cars?';
-
-			if (car_make) {
-				url += 'car_make=' + car_make + '&';
-			}
-	
-			if (car_price) {
-				url += 'car_price=' + car_price + '&';
-			}
-	
-			if (car_model) {
-				url += 'car_model=' + car_model + '&';
-			}
-	
-			url = url.slice(0, -1);
-	
-			window.location.href = url;
-		})
+		hanldeCarsSearchForm($scope)
 	}
 
 	var CarsSearchStyle1Handler = function( $scope, $ ) {
+		hanldeCarsSearchForm($scope)
+	}
 
-		const $formSearch = $scope.find('.bt-car-search-form');
+	function hanldeCarsSearchForm($data){
+		const $formSearch = $data.find('.bt-car-search-form');
 		if (!$formSearch.length) return;
 
 		const $fieldSelect = $formSearch.find('.bt-field-type-select select')
@@ -157,7 +126,7 @@
 		$formSearch.on('submit', function(event) {
 			event.preventDefault();
 			
-			const car_make = $(this).find('select[name="car_make"]').val();
+			const car_make  = $(this).find('select[name="car_make"]').val();
 			const car_price = $(this).find('select[name="car_price"]').val();
 			const car_model = $(this).find('select[name="car_model"]').val();
 
