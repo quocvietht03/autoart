@@ -7004,18 +7004,61 @@ body {
   border-radius: 10px; }
   .bt-elwg-cars-search-inner form .bt-field-submit {
     position: relative; }
-.bt-elwg-cars-search--default .bt-elwg-cars-search-inner .select2-container .select2-selection--single, .bt-elwg-cars-search--style-3 .bt-elwg-cars-search-inner .select2-container .select2-selection--single {
+.bt-elwg-cars-search--form-top-search {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 14px;
+  flex-wrap: wrap; }
+  .bt-elwg-cars-search--form-top-search-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
+    .bt-elwg-cars-search--form-top-search-inner .item-top-search:not(:first-child) {
+      position: relative;
+      padding-left: 24px; }
+      @media (max-width: 640.98px) {
+        .bt-elwg-cars-search--form-top-search-inner .item-top-search:not(:first-child) {
+          padding-left: 18px; } }
+      .bt-elwg-cars-search--form-top-search-inner .item-top-search:not(:first-child)::before {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 100%;
+        max-height: 15px;
+        background-color: #fff;
+        position: absolute;
+        left: 12px;
+        top: calc(50% + 2px);
+        transform: translateY(-50%); }
+        @media (max-width: 640.98px) {
+          .bt-elwg-cars-search--form-top-search-inner .item-top-search:not(:first-child)::before {
+            width: 1px;
+            left: 9px; } }
+  .bt-elwg-cars-search--form-top-search a, .bt-elwg-cars-search--form-top-search p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0; }
+  .bt-elwg-cars-search--form-top-search p {
+    text-transform: uppercase;
+    margin-top: 2px; }
+  .bt-elwg-cars-search--form-top-search a {
+    text-decoration-line: underline; }
+.bt-elwg-cars-search--default .select2-container .select2-selection--single, .bt-elwg-cars-search--style-2 .select2-container .select2-selection--single {
   border: none;
   border-radius: 0; }
 @media (max-width: 640.98px) {
-  .bt-elwg-cars-search--default .bt-car-search-form, .bt-elwg-cars-search--style-3 .bt-car-search-form {
+  .bt-elwg-cars-search--default .bt-elwg-cars-search--form form, .bt-elwg-cars-search--style-2 .bt-elwg-cars-search--form form {
     flex-wrap: wrap; } }
 @media (max-width: 640.98px) {
-  .bt-elwg-cars-search--default .bt-car-search-form .bt-form-field, .bt-elwg-cars-search--style-3 .bt-car-search-form .bt-form-field {
+  .bt-elwg-cars-search--default .bt-elwg-cars-search--form .bt-form-field, .bt-elwg-cars-search--style-2 .bt-elwg-cars-search--form .bt-form-field {
     width: 100%; } }
 @media (max-width: 640.98px) {
-  .bt-elwg-cars-search--default .bt-car-search-form .bt-form-field:not(:last-child), .bt-elwg-cars-search--style-3 .bt-car-search-form .bt-form-field:not(:last-child) {
+  .bt-elwg-cars-search--default .bt-elwg-cars-search--form .bt-form-field:not(:last-child), .bt-elwg-cars-search--style-2 .bt-elwg-cars-search--form .bt-form-field:not(:last-child) {
     border-bottom: 1px solid var(--e-global-color-accent, #1FBECD); } }
+.bt-elwg-cars-search--default .bt-elwg-cars-search--form .bt-form-field.bt-field-type-select:not(:first-child) .select2-container, .bt-elwg-cars-search--style-2 .bt-elwg-cars-search--form .bt-form-field.bt-field-type-select:not(:first-child) .select2-container {
+  border-left: 1px solid #E4ECFF; }
 .bt-elwg-cars-search--default .bt-elwg-cars-search--header {
   display: none; }
 .bt-elwg-cars-search--default .bt-elwg-cars-search--form {
@@ -7032,47 +7075,6 @@ body {
     left: 0;
     top: 0;
     z-index: -1; }
-  .bt-elwg-cars-search--default .bt-elwg-cars-search--form-top-search {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 14px;
-    flex-wrap: wrap; }
-    .bt-elwg-cars-search--default .bt-elwg-cars-search--form-top-search-inner {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap; }
-      .bt-elwg-cars-search--default .bt-elwg-cars-search--form-top-search-inner .item-top-search:not(:first-child) {
-        position: relative;
-        padding-left: 24px; }
-        @media (max-width: 640.98px) {
-          .bt-elwg-cars-search--default .bt-elwg-cars-search--form-top-search-inner .item-top-search:not(:first-child) {
-            padding-left: 18px; } }
-        .bt-elwg-cars-search--default .bt-elwg-cars-search--form-top-search-inner .item-top-search:not(:first-child)::before {
-          content: "";
-          display: inline-block;
-          width: 2px;
-          height: 100%;
-          max-height: 15px;
-          background-color: #fff;
-          position: absolute;
-          left: 12px;
-          top: calc(50% + 2px);
-          transform: translateY(-50%); }
-          @media (max-width: 640.98px) {
-            .bt-elwg-cars-search--default .bt-elwg-cars-search--form-top-search-inner .item-top-search:not(:first-child)::before {
-              width: 1px;
-              left: 9px; } }
-    .bt-elwg-cars-search--default .bt-elwg-cars-search--form-top-search a, .bt-elwg-cars-search--default .bt-elwg-cars-search--form-top-search p {
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 18px;
-      margin: 0; }
-    .bt-elwg-cars-search--default .bt-elwg-cars-search--form-top-search p {
-      text-transform: uppercase;
-      margin-top: 2px; }
-    .bt-elwg-cars-search--default .bt-elwg-cars-search--form-top-search a {
-      text-decoration-line: underline; }
 .bt-elwg-cars-search--default .bt-elwg-cars-search-inner {
   box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.3); }
   @media (min-width: 641px) {
@@ -7081,8 +7083,6 @@ body {
   @media (min-width: 641px) {
     .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-form-field {
       width: calc((100% - 56px) / 3); } }
-  .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select:not(:first-child) .select2-container {
-    border-left: 1px solid #E4ECFF; }
   .bt-elwg-cars-search--default .bt-elwg-cars-search-inner .bt-field-type-select .select2-container {
     min-height: 64px;
     display: flex;
@@ -7146,6 +7146,34 @@ body {
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 8; }
+.bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner, .bt-elwg-cars-search--style-2 .bt-elwg-cars-search-inner {
+  background-color: var(--e-global-color-accent, #1FBECD); }
+.bt-elwg-cars-search--style-1 .bt-elwg-cars-search--form .bt-form-field.bt-field-submit, .bt-elwg-cars-search--style-2 .bt-elwg-cars-search--form .bt-form-field.bt-field-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 10px; }
+  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--form .bt-form-field.bt-field-submit input[type="submit"], .bt-elwg-cars-search--style-2 .bt-elwg-cars-search--form .bt-form-field.bt-field-submit input[type="submit"] {
+    padding: 0;
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 211.765%;
+    border: none;
+    background: transparent; }
+.bt-elwg-cars-search--style-2 .bt-elwg-cars-search-inner {
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.3); }
+.bt-elwg-cars-search--style-2 .bt-elwg-cars-search--form form {
+  padding: 0 6px; }
+.bt-elwg-cars-search--style-2 .bt-elwg-cars-search--form .bt-form-field {
+  width: 100%;
+  max-width: calc((100% - 207px) / 4); }
+  .bt-elwg-cars-search--style-2 .bt-elwg-cars-search--form .bt-form-field.bt-field-car_condition {
+    display: none; }
+  .bt-elwg-cars-search--style-2 .bt-elwg-cars-search--form .bt-form-field.bt-field-submit {
+    background-color: var(--e-global-color-secondary, #111); }
 .bt-elwg-cars-search--style-1 .select2-container--default .select2-selection--single, .bt-elwg-cars-search--style-1 .elementor-editor-active .select2-container--default .select2-selection--single {
   background: transparent;
   border: 2px solid #fff;
@@ -7160,7 +7188,6 @@ body {
 .bt-elwg-cars-search--style-1 .select2-container--default .select2-selection__arrow b, .bt-elwg-cars-search--style-1 .elementor-editor-active .select2-container--default .select2-selection__arrow b {
   border-color: #fff !important; }
 .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner {
-  background-color: var(--e-global-color-accent, #1FBECD);
   padding: 49px 12% 54.71px 12%;
   filter: drop-shadow(0px 0px 50px rgba(35, 31, 32, 0.15)); }
   .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner form {
@@ -7172,22 +7199,9 @@ body {
         margin-bottom: 20px; }
     .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner form .bt-field-submit {
       background-color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-      border-radius: 10px;
       min-height: 60px; }
       .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner form .bt-field-submit input[type="submit"] {
-        background-color: transparent;
-        padding: 0;
-        width: auto;
-        height: auto;
-        font-size: 17px;
-        font-weight: 700;
-        line-height: 211.765%;
-        color: var(--e-global-color-secondary, #111);
-        border: none; }
+        color: var(--e-global-color-secondary, #111); }
       .bt-elwg-cars-search--style-1 .bt-elwg-cars-search-inner form .bt-field-submit svg path {
         stroke: var(--e-global-color-secondary, #111); }
 .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header {

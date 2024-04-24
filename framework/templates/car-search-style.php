@@ -46,6 +46,16 @@
                 $field_value = (isset($_GET['car_price'])) ? $_GET['car_price'] : '';
                 $field_step  = 1000;
                 autoart_cars_field_select_range_html('car_price', $field_title, $field_value, $field_step);
+
+                if($args['layout'] == 'style-2'){
+                    $field_title = __('Choose Year', 'autoart');
+                    $field_value = (isset($_GET['car_year'])) ? $_GET['car_year'] : '';
+                    autoart_cars_field_select_number_html('car_year', $field_title, $field_value);
+
+                    $field_name = __('Condition', 'autoart');
+                    $field_value = (isset($_GET['car_condition'])) ? $_GET['car_condition'] : '';
+                    autoart_cars_field_select_html('car_condition', $field_name, $field_value);
+                }
             ?> 
 
             <div class="bt-form-field bt-field-submit"> 

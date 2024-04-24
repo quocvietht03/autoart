@@ -1934,28 +1934,95 @@
     }
   }
 
-  &--default, &--style-3{
-    .bt-elwg-cars-search{
+  &--form{
+    &-top-search{
+      display: flex;
+      align-items: center;
+      gap:4px;
+      margin-top: 14px;
+      flex-wrap: wrap;
       &-inner{
-        .select2-container .select2-selection--single{
-          border: none;
-          border-radius: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .item-top-search{
+          &:not(:first-child){
+            position: relative;
+            padding-left: 24px;
+
+            @media (max-width: 640.98px) {
+              padding-left: 18px;
+            }
+
+            &::before{
+              content: "";
+              display: inline-block;
+              width: 2px;
+              height: 100%;
+              max-height: 15px;
+              background-color: #fff;
+              position: absolute;
+              left: 12px;
+              top:calc(50% + 2px);
+              transform: translateY(-50%);
+
+              @media (max-width: 640.98px) {
+                width: 1px;
+                left: 9px;
+              }
+            }
+          }
         }
+      }
+      a, p{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;  
+        margin: 0;
+      }
+
+      p{
+        text-transform: uppercase;
+        margin-top: 2px;
+      }
+
+      a{
+        text-decoration-line: underline;
       }
     }
+  }
 
-    .bt-car-search-form{
-      @media (max-width: 640.98px) {
-        flex-wrap: wrap;
-      }
-      .bt-form-field {
-        @media (max-width: 640.98px) {
-          width: 100%;
+  &--default, &--style-2{
+    .select2-container .select2-selection--single{
+      border: none;
+      border-radius: 0;
+    }
+
+    .bt-elwg-cars-search{
+      &--form{
+        form{
+          @media (max-width: 640.98px) {
+            flex-wrap: wrap;
+          }
         }
 
-        &:not(:last-child){
+        .bt-form-field {
           @media (max-width: 640.98px) {
-            border-bottom: 1px solid $color-accent;
+            width: 100%;
+          }
+  
+          &:not(:last-child){
+            @media (max-width: 640.98px) {
+              border-bottom: 1px solid $color-accent;
+            }
+          }
+
+          &.bt-field-type-select{
+            &:not(:first-child){
+              .select2-container{
+                border-left: 1px solid #E4ECFF;
+              }
+            }
           }
         }
       }
@@ -1983,62 +2050,6 @@
           top: 0;
           z-index: -1;
         }
-
-        &-top-search{
-          display: flex;
-          align-items: center;
-          gap:4px;
-          margin-top: 14px;
-          flex-wrap: wrap;
-          &-inner{
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            .item-top-search{
-              &:not(:first-child){
-                position: relative;
-                padding-left: 24px;
-
-                @media (max-width: 640.98px) {
-                  padding-left: 18px;
-                }
-
-                &::before{
-                  content: "";
-                  display: inline-block;
-                  width: 2px;
-                  height: 100%;
-                  max-height: 15px;
-                  background-color: #fff;
-                  position: absolute;
-                  left: 12px;
-                  top:calc(50% + 2px);
-                  transform: translateY(-50%);
-
-                  @media (max-width: 640.98px) {
-                    width: 1px;
-                    left: 9px;
-                  }
-                }
-              }
-            }
-          }
-          a, p{
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 18px;  
-            margin: 0;
-          }
-
-          p{
-            text-transform: uppercase;
-            margin-top: 2px;
-          }
-
-          a{
-            text-decoration-line: underline;
-          }
-        }
       }
 
       &-inner{
@@ -2056,12 +2067,6 @@
         }
         
         .bt-field-type-select{
-          &:not(:first-child){
-            .select2-container{
-              border-left: 1px solid #E4ECFF;
-            }
-          }
-
           .select2-container{
             min-height: 64px;
             display: flex;
@@ -2148,6 +2153,68 @@
     }
   }
 
+  &--style-1, &--style-2{
+    .bt-elwg-cars-search{
+      &-inner{
+        background-color: $color-accent;
+      }
+
+      &--form{
+        .bt-form-field{
+          &.bt-field-submit{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            border-radius: 10px;
+            input[type="submit"]{
+              padding: 0;
+              width: auto;
+              height: auto;
+              font-size: 17px;
+              font-weight: 700;
+              line-height: 211.765%;
+              border: none;
+              background:transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--style-2{
+    // .select2-container{
+    //   max-width: 100% !important;
+    //   border-radius: 10px;
+    // }
+
+    .bt-elwg-cars-search{
+      &-inner{
+        box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.30);
+      }
+
+      &--form{
+        form{
+          padding:0 6px;
+        }
+
+        .bt-form-field{
+          width: 100%;
+          max-width: calc((100% - 207px) / 4);
+
+          &.bt-field-car_condition{
+            display: none;
+          }
+
+          &.bt-field-submit{
+            background-color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+  
   &--style-1{
     .select2-container--default, .elementor-editor-active .select2-container--default{
       .select2-selection{
@@ -2176,7 +2243,6 @@
 
     .bt-elwg-cars-search{
       &-inner{
-        background-color: $color-accent;
         padding: 49px 12% 54.71px 12%;
         filter: drop-shadow(0px 0px 50px rgba(35, 31, 32, 0.15));
         form{
@@ -2191,23 +2257,10 @@
 
           .bt-field-submit{
             background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 6px;
-            border-radius: 10px;
             min-height: 60px;
 
             input[type="submit"]{
-              background-color: transparent;
-              padding: 0;
-              width: auto;
-              height: auto;
-              font-size: 17px;
-              font-weight: 700;
-              line-height: 211.765%;
               color: $color-secondary;
-              border: none;
             }
 
             svg{

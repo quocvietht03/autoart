@@ -113,6 +113,10 @@
 		hanldeCarsSearchForm($scope)
 	}
 
+	var CarsSearchStyle2Handler = function( $scope, $ ) {
+		hanldeCarsSearchForm($scope)
+	}
+
 	function hanldeCarsSearchForm($data){
 		const $formSearch = $data.find('.bt-car-search-form');
 		if (!$formSearch.length) return;
@@ -157,6 +161,7 @@
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-pricing-tabs.default', TabsHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search.default', CarsSearchHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search-style-1.default', CarsSearchStyle1Handler );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search-style-2.default', CarsSearchStyle2Handler );
 	} );
 
 } )( jQuery );
