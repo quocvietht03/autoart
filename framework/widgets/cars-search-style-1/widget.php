@@ -163,6 +163,13 @@ class Widget_CarsSearchStyle1 extends Widget_Base {
 				]
 			);
 
+			$this->add_group_control(
+				\Elementor\Group_Control_Css_Filter::get_type(),[
+					'name' => 'ss_cars_search_general_css_filters',
+					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner',
+				]
+			);
+	
 		$this->end_controls_section();
 
 		$this->start_controls_section(
