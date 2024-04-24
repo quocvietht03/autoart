@@ -1954,7 +1954,9 @@
         }
 
         &:not(:last-child){
-          border-bottom: 1px solid $color-accent;
+          @media (max-width: 640.98px) {
+            border-bottom: 1px solid $color-accent;
+          }
         }
       }
     }
@@ -2070,19 +2072,6 @@
             @media (max-width: 640.98px) {
               min-height: 48px;
             }
-            
-            &.select2-container--open{
-              .select2-selection--single{
-                .select2-selection{
-                  &__arrow{
-                    b{
-                      transform: translate(-50%, -50%) rotate(315deg);
-                      margin-top: 2px;
-                    }
-                  }
-                }
-              }
-            }
 
             .selection{
               height: 64px;
@@ -2093,10 +2082,11 @@
             }
 
             .select2-selection--single{
-              display: flex;
-              align-items: center;
               height: 64px;
               gap: 18px;
+              padding: 0;
+              justify-content: flex-start;
+              gap: 0;
 
               @media (max-width: 640.98px) {
                 height: 48px;
@@ -2106,37 +2096,12 @@
                 justify-content: space-between;
               }
 
-              .select2-selection{
-                &__arrow{
-                  width: 20px;
-                  height: auto;
-                  position: relative;
-
-                  b{
-                    width: 11px;
-                    height: 11px;
-                    border-top: 2px solid $color-accent;
-                    border-right: 2px solid $color-accent;
-                    transition: 0.3s all cubic-bezier(1, 0.25, 0.25, 0.8);
-                    will-change: transform;
-                    transform: rotate(135deg);
-                    border-left: none;
-                    border-bottom: none;
-                    margin: -3px 0 0 0;
-                    transform: translate(-50%, -50%) rotate(135deg);
-                    padding: 0;
-                    transition: $transition;
-                    border-radius: 0 3px 0px 0;
-                  }
-                }
-
-                &__rendered {
-                  padding: 0;
-                  font-size: 16px;
-                  font-style: normal;
-                  font-weight: 400;
-                  font-style: normal;
-                }
+              &__rendered {
+                padding: 0;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                font-style: normal;
               }
             }
           }
