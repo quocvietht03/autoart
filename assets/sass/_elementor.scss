@@ -1925,8 +1925,9 @@
     form{
       display: flex;
       align-items: center;
-      background-color: #fff;
+      background: #fff;
       border-radius: 10px;
+
       .bt-field-submit{
         position: relative;
       }
@@ -1942,24 +1943,60 @@
         }
       }
     }
+
+    .bt-car-search-form{
+      @media (max-width: 640.98px) {
+        flex-wrap: wrap;
+      }
+      .bt-form-field {
+        @media (max-width: 640.98px) {
+          width: 100%;
+        }
+
+        &:not(:last-child){
+          border-bottom: 1px solid $color-accent;
+        }
+      }
+    }
   }
 
   &--default{
     .bt-elwg-cars-search{
       &--form{
+        position: relative;
+        z-index: 9;
+        overflow: hidden;
+        background: $color-secondary;
+        &::before{
+          content: " ";
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+        }
+
         &-top-search{
           display: flex;
           align-items: center;
           gap:4px;
           margin-top: 14px;
+          flex-wrap: wrap;
           &-inner{
             display: flex;
             align-items: center;
-
+            flex-wrap: wrap;
             .item-top-search{
               &:not(:first-child){
                 position: relative;
                 padding-left: 24px;
+
+                @media (max-width: 640.98px) {
+                  padding-left: 18px;
+                }
+
                 &::before{
                   content: "";
                   display: inline-block;
@@ -1971,6 +2008,11 @@
                   left: 12px;
                   top:calc(50% + 2px);
                   transform: translateY(-50%);
+
+                  @media (max-width: 640.98px) {
+                    width: 1px;
+                    left: 9px;
+                  }
                 }
               }
             }
@@ -1979,7 +2021,6 @@
             font-size: 14px;
             font-weight: 700;
             line-height: 18px;  
-            color: #fff;
             margin: 0;
           }
 
@@ -1996,13 +2037,16 @@
 
       &-inner{
         box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.30);
-        border-style: solid;
         form{
-          padding-right: 5px;
+          @media (min-width: 641px) { 
+            padding-right: 5px;   
+          }
         }
 
         .bt-form-field{
-          width: calc(100% / 3);
+          @media (min-width: 641px) { 
+            width: calc(100% / 3);
+          }
         }
         
         .bt-field-type-select{
@@ -2017,7 +2061,16 @@
             display: flex;
             align-items: center;
             padding-left: 24px;
+            padding-right: 15px;
 
+            @media(max-width: $break-sm) {
+              padding-left: 15px;
+            }
+
+            @media (max-width: 640.98px) {
+              min-height: 48px;
+            }
+            
             &.select2-container--open{
               .select2-selection--single{
                 .select2-selection{
@@ -2033,6 +2086,10 @@
 
             .selection{
               height: 64px;
+              width: 100%;
+              @media (max-width: 640.98px) {
+                height: 48px;
+              }
             }
 
             .select2-selection--single{
@@ -2041,11 +2098,20 @@
               height: 64px;
               gap: 18px;
 
+              @media (max-width: 640.98px) {
+                height: 48px;
+              }
+
+              @media (max-width: 640.98px) {
+                justify-content: space-between;
+              }
+
               .select2-selection{
                 &__arrow{
-                  position: relative;
-                  width: auto;
+                  width: 20px;
                   height: auto;
+                  position: relative;
+
                   b{
                     width: 11px;
                     height: 11px;
@@ -2077,11 +2143,17 @@
         }
 
         .bt-field-submit{
-          width: 56px;
-          height: 54px;
           overflow: hidden;
           background-color: $color-accent;
           border-radius: 10px;
+          min-width: 56px;
+          min-height: 54px;
+          max-width: 56px;
+
+          @media (max-width: 640.98px) {
+            min-width: 100%;
+            border-radius: 0px 0px 10px 10px;
+          }
 
           input[type="submit"]{
             background-color: transparent;

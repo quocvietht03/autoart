@@ -9,6 +9,7 @@ use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Background;
+use Elementor\Group_Control_Css_Filter;
 
 class Widget_CarsSearch extends Widget_Base {
 
@@ -32,6 +33,10 @@ class Widget_CarsSearch extends Widget_Base {
 		return ['select2-min', 'elementor-widgets' ];
 	}
 
+	public function get_style_depends() {
+		return [ 'select2-min', 'bt-main'];
+	}
+	
 	protected function register_content_section_controls() {
 		$this->start_controls_section(
 			'ss_cars_search_content',[
@@ -40,8 +45,7 @@ class Widget_CarsSearch extends Widget_Base {
 		);
 
 			$this->add_control(
-				'top_search_heading',
-				[
+				'top_search_heading',[
 					'label' => __( 'Top Search', 'autoart' ),
 					'type' => Controls_Manager::HEADING,
 				]
@@ -52,7 +56,7 @@ class Widget_CarsSearch extends Widget_Base {
 					'label'       => __( 'Title', 'autoart' ),
 					'type'        => Controls_Manager::TEXT,
 					'label_block' => true,
-					'default'     => 'Top Seach',
+					'default'     => 'Top Seach:',
 				]
 			);
 
@@ -60,7 +64,7 @@ class Widget_CarsSearch extends Widget_Base {
 
 			$repeater->add_control(
 				'top_search_text', [
-					'label'       => __( 'Text', 'autoart' ),
+					'label'       => esc_html__( 'Text', 'autoart' ),
 					'type'        => Controls_Manager::TEXT,
 					'label_block' => true,
 					'default'     => 'This is text',
@@ -69,7 +73,7 @@ class Widget_CarsSearch extends Widget_Base {
 
 			$repeater->add_control(
 				'top_search_link', [
-					'label' => __( 'Link', 'autoart' ),
+					'label' => esc_html__( 'Link', 'autoart' ),
 					'type' => Controls_Manager::TEXT,
 					'label_block' => true,
 					'default' => '',
@@ -78,7 +82,7 @@ class Widget_CarsSearch extends Widget_Base {
 
 			$this->add_control(
 				'cars_top_search',[
-					'label' => __( 'List Items', 'autoart' ),
+					'label' => esc_html__( 'List Items', 'autoart' ),
 					'type' => Controls_Manager::REPEATER,
 					'fields' => $repeater->get_controls(),
 					'default' => [
@@ -100,60 +104,6 @@ class Widget_CarsSearch extends Widget_Base {
 			);
 
 		$this->end_controls_section();
-
-		$this->start_controls_section(
-			'section_layout',[
-				'label' => __( 'Layout', 'autoart' ),
-			]
-		);
-
-			$this->add_responsive_control(
-				'text_align',[
-					'label' => esc_html__( 'Alignment', 'autoart' ),
-					'type'  => Controls_Manager::CHOOSE,
-					'options' => [
-						'start' => [
-							'title' => esc_html__( 'Left', 'autoart' ),
-							'icon'  => 'eicon-text-align-left',
-						],
-						'center' => [
-							'title' => esc_html__( 'Center', 'autoart' ),
-							'icon'  => 'eicon-text-align-center',
-						],
-						'end' => [
-							'title' => esc_html__( 'Right', 'autoart' ),
-							'icon'  => 'eicon-text-align-right',
-						],
-					],
-					'default' => 'start',
-					'toggle' => true,
-					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-cars-search-inner ul' => 'justify-content: {{VALUE}};',
-					],
-				]
-			);
-
-			$this->add_responsive_control(
-				'account_login_space',[
-					'label' => __( 'Space Between', 'autoart' ),
-					'type' => Controls_Manager::SLIDER,
-					'default' => [
-						'size' => 20,
-					],
-					'range' => [
-						'px' => [
-							'min' => 0,
-							'max' => 100,
-						],
-					],
-					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-cars-search-inner ul' => 'gap: {{SIZE}}{{UNIT}}',
-						'{{WRAPPER}} .bt-elwg-cars-search-inner ul li:before' => 'left: calc( -{{SIZE}}{{UNIT}} / 2 )',
-					],
-				]
-			);
-
-		$this->end_controls_section();
 	}
 
 	protected function register_style_content_section_controls() {
@@ -166,18 +116,18 @@ class Widget_CarsSearch extends Widget_Base {
 
 			$this->add_control(
 				'ss_cars_search_general_bcl',[
-					'label' => __( 'Border Color', 'autoart' ),
+					'label' => esc_html__( 'Background Color', 'autoart' ),
 					'type' => Controls_Manager::COLOR,
 					'default' => '#fff',
 					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'border-color: {{VALUE}};',
+						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'background-color: {{VALUE}};',
 					],
 				]
 			);
 
 			$this->add_responsive_control(
-				'ss_cars_search_general_bdw',[
-					'label' => __( 'Border Width', 'autoart' ),
+				'ss_cars_search_general_pd',[
+					'label' => esc_html__( 'Padding', 'autoart' ),
 					'type' => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -194,14 +144,14 @@ class Widget_CarsSearch extends Widget_Base {
 						'unit'   => 'px',
 					],
 					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 					],
 				]
 			);
 
 			$this->add_responsive_control(
 				'ss_cars_search_general_bri',[
-					'label' => __( 'Border Radius', 'autoart' ),
+					'label' => esc_html__( 'Border Radius', 'autoart' ),
 					'type' => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -219,44 +169,15 @@ class Widget_CarsSearch extends Widget_Base {
 					],
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+						'{{WRAPPER}} .bt-elwg-cars-search--form' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 					],
 				]
 			);
 
-		$this->end_controls_section();
-
-
-		$this->start_controls_section(
-			'ss_style_form_bg',[
-				'label' => esc_html__( 'Background', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
-			]
-		);
-
 			$this->add_group_control(
-				Group_Control_Background::get_type(),[
-					'name'     => 'elwg_cars_search_bg',
-					'label'    => __( 'Color', 'autoart' ),
-					'types'    => [ 'classic', 'gradient' ],
-					'selector' => '{{WRAPPER}} .bt-elwg-cars-search--form',
-				]
-			);
-
-		$this->end_controls_section();
-
-		$this->start_controls_section(
-			'ss_style_form_bg_overlay',[
-				'label' => esc_html__( 'Background Overlay', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
-			]
-		);
-
-			$this->add_group_control(
-				Group_Control_Background::get_type(),[
-					'name'     => 'elwg_cars_search_bg_overlay',
-					'label'    => __( 'Color', 'autoart' ),
-					'types'    => [ 'classic', 'gradient' ],
-					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner:before',
+				\Elementor\Group_Control_Box_Shadow::get_type(),[
+					'name' => 'ss_cars_search_general_box_shadow',
+					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner',
 				]
 			);
 
@@ -268,11 +189,9 @@ class Widget_CarsSearch extends Widget_Base {
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
-
-
 			$this->add_responsive_control(
 				'ss_style_form_search_pd',[
-					'label' => __( 'Padding', 'autoart' ),
+					'label' => esc_html__( 'Padding', 'autoart' ),
 					'type'  => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
@@ -297,23 +216,168 @@ class Widget_CarsSearch extends Widget_Base {
 			$this->add_group_control(
 				Group_Control_Typography::get_type(),
 				[
-					'name' => 'ss_style_form_search_typography',
-					'label' => __( 'Typography', 'autoart' ),
-					'default' => '',
+					'name'     => 'ss_style_form_search_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
 					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner .bt-field-type-select .select2-container .select2-selection--single .select2-selection__rendered',
+				]
+			);
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'ss_style_top_search',[
+				'label' => esc_html__( 'Top Search', 'autoart' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+			$this->add_control(
+				'top_search_heading_title',[
+					'label' => esc_html__( 'Title', 'autoart' ),
+					'type'  => Controls_Manager::HEADING,
+				]
+			);
+
+			$this->add_group_control(
+				Group_Control_Typography::get_type(),[
+					'name'     => 'top_search_title_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
+					'selector' => '{{WRAPPER}} .bt-elwg-cars-search--form-top-search p',
 				]
 			);
 
 			$this->add_control(
-				'account_login_color',
-				[
-					'label' => __( 'Color', 'autoart' ),
-					'type' => Controls_Manager::COLOR,
-					'default' => '',
+				'top_search_title_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '#fff',
 					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-cars-search-inner ul li a' => 'color: {{VALUE}};',
-						'{{WRAPPER}} .bt-elwg-cars-search-inner ul li span' => 'color: {{VALUE}};',
-						'{{WRAPPER}} .bt-elwg-cars-search-inner ul li:before' => 'background-color: {{VALUE}};',
+						'{{WRAPPER}} .bt-elwg-cars-search--form-top-search p' => 'color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
+				'top_search_heading_content',[
+					'label' => esc_html__( 'Content', 'autoart' ),
+					'type'  => Controls_Manager::HEADING,
+				]
+			);
+
+			$this->add_group_control(
+				Group_Control_Typography::get_type(),[
+					'name'     => 'top_search_content_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
+					'selector' => '{{WRAPPER}} .bt-elwg-cars-search--form-top-search a',
+				]
+			);
+
+			$this->add_control(
+				'top_search_content_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '#fff',
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-cars-search--form-top-search a' => 'color: {{VALUE}};',
+					],
+				]
+			);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'ss_style_form_bg',[
+				'label' => esc_html__( 'Background', 'autoart' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+			$this->add_group_control(
+				Group_Control_Background::get_type(),[
+					'name'     => 'elwg_cars_search_bg',
+					'label'    => esc_html__( 'Color', 'autoart' ),
+					'types'    => [ 'classic', 'gradient' ],
+					'selector' => '{{WRAPPER}} .bt-elwg-cars-search--form',
+				]
+			);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'ss_style_form_bg_overlay',[
+				'label' => esc_html__( 'Background Overlay', 'autoart' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+			$this->add_group_control(
+				Group_Control_Background::get_type(),[
+					'name'     => 'elwg_cars_search_bg_overlay',
+					'label'    => esc_html__( 'Color', 'autoart' ),
+					'types'    => ['classic', 'gradient' ],
+					'selector' => '{{WRAPPER}} .bt-elwg-cars-search--form::before',
+				]
+			);
+
+			$this->add_responsive_control(
+				'elwg_cars_search_bg_overlay_opacity',[
+					'label' => esc_html__( 'Opacity', 'autoart' ),
+					'type'  => Controls_Manager::SLIDER,
+					'default'  => [
+						'size' => .5,
+					],
+					'range' => [
+						'px' => [
+							'max' => 1,
+							'step' => 0.01,
+						],
+					],
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-cars-search--form::before' => 'opacity: {{SIZE}};',
+					],
+					'condition' => [
+						'elwg_cars_search_bg_overlay_background' => [ 'classic', 'gradient' ],
+					],
+				]
+			);
+
+			$this->add_control(
+				'elwg_cars_search_bg_overlay_blend_mode',[
+					'label'   => esc_html__( 'Blend Mode', 'autoart' ),
+					'type'    => Controls_Manager::SELECT,
+					'options' => [
+						''            => esc_html__( 'Normal', 'autoart' ),
+						'multiply'    => esc_html__( 'Multiply', 'autoart' ),
+						'screen'      => esc_html__( 'Screen', 'autoart' ),
+						'overlay'     => esc_html__( 'Overlay', 'autoart' ),
+						'darken'      => esc_html__( 'Darken', 'autoart' ),
+						'lighten'     => esc_html__( 'Lighten', 'autoart' ),
+						'color-dodge' => esc_html__( 'Color Dodge', 'autoart' ),
+						'saturation'  => esc_html__( 'Saturation', 'autoart' ),
+						'color'       => esc_html__( 'Color', 'autoart' ),
+						'luminosity'  => esc_html__( 'Luminosity', 'autoart' ),
+						'difference'  => esc_html__( 'Difference', 'autoart' ),
+						'exclusion'   => esc_html__( 'Exclusion', 'autoart' ),
+						'hue'         => esc_html__( 'Hue', 'autoart' ),
+					],
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-cars-search--form::before' => 'mix-blend-mode: {{VALUE}}',
+					],
+					'conditions' => [
+						'relation' => 'or',
+						'terms' => [
+							[
+								'name'     => 'elwg_cars_search_bg_overlay_image[url]',
+								'operator' => '!==',
+								'value'    => '',
+							],
+							[
+								'name'     => 'elwg_cars_search_bg_overlay_color',
+								'operator' => '!==',
+								'value'    => '',
+							],
+						],
 					],
 				]
 			);
