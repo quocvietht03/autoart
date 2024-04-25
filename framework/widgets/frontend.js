@@ -105,12 +105,73 @@
 
  	};
 
+	var CarsSearchHandler = function( $scope, $ ) {
+		hanldeCarsSearchForm($scope)
+	}
+
+	var CarsSearchStyle1Handler = function( $scope, $ ) {
+		hanldeCarsSearchForm($scope)
+	}
+
+	var CarsSearchStyle2Handler = function( $scope, $ ) {
+		hanldeCarsSearchForm($scope)
+	}
+
+	function hanldeCarsSearchForm($data){
+		const $formSearch = $data.find('.bt-car-search-form');
+		if (!$formSearch.length) return;
+
+		const $fieldSelect = $formSearch.find('.bt-field-type-select select')
+
+		if($fieldSelect.length > 0) {
+			$fieldSelect.select2();
+		}
+		
+		$formSearch.on('submit', function(event) {
+			event.preventDefault();
+			
+			const car_make  = $(this).find('select[name="car_make"]').val();
+			const car_price = $(this).find('select[name="car_price"]').val();
+			const car_model = $(this).find('select[name="car_model"]').val();
+			const car_year  = $(this).find('select[name="car_year"]').val();
+			const car_condition = $(this).find("input[name='car_condition']:checked").val();
+			
+			let url = '/cars?';
+
+			if (car_make) {
+				url += 'car_make=' + car_make + '&';
+			}
+	
+			if (car_price) {
+				url += 'car_price=' + car_price + '&';
+			}
+	
+			if (car_model) {
+				url += 'car_model=' + car_model + '&';
+			}
+
+			if (car_year) {
+				url += 'car_year=' + car_year + '&';
+			}
+
+			if (car_condition) {
+				url += 'car_condition=' + car_condition + '&';
+			}
+	
+			url = url.slice(0, -1);
+	
+			window.location.href = url;
+		})
+	}
+
 	// Make sure you run this code under Elementor.
 	$( window ).on( 'elementor/frontend/init', function() {
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-testimonial-slider.default', SliderSyncingHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-step-list.default', MoreStepsHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-pricing-tabs.default', TabsHandler );
-
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search.default', CarsSearchHandler );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search-style-1.default', CarsSearchStyle1Handler );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search-style-2.default', CarsSearchStyle2Handler );
 	} );
 
 } )( jQuery );

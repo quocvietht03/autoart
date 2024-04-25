@@ -36,7 +36,7 @@ class Widget_CardImageTextGrid extends Widget_Base {
 	protected function register_layout_section_controls() {
 		$this->start_controls_section(
 			'section_content',[
-				'label' => __( 'Content', 'autoart' ),
+				'label' => esc_html__( 'Content', 'autoart' ),
 			]
 		);
 
@@ -44,8 +44,8 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 		$repeater->add_control(
 			'citg_image', [
-				'label' => __( 'Image', 'autoart' ),
-				'type' => Controls_Manager::MEDIA,
+				'label'   => esc_html__( 'Image', 'autoart' ),
+				'type'    => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
 				],
@@ -54,27 +54,27 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 		$repeater->add_control(
 			'citg_text', [
-				'label' => __( 'Text', 'autoart' ),
-				'type' => Controls_Manager::TEXT,
+				'label'       => esc_html__( 'Text', 'autoart' ),
+				'type'        => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => 'This is text',
+				'default'     => 'This is text',
 			]
 		);
 
 		$repeater->add_control(
 			'citg_link', [
-				'label' => __( 'Button Link', 'autoart' ),
-				'type' => Controls_Manager::TEXT,
+				'label'       => esc_html__( 'Button Link', 'autoart' ),
+				'type'        => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => '',
+				'default'     => '',
 			]
 		);
 
 		$this->add_control(
 			'list_card_image_text',[
-				'label' => __( 'List Card Image Text', 'autoart' ),
-				'type' => Controls_Manager::REPEATER,
-				'fields' => $repeater->get_controls(),
+				'label'   => esc_html__( 'List Card Image Text', 'autoart' ),
+				'type'    => Controls_Manager::REPEATER,
+				'fields'  => $repeater->get_controls(),
 				'default' => [
 					[
 						'citg_image' => Utils::get_placeholder_image_src(),
@@ -99,7 +99,7 @@ class Widget_CardImageTextGrid extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Image_Size::get_type(),[
 				'name'       => 'thumbnail',
-				'label'      => __( 'Image Size', 'autoart' ),
+				'label'      => esc_html__( 'Image Size', 'autoart' ),
 				'show_label' => true,
 				'default'    => 'medium_large',
 				'exclude'    => [ 'custom' ],
@@ -110,14 +110,14 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 		$this->start_controls_section(
 			'section_layout',[
-				'label' => __( 'Layout', 'autoart' ),
+				'label' => esc_html__( 'Layout', 'autoart' ),
 			]
 		);
 
 			$this->add_control(
 				'citg_layout_style',[
-					'label' => __( 'Layout Style', 'autoart' ),
-					'type' => Controls_Manager::SELECT,
+					'label'   => esc_html__( 'Layout Style', 'autoart' ),
+					'type'    => Controls_Manager::SELECT,
 					'default' => 'default',
 					'options' => [
 						'default' => 'Default',
@@ -128,9 +128,9 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 			$this->add_responsive_control(
 				'citg_columns',[
-					'label' => __( 'Columns', 'autoart' ),
-					'type' => Controls_Manager::SELECT,
-					'default' => '3',
+					'label'          => esc_html__( 'Columns', 'autoart' ),
+					'type'           => Controls_Manager::SELECT,
+					'default'        => '3',
 					'tablet_default' => '2',
 					'mobile_default' => '1',
 					'options' => [
@@ -149,13 +149,13 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 			$this->add_responsive_control(
 				'citg_gap_col',[
-					'label' => __( 'Gap between columns', 'autoart' ),
-					'type'  => Controls_Manager::SLIDER,
+					'label'      => esc_html__( 'Gap between columns', 'autoart' ),
+					'type'       => Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%'],
 					'range' => [
 						'px' => [
-							'min' => 0,
-							'max' => 100,
+							'min'  => 0,
+							'max'  => 100,
 							'step' => 1,
 						],
 						'%' => [
@@ -176,6 +176,7 @@ class Widget_CardImageTextGrid extends Widget_Base {
 			$this->add_responsive_control(
 				'citg_gap_row',[
 					'label' => __( 'Gap between rows', 'autoart' ),
+					'label' => esc_html__( 'Layout', 'autoart' ),
 					'type'  => Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%'],
 					'range' => [
@@ -212,17 +213,17 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 			$this->add_responsive_control(
 				'citg_image_height',[
-					'label' => __( 'Height (px)', 'autoart' ),
-					'type'  => Controls_Manager::SLIDER,
+					'label'      => esc_html__( 'Height (px)', 'autoart' ),
+					'type'       => Controls_Manager::SLIDER,
 					'size_units' => [ 'px'],
-					'range' => [
+					'range'      => [
 						'px' => [
 							'min' => 0,
 							'max' => 1000,
 							'step' => 1,
 						]
 					],
-					'default' => [
+					'default'  => [
 						'unit' => 'px',
 						'size' => 402,
 					],
@@ -234,10 +235,10 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 			$this->add_responsive_control(
 				'citg_border_radius',[
-					'label' => __( 'Border Radius', 'autoart' ),
+					'label' => esc_html__( 'Border Radius', 'autoart' ),
 					'type'  => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em' ], 
-					'default' => [
+					'default'    => [
 						'top'    => 20,
 						'right'  => 20,
 						'bottom' => 20,
@@ -269,18 +270,18 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 			$this->add_group_control(
 				Group_Control_Typography::get_type(),[
-					'name' => 'citg_text_typography',
-					'label' => __( 'Typography', 'autoart' ),
-					'default' => '',
+					'name'     => 'citg_text_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
 					'selector' => '{{WRAPPER}} .item-card-image-text h3 ',
 				]
 			);
 
 			$this->add_control(
 				'citg_heading_color',[
-					'label' => __( 'Color', 'autoart' ),
-					'type' => Controls_Manager::COLOR,
-					'default' => '',
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
 					'selectors' => [
 						'{{WRAPPER}} .item-card-image-text h3' => 'color: {{VALUE}};',
 					],
@@ -289,9 +290,9 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 			$this->add_control(
 				'citg_heading_bg',[
-					'label' => __( 'Background Color', 'autoart' ),
-					'type' => Controls_Manager::COLOR,
-					'default' => '',
+					'label'     => esc_html__( 'Background Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
 					'selectors' => [
 						'{{WRAPPER}} .item-card-image-text--content' => 'background-color: {{VALUE}};',
 					],
@@ -300,8 +301,8 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 			$this->add_responsive_control(
 				'citg_heading_padding',[
-					'label' => __( 'Padding', 'autoart' ),
-					'type' => Controls_Manager::DIMENSIONS,
+					'label'      => esc_html__( 'Padding', 'autoart' ),
+					'type'       => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
 						'px' => [
