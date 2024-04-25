@@ -7350,10 +7350,11 @@ body {
 .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header {
   text-align: center;
   padding-bottom: 30px; }
-  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header svg, .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header img {
+  .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header svg {
     width: 100%;
     height: auto;
-    margin-bottom: -18px; }
+    margin-bottom: -18px;
+    max-width: 96px; }
   .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header svg path {
     fill: #fff; }
   .bt-elwg-cars-search--style-1 .bt-elwg-cars-search--header svg > g path {

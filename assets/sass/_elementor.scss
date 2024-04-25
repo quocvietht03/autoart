@@ -2382,10 +2382,11 @@
       &--header{
         text-align: center;
         padding-bottom: 30px;
-        svg, img{
+        svg{
           width: 100%;
           height: auto;
           margin-bottom: -18px;
+          max-width: 96px;
         }
 
         svg{

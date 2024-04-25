@@ -1,25 +1,19 @@
 <?php 
     $data = $args['data'];
-    // echo "<pre>";
-    // echo print_r($data['car_form_search_icon']);
-    // echo "</pre>";
 ?>
 
 <div class="bt-elwg-cars-search-inner">
     <div class="bt-elwg-cars-search--header"> 
         <?php if($args['layout'] == 'style-1'): ?>
-            <?php if( isset($data['car_form_search_icon']) && !empty($data['car_form_search_icon'])): ?>
-                <?php 
-                    $icon      = $data['car_form_search_icon'];
-                    $path_info = pathinfo($icon['url']);    
-
-                    if (strtolower($path_info['extension']) === 'svg') {
-                        echo file_get_contents( $icon['url'] );
-                    } else {
-                        echo '<img src=" ' . esc_url( $icon['url'] ) . ' " alt="image">';
-                    }
-                ?>
-            <?php endif; ?>   
+            <svg width="96" height="49" viewBox="0 0 96 49" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="96" height="49" fill="url(#pattern0_374_2230)"/>
+                <defs>
+                <pattern id="pattern0_374_2230" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_374_2230" transform="scale(0.0104167 0.0204082)"/>
+                </pattern>
+                <image id="image0_374_2230" width="96" height="49" xlink:href="data:image/png;base64,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"/>
+                </defs>
+            </svg>  
 
             <?php if( isset($data['car_form_search_heading']) && !empty($data['car_form_search_heading'])): ?>
                 <h3> <?php echo esc_attr($data['car_form_search_heading']) ?> </h3>
