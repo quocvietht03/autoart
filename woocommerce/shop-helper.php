@@ -142,8 +142,40 @@ function autoart_woocommerce_custom_field() {
     array(
       'id'          => '_subtitle',
       'label'       => __( 'Subtitle', 'autoart' ),
-      'description' => __( 'Enter the subtitle.', 'autoart' )
+      'description' => ''
     )
+  );
+
+	woocommerce_wp_textarea_input(
+		array(
+      'id'          => '_newsletter_shortcode',
+      'label'       => __( 'Newsletter Shortcode', 'autoart' ),
+      'description' => ''
+    )
+  );
+
+	$supported_ids = [];
+	$supported_ids[] = __( 'Choose Dealer', 'autoart' );
+	
+	$wp_query = new \WP_Query( array(
+								'post_type' => 'dealer',
+								'post_status' => 'publish'
+							) );
+
+	if ( $wp_query->have_posts() ) {
+		while ( $wp_query->have_posts() ) {
+			$wp_query->the_post();
+			$supported_ids[get_the_ID()] = get_the_title();
+		}
+	}
+
+	woocommerce_wp_select(
+		array(
+      'id'          => '_dealer',
+      'label'       => __( 'Dealer', 'autoart' ),
+      'description' => '',
+			'options' 		=> $supported_ids
+		)
   );
 }
 
