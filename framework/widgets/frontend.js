@@ -133,7 +133,9 @@
 			const car_make  = $(this).find('select[name="car_make"]').val();
 			const car_price = $(this).find('select[name="car_price"]').val();
 			const car_model = $(this).find('select[name="car_model"]').val();
-
+			const car_year  = $(this).find('select[name="car_year"]').val();
+			const car_condition = $(this).find("input[name='car_condition']:checked").val();
+			
 			let url = '/cars?';
 
 			if (car_make) {
@@ -146,6 +148,14 @@
 	
 			if (car_model) {
 				url += 'car_model=' + car_model + '&';
+			}
+
+			if (car_year) {
+				url += 'car_year=' + car_year + '&';
+			}
+
+			if (car_condition) {
+				url += 'car_condition=' + car_condition + '&';
 			}
 	
 			url = url.slice(0, -1);

@@ -110,19 +110,41 @@ class Widget_CarsSearchStyle2 extends Widget_Base {
 			]
 		);
 
+			$this->add_group_control(
+				Group_Control_Typography::get_type(),[
+					'name'     => 'cars_search_general_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
+					'selector' => '{{WRAPPER}} .bt-field-car_condition .item-radio label',
+				]
+			);
+
+			$this->add_control(
+				'cars_search_general_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
+					'selectors' => [
+						'{{WRAPPER}} .bt-field-car_condition .item-radio label' => 'color: {{VALUE}};',
+					],
+				]
+			);
+
 			$this->add_control(
 				'cars_search_general_bg',[
-					'label' => esc_html__( 'Background Color', 'autoart' ),
-					'type' => Controls_Manager::COLOR,
-					'default' => '',
+					'label'     => esc_html__( 'Background Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'background-color: {{VALUE}};',
+						'{{WRAPPER}} .bt-field-car_condition .item-radio:has(input:checked)' => 'background-color: {{VALUE}};',
+						'{{WRAPPER}} .bt-field-car_condition .item-radio:hover' => 'background-color: {{VALUE}};',
 					],
 				]
 			);
 
 			$this->add_responsive_control(
-				'ss_cars_search_general_pd',[
+				'cars_search_general_pd',[
 					'label' => esc_html__( 'Padding', 'autoart' ),
 					'type' => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%' ],
@@ -133,10 +155,10 @@ class Widget_CarsSearchStyle2 extends Widget_Base {
 						],
 					],
 					'default' => [
-						'top'    => 10,
-						'right'  => 10,
-						'bottom' => 10,
-						'left'   => 10,
+						'top'    => 30,
+						'right'  => 30,
+						'bottom' => 27,
+						'left'   => 29,
 						'unit'   => 'px',
 					],
 					'selectors' => [
@@ -146,9 +168,9 @@ class Widget_CarsSearchStyle2 extends Widget_Base {
 			);
 
 			$this->add_responsive_control(
-				'ss_cars_search_general_bri',[
-					'label' => esc_html__( 'Border Radius', 'autoart' ),
-					'type' => Controls_Manager::DIMENSIONS,
+				'cars_search_general_border_radius',[
+					'label'      => esc_html__( 'Border Radius', 'autoart' ),
+					'type'       => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%' ],
 					'range' => [
 						'px' => [
@@ -157,10 +179,10 @@ class Widget_CarsSearchStyle2 extends Widget_Base {
 						],
 					],
 					'default' => [
-						'top'    => 10,
-						'right'  => 10,
-						'bottom' => 10,
-						'left'   => 10,
+						'top'    => 20,
+						'right'  => 20,
+						'bottom' => 20,
+						'left'   => 20,
 						'unit'   => 'px',
 					],
 					'selectors' => [
@@ -172,7 +194,7 @@ class Widget_CarsSearchStyle2 extends Widget_Base {
 
 			$this->add_group_control(
 				\Elementor\Group_Control_Box_Shadow::get_type(),[
-					'name' => 'ss_cars_search_general_box_shadow',
+					'name'     => 'cars_search_general_box_shadow',
 					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner',
 				]
 			);
@@ -180,7 +202,75 @@ class Widget_CarsSearchStyle2 extends Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'ss_style_top_search',[
+			'cars_search_form_fields_style',[
+				'label' => esc_html__( 'Form Fields', 'autoart' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+			$this->add_group_control(
+				Group_Control_Typography::get_type(),[
+					'name'     => 'cars_search_form_fields_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
+					'selector' => '{{WRAPPER}} .select2-container .select2-selection__rendered',
+				]
+			);
+
+			$this->add_control(
+				'cars_search_form_fields_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
+					'selectors' => [
+						'{{WRAPPER}} .select2-container .select2-selection__rendered' => 'color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
+				'cars_search_form_fields_btn_submit_heading',[
+					'label' => esc_html__( 'Button Submit', 'autoart' ),
+					'type'  => Controls_Manager::HEADING,
+				]
+			);
+
+			$this->add_group_control(
+				Group_Control_Typography::get_type(),[
+					'name'     => 'cars_search_form_fields_btn_submit_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
+					'selector' => '{{WRAPPER}} .bt-form-field.bt-field-submit input[type="submit"]',
+				]
+			);
+
+			$this->add_control(
+				'cars_search_form_fields_btn_submit_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
+					'selectors' => [
+						'{{WRAPPER}} .bt-form-field.bt-field-submit input[type="submit"]' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .bt-field-submit svg path' => 'stroke: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
+				'cars_search_form_fields_btn_submit_bg',[
+					'label'     => esc_html__( 'Background Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
+					'selectors' => [
+						'{{WRAPPER}} .bt-form-field.bt-field-submit' => 'background-color: {{VALUE}};',
+					],
+				]
+			);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'cars_search__ss_top_search',[
 				'label' => esc_html__( 'Top Search', 'autoart' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]

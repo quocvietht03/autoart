@@ -52,9 +52,9 @@
                     $field_value = (isset($_GET['car_year'])) ? $_GET['car_year'] : '';
                     autoart_cars_field_select_number_html('car_year', $field_title, $field_value);
 
-                    $field_name = __('Condition', 'autoart');
+                    $field_name = __('All Cars', 'autoart');
                     $field_value = (isset($_GET['car_condition'])) ? $_GET['car_condition'] : '';
-                    autoart_cars_field_select_html('car_condition', $field_name, $field_value);
+                    autoart_cars_field_radio_html('car_condition', $field_name, $field_value);
                 }
             ?> 
 
