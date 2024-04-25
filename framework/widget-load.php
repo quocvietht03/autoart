@@ -82,6 +82,7 @@ class ElementorWidgets {
 			'cars-search',
 			'cars-search-style-1',
 			'cars-search-style-2',
+			'list-icon-text',
 		);
 
 		return $this->widgets;
@@ -212,7 +213,7 @@ class ElementorWidgets {
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListImageText\Widget_ListImageText());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CardImageTextGrid\Widget_CardImageTextGrid());
-
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListIconText\Widget_ListIconText());
 	}
 
 	/**
