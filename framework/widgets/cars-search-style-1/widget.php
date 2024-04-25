@@ -205,6 +205,86 @@ class Widget_CarsSearchStyle1 extends Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
+			'cars_search_form_fields_style',[
+				'label' => esc_html__( 'Form Fields', 'autoart' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+			$this->add_group_control(
+				Group_Control_Typography::get_type(),[
+					'name'     => 'cars_search_form_fields_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
+					'selector' => '{{WRAPPER}} .select2-container .select2-selection__rendered',
+				]
+			);
+
+			$this->add_control(
+				'cars_search_form_fields_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '#fff',
+					'selectors' => [
+						'{{WRAPPER}} .select2-container .select2-selection__rendered' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .select2-container--default .select2-selection__arrow b' => 'border-color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
+				'cars_search_form_fields_border_color',[
+					'label'     => esc_html__( 'Border Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '#fff',
+					'selectors' => [
+						'{{WRAPPER}} .select2-container--default .select2-selection--single' => 'border-color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
+				'cars_search_form_fields_btn_submit_heading',[
+					'label' => esc_html__( 'Button Submit', 'autoart' ),
+					'type'  => Controls_Manager::HEADING,
+				]
+			);
+
+			$this->add_group_control(
+				Group_Control_Typography::get_type(),[
+					'name'     => 'cars_search_form_fields_btn_submit_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
+					'selector' => '{{WRAPPER}} .bt-form-field.bt-field-submit input[type="submit"]',
+				]
+			);
+
+			$this->add_control(
+				'cars_search_form_fields_btn_submit_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
+					'selectors' => [
+						'{{WRAPPER}} .bt-form-field.bt-field-submit input[type="submit"]' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .bt-field-submit svg path' => 'stroke: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
+				'cars_search_form_fields_btn_submit_bg',[
+					'label'     => esc_html__( 'Background Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '#fff',
+					'selectors' => [
+						'{{WRAPPER}} .bt-form-field.bt-field-submit' => 'background-color: {{VALUE}};',
+					],
+				]
+			);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
 			'car_form_search_ss_style_content',[
 				'label' => esc_html__( 'Content', 'autoart' ),
 				'tab' => Controls_Manager::TAB_STYLE,

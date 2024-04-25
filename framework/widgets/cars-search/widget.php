@@ -218,6 +218,17 @@ class Widget_CarsSearch extends Widget_Base {
 					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner .bt-field-type-select .select2-container .select2-selection--single .select2-selection__rendered',
 				]
 			);
+
+			$this->add_control(
+				'cars_search_form_fields_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
+					'selectors' => [
+						'{{WRAPPER}} .select2-container .select2-selection__rendered' => 'color: {{VALUE}};',
+					],
+				]
+			);
 		$this->end_controls_section();
 
 		$this->start_controls_section(

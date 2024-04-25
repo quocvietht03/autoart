@@ -1927,7 +1927,7 @@
         content: none;
       }
     }
-    
+
     form{
       display: flex;
       align-items: center;
@@ -1957,7 +1957,7 @@
 
         .item-top-search{
           display: flex;
-          
+
           &:not(:first-child){
             position: relative;
             &::before{
@@ -1965,7 +1965,6 @@
               display: inline-block;
               width: 2px;
               height: 75%;
-              background-color: #fff;
               position: absolute;
               left: -12px;
               top: 50%;
@@ -2038,6 +2037,13 @@
   
           @media (max-width: 640.98px) {
             justify-content: space-between;
+          }
+        }
+
+        &__arrow{
+          @media (max-width: 640.98px) {
+            width: 20px;
+            height: 48px;
           }
         }
 
@@ -2324,27 +2330,21 @@
   }
   
   &--style-1{
-    .select2-container--default, .elementor-editor-active .select2-container--default{
+    .select2-container--default, .elementor-editor-active & .select2-container--default{
       .select2-selection{
         &--single{
           background:transparent;
-          border: 2px solid #fff;
+          border-width: 2px;
+          border-style: solid;
           padding-left: 27px;
           height: 60px;
         }
 
         &__rendered{
-          color: #ffff !important;
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
           line-height: normal;
-        }
-
-        &__arrow{
-          b{
-            border-color: #fff !important;
-          }
         }
       }
     }
@@ -2364,7 +2364,6 @@
           }
 
           .bt-field-submit{
-            background-color: #fff;
             min-height: 60px;
 
             input[type="submit"]{

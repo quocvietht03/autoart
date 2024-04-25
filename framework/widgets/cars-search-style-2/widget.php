@@ -325,6 +325,7 @@ class Widget_CarsSearchStyle2 extends Widget_Base {
 					'default'   => '#fff',
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-cars-search--form-top-search a' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .item-top-search:not(:first-child)::before' => 'color: {{VALUE}};',
 					],
 				]
 			);
