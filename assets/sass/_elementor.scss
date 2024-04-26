@@ -123,7 +123,7 @@
 }
 
 .elementor-widget-shortcode {
-  width: 100%;    
+  width: 100%;
   .tnp-subscription-minimal {
     margin: 0;
     form {
@@ -176,7 +176,7 @@
         top: 50%;
         right: 0;
         width: unset;
-        min-width: 216px;         
+        min-width: 216px;
         font-size: 16px;
         font-family: $text-font;
         font-style: normal;
@@ -304,7 +304,7 @@
 
   &.separator-tb-hide{
     .bt-elwg-site-infor--item:not(:last-child)::before{
-      @media (min-width: 768px) and (max-width: 1024.98px) { 
+      @media (min-width: 768px) and (max-width: 1024.98px) {
         content: none !important;
       }
     }
@@ -312,7 +312,7 @@
 
   &.separator-mb-hide{
     .bt-elwg-site-infor--item:not(:last-child)::before{
-      @media (max-width: 767.98px) { 
+      @media (max-width: 767.98px) {
         content: none !important;
       }
     }
@@ -803,16 +803,6 @@
             padding-left: 26px;
             &:not(:last-child) {
               margin-bottom: 16px;
-            }
-            &:before {
-              content: "";
-              position: absolute;
-              top: 8px;
-              left: 0;
-              width: 14px;
-              height: 14px;
-              background-image: url('../images/check-mark.svg');
-              background-size: cover;
             }
           }
         }
@@ -1457,7 +1447,7 @@
         margin: 0 auto;
         max-width: 200px;
       }
-      
+
       &--icon{
         width: 122px;
         height: 122px;
@@ -1534,7 +1524,7 @@
           width: 100%;
           height: auto;
         }
-        
+
         &-inner{
           position: absolute;
           left: 0;
@@ -1554,7 +1544,7 @@
           position: absolute;
           left: 0;
           top: 0;
-          
+
         }
       }
     }
@@ -1684,7 +1674,7 @@
         font-weight: 500;
         line-height: normal;
       }
-      
+
       a{
         position: absolute;
         left: 0;
@@ -1758,7 +1748,7 @@
                   path{
                     fill: #fff;
                   }
-    
+
                   > g{
                     path{
                       stroke: #fff !important;
@@ -1823,7 +1813,7 @@
 .bt-elwg-card-image-text-grid{
   &-inner{
     display: grid;
-    @media (min-width: 641px) and (max-width: $break-sm) {  
+    @media (min-width: 641px) and (max-width: $break-sm) {
       grid-template-columns: repeat(2, 1fr) !important;
     }
 
@@ -1881,7 +1871,7 @@
       }
     }
   }
-  
+
   &.--style-1{
     .bt-elwg-card-image-text-grid{
       &-inner{
@@ -1945,7 +1935,7 @@
       display: flex;
       gap:4px;
       margin-top: 14px;
-      
+
       &-inner{
         display: flex;
         align-items: center;
@@ -1981,7 +1971,7 @@
       a, p{
         font-size: 14px;
         font-weight: 700;
-        line-height: 18px;  
+        line-height: 18px;
         margin: 0;
       }
 
@@ -2034,7 +2024,7 @@
           @media (max-width: 640.98px) {
             height: 48px;
           }
-  
+
           @media (max-width: 640.98px) {
             justify-content: space-between;
           }
@@ -2068,7 +2058,7 @@
           @media (max-width: 640.98px) {
             width: 100%;
           }
-  
+
           &:not(:last-child){
             @media (max-width: 640.98px) {
               border-bottom: 1px solid $color-accent;
@@ -2113,13 +2103,13 @@
       &-inner{
         box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.30);
         form{
-          @media (min-width: 641px) { 
-            padding-right: 5px;   
+          @media (min-width: 641px) {
+            padding-right: 5px;
           }
         }
 
         .bt-form-field{
-          @media (min-width: 641px) { 
+          @media (min-width: 641px) {
             width: calc((100% - 56px) / 3);
           }
         }
@@ -2210,7 +2200,7 @@
 
         .bt-form-field{
           width: 100%;
-                    
+
           @media (min-width: 992px) {
             max-width: calc((100% - 170px) / 4);
           }
@@ -2263,7 +2253,7 @@
                 padding: 0 10px;
                 width: auto;
               }
-              
+
               &:has(input:checked), &:hover{
                 background-color: $color-accent;
                 label{
@@ -2279,7 +2269,7 @@
                 top: 0;
                 cursor: pointer;
               }
-              
+
               label{
                 color: $color-primary;
                 font-size: 18px;
@@ -2328,7 +2318,7 @@
       }
     }
   }
-  
+
   &--style-1{
     .select2-container--default, .elementor-editor-active & .select2-container--default{
       .select2-selection{
@@ -2457,4 +2447,3 @@
     }
   }
 }
-

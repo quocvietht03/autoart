@@ -369,6 +369,34 @@
     font-size: 24px;
     margin: 24px 0 12px;
   }
+  blockquote {
+    position: relative;
+    background: #F1F1F1;
+    padding: 30px 30px 30px 125px;
+    border-radius: 10px 20px 20px 10px;
+    > *:first-child {
+      margin-top: 0 !important;
+    }
+    cite {
+      font-weight: 500;
+      color: $color-accent;
+    }
+    .bt-quote-icon {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 76px;
+      background: #FFFFFF;
+      border-radius: 100px;
+      svg {
+        color: $color-accent;
+      }
+    }
+  }
   ul {
     list-style: none;
     padding-left: 30px;
@@ -377,19 +405,36 @@
     }
     li {
       position: relative;
-      padding-left: 26px;
+      padding-left: 36px;
       &:not(:last-child) {
         margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #D9D9D9;
       }
-      &:before {
-        content: "";
+      .bt-ul-icon {
         position: absolute;
-        top: 8px;
+        top: 1px;
         left: 0;
-        width: 14px;
-        height: 14px;
-        background-image: url('../images/check-mark.svg');
-        background-size: cover;
+        line-height: 0;
+        color: $color-accent;
+      }
+    }
+  }
+  .wp-block-media-text {
+    gap: 30px 50px;
+    &__media {
+      border-radius: 20px; 
+    }
+    &__content {
+      padding: 0;
+      > *:first-child {
+        margin-top: 0 !important;
+      }
+      > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      ul, ol {
+        padding-left: 0;
       }
     }
   }
@@ -461,7 +506,7 @@
     .bt-sub-text {
       font-size: 16px;
     }
-    .bt-main-text { 
+    .bt-main-text {
       font-size: 32px;
     }
     .bt-head-text {
