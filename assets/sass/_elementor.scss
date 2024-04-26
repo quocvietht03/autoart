@@ -2445,10 +2445,17 @@
 .bt-elwg-list-icon-text{
   &-inner{
     display: flex;
+
+    @media (max-width: $break-tl){
+      flex-wrap: wrap;
+    }
+
     .bt-elwg-list-icon-text--title > h3{
       font-size: 26px;
       line-height: normal;
-      color: #fff;
+      @media (min-width: 1025px) and (max-width: 1379.98px) {
+        font-size: 22px !important;
+      }
     }
   } 
 
@@ -2459,41 +2466,75 @@
     justify-content: center;
     align-items: center;
     padding: 0 15px;
-    // @media (min-width: 1025px) and (max-width: 1440.98px) { 
-    //   min-width: 15%
-    // }
+    @media(max-width: 1679.98px) { 
+      min-width: 15%;
+    }
+
+    @media (max-width: $break-tl){
+      min-width: 100%;
+      padding: 32px 15px;
+    }
+
+    @media (max-width: $break-xs) {
+      padding: 24px 15px;
+    }
   }
 
   &--items{
-    // display: grid;
     background: $color-secondary;
     padding: 0 0px 0 10px;
     min-height: 117px;
-    width: 100%;
+    width: 80%;
     display: flex;
-    max-width: 80%;
     overflow: hidden;
 
-    @media (min-width: 1025px) and (max-width: 1679.98px) { 
+    @media(max-width: 1679.98px) { 
       width: 85%;
+    }
+
+    @media (max-width: $break-tl){
+      width: 100%;
+      padding-left: 0;
+    }
+
+    @media (max-width: $break-sm) {
+      flex-wrap: wrap;
+      padding: 16px 0;
+    }
+
+    @media (max-width: $break-xs) {
+      gap: 10px  0;
     }
 
     .item-icon-text{
       padding: 0 40px;
 
       @media (max-width: 1679.98px){
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      @media (max-width: 1379.98px) { 
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 15px;
+        padding-right: 15px;
       }
 
       @media (max-width: 1199.98px) {
         padding-left: 12px;
         padding-right: 12px;
+      }
+
+      @media (max-width: $break-tl) {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      @media (max-width: $break-sm) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      @media (max-width: $break-sm) {
+        width: calc(100% / 3);
+      }
+
+      @media (max-width: $break-xs) {
+        width: 50%;
       }
 
       &:not(:first-child){
@@ -2512,6 +2553,22 @@
         }
       }
 
+      &:nth-child(4n) {
+        &::before{
+          @media (min-width: 520px) and (max-width: $break-sm) {  
+            content: none;
+          }
+        }
+      }
+
+      &:nth-child(odd){
+        &::before{
+          @media (max-width: $break-xs) {
+            content: none;
+          }
+        }
+      }
+
       &-inner{
         display: flex;
         align-items: center;
@@ -2519,27 +2576,24 @@
         gap: 17px;
         height: 100%;
         @media(max-width: 1379.98px) {
-          gap: 15px;
+          gap: 10px;
         } 
 
-        @media (max-width: 1199.98px) {
-          gap: 10px;
-        }
-        
         a{
           position: absolute;
           width: 100%;
           height: 100%;
-          display: none;
+          left: 0;
+          top: 0;
+          z-index: 2;
         }
 
         h4{
           font-size: 22px;
-          color: #fff;
           font-weight: 500;
 
           @media (min-width: 1025px) and (max-width: 1379.98px) {
-            font-size: 18px !important;
+            font-size: 17px !important;
           }
         }
       }

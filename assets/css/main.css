@@ -7387,10 +7387,15 @@ body {
 
 .bt-elwg-list-icon-text-inner {
   display: flex; }
+  @media (max-width: 1024.98px) {
+    .bt-elwg-list-icon-text-inner {
+      flex-wrap: wrap; } }
   .bt-elwg-list-icon-text-inner .bt-elwg-list-icon-text--title > h3 {
     font-size: 26px;
-    line-height: normal;
-    color: #fff; }
+    line-height: normal; }
+    @media (min-width: 1025px) and (max-width: 1379.98px) {
+      .bt-elwg-list-icon-text-inner .bt-elwg-list-icon-text--title > h3 {
+        font-size: 22px !important; } }
 .bt-elwg-list-icon-text--title {
   min-width: 20%;
   background-color: var(--e-global-color-accent, #1FBECD);
@@ -7398,31 +7403,61 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 15px; }
+  @media (max-width: 1679.98px) {
+    .bt-elwg-list-icon-text--title {
+      min-width: 15%; } }
+  @media (max-width: 1024.98px) {
+    .bt-elwg-list-icon-text--title {
+      min-width: 100%;
+      padding: 32px 15px; } }
+  @media (max-width: 519.98px) {
+    .bt-elwg-list-icon-text--title {
+      padding: 24px 15px; } }
 .bt-elwg-list-icon-text--items {
   background: var(--e-global-color-secondary, #111);
   padding: 0 0px 0 10px;
   min-height: 117px;
-  width: 100%;
+  width: 80%;
   display: flex;
-  max-width: 80%;
   overflow: hidden; }
-  @media (min-width: 1025px) and (max-width: 1679.98px) {
+  @media (max-width: 1679.98px) {
     .bt-elwg-list-icon-text--items {
       width: 85%; } }
+  @media (max-width: 1024.98px) {
+    .bt-elwg-list-icon-text--items {
+      width: 100%;
+      padding-left: 0; } }
+  @media (max-width: 767.98px) {
+    .bt-elwg-list-icon-text--items {
+      flex-wrap: wrap;
+      padding: 16px 0; } }
+  @media (max-width: 519.98px) {
+    .bt-elwg-list-icon-text--items {
+      gap: 10px  0; } }
   .bt-elwg-list-icon-text--items .item-icon-text {
     padding: 0 40px; }
     @media (max-width: 1679.98px) {
       .bt-elwg-list-icon-text--items .item-icon-text {
-        padding-left: 20px;
-        padding-right: 20px; } }
-    @media (max-width: 1379.98px) {
-      .bt-elwg-list-icon-text--items .item-icon-text {
-        padding-left: 16px;
-        padding-right: 16px; } }
+        padding-left: 15px;
+        padding-right: 15px; } }
     @media (max-width: 1199.98px) {
       .bt-elwg-list-icon-text--items .item-icon-text {
         padding-left: 12px;
         padding-right: 12px; } }
+    @media (max-width: 1024.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text {
+        padding-left: 14px;
+        padding-right: 14px; } }
+    @media (max-width: 767.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text {
+        padding-left: 20px;
+        padding-right: 20px; } }
+    @media (max-width: 767.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text {
+        width: calc(100% / 3); } }
+    @media (max-width: 519.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text {
+        width: 50%; } }
     .bt-elwg-list-icon-text--items .item-icon-text:not(:first-child) {
       position: relative; }
       .bt-elwg-list-icon-text--items .item-icon-text:not(:first-child)::before {
@@ -7436,6 +7471,12 @@ body {
         transform: translateY(-50%);
         max-height: 28px;
         left: 0; }
+    @media (min-width: 520px) and (max-width: 767.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text:nth-child(4n)::before {
+        content: none; } }
+    @media (max-width: 519.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text:nth-child(odd)::before {
+        content: none; } }
     .bt-elwg-list-icon-text--items .item-icon-text-inner {
       display: flex;
       align-items: center;
@@ -7444,22 +7485,20 @@ body {
       height: 100%; }
       @media (max-width: 1379.98px) {
         .bt-elwg-list-icon-text--items .item-icon-text-inner {
-          gap: 15px; } }
-      @media (max-width: 1199.98px) {
-        .bt-elwg-list-icon-text--items .item-icon-text-inner {
           gap: 10px; } }
       .bt-elwg-list-icon-text--items .item-icon-text-inner a {
         position: absolute;
         width: 100%;
         height: 100%;
-        display: none; }
+        left: 0;
+        top: 0;
+        z-index: 2; }
       .bt-elwg-list-icon-text--items .item-icon-text-inner h4 {
         font-size: 22px;
-        color: #fff;
         font-weight: 500; }
         @media (min-width: 1025px) and (max-width: 1379.98px) {
           .bt-elwg-list-icon-text--items .item-icon-text-inner h4 {
-            font-size: 18px !important; } }
+            font-size: 17px !important; } }
     .bt-elwg-list-icon-text--items .item-icon-text--icon {
       display: flex;
       align-items: center; }
