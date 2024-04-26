@@ -40,17 +40,6 @@ class Widget_CarsSearchStyle1 extends Widget_Base {
 			]
 		);
 			$this->add_control(
-				'car_form_search_icon', [
-					'label'   => __( 'Icon', 'autoart' ),
-					'type'    => Controls_Manager::MEDIA,
-					'media_types' => [ 'svg', 'image' ],
-					'default' => [
-						'url' => Utils::get_placeholder_image_src(),
-					],
-				]
-			);
-
-			$this->add_control(
 				'car_form_search_heading', [
 					'label'       => __( 'Heading', 'autoart' ),
 					'type'        => Controls_Manager::TEXT,
@@ -171,39 +160,7 @@ class Widget_CarsSearchStyle1 extends Widget_Base {
 			);
 	
 		$this->end_controls_section();
-
-		$this->start_controls_section(
-			'car_form_search_ss_style_icon',[
-				'label' => esc_html__( 'Icon', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
-			]
-		);
-
-			$this->add_responsive_control(
-				'car_form_search_width_icon',[
-					'label' => esc_html__( 'Icon (px)', 'autoart' ),
-					'type'  => Controls_Manager::SLIDER,
-					'size_units' => [ 'px'],
-					'range' => [
-						'px' => [
-							'min' => 0,
-							'max' => 200,
-							'step' => 1,
-						]
-					],
-					'default' => [
-						'unit' => 'px',
-						'size' => 96,
-					],
-					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-cars-search--header img' => 'max-width: {{SIZE}}{{UNIT}}',
-						'{{WRAPPER}} .bt-elwg-cars-search--header svg' => 'max-width: {{SIZE}}{{UNIT}}',
-					],
-				]
-			);
-
-		$this->end_controls_section();
-
+		
 		$this->start_controls_section(
 			'cars_search_form_fields_style',[
 				'label' => esc_html__( 'Form Fields', 'autoart' ),
