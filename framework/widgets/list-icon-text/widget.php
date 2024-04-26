@@ -150,8 +150,7 @@ class Widget_ListIconText extends Widget_Base {
 						],
 					],
 					'selectors' => [
-						'{{WRAPPER}} .item-icon-text--icon svg' => 'min-width: {{SIZE}}{{UNIT}}',
-						'{{WRAPPER}} .item-icon-text--icon svg' => 'max-width: {{SIZE}}{{UNIT}}',
+						'{{WRAPPER}} .item-icon-text--icon svg' => 'min-width: {{SIZE}}{{UNIT}}; max-width: {{SIZE}}{{UNIT}}',
 					],
 				]
 			);
@@ -183,7 +182,7 @@ class Widget_ListIconText extends Widget_Base {
 					'type'      => Controls_Manager::COLOR,
 					'default'   => '#fff',
 					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-list-icon-text--title' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .bt-elwg-list-icon-text--title > h3' => 'color: {{VALUE}};',
 					],
 				]
 			);
@@ -194,7 +193,7 @@ class Widget_ListIconText extends Widget_Base {
 					'type'      => Controls_Manager::COLOR,
 					'default'   => '',
 					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-list-icon-text--title > h3' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .bt-elwg-list-icon-text--title' => 'background-color: {{VALUE}};',
 					],
 				]
 			);
@@ -229,12 +228,23 @@ class Widget_ListIconText extends Widget_Base {
 			);
 
 			$this->add_control(
+				'lict_separator_color',[
+					'label'     => esc_html__( 'Separator Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '#454545',
+					'selectors' => [
+						'{{WRAPPER}} .item-icon-text:not(:first-child)::before' => 'background: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
 				'lict_text_bg',[
 					'label'     => esc_html__( 'Background Color', 'autoart' ),
 					'type'      => Controls_Manager::COLOR,
 					'default'   => '',
 					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-list-icon-text--items' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .bt-elwg-list-icon-text--items' => 'background-color: {{VALUE}};',
 					],
 				]
 			);

@@ -7465,7 +7465,6 @@ body {
         display: inline-block;
         width: 1px;
         height: 50%;
-        background: #454545;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
