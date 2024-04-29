@@ -1928,6 +1928,21 @@
       }
     }
 
+    .select2-container--default{
+      .select2-selection{
+        &__arrow{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg{
+            path{
+              fill: $color-accent;
+            }
+          }
+        }
+      }
+    }
+
     form{
       display: flex;
       align-items: center;
@@ -2460,7 +2475,7 @@
   } 
 
   &--title{
-    min-width: 20%;
+    min-width: 25%;
     background-color: $color-accent;
     display: flex;
     justify-content: center;
@@ -2484,7 +2499,7 @@
     background: $color-secondary;
     padding: 0 0px 0 10px;
     min-height: 117px;
-    width: 80%;
+    width: 75%;
     display: flex;
     overflow: hidden;
 
@@ -2499,7 +2514,7 @@
 
     @media (max-width: $break-sm) {
       flex-wrap: wrap;
-      padding: 16px 0;
+      padding: 24px 0;
     }
 
     @media (max-width: $break-xs) {

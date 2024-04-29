@@ -485,6 +485,24 @@ body {
 	}
 }
 
+@keyframes effectMoveHorizontalCenter {
+	0% {
+	  -webkit-transform: translateX(-50%) translateZ(0);
+	  transform: translateX(-50%) translateZ(0);
+	}
+	50% {
+	  -webkit-transform: translateX(-50%) translate3d(-10px, 0, 0);
+	  transform: translateX(-50%) translate3d(-10px, 0, 0);
+	}
+	100% {
+	  -webkit-transform: translateX(-50%) translateZ(0);
+	  transform: translateX(-50%) translateZ(0);
+	}
+}
+
 .bt-effect-move-horizontal{
 	animation: effectMoveHorizontal 2s linear infinite;
+}
+.bt-effect-move-horizontal-center{
+	animation: effectMoveHorizontalCenter 2s linear infinite;
 }

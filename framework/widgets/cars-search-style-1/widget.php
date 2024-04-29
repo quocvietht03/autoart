@@ -147,14 +147,14 @@ class Widget_CarsSearchStyle1 extends Widget_Base {
 
 			$this->add_group_control(
 				\Elementor\Group_Control_Box_Shadow::get_type(),[
-					'name' => 'ss_cars_search_general_box_shadow',
+					'name'     => 'ss_cars_search_general_box_shadow',
 					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner',
 				]
 			);
 
 			$this->add_group_control(
 				\Elementor\Group_Control_Css_Filter::get_type(),[
-					'name' => 'ss_cars_search_general_css_filters',
+					'name'     => 'ss_cars_search_general_css_filters',
 					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner',
 				]
 			);
@@ -164,7 +164,7 @@ class Widget_CarsSearchStyle1 extends Widget_Base {
 		$this->start_controls_section(
 			'cars_search_form_fields_style',[
 				'label' => esc_html__( 'Form Fields', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
+				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 
@@ -184,7 +184,7 @@ class Widget_CarsSearchStyle1 extends Widget_Base {
 					'default'   => '#fff',
 					'selectors' => [
 						'{{WRAPPER}} .select2-container .select2-selection__rendered' => 'color: {{VALUE}};',
-						'{{WRAPPER}} .select2-container--default .select2-selection__arrow b' => 'border-color: {{VALUE}};',
+						'{{WRAPPER}} .select2-container--default .select2-selection__arrow svg path' => 'fill: {{VALUE}};',
 					],
 				]
 			);

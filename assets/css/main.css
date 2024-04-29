@@ -2692,8 +2692,21 @@ body {
   100% {
     -webkit-transform: translateZ(0);
     transform: translateZ(0); } }
+@keyframes effectMoveHorizontalCenter {
+  0% {
+    -webkit-transform: translateX(-50%) translateZ(0);
+    transform: translateX(-50%) translateZ(0); }
+  50% {
+    -webkit-transform: translateX(-50%) translate3d(-10px, 0, 0);
+    transform: translateX(-50%) translate3d(-10px, 0, 0); }
+  100% {
+    -webkit-transform: translateX(-50%) translateZ(0);
+    transform: translateX(-50%) translateZ(0); } }
 .bt-effect-move-horizontal {
   animation: effectMoveHorizontal 2s linear infinite; }
+
+.bt-effect-move-horizontal-center {
+  animation: effectMoveHorizontalCenter 2s linear infinite; }
 
 .bt-page--content:after {
   content: "";
@@ -7055,6 +7068,12 @@ body {
 
 .bt-elwg-cars-search-inner .bt-field-type-select::before {
   content: none; }
+.bt-elwg-cars-search-inner .select2-container--default .select2-selection__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .bt-elwg-cars-search-inner .select2-container--default .select2-selection__arrow svg path {
+    fill: var(--e-global-color-accent, #1FBECD); }
 .bt-elwg-cars-search-inner form {
   display: flex;
   align-items: center;
@@ -7397,7 +7416,7 @@ body {
       .bt-elwg-list-icon-text-inner .bt-elwg-list-icon-text--title > h3 {
         font-size: 22px !important; } }
 .bt-elwg-list-icon-text--title {
-  min-width: 20%;
+  min-width: 25%;
   background-color: var(--e-global-color-accent, #1FBECD);
   display: flex;
   justify-content: center;
@@ -7417,7 +7436,7 @@ body {
   background: var(--e-global-color-secondary, #111);
   padding: 0 0px 0 10px;
   min-height: 117px;
-  width: 80%;
+  width: 75%;
   display: flex;
   overflow: hidden; }
   @media (max-width: 1679.98px) {
@@ -7430,7 +7449,7 @@ body {
   @media (max-width: 767.98px) {
     .bt-elwg-list-icon-text--items {
       flex-wrap: wrap;
-      padding: 16px 0; } }
+      padding: 24px 0; } }
   @media (max-width: 519.98px) {
     .bt-elwg-list-icon-text--items {
       gap: 10px  0; } }
