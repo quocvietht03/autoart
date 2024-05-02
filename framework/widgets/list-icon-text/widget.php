@@ -123,192 +123,26 @@ class Widget_ListIconText extends Widget_Base {
 		);
 
 		$this->end_controls_section();
-
-		$this->start_controls_section(
-			'section_layout',[
-				'label' => esc_html__( 'Layout', 'autoart' ),
-			]
-		);
-
-			$this->add_responsive_control(
-				'lict_columns',[
-					'label'          => esc_html__( 'Columns', 'autoart' ),
-					'type'           => Controls_Manager::SELECT,
-					'default'        => '6',
-					'tablet_default' => '3',
-					'mobile_default' => '2',
-					'options' => [
-						'1' => '1',
-						'2' => '2',
-						'3' => '3',
-						'4' => '4',
-						'5' => '5',
-						'6' => '6',
-					],
-					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-list-icon-text--items' => 'grid-template-columns: repeat({{VALUE}}, 1fr)',
-					],
-				]
-			);
-
-			// $this->add_responsive_control(
-			// 	'lict_gap_col',[
-			// 		'label'      => esc_html__( 'Gap between columns', 'autoart' ),
-			// 		'type'       => Controls_Manager::SLIDER,
-			// 		'size_units' => [ 'px', '%'],
-			// 		'range' => [
-			// 			'px' => [
-			// 				'min' => 0,
-			// 				'max' => 200,
-			// 				'step' => 1,
-			// 			],
-			// 			'%' => [
-			// 				'min' => 0,
-			// 				'max' => 100,
-			// 			],
-			// 		],
-			// 		'default' => [
-			// 			'unit' => 'px',
-			// 			'size' => 80,
-			// 		],
-			// 		'selectors' => [
-			// 			'{{WRAPPER}} .bt-elwg-list-icon-text--items' => 'column-gap: {{SIZE}}{{UNIT}}',
-			// 			'{{WRAPPER}} .item-icon-text:not(:first-child)::before' => 'left: calc(({{SIZE}}{{UNIT}} / 2)* -1)',
-			// 		],
-			// 	]
-			// );
-
-			// $this->add_responsive_control(
-			// 	'lict_gap_row',[
-			// 		'label'      => esc_html__( 'Gap between rows', 'autoart' ),
-			// 		'type'       => Controls_Manager::SLIDER,
-			// 		'size_units' => [ 'px', '%'],
-			// 		'range'      => [
-			// 			'px' => [
-			// 				'min'  => 0,
-			// 				'max'  => 200,
-			// 				'step' => 1,
-			// 			],
-			// 			'%' => [
-			// 				'min' => 0,
-			// 				'max' => 100,
-			// 			], 
-			// 		],
-			// 		'default' => [
-			// 			'unit' => 'px',
-			// 			'size' => 0,
-			// 		],
-			// 		'selectors' => [
-			// 			'{{WRAPPER}} .bt-elwg-list-icon-text--items' => 'row-gap: {{SIZE}}{{UNIT}}',
-			// 		],
-			// 	]
-			// );
-
-		$this->end_controls_section();
 	}
 
 	protected function register_style_section_controls() {
-
 		$this->start_controls_section(
-			'section_style_item',[
-				'label' => esc_html__( 'General', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
-			]
-		);
-
-			$this->add_control(
-				'lict_bg_color',[
-					'label' => __( 'Background Color', 'autoart' ),
-					'type' => Controls_Manager::COLOR,
-					'default' => '#fff',
-					'selectors' => [
-						'{{WRAPPER}} .item-image-text-inner' => 'background-color: {{VALUE}};',
-					],
-				]
-			);
-
-			$this->add_control(
-				'lict_border_color',[
-					'label' => __( 'Border Color', 'autoart' ),
-					'type' => Controls_Manager::COLOR,
-					'selectors' => [
-						'{{WRAPPER}} .item-image-text-inner' => 'border-color: {{VALUE}};',
-					],
-				]
-			);
-
-			$this->add_responsive_control(
-				'lict_border_width',[
-					'label' => __( 'Border Width', 'autoart' ),
-					'type' => Controls_Manager::DIMENSIONS,
-					'size_units' => [ 'px' ],
-					'range' => [
-						'px' => [
-							'min' => 0,
-							'max' => 10,
-						],
-					],
-					'selectors' => [
-						'{{WRAPPER}} .item-image-text-inner' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-					],
-				]
-			);
-
-			$this->add_responsive_control(
-				'box_border_radius',[
-					'label' => __( 'Border Radius', 'autoart' ),
-					'type' => Controls_Manager::DIMENSIONS,
-					'size_units' => [ 'px', '%', 'em' ], 
-					'selectors' => [
-						'{{WRAPPER}} .item-image-text-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-					],
-				]
-			);
-
-			$this->add_responsive_control(
-				'lict_padding',[
-					'label' => __( 'Padding', 'autoart' ),
-					'type' => Controls_Manager::DIMENSIONS,
-					'size_units' => [ 'px', '%' ],
-					'range' => [
-						'px' => [
-							'min' => 0,
-							'max' => 100,
-						],
-					],
-					'selectors' => [
-						'{{WRAPPER}} .item-image-text-inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-					],
-				]
-			);
-
-			$this->add_group_control(
-				Group_Control_Box_Shadow::get_type(),[
-					'name' => 'lict_box_shadow',
-					'selector' => '{{WRAPPER}} .item-image-text-inner',
-				]
-			);
-
-		$this->end_controls_section();
-
-
-		$this->start_controls_section(
-			'section_style_image',[
-				'label' => esc_html__( 'Image', 'autoart' ),
+			'lict_icon_style_section',[
+				'label' => esc_html__( 'Icon', 'autoart' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 			$this->add_responsive_control(
 				'lict_icon_width',[
-					'label' => __( 'Width', 'autoart' ),
-					'type'  => Controls_Manager::SLIDER,
+					'label'      => esc_html__( 'Width', 'autoart' ),
+					'type'       => Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%'],
 					'range' => [
 						'px' => [
 							'min' => 0,
 							'max' => 200,
-							'step' => 1,
+							'step'=> 1,
 						],
 						'%' => [
 							'min' => 0,
@@ -316,54 +150,111 @@ class Widget_ListIconText extends Widget_Base {
 						],
 					],
 					'selectors' => [
-						'{{WRAPPER}} .item-image-text--thumbnail img' => 'width: {{SIZE}}{{UNIT}}',
-						'{{WRAPPER}} .item-image-text--thumbnail svg' => 'max-width: {{SIZE}}{{UNIT}}',
+						'{{WRAPPER}} .item-icon-text--icon svg' => 'min-width: {{SIZE}}{{UNIT}}; max-width: {{SIZE}}{{UNIT}}',
 					],
 				]
 			);
 
-			$this->add_group_control(
-				Group_Control_Box_Shadow::get_type(),
-				[
-					'name' => 'lict_icon_box_shadow',
-					'selector' => '{{WRAPPER}} .item-image-text--thumbnail img',
-				]
-			);
-
-			$this->add_group_control(
-				Group_Control_Css_Filter::get_type(),
-				[
-					'name' => 'lict_thumbnail_filters',
-					'selector' => '{{WRAPPER}} .item-image-text--thumbnail img',
+			$this->add_control(
+				'lict_icon_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '#fff',
+					'selectors' => [
+						'{{WRAPPER}} .item-icon-text--icon svg > g path' => 'stroke: {{VALUE}} !important;',
+						'{{WRAPPER}} .item-icon-text--icon svg path' => 'fill: {{VALUE}};',
+					],
 				]
 			);
 
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'section_style_content',[
-				'label' => esc_html__( 'Content', 'autoart' ),
+			'lict_title_style_section',[
+				'label' => esc_html__( 'Title', 'autoart' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 			$this->add_control(
-				'lict_text_color',[
-					'label' => __( 'Color', 'autoart' ),
-					'type' => Controls_Manager::COLOR,
-					'default' => '',
+				'lict_title_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '#fff',
 					'selectors' => [
-						'{{WRAPPER}} .item-image-text h3' => 'color: {{VALUE}};',
+						'{{WRAPPER}} .bt-elwg-list-icon-text--title > h3' => 'color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
+				'lict_title_bg',[
+					'label'     => esc_html__( 'Background Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-list-icon-text--title' => 'background-color: {{VALUE}};',
 					],
 				]
 			);
 
 			$this->add_group_control(
 				Group_Control_Typography::get_type(),[
-					'name' => 'lict_text_typography',
-					'label' => __( 'Typography', 'autoart' ),
-					'default' => '',
-					'selector' => '{{WRAPPER}} .item-image-text h3 ',
+					'name'     => 'lict_title_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
+					'selector' => '{{WRAPPER}} .bt-elwg-list-icon-text--title > h3',
+				]
+			);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'lict_content_style_section',[
+				'label' => esc_html__( 'Content', 'autoart' ),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+			$this->add_control(
+				'lict_text_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '#fff',
+					'selectors' => [
+						'{{WRAPPER}} .item-icon-text-inner h4' => 'color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
+				'lict_separator_color',[
+					'label'     => esc_html__( 'Separator Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '#454545',
+					'selectors' => [
+						'{{WRAPPER}} .item-icon-text:not(:first-child)::before' => 'background: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_control(
+				'lict_text_bg',[
+					'label'     => esc_html__( 'Background Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
+					'selectors' => [
+						'{{WRAPPER}} .bt-elwg-list-icon-text--items' => 'background-color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_group_control(
+				Group_Control_Typography::get_type(),[
+					'name'     => 'lict_text_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
+					'selector' => '{{WRAPPER}} .item-icon-text-inner h4 ',
 				]
 			);
 
@@ -394,11 +285,9 @@ class Widget_ListIconText extends Widget_Base {
 				<div class="bt-elwg-list-icon-text--items">
 					<?php foreach ( $settings['lict_items'] as $index => $item ): ?>
 						<?php
-							// echo "<pre>";
-							// echo print_r($item);
-							// echo "</pre>";	
 							$path_info = pathinfo($item['lict_icon']['url']);
 						?>
+						
 						<div class="item-icon-text"> 
 							<div class="item-icon-text-inner"> 
 								<div class="item-icon-text--icon"> 

@@ -120,7 +120,7 @@ select {
   padding-right: 35px;
   background-image: url("../images/alt-arrow-down.svg");
   background-repeat: no-repeat;
-  background-position: center right 10px;
+  background-position: center right 15px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
@@ -586,33 +586,6 @@ img.alignright {
 .wp-block-cover {
   margin: 32px 0; }
 
-.__bt-arrow-select-field, .bt-field-type-select::before, .select2-container .select2-selection--single .select2-selection__arrow b, .elementor-editor-active .select2-container .select2-selection--single .select2-selection__arrow b {
-  width: 11px;
-  height: 11px;
-  border-top: 2px solid var(--e-global-color-accent, #1FBECD);
-  border-right: 2px solid var(--e-global-color-accent, #1FBECD);
-  transition: 0.3s all cubic-bezier(1, 0.25, 0.25, 0.8);
-  will-change: transform;
-  transform: rotate(135deg);
-  border-left: none;
-  border-bottom: none;
-  margin: -3px 0 0 0;
-  border-radius: 0;
-  transition: all 0.25s ease-in-out;
-  padding: 0; }
-
-.bt-field-type-select {
-  position: relative; }
-  .bt-field-type-select::before {
-    content: " ";
-    display: inline-block;
-    transform: translate(0%, -50%) rotate(135deg);
-    position: absolute;
-    top: 50%;
-    right: 17px; }
-  .bt-field-type-select > select {
-    background-image: none; }
-
 .bt-field-type-radio {
   display: flex;
   flex-wrap: wrap; }
@@ -673,9 +646,8 @@ img.alignright {
   font-size: 15px;
   line-height: 150%;
   min-height: 56px; }
-  .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow b, .elementor-editor-active .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow b {
-    transform: translate(-50%, -50%) rotate(315deg);
-    margin-top: 2px; }
+  .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow svg, .elementor-editor-active .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow svg {
+    transform: rotate(180deg); }
   .select2-container .select2-selection--single, .elementor-editor-active .select2-container .select2-selection--single {
     height: 56px;
     border-radius: 10px;
@@ -688,8 +660,13 @@ img.alignright {
       width: 20px;
       height: auto;
       position: relative; }
-      .select2-container .select2-selection--single .select2-selection__arrow b, .elementor-editor-active .select2-container .select2-selection--single .select2-selection__arrow b {
-        transform: translate(-50%, -50%) rotate(135deg); }
+      .select2-container .select2-selection--single .select2-selection__arrow svg, .elementor-editor-active .select2-container .select2-selection--single .select2-selection__arrow svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: var(--e-global-color-accent, #1FBECD);
+        margin: -4px 0 0 -7px;
+        transition: all .3s; }
   .select2-container--default .select2-selection--single .select2-selection__rendered, .elementor-editor-active .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: var(--e-global-color-text, #555);
     line-height: 56px;
@@ -799,7 +776,7 @@ img.alignright {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical; }
 
-.__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
+.__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
 .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input {
   display: inline-block;
   font-size: 16px;
@@ -812,13 +789,13 @@ img.alignright {
   padding: 16px 35px;
   border: 3px solid var(--e-global-color-accent, #1FBECD);
   border-radius: 15px; }
-  .__bt-button-style:hover, button:hover, input[type="submit"]:hover, .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-block-contact-information .bt-contact-information--button:hover, .bt-elwg-contact-information .bt-contact-information--button:hover, .__bt-button-outline-style:hover, .__bt-button-outline-dark-style:hover, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .bt-srq-box--book-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .single-service .bt-main-content-ss .bt-post--book-link:hover, .woocommerce .woocommerce-loop-product__thumbnail .button:hover,
-  .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:hover, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:hover, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:hover, .__bt-button-style:focus, button:focus, input[type="submit"]:focus, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-block-contact-information .bt-contact-information--button:focus, .bt-elwg-contact-information .bt-contact-information--button:focus, .__bt-button-outline-style:focus, .__bt-button-outline-dark-style:focus, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .bt-srq-box--book-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .single-service .bt-main-content-ss .bt-post--book-link:focus, .woocommerce .woocommerce-loop-product__thumbnail .button:focus,
+  .__bt-button-style:hover, button:hover, input[type="submit"]:hover, .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-block-contact-information .bt-contact-information--button:hover, .bt-elwg-contact-information .bt-contact-information--button:hover, .__bt-button-outline-style:hover, .__bt-button-outline-dark-style:hover, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .bt-srq-box--book-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn:hover, .single-service .bt-main-content-ss .bt-post--book-link:hover, .woocommerce .woocommerce-loop-product__thumbnail .button:hover,
+  .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:hover, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:hover, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:hover, .__bt-button-style:focus, button:focus, input[type="submit"]:focus, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-block-contact-information .bt-contact-information--button:focus, .bt-elwg-contact-information .bt-contact-information--button:focus, .__bt-button-outline-style:focus, .__bt-button-outline-dark-style:focus, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .bt-srq-box--book-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn:focus, .single-service .bt-main-content-ss .bt-post--book-link:focus, .woocommerce .woocommerce-loop-product__thumbnail .button:focus,
   .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:focus, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:focus, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:focus {
     color: #FFFFFF;
     background: var(--e-global-color-accent, #1FBECD); }
   @media (max-width: 519.98px) {
-    .__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
+    .__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
     .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input {
       font-size: 14px;
       padding: 12px 30px; } }
@@ -868,6 +845,29 @@ img.alignright {
 .__bt-format-post-content h3, .bt-main-post .bt-post--content h3, .single-service .bt-main-content-ss .bt-post .bt-panel-desc h3, .single-podcast .bt-main-content-ss .bt-post--content-inner h3, .single-podcast .bt-main-content-ss .bt-post--extra-content h3, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description h3 {
   font-size: 24px;
   margin: 24px 0 12px; }
+.__bt-format-post-content blockquote, .bt-main-post .bt-post--content blockquote, .single-service .bt-main-content-ss .bt-post .bt-panel-desc blockquote, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote {
+  position: relative;
+  background: #F1F1F1;
+  padding: 30px 30px 30px 125px;
+  border-radius: 10px 20px 20px 10px; }
+  .__bt-format-post-content blockquote > *:first-child, .bt-main-post .bt-post--content blockquote > *:first-child, .single-service .bt-main-content-ss .bt-post .bt-panel-desc blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote > *:first-child {
+    margin-top: 0 !important; }
+  .__bt-format-post-content blockquote cite, .bt-main-post .bt-post--content blockquote cite, .single-service .bt-main-content-ss .bt-post .bt-panel-desc blockquote cite, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote cite, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote cite, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote cite {
+    font-weight: 500;
+    color: var(--e-global-color-accent, #1FBECD); }
+  .__bt-format-post-content blockquote .bt-quote-icon, .bt-main-post .bt-post--content blockquote .bt-quote-icon, .single-service .bt-main-content-ss .bt-post .bt-panel-desc blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    background: #FFFFFF;
+    border-radius: 100px; }
+    .__bt-format-post-content blockquote .bt-quote-icon svg, .bt-main-post .bt-post--content blockquote .bt-quote-icon svg, .single-service .bt-main-content-ss .bt-post .bt-panel-desc blockquote .bt-quote-icon svg, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon svg, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon svg, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon svg {
+      color: var(--e-global-color-accent, #1FBECD); }
 .__bt-format-post-content ul, .bt-main-post .bt-post--content ul, .single-service .bt-main-content-ss .bt-post .bt-panel-desc ul, .single-podcast .bt-main-content-ss .bt-post--content-inner ul, .single-podcast .bt-main-content-ss .bt-post--extra-content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul {
   list-style: none;
   padding-left: 30px; }
@@ -876,18 +876,29 @@ img.alignright {
       padding-left: 15px; } }
   .__bt-format-post-content ul li, .bt-main-post .bt-post--content ul li, .single-service .bt-main-content-ss .bt-post .bt-panel-desc ul li, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li {
     position: relative;
-    padding-left: 26px; }
+    padding-left: 36px; }
     .__bt-format-post-content ul li:not(:last-child), .bt-main-post .bt-post--content ul li:not(:last-child), .single-service .bt-main-content-ss .bt-post .bt-panel-desc ul li:not(:last-child), .single-podcast .bt-main-content-ss .bt-post--content-inner ul li:not(:last-child), .single-podcast .bt-main-content-ss .bt-post--extra-content ul li:not(:last-child), .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li:not(:last-child) {
-      margin-bottom: 12px; }
-    .__bt-format-post-content ul li:before, .bt-main-post .bt-post--content ul li:before, .single-service .bt-main-content-ss .bt-post .bt-panel-desc ul li:before, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li:before, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li:before, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li:before {
-      content: "";
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #D9D9D9; }
+    .__bt-format-post-content ul li .bt-ul-icon, .bt-main-post .bt-post--content ul li .bt-ul-icon, .single-service .bt-main-content-ss .bt-post .bt-panel-desc ul li .bt-ul-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li .bt-ul-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li .bt-ul-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li .bt-ul-icon {
       position: absolute;
-      top: 8px;
+      top: 1px;
       left: 0;
-      width: 14px;
-      height: 14px;
-      background-image: url("../images/check-mark.svg");
-      background-size: cover; }
+      line-height: 0;
+      color: var(--e-global-color-accent, #1FBECD); }
+.__bt-format-post-content .wp-block-media-text, .bt-main-post .bt-post--content .wp-block-media-text, .single-service .bt-main-content-ss .bt-post .bt-panel-desc .wp-block-media-text, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text {
+  gap: 30px 50px; }
+  .__bt-format-post-content .wp-block-media-text__media, .bt-main-post .bt-post--content .wp-block-media-text__media, .single-service .bt-main-content-ss .bt-post .bt-panel-desc .wp-block-media-text__media, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__media, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__media, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__media {
+    border-radius: 20px; }
+  .__bt-format-post-content .wp-block-media-text__content, .bt-main-post .bt-post--content .wp-block-media-text__content, .single-service .bt-main-content-ss .bt-post .bt-panel-desc .wp-block-media-text__content, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content {
+    padding: 0; }
+    .__bt-format-post-content .wp-block-media-text__content > *:first-child, .bt-main-post .bt-post--content .wp-block-media-text__content > *:first-child, .single-service .bt-main-content-ss .bt-post .bt-panel-desc .wp-block-media-text__content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content > *:first-child {
+      margin-top: 0 !important; }
+    .__bt-format-post-content .wp-block-media-text__content > *:last-child, .bt-main-post .bt-post--content .wp-block-media-text__content > *:last-child, .single-service .bt-main-content-ss .bt-post .bt-panel-desc .wp-block-media-text__content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content > *:last-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content > *:last-child {
+      margin-bottom: 0 !important; }
+    .__bt-format-post-content .wp-block-media-text__content ul, .bt-main-post .bt-post--content .wp-block-media-text__content ul, .single-service .bt-main-content-ss .bt-post .bt-panel-desc .wp-block-media-text__content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content ul, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content ul, .__bt-format-post-content .wp-block-media-text__content ol, .bt-main-post .bt-post--content .wp-block-media-text__content ol, .single-service .bt-main-content-ss .bt-post .bt-panel-desc .wp-block-media-text__content ol, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content ol, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content ol, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content ol {
+      padding-left: 0; }
 
 .__bt-section-heading-style, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading, .single-car .bt-related-posts-ss--heading, .single-team .bt-related-posts-ss--heading, .single-service .bt-related-posts-ss--heading, .single-podcast .bt-related-posts-ss--heading, .woocommerce .bt-main-product-ss .related .bt-related-heading {
   text-align: center;
@@ -1737,6 +1748,54 @@ img.alignright {
     margin-inline-end: calc(var(--e-nav-menu-horizontal-menu-item-margin)/2); }
   .elementor-location-header .elementor-element.bt-header-nav-style-2 .elementor-widget-button .elementor-button {
     font-size: 14px !important; } }
+@media (min-width: 1025px) and (max-width: 1379.98px) {
+  .elementor-location-header .elementor-element.bt-header-top-style-3 .bt-elwg-site-infor {
+    column-gap: 18px !important; } }
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .elementor-location-header .elementor-element.bt-header-top-style-3 .bt-elwg-site-infor--item {
+    font-size: 14px !important; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-location-header .elementor-element.bt-header-top-style-3 .bt-elwg-site-infor--item {
+    font-size: 11px !important; } }
+@media (min-width: 1025px) and (max-width: 1379.98px) {
+  .elementor-location-header .elementor-element.bt-header-top-style-3 .bt-elwg-site-infor--item:not(:last-child)::before {
+    right: calc((18px / 2)* -1) !important; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 > .e-con-inner > .elementor-element:last-child {
+    --width: 175px; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 > .e-con-inner > .elementor-element:last-child .elementor-button {
+    font-size: 16px !important; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 .elementor-widget-theme-site-logo .elementor-image img {
+    max-width: 150px !important; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 .elementor-icon.elementor-social-icon {
+    width: 40px;
+    height: 40px; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 .elementor-icon.elementor-social-icon svg {
+    width: 100%;
+    height: auto;
+    max-width: 18px; } }
+@media (min-width: 1200px) and (max-width: 1379.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li > a {
+    font-size: 16px !important; } }
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li > a {
+    font-size: 14px !important; } }
+@media (min-width: 1380px) and (max-width: 1439.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li:not(:last-child) > a {
+    margin-right: 12px; } }
+@media (min-width: 1025px) and (max-width: 1379.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li:not(:last-child) > a {
+    margin-right: 9px; } }
+@media (min-width: 1380px) and (max-width: 1439.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li:not(:first-child) > a {
+    margin-left: 12px; } }
+@media (min-width: 1025px) and (max-width: 1379.98px) {
+  .elementor-location-header .elementor-element.bt-header-style-3 .elementor-nav-menu--layout-horizontal .elementor-nav-menu > li:not(:first-child) > a {
+    margin-left: 9px; } }
 
 .bt-menu-mobile-popup .elementor-nav-menu a.has-submenu {
   display: flex;
@@ -2692,8 +2751,21 @@ body {
   100% {
     -webkit-transform: translateZ(0);
     transform: translateZ(0); } }
+@keyframes effectMoveHorizontalCenter {
+  0% {
+    -webkit-transform: translateX(-50%) translateZ(0);
+    transform: translateX(-50%) translateZ(0); }
+  50% {
+    -webkit-transform: translateX(-50%) translate3d(-10px, 0, 0);
+    transform: translateX(-50%) translate3d(-10px, 0, 0); }
+  100% {
+    -webkit-transform: translateX(-50%) translateZ(0);
+    transform: translateX(-50%) translateZ(0); } }
 .bt-effect-move-horizontal {
   animation: effectMoveHorizontal 2s linear infinite; }
+
+.bt-effect-move-horizontal-center {
+  animation: effectMoveHorizontalCenter 2s linear infinite; }
 
 .bt-page--content:after {
   content: "";
@@ -2706,7 +2778,10 @@ body {
       padding: 75px 0; } }
 
 .bt-sidebar {
-  font-size: 16px; }
+  font-size: 16px;
+  background: #F1F1F1;
+  padding: 30px;
+  border-radius: 20px; }
 
 .bt-main-post-row {
   display: flex;
@@ -4038,6 +4113,48 @@ body {
     .single-car .bt-related-posts-ss--list .bt-post {
       width: 100%; } }
 
+.bt-elwg-cars-wishlist--default .bt-table {
+  background: #FFFFFF;
+  overflow: hidden;
+  border: 1px solid #DADADA;
+  border-radius: 20px; }
+  .bt-elwg-cars-wishlist--default .bt-table--head {
+    background: var(--e-global-color-accent, #1FBECD); }
+    .bt-elwg-cars-wishlist--default .bt-table--head span {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 150%;
+      color: #FFFFFF; }
+  .bt-elwg-cars-wishlist--default .bt-table--row {
+    display: flex;
+    align-items: center; }
+    .bt-elwg-cars-wishlist--default .bt-table--row.bt-car-item {
+      border-bottom: 1px solid #DADADA; }
+  .bt-elwg-cars-wishlist--default .bt-table--col {
+    width: 15%;
+    padding: 20px 15px; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove {
+      width: 10%;
+      text-align: center; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove span {
+        font-size: 0; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove svg {
+        width: 20px;
+        height: auto; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb {
+      width: 18%; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb .bt-cover-image, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb .wc-cover-image {
+        border-radius: 20px; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title {
+      width: 27%; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title .bt-title {
+        font-size: 20px; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-price {
+      font-weight: 500;
+      color: var(--e-global-color-accent, #1FBECD); }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-stock {
+      text-transform: capitalize; }
+
 .__bt-team-style-default .bt-post--inner, .search-results .bt-post--inner,
 .tax-team_categories .bt-post--inner, .single-team .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-team-loop-item--default .bt-post--inner {
   position: relative;
@@ -5141,12 +5258,7 @@ body {
         display: inline-block;
         vertical-align: middle;
         color: var(--e-global-color-accent, #1FBECD);
-        background-image: url("../images/check-mark.svg");
-        background-repeat: no-repeat;
-        background-size: 14px 14px;
-        background-position: center left;
-        margin-left: 16px;
-        padding-left: 24px; }
+        margin-left: 8px; }
     .woocommerce .bt-main-product-ss div.product div.summary form.cart .quantity {
       float: none;
       margin: 0 0 20px; }
@@ -6372,15 +6484,6 @@ body {
         padding-left: 26px; }
         .bt-elwg-pricing-tabs--default .bt-pricing-tabs .bt-panel-item--list li:not(:last-child) {
           margin-bottom: 16px; }
-        .bt-elwg-pricing-tabs--default .bt-pricing-tabs .bt-panel-item--list li:before {
-          content: "";
-          position: absolute;
-          top: 8px;
-          left: 0;
-          width: 14px;
-          height: 14px;
-          background-image: url("../images/check-mark.svg");
-          background-size: cover; }
   @media (max-width: 1199.98px) {
     .bt-elwg-pricing-tabs--default .bt-pricing-tabs--nav {
       padding: 20px 50px; }
@@ -7055,6 +7158,12 @@ body {
 
 .bt-elwg-cars-search-inner .bt-field-type-select::before {
   content: none; }
+.bt-elwg-cars-search-inner .select2-container--default .select2-selection__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .bt-elwg-cars-search-inner .select2-container--default .select2-selection__arrow svg path {
+    fill: var(--e-global-color-accent, #1FBECD); }
 .bt-elwg-cars-search-inner form {
   display: flex;
   align-items: center;
@@ -7398,7 +7507,7 @@ body {
       .bt-elwg-list-icon-text-inner .bt-elwg-list-icon-text--title > h3 {
         font-size: 20px !important; } }
 .bt-elwg-list-icon-text--title {
-  min-width: 20%;
+  min-width: 25%;
   background-color: var(--e-global-color-accent, #1FBECD);
   display: flex;
   justify-content: center;
@@ -7412,11 +7521,10 @@ body {
   background: var(--e-global-color-secondary, #111);
   padding: 0 0px 0 10px;
   min-height: 117px;
-  width: 100%;
+  width: 75%;
   display: flex;
-  max-width: 80%;
   overflow: hidden; }
-  @media (min-width: 1025px) and (max-width: 1679.98px) {
+  @media (max-width: 1679.98px) {
     .bt-elwg-list-icon-text--items {
       width: 85%; } }
   @media (max-width: 1024.98px) {
@@ -7426,16 +7534,26 @@ body {
     padding: 0 40px; }
     @media (max-width: 1679.98px) {
       .bt-elwg-list-icon-text--items .item-icon-text {
-        padding-left: 20px;
-        padding-right: 20px; } }
-    @media (max-width: 1379.98px) {
-      .bt-elwg-list-icon-text--items .item-icon-text {
-        padding-left: 16px;
-        padding-right: 16px; } }
+        padding-left: 15px;
+        padding-right: 15px; } }
     @media (max-width: 1199.98px) {
       .bt-elwg-list-icon-text--items .item-icon-text {
         padding-left: 12px;
         padding-right: 12px; } }
+    @media (max-width: 1024.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text {
+        padding-left: 14px;
+        padding-right: 14px; } }
+    @media (max-width: 767.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text {
+        padding-left: 20px;
+        padding-right: 20px; } }
+    @media (max-width: 767.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text {
+        width: calc(100% / 3); } }
+    @media (max-width: 519.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text {
+        width: 50%; } }
     .bt-elwg-list-icon-text--items .item-icon-text:not(:first-child) {
       position: relative; }
       .bt-elwg-list-icon-text--items .item-icon-text:not(:first-child)::before {
@@ -7443,12 +7561,17 @@ body {
         display: inline-block;
         width: 1px;
         height: 50%;
-        background: #454545;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         max-height: 25px;
         left: 0; }
+    @media (min-width: 520px) and (max-width: 767.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text:nth-child(4n)::before {
+        content: none; } }
+    @media (max-width: 519.98px) {
+      .bt-elwg-list-icon-text--items .item-icon-text:nth-child(odd)::before {
+        content: none; } }
     .bt-elwg-list-icon-text--items .item-icon-text-inner {
       display: flex;
       align-items: center;
@@ -7457,22 +7580,20 @@ body {
       height: 100%; }
       @media (max-width: 1379.98px) {
         .bt-elwg-list-icon-text--items .item-icon-text-inner {
-          gap: 15px; } }
-      @media (max-width: 1199.98px) {
-        .bt-elwg-list-icon-text--items .item-icon-text-inner {
           gap: 10px; } }
       .bt-elwg-list-icon-text--items .item-icon-text-inner a {
         position: absolute;
         width: 100%;
         height: 100%;
-        display: none; }
+        left: 0;
+        top: 0;
+        z-index: 2; }
       .bt-elwg-list-icon-text--items .item-icon-text-inner h4 {
         font-size: 22px;
-        color: #fff;
         font-weight: 500; }
         @media (min-width: 1025px) and (max-width: 1379.98px) {
           .bt-elwg-list-icon-text--items .item-icon-text-inner h4 {
-            font-size: 18px !important; } }
+            font-size: 17px !important; } }
     .bt-elwg-list-icon-text--items .item-icon-text--icon {
       display: flex;
       align-items: center; }

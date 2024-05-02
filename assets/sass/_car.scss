@@ -762,7 +762,7 @@
       flex-direction: column;
       gap: 30px;
       .bt-sidebar-block {
-        background: #FFFFFF; 
+        background: #FFFFFF;
         overflow: hidden;
         border: 1px solid #DADADA;
         border-radius: 20px;
@@ -1083,6 +1083,72 @@
       &--list {
         .bt-post {
           width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.bt-elwg-cars-wishlist {
+  &--default {
+    .bt-table {
+      background: #FFFFFF;
+      overflow: hidden;
+      border: 1px solid #DADADA;
+      border-radius: 20px;
+      &--head {
+        background: $color-accent;
+        span {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 150%;
+          color: #FFFFFF;
+        }
+      }
+      &--row {
+        display: flex;
+        align-items: center;
+        &.bt-car-item {
+          border-bottom: 1px solid #DADADA;
+        }
+      }
+      &--col {
+        width: 15%;
+        padding: 20px 15px;
+        &.bt-car-remove {
+          width: 10%;
+          text-align: center;
+          span {
+            font-size: 0;
+          }
+          svg {
+            width: 20px;
+            height: auto;
+          }
+        }
+        &.bt-car-thumb {
+          width: 18%;
+          .bt-cover-image {
+            border-radius: 20px;
+          }
+        }
+        &.bt-car-title {
+          width: 27%;
+          .bt-title {
+            font-size: 20px;
+          }
+        }
+        &.bt-car-price {
+          font-weight: 500;
+          color: $color-accent;
+        }
+        &.bt-car-stock {
+          text-transform: capitalize;
+        }
+        &.bt-car-seller {
+          .bt-seller-btn {
+            @extend .__bt-button-style;
+          }
         }
       }
     }
