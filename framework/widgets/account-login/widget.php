@@ -30,9 +30,21 @@ class Widget_AccountLogin extends Widget_Base {
 	protected function register_content_section_controls() {
 		$this->start_controls_section(
 			'section_layout',[
-				'label' => __( 'Layout', 'autoart' ),
+				'label'   => esc_html__( 'Layout', 'autoart' ),
 			]
 		);
+
+			$this->add_control(
+				'acc_lg_layout_style',[
+					'label'   => esc_html__( 'Layout Style', 'autoart' ),
+					'type'    => Controls_Manager::SELECT,
+					'default' => 'default',
+					'options' => [
+						'default' => 'Default',
+						'style-1' => 'Style 1',
+					],
+				]
+			);
 
 			$this->add_responsive_control(
 				'text_align',[
@@ -62,8 +74,8 @@ class Widget_AccountLogin extends Widget_Base {
 
 			$this->add_responsive_control(
 				'account_login_space',[
-					'label' => __( 'Space Between', 'autoart' ),
-					'type' => Controls_Manager::SLIDER,
+					'label'   => esc_html__( 'Space Between', 'autoart' ),
+					'type'    => Controls_Manager::SLIDER,
 					'default' => [
 						'size' => 20,
 					],
@@ -93,11 +105,10 @@ class Widget_AccountLogin extends Widget_Base {
 		);
 
 			$this->add_control(
-				'account_login_color',
-				[
-					'label' => __( 'Color', 'autoart' ),
-					'type' => Controls_Manager::COLOR,
-					'default' => '',
+				'account_login_color',[
+					'label'     => esc_html__( 'Color', 'autoart' ),
+					'type'      => Controls_Manager::COLOR,
+					'default'   => '',
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-account-login-inner ul li a' => 'color: {{VALUE}};',
 						'{{WRAPPER}} .bt-elwg-account-login-inner ul li span' => 'color: {{VALUE}};',
@@ -107,11 +118,10 @@ class Widget_AccountLogin extends Widget_Base {
 			);
 
 			$this->add_group_control(
-				Group_Control_Typography::get_type(),
-				[
-					'name' => 'account_login_typography',
-					'label' => __( 'Typography', 'autoart' ),
-					'default' => '',
+				Group_Control_Typography::get_type(),[
+					'name'     => 'account_login_typography',
+					'label'    => esc_html__( 'Typography', 'autoart' ),
+					'default'  => '',
 					'selector' => '{{WRAPPER}} .bt-elwg-account-login-inner ul li a, {{WRAPPER}} .bt-elwg-account-login-inner ul li span',
 				]
 			);
@@ -134,9 +144,12 @@ class Widget_AccountLogin extends Widget_Base {
 					<?php if ( is_user_logged_in() ) { ?>
 						<?php  $current_user = wp_get_current_user();?>
 						<ul class="logout-menu">
-							<li>
-								<span><?php esc_html_e( 'Hi', 'autoart' ); ?>, <?php echo esc_html($current_user->display_name) ?></span>
-							</li>
+							<?php if($settings['acc_lg_layout_style'] == 'default'): ?>
+								<li>
+									<span><?php esc_html_e( 'Hi', 'autoart' ); ?>, <?php echo esc_html($current_user->display_name) ?></span>
+								</li>
+							<?php endif;?>	
+
 							<li> 
 								<a href="<?php echo esc_url( wp_logout_url() ); ?>"><?php esc_html_e( 'Logout', 'autoart' ); ?></a>
 							</li>
@@ -149,9 +162,11 @@ class Widget_AccountLogin extends Widget_Base {
 								</a>
 							</li>
 
-							<li> 
-								<a href="<?php echo esc_url( wp_registration_url() ); ?>"> <?php esc_html_e( 'Register', 'autoart' ); ?> </a>
-							</li>
+							<?php if($settings['acc_lg_layout_style'] == 'default'): ?>
+								<li> 
+									<a href="<?php echo esc_url( wp_registration_url() ); ?>"> <?php esc_html_e( 'Register', 'autoart' ); ?> </a>
+								</li>
+							<?php endif;?>	
 						</ul>
 					<?php } ?>
 				</div>
