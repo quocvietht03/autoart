@@ -7387,10 +7387,16 @@ body {
 
 .bt-elwg-list-icon-text-inner {
   display: flex; }
+  @media (max-width: 1024.98px) {
+    .bt-elwg-list-icon-text-inner {
+      flex-wrap: wrap; } }
   .bt-elwg-list-icon-text-inner .bt-elwg-list-icon-text--title > h3 {
     font-size: 26px;
     line-height: normal;
     color: #fff; }
+    @media (min-width: 1025px) and (max-width: 1199.98px) {
+      .bt-elwg-list-icon-text-inner .bt-elwg-list-icon-text--title > h3 {
+        font-size: 20px !important; } }
 .bt-elwg-list-icon-text--title {
   min-width: 20%;
   background-color: var(--e-global-color-accent, #1FBECD);
@@ -7398,6 +7404,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 15px; }
+  @media (max-width: 1024.98px) {
+    .bt-elwg-list-icon-text--title {
+      min-width: 100%;
+      padding: 32px 15px; } }
 .bt-elwg-list-icon-text--items {
   background: var(--e-global-color-secondary, #111);
   padding: 0 0px 0 10px;
@@ -7409,6 +7419,9 @@ body {
   @media (min-width: 1025px) and (max-width: 1679.98px) {
     .bt-elwg-list-icon-text--items {
       width: 85%; } }
+  @media (max-width: 1024.98px) {
+    .bt-elwg-list-icon-text--items {
+      max-width: 100%; } }
   .bt-elwg-list-icon-text--items .item-icon-text {
     padding: 0 40px; }
     @media (max-width: 1679.98px) {
@@ -7434,7 +7447,7 @@ body {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        max-height: 28px;
+        max-height: 25px;
         left: 0; }
     .bt-elwg-list-icon-text--items .item-icon-text-inner {
       display: flex;
