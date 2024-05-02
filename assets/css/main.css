@@ -776,7 +776,7 @@ img.alignright {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical; }
 
-.__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
+.__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
 .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input {
   display: inline-block;
   font-size: 16px;
@@ -789,13 +789,13 @@ img.alignright {
   padding: 16px 35px;
   border: 3px solid var(--e-global-color-accent, #1FBECD);
   border-radius: 15px; }
-  .__bt-button-style:hover, button:hover, input[type="submit"]:hover, .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-block-contact-information .bt-contact-information--button:hover, .bt-elwg-contact-information .bt-contact-information--button:hover, .__bt-button-outline-style:hover, .__bt-button-outline-dark-style:hover, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .bt-srq-box--book-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .single-service .bt-main-content-ss .bt-post--book-link:hover, .woocommerce .woocommerce-loop-product__thumbnail .button:hover,
-  .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:hover, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:hover, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:hover, .__bt-button-style:focus, button:focus, input[type="submit"]:focus, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-block-contact-information .bt-contact-information--button:focus, .bt-elwg-contact-information .bt-contact-information--button:focus, .__bt-button-outline-style:focus, .__bt-button-outline-dark-style:focus, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .bt-srq-box--book-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .single-service .bt-main-content-ss .bt-post--book-link:focus, .woocommerce .woocommerce-loop-product__thumbnail .button:focus,
+  .__bt-button-style:hover, button:hover, input[type="submit"]:hover, .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-block-contact-information .bt-contact-information--button:hover, .bt-elwg-contact-information .bt-contact-information--button:hover, .__bt-button-outline-style:hover, .__bt-button-outline-dark-style:hover, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .bt-srq-box--book-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn:hover, .single-service .bt-main-content-ss .bt-post--book-link:hover, .woocommerce .woocommerce-loop-product__thumbnail .button:hover,
+  .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:hover, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:hover, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:hover, .__bt-button-style:focus, button:focus, input[type="submit"]:focus, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-block-contact-information .bt-contact-information--button:focus, .bt-elwg-contact-information .bt-contact-information--button:focus, .__bt-button-outline-style:focus, .__bt-button-outline-dark-style:focus, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .bt-srq-box--book-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn:focus, .single-service .bt-main-content-ss .bt-post--book-link:focus, .woocommerce .woocommerce-loop-product__thumbnail .button:focus,
   .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:focus, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:focus, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:focus {
     color: #FFFFFF;
     background: var(--e-global-color-accent, #1FBECD); }
   @media (max-width: 519.98px) {
-    .__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
+    .__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
     .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input {
       font-size: 14px;
       padding: 12px 30px; } }
@@ -4112,6 +4112,48 @@ body {
   @media (max-width: 767.98px) {
     .single-car .bt-related-posts-ss--list .bt-post {
       width: 100%; } }
+
+.bt-elwg-cars-wishlist--default .bt-table {
+  background: #FFFFFF;
+  overflow: hidden;
+  border: 1px solid #DADADA;
+  border-radius: 20px; }
+  .bt-elwg-cars-wishlist--default .bt-table--head {
+    background: var(--e-global-color-accent, #1FBECD); }
+    .bt-elwg-cars-wishlist--default .bt-table--head span {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 150%;
+      color: #FFFFFF; }
+  .bt-elwg-cars-wishlist--default .bt-table--row {
+    display: flex;
+    align-items: center; }
+    .bt-elwg-cars-wishlist--default .bt-table--row.bt-car-item {
+      border-bottom: 1px solid #DADADA; }
+  .bt-elwg-cars-wishlist--default .bt-table--col {
+    width: 15%;
+    padding: 20px 15px; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove {
+      width: 10%;
+      text-align: center; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove span {
+        font-size: 0; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove svg {
+        width: 20px;
+        height: auto; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb {
+      width: 18%; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb .bt-cover-image, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb .wc-cover-image {
+        border-radius: 20px; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title {
+      width: 27%; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title .bt-title {
+        font-size: 20px; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-price {
+      font-weight: 500;
+      color: var(--e-global-color-accent, #1FBECD); }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-stock {
+      text-transform: capitalize; }
 
 .__bt-team-style-default .bt-post--inner, .search-results .bt-post--inner,
 .tax-team_categories .bt-post--inner, .single-team .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-team-loop-item--default .bt-post--inner {

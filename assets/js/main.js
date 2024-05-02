@@ -151,8 +151,6 @@
 	/* Car wishlist */
 	function AutoArtCarWishlist() {
 		if($('.bt-car-wishlist-btn').length > 0) {
-			// setCookie('carwishlistcookie', '', 7);
-
 			$('.bt-car-wishlist-btn').on('click', function(e) {
 				e.preventDefault();
 
@@ -170,11 +168,86 @@
 
 						setCookie('carwishlistcookie', wishlist_str, 7);
 						$(this).removeClass('added');
+						// window.location.href = '/cars-wishlist/';
 					} else {
 						setCookie('carwishlistcookie', wishlist_cookie + ',' + post_id, 7);
 						$(this).addClass('added');
 					}
 				}
+			});
+		}
+
+		if($('.elementor-widget-bt-cars-wishlist').length > 0) {
+			$('.bt-remove').on('click', function(e) {
+				e.preventDefault();
+
+				var car_id = $(this).data('id').toString(),
+						wishlist_str = $('.bt-carwishlistcookie').val(),
+						wishlist_arr = wishlist_str.split(','),
+						index = wishlist_arr.indexOf(car_id);
+
+		    if (index > -1) {
+		        wishlist_arr.splice(index, 1);
+		    }
+
+				wishlist_str = wishlist_arr.toString();
+				$('.bt-carwishlistcookie').val(wishlist_str);
+				setCookie('carwishlistcookie', wishlist_str, 7);
+				$('.bt-cars-wishlist-form').submit();
+			});
+
+			// Ajax wishlist
+			$('.bt-cars-wishlist-form').submit(function() {
+				var param_ajax = {
+	            action: 'autoart_cars_wishlist',
+							carwishlistcookie: $('.bt-carwishlistcookie').val()
+	          };
+
+				$.ajax({
+	          type: 'POST',
+	          dataType: 'json',
+	          url: AJ_Options.ajax_url,
+	          data: param_ajax,
+	          context: this,
+	          beforeSend: function(){
+							$('.bt-table--body').addClass('loading');
+	          },
+	          success: function(response) {
+	            if(response.success) {
+	              // console.log(response.data);
+								setTimeout(function() {
+		              $('.bt-table--body').html(response.data['items']).fadeIn('slow');
+									$('.bt-table--body').removeClass('loading');
+
+									$('.bt-remove').on('click', function(e) {
+										e.preventDefault();
+
+										var car_id = $(this).data('id').toString(),
+												wishlist_str = $('.bt-carwishlistcookie').val(),
+												wishlist_arr = wishlist_str.split(','),
+												index = wishlist_arr.indexOf(car_id);
+
+								    if (index > -1) {
+								        wishlist_arr.splice(index, 1);
+								    }
+
+										wishlist_str = wishlist_arr.toString();
+										$('.bt-carwishlistcookie').val(wishlist_str);
+										setCookie('carwishlistcookie', wishlist_str, 7);
+										$('.bt-cars-wishlist-form').submit();
+									});
+								}, 500);
+
+	            } else {
+	              console.log('error');
+	            }
+	          },
+	          error: function( jqXHR, textStatus, errorThrown ){
+	            console.log( 'The following error occured: ' + textStatus, errorThrown );
+	          }
+	      });
+
+				return false;
 			});
 		}
 	}
