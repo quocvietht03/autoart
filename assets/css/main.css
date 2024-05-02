@@ -1029,12 +1029,12 @@ img.alignright {
     .__bt-pagination-style.next, .next.bt-pagination, .woocommerce nav.next.woocommerce-pagination, .next.elementor-pagination {
       margin-left: 0; } }
 
-.__bt-socials-style, .bt-post-author--socials, .bt-elwg-site-social {
+.__bt-socials-style, .bt-post-author--socials, .bt-elwg-site-social, .bt-elwg-site-social-style-2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 5px; }
-  .__bt-socials-style span, .bt-post-author--socials span, .bt-elwg-site-social span {
+  .__bt-socials-style span, .bt-post-author--socials span, .bt-elwg-site-social span, .bt-elwg-site-social-style-2 span {
     display: inline-block;
     font-family: var(--e-global-typography-primary-font-family, "DM Sans");
     font-size: 16px;
@@ -1042,7 +1042,7 @@ img.alignright {
     line-height: 150%;
     color: var(--e-global-color-primary, #222);
     margin-right: 9.88px; }
-  .__bt-socials-style a, .bt-post-author--socials a, .bt-elwg-site-social a {
+  .__bt-socials-style a, .bt-post-author--socials a, .bt-elwg-site-social a, .bt-elwg-site-social-style-2 a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1051,15 +1051,15 @@ img.alignright {
     color: #FFF;
     background: var(--e-global-color-accent, #1FBECD);
     border-radius: 100px; }
-    .__bt-socials-style a.bt-facebook, .bt-post-author--socials a.bt-facebook, .bt-elwg-site-social a.bt-facebook {
+    .__bt-socials-style a.bt-facebook, .bt-post-author--socials a.bt-facebook, .bt-elwg-site-social a.bt-facebook, .bt-elwg-site-social-style-2 a.bt-facebook {
       background: #186CB0; }
-    .__bt-socials-style a.bt-linkedin, .bt-post-author--socials a.bt-linkedin, .bt-elwg-site-social a.bt-linkedin {
+    .__bt-socials-style a.bt-linkedin, .bt-post-author--socials a.bt-linkedin, .bt-elwg-site-social a.bt-linkedin, .bt-elwg-site-social-style-2 a.bt-linkedin {
       background: #074682; }
-    .__bt-socials-style a.bt-twitter, .bt-post-author--socials a.bt-twitter, .bt-elwg-site-social a.bt-twitter {
+    .__bt-socials-style a.bt-twitter, .bt-post-author--socials a.bt-twitter, .bt-elwg-site-social a.bt-twitter, .bt-elwg-site-social-style-2 a.bt-twitter {
       background: #00B3D3; }
-    .__bt-socials-style a.bt-google, .bt-post-author--socials a.bt-google, .bt-elwg-site-social a.bt-google {
+    .__bt-socials-style a.bt-google, .bt-post-author--socials a.bt-google, .bt-elwg-site-social a.bt-google, .bt-elwg-site-social-style-2 a.bt-google {
       background: var(--e-global-color-accent, #1FBECD); }
-    .__bt-socials-style a svg, .bt-post-author--socials a svg, .bt-elwg-site-social a svg {
+    .__bt-socials-style a svg, .bt-post-author--socials a svg, .bt-elwg-site-social a svg, .bt-elwg-site-social-style-2 a svg {
       fill: currentColor; }
 
 .__bt-contact-information-style .bt-contact-information, .bt-block-contact-information .bt-contact-information, .bt-elwg-contact-information .bt-contact-information {
@@ -6140,6 +6140,27 @@ body {
     display: flex;
     align-items: center;
     gap: 12px; }
+
+.bt-elwg-site-social-style-2 {
+  gap: 16px; }
+  .bt-elwg-site-social-style-2 .bt-title {
+    margin: 0; }
+  .bt-elwg-site-social-style-2 a {
+    width: auto;
+    height: auto;
+    background: transparent !important;
+    border-radius: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .bt-elwg-site-social-style-2 a svg {
+      fill: var(--e-global-color-secondary, #111);
+      width: auto;
+      height: 18px;
+      transition: all 0.25s ease-in-out; }
+    .bt-elwg-site-social-style-2 a:hover svg {
+      fill: var(--e-global-color-accent, #1FBECD); }
 
 .bt-elwg-site-copyright {
   font-family: var(--e-global-typography-primary-font-family, "DM Sans");

@@ -353,8 +353,37 @@
   }
 }
 
-.bt-elwg-site-social {
+.bt-elwg-site-social, .bt-elwg-site-social-style-2{
   @extend .__bt-socials-style;
+}
+
+.bt-elwg-site-social-style-2{
+  gap:16px;
+  .bt-title{
+    margin: 0;
+  }
+
+  a{
+    width: auto;
+    height: auto;
+    background: transparent !important;
+    border-radius: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      fill: $color-secondary;
+      width: auto;
+      height: 18px;
+      transition: $transition;
+    }
+    &:hover{
+      svg{
+        fill:$color-accent;
+      }
+    }
+  }
 }
 
 .bt-elwg-site-copyright {
