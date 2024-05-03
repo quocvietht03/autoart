@@ -1066,7 +1066,7 @@ function autoart_cars_wishlist() {
 			}
 		$output['items'] = ob_get_clean();
 	} else {
-		$output['items'] = 'Post not found!';
+		$output['items'] = '<div class="bt-no-results">' . __('Post not found!', 'autoart') . '</div>';
 	}
 
   wp_send_json_success($output);

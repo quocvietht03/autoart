@@ -1105,10 +1105,32 @@
           color: #FFFFFF;
         }
       }
+      &--body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 165px;
+        &.loading {
+          .bt-loading-wave {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        .bt-loading-wave {
+          opacity: 0;
+          visibility: hidden;
+          transition: all .3s;
+        }
+      }
+      .bt-car-list {
+        width: 100%;
+      }
       &--row {
         display: flex;
         align-items: center;
-        &.bt-car-item {
+        &.bt-car-item:not(:last-child) {
           border-bottom: 1px solid #DADADA;
         }
       }
@@ -1150,6 +1172,22 @@
             @extend .__bt-button-style;
           }
         }
+        &.bt-social-share {
+          width: 100%;
+          .bt-post-share {
+            margin: 0;
+          }
+        }
+      }
+      &--foot {
+        border-top: 1px solid #DADADA;
+      }
+      .bt-no-results {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+        padding: 20px 15px;
       }
     }
   }
