@@ -4206,12 +4206,16 @@ body {
     .bt-elwg-cars-wishlist--default .bt-table--body.loading .bt-loading-wave {
       opacity: 1;
       visibility: visible; }
+    .bt-elwg-cars-wishlist--default .bt-table--body.loading .bt-car-list {
+      opacity: 0;
+      visibility: hidden; }
     .bt-elwg-cars-wishlist--default .bt-table--body .bt-loading-wave {
       opacity: 0;
       visibility: hidden;
       transition: all .3s; }
   .bt-elwg-cars-wishlist--default .bt-table .bt-car-list {
-    width: 100%; }
+    width: 100%;
+    transition: all .3s; }
   .bt-elwg-cars-wishlist--default .bt-table--row {
     display: flex;
     align-items: center; }
@@ -4236,11 +4240,20 @@ body {
       width: 27%; }
       .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title .bt-title {
         font-size: 20px; }
-    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-price {
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-price,
+    .bt-elwg-cars-wishlist--default .bt-table--col .bt-price-mobile {
       font-weight: 500;
       color: var(--e-global-color-accent, #1FBECD); }
-    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-stock {
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-stock,
+    .bt-elwg-cars-wishlist--default .bt-table--col .bt-stock-mobile {
       text-transform: capitalize; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-stock--mobile,
+      .bt-elwg-cars-wishlist--default .bt-table--col .bt-stock-mobile--mobile {
+        display: none; }
+    .bt-elwg-cars-wishlist--default .bt-table--col .bt-car-meta-mobile {
+      display: none; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller {
+      min-width: 180px; }
     .bt-elwg-cars-wishlist--default .bt-table--col.bt-social-share {
       width: 100%; }
       .bt-elwg-cars-wishlist--default .bt-table--col.bt-social-share .bt-post-share {
@@ -4253,6 +4266,48 @@ body {
     line-height: 1.5;
     text-align: center;
     padding: 20px 15px; }
+    .bt-elwg-cars-wishlist--default .bt-table .bt-no-results a {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: var(--e-global-color-accent, #1FBECD);
+      margin: 0 4px; }
+  @media (max-width: 991.98px) {
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb {
+      width: 22%; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title {
+      width: 44%; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title .bt-car-meta-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 8px; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-price, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-stock {
+      display: none; } }
+  @media (max-width: 767.98px) {
+    .bt-elwg-cars-wishlist--default .bt-table--head {
+      display: none; }
+    .bt-elwg-cars-wishlist--default .bt-table--row {
+      position: relative;
+      flex-wrap: wrap; }
+    .bt-elwg-cars-wishlist--default .bt-table--col {
+      padding: 15px; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove {
+        order: 3; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb {
+        width: 33%; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title {
+        width: 67%; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove {
+        padding-top: 0; } }
+  @media (max-width: 519.98px) {
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb {
+      width: 100%;
+      padding-bottom: 0; }
+    .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title {
+      width: 100%; } }
 
 .__bt-team-style-default .bt-post--inner, .search-results .bt-post--inner,
 .tax-team_categories .bt-post--inner, .single-team .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-team-loop-item--default .bt-post--inner {

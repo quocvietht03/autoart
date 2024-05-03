@@ -1033,6 +1033,25 @@ function autoart_cars_wishlist() {
 								<?php echo get_the_title($id); ?>
 							</a>
 						</h3>
+						<div class="bt-car-meta-mobile">
+							<div class="bt-price-mobile">
+								<?php
+									$price = get_field('car_price', $id);
+
+									if(!empty($price)) {
+										echo '<span>$' . number_format($price, 0) . '</span>';
+									} else {
+										echo '<a href="#">' . esc_html__('Call for price', 'autoart') . '</a>';
+									}
+								?>
+							</div>
+							<div class="bt-stock-mobile">
+								<?php
+									$stock = get_field('car_stock_status', $id);
+									echo '<span>' . str_replace('_', ' ', $stock) . '</span>';
+								?>
+							</div>
+						</div>
 					</div>
 					<div class="bt-table--col bt-car-price">
 						<?php
@@ -1055,9 +1074,9 @@ function autoart_cars_wishlist() {
 						<?php
 							$dealer = get_field('car_dealer', $id);
 							if(!empty($dealer)) {
-								echo '<a href="' . get_the_permalink($dealer) . '" class="bt-seller-btn">' . __('Contact Seller', 'autoart') . '</a>';
+								echo '<a href="' . get_the_permalink($dealer) . '" class="bt-seller-btn">' . __('Contact', 'autoart') . '</a>';
 							} else {
-								echo '<a href="/contact-us/" class="bt-seller-btn">' . __('Contact Us', 'autoart') . '</a>';
+								echo '<a href="/contact-us/" class="bt-seller-btn">' . __('Contact', 'autoart') . '</a>';
 							}
 						?>
 					</div>
@@ -1066,7 +1085,7 @@ function autoart_cars_wishlist() {
 			}
 		$output['items'] = ob_get_clean();
 	} else {
-		$output['items'] = '<div class="bt-no-results">' . __('Post not found!', 'autoart') . '</div>';
+		$output['items'] = '<div class="bt-no-results">' . __('Post not found!', 'autoart') . '<a href="/cars/">' . __('Back To All Cars', 'autoart') . '</a></div>';
 	}
 
   wp_send_json_success($output);
