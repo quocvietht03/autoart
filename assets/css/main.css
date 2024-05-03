@@ -779,16 +779,19 @@ img.alignright {
 .__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
 .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input {
   display: inline-block;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
   text-transform: uppercase;
   text-align: center;
   color: #FFFFFF;
   background: var(--e-global-color-accent, #1FBECD);
-  padding: 16px 35px;
-  border: 3px solid var(--e-global-color-accent, #1FBECD);
-  border-radius: 15px; }
+  padding: 16px 42px 16px 39px;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--e-global-typography-primary-font-family, "DM Sans");
+  height: auto;
+  min-height: auto; }
   .__bt-button-style:hover, button:hover, input[type="submit"]:hover, .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-block-contact-information .bt-contact-information--button:hover, .bt-elwg-contact-information .bt-contact-information--button:hover, .__bt-button-outline-style:hover, .__bt-button-outline-dark-style:hover, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .bt-srq-box--book-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn:hover, .single-service .bt-main-content-ss .bt-post--book-link:hover, .woocommerce .woocommerce-loop-product__thumbnail .button:hover,
   .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:hover, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:hover, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:hover, .__bt-button-style:focus, button:focus, input[type="submit"]:focus, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-block-contact-information .bt-contact-information--button:focus, .bt-elwg-contact-information .bt-contact-information--button:focus, .__bt-button-outline-style:focus, .__bt-button-outline-dark-style:focus, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .bt-srq-box--book-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn:focus, .single-service .bt-main-content-ss .bt-post--book-link:focus, .woocommerce .woocommerce-loop-product__thumbnail .button:focus,
   .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:focus, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:focus, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:focus {
@@ -797,7 +800,7 @@ img.alignright {
   @media (max-width: 519.98px) {
     .__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
     .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input {
-      font-size: 14px;
+      font-size: 16px;
       padding: 12px 30px; } }
 
 .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button {
@@ -5168,25 +5171,28 @@ body {
   font-size: 16px;
   letter-spacing: 2.986px;
   color: #EFCF0A;
-  width: 100px; }
+  width: 100px;
+  margin: 0; }
   .woocommerce .star-rating:before,
   .woocommerce .star-rating span::before {
     left: 1px; }
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
-  font-family: var(--e-global-typography-secondary-font-family, "DM Sans");
   font-size: 20px;
-  line-height: 150%;
+  font-weight: 700;
+  line-height: normal;
   color: var(--e-global-color-accent, #1FBECD); }
   .woocommerce div.product p.price del,
   .woocommerce div.product span.price del {
-    font-size: 85%;
+    font-size: 80%;
     color: #85B7BA;
-    opacity: 1; }
+    opacity: 1;
+    text-decoration-line: strikethrough;
+    font-weight: 500; }
   .woocommerce div.product p.price ins,
   .woocommerce div.product span.price ins {
     float: left;
-    margin-right: 8px;
+    margin-right: 5px;
     text-decoration: none; }
 .woocommerce .quantity {
   position: relative;
@@ -5194,12 +5200,14 @@ body {
   .woocommerce .quantity .qty {
     min-height: auto;
     font-family: var(--e-global-typography-secondary-font-family, "DM Sans");
-    font-size: 18px;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
     width: 50px;
-    padding: 15px 35px;
-    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    -moz-appearance: textfield; }
+    padding: 12px 31.5px;
+    -moz-appearance: textfield;
+    background: #F1F1F1;
+    border-color: #F1F1F1; }
     .woocommerce .quantity .qty::-webkit-inner-spin-button, .woocommerce .quantity .qty::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0; }
@@ -5225,7 +5233,7 @@ body {
 .woocommerce .woocommerce-loop-product__thumbnail {
   position: relative; }
   .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image {
-    padding-bottom: 110%;
+    padding-bottom: 104%;
     border-radius: 15px; }
   .woocommerce .woocommerce-loop-product__thumbnail .button,
   .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart {
@@ -5253,23 +5261,35 @@ body {
     .woocommerce .woocommerce-loop-product__thumbnail a.button.loading:after {
       top: 1em !important; }
 .woocommerce .woocommerce-loop-product__infor {
-  padding: 20px 0; }
+  padding: 28px 31px 26px 31px;
+  border-radius: 20px;
+  border: 1px solid #D4D4D4;
+  background: #FFF;
+  margin: 0 auto;
+  width: 100%;
+  max-width: calc(100% - 40px);
+  margin-top: -40px;
+  z-index: 9;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap; }
 .woocommerce .woocommerce-loop-product__subtitle {
-  display: inline-block;
-  vertical-align: middle;
-  width: calc(100% - 102px);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 133.333%;
   color: #767676;
-  font-size: 16px;
-  line-height: 150%;
-  margin-bottom: 8px; }
+  display: inline-block; }
 .woocommerce .woocommerce-loop-product .star-rating {
-  float: none;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0 8px; }
+  margin: 12px 0 0 0; }
 .woocommerce .woocommerce-loop-product__title {
-  font-size: 20px;
-  margin: 0 0 12px; }
+  font-size: 24px;
+  line-height: 100%;
+  margin: 10px 0 0 0; }
+.woocommerce .woocommerce-loop-product .price {
+  width: 100%;
+  display: inline-block;
+  margin: 16px  0 0 0; }
 .woocommerce .woocommerce-loop-product:hover .woocommerce-loop-product__thumbnail .button,
 .woocommerce .woocommerce-loop-product:hover .woocommerce-loop-product__thumbnail .added_to_cart {
   opacity: 1;
@@ -5300,9 +5320,13 @@ body {
   @media (max-width: 767.98px) {
     .woocommerce .bt-main-product-ss {
       padding: 75px 0; } }
+  .woocommerce .bt-main-product-ss div.product .bt-product-inner {
+    display: flex;
+    align-items: center; }
   .woocommerce .bt-main-product-ss div.product div.images {
-    width: 47%;
-    margin-bottom: 80px; }
+    width: 50%;
+    margin-bottom: 80px;
+    max-height: 626px; }
     .woocommerce .bt-main-product-ss div.product div.images .woocommerce-product-gallery__wrapper {
       line-height: 0; }
     .woocommerce .bt-main-product-ss div.product div.images .woocommerce-product-gallery__image {
@@ -5318,71 +5342,80 @@ body {
         padding: 0 10px;
         cursor: pointer; }
   .woocommerce .bt-main-product-ss div.product div.summary {
-    width: 47%;
-    margin-bottom: 80px; }
-    .woocommerce .bt-main-product-ss div.product div.summary .woocommerce-product-subtitle {
-      display: inline-block;
-      line-height: 150%;
-      color: #767676;
-      margin-bottom: 12px; }
+    width: 50%;
+    margin-bottom: 80px;
+    border-radius: 20px;
+    border: 1px solid #D4D4D4;
+    background: #FFF;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    box-sizing: border-box;
+    margin-left: -35px;
+    z-index: 9; }
+    .woocommerce .bt-main-product-ss div.product div.summary .woocommerce-loop-product__subtitle, .woocommerce .bt-main-product-ss div.product div.summary .product_title, .woocommerce .bt-main-product-ss div.product div.summary .woocommerce-product-price-wrap, .woocommerce .bt-main-product-ss div.product div.summary .stock, .woocommerce .bt-main-product-ss div.product div.summary form.cart, .woocommerce .bt-main-product-ss div.product div.summary .product_meta {
+      padding-left: 71px;
+      padding-right: 71px; }
     .woocommerce .bt-main-product-ss div.product div.summary .product_title {
-      font-size: 36px;
-      margin: 0 0 16px; }
+      font-size: 30px;
+      margin: 20px 0 24px 0;
+      line-height: 80%; }
     .woocommerce .bt-main-product-ss div.product div.summary .woocommerce-product-price-wrap {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px 40px;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #D9D9D9; }
-    .woocommerce .bt-main-product-ss div.product div.summary .price {
-      font-size: 26px;
+      gap: 8px 43px;
+      margin-bottom: 0px;
+      padding-bottom: 35px;
+      border-bottom: 1px solid #D9D9D9;
+      align-items: center; }
+    .woocommerce .bt-main-product-ss div.product div.summary .price, .woocommerce .bt-main-product-ss div.product div.summary .woocommerce-product-rating {
       margin: 0; }
-    .woocommerce .bt-main-product-ss div.product div.summary .woocommerce-product-rating {
-      font-size: 16px;
+    .woocommerce .bt-main-product-ss div.product div.summary .woocommerce-product-rating .woocommerce-review-link {
+      display: none; }
+    .woocommerce .bt-main-product-ss div.product div.summary .woocommerce-product-rating .star-rating {
       margin: 0; }
     .woocommerce .bt-main-product-ss div.product div.summary .woocommerce-product-details__short-description {
       margin-bottom: 24px; }
     .woocommerce .bt-main-product-ss div.product div.summary p.stock {
-      font-family: var(--e-global-typography-primary-font-family, "DM Sans");
-      font-size: 16px;
+      margin: 0;
+      font-size: 18px;
       font-weight: 700;
-      line-height: 150%;
+      line-height: 255.556%;
       color: var(--e-global-color-text, #555);
-      margin-bottom: 32px; }
+      padding-top: 19px; }
       .woocommerce .bt-main-product-ss div.product div.summary p.stock span {
         display: inline-block;
         vertical-align: middle;
         color: var(--e-global-color-accent, #1FBECD);
-        margin-left: 8px; }
-    .woocommerce .bt-main-product-ss div.product div.summary form.cart .quantity {
-      float: none;
-      margin: 0 0 20px; }
-    .woocommerce .bt-main-product-ss div.product div.summary form.cart .button {
-      float: none;
-      display: block;
-      text-transform: uppercase; }
-    .woocommerce .bt-main-product-ss div.product div.summary form.cart .variations {
-      margin-top: 0; }
+        margin-left: 4px; }
+    .woocommerce .bt-main-product-ss div.product div.summary form.cart {
+      margin: 16px 0 0 0; }
+      .woocommerce .bt-main-product-ss div.product div.summary form.cart .quantity {
+        float: none;
+        margin: 0 0 19px 0; }
+      .woocommerce .bt-main-product-ss div.product div.summary form.cart .button {
+        float: none;
+        display: block;
+        text-transform: uppercase; }
+      .woocommerce .bt-main-product-ss div.product div.summary form.cart .variations {
+        margin-top: 0; }
     .woocommerce .bt-main-product-ss div.product div.summary .product_meta {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      font-family: var(--e-global-typography-primary-font-family, "DM Sans");
-      font-size: 16px;
+      gap: 2px;
+      color: var(--e-global-color-text, #555);
+      font-size: 18px;
+      font-style: normal;
       font-weight: 700;
-      line-height: 150%;
+      line-height: 255.556%;
       text-transform: uppercase;
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid #D9D9D9; }
+      margin-top: 23px; }
       .woocommerce .bt-main-product-ss div.product div.summary .product_meta .sku_wrapper .sku {
         color: var(--e-global-color-accent, #1FBECD);
-        margin-left: 15px; }
+        margin-left: 10px; }
       .woocommerce .bt-main-product-ss div.product div.summary .product_meta .posted_in > a {
         text-transform: capitalize; }
         .woocommerce .bt-main-product-ss div.product div.summary .product_meta .posted_in > a:first-child {
-          margin-left: 15px; }
+          margin-left: 10px; }
   .woocommerce .bt-main-product-ss div.product .woocommerce-tabs {
     background: #FFF;
     overflow: hidden;

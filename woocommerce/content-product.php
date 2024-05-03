@@ -41,10 +41,10 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	<div class="woocommerce-loop-product__infor">
 		<?php
 			do_action('autoart_woocommerce_shop_loop_item_subtitle');
-			do_action('autoart_woocommerce_template_loop_rating');
 			do_action('autoart_woocommerce_template_loop_product_link_open');
 			do_action('autoart_woocommerce_template_loop_product_title');
 			do_action('autoart_woocommerce_template_loop_product_link_close');
+			do_action('autoart_woocommerce_template_loop_rating');
 			do_action('autoart_woocommerce_template_loop_price');
 		?>
 	</div>
