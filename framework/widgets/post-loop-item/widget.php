@@ -11,6 +11,7 @@ use Elementor\Group_Control_Box_Shadow;
 
 class Widget_PostLoopItem extends Widget_Base {
 
+
 	public function get_name() {
 		return 'bt-post-loop-item';
 	}
@@ -47,8 +48,7 @@ class Widget_PostLoopItem extends Widget_Base {
 		);
 
 		$this->add_responsive_control(
-			'image_ratio',
-			[
+			'image_ratio',[
 				'label' => __( 'Image Ratio', 'autoart' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
@@ -101,8 +101,7 @@ class Widget_PostLoopItem extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
+			Group_Control_Css_Filter::get_type(),[
 				'name' => 'thumbnail_filters',
 				'selector' => '{{WRAPPER}} .bt-post--featured img',
 			]
@@ -110,16 +109,14 @@ class Widget_PostLoopItem extends Widget_Base {
 
 		$this->end_controls_tab();
 
-		$this->start_controls_tab( 'thumbnail_tab_hover',
-			[
+		$this->start_controls_tab( 'thumbnail_tab_hover',[
 				'label' => __( 'Hover', 'autoart' ),
 			]
 		);
 
 		$this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name' => 'thumbnail_hover_filters',
+			Group_Control_Css_Filter::get_type(),[
+				'name'     => 'thumbnail_hover_filters',
 				'selector' => '{{WRAPPER}} .bt-post:hover .bt-post--featured img',
 			]
 		);
@@ -131,69 +128,35 @@ class Widget_PostLoopItem extends Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'section_style_content',
-			[
+			'section_style_content',[
 				'label' => esc_html__( 'Content', 'autoart' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		$this->add_control(
-			'date_style',
-			[
-				'label' => __( 'Date', 'autoart' ),
-				'type' => Controls_Manager::HEADING,
+			'title_style',[
+				'label' => esc_html__( 'Title', 'autoart' ),
+				'type'  => Controls_Manager::HEADING,
 			]
 		);
 
 		$this->add_control(
-			'date_color',
-			[
-				'label' => __( 'Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'title_color',[
+				'label'     => esc_html__( 'Date', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
-					'{{WRAPPER}} .bt-post--publish' => 'color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'date_typography',
-				'label' => __( 'Typography', 'autoart' ),
-				'default' => '',
-				'selector' => '{{WRAPPER}} .bt-post--publish',
-			]
-		);
-
-		$this->add_control(
-			'title_style',
-			[
-				'label' => __( 'Title', 'autoart' ),
-				'type' => Controls_Manager::HEADING,
-			]
-		);
-
-		$this->add_control(
-			'title_color',
-			[
-				'label' => __( 'Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-post--title' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .bt-post--title a' => 'color: {{VALUE}};',
 				],
 			]
 		);
 
 		$this->add_control(
-			'title_color_hover',
-			[
-				'label' => __( 'Color Hover', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'title_color_hover',[
+				'label'     => esc_html__( 'Color Hover', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--title a:hover' => 'color: {{VALUE}};',
 				],
@@ -201,43 +164,29 @@ class Widget_PostLoopItem extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'title_typography',
-				'label' => __( 'Typography', 'autoart' ),
-				'default' => '',
-				'selector' => '{{WRAPPER}} .bt-post--title',
+			Group_Control_Typography::get_type(),[
+				'name'     => 'title_typography',
+				'label'    => esc_html__( 'Typography', 'autoart' ),
+				'default'  => '',
+				'selector' => '{{WRAPPER}} .bt-post--title a',
 			]
 		);
 
 		$this->add_control(
-			'meta_style',
-			[
-				'label' => __( 'Meta', 'autoart' ),
-				'type' => Controls_Manager::HEADING,
+			'meta_style',[
+				'label' => esc_html__( 'Meta', 'autoart' ),
+				'type'  => Controls_Manager::HEADING,
 			]
 		);
 
 		$this->add_control(
-			'meta_color',
-			[
-				'label' => __( 'Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'meta_color',[
+				'label'     => esc_html__( 'Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
-					'{{WRAPPER}} .bt-post--meta' => 'color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'meta_color_hover',
-			[
-				'label' => __( 'Color Hover', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-post--meta a:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .bt-post--publish span' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .bt-post-author--name' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -245,10 +194,38 @@ class Widget_PostLoopItem extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'meta_typography',
-				'label' => __( 'Typography', 'autoart' ),
-				'default' => '',
-				'selector' => '{{WRAPPER}} .bt-post--meta',
+				'name'     => 'meta_typography',
+				'label'    => esc_html__( 'Typography', 'autoart' ),
+				'default'  => '',
+				'selector' => '{{WRAPPER}} .bt-post-author--name, {{WRAPPER}} .bt-post--publish span',
+			]
+		);
+
+		$this->add_control(
+			'button_style',[
+				'label' => esc_html__( 'Button', 'autoart' ),
+				'type'  => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->add_control(
+			'button_color',[
+				'label'     => esc_html__( 'Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
+				'selectors' => [
+					'{{WRAPPER}} .bt-post--button a span' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .bt-post--button a svg path' => 'stroke: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),[
+				'name'     => 'date_typography',
+				'label'    => esc_html__( 'Typography', 'autoart' ),
+				'default'  => '',
+				'selector' => '{{WRAPPER}} .bt-post--button a span',
 			]
 		);
 
@@ -263,11 +240,10 @@ class Widget_PostLoopItem extends Widget_Base {
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-
 		?>
 			<div class="bt-elwg-post-loop-item--default">
 				<?php get_template_part( 'framework/templates/post', 'style', array('image-size' => $settings['thumbnail_size'])); ?>
-	    </div>
+	    	</div>
 		<?php
 	}
 
