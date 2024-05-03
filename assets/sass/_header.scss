@@ -551,6 +551,112 @@
       }
     }
   }
+
+  &.bt-header-top-style-3{
+    .bt-elwg-site-infor{
+      @media (min-width: 1025px) and (max-width: 1379.98px) {
+        column-gap: 18px !important;
+      }
+
+      &--item{
+        @media(min-width: 1200px) and (max-width: 1439px) {
+          font-size: 14px !important;
+        }
+
+        @media(min-width: 1025px) and (max-width: 1199.98px) {
+          font-size: 11px !important;
+        }
+
+        &:not(:last-child)::before {
+          @media (min-width: 1025px) and (max-width: 1379.98px) {
+            right: calc((18px / 2)* -1) !important;
+          }
+        }
+      }
+    }
+  }
+
+  &.bt-header-style-3{
+    > .e-con-inner{
+      >.elementor-element{
+        &:last-child{
+          @media (min-width: 1025px) and (max-width: 1199.98px) {
+            --width: 175px;
+          }
+          .elementor-button{
+            @media (min-width: 1025px) and (max-width: 1199.98px) {
+              font-size: 16px !important;
+            }
+          }
+        }
+      }
+    }
+
+    .elementor-widget-theme-site-logo {
+      .elementor-image{
+        img{
+          @media (min-width: 1025px) and (max-width: 1199.98px) {
+            max-width: 150px !important;
+          }
+        }
+      }
+    }
+
+    .elementor-icon.elementor-social-icon {
+      @media (min-width: 1025px) and (max-width: 1199.98px) {
+        width: 40px;
+        height: 40px;
+      }
+
+      svg{
+        @media (min-width: 1025px) and (max-width: 1199.98px) {
+          width: 100%;
+          height: auto;
+          max-width: 18px;  
+        }
+      }
+    }
+
+    .elementor-nav-menu--layout-horizontal {
+      .elementor-nav-menu{
+        >li{
+          > a{
+            @media (min-width: 1200px) and (max-width: 1379.98px) {
+              font-size: 16px !important;
+            }
+
+            @media (min-width: 1025px) and (max-width: 1199.98px) {
+              font-size: 14px !important;
+            }
+          }
+
+          &:not(:last-child){
+            >a{
+              @media (min-width: 1380px) and (max-width: 1439.98px) {
+                margin-right: 12px;
+              }
+
+              @media (min-width: 1025px) and (max-width: 1379.98px) {
+                margin-right: 9px;
+              }
+            }
+          }
+        
+          &:not(:first-child) {
+            >a{
+              @media (min-width: 1380px) and (max-width: 1439.98px) {
+                margin-left: 12px;
+              }
+
+              @media (min-width: 1025px) and (max-width: 1379.98px) {
+                margin-left: 9px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .bt-menu-mobile-popup {
