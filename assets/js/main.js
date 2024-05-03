@@ -211,12 +211,13 @@
 	          context: this,
 	          beforeSend: function(){
 							$('.bt-table--body').addClass('loading');
+							$('.bt-car-list').fadeOut('fast');
 	          },
 	          success: function(response) {
 	            if(response.success) {
 	              // console.log(response.data);
 								setTimeout(function() {
-		              $('.bt-table--body').html(response.data['items']).fadeIn('slow');
+		              $('.bt-car-list').html(response.data['items']).fadeIn('slow');
 									$('.bt-table--body').removeClass('loading');
 
 									$('.bt-remove').on('click', function(e) {
