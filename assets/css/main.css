@@ -1884,14 +1884,14 @@ img.alignright {
   display: inline-block;
   position: absolute; }
 .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::before {
-  width: 12px;
-  height: 12px;
+  width: 9px;
+  height: 15px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/arrow-chevron-right.svg);
+  background-image: url(../images/arrow-submit.png);
   bottom: 8px;
-  right: 28px;
+  right: 30px;
   z-index: 9; }
 .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::after {
   width: 45px;
@@ -6993,13 +6993,15 @@ body {
       align-content: center; }
       .bt-elwg-account-login-inner ul li {
         list-style-type: none;
-        position: relative; }
+        position: relative;
+        display: flex; }
         .bt-elwg-account-login-inner ul li a, .bt-elwg-account-login-inner ul li span {
           color: var(--e-global-color-primary, #222);
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
-          line-height: normal; }
+          line-height: normal;
+          display: inline-block; }
         .bt-elwg-account-login-inner ul li:not(:first-child)::before {
           content: " ";
           display: inline-block;
