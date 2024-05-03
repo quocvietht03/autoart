@@ -171,6 +171,25 @@ class Widget_CarsWishlist extends Widget_Base {
 														<?php echo get_the_title($id); ?>
 													</a>
 												</h3>
+												<div class="bt-car-meta-mobile">
+													<div class="bt-price-mobile">
+														<?php
+															$price = get_field('car_price', $id);
+
+															if(!empty($price)) {
+																echo '<span>$' . number_format($price, 0) . '</span>';
+															} else {
+																echo '<a href="#">' . esc_html__('Call for price', 'autoart') . '</a>';
+															}
+														?>
+													</div>
+													<div class="bt-stock-mobile">
+														<?php
+															$stock = get_field('car_stock_status', $id);
+															echo '<span>' . str_replace('_', ' ', $stock) . '</span>';
+														?>
+													</div>
+												</div>
 											</div>
 											<div class="bt-table--col bt-car-price">
 												<?php
@@ -205,6 +224,9 @@ class Widget_CarsWishlist extends Widget_Base {
 							<?php } else { ?>
 								<div class="bt-no-results">
 									<?php echo __('Post not found!', 'autoart'); ?>
+									 <a href="/cars/">
+										 <?php echo __('Back To All Cars', 'autoart'); ?>
+									 </a>
 								</div>
 							<?php } ?>
 						</div>

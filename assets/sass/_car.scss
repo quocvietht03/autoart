@@ -1099,7 +1099,7 @@
       &--head {
         background: $color-accent;
         span {
-          font-size: 18px; 
+          font-size: 18px;
           font-weight: 600;
           line-height: 150%;
           color: #FFFFFF;
@@ -1117,6 +1117,10 @@
             opacity: 1;
             visibility: visible;
           }
+          .bt-car-list {
+            opacity: 0;
+            visibility: hidden;
+          }
         }
         .bt-loading-wave {
           opacity: 0;
@@ -1126,6 +1130,7 @@
       }
       .bt-car-list {
         width: 100%;
+        transition: all .3s;
       }
       &--row {
         display: flex;
@@ -1160,14 +1165,23 @@
             font-size: 20px;
           }
         }
-        &.bt-car-price {
+        &.bt-car-price,
+        .bt-price-mobile {
           font-weight: 500;
           color: $color-accent;
         }
-        &.bt-car-stock {
+        &.bt-car-stock,
+        .bt-stock-mobile {
           text-transform: capitalize;
+          &--mobile {
+            display: none;
+          }
+        }
+        .bt-car-meta-mobile {
+          display: none;
         }
         &.bt-car-seller {
+          min-width: 180px;
           .bt-seller-btn {
             @extend .__bt-button-style;
           }
@@ -1188,6 +1202,74 @@
         line-height: 1.5;
         text-align: center;
         padding: 20px 15px;
+        a {
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-decoration: underline;
+          color: $color-accent;
+          margin: 0 4px;
+        }
+      }
+
+      @media(max-width: $break-md) {
+        &--col {
+          &.bt-car-thumb {
+            width: 22%;
+          }
+          &.bt-car-title {
+            width: 44%;
+            .bt-car-meta-mobile {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              margin-top: 8px;
+            }
+          }
+          &.bt-car-price,
+          &.bt-car-stock {
+            display: none;
+          }
+        }
+      }
+
+      @media(max-width: $break-sm) {
+        &--head {
+          display: none;
+        }
+        &--row {
+          position: relative;
+          flex-wrap: wrap;
+        }
+        &--col {
+          padding: 15px;
+          &.bt-car-remove {
+            order: 3;
+          }
+          &.bt-car-thumb {
+            width: 33%;
+          }
+          &.bt-car-title {
+            width: 67%;
+          }
+          &.bt-car-seller,
+          &.bt-car-remove {
+            padding-top: 0;
+          }
+        }
+      }
+
+      @media(max-width: $break-xs) {
+        &--col {
+          &.bt-car-thumb {
+            width: 100%;
+            padding-bottom: 0;
+          }
+          &.bt-car-title {
+            width: 100%;
+          }
+        }
       }
     }
   }

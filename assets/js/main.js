@@ -164,11 +164,7 @@
 					var wishlist_arr = wishlist_cookie.split(',');
 
 					if(wishlist_arr.includes(post_id)) {
-						var wishlist_str = wishlist_arr.filter(function(e) { return e !== post_id });
-
-						setCookie('carwishlistcookie', wishlist_str, 7);
-						$(this).removeClass('added');
-						// window.location.href = '/cars-wishlist/';
+						window.location.href = '/cars-wishlist/';
 					} else {
 						setCookie('carwishlistcookie', wishlist_cookie + ',' + post_id, 7);
 						$(this).addClass('added');
@@ -211,7 +207,6 @@
 	          context: this,
 	          beforeSend: function(){
 							$('.bt-table--body').addClass('loading');
-							$('.bt-car-list').fadeOut('fast');
 	          },
 	          success: function(response) {
 	            if(response.success) {
