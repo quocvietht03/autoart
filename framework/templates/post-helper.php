@@ -309,17 +309,21 @@ if ( ! function_exists( 'autoart_share_render' ) ) {
                       </li>';
 
 		ob_start();
-		// if(has_tag()){
-			?>
-				<div class="bt-post-share">
-          <?php
-            if(!empty($social_item)){
-              echo '<span>'.esc_html__('Share: ', 'autoart').'</span><ul>'.implode(' ', $social_item).'</ul>';
-            }
-          ?>
-				</div>
-			<?php
-		// }
+    if ( is_singular( 'post' ) && has_tag() ) { ?>
+      <div class="bt-post-share">
+        <?php if ( !empty( $social_item ) ) {
+              echo '<span>' . esc_html__( 'Share: ', 'autoart' ) . '</span><ul>' . implode( ' ', $social_item ) . '</ul>';
+        } ?>
+      </div>
+      
+    <?php } elseif ( !empty( $social_item ) ) { ?>
+
+      <div class="bt-post-share">
+        <span><?php echo esc_html__( 'Share: ', 'autoart' ); ?></span>
+        <ul><?php echo implode( ' ', $social_item ); ?></ul>
+      </div>
+    <?php }
+
 		return ob_get_clean();
 	}
 }

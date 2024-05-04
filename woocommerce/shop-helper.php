@@ -17,6 +17,21 @@ add_action('autoart_woocommerce_template_single_add_to_cart', 'woocommerce_templ
 add_action('autoart_woocommerce_template_single_meta', 'woocommerce_template_single_meta', 40);
 add_action('autoart_woocommerce_template_single_sharing', 'woocommerce_template_single_sharing', 50);
 
+add_action( 'woocommerce_after_single_product_summary', 'autoart_sidebar_product', 19 );
+function autoart_sidebar_product() {?>
+    <div class="bt-product-sidebar"> 
+      <div class="bt-product-sidebar-inner"> 
+          <?php  
+           $dealer_id = get_post_meta( get_the_ID(), '_dealer', true );
+
+          //  echo "<pre>";
+          //  echo print_r($dealer_id);
+          //  echo "</pre>";
+          ?>
+      </div>
+    </div>
+<?php }
+
 add_action('autoart_woocommerce_shop_loop_item_subtitle', 'autoart_woocommerce_template_loop_subtitle', 10, 2);
 function autoart_woocommerce_template_loop_subtitle() {
 	$subtitle = get_post_meta( get_the_ID(), '_subtitle', true );
@@ -184,5 +199,10 @@ function autoart_woocommerce_custom_field_save( $post_id ){
     $subtitle = $_POST['_subtitle'];
     if( !empty( $subtitle ) ) {
       update_post_meta( $post_id, '_subtitle', esc_attr( $subtitle ) );
+    }
+
+    $_newsletter_shortcode = $_POST['_newsletter_shortcode'];
+    if( !empty( $_newsletter_shortcode ) ) {
+      update_post_meta( $post_id, '_newsletter_shortcode', esc_attr( $_newsletter_shortcode ) );
     }
 }
