@@ -288,22 +288,25 @@ html :where(.editor-styles-wrapper) {
 
 .__bt-button-style, .widget button, .widget input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .bt-srq-box--book-link {
   display: inline-block;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
   text-transform: uppercase;
   text-align: center;
   color: #FFFFFF;
   background: var(--e-global-color-accent, #1FBECD);
-  padding: 16px 35px;
-  border: 3px solid var(--e-global-color-accent, #1FBECD);
-  border-radius: 15px; }
+  padding: 16px 42px 16px 39px;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--e-global-typography-primary-font-family, "DM Sans");
+  height: auto;
+  min-height: auto; }
   .__bt-button-style:hover, .widget button:hover, .widget input[type="submit"]:hover, .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-block-contact-information .bt-contact-information--button:hover, .__bt-button-outline-style:hover, .__bt-button-outline-dark-style:hover, .bt-srq-box--book-link:hover, .__bt-button-style:focus, .widget button:focus, .widget input[type="submit"]:focus, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-block-contact-information .bt-contact-information--button:focus, .__bt-button-outline-style:focus, .__bt-button-outline-dark-style:focus, .bt-srq-box--book-link:focus {
     color: #FFFFFF;
     background: var(--e-global-color-accent, #1FBECD); }
   @media (max-width: 519.98px) {
     .__bt-button-style, .widget button, .widget input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .bt-srq-box--book-link {
-      font-size: 14px;
+      font-size: 16px;
       padding: 12px 30px; } }
 
 .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button {

@@ -309,7 +309,7 @@ if ( ! function_exists( 'autoart_share_render' ) ) {
                       </li>';
 
 		ob_start();
-		if(has_tag()){
+		// if(has_tag()){
 			?>
 				<div class="bt-post-share">
           <?php
@@ -319,7 +319,7 @@ if ( ! function_exists( 'autoart_share_render' ) ) {
           ?>
 				</div>
 			<?php
-		}
+		// }
 		return ob_get_clean();
 	}
 }
