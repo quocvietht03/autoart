@@ -153,6 +153,8 @@ function autoart_woocommerce_related_products_args( $args ) {
 // WooCommerce custom field
 add_action( 'woocommerce_product_options_general_product_data', 'autoart_woocommerce_custom_field' );
 function autoart_woocommerce_custom_field() {
+	global $post;
+
   woocommerce_wp_text_input(
     array(
       'id'          => '_subtitle',
@@ -170,8 +172,10 @@ function autoart_woocommerce_custom_field() {
   );
 
 	$supported_ids = [];
-	$supported_ids[] = __( 'Choose Dealer', 'autoart' );
-	
+	$supported_ids[''] = __( 'Choose Dealer', 'autoart' );
+	$value = get_post_meta( $post->ID, '_dealer', true );
+  if( empty( $value ) ) $value = '';
+
 	$wp_query = new \WP_Query( array(
 								'post_type' => 'dealer',
 								'post_status' => 'publish'
@@ -184,12 +188,15 @@ function autoart_woocommerce_custom_field() {
 		}
 	}
 
+
+
 	woocommerce_wp_select(
 		array(
       'id'          => '_dealer',
       'label'       => __( 'Dealer', 'autoart' ),
       'description' => '',
-			'options' 		=> $supported_ids
+			'options' 		=> $supported_ids,
+			'value'   => $value,
 		)
   );
 }
@@ -199,10 +206,21 @@ function autoart_woocommerce_custom_field_save( $post_id ){
     $subtitle = $_POST['_subtitle'];
     if( !empty( $subtitle ) ) {
       update_post_meta( $post_id, '_subtitle', esc_attr( $subtitle ) );
-    }
+    } else {
+			update_post_meta( $post_id, '_subtitle', '' );
+		}
 
-    $_newsletter_shortcode = $_POST['_newsletter_shortcode'];
-    if( !empty( $_newsletter_shortcode ) ) {
-      update_post_meta( $post_id, '_newsletter_shortcode', esc_attr( $_newsletter_shortcode ) );
-    }
+		$dealer = $_POST['_dealer'];
+		if( !empty( $dealer ) ) {
+      update_post_meta( $post_id, '_dealer', esc_attr( $dealer ) );
+    } else {
+			update_post_meta( $post_id, '_dealer', '' );
+		}
+
+		$newsletter_sc = $_POST['_newsletter_shortcode'];
+		if( !empty( $newsletter_sc ) ) {
+      update_post_meta( $post_id, '_newsletter_shortcode', esc_attr( $newsletter_sc ) );
+    } else {
+			update_post_meta( $post_id, '_newsletter_shortcode', '' );
+		}
 }
