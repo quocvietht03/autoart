@@ -22,11 +22,12 @@ function autoart_sidebar_product() {?>
     <div class="bt-product-sidebar"> 
       <div class="bt-product-sidebar-inner"> 
           <?php  
-           $dealer_id     = get_post_meta( get_the_ID(), '_dealer', true );
-           $dealer_values =  !empty($dealer_id) ? get_post( $dealer_id ) : '';
-
+            $dealer_id       = get_post_meta( get_the_ID(), '_dealer', true );
+            $dealer_values   = !empty($dealer_id) ? get_post( $dealer_id ) : '';
+            $newsletter_form = get_post_meta( get_the_ID(), '_newsletter_shortcode', true );
+         
           //  echo "<pre>";
-          //  echo print_r($dealer_values);
+          //  echo print_r($newsletter_form);
           //  echo "</pre>";
           ?>
 
@@ -36,12 +37,9 @@ function autoart_sidebar_product() {?>
               $location = get_field( "location", $dealer_id );  
               $phone    = get_field( "phone", $dealer_id );  
               $message  = get_field( "message_link", $dealer_id );
-              
-              
-          //  echo "<pre>";
-          //  echo print_r($location);
-          //  echo "</pre>";
+              $whatsapp = get_field( "whatsapp_link", $dealer_id );
             ?>
+
             <div class="bt-product-sidebar-dealer"> 
               <div class="bt-product-sidebar-dealer-inner"> 
                 <p> <?php esc_html_e( 'Seller Details:', 'autoart' ); ?> </p>
@@ -85,10 +83,44 @@ function autoart_sidebar_product() {?>
                     </a>
                   </div>
                 <?php endif;?>  
-              </div>
+
+                <?php if(!empty($whatsapp)): ?>
+                  <div class="bt-product-sidebar-dealer--whatsapp"> 
+                    <a href="<?php echo esc_url( $whatsapp ); ?>"> 
+                      <?php esc_html_e( 'Chat Via Whatsapp', 'autoart' ); ?>
+                    </a>
+                  </div>
+                <?php endif;?>  
+
+                <div class="bt-product-sidebar-dealer--button"> 
+                  <a href="<?php echo esc_url( get_permalink($dealer_values->ID) ); ?>"> 
+                    <?php esc_html_e( 'View All stock at this dealer', 'autoart' ); ?>
+                  </a>
+                </div>
+              </div> 
             </div>
           <?php endif; ?>   
 
+          <?php if(!empty($newsletter_form) && isset($newsletter_form)): ?>
+            <div class="bt-product-sidebar-newsletter"> 
+              <div class="bt-product-sidebar-newsletter--header"> 
+                <div class="bt-product-sidebar-newsletter--icon"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                    <path d="M42.2917 27.7087H27.7083M8.8326 29.1669L29.8218 43.2154C31.6928 44.4628 32.6285 45.0864 33.6397 45.3288C34.533 45.5429 35.4646 45.5429 36.3583 45.3288C37.3695 45.0864 38.3052 44.4628 40.1762 43.2154L61.1654 29.1669M30.0361 11.8677L13.1196 22.4915C11.5244 23.4934 10.7268 23.9942 10.1482 24.6714C9.63623 25.2707 9.25097 25.9676 9.01574 26.7199C8.75 27.57 8.75 28.5118 8.75 30.3954V49.0003C8.75 52.2672 8.75 53.9009 9.3858 55.1486C9.94505 56.2461 10.8374 57.1387 11.9351 57.6978C13.1829 58.3336 14.8164 58.3336 18.0833 58.3336H51.9167C55.1836 58.3336 56.8173 58.3336 58.065 57.6978C59.1625 57.1387 60.055 56.2461 60.6142 55.1486C61.25 53.9009 61.25 52.2672 61.25 49.0003V30.3954C61.25 28.5118 61.25 27.57 60.9843 26.7199C60.7489 25.9676 60.3639 25.2707 59.8517 24.6714C59.2734 23.9942 58.4757 23.4934 56.8805 22.4915L39.9639 11.8676C38.1634 10.7371 37.2633 10.1718 36.2976 9.95142C35.4433 9.75659 34.5567 9.75659 33.7024 9.95142C32.7367 10.1718 31.8366 10.7371 30.0361 11.8677Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+
+                <div class="bt-product-sidebar-newsletter-meta"> 
+                  <h4 class="bt-product-sidebar-newsletter--heading"> <?php esc_html_e( 'Get In Touch', 'autoart' ); ?> </h4>
+                  <p class="bt-product-sidebar-newsletter--desc"> <?php esc_html_e( 'We Deal In All Types Of Cars', 'autoart' ); ?> </p>
+                </div>
+              </div>
+
+              <div class="bt-product-sidebar-newsletter--form"> 
+                <?php echo do_shortcode($newsletter_form); ?>
+              </div>
+            </div>
+          <?php endif; ?> 
       </div>
     </div>
 <?php }
@@ -248,8 +280,6 @@ function autoart_woocommerce_custom_field() {
 			$supported_ids[get_the_ID()] = get_the_title();
 		}
 	}
-
-
 
 	woocommerce_wp_select(
 		array(

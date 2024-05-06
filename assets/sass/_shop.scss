@@ -290,6 +290,9 @@
             &-meta{
               p{
                 margin: 0;
+                display: flex;
+                align-items: center;
+                gap:6px;
               }
 
               span{
@@ -315,6 +318,10 @@
               line-height: normal;
             }
 
+            &--location{
+              padding-top: 16px;
+            }
+
             &--phone{
               padding-top: 10px;
               margin-top: 11px !important;
@@ -329,13 +336,90 @@
             }
 
             &--message{
+              margin-top: 48px;
               a{
                 @extend .__bt-button-style;
+                padding: 19.5px 10px;
+              }
+            }
+
+            &--whatsapp{
+              margin-top: 10px;
+              a{
+                @extend .__bt-button-outline-dark-style;
+                padding: 16.5px 10px;
+              }
+            }
+
+            &--message a, &--whatsapp a, &--button{
+              width: 100%;
+              max-width: 100%;
+              box-sizing: border-box;
+              text-align: center;
+            }
+
+            &--button{
+              margin-top: 25px;
+              a{
+                color: $color-text;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: normal;
+                text-decoration-line: underline;
+              }
+            }
+          }
+
+          &-newsletter{
+            width: 100%;
+            background:$color-accent;
+            border-radius: 20px;
+            padding:43px 40px 55px 50px;
+            box-sizing: border-box;
+            margin-top: 20px;
+
+            &--header{
+              display: flex;
+              gap:10px;
+              @media (min-width: 992px) {
+                padding-left: 7px;
+              }
+            }
+
+            &--icon{
+              svg{
                 width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-                padding: 14.5px 10px;
-                text-align: center;
+                height: auto;
+                max-width: 70px;
+              }
+            }
+
+            &--heading{
+              margin: 0;
+              color: #FFF;
+              font-size: 26px;
+              font-weight: 700;
+              line-height: normal;
+            }
+
+            &--desc{
+              color: #fff;
+              font-size: 18px;
+              font-weight: 500;
+              line-height: normal;
+              margin: 5px 0 0 0;
+            }
+
+            &--form{
+              @extend .__bt-newsletter-form-style-2;
+              .tnp, .tnp-field{
+                margin: 0;
+              }
+
+              .tnp-field-email{                
+                >label{
+                  display: none;
+                }
               }
             }
           }
