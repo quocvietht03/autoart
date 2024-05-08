@@ -690,11 +690,44 @@
           }
           table.shop_attributes {
             margin: 0;
-            th, td {
-              padding: 8px;
+            border-top: none;
+            th, td, td p{
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 250%;
+              font-style: normal;
+              background: #fff;
             }
+
+            th, td {
+              padding: 0px 5px;
+              border: none;
+            }
+
+            tr{
+              &:not(:last-child){
+                th, td {
+                  border-bottom: 1px solid #D9D9D9;
+                }
+              }
+            }
+
             p {
               padding: 0;
+            }
+
+            th{
+              width: 100%;
+              display: flex;
+              align-items: center;
+              gap: 11px;
+              svg{
+                g{
+                  path{
+                    fill:$color-accent;
+                  }
+                }
+              }
             }
           }
         }
@@ -716,20 +749,39 @@
               margin: 0;
               padding: 0;
               li {
+                border-radius: 20px;
+                border: 1px solid #DADADA;
+                background: #FFF;
                 img.avatar {
                   border-radius: 100px;
+                  display: none;
                 }
+
                 .comment-text {
-                  border-radius: 15px;
+                  border:none;
+                  padding: 0;
+                  margin: 0;
+                  display: flex;
+                  flex-wrap: wrap;
+
                   .star-rating {
                     margin-top: 4px;
                   }
+
+                  .meta, .star-rating{
+                    background-color: $color-accent;
+                  }
+
                   p.meta {
                     font-family: $primary-font;
                     font-size: 16px;
                     line-height: 150%;
                     color: $color-primary;
                     margin-bottom: 8px;
+                  }
+
+                  .description{
+                    width: 100%;
                   }
                 }
               }

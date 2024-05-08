@@ -965,10 +965,11 @@ img.alignright {
 .__bt-block-heading-style, .widget .wp-block-heading,
 .widget .wg-title, .widget .widget-title, .bt-comment-wrapper .bt-heading-comment, .bt-comment-wrapper .comment-respond .comment-reply-title, .bt-related-posts--heading, .single-service .bt-main-content-ss .bt-post .bt-time-sc--title, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .woocommerce-Reviews-title, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title {
   position: relative;
-  font-size: 24px;
-  letter-spacing: 0.2px;
-  margin: 0 0 20px;
-  padding-left: 23px; }
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 166.667%;
+  margin: 0 0 23px 0;
+  padding-left: 19px; }
   @media (max-width: 767.98px) {
     .__bt-block-heading-style, .widget .wp-block-heading,
     .widget .wg-title, .widget .widget-title, .bt-comment-wrapper .bt-heading-comment, .bt-comment-wrapper .comment-respond .comment-reply-title, .bt-related-posts--heading, .single-service .bt-main-content-ss .bt-post .bt-time-sc--title, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .woocommerce-Reviews-title, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title {
@@ -977,22 +978,13 @@ img.alignright {
   .widget .wg-title:before, .widget .widget-title:before, .bt-comment-wrapper .bt-heading-comment:before, .bt-comment-wrapper .comment-respond .comment-reply-title:before, .bt-related-posts--heading:before, .single-service .bt-main-content-ss .bt-post .bt-time-sc--title:before, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information h2:before, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .woocommerce-Reviews-title:before, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
-    width: 8px;
+    width: 5px;
     height: 100%;
-    background: var(--e-global-color-accent, #1FBECD); }
-  .__bt-block-heading-style:after, .widget .wp-block-heading:after,
-  .widget .wg-title:after, .widget .widget-title:after, .bt-comment-wrapper .bt-heading-comment:after, .bt-comment-wrapper .comment-respond .comment-reply-title:after, .bt-related-posts--heading:after, .single-service .bt-main-content-ss .bt-post .bt-time-sc--title:after, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information h2:after, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .woocommerce-Reviews-title:after, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title:after {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 8px;
-    width: 0;
-    height: 0;
-    border-width: 6px 4px;
-    border-style: solid;
-    border-color: var(--e-global-color-accent, #1FBECD) transparent transparent var(--e-global-color-accent, #1FBECD); }
+    background: var(--e-global-color-accent, #1FBECD);
+    max-height: 36px;
+    transform: translateY(-50%); }
 
 .__bt-pagination-style, .bt-pagination, .woocommerce nav.woocommerce-pagination, .elementor-pagination {
   display: flex;
@@ -5767,11 +5759,28 @@ body {
       margin: 0;
       padding: 50px 60px; }
     .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes {
-      margin: 0; }
+      margin: 0;
+      border-top: none; }
+      .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes th, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes td, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes td p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 250%;
+        font-style: normal;
+        background: #fff; }
       .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes th, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes td {
-        padding: 8px; }
+        padding: 0px 5px;
+        border: none; }
+      .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes tr:not(:last-child) th, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes tr:not(:last-child) td {
+        border-bottom: 1px solid #D9D9D9; }
       .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes p {
         padding: 0; }
+      .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes th {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 11px; }
+        .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information table.shop_attributes th svg g path {
+          fill: var(--e-global-color-accent, #1FBECD); }
     .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title {
       display: block;
       font-family: var(--e-global-typography-primary-font-family, "DM Sans");
@@ -5783,18 +5792,31 @@ body {
       .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist {
         margin: 0;
         padding: 0; }
-        .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li img.avatar {
-          border-radius: 100px; }
-        .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li .comment-text {
-          border-radius: 15px; }
-          .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li .comment-text .star-rating {
-            margin-top: 4px; }
-          .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li .comment-text p.meta {
-            font-family: var(--e-global-typography-primary-font-family, "DM Sans");
-            font-size: 16px;
-            line-height: 150%;
-            color: var(--e-global-color-primary, #222);
-            margin-bottom: 8px; }
+        .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li {
+          border-radius: 20px;
+          border: 1px solid #DADADA;
+          background: #FFF; }
+          .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li img.avatar {
+            border-radius: 100px;
+            display: none; }
+          .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li .comment-text {
+            border: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap; }
+            .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li .comment-text .star-rating {
+              margin-top: 4px; }
+            .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li .comment-text .meta, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li .comment-text .star-rating {
+              background-color: var(--e-global-color-accent, #1FBECD); }
+            .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li .comment-text p.meta {
+              font-family: var(--e-global-typography-primary-font-family, "DM Sans");
+              font-size: 16px;
+              line-height: 150%;
+              color: var(--e-global-color-primary, #222);
+              margin-bottom: 8px; }
+            .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #comments ol.commentlist li .comment-text .description {
+              width: 100%; }
     .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond p {
       margin: 0; }
     .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input {

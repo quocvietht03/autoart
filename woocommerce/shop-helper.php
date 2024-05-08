@@ -25,10 +25,6 @@ function autoart_sidebar_product() {?>
             $dealer_id       = get_post_meta( get_the_ID(), '_dealer', true );
             $dealer_values   = !empty($dealer_id) ? get_post( $dealer_id ) : '';
             $newsletter_form = get_post_meta( get_the_ID(), '_newsletter_shortcode', true );
-         
-          //  echo "<pre>";
-          //  echo print_r($newsletter_form);
-          //  echo "</pre>";
           ?>
 
           <?php if(!empty($dealer_values)): ?>
