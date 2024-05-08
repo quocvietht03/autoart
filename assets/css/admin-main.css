@@ -283,7 +283,7 @@ html :where(.editor-styles-wrapper) {
   overflow: hidden;
   width: 100%;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical; }
 
 .__bt-button-style, .widget button, .widget input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .bt-srq-box--book-link {

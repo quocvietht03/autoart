@@ -769,11 +769,11 @@ img.alignright {
   .bt-tabs .bt-panel-item.bt-is-active {
     display: block; }
 
-.__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title, .__bt-post-style-1 .bt-post--title a, .bt-elwg-post-grid--style-1 .bt-post--title a, .bt-elwg-post-loop-item--style-1 .bt-post--title a, .__bt-post-style-2 .bt-post--title a, .bt-elwg-post-grid--style-2 .bt-post--title a, .bt-elwg-post-loop-item--style-2 .bt-post--title a, .__bt-post-car-style_1 .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .__bt-service-style-default .bt-post--excerpt, .single-service .bt-related-posts-ss--list .bt-post--excerpt, .bt-elwg-service-loop-item--default .bt-post--excerpt, .bt-elwg-service-loop-item--style-1 .bt-post--excerpt, .bt-elwg-service-loop-item--style-2 .bt-post--excerpt {
+.__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title, .__bt-post-style-1 .bt-post--title a, .bt-elwg-post-grid--style-1 .bt-post--title a, .bt-elwg-post-loop-item--style-1 .bt-post--title a, .__bt-post-style-2 .bt-post--title a, .bt-elwg-post-grid--style-2 .bt-post--title a, .bt-elwg-post-loop-item--style-2 .bt-post--title a, .__bt-post-car-style_1 .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .bt-mini-wishlist--item .bt-car-title, .__bt-service-style-default .bt-post--excerpt, .single-service .bt-related-posts-ss--list .bt-post--excerpt, .bt-elwg-service-loop-item--default .bt-post--excerpt, .bt-elwg-service-loop-item--style-1 .bt-post--excerpt, .bt-elwg-service-loop-item--style-2 .bt-post--excerpt {
   overflow: hidden;
   width: 100%;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical; }
 
 .__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-block-contact-information .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .single-service .bt-main-content-ss .bt-post--book-link, .woocommerce .woocommerce-loop-product__thumbnail .button,
@@ -4332,7 +4332,7 @@ body {
     .bt-elwg-cars-wishlist--default .bt-table--col .bt-car-meta-mobile {
       display: none; }
     .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller {
-      min-width: 180px; }
+      min-width: 200px; }
     .bt-elwg-cars-wishlist--default .bt-table--col.bt-social-share {
       width: 100%; }
       .bt-elwg-cars-wishlist--default .bt-table--col.bt-social-share .bt-post-share {
@@ -4387,6 +4387,99 @@ body {
       padding-bottom: 0; }
     .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title {
       width: 100%; } }
+
+.bt-mini-wishlist {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px; }
+  .bt-mini-wishlist:hover .bt-mini-wishlist--content {
+    opacity: 1;
+    visibility: visible; }
+  .bt-mini-wishlist--icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #F0F0F0;
+    border-radius: 100px; }
+    .bt-mini-wishlist--icon svg {
+      fill: var(--e-global-color-accent, #1FBECD);
+      width: 24px;
+      height: auto; }
+    .bt-mini-wishlist--icon .bt-items-count {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 20px;
+      height: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #FFFFFF;
+      background: var(--e-global-color-accent, #1FBECD);
+      padding: 3px;
+      border-radius: 50px; }
+  .bt-mini-wishlist--content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 400px;
+    background: #FFFFFF;
+    padding: 30px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: all .3s; }
+  .bt-mini-wishlist--head {
+    font-size: 24px;
+    margin: 0 0 15px; }
+  .bt-mini-wishlist--item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DADADA; }
+    .bt-mini-wishlist--item .bt-car-remove {
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      line-height: 0; }
+      .bt-mini-wishlist--item .bt-car-remove svg {
+        width: 20px;
+        height: auto; }
+    .bt-mini-wishlist--item .bt-car-thumb {
+      width: 100px; }
+      .bt-mini-wishlist--item .bt-car-thumb .bt-cover-image, .bt-mini-wishlist--item .bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-mini-wishlist--item .bt-car-thumb .wc-cover-image {
+        padding-bottom: 85%;
+        border-radius: 15px; }
+    .bt-mini-wishlist--item .bt-car-infor {
+      width: calc(100% - 115px); }
+    .bt-mini-wishlist--item .bt-car-title {
+      font-size: 20px;
+      margin: 0 0 4px; }
+    .bt-mini-wishlist--item .bt-car-price {
+      font-weight: 500;
+      color: var(--e-global-color-accent, #1FBECD);
+      padding-right: 30px; }
+  .bt-mini-wishlist--link {
+    text-align: center; }
+    .bt-mini-wishlist--link a {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--e-global-color-accent, #1FBECD);
+      text-decoration: underline;
+      text-underline-offset: 3px; }
 
 .__bt-team-style-default .bt-post--inner, .search-results .bt-post--inner,
 .tax-team_categories .bt-post--inner, .single-team .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-team-loop-item--default .bt-post--inner {
