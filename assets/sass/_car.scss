@@ -1275,115 +1275,125 @@
   }
 }
 
-.bt-mini-wishlist {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  &:hover .bt-mini-wishlist {
-    &--content {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-  &--icon {
+.bt-elwg-mini-wishlist {
+  .bt-mini-wishlist {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    background: #F0F0F0;
-    border-radius: 100px;
-    svg {
-      fill: $color-accent;
-      width: 24px;
-      height: auto;
+    padding: 25px 0;
+    &:hover .bt-mini-wishlist {
+      &--content {
+        opacity: 1;
+        visibility: visible;
+      }
     }
-    .bt-items-count {
-      position: absolute;
-      top: -3px;
-      right: -3px;
+    &--icon {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-width: 20px;
-      height: 20px;
-      font-size: 13px;
-      font-weight: 500;
-      color: #FFFFFF;
-      background: $color-accent;
-      padding: 3px;
-      border-radius: 50px;
-    }
-  }
-  &--content {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    min-width: 400px;
-    background: #FFFFFF;
-    padding: 30px;
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: all .3s;
-  }
-  &--head {
-    font-size: 24px;
-    margin: 0 0 15px;
-  }
-  &--item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #DADADA;
-    .bt-car-remove {
-      position: absolute;
-      bottom: 20px;
-      right: 0;
-      line-height: 0;
+      width: 56px;
+      height: 56px;
+      background: #F0F0F0;
+      border-radius: 100px;
       svg {
-        width: 20px;
+        fill: $color-accent;
+        width: 24px;
         height: auto;
       }
-    }
-    .bt-car-thumb {
-      width: 100px;
-      .bt-cover-image {
-        padding-bottom: 85%;
-        border-radius: 15px;
+      .bt-items-count {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 20px;
+        height: 20px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #FFFFFF;
+        background: $color-accent;
+        padding: 3px;
+        border-radius: 50px;
       }
     }
-    .bt-car-infor {
-      width: calc(100% - 115px);
+    &--content {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      min-width: 400px;
+      background: #FFFFFF;
+      padding: 30px;
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      transition: all .3s;
     }
-    .bt-car-title {
-      @extend .__bt-max-line-ellipsis;
-      font-size: 20px;
-      margin: 0 0 4px;
+    &--head {
+      font-size: 30px;
+      margin: 0 0 20px;
     }
-    .bt-car-price {
-      font-weight: 500;
-      color: $color-accent;
-      padding-right: 30px;
+    &--list {
+      @extend .__scrollbar_style;
+      max-height: 300px;
+      overflow: auto;
     }
-  }
-  &--link {
-    text-align: center;
-    a {
-      font-size: 18px;
-      font-weight: 500;
-      color: $color-accent;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    &--item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #DADADA;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .bt-car-remove {
+        position: absolute;
+        bottom: 23px;
+        right: 4px;
+        line-height: 0;
+        svg {
+          width: 20px;
+          height: auto;
+        }
+      }
+      .bt-car-thumb {
+        width: 100px;
+        .bt-cover-image {
+          padding-bottom: 85%;
+          border-radius: 15px;
+        }
+      }
+      .bt-car-infor {
+        width: calc(100% - 115px);
+      }
+      .bt-car-title {
+        @extend .__bt-max-line-ellipsis;
+        font-size: 18px;
+        margin: 0 0 4px;
+      }
+      .bt-car-price {
+        font-weight: 500;
+        color: $color-accent;
+        padding-right: 30px;
+      }
+    }
+    &--link {
+      text-align: center;
+      padding-top: 15px;
+      a {
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-accent;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
     }
   }
 }
