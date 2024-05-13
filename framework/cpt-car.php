@@ -182,7 +182,6 @@ function autoart_car_taxonomy() {
 }
 add_action('init', 'autoart_car_taxonomy', 1);
 
-
 function autoart_car_change_default_title( $title ) {
 	$screen = get_current_screen();
 
@@ -237,6 +236,42 @@ function autoart_car_column_display( $car_columns, $post_id ) {
 	}
 }
 add_action( 'manage_car_posts_custom_column', 'autoart_car_column_display', 10, 2 );
+
+/* Create Cars Wishlist Page */
+function autoart_car_create_pages_support() {
+	$cars_wishlist_page = get_posts(array(
+	  'title' => 'Cars Wishlist',
+	  'post_type' => 'page',
+		'post_status'    => 'any'
+	));
+
+	if(count($cars_wishlist_page) == 0) {
+		wp_insert_post(array(
+	    'post_type' => 'page',
+			'post_status' => 'publish',
+	    'post_title' => 'Cars Wishlist',
+	    'post_content' => 'Cars Wishlist Page.',
+	    'post_name' => 'cars-wishlist',
+	  ));
+	}
+
+	$cars_wishlist_page = get_posts(array(
+	  'title' => 'Cars Compare',
+	  'post_type' => 'page',
+		'post_status'    => 'any'
+	));
+
+	if(count($cars_wishlist_page) == 0) {
+		wp_insert_post(array(
+	    'post_type' => 'page',
+			'post_status' => 'publish',
+	    'post_title' => 'Cars Compare',
+	    'post_content' => 'Cars Compare Page.',
+	    'post_name' => 'cars-compare',
+	  ));
+	}
+}
+add_action('init', 'autoart_car_create_pages_support', 1);
 
 /* Cars wishlist */
 function autoart_is_wishlist($post_id) {
@@ -1007,6 +1042,7 @@ add_action( 'wp_ajax_nopriv_autoart_cars_filter', 'autoart_cars_filter' );
 function autoart_cars_wishlist() {
 	if(isset($_POST['carwishlistcookie']) && !empty($_POST['carwishlistcookie'])) {
 		$car_ids = explode(',',$_COOKIE['carwishlistcookie']);
+		$output['count'] = count($car_ids);
 
 		ob_start();
 			foreach ($car_ids as $key => $id) {
@@ -1094,3 +1130,58 @@ function autoart_cars_wishlist() {
 }
 add_action( 'wp_ajax_autoart_cars_wishlist', 'autoart_cars_wishlist' );
 add_action( 'wp_ajax_nopriv_autoart_cars_wishlist', 'autoart_cars_wishlist' );
+
+function autoart_mini_wishlist() {
+	if(isset($_POST['carwishlistcookie']) && !empty($_POST['carwishlistcookie'])) {
+		$car_ids = explode(',',$_COOKIE['carwishlistcookie']);
+		$output['count'] = count($car_ids);
+
+		ob_start();
+			foreach ($car_ids as $key => $id) {
+				?>
+				<div class="bt-mini-wishlist--item">
+					<a href="#" data-id="<?php echo esc_attr($id); ?>" class="bt-car-remove">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" fill="currentColor">
+							<path d="M424 64h-88V48c0-26.467-21.533-48-48-48h-64c-26.467 0-48 21.533-48 48v16H88c-22.056 0-40 17.944-40 40v56c0 8.836 7.164 16 16 16h8.744l13.823 290.283C87.788 491.919 108.848 512 134.512 512h242.976c25.665 0 46.725-20.081 47.945-45.717L439.256 176H448c8.836 0 16-7.164 16-16v-56c0-22.056-17.944-40-40-40zM208 48c0-8.822 7.178-16 16-16h64c8.822 0 16 7.178 16 16v16h-96zM80 104c0-4.411 3.589-8 8-8h336c4.411 0 8 3.589 8 8v40H80zm313.469 360.761A15.98 15.98 0 0 1 377.488 480H134.512a15.98 15.98 0 0 1-15.981-15.239L104.78 176h302.44z"></path>
+							<path d="M256 448c8.836 0 16-7.164 16-16V224c0-8.836-7.164-16-16-16s-16 7.164-16 16v208c0 8.836 7.163 16 16 16zM336 448c8.836 0 16-7.164 16-16V224c0-8.836-7.164-16-16-16s-16 7.164-16 16v208c0 8.836 7.163 16 16 16zM176 448c8.836 0 16-7.164 16-16V224c0-8.836-7.164-16-16-16s-16 7.164-16 16v208c0 8.836 7.163 16 16 16z"></path>
+						</svg>
+					</a>
+					<div class="bt-car-thumb">
+						<a href="<?php echo get_the_permalink($id); ?>" class="bt-thumb">
+							<div class="bt-cover-image">
+								<?php echo get_the_post_thumbnail($id, 'medium'); ?>
+							</div>
+						</a>
+					</div>
+					<div class="bt-car-infor">
+							<h3 class="bt-car-title">
+								<a href="<?php echo get_the_permalink($id); ?>">
+									<?php echo get_the_title($id); ?>
+								</a>
+							</h3>
+						<div class="bt-car-price">
+							<?php
+								$price = get_field('car_price', $id);
+
+								if(!empty($price)) {
+									echo '<span>$' . number_format($price, 0) . '</span>';
+								} else {
+									echo '<a href="#">' . esc_html__('Call for price', 'autoart') . '</a>';
+								}
+							?>
+						</div>
+					</div>
+				</div>
+			<?php
+			}
+		$output['items'] = ob_get_clean();
+	} else {
+		$output['items'] = '<div class="bt-no-results">' . __('Please, add your first item to the wishlist.', 'autoart') . '</a></div>';
+	}
+
+  wp_send_json_success($output);
+
+  die();
+}
+add_action( 'wp_ajax_autoart_mini_wishlist', 'autoart_mini_wishlist' );
+add_action( 'wp_ajax_nopriv_autoart_mini_wishlist', 'autoart_mini_wishlist' );

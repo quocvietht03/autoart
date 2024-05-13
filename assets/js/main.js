@@ -174,7 +174,7 @@
 		}
 
 		if($('.elementor-widget-bt-cars-wishlist').length > 0) {
-			$('.bt-remove').on('click', function(e) {
+			$('.bt-car-remove a').on('click', function(e) {
 				e.preventDefault();
 
 				var car_id = $(this).data('id').toString(),
@@ -189,6 +189,7 @@
 				wishlist_str = wishlist_arr.toString();
 				$('.bt-carwishlistcookie').val(wishlist_str);
 				setCookie('carwishlistcookie', wishlist_str, 7);
+				$('.bt-mini-wishlist-form').submit();
 				$('.bt-cars-wishlist-form').submit();
 			});
 
@@ -212,6 +213,7 @@
 	            if(response.success) {
 	              // console.log(response.data);
 								setTimeout(function() {
+									$('.bt-mini-wishlist--count').text(response.data['count']);
 		              $('.bt-car-list').html(response.data['items']).fadeIn('slow');
 									$('.bt-table--body').removeClass('loading');
 
@@ -230,6 +232,86 @@
 										wishlist_str = wishlist_arr.toString();
 										$('.bt-carwishlistcookie').val(wishlist_str);
 										setCookie('carwishlistcookie', wishlist_str, 7);
+										$('.bt-mini-wishlist-form').submit();
+										$('.bt-cars-wishlist-form').submit();
+									});
+								}, 500);
+
+	            } else {
+	              console.log('error');
+	            }
+	          },
+	          error: function( jqXHR, textStatus, errorThrown ){
+	            console.log( 'The following error occured: ' + textStatus, errorThrown );
+	          }
+	      });
+
+				return false;
+			});
+		}
+
+		if($('.elementor-widget-bt-mini-wishlist').length > 0) {
+			$('.bt-car-remove').on('click', function(e) {
+				e.preventDefault();
+
+				var car_id = $(this).data('id').toString(),
+						wishlist_str = $('.bt-carwishlistcookie').val(),
+						wishlist_arr = wishlist_str.split(','),
+						index = wishlist_arr.indexOf(car_id);
+
+		    if (index > -1) {
+		        wishlist_arr.splice(index, 1);
+		    }
+
+				wishlist_str = wishlist_arr.toString();
+				$('.bt-carwishlistcookie').val(wishlist_str);
+				setCookie('carwishlistcookie', wishlist_str, 7);
+				$('.bt-mini-wishlist-form').submit();
+				$('.bt-cars-wishlist-form').submit();
+
+				$('.bt-car-wishlist-btn[data-id="' + car_id + '"]').removeClass('added');
+			});
+
+			// Ajax wishlist
+			$('.bt-mini-wishlist-form').submit(function() {
+				var param_ajax = {
+	            action: 'autoart_mini_wishlist',
+							carwishlistcookie: $('.bt-carwishlistcookie').val()
+	          };
+
+				$.ajax({
+	          type: 'POST',
+	          dataType: 'json',
+	          url: AJ_Options.ajax_url,
+	          data: param_ajax,
+	          context: this,
+	          beforeSend: function(){
+							$('.bt-mini-wishlist--inner').addClass('loading');
+	          },
+	          success: function(response) {
+	            if(response.success) {
+	              // console.log(response.data);
+								setTimeout(function() {
+									$('.bt-mini-wishlist--count').text(response.data['count']);
+		              $('.bt-mini-wishlist--list').html(response.data['items']).fadeIn('slow');
+									$('.bt-mini-wishlist--inner').removeClass('loading');
+
+									$('.bt-car-remove').on('click', function(e) {
+										e.preventDefault();
+
+										var car_id = $(this).data('id').toString(),
+												wishlist_str = $('.bt-carwishlistcookie').val(),
+												wishlist_arr = wishlist_str.split(','),
+												index = wishlist_arr.indexOf(car_id);
+
+								    if (index > -1) {
+								        wishlist_arr.splice(index, 1);
+								    }
+
+										wishlist_str = wishlist_arr.toString();
+										$('.bt-carwishlistcookie').val(wishlist_str);
+										setCookie('carwishlistcookie', wishlist_str, 7);
+										$('.bt-mini-wishlist-form').submit();
 										$('.bt-cars-wishlist-form').submit();
 									});
 								}, 500);
@@ -669,7 +751,7 @@
 	function AutoArtInforProduct() {
 		const $itemInfo = $('#tab-additional_information .woocommerce-product-attributes-item__label')
 		if (!$itemInfo.length) return;
-		
+
 		const $infoIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none"><g clip-path="url(#clip0_72_1636)"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.8948 0.536215C14.3234 0.190003 13.6681 0.00695801 13 0.00695801C12.3319 0.00695801 11.6766 0.190003 11.1053 0.536215L2.574 5.70696C2.03639 6.03272 1.59185 6.49158 1.28329 7.03924C0.974733 7.5869 0.812585 8.20486 0.8125 8.83346V17.1665C0.812585 17.7951 0.974733 18.413 1.28329 18.9607C1.59185 19.5084 2.03639 19.9672 2.574 20.293L11.1053 25.4637C11.6766 25.8099 12.3319 25.993 13 25.993C13.6681 25.993 14.3234 25.8099 14.8948 25.4637L23.426 20.293C23.9636 19.9672 24.4082 19.5084 24.7167 18.9607C25.0253 18.413 25.1874 17.7951 25.1875 17.1665V8.83346C25.1874 8.20486 25.0253 7.5869 24.7167 7.03924C24.4082 6.49158 23.9636 6.03272 23.426 5.70696L14.8948 0.536215ZM16.6075 9.29496C16.7191 9.17522 16.8536 9.07918 17.0031 9.01257C17.1526 8.94596 17.314 8.91014 17.4777 8.90725C17.6413 8.90437 17.8038 8.93447 17.9556 8.99577C18.1074 9.05706 18.2452 9.1483 18.3609 9.26403C18.4767 9.37976 18.5679 9.51761 18.6292 9.66937C18.6905 9.82112 18.7206 9.98367 18.7177 10.1473C18.7148 10.311 18.679 10.4723 18.6124 10.6218C18.5458 10.7713 18.4497 10.9059 18.33 11.0175L11.83 17.5175C11.6015 17.7457 11.2917 17.8739 10.9688 17.8739C10.6458 17.8739 10.336 17.7457 10.1075 17.5175L6.8575 14.2675C6.64222 14.0364 6.52502 13.7309 6.53059 13.4151C6.53616 13.0994 6.66407 12.7981 6.88736 12.5748C7.11066 12.3515 7.41191 12.2236 7.72765 12.2181C8.04339 12.2125 8.34897 12.3297 8.58 12.545L10.9688 14.9337L16.6075 9.29496Z" fill="#1FBECD"/></g><defs><clipPath id="clip0_72_1636"><rect width="26" height="26" fill="white"/></clipPath></defs></svg>';
 		$itemInfo.prepend($infoIcon);
 	}
