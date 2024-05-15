@@ -824,17 +824,18 @@ img.alignright {
     color: #FFFFFF;
     background: var(--e-global-color-secondary, #111); }
 
-.__scrollbar_style, .select2-container--default .select2-results > .select2-results__options, .elementor-editor-active .select2-container--default .select2-results > .select2-results__options, .__bt-post-car-style_1 .bt-post--meta, .bt-car-layout .bt-post .bt-post--meta, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta, .bt-car-sidebar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list, .bt-elwg-mini-wishlist .bt-mini-wishlist--list {
+.__scrollbar_style, .select2-container--default .select2-results > .select2-results__options, .elementor-editor-active .select2-container--default .select2-results > .select2-results__options, .__bt-post-car-style_1 .bt-post--meta, .bt-car-layout .bt-post .bt-post--meta, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta, .bt-car-sidebar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list, .bt-elwg-cars-compare--default .bt-table, .bt-elwg-mini-wishlist .bt-mini-wishlist--list {
   overflow-y: auto; }
-  .__scrollbar_style::-webkit-scrollbar, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar, .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar, .__bt-post-car-style_1 .bt-post--meta::-webkit-scrollbar, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar, .bt-car-sidebar::-webkit-scrollbar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar {
+  .__scrollbar_style::-webkit-scrollbar, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar, .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar, .__bt-post-car-style_1 .bt-post--meta::-webkit-scrollbar, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar, .bt-car-sidebar::-webkit-scrollbar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar {
     width: 3px;
     height: 3px;
     border-radius: 10px;
     background-color: #F1F1F1; }
-  .__scrollbar_style::-webkit-scrollbar-thumb, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb, .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb, .__bt-post-car-style_1 .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-sidebar::-webkit-scrollbar-thumb, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-thumb, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-thumb {
+  .__scrollbar_style::-webkit-scrollbar-thumb, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb, .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb, .__bt-post-car-style_1 .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-sidebar::-webkit-scrollbar-thumb, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-thumb, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar-thumb, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: var(--e-global-color-accent, #1FBECD); }
-  .__scrollbar_style::-webkit-scrollbar-track, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track, .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track, .__bt-post-car-style_1 .bt-post--meta::-webkit-scrollbar-track, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-track, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-car-sidebar::-webkit-scrollbar-track, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-track, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-track {
+    background-color: var(--e-global-color-accent, #1FBECD);
+    cursor: pointer; }
+  .__scrollbar_style::-webkit-scrollbar-track, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track, .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track, .__bt-post-car-style_1 .bt-post--meta::-webkit-scrollbar-track, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-track, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-car-sidebar::-webkit-scrollbar-track, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-track, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar-track, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: #F1F1F1; }
 
@@ -4388,6 +4389,111 @@ body {
     .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-title {
       width: 100%; } }
 
+.bt-elwg-cars-compare--default {
+  overflow: auto; }
+  .bt-elwg-cars-compare--default .bt-table {
+    position: relative;
+    min-width: 1000px;
+    background: #FFFFFF;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid #DADADA;
+    border-radius: 20px; }
+    .bt-elwg-cars-compare--default .bt-table.loading .bt-loading-wave {
+      opacity: 1;
+      visibility: visible; }
+    .bt-elwg-cars-compare--default .bt-table.loading .bt-table--body {
+      opacity: 0;
+      visibility: hidden; }
+    .bt-elwg-cars-compare--default .bt-table .bt-loading-wave {
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s; }
+    .bt-elwg-cars-compare--default .bt-table--row {
+      display: flex; }
+    .bt-elwg-cars-compare--default .bt-table--col {
+      width: 26.67%;
+      min-width: 260px;
+      padding: 20px 15px;
+      border-bottom: 1px solid #DADADA; }
+      .bt-elwg-cars-compare--default .bt-table--col:first-child {
+        width: 20%;
+        min-width: 210px;
+        background: #F1F1F1; }
+    .bt-elwg-cars-compare--default .bt-table--foot .bt-table--col {
+      border-bottom: none; }
+    .bt-elwg-cars-compare--default .bt-table--foot .bt-social-share {
+      width: 100%;
+      background: transparent; }
+    .bt-elwg-cars-compare--default .bt-table .bt-label {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--e-global-color-primary, #222); }
+    .bt-elwg-cars-compare--default .bt-table .bt-car-infor {
+      position: relative; }
+    .bt-elwg-cars-compare--default .bt-table .bt-car-remove {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      line-height: 0;
+      z-index: 9; }
+      .bt-elwg-cars-compare--default .bt-table .bt-car-remove a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        color: var(--e-global-color-accent, #1FBECD);
+        background: #FFFFFF;
+        border: 1px solid #D6D6D6;
+        border-radius: 100px;
+        transition: all .3s; }
+        .bt-elwg-cars-compare--default .bt-table .bt-car-remove a:hover {
+          color: #FFFFFF;
+          background: var(--e-global-color-accent, #1FBECD); }
+        .bt-elwg-cars-compare--default .bt-table .bt-car-remove a svg {
+          width: 20px;
+          height: auto; }
+    .bt-elwg-cars-compare--default .bt-table .bt-car-thumb {
+      margin-bottom: 20px; }
+      .bt-elwg-cars-compare--default .bt-table .bt-car-thumb .bt-cover-image, .bt-elwg-cars-compare--default .bt-table .bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-compare--default .bt-table .bt-car-thumb .wc-cover-image {
+        border-radius: 15px; }
+    .bt-elwg-cars-compare--default .bt-table .bt-car-title {
+      font-size: 22px;
+      margin-bottom: 15px; }
+    .bt-elwg-cars-compare--default .bt-table .bt-car-price {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--e-global-color-accent, #1FBECD); }
+    .bt-elwg-cars-compare--default .bt-table .bt-car-add-compare .bt-car-thumb svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 32px;
+      height: auto;
+      transform: translate(-50%, -50%); }
+    .bt-elwg-cars-compare--default .bt-table .bt-car-add-compare .bt-car-title {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+      color: #999999; }
+    .bt-elwg-cars-compare--default .bt-table .bt-feature-item {
+      position: relative;
+      padding-left: 36px; }
+      .bt-elwg-cars-compare--default .bt-table .bt-feature-item:not(:last-child) {
+        margin-bottom: 12px; }
+      .bt-elwg-cars-compare--default .bt-table .bt-feature-item svg {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 26px;
+        height: auto;
+        color: var(--e-global-color-accent, #1FBECD); }
+    .bt-elwg-cars-compare--default .bt-table .bt-post-share {
+      margin-top: 0; }
+
 .bt-elwg-mini-wishlist .bt-mini-wishlist {
   position: relative;
   display: flex;
@@ -4500,6 +4606,41 @@ body {
       position: fixed;
       min-width: 100%;
       padding: 30px 15px; } }
+
+.bt-elwg-mini-compare .bt-mini-compare {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0; }
+  .bt-elwg-mini-compare .bt-mini-compare--icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #F0F0F0;
+    border-radius: 100px; }
+    .bt-elwg-mini-compare .bt-mini-compare--icon svg {
+      fill: var(--e-global-color-accent, #1FBECD);
+      width: 24px;
+      height: auto; }
+  .bt-elwg-mini-compare .bt-mini-compare--count {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: var(--e-global-color-accent, #1FBECD);
+    padding: 3px;
+    border-radius: 50px; }
 
 .__bt-team-style-default .bt-post--inner, .search-results .bt-post--inner,
 .tax-team_categories .bt-post--inner, .single-team .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-team-loop-item--default .bt-post--inner {

@@ -170,11 +170,14 @@
 						$(this).addClass('added');
 					}
 				}
+
+				$('.bt-mini-wishlist-form').submit();
+				$('.bt-cars-wishlist-form').submit();
 			});
 		}
 
 		if($('.elementor-widget-bt-cars-wishlist').length > 0) {
-			$('.bt-car-remove a').on('click', function(e) {
+			$('.bt-car-remove-wishlist').on('click', function(e) {
 				e.preventDefault();
 
 				var car_id = $(this).data('id').toString(),
@@ -251,7 +254,7 @@
 		}
 
 		if($('.elementor-widget-bt-mini-wishlist').length > 0) {
-			$('.bt-car-remove').on('click', function(e) {
+			$('.bt-car-remove-wishlist').on('click', function(e) {
 				e.preventDefault();
 
 				var car_id = $(this).data('id').toString(),
@@ -333,30 +336,107 @@
 	/* Car compare */
 	function AutoArtCarCompare() {
 		if($('.bt-car-compare-btn').length > 0) {
-			// setCookie('carwishlistcookie', '', 7);
-
 			$('.bt-car-compare-btn').on('click', function(e) {
 				e.preventDefault();
 
 				var post_id = $(this).data('id').toString(),
-						compare_cookie = getCookie('carcomparecookie');
+						compare_cookie = getCookie('carcomparecookie'),
+						count = 0;
 
 				if (compare_cookie == '' ) {
 					setCookie('carcomparecookie', post_id, 7);
 					$(this).addClass('added');
+					count = 1;
 				} else {
 					var compare_arr = compare_cookie.split(',');
 
 					if(compare_arr.includes(post_id)) {
-						var compare_str = compare_arr.filter(function(e) { return e !== post_id });
-
-						setCookie('carcomparecookie', compare_str, 7);
-						$(this).removeClass('added');
+						window.location.href = '/cars-compare/';
 					} else {
 						setCookie('carcomparecookie', compare_cookie + ',' + post_id, 7);
 						$(this).addClass('added');
+
+						count = compare_arr.length + 1;
 					}
 				}
+
+				$('.bt-mini-compare--count').text(count);
+				$('.bt-cars-compare-form').submit();
+			});
+		}
+
+		if($('.elementor-widget-bt-cars-compare').length > 0) {
+			$('.bt-car-remove-compare').on('click', function(e) {
+				e.preventDefault();
+
+				var car_id = $(this).data('id').toString(),
+						compare_str = $('.bt-carcomparecookie').val(),
+						compare_arr = compare_str.split(','),
+						index = compare_arr.indexOf(car_id);
+
+		    if (index > -1) {
+		        compare_arr.splice(index, 1);
+		    }
+
+				compare_str = compare_arr.toString();
+				$('.bt-carcomparecookie').val(compare_str);
+				setCookie('carcomparecookie', compare_str, 7);
+				$('.bt-cars-compare-form').submit();
+			});
+
+			// Ajax compare
+			$('.bt-cars-compare-form').submit(function() {
+				var param_ajax = {
+	            action: 'autoart_cars_compare',
+							carcomparecookie: $('.bt-carcomparecookie').val()
+	          };
+
+				$.ajax({
+	          type: 'POST',
+	          dataType: 'json',
+	          url: AJ_Options.ajax_url,
+	          data: param_ajax,
+	          context: this,
+	          beforeSend: function(){
+							$('.bt-table').addClass('loading');
+	          },
+	          success: function(response) {
+	            if(response.success) {
+	              console.log(response.data);
+								setTimeout(function() {
+									$('.bt-mini-compare--count').text(response.data['count']);
+		              $('.bt-table--body').html(response.data['items']).fadeIn('slow');
+									$('.bt-table').removeClass('loading');
+
+									$('.bt-car-remove a').on('click', function(e) {
+										e.preventDefault();
+
+										var car_id = $(this).data('id').toString(),
+												compare_str = $('.bt-carcomparecookie').val(),
+												compare_arr = compare_str.split(','),
+												index = compare_arr.indexOf(car_id);
+
+								    if (index > -1) {
+								        compare_arr.splice(index, 1);
+								    }
+
+										compare_str = compare_arr.toString();
+										$('.bt-carcomparecookie').val(compare_str);
+										setCookie('carcomparecookie', compare_str, 7);
+										$('.bt-cars-compare-form').submit();
+									});
+								}, 500);
+
+	            } else {
+	              console.log('error');
+	            }
+	          },
+	          error: function( jqXHR, textStatus, errorThrown ){
+	            console.log( 'The following error occured: ' + textStatus, errorThrown );
+	          }
+	      });
+
+				return false;
 			});
 		}
 	}
