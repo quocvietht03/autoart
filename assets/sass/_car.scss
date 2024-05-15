@@ -1275,6 +1275,148 @@
   }
 }
 
+.bt-elwg-cars-compare {
+  &--default {
+    overflow: auto;
+    .bt-table {
+      @extend .__scrollbar_style;
+      position: relative;
+      min-width: 1000px;
+      background: #FFFFFF;
+      overflow-x: auto;
+      overflow-y: hidden;
+      border: 1px solid #DADADA;
+      border-radius: 20px;
+      &.loading {
+        .bt-loading-wave {
+          opacity: 1;
+          visibility: visible;
+        }
+        .bt-table--body {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      .bt-loading-wave {
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s;
+      }
+      &--row {
+        display: flex;
+      }
+      &--col {
+        width: 26.67%;
+        min-width: 260px;
+        padding: 20px 15px;
+        border-bottom: 1px solid #DADADA;
+        &:first-child {
+          width: 20%;
+          min-width: 210px;
+          background: #F1F1F1;
+        }
+      }
+      &--foot {
+        .bt-table--col {
+          border-bottom: none;
+        }
+        .bt-social-share {
+          width: 100%;
+          background: transparent;
+        }
+      }
+      .bt-label {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-primary;
+      }
+      .bt-car-infor {
+        position: relative;
+      }
+      .bt-car-remove {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        line-height: 0;
+        z-index: 9;
+        a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 44px;
+          height: 44px;
+          color: $color-accent;
+          background: #FFFFFF;
+          border: 1px solid #D6D6D6;
+          border-radius: 100px;
+          transition: all .3s;
+          &:hover {
+            color: #FFFFFF;
+            background: $color-accent;
+          }
+          svg {
+            width: 20px;
+            height: auto;
+          }
+        }
+      }
+      .bt-car-thumb {
+        margin-bottom: 20px;
+        .bt-cover-image {
+          border-radius: 15px;
+        }
+      }
+      .bt-car-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+      .bt-car-price {
+        font-size: 20px;
+        font-weight: 500;
+        color: $color-accent;
+      }
+      .bt-car-add-compare {
+        .bt-car-thumb {
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 32px;
+            height: auto;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .bt-car-title {
+          font-size: 18px;
+          font-weight: 500;
+          text-align: center;
+          text-transform: uppercase;
+          color: #999999;
+        }
+      }
+      .bt-feature-item {
+        position: relative;
+        padding-left: 36px;
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+        svg {
+          position: absolute;
+          left: 0;
+          top: 2px;
+          width: 26px;
+          height: auto;
+          color: $color-accent;
+        }
+      }
+      .bt-post-share {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 .bt-elwg-mini-wishlist {
   .bt-mini-wishlist {
     position: relative;
@@ -1419,6 +1561,47 @@
         min-width: 100%;
         padding: 30px 15px;
       }
+    }
+  }
+}
+
+.bt-elwg-mini-compare {
+  .bt-mini-compare {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    &--icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: #F0F0F0;
+      border-radius: 100px;
+      svg {
+        fill: $color-accent;
+        width: 24px;
+        height: auto;
+      }
+    }
+    &--count {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 20px;
+      height: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #FFFFFF;
+      background: $color-accent;
+      padding: 3px;
+      border-radius: 50px;
     }
   }
 }
