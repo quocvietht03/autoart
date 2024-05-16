@@ -1,3 +1,12 @@
+@keyframes effectSpin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
 body {
 	--circle-diameter: 56vw;
 }

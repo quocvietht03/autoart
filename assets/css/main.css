@@ -2502,6 +2502,11 @@ img.alignright {
       .bt-comment-wrapper .comment-respond .comment-form .bt-form-author, .bt-comment-wrapper .comment-respond .comment-form .bt-form-email {
         width: 100%; } }
 
+@keyframes effectSpin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 body {
   --circle-diameter: 56vw; }
 
@@ -4294,16 +4299,6 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 165px; }
-    .bt-elwg-cars-wishlist--default .bt-table--body.loading .bt-loading-wave {
-      opacity: 1;
-      visibility: visible; }
-    .bt-elwg-cars-wishlist--default .bt-table--body.loading .bt-car-list {
-      opacity: 0;
-      visibility: hidden; }
-    .bt-elwg-cars-wishlist--default .bt-table--body .bt-loading-wave {
-      opacity: 0;
-      visibility: hidden;
-      transition: all .3s; }
   .bt-elwg-cars-wishlist--default .bt-table .bt-car-list {
     width: 100%;
     transition: all .3s; }
@@ -4318,11 +4313,25 @@ body {
     .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove {
       width: 10%;
       text-align: center; }
-      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove span {
-        font-size: 0; }
-      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove svg {
-        width: 20px;
-        height: auto; }
+      .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove a {
+        position: relative; }
+        .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove a.deleting svg {
+          opacity: 0; }
+          .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove a.deleting svg:last-child {
+            opacity: 1; }
+        .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove a svg {
+          width: 20px;
+          height: auto; }
+          .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-remove a svg:last-child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            margin: -10px 0 0 -10px;
+            animation-name: effectSpin;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; }
     .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb {
       width: 18%; }
       .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb .bt-cover-image, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-thumb .wc-cover-image {
@@ -4410,22 +4419,12 @@ body {
     overflow-y: hidden;
     border: 1px solid #DADADA;
     border-radius: 20px; }
-    .bt-elwg-cars-compare--default .bt-table.loading .bt-loading-wave {
-      opacity: 1;
-      visibility: visible; }
-    .bt-elwg-cars-compare--default .bt-table.loading .bt-table--body {
-      opacity: 0;
-      visibility: hidden; }
-    .bt-elwg-cars-compare--default .bt-table .bt-loading-wave {
-      opacity: 0;
-      visibility: hidden;
-      transition: all .3s; }
     .bt-elwg-cars-compare--default .bt-table--row {
       display: flex; }
     .bt-elwg-cars-compare--default .bt-table--col {
       width: 26.67%;
       min-width: 260px;
-      padding: 20px 15px;
+      padding: 15px;
       border-bottom: 1px solid #DADADA; }
       .bt-elwg-cars-compare--default .bt-table--col:first-child {
         width: 20%;
@@ -4450,6 +4449,7 @@ body {
       line-height: 0;
       z-index: 9; }
       .bt-elwg-cars-compare--default .bt-table .bt-car-remove a {
+        position: relative;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -4463,9 +4463,23 @@ body {
         .bt-elwg-cars-compare--default .bt-table .bt-car-remove a:hover {
           color: #FFFFFF;
           background: var(--e-global-color-accent, #1FBECD); }
+        .bt-elwg-cars-compare--default .bt-table .bt-car-remove a.deleting svg {
+          opacity: 0; }
+          .bt-elwg-cars-compare--default .bt-table .bt-car-remove a.deleting svg:last-child {
+            opacity: 1; }
         .bt-elwg-cars-compare--default .bt-table .bt-car-remove a svg {
           width: 20px;
           height: auto; }
+          .bt-elwg-cars-compare--default .bt-table .bt-car-remove a svg:last-child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            margin: -10px 0 0 -10px;
+            animation-name: effectSpin;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; }
     .bt-elwg-cars-compare--default .bt-table .bt-car-thumb {
       margin-bottom: 20px; }
       .bt-elwg-cars-compare--default .bt-table .bt-car-thumb .bt-cover-image, .bt-elwg-cars-compare--default .bt-table .bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-compare--default .bt-table .bt-car-thumb .wc-cover-image {
@@ -4555,16 +4569,6 @@ body {
     border-radius: 0 0 20px 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: all .3s; }
-  .bt-elwg-mini-wishlist .bt-mini-wishlist--inner.loading .bt-loading-wave {
-    opacity: 1;
-    visibility: visible; }
-  .bt-elwg-mini-wishlist .bt-mini-wishlist--inner.loading .bt-mini-wishlist--list {
-    opacity: 0;
-    visibility: hidden; }
-  .bt-elwg-mini-wishlist .bt-mini-wishlist--inner .bt-loading-wave {
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s; }
   .bt-elwg-mini-wishlist .bt-mini-wishlist--head {
     font-size: 30px;
     margin: 0 0 20px; }
@@ -4586,9 +4590,25 @@ body {
       bottom: 23px;
       right: 4px;
       line-height: 0; }
-      .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-remove svg {
-        width: 20px;
-        height: auto; }
+      .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-remove a {
+        position: relative; }
+        .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-remove a.deleting svg {
+          opacity: 0; }
+          .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-remove a.deleting svg:last-child {
+            opacity: 1; }
+        .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-remove a svg {
+          width: 20px;
+          height: auto; }
+          .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-remove a svg:last-child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            margin: -10px 0 0 -10px;
+            animation-name: effectSpin;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; }
     .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-thumb {
       width: 100px; }
       .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-thumb .bt-cover-image, .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-thumb .wc-cover-image {
@@ -4604,7 +4624,6 @@ body {
       color: var(--e-global-color-accent, #1FBECD);
       padding-right: 30px; }
   .bt-elwg-mini-wishlist .bt-mini-wishlist--link {
-    text-align: center;
     padding-top: 15px; }
     .bt-elwg-mini-wishlist .bt-mini-wishlist--link a {
       font-size: 18px;

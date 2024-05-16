@@ -160,6 +160,7 @@
 				if (wishlist_cookie == '' ) {
 					setCookie('carwishlistcookie', post_id, 7);
 					$(this).addClass('added');
+					$('.bt-carwishlistcookie').val(post_id);
 				} else {
 					var wishlist_arr = wishlist_cookie.split(',');
 
@@ -168,6 +169,7 @@
 					} else {
 						setCookie('carwishlistcookie', wishlist_cookie + ',' + post_id, 7);
 						$(this).addClass('added');
+						$('.bt-carwishlistcookie').val(wishlist_cookie + ',' + post_id);
 					}
 				}
 
@@ -179,6 +181,8 @@
 		if($('.elementor-widget-bt-cars-wishlist').length > 0) {
 			$('.bt-car-remove-wishlist').on('click', function(e) {
 				e.preventDefault();
+
+				$(this).addClass('deleting');
 
 				var car_id = $(this).data('id').toString(),
 						wishlist_str = $('.bt-carwishlistcookie').val(),
@@ -194,6 +198,8 @@
 				setCookie('carwishlistcookie', wishlist_str, 7);
 				$('.bt-mini-wishlist-form').submit();
 				$('.bt-cars-wishlist-form').submit();
+
+				$('.bt-car-wishlist-btn[data-id="' + car_id + '"]').removeClass('added');
 			});
 
 			// Ajax wishlist
@@ -220,8 +226,10 @@
 		              $('.bt-car-list').html(response.data['items']).fadeIn('slow');
 									$('.bt-table--body').removeClass('loading');
 
-									$('.bt-remove').on('click', function(e) {
+									$('.bt-car-remove-wishlist').on('click', function(e) {
 										e.preventDefault();
+
+										$(this).addClass('deleting');
 
 										var car_id = $(this).data('id').toString(),
 												wishlist_str = $('.bt-carwishlistcookie').val(),
@@ -237,6 +245,8 @@
 										setCookie('carwishlistcookie', wishlist_str, 7);
 										$('.bt-mini-wishlist-form').submit();
 										$('.bt-cars-wishlist-form').submit();
+
+										$('.bt-car-wishlist-btn[data-id="' + car_id + '"]').removeClass('added');
 									});
 								}, 500);
 
@@ -254,8 +264,10 @@
 		}
 
 		if($('.elementor-widget-bt-mini-wishlist').length > 0) {
-			$('.bt-car-remove-wishlist').on('click', function(e) {
+			$('.bt-car-remove-mini-wishlist').on('click', function(e) {
 				e.preventDefault();
+
+				$(this).addClass('deleting');
 
 				var car_id = $(this).data('id').toString(),
 						wishlist_str = $('.bt-carwishlistcookie').val(),
@@ -299,8 +311,10 @@
 		              $('.bt-mini-wishlist--list').html(response.data['items']).fadeIn('slow');
 									$('.bt-mini-wishlist--inner').removeClass('loading');
 
-									$('.bt-car-remove').on('click', function(e) {
+									$('.bt-car-remove-mini-wishlist').on('click', function(e) {
 										e.preventDefault();
+
+										$(this).addClass('deleting');
 
 										var car_id = $(this).data('id').toString(),
 												wishlist_str = $('.bt-carwishlistcookie').val(),
@@ -316,6 +330,8 @@
 										setCookie('carwishlistcookie', wishlist_str, 7);
 										$('.bt-mini-wishlist-form').submit();
 										$('.bt-cars-wishlist-form').submit();
+
+										$('.bt-car-wishlist-btn[data-id="' + car_id + '"]').removeClass('added');
 									});
 								}, 500);
 
@@ -369,6 +385,8 @@
 			$('.bt-car-remove-compare').on('click', function(e) {
 				e.preventDefault();
 
+				$(this).addClass('deleting');
+
 				var car_id = $(this).data('id').toString(),
 						compare_str = $('.bt-carcomparecookie').val(),
 						compare_arr = compare_str.split(','),
@@ -382,6 +400,8 @@
 				$('.bt-carcomparecookie').val(compare_str);
 				setCookie('carcomparecookie', compare_str, 7);
 				$('.bt-cars-compare-form').submit();
+
+				$('.bt-car-compare-btn[data-id="' + car_id + '"]').removeClass('added');
 			});
 
 			// Ajax compare
@@ -411,6 +431,8 @@
 									$('.bt-car-remove a').on('click', function(e) {
 										e.preventDefault();
 
+										$(this).addClass('deleting');
+
 										var car_id = $(this).data('id').toString(),
 												compare_str = $('.bt-carcomparecookie').val(),
 												compare_arr = compare_str.split(','),
@@ -424,6 +446,8 @@
 										$('.bt-carcomparecookie').val(compare_str);
 										setCookie('carcomparecookie', compare_str, 7);
 										$('.bt-cars-compare-form').submit();
+
+										$('.bt-car-compare-btn[data-id="' + car_id + '"]').removeClass('added');
 									});
 								}, 500);
 
