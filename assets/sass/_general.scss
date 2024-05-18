@@ -187,6 +187,7 @@
   padding-bottom: 66.66%;
   img {
     @extend .bt-image-absolute;
+    transition: all .3s;
   }
 }
 
@@ -560,6 +561,42 @@
     &.next {
       margin-left: 0;
     }
+  }
+}
+
+.__avg-rating-style {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  .bt-rating-stars {
+    display: flex;
+    gap: 4px;
+    font-size: 0;
+    line-height: 0;
+    span {
+      position: relative;
+      color: #CDCDCD;
+      &.bt-filled {
+        color: #EFCF0A;
+      }
+      &.bt-filled-half {
+        position: relative;
+        svg:last-child {
+          position: absolute;
+          top: 0;
+          left: 0;
+          fill: #EFCF0A;
+        }
+      }
+      svg {
+        fill: currentColor;
+        width: 16px;
+        height: auto;
+      }
+    }
+  }
+  .bt-rating-count {
+    font-size: 16px;
   }
 }
 

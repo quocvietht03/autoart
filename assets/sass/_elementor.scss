@@ -2382,6 +2382,24 @@
   }
 }
 
+.bt-elwg-car-loop-item {
+  &--default {
+    .bt-post {
+      @extend .__bt-post-car-default;
+    }
+  }
+  &--style-1 {
+    .bt-post {
+      @extend .__bt-post-car-style-1;
+    }
+  }
+  &--style-2 {
+    .bt-post {
+      @extend .__bt-post-car-style-2;
+    }
+  }
+}
+
 .bt-elwg-list-icon-text{
   &-inner{
     display: flex;
@@ -2394,7 +2412,7 @@
       font-size: 26px;
       line-height: normal;
       color: #fff;
-      @media (min-width: 1025px) and (max-width: 1199.98px) { 
+      @media (min-width: 1025px) and (max-width: 1199.98px) {
         font-size: 20px !important;
       }
     }

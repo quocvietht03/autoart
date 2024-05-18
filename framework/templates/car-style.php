@@ -1,6 +1,7 @@
 <?php
 $mileage = get_field('car_mileage');
 $price = get_field('car_price');
+$body = get_the_terms( get_the_ID(), 'car_body' );
 $fuel_type = get_the_terms( get_the_ID(), 'car_fuel_type' );
 $transmission = get_the_terms( get_the_ID(), 'car_transmission' );
 
@@ -25,7 +26,14 @@ $transmission = get_the_terms( get_the_ID(), 'car_transmission' );
     </div>
 
     <div class="bt-post--infor">
-      <?php the_terms( get_the_ID(), 'car_body', '<div class="bt-post--body">', ', ', '</div>' ); ?>
+      <?php if(!empty($body)) { ?>
+        <div class="bt-post--body">
+          <?php
+            $term = array_pop($body);
+            echo '<span class="bt-value">' . $term->name . '</span>';
+          ?>
+        </div>
+      <?php } ?>
 
       <div class="bt-post--info-inner">
         <div class="bt-post--price">

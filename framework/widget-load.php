@@ -61,6 +61,12 @@ class ElementorWidgets {
 			'mini-wishlist',
 			'cars-compare',
 			'mini-compare',
+			'cars-search',
+			'cars-search-style-1',
+			'cars-search-style-2',
+			'car-loop-item',
+			'car-loop-item-style-1',
+			'car-loop-item-style-2',
 			'podcast-grid',
 			'podcast-grid-style-1',
 			'podcast-grid-style-2',
@@ -82,9 +88,6 @@ class ElementorWidgets {
 			'highlighted-heading',
 			'list-image-text',
 			'card-image-text-grid',
-			'cars-search',
-			'cars-search-style-1',
-			'cars-search-style-2',
 			'list-icon-text',
 		);
 
@@ -187,6 +190,9 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsSearch\Widget_CarsSearch());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsSearchStyle1\Widget_CarsSearchStyle1());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsSearchStyle2\Widget_CarsSearchStyle2());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarLoopItem\Widget_CarLoopItem());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarLoopItemStyle1\Widget_CarLoopItemStyle1());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarLoopItemStyle2\Widget_CarLoopItemStyle2());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGrid\Widget_PostGrid());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGridStyle1\Widget_PostGridStyle1());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGridStyle2\Widget_PostGridStyle2());
