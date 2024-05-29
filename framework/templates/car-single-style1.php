@@ -517,6 +517,7 @@ if(!empty($color_term)) {
         <?php
           if(!empty($dealer)) {
             $d_title = get_the_title($dealer);
+            $d_link = get_the_permalink($dealer);
             $d_avatar = get_field('avatar', $dealer);
             $d_location = get_field('location', $dealer);
             $d_phone = get_field('phone', $dealer);
@@ -531,17 +532,21 @@ if(!empty($color_term)) {
 
                 <div class="bt-dealer-infor">
                   <div class="bt-dealer-avatar">
-                    <div class="bt-cover-image">
-                    <?php
-                      if(!empty($d_avatar)) {
-                        echo '<img src="' . esc_url($d_avatar['url']) . '" alt="' . esc_attr($d_avatar['title']) . '" />';
-                      }
-                    ?>
-                    </div>
+                    <a href="<?php echo esc_url($d_link); ?>">
+                      <div class="bt-cover-image">
+                      <?php
+                        if(!empty($d_avatar)) {
+                          echo '<img src="' . esc_url($d_avatar['url']) . '" alt="' . esc_attr($d_avatar['title']) . '" />';
+                        }
+                      ?>
+                      </div>
+                    </a>
                   </div>
 
                   <h3 class="bt-dealer-name">
-                    <?php echo '<span>' . $d_title . '</span>'; ?>
+                    <a href="<?php echo esc_url($d_link); ?>">
+                      <?php echo '<span>' . $d_title . '</span>'; ?>
+                    </a>
                   </h3>
 
                   <div class="bt-dealer-meta">

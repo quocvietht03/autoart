@@ -259,12 +259,12 @@
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
-  line-height: 200%;
+  line-height: 150%;
   text-transform: uppercase;
   text-align: center;
   color: #FFFFFF;
   background: $color-accent;
-  padding: 16px 42px 16px 39px;
+  padding: 16px 40px;
   border: none;
   border-radius: 10px;
   font-family: $primary-font;
@@ -399,7 +399,11 @@
   .wp-block-media-text {
     gap: 30px 50px;
     &__media {
+      overflow: hidden;
       border-radius: 20px;
+      img {
+        margin: 0 !important
+      }
     }
     &__content {
       padding: 0;

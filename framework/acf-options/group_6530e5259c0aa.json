@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_653c7ca45302e",
@@ -560,7 +561,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_659613bd5110a",
@@ -661,7 +663,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6530ee2b9da24",
@@ -949,7 +952,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_660f66ff32d10",
@@ -1187,7 +1191,7 @@
         },
         {
             "key": "field_6530f0658c230",
-            "label": "Teams",
+            "label": "Dealers",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -1200,7 +1204,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_65a8c5dcd03d4",
@@ -1225,7 +1230,7 @@
         {
             "key": "field_6539eb81df4cd",
             "label": "Related Posts",
-            "name": "team_related_posts",
+            "name": "dealer_related_posts",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -1357,7 +1362,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6538b8d3ac302",
@@ -1494,7 +1500,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_653c78511e517",
@@ -1631,7 +1638,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_659f8f6c582e8",
@@ -1748,7 +1756,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_65ab1d62c41ae",
@@ -1789,5 +1798,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713410295
+    "modified": 1716886005
 }

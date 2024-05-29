@@ -35,7 +35,8 @@ function autoart_dealer_register() {
 		'hierarchical'    => false,
 		'menu_icon'       => 'dashicons-admin-post',
 		'rewrite'         => array('slug' => $cpt_slug), // Permalinks format
-		'supports'        => array('title', 'editor', 'thumbnail')
+		'show_in_rest' 		=> true,
+		'supports'        => array('title', 'editor', 'thumbnail', 'comments')
   );
 
   add_filter( 'enter_title_here',  'autoart_dealer_change_default_title');
