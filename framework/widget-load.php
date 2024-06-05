@@ -89,6 +89,7 @@ class ElementorWidgets {
 			'list-image-text',
 			'card-image-text-grid',
 			'list-icon-text',
+            'list-faq',
 		);
 
 		return $this->widgets;
@@ -226,6 +227,7 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListImageText\Widget_ListImageText());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CardImageTextGrid\Widget_CardImageTextGrid());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListIconText\Widget_ListIconText());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListFaq\Widget_ListFaq());
 	}
 
 	/**

@@ -2585,3 +2585,61 @@
     }
   }
 }
+/* list Faq */
+.bt-elwg-list-faq{
+  &--default {
+    position: relative;
+    .item-faq{
+      &:first-child{
+        .item-faq-inner{
+          padding-top:0 !important;
+        }
+      }
+    }
+    .item-faq-inner{
+      border-bottom: 1px solid ;
+      padding: 20px 0;
+      border-color: #D9D9D9;
+    }
+    .bt-item-title {
+      display: flex;
+      align-items: center;
+      grid-gap: 12px;
+      cursor: pointer;
+      &.active{
+          svg {
+            transform: rotate(-180deg);
+            path{
+              fill:$color-secondary;
+            }
+          }
+        h3 {
+            color:$color-accent;
+        }
+      }
+      svg {
+        transition: transform 0.6s ease;
+        transform: rotate(0);
+        flex: none;
+      }
+      h3 {
+        color: $color-primary;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 133.2%;
+        &:hover{
+          color:$color-accent;
+        }
+      }
+    }
+    .bt-item-content{
+      display:none;
+      color: $color-text;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      padding: 20px 0 20px 46px;
+    }
+  }
+}

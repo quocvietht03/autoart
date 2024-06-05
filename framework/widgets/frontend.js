@@ -157,6 +157,21 @@
 		})
 	}
 
+	var FaqHandler = function( $scope, $ ) {
+		var titleFaq = $scope.find('.bt-item-title');
+		if(titleFaq.length > 0) {
+			titleFaq.on('click', function(e) {
+				e.preventDefault();
+				if($(this).hasClass('active')){
+					$(this).parent().find('.bt-item-content').slideUp();
+					$(this).removeClass('active');
+				}else{
+					$(this).parent().find('.bt-item-content').slideDown();
+					$(this).addClass('active');
+				}
+			});
+		}
+	};
 	// Make sure you run this code under Elementor.
 	$( window ).on( 'elementor/frontend/init', function() {
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-testimonial-slider.default', SliderSyncingHandler );
@@ -165,6 +180,7 @@
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search.default', CarsSearchHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search-style-1.default', CarsSearchHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search-style-2.default', CarsSearchHandler );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-list-faq.default', FaqHandler );
 	} );
 
 } )( jQuery );
