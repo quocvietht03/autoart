@@ -90,6 +90,7 @@ class ElementorWidgets {
 			'card-image-text-grid',
 			'list-icon-text',
             'list-faq',
+			'dealer-loop-item',
 		);
 
 		return $this->widgets;
@@ -228,6 +229,7 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CardImageTextGrid\Widget_CardImageTextGrid());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListIconText\Widget_ListIconText());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListFaq\Widget_ListFaq());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\DealerLoopItem\Widget_DealerLoopItem());
 	}
 
 	/**

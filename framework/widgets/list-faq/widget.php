@@ -18,7 +18,7 @@ class Widget_ListFaq extends Widget_Base
 
     public function get_title()
     {
-        return __('List Faq', 'autoart');
+        return __('List FAQ', 'autoart');
     }
 
     public function get_icon()
@@ -49,20 +49,20 @@ class Widget_ListFaq extends Widget_Base
 
 
         $repeater->add_control(
-            'lit_text', [
+            'faq_title', [
                 'label' => __('Text', 'autoart'),
                 'type' => Controls_Manager::TEXT,
                 'label_block' => true,
-                'default' => 'Faq title',
+                'default' => __('FAQ title', 'autoart'),
             ]
         );
 
         $repeater->add_control(
-            'lit_content', [
+            'faq_content', [
                 'label' => __('Content', 'autoart'),
                 'type' => Controls_Manager::TEXTAREA,
                 'label_block' => true,
-                'default' => 'Faq content',
+                'default' => __('FAQ content', 'autoart'),
             ]
         );
 
@@ -73,19 +73,19 @@ class Widget_ListFaq extends Widget_Base
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'lit_text' => __('Faq title 01', 'autoart'),
-                        'lit_content' => 'Quisque imperdiet dignissim enim dictum finibus. Sed consectetutr convallis enim eget laoreet. Aenean vitae nisl mollis, porta risus vel, dapibus lectus. Etiam ac suscipit eros, eget maximus.'
+                        'faq_title' => __('FAQ title 01', 'autoart'),
+                        'faq_content' => 'Quisque imperdiet dignissim enim dictum finibus. Sed consectetutr convallis enim eget laoreet. Aenean vitae nisl mollis, porta risus vel, dapibus lectus. Etiam ac suscipit eros, eget maximus.'
                     ],
                     [
-                        'lit_text' => __('Faq title 02', 'autoart'),
-                        'lit_content' => 'Quisque imperdiet dignissim enim dictum finibus. Sed consectetutr convallis enim eget laoreet. Aenean vitae nisl mollis, porta risus vel, dapibus lectus. Etiam ac suscipit eros, eget maximus.'
+                        'faq_title' => __('FAQ title 02', 'autoart'),
+                        'faq_content' => 'Quisque imperdiet dignissim enim dictum finibus. Sed consectetutr convallis enim eget laoreet. Aenean vitae nisl mollis, porta risus vel, dapibus lectus. Etiam ac suscipit eros, eget maximus.'
                     ],
                     [
-                        'lit_text' => __('Faq title 03', 'autoart'),
-                        'lit_content' => 'Quisque imperdiet dignissim enim dictum finibus. Sed consectetutr convallis enim eget laoreet. Aenean vitae nisl mollis, porta risus vel, dapibus lectus. Etiam ac suscipit eros, eget maximus.'
+                        'faq_title' => __('FAQ title 03', 'autoart'),
+                        'faq_content' => 'Quisque imperdiet dignissim enim dictum finibus. Sed consectetutr convallis enim eget laoreet. Aenean vitae nisl mollis, porta risus vel, dapibus lectus. Etiam ac suscipit eros, eget maximus.'
                     ],
                 ],
-                'title_field' => '{{{ lit_text }}}',
+                'title_field' => '{{{ faq_title }}}',
             ]
         );
 
@@ -104,7 +104,7 @@ class Widget_ListFaq extends Widget_Base
             ]
         );
         $this->add_control(
-            'lit_border', [
+            'list_border', [
                 'label' => __('Border Width', 'autoart'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
@@ -129,7 +129,7 @@ class Widget_ListFaq extends Widget_Base
             ]
         );
         $this->add_control(
-            'lit_border_color', [
+            'list_border_color', [
                 'label' => __('Border Color', 'autoart'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
@@ -138,7 +138,7 @@ class Widget_ListFaq extends Widget_Base
             ]
         );
         $this->add_responsive_control(
-            'lit_gap', [
+            'list_gap', [
                 'label' => __('Space Between', 'autoart'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
@@ -179,7 +179,7 @@ class Widget_ListFaq extends Widget_Base
             ]
         );
         $this->add_control(
-            'lit_title_color', [
+            'list_title_color', [
                 'label' => __('Color', 'autoart'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
@@ -189,7 +189,7 @@ class Widget_ListFaq extends Widget_Base
             ]
         );
         $this->add_control(
-            'lit_title_hover_color', [
+            'list_title_hover_color', [
                 'label' => __('Color Hover', 'autoart'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
@@ -202,7 +202,7 @@ class Widget_ListFaq extends Widget_Base
 
         $this->add_group_control(
             Group_Control_Typography::get_type(), [
-                'name' => 'lit_title_typography',
+                'name' => 'list_title_typography',
                 'label' => __('Typography', 'autoart'),
                 'default' => '',
                 'selector' => '{{WRAPPER}} .bt-item-title h3 ',
@@ -215,7 +215,7 @@ class Widget_ListFaq extends Widget_Base
             ]
         );
         $this->add_control(
-            'lit_content_color', [
+            'list_content_color', [
                 'label' => __('Color', 'autoart'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
@@ -226,7 +226,7 @@ class Widget_ListFaq extends Widget_Base
         );
         $this->add_group_control(
             Group_Control_Typography::get_type(), [
-                'name' => 'lit_content_typography',
+                'name' => 'list_content_typography',
                 'label' => __('Typography', 'autoart'),
                 'default' => '',
                 'selector' => '{{WRAPPER}} .bt-item-content',
@@ -270,13 +270,13 @@ class Widget_ListFaq extends Widget_Base
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <?php if (!empty($item['lit_text'])): ?>
-                                    <h3> <?php echo $item['lit_text'] ?> </h3>
+                                <?php if (!empty($item['faq_title'])): ?>
+                                    <h3> <?php echo $item['faq_title'] ?> </h3>
                                 <?php endif; ?>
                             </div>
-                            <?php if (!empty($item['lit_content'])): ?>
+                            <?php if (!empty($item['faq_content'])): ?>
                                 <div class="bt-item-content">
-                                    <?php echo esc_attr($item['lit_content']) ?>
+                                    <?php echo esc_attr($item['faq_content']) ?>
                                 </div>
                             <?php endif; ?>
                         </div>
