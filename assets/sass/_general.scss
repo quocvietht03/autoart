@@ -430,26 +430,12 @@
     line-height: normal;
     margin:0 0 10px 0;
   }
-
   .bt-main-text {
     position: relative;
     font-size: 60px;
     text-transform: capitalize;
     margin: 0;
     z-index: 1;
-    padding-left: 18px;
-    &::before{
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 5px;
-      height: 100%;
-      background: var(--e-global-color-accent, #1FBECD);
-      max-height: 57%;
-      transform: translateY(-50%);
-    }
-
     span {
       position: relative;
       display: inline-block;

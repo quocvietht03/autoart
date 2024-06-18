@@ -1554,23 +1554,15 @@
   .__text-highlighted{
     position: relative;
     color: $color-accent;
-    img{
+    svg{
       position: absolute;
-      min-width: calc(100% + 70%);
+      min-width: calc(100% + 50px);
       height: 100%;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: -1;
       cursor: pointer;
-    }
-  }
-
-  &.animationed{
-    .__text-highlighted{
-      img{
-        animation: effectScaleAnimation 2s ease-in-out infinite;
-      }
     }
   }
 }
