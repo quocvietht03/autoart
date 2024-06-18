@@ -20,3 +20,5 @@ Text Domain: autoart
 == Changelog ==
 = 1.0 =
 * Released: Feb 17, 2024
+
+====End ====
