@@ -1,13 +1,30 @@
 .elementor-element {
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
+  &.elementor-widget-text-editor {
+    .elementor-widget-container,
+    .elementor-text-editor {
+      > * {
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &.elementor-widget-icon-box {
+    .elementor-icon-box-title {
+      margin-bottom: 8px;
+      a {
+        color: inherit;
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+
 }
 
 .elementor-widget-heading .elementor-heading-title {
@@ -56,27 +73,6 @@
 .elementor-headline,
 .elementor-widget-image img {
   margin: 0;
-}
-
-.elementor-widget-text-editor {
-
-  .elementor-widget-container,
-  .elementor-text-editor {
-    >*:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: inherit;
-    margin: 0 0 16px;
-  }
 }
 
 .elementor-widget-icon {
@@ -1822,7 +1818,6 @@
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: -1;
-      cursor: pointer;
     }
   }
 }

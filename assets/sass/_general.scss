@@ -444,13 +444,14 @@
       &:before {
         content: "";
         position: absolute;
-        top: 0;
-        left: -20%;
-        width: 140%;
+        position: absolute;
+        min-width: calc(100% + 50px);
         height: 100%;
-        background-image: url('../images/text-highlighted-bg.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
+        left: 50%;
+        top: 50%;
+        background-image: url('../images/brush.svg');
+        background-size: 100% 100%;
+        transform: translate(-50%, -50%);
         z-index: -1;
       }
     }
