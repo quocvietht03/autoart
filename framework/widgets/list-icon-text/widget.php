@@ -268,48 +268,47 @@ class Widget_ListIconText extends Widget_Base {
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-		
+
 		if ( empty( $settings['lict_items'] ) && !isset($settings['lict_items']) ) {
 			return;
 		}
 
 	?>
 		<div class="bt-elwg-list-icon-text">
-			<div class="bt-elwg-list-icon-text-inner"> 
+			<div class="bt-elwg-list-icon-text-inner">
 				<?php if(!empty($settings['lict_title']) && isset($settings['lict_title'])): ?>
-					<div class="bt-elwg-list-icon-text--title"> 
+					<div class="bt-elwg-list-icon-text--title">
 						<h3> <?php echo esc_html($settings['lict_title']) ?> </h3>
 					</div>
-				<?php endif; ?>	
+				<?php endif; ?>
 
 				<div class="bt-elwg-list-icon-text--items">
 					<?php foreach ( $settings['lict_items'] as $index => $item ): ?>
 						<?php
 							$path_info = pathinfo($item['lict_icon']['url']);
 						?>
-						
-						<div class="item-icon-text"> 
-							<div class="item-icon-text-inner"> 
-								<div class="item-icon-text--icon"> 
+
+						<div class="item-icon-text">
+							<?php if(!empty($item['lict_link'])): ?>
+								<a href="<?php echo esc_url($item['lict_link']) ?>"></a>
+							<?php endif;?>
+							<div class="item-icon-text-inner">
+								<div class="item-icon-text--icon">
 									<?php if (strtolower($path_info['extension']) === 'svg'): ?>
 										<?php echo file_get_contents( $item['lict_icon']['url'] ); ?>
 									<?php else: ?>
 										<?php echo '<img src=" ' . esc_url( $item['lict_icon']['url'] ) . ' " alt="image">'; ?>
-								    <?php endif;?>			
+								    <?php endif;?>
 								</div>
 
 								<?php if(!empty($item['lict_text']) && isset($item['lict_text'])): ?>
 									<h4 class="item-icon-text--heading"> <?php echo esc_html($item['lict_text']) ?> </h4>
-								<?php endif;?>	
-
-								<?php if(!empty($item['lict_link'])): ?>
-									<a href="<?php echo esc_url($item['lict_link']) ?>"> </a>
-								<?php endif;?>	
+								<?php endif;?>
 							</div>
 						</div>
-					<?php endforeach;?>		
+					<?php endforeach;?>
 				</div>
-			</div>	
+			</div>
 	    </div>
 	<?php }
 

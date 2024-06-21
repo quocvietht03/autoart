@@ -2694,172 +2694,57 @@
 .bt-elwg-list-icon-text {
   &-inner {
     display: flex;
-
-    @media (max-width: $break-tl) {
-      flex-wrap: wrap;
-    }
-
-    .bt-elwg-list-icon-text--title>h3 {
-      font-size: 26px;
-      line-height: normal;
-      color: #fff;
-
-      @media (min-width: 1025px) and (max-width: 1199.98px) {
-        font-size: 20px !important;
-      }
-    }
+    flex-wrap: wrap;
   }
-
   &--title {
-    min-width: 25%;
+    width: 25%;
     background-color: $color-accent;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 15px;
-
-    @media (max-width: $break-tl) {
-      min-width: 100%;
-      padding: 32px 15px;
+    > h3 {
+      font-size: 26px;
+      color: #FFFFFF;
     }
   }
-
   &--items {
     background: $color-secondary;
-    padding: 0 0px 0 10px;
     min-height: 117px;
     width: 75%;
     display: flex;
-    overflow: hidden;
-
-    @media(max-width: 1679.98px) {
-      width: 85%;
-    }
-
-    @media (max-width: $break-tl) {
-      max-width: 100%;
-    }
-
     .item-icon-text {
-      padding: 0 40px;
-
-      @media (max-width: 1679.98px) {
-        padding-left: 15px;
-        padding-right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: relative;
+      padding: 0 10px;
+      a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
       }
-
-      @media (max-width: 1199.98px) {
-        padding-left: 12px;
-        padding-right: 12px;
-      }
-
-      @media (max-width: $break-tl) {
-        padding-left: 14px;
-        padding-right: 14px;
-      }
-
-      @media (max-width: $break-sm) {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      @media (max-width: $break-sm) {
-        width: calc(100% / 3);
-      }
-
-      @media (max-width: $break-xs) {
-        width: 50%;
-      }
-
-      &:not(:first-child) {
-        position: relative;
-
-        &::before {
-          content: " ";
-          display: inline-block;
-          width: 1px;
-          height: 50%;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          max-height: 25px;
-          left: 0;
-        }
-      }
-
-      &:nth-child(4n) {
-        &::before {
-          @media (min-width: 520px) and (max-width: $break-sm) {
-            content: none;
-          }
-        }
-      }
-
-      &:nth-child(odd) {
-        &::before {
-          @media (max-width: $break-xs) {
-            content: none;
-          }
-        }
-      }
-
       &-inner {
         display: flex;
         align-items: center;
-        position: relative;
-        gap: 17px;
+        gap: 16px;
         height: 100%;
-
-        @media(max-width: 1379.98px) {
-          gap: 10px;
-        }
-
-        a {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          left: 0;
-          top: 0;
-          z-index: 2;
-        }
-
         h4 {
           font-size: 22px;
           font-weight: 500;
-
-          @media (min-width: 1025px) and (max-width: 1379.98px) {
-            font-size: 17px !important;
-          }
         }
       }
-
       &--icon {
         display: flex;
         align-items: center;
-
         svg,
         img {
-          width: 100%;
+          width: 46px;
           height: auto;
-          max-width: 46px;
-          min-width: 46px;
-
-          @media (max-width: 1199.98px) {
-            max-width: 32px;
-            min-width: 32px;
-          }
-        }
-
-        svg {
-          path {
-            fill: #fff;
-          }
-
-          >g {
-            path {
-              stroke: #fff !important;
-            }
-          }
         }
       }
     }
