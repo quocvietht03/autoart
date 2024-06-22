@@ -1,5 +1,5 @@
 <?php
-namespace AutoArtElementorWidgets\Widgets\CarLoopItemStyle1;
+namespace AutoArtElementorWidgets\Widgets\CarLoopItemStyle3;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -9,14 +9,14 @@ use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 
-class Widget_CarLoopItemStyle1 extends Widget_Base {
+class Widget_CarLoopItemStyle3 extends Widget_Base {
 
 	public function get_name() {
-		return 'bt-car-loop-item-style-1';
+		return 'bt-car-loop-item-style-3';
 	}
 
 	public function get_title() {
-		return __( 'Car Loop Item Style 1', 'autoart' );
+		return __( 'Car Loop Item Style 3', 'autoart' );
 	}
 
 	public function get_icon() {
@@ -123,7 +123,8 @@ class Widget_CarLoopItemStyle1 extends Widget_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--infor-inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-					'{{WRAPPER}} .bt-post--body-price' => 'margin-left: -{{LEFT}}{{UNIT}}; padding-left: {{LEFT}}{{UNIT}}',
+					'{{WRAPPER}} .bt-post--body,
+					 {{WRAPPER}} .bt-post--meta' => 'margin-left: -{{LEFT}}{{UNIT}}; padding-left: {{LEFT}}{{UNIT}}',
 				],
 			]
 		);
@@ -288,18 +289,6 @@ class Widget_CarLoopItemStyle1 extends Widget_Base {
 			]
 		);
 
-		$this->add_control(
-			'price_bg_color',
-			[
-				'label' => __( 'Background Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .bt-post--price' => 'background-color: {{VALUE}};',
-				],
-			]
-		);
-
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
@@ -337,7 +326,7 @@ class Widget_CarLoopItemStyle1 extends Widget_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .bt-post--body-price' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .bt-post--body' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
@@ -429,8 +418,8 @@ class Widget_CarLoopItemStyle1 extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 
 		?>
-			<div class="bt-elwg-car-loop-item--style-1">
-				<?php get_template_part( 'framework/templates/car', 'style1', array('image-size' => $settings['thumbnail_size'], 'layout' => 'style-1')); ?>
+			<div class="bt-elwg-car-loop-item--style-3">
+				<?php get_template_part( 'framework/templates/car', 'style3', array('image-size' => $settings['thumbnail_size'], 'layout' => 'style-3')); ?>
 	    </div>
 		<?php
 	}

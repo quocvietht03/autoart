@@ -2689,6 +2689,12 @@
       @extend .__bt-post-car-style-2;
     }
   }
+
+  &--style-3 {
+    .bt-post {
+      @extend .__bt-post-car-style-3;
+    }
+  }
 }
 
 .bt-elwg-list-icon-text {

@@ -67,6 +67,7 @@ class ElementorWidgets {
 			'car-loop-item',
 			'car-loop-item-style-1',
 			'car-loop-item-style-2',
+			'car-loop-item-style-3',
 			'podcast-grid',
 			'podcast-grid-style-1',
 			'podcast-grid-style-2',
@@ -89,7 +90,7 @@ class ElementorWidgets {
 			'list-image-text',
 			'card-image-text-grid',
 			'list-icon-text',
-            'list-faq',
+      'list-faq',
 			'dealer-loop-item',
 		);
 
@@ -195,6 +196,7 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarLoopItem\Widget_CarLoopItem());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarLoopItemStyle1\Widget_CarLoopItemStyle1());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarLoopItemStyle2\Widget_CarLoopItemStyle2());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarLoopItemStyle3\Widget_CarLoopItemStyle3());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGrid\Widget_PostGrid());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGridStyle1\Widget_PostGridStyle1());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostGridStyle2\Widget_PostGridStyle2());
