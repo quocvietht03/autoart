@@ -127,49 +127,6 @@ class Widget_ListIconText extends Widget_Base {
 
 	protected function register_style_section_controls() {
 		$this->start_controls_section(
-			'lict_icon_style_section',[
-				'label' => esc_html__( 'Icon', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
-			]
-		);
-
-			$this->add_responsive_control(
-				'lict_icon_width',[
-					'label'      => esc_html__( 'Width', 'autoart' ),
-					'type'       => Controls_Manager::SLIDER,
-					'size_units' => [ 'px', '%'],
-					'range' => [
-						'px' => [
-							'min' => 0,
-							'max' => 200,
-							'step'=> 1,
-						],
-						'%' => [
-							'min' => 0,
-							'max' => 100,
-						],
-					],
-					'selectors' => [
-						'{{WRAPPER}} .item-icon-text--icon svg' => 'min-width: {{SIZE}}{{UNIT}}; max-width: {{SIZE}}{{UNIT}}',
-					],
-				]
-			);
-
-			$this->add_control(
-				'lict_icon_color',[
-					'label'     => esc_html__( 'Color', 'autoart' ),
-					'type'      => Controls_Manager::COLOR,
-					'default'   => '#fff',
-					'selectors' => [
-						'{{WRAPPER}} .item-icon-text--icon svg > g path' => 'stroke: {{VALUE}} !important;',
-						'{{WRAPPER}} .item-icon-text--icon svg path' => 'fill: {{VALUE}};',
-					],
-				]
-			);
-
-		$this->end_controls_section();
-
-		$this->start_controls_section(
 			'lict_title_style_section',[
 				'label' => esc_html__( 'Title', 'autoart' ),
 				'tab' => Controls_Manager::TAB_STYLE,
@@ -180,7 +137,7 @@ class Widget_ListIconText extends Widget_Base {
 				'lict_title_color',[
 					'label'     => esc_html__( 'Color', 'autoart' ),
 					'type'      => Controls_Manager::COLOR,
-					'default'   => '#fff',
+					'default'   => '',
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-list-icon-text--title > h3' => 'color: {{VALUE}};',
 					],
@@ -216,47 +173,96 @@ class Widget_ListIconText extends Widget_Base {
 			]
 		);
 
-			$this->add_control(
-				'lict_text_color',[
-					'label'     => esc_html__( 'Color', 'autoart' ),
-					'type'      => Controls_Manager::COLOR,
-					'default'   => '#fff',
-					'selectors' => [
-						'{{WRAPPER}} .item-icon-text-inner h4' => 'color: {{VALUE}};',
-					],
-				]
-			);
+		$this->add_control(
+			'lict_separator_color',[
+				'label'     => esc_html__( 'Separator Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
+				'selectors' => [
+					'{{WRAPPER}} .item-icon-text:not(:last-child):after' => 'background: {{VALUE}};',
+				],
+			]
+		);
 
-			$this->add_control(
-				'lict_separator_color',[
-					'label'     => esc_html__( 'Separator Color', 'autoart' ),
-					'type'      => Controls_Manager::COLOR,
-					'default'   => '#454545',
-					'selectors' => [
-						'{{WRAPPER}} .item-icon-text:not(:first-child)::before' => 'background: {{VALUE}};',
-					],
-				]
-			);
+		$this->add_control(
+			'lict_text_bg',[
+				'label'     => esc_html__( 'Background Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
+				'selectors' => [
+					'{{WRAPPER}} .bt-elwg-list-icon-text--items' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
 
-			$this->add_control(
-				'lict_text_bg',[
-					'label'     => esc_html__( 'Background Color', 'autoart' ),
-					'type'      => Controls_Manager::COLOR,
-					'default'   => '',
-					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-list-icon-text--items' => 'background-color: {{VALUE}};',
-					],
-				]
-			);
+		$this->add_control(
+			'lict_icon_style',
+			[
+				'label' => __( 'Icon', 'autoart' ),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
 
-			$this->add_group_control(
-				Group_Control_Typography::get_type(),[
-					'name'     => 'lict_text_typography',
-					'label'    => esc_html__( 'Typography', 'autoart' ),
-					'default'  => '',
-					'selector' => '{{WRAPPER}} .item-icon-text-inner h4 ',
-				]
-			);
+		$this->add_control(
+			'lict_icon_width',[
+				'label'      => esc_html__( 'Width', 'autoart' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 200,
+						'step'=> 1,
+					],
+					'%' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .item-icon-text--icon svg' => 'min-width: {{SIZE}}{{UNIT}}; max-width: {{SIZE}}{{UNIT}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'lict_icon_color',[
+				'label'     => esc_html__( 'Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
+				'selectors' => [
+					'{{WRAPPER}} .item-icon-text--icon' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'lict_text_style',
+			[
+				'label' => __( 'Text', 'autoart' ),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->add_control(
+			'lict_text_color',[
+				'label'     => esc_html__( 'Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
+				'selectors' => [
+					'{{WRAPPER}} .item-icon-text--heading' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),[
+				'name'     => 'lict_text_typography',
+				'label'    => esc_html__( 'Typography', 'autoart' ),
+				'default'  => '',
+				'selector' => '{{WRAPPER}} .item-icon-text--heading',
+			]
+		);
 
 		$this->end_controls_section();
 	}
@@ -278,7 +284,7 @@ class Widget_ListIconText extends Widget_Base {
 			<div class="bt-elwg-list-icon-text-inner">
 				<?php if(!empty($settings['lict_title']) && isset($settings['lict_title'])): ?>
 					<div class="bt-elwg-list-icon-text--title">
-						<h3> <?php echo esc_html($settings['lict_title']) ?> </h3>
+						<?php echo '<h3>' . $settings['lict_title'] . '</h3>'; ?>
 					</div>
 				<?php endif; ?>
 
@@ -290,21 +296,26 @@ class Widget_ListIconText extends Widget_Base {
 
 						<div class="item-icon-text">
 							<?php if(!empty($item['lict_link'])): ?>
-								<a href="<?php echo esc_url($item['lict_link']) ?>"></a>
+								<a href="<?php echo esc_url($item['lict_link']) ?>">
 							<?php endif;?>
-							<div class="item-icon-text-inner">
-								<div class="item-icon-text--icon">
-									<?php if (strtolower($path_info['extension']) === 'svg'): ?>
-										<?php echo file_get_contents( $item['lict_icon']['url'] ); ?>
-									<?php else: ?>
-										<?php echo '<img src=" ' . esc_url( $item['lict_icon']['url'] ) . ' " alt="image">'; ?>
-								    <?php endif;?>
+
+								<div class="item-icon-text-inner">
+									<div class="item-icon-text--icon">
+										<?php if (strtolower($path_info['extension']) === 'svg'): ?>
+											<?php echo file_get_contents( $item['lict_icon']['url'] ); ?>
+										<?php else: ?>
+											<?php echo '<img src=" ' . esc_url( $item['lict_icon']['url'] ) . ' " alt="image">'; ?>
+									    <?php endif;?>
+									</div>
+
+									<?php if(!empty($item['lict_text']) && isset($item['lict_text'])): ?>
+										<h4 class="item-icon-text--heading"> <?php echo esc_html($item['lict_text']) ?> </h4>
+									<?php endif;?>
 								</div>
 
-								<?php if(!empty($item['lict_text']) && isset($item['lict_text'])): ?>
-									<h4 class="item-icon-text--heading"> <?php echo esc_html($item['lict_text']) ?> </h4>
-								<?php endif;?>
-							</div>
+							<?php if(!empty($item['lict_link'])): ?>
+								</a>
+							<?php endif;?>
 						</div>
 					<?php endforeach;?>
 				</div>
