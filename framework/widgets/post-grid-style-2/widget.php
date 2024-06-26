@@ -19,7 +19,7 @@ class Widget_PostGridStyle2 extends Widget_Base {
 		return __( 'Post Grid Style 2', 'autoart' );
 	}
 
-  public function get_icon() {
+  	public function get_icon() {
 		return 'eicon-posts-ticker';
 	}
 
@@ -31,15 +31,15 @@ class Widget_PostGridStyle2 extends Widget_Base {
 		$supported_ids = [];
 
 		$wp_query = new \WP_Query( array(
-									'post_type' => 'post',
-									'post_status' => 'publish'
-								) );
+			'post_type'   => 'post',
+			'post_status' => 'publish'
+		) );
 
 		if ( $wp_query->have_posts() ) {
-	    while ( $wp_query->have_posts() ) {
-        $wp_query->the_post();
-        $supported_ids[get_the_ID()] = get_the_title();
-	    }
+			while ( $wp_query->have_posts() ) {
+				$wp_query->the_post();
+				$supported_ids[get_the_ID()] = get_the_title();
+			}
 		}
 
 		return $supported_ids;
@@ -50,8 +50,9 @@ class Widget_PostGridStyle2 extends Widget_Base {
 
 		$categories = get_terms( array(
 			'taxonomy' => 'post_categories',
-	    'hide_empty' => false,
+	    	'hide_empty' => false,
 		) );
+
 		if( ! empty( $categories )  && ! is_wp_error( $categories ) ) {
 			foreach ( $categories as $category ) {
 			    $supported_taxonomies[$category->term_id] = $category->name;
@@ -63,40 +64,36 @@ class Widget_PostGridStyle2 extends Widget_Base {
 
 	protected function register_layout_section_controls() {
 		$this->start_controls_section(
-			'section_layout',
-			[
+			'section_layout',[
 				'label' => __( 'Layout', 'autoart' ),
 			]
 		);
 
 		$this->add_control(
-			'posts_per_page',
-			[
+			'posts_per_page',[
 				'label' => __( 'Posts Per Page', 'autoart' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 6,
 			]
 		);
 
-    $this->add_group_control(
-			Group_Control_Image_Size::get_type(),
-			[
-				'name' => 'thumbnail',
-				'label' => __( 'Image Size', 'autoart' ),
+    	$this->add_group_control(
+			Group_Control_Image_Size::get_type(),[
+				'name'       => 'thumbnail',
+				'label'      => __( 'Image Size', 'autoart' ),
 				'show_label' => true,
-				'default' => 'medium_large',
-				'exclude' => [ 'custom' ],
+				'default'    => 'medium_large',
+				'exclude'    => [ 'custom' ],
 			]
 		);
 
-    $this->add_control(
-			'show_pagination',
-			[
-				'label' => __( 'Pagination', 'autoart' ),
-				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'autoart' ),
+    	$this->add_control(
+			'show_pagination',[
+				'label'     => __( 'Pagination', 'autoart' ),
+				'type'      => Controls_Manager::SWITCHER,
+				'label_on'  => __( 'Show', 'autoart' ),
 				'label_off' => __( 'Hide', 'autoart' ),
-				'default' => '',
+				'default'   => '',
 			]
 		);
 
@@ -105,8 +102,7 @@ class Widget_PostGridStyle2 extends Widget_Base {
 
 	protected function register_query_section_controls() {
 		$this->start_controls_section(
-			'section_query',
-			[
+			'section_query',[
 				'label' => __( 'Query', 'autoart' ),
 			]
 		);
@@ -114,72 +110,64 @@ class Widget_PostGridStyle2 extends Widget_Base {
 		$this->start_controls_tabs( 'tabs_query' );
 
 		$this->start_controls_tab(
-			'tab_query_include',
-			[
+			'tab_query_include',[
 				'label' => __( 'Include', 'autoart' ),
 			]
 		);
 
 		$this->add_control(
-			'ids',
-			[
-				'label' => __( 'Ids', 'autoart' ),
-				'type' => Controls_Manager::SELECT2,
-				'options' => $this->get_supported_ids(),
+			'ids',[
+				'label'       => __( 'Ids', 'autoart' ),
+				'type'        => Controls_Manager::SELECT2,
+				'options'     => $this->get_supported_ids(),
 				'label_block' => true,
-				'multiple' => true,
+				'multiple'    => true,
 			]
 		);
 
 		$this->add_control(
-			'category',
-			[
-				'label' => __( 'Category', 'autoart' ),
-				'type' => Controls_Manager::SELECT2,
-				'options' => $this->get_supported_taxonomies(),
+			'category',[
+				'label'       => __( 'Category', 'autoart' ),
+				'type'        => Controls_Manager::SELECT2,
+				'options'     => $this->get_supported_taxonomies(),
 				'label_block' => true,
-				'multiple' => true,
+				'multiple'    => true,
 			]
 		);
 
 		$this->end_controls_tab();
 
-
 		$this->start_controls_tab(
-			'tab_query_exnlude',
-			[
+			'tab_query_exnlude',[
 				'label' => __( 'Exclude', 'autoart' ),
 			]
 		);
 
 		$this->add_control(
-			'ids_exclude',
-			[
-				'label' => __( 'Ids', 'autoart' ),
-				'type' => Controls_Manager::SELECT2,
-				'options' => $this->get_supported_ids(),
+			'ids_exclude',[
+				'label'       => __( 'Ids', 'autoart' ),
+				'type'        => Controls_Manager::SELECT2,
+				'options'     => $this->get_supported_ids(),
 				'label_block' => true,
-				'multiple' => true,
+				'multiple'    => true,
 			]
 		);
 
 		$this->add_control(
-			'category_exclude',
-			[
-				'label' => __( 'Category', 'autoart' ),
-				'type' => Controls_Manager::SELECT2,
-				'options' => $this->get_supported_taxonomies(),
+			'category_exclude',[
+				'label'       => __( 'Category', 'autoart' ),
+				'type'        => Controls_Manager::SELECT2,
+				'options'     => $this->get_supported_taxonomies(),
 				'label_block' => true,
-				'multiple' => true,
+				'multiple'    => true,
 			]
 		);
 
 		$this->add_control(
-			'offset',
-			[
-				'label' => __( 'Offset', 'autoart' ),
-				'type' => Controls_Manager::NUMBER,
-				'default' => 0,
+			'offset',[
+				'label'       => __( 'Offset', 'autoart' ),
+				'type'        => Controls_Manager::NUMBER,
+				'default'     => 0,
 				'description' => __( 'Use this setting to skip over posts (e.g. \'2\' to skip over 2 posts).', 'autoart' ),
 			]
 		);
@@ -189,28 +177,26 @@ class Widget_PostGridStyle2 extends Widget_Base {
 		$this->end_controls_tabs();
 
 		$this->add_control(
-			'orderby',
-			[
-				'label' => __( 'Order By', 'autoart' ),
-				'type' => Controls_Manager::SELECT,
+			'orderby',[
+				'label'   => __( 'Order By', 'autoart' ),
+				'type'    => Controls_Manager::SELECT,
 				'default' => 'post_date',
 				'options' => [
-					'post_date' => __( 'Date', 'autoart' ),
+					'post_date'  => __( 'Date', 'autoart' ),
 					'post_title' => __( 'Title', 'autoart' ),
 					'menu_order' => __( 'Menu Order', 'autoart' ),
-					'rand' => __( 'Random', 'autoart' ),
+					'rand'       => __( 'Random', 'autoart' ),
 				],
 			]
 		);
 
 		$this->add_control(
-			'order',
-			[
-				'label' => __( 'Order', 'autoart' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'desc',
-				'options' => [
-					'asc' => __( 'ASC', 'autoart' ),
+			'order',[
+				'label'    => __( 'Order', 'autoart' ),
+				'type'     => Controls_Manager::SELECT,
+				'default'  => 'desc',
+				'options'  => [
+					'asc'  => __( 'ASC', 'autoart' ),
 					'desc' => __( 'DESC', 'autoart' ),
 				],
 			]
@@ -463,11 +449,10 @@ class Widget_PostGridStyle2 extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'pagination_typography',
-				'label' => __( 'Typography', 'autoart' ),
-				'default' => '',
+			Group_Control_Typography::get_type(),[
+				'name'     => 'pagination_typography',
+				'label'    => __( 'Typography', 'autoart' ),
+				'default'  => '',
 				'selector' => '{{WRAPPER}} .bt-pagination .page-numbers',
 			]
 		);
@@ -478,7 +463,7 @@ class Widget_PostGridStyle2 extends Widget_Base {
 				'label' => __( 'Space', 'autoart' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
-					'size' => 60,
+					'size' => 70,
 				],
 				'range' => [
 					'px' => [
@@ -497,23 +482,20 @@ class Widget_PostGridStyle2 extends Widget_Base {
 	}
 
 	protected function register_controls() {
-
 		$this->register_layout_section_controls();
 		$this->register_query_section_controls();
-
 		$this->register_style_section_controls();
-
 	}
 
 	public function query_posts() {
 		$settings = $this->get_settings_for_display();
 
 		$args = [
-			'post_type' => 'post',
-			'post_status' => 'publish',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
 			'posts_per_page' => $settings['posts_per_page'],
-			'orderby' => $settings['orderby'],
-			'order' => $settings['order'],
+			'orderby'        => $settings['orderby'],
+			'order'          => $settings['order'],
 		];
 
 		if($settings['show_pagination'] == 'yes') {
@@ -558,29 +540,23 @@ class Widget_PostGridStyle2 extends Widget_Base {
 	}
 
 	protected function render() {
-    $settings = $this->get_settings_for_display();
-		$query = $this->query_posts();
-
+    	$settings = $this->get_settings_for_display();
+		$query    = $this->query_posts();
     ?>
       <div class="bt-elwg-post-grid--style-2">
-        <?php
-          if( $query->have_posts() ) {
-            ?>
-              <div class="bt-post-grid">
-                <?php
-                  while ( $query->have_posts() ) : $query->the_post();
-                    get_template_part( 'framework/templates/post', 'style', array('image-size' => $settings['thumbnail_size'], 'layout' => 'default'));
-                  endwhile;
-                ?>
-              </div>
-            <?php
-            if($settings['show_pagination'] == 'yes') {
-              autoart_paginate_links($query);
+        <?php if( $query->have_posts() ) { ?>
+            <div class="bt-post-grid">
+                <?php while ( $query->have_posts() ) : $query->the_post();
+                    get_template_part( 'framework/templates/post', 'style2', array('image-size' => $settings['thumbnail_size'], 'layout' => 'default'));
+                endwhile; ?>
+            </div>
+            
+			<?php if($settings['show_pagination'] == 'yes') {
+            	autoart_paginate_links($query);
             }
-          } else {
+        } else {
             get_template_part( 'framework/templates/post', 'none');
-          }
-        ?>
+        } ?>
       </div>
     <?php
 		wp_reset_postdata();
