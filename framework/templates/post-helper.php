@@ -365,7 +365,7 @@ if ( ! function_exists( 'autoart_author_icon_render' ) ) {
   <?php }
 }
 
-/* Author Icon */
+/* Author with avatar */
 if ( ! function_exists( 'autoart_author_w_avatar' ) ) {
 	function autoart_author_w_avatar() {
     $author_id = get_the_author_meta( 'ID' );  
@@ -381,7 +381,7 @@ if ( ! function_exists( 'autoart_author_w_avatar' ) ) {
         ?>
       </div>
 
-      <h4 class="bt-post-author-w-avatar--name"> By <?php the_author(); ?> </h4>
+      <h4 class="bt-post-author-w-avatar--name"> <span>By</span> <?php the_author(); ?> </h4>
     </div>
   <?php }
 }

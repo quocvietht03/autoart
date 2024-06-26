@@ -30,16 +30,18 @@ class Widget_PostGridStyle1 extends Widget_Base {
 	protected function get_supported_ids() {
 		$supported_ids = [];
 
-		$wp_query = new \WP_Query( array(
-									'post_type' => 'post',
-									'post_status' => 'publish'
-								) );
+		$wp_query = new \WP_Query( 
+			array(
+				'post_type'   => 'post',
+				'post_status' => 'publish'
+			) 
+		);
 
 		if ( $wp_query->have_posts() ) {
-	    while ( $wp_query->have_posts() ) {
-        $wp_query->the_post();
-        $supported_ids[get_the_ID()] = get_the_title();
-	    }
+			while ( $wp_query->have_posts() ) {
+				$wp_query->the_post();
+				$supported_ids[get_the_ID()] = get_the_title();
+			}
 		}
 
 		return $supported_ids;
@@ -49,9 +51,10 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		$supported_taxonomies = [];
 
 		$categories = get_terms( array(
-			'taxonomy' => 'post_categories',
-	    'hide_empty' => false,
+			'taxonomy'   => 'post_categories',
+	    	'hide_empty' => false,
 		) );
+
 		if( ! empty( $categories )  && ! is_wp_error( $categories ) ) {
 			foreach ( $categories as $category ) {
 			    $supported_taxonomies[$category->term_id] = $category->name;
@@ -63,44 +66,40 @@ class Widget_PostGridStyle1 extends Widget_Base {
 
 	protected function register_layout_section_controls() {
 		$this->start_controls_section(
-			'section_layout',
-			[
+			'section_layout',[
 				'label' => __( 'Layout', 'autoart' ),
 			]
 		);
 
 		$this->add_control(
-			'posts_per_page',
-			[
-				'label' => __( 'Posts Per Page', 'autoart' ),
-				'type' => Controls_Manager::NUMBER,
+			'posts_per_page',[
+				'label'   => __( 'Posts Per Page', 'autoart' ),
+				'type'    => Controls_Manager::NUMBER,
 				'default' => 6,
 			]
 		);
 
     $this->add_group_control(
-			Group_Control_Image_Size::get_type(),
-			[
-				'name' => 'thumbnail',
-				'label' => __( 'Image Size', 'autoart' ),
+			Group_Control_Image_Size::get_type(),[
+				'name'       => 'thumbnail',
+				'label'      => __( 'Image Size', 'autoart' ),
 				'show_label' => true,
-				'default' => 'medium',
-				'exclude' => [ 'custom' ],
+				'default'    => 'medium',
+				'exclude'    => [ 'custom' ],
 			]
 		);
 
 		$this->add_responsive_control(
-			'image_ratio',
-			[
-				'label' => __( 'Image Ratio', 'autoart' ),
-				'type' => Controls_Manager::SLIDER,
+			'image_ratio',[
+				'label'   => __( 'Image Ratio', 'autoart' ),
+				'type'    => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 0.66,
 				],
 				'range' => [
 					'px' => [
-						'min' => 0.3,
-						'max' => 2,
+						'min'  => 0.3,
+						'max'  => 2,
 						'step' => 0.01,
 					],
 				],
@@ -110,14 +109,13 @@ class Widget_PostGridStyle1 extends Widget_Base {
 			]
 		);
 
-    $this->add_control(
-			'show_pagination',
-			[
-				'label' => __( 'Pagination', 'autoart' ),
-				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'autoart' ),
+    	$this->add_control(
+			'show_pagination',[
+				'label'     => __( 'Pagination', 'autoart' ),
+				'type'      => Controls_Manager::SWITCHER,
+				'label_on'  => __( 'Show', 'autoart' ),
 				'label_off' => __( 'Hide', 'autoart' ),
-				'default' => '',
+				'default'   => '',
 			]
 		);
 
@@ -126,8 +124,7 @@ class Widget_PostGridStyle1 extends Widget_Base {
 
 	protected function register_query_section_controls() {
 		$this->start_controls_section(
-			'section_query',
-			[
+			'section_query',[
 				'label' => __( 'Query', 'autoart' ),
 			]
 		);
@@ -135,31 +132,28 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		$this->start_controls_tabs( 'tabs_query' );
 
 		$this->start_controls_tab(
-			'tab_query_include',
-			[
+			'tab_query_include',[
 				'label' => __( 'Include', 'autoart' ),
 			]
 		);
 
 		$this->add_control(
-			'ids',
-			[
-				'label' => __( 'Ids', 'autoart' ),
-				'type' => Controls_Manager::SELECT2,
-				'options' => $this->get_supported_ids(),
+			'ids',[
+				'label'       => __( 'Ids', 'autoart' ),
+				'type'        => Controls_Manager::SELECT2,
+				'options'     => $this->get_supported_ids(),
 				'label_block' => true,
-				'multiple' => true,
+				'multiple'    => true,
 			]
 		);
 
 		$this->add_control(
-			'category',
-			[
-				'label' => __( 'Category', 'autoart' ),
-				'type' => Controls_Manager::SELECT2,
-				'options' => $this->get_supported_taxonomies(),
+			'category',[
+				'label'       => __( 'Category', 'autoart' ),
+				'type'        => Controls_Manager::SELECT2,
+				'options'     => $this->get_supported_taxonomies(),
 				'label_block' => true,
-				'multiple' => true,
+				'multiple'    => true,
 			]
 		);
 
@@ -167,40 +161,36 @@ class Widget_PostGridStyle1 extends Widget_Base {
 
 
 		$this->start_controls_tab(
-			'tab_query_exnlude',
-			[
+			'tab_query_exnlude',[
 				'label' => __( 'Exclude', 'autoart' ),
 			]
 		);
 
 		$this->add_control(
-			'ids_exclude',
-			[
-				'label' => __( 'Ids', 'autoart' ),
-				'type' => Controls_Manager::SELECT2,
-				'options' => $this->get_supported_ids(),
+			'ids_exclude',[
+				'label'       => __( 'Ids', 'autoart' ),
+				'type'        => Controls_Manager::SELECT2,
+				'options'     => $this->get_supported_ids(),
 				'label_block' => true,
-				'multiple' => true,
+				'multiple'    => true,
 			]
 		);
 
 		$this->add_control(
-			'category_exclude',
-			[
-				'label' => __( 'Category', 'autoart' ),
-				'type' => Controls_Manager::SELECT2,
-				'options' => $this->get_supported_taxonomies(),
+			'category_exclude',[
+				'label'       => __( 'Category', 'autoart' ),
+				'type'        => Controls_Manager::SELECT2,
+				'options'     => $this->get_supported_taxonomies(),
 				'label_block' => true,
-				'multiple' => true,
+				'multiple'    => true,
 			]
 		);
 
 		$this->add_control(
-			'offset',
-			[
-				'label' => __( 'Offset', 'autoart' ),
-				'type' => Controls_Manager::NUMBER,
-				'default' => 0,
+			'offset',[
+				'label'       => __( 'Offset', 'autoart' ),
+				'type'        => Controls_Manager::NUMBER,
+				'default'     => 0,
 				'description' => __( 'Use this setting to skip over posts (e.g. \'2\' to skip over 2 posts).', 'autoart' ),
 			]
 		);
@@ -210,25 +200,23 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		$this->end_controls_tabs();
 
 		$this->add_control(
-			'orderby',
-			[
-				'label' => __( 'Order By', 'autoart' ),
-				'type' => Controls_Manager::SELECT,
+			'orderby',[
+				'label'   => __( 'Order By', 'autoart' ),
+				'type'    => Controls_Manager::SELECT,
 				'default' => 'post_date',
 				'options' => [
-					'post_date' => __( 'Date', 'autoart' ),
+					'post_date'  => __( 'Date', 'autoart' ),
 					'post_title' => __( 'Title', 'autoart' ),
 					'menu_order' => __( 'Menu Order', 'autoart' ),
-					'rand' => __( 'Random', 'autoart' ),
+					'rand'       => __( 'Random', 'autoart' ),
 				],
 			]
 		);
 
 		$this->add_control(
-			'order',
-			[
-				'label' => __( 'Order', 'autoart' ),
-				'type' => Controls_Manager::SELECT,
+			'order',[
+				'label'   => __( 'Order', 'autoart' ),
+				'type'    => Controls_Manager::SELECT,
 				'default' => 'desc',
 				'options' => [
 					'asc' => __( 'ASC', 'autoart' ),
@@ -243,20 +231,18 @@ class Widget_PostGridStyle1 extends Widget_Base {
 
 	protected function register_style_section_controls() {
 		$this->start_controls_section(
-			'section_style_image',
-			[
+			'section_style_image',[
 				'label' => esc_html__( 'Image', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
+				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		$this->add_control(
-			'img_border_radius',
-			[
-				'label' => __( 'Border Radius', 'autoart' ),
-				'type' => Controls_Manager::DIMENSIONS,
+			'img_border_radius',[
+				'label'      => __( 'Border Radius', 'autoart' ),
+				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
-				'selectors' => [
+				'selectors'  => [
 					'{{WRAPPER}} .bt-post--featured .bt-cover-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
@@ -264,32 +250,28 @@ class Widget_PostGridStyle1 extends Widget_Base {
 
 		$this->start_controls_tabs( 'thumbnail_effects_tabs' );
 
-		$this->start_controls_tab( 'thumbnail_tab_normal',
-			[
+		$this->start_controls_tab( 'thumbnail_tab_normal',[
 				'label' => __( 'Normal', 'autoart' ),
 			]
 		);
 
 		$this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name' => 'thumbnail_filters',
+			Group_Control_Css_Filter::get_type(),[
+				'name'     => 'thumbnail_filters',
 				'selector' => '{{WRAPPER}} .bt-post--featured img',
 			]
 		);
 
 		$this->end_controls_tab();
 
-		$this->start_controls_tab( 'thumbnail_tab_hover',
-			[
+		$this->start_controls_tab( 'thumbnail_tab_hover',[
 				'label' => __( 'Hover', 'autoart' ),
 			]
 		);
 
 		$this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name' => 'thumbnail_hover_filters',
+			Group_Control_Css_Filter::get_type(),[
+				'name'     => 'thumbnail_hover_filters',
 				'selector' => '{{WRAPPER}} .bt-post:hover .bt-post--featured img',
 			]
 		);
@@ -301,18 +283,16 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'section_style_box',
-			[
+			'section_style_box',[
 				'label' => esc_html__( 'Box', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
+				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		$this->add_control(
-			'box_border_width',
-			[
-				'label' => __( 'Border Width', 'autoart' ),
-				'type' => Controls_Manager::DIMENSIONS,
+			'box_border_width',[
+				'label'      => __( 'Border Width', 'autoart' ),
+				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
 					'px' => [
@@ -327,22 +307,20 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_control(
-			'box_border_radius',
-			[
-				'label' => __( 'Border Radius', 'autoart' ),
-				'type' => Controls_Manager::DIMENSIONS,
+			'box_border_radius',[
+				'label'      => __( 'Border Radius', 'autoart' ),
+				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
-				'selectors' => [
+				'selectors'  => [
 					'{{WRAPPER}} .bt-post--inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
 
 		$this->add_responsive_control(
-			'box_padding',
-			[
-				'label' => __( 'Padding', 'autoart' ),
-				'type' => Controls_Manager::DIMENSIONS,
+			'box_padding',[
+				'label'      => __( 'Padding', 'autoart' ),
+				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
 					'px' => [
@@ -357,18 +335,16 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Box_Shadow::get_type(),
-			[
-				'name' => 'box_shadow',
+			Group_Control_Box_Shadow::get_type(),[
+				'name'     => 'box_shadow',
 				'selector' => '{{WRAPPER}} .bt-post--inner',
 			]
 		);
 
 		$this->add_control(
-			'box_bg_color',
-			[
-				'label' => __( 'Background Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
+			'box_bg_color',[
+				'label'     => __( 'Background Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--inner' => 'background-color: {{VALUE}}',
 				],
@@ -376,10 +352,9 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_control(
-			'box_border_color',
-			[
-				'label' => __( 'Border Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
+			'box_border_color',[
+				'label'     => __( 'Border Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--inner' => 'border-color: {{VALUE}}',
 				],
@@ -389,20 +364,18 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'section_style_image',
-			[
+			'section_style_image',[
 				'label' => esc_html__( 'Image', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
+				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		$this->add_control(
-			'img_border_radius',
-			[
-				'label' => __( 'Border Radius', 'autoart' ),
-				'type' => Controls_Manager::DIMENSIONS,
+			'img_border_radius',[
+				'label'      => __( 'Border Radius', 'autoart' ),
+				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
-				'selectors' => [
+				'selectors'  => [
 					'{{WRAPPER}} .bt-post--featured .bt-cover-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
@@ -410,32 +383,28 @@ class Widget_PostGridStyle1 extends Widget_Base {
 
 		$this->start_controls_tabs( 'thumbnail_effects_tabs' );
 
-		$this->start_controls_tab( 'thumbnail_tab_normal',
-			[
+		$this->start_controls_tab( 'thumbnail_tab_normal',[
 				'label' => __( 'Normal', 'autoart' ),
 			]
 		);
 
 		$this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name' => 'thumbnail_filters',
+			Group_Control_Css_Filter::get_type(),[
+				'name'     => 'thumbnail_filters',
 				'selector' => '{{WRAPPER}} .bt-post--featured img',
 			]
 		);
 
 		$this->end_controls_tab();
 
-		$this->start_controls_tab( 'thumbnail_tab_hover',
-			[
+		$this->start_controls_tab( 'thumbnail_tab_hover',[
 				'label' => __( 'Hover', 'autoart' ),
 			]
 		);
 
 		$this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name' => 'thumbnail_hover_filters',
+			Group_Control_Css_Filter::get_type(),[
+				'name'     => 'thumbnail_hover_filters',
 				'selector' => '{{WRAPPER}} .bt-post:hover .bt-post--featured img',
 			]
 		);
@@ -447,27 +416,24 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
-			'section_style_content',
-			[
+			'section_style_content',[
 				'label' => esc_html__( 'Content', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
+				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		$this->add_control(
-			'date_style',
-			[
+			'date_style',[
 				'label' => __( 'Date', 'autoart' ),
-				'type' => Controls_Manager::HEADING,
+				'type'  => Controls_Manager::HEADING,
 			]
 		);
 
 		$this->add_control(
-			'date_color',
-			[
-				'label' => __( 'Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'date_color',[
+				'label'     => __( 'Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--publish' => 'color: {{VALUE}};',
 				],
@@ -475,11 +441,10 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_control(
-			'date_bg_color',
-			[
-				'label' => __( 'Background Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'date_bg_color',[
+				'label'     => __( 'Background Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--publish' => 'background-color: {{VALUE}};',
 				],
@@ -487,29 +452,26 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'date_typography',
-				'label' => __( 'Typography', 'autoart' ),
-				'default' => '',
+			Group_Control_Typography::get_type(),[
+				'name'     => 'date_typography',
+				'label'    => __( 'Typography', 'autoart' ),
+				'default'  => '',
 				'selector' => '{{WRAPPER}} .bt-post--publish',
 			]
 		);
 
 		$this->add_control(
-			'title_style',
-			[
+			'title_style',[
 				'label' => __( 'Title', 'autoart' ),
-				'type' => Controls_Manager::HEADING,
+				'type'  => Controls_Manager::HEADING,
 			]
 		);
 
 		$this->add_control(
-			'title_color',
-			[
-				'label' => __( 'Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'title_color',[
+				'label'     => __( 'Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--title' => 'color: {{VALUE}};',
 				],
@@ -517,11 +479,10 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_control(
-			'title_color_hover',
-			[
-				'label' => __( 'Color Hover', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'title_color_hover',[
+				'label'     => __( 'Color Hover', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--title a:hover' => 'color: {{VALUE}};',
 				],
@@ -529,29 +490,26 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'title_typography',
-				'label' => __( 'Typography', 'autoart' ),
-				'default' => '',
+			Group_Control_Typography::get_type(),[
+				'name'     => 'title_typography',
+				'label'    => __( 'Typography', 'autoart' ),
+				'default'  => '',
 				'selector' => '{{WRAPPER}} .bt-post--title',
 			]
 		);
 
 		$this->add_control(
-			'meta_style',
-			[
+			'meta_style',[
 				'label' => __( 'Meta', 'autoart' ),
-				'type' => Controls_Manager::HEADING,
+				'type'  => Controls_Manager::HEADING,
 			]
 		);
 
 		$this->add_control(
-			'meta_color',
-			[
-				'label' => __( 'Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'meta_color',[
+				'label'     => __( 'Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--meta' => 'color: {{VALUE}};',
 				],
@@ -559,11 +517,10 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_control(
-			'meta_color_hover',
-			[
-				'label' => __( 'Color Hover', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'meta_color_hover',[
+				'label'     => __( 'Color Hover', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--meta a:hover' => 'color: {{VALUE}};',
 				],
@@ -571,11 +528,10 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_control(
-			'meta_bg_color',
-			[
-				'label' => __( 'Background Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'meta_bg_color',[
+				'label'     => __( 'Background Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-post--meta' => 'background-color: {{VALUE}};',
 				],
@@ -583,34 +539,31 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'meta_typography',
-				'label' => __( 'Typography', 'autoart' ),
-				'default' => '',
+			Group_Control_Typography::get_type(),[
+				'name'     => 'meta_typography',
+				'label'    => __( 'Typography', 'autoart' ),
+				'default'  => '',
 				'selector' => '{{WRAPPER}} .bt-post--meta',
 			]
 		);
 
 		$this->end_controls_section();
 
-    $this->start_controls_section(
-			'section_style_pagination',
-			[
-				'label' => esc_html__( 'Pagination', 'autoart' ),
-				'tab' => Controls_Manager::TAB_STYLE,
-        'condition' => [
+    	$this->start_controls_section(
+			'section_style_pagination',[
+				'label'     => esc_html__( 'Pagination', 'autoart' ),
+				'tab'       => Controls_Manager::TAB_STYLE,
+        		'condition' => [
 					'show_pagination!'=> '',
 				],
 			]
 		);
 
 		$this->add_control(
-			'pagination_color',
-			[
-				'label' => __( 'Color', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'pagination_color',[
+				'label'     => __( 'Color', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-pagination .page-numbers:not(.current)' => 'color: {{VALUE}};',
 				],
@@ -618,23 +571,21 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_control(
-			'pagination_color_hover',
-			[
-				'label' => __( 'Color Hover', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+			'pagination_color_hover',[
+				'label'     => __( 'Color Hover', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-pagination .page-numbers:not(.current, .dots):hover' => 'color: {{VALUE}};',
 				],
 			]
 		);
 
-    $this->add_control(
-			'pagination_color_current',
-			[
-				'label' => __( 'Color Current', 'autoart' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+    	$this->add_control(
+			'pagination_color_current',[
+				'label'     => __( 'Color Current', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-pagination .page-numbers.current' => 'background-color: {{VALUE}};',
 				],
@@ -642,20 +593,18 @@ class Widget_PostGridStyle1 extends Widget_Base {
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'pagination_typography',
-				'label' => __( 'Typography', 'autoart' ),
-				'default' => '',
+			Group_Control_Typography::get_type(),[
+				'name'     => 'pagination_typography',
+				'label'    => __( 'Typography', 'autoart' ),
+				'default'  => '',
 				'selector' => '{{WRAPPER}} .bt-pagination .page-numbers',
 			]
 		);
 
-    $this->add_responsive_control(
-			'pagination_space',
-			[
-				'label' => __( 'Space', 'autoart' ),
-				'type' => Controls_Manager::SLIDER,
+    	$this->add_responsive_control(
+			'pagination_space',[
+				'label'   => __( 'Space', 'autoart' ),
+				'type'    => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 60,
 				],
@@ -676,23 +625,20 @@ class Widget_PostGridStyle1 extends Widget_Base {
 	}
 
 	protected function register_controls() {
-
 		$this->register_layout_section_controls();
 		$this->register_query_section_controls();
-
 		$this->register_style_section_controls();
-
 	}
 
 	public function query_posts() {
 		$settings = $this->get_settings_for_display();
 
 		$args = [
-			'post_type' => 'post',
-			'post_status' => 'publish',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
 			'posts_per_page' => $settings['posts_per_page'],
-			'orderby' => $settings['orderby'],
-			'order' => $settings['order'],
+			'orderby'        => $settings['orderby'],
+			'order'          => $settings['order'],
 		];
 
 		if($settings['show_pagination'] == 'yes') {
@@ -737,30 +683,28 @@ class Widget_PostGridStyle1 extends Widget_Base {
 	}
 
 	protected function render() {
-    $settings = $this->get_settings_for_display();
-		$query = $this->query_posts();
+    	$settings = $this->get_settings_for_display();
+		$query    = $this->query_posts();
 
     ?>
-      <div class="bt-elwg-post-grid--style-1">
-        <?php
-          if( $query->have_posts() ) {
-            ?>
-              <div class="bt-post-grid">
-                <?php
-                  while ( $query->have_posts() ) : $query->the_post();
-                    get_template_part( 'framework/templates/post', 'style', array('image-size' => $settings['thumbnail_size'], 'layout' => 'default'));
-                  endwhile;
-                ?>
-              </div>
+    <div class="bt-elwg-post-grid--style-1">
+        <?php if( $query->have_posts() ) { ?>
+            <div class="bt-post-grid">
+            	<?php while ( $query->have_posts() ) : $query->the_post();
+                    get_template_part( 'framework/templates/post', 'style1', array('image-size' => $settings['thumbnail_size'], 'layout' => 'default'));
+                endwhile; ?>
+            </div>
+			
             <?php
-            if($settings['show_pagination'] == 'yes') {
+			if($settings['show_pagination'] == 'yes') {
               autoart_paginate_links($query);
             }
+
           } else {
             get_template_part( 'framework/templates/post', 'none');
           }
         ?>
-      </div>
+    </div>
     <?php
 		wp_reset_postdata();
 	}
