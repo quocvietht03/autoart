@@ -123,6 +123,13 @@
 		}
 	}
 
+	/* Select2 */
+	function AutoArtSelect2() {
+		if($('select.gfield_select').length > 0) {
+			$('select.gfield_select').select2();
+		}
+	}
+
 	/* Set cookie */
 	function setCookie(cname, cvalue, exdays) {
 	  const d = new Date();
@@ -866,6 +873,7 @@
 		AutoArtToggleMenuMobile();
 		AutoArtToggleSubMenuMobile();
 		AutoArtTabs();
+		AutoArtSelect2();
 		AutoArtCloseSection();
 		AutoArtGallerSlider();
 		AutoArtGallerCarousel();
