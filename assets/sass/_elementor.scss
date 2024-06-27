@@ -6,7 +6,11 @@
     .elementor-widget-container,
     .elementor-text-editor {
       > * {
+        margin-top: 16px;
         margin-bottom: 16px;
+        &:first-child {
+          margin-top: 0;
+        }
         &:last-child {
           margin-bottom: 0;
         }
@@ -2082,6 +2086,9 @@
 
 .bt-elwg-cars-search {
   &-inner {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
     .bt-field-type-select {
       &::before {
         content: none;
@@ -2117,40 +2124,41 @@
   }
 
   &--form {
+    padding: 30px;
+    border-radius: 10px;
+    @media (max-width: 640.98px) {
+      padding: 30px 15px;
+    }
     &-top-search {
       display: flex;
-      gap: 4px;
-      margin-top: 14px;
-
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
       &-inner {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         gap: 8px 24px;
-
         @media (max-width: 640.98px) {
           gap: 8px 18px;
         }
-
         .item-top-search {
+          position: relative;
           display: flex;
-
-          &:not(:first-child) {
-            position: relative;
-
-            &::before {
+          &:not(:last-child) {
+            &:after {
               content: "";
               display: inline-block;
-              width: 2px;
+              width: 1px;
               height: 75%;
+              background: #FFFFFF;
               position: absolute;
-              left: -12px;
+              right: -12px;
               top: 50%;
               transform: translateY(-50%);
-
               @media (max-width: 640.98px) {
                 width: 1px;
-                left: -9px;
+                right: -9px;
               }
             }
           }
@@ -2166,6 +2174,7 @@
       }
 
       p {
+        color: #FFFFFF;
         text-transform: uppercase;
         min-width: fit-content;
       }

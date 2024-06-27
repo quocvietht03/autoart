@@ -32,7 +32,7 @@ class Widget_CarsSearch extends Widget_Base {
 	public function get_script_depends() {
 		return ['select2-min', 'elementor-widgets' ];
 	}
-	
+
 	protected function register_content_section_controls() {
 		$this->start_controls_section(
 			'ss_cars_search_content',[
@@ -52,7 +52,7 @@ class Widget_CarsSearch extends Widget_Base {
 					'label'       => __( 'Title', 'autoart' ),
 					'type'        => Controls_Manager::TEXT,
 					'label_block' => true,
-					'default'     => 'Top Seach:',
+					'default'     => __( 'Top Seach:', 'autoart' ),
 				]
 			);
 
@@ -63,7 +63,7 @@ class Widget_CarsSearch extends Widget_Base {
 					'label'       => esc_html__( 'Text', 'autoart' ),
 					'type'        => Controls_Manager::TEXT,
 					'label_block' => true,
-					'default'     => 'This is text',
+					'default'     => esc_html__( 'This is text', 'autoart' ),
 				]
 			);
 
@@ -114,7 +114,7 @@ class Widget_CarsSearch extends Widget_Base {
 				'ss_cars_search_general_bcl',[
 					'label' => esc_html__( 'Background Color', 'autoart' ),
 					'type' => Controls_Manager::COLOR,
-					'default' => '#fff',
+					'default' => '',
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'background-color: {{VALUE}};',
 					],
@@ -131,13 +131,6 @@ class Widget_CarsSearch extends Widget_Base {
 							'min' => 0,
 							'max' => 100,
 						],
-					],
-					'default' => [
-						'top'    => 10,
-						'right'  => 10,
-						'bottom' => 10,
-						'left'   => 10,
-						'unit'   => 'px',
 					],
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -156,13 +149,6 @@ class Widget_CarsSearch extends Widget_Base {
 							'max' => 100,
 						],
 					],
-					'default' => [
-						'top'    => 10,
-						'right'  => 10,
-						'bottom' => 10,
-						'left'   => 10,
-						'unit'   => 'px',
-					],
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-cars-search-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 						'{{WRAPPER}} .bt-elwg-cars-search--form' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -171,7 +157,7 @@ class Widget_CarsSearch extends Widget_Base {
 			);
 
 			$this->add_group_control(
-				\Elementor\Group_Control_Box_Shadow::get_type(),[
+				Group_Control_Box_Shadow::get_type(),[
 					'name' => 'ss_cars_search_general_box_shadow',
 					'selector' => '{{WRAPPER}} .bt-elwg-cars-search-inner',
 				]
@@ -195,13 +181,6 @@ class Widget_CarsSearch extends Widget_Base {
 							'min' => 0,
 							'max' => 100,
 						],
-					],
-					'default' => [
-						'top'    => 30,
-						'right'  => 30,
-						'bottom' => 27,
-						'left'   => 30,
-						'unit'   => 'px',
 					],
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-cars-search--form' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -257,7 +236,7 @@ class Widget_CarsSearch extends Widget_Base {
 				'top_search_title_color',[
 					'label'     => esc_html__( 'Color', 'autoart' ),
 					'type'      => Controls_Manager::COLOR,
-					'default'   => '#fff',
+					'default'   => '',
 					'selectors' => [
 						'{{WRAPPER}} .bt-elwg-cars-search--form-top-search p' => 'color: {{VALUE}};',
 					],
