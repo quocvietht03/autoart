@@ -156,11 +156,22 @@ if ( ! function_exists( 'autoart_post_publish_render' ) ) {
 	}
 }
 
+if ( ! function_exists( 'autoart_post_categories_render' ) ) {
+	function autoart_post_categories_render() {
+    ob_start();
+    ?>
+      <div class="bt-post--categories"> 
+        <?php the_terms( get_the_ID(), 'category', '<div class="bt-post-cat">', ', ', '</div>' ); ?>
+      </div>
+    <?php
+    return ob_get_clean();
+  }
+}
+
 /* Post Short Meta */
 if ( ! function_exists( 'autoart_post_short_meta_render' ) ) {
 	function autoart_post_short_meta_render() {
-		ob_start();
-
+    ob_start();
 		?>
       <div class="bt-post--meta">
         <?php
@@ -169,7 +180,6 @@ if ( ! function_exists( 'autoart_post_short_meta_render' ) ) {
         ?>
       </div>
 		<?php
-
 		return ob_get_clean();
 	}
 }
@@ -351,6 +361,27 @@ if ( ! function_exists( 'autoart_author_icon_render' ) ) {
         <path d="M12.9997 15.167C17.1878 15.167 20.583 18.5622 20.583 22.7503H5.41634C5.41634 18.5622 8.81151 15.167 12.9997 15.167Z" stroke="#1FBECD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <h4 class="bt-post-author--name"> By <?php the_author(); ?>  </h4>
+    </div>
+  <?php }
+}
+
+/* Author with avatar */
+if ( ! function_exists( 'autoart_author_w_avatar' ) ) {
+	function autoart_author_w_avatar() {
+    $author_id = get_the_author_meta( 'ID' );  
+  ?>
+    <div class="bt-post-author-w-avatar"> 
+      <div class="bt-post-author-w-avatar--thumbnail">
+        <?php
+          if(!empty($avatar)) {
+            echo '<img src="' . esc_url($avatar['url']) . '" alt="' . esc_attr($avatar['title']) . '" />';
+          } else {
+            echo get_avatar( $author_id, 150 );
+          }
+        ?>
+      </div>
+
+      <h4 class="bt-post-author-w-avatar--name"> <span>By</span> <?php the_author(); ?> </h4>
     </div>
   <?php }
 }

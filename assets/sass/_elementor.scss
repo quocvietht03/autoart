@@ -953,50 +953,22 @@
     @extend .__bt-post-style-1;
 
     .bt-post-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-
-      .bt-post {
-        width: calc(50% - 15px);
-
-        @media(max-width: $break-sm) {
-          width: 100%;
-        }
-      }
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
   &--style-2 {
     @extend .__bt-post-style-2;
 
+
     .bt-post-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
-
-      .bt-post {
-        width: calc(50% - 15px);
-
-        &:first-child,
-        &:nth-child(4) {
-          width: 100%;
-
-          .bt-cover-image {
-            padding-bottom: 50%;
-          }
-        }
-
-        @media(max-width: $break-sm) {
-          width: 100%;
-
-          &:first-child,
-          &:nth-child(4) {
-            .bt-cover-image {
-              padding-bottom: 66.66%;
-            }
-          }
-        }
+      gap: 20px;
+      article.bt-post {
+        width: 100%;
       }
     }
   }
