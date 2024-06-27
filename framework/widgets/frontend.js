@@ -105,6 +105,21 @@
 
  	};
 
+	var CarsQuickCompareHandler = function( $scope, $ ) {
+		// console.log($scope);
+
+		$scope.find('.bt-quick-compare-btn').on('click', function(e) {
+			e.preventDefault();
+			$(this).parents('.bt-cars-quick-compare').addClass('bt-is-active');
+		});
+
+		$scope.find('.bt-close-popup').on('click', function(e) {
+			e.preventDefault();
+			$(this).parents('.bt-cars-quick-compare').removeClass('bt-is-active');
+		});
+
+ 	};
+
 	var CarsSearchHandler = function( $scope, $ ) {
 		const $formSearch = $scope.find('.bt-car-search-form');
 		if (!$formSearch.length) return;
@@ -119,26 +134,26 @@
 							'</svg>';
 			$('.select2-selection__arrow').html(dropdownIcon);
 		}
-	
+
 		$formSearch.on('submit', function(event) {
 			event.preventDefault();
-			
+
 			const car_make  = $(this).find('select[name="car_make"]').val();
 			const car_price = $(this).find('select[name="car_price"]').val();
 			const car_model = $(this).find('select[name="car_model"]').val();
 			const car_year  = $(this).find('select[name="car_year"]').val();
 			const car_condition = $(this).find("input[name='car_condition']:checked").val();
-			
+
 			let url = '/cars?';
 
 			if (car_make) {
 				url += 'car_make=' + car_make + '&';
 			}
-	
+
 			if (car_price) {
 				url += 'car_price=' + car_price + '&';
 			}
-	
+
 			if (car_model) {
 				url += 'car_model=' + car_model + '&';
 			}
@@ -150,9 +165,9 @@
 			if (car_condition) {
 				url += 'car_condition=' + car_condition + '&';
 			}
-	
+
 			url = url.slice(0, -1);
-	
+
 			window.location.href = url;
 		})
 	}
@@ -177,6 +192,7 @@
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-testimonial-slider.default', SliderSyncingHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-step-list.default', MoreStepsHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-pricing-tabs.default', TabsHandler );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-quick-compare.default', CarsQuickCompareHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search.default', CarsSearchHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search-style-1.default', CarsSearchHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/bt-cars-search-style-2.default', CarsSearchHandler );

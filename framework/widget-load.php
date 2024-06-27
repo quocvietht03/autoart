@@ -61,6 +61,7 @@ class ElementorWidgets {
 			'mini-wishlist',
 			'cars-compare',
 			'mini-compare',
+			'cars-quick-compare',
 			'cars-search',
 			'cars-search-style-1',
 			'cars-search-style-2',
@@ -190,6 +191,7 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\MiniWishlist\Widget_MiniWishlist());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsCompare\Widget_CarsCompare());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\MiniCompare\Widget_MiniCompare());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsQuickCompare\Widget_CarsQuickCompare());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsSearch\Widget_CarsSearch());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsSearchStyle1\Widget_CarsSearchStyle1());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsSearchStyle2\Widget_CarsSearchStyle2());
