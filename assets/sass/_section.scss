@@ -1,9 +1,9 @@
 .__bt-heading-style{
-    @media (min-width: 1200px) and (max-width: 1439.98px) { 
+    @media (min-width: 1200px) and (max-width: 1439.98px) {
         font-size: 55px;
     }
 
-    @media (min-width: 1025px) and (max-width: 1199.98px) { 
+    @media (min-width: 1025px) and (max-width: 1199.98px) {
         font-size: 45px;
     }
 }
@@ -65,9 +65,9 @@
                     }
                 }
             }
-            
+
             .elementor-tabs-content-wrapper{
-                background-color: transparent !important;         
+                background-color: transparent !important;
                 .elementor-tab-title{
                     @media(max-width: $break-sm) {
                         background-color: #fff;
@@ -107,7 +107,7 @@
         .elementor-widget-image{
             &.bt-hero-image{
                 > .elementor-widget-container{
-                    @media (min-width: 1025px) and (max-width: 1600.98px) { 
+                    @media (min-width: 1025px) and (max-width: 1600.98px) {
                         margin-right: 0;
                     }
                 }
@@ -147,7 +147,7 @@
                 @media(max-width: $break-tl) {
                     clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
                 }
-            }   
+            }
 
             .elementor-widget-heading{
                 h2.elementor-heading-title{
