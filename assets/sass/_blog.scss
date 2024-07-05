@@ -35,7 +35,7 @@
       width: 100%;
     }
   }
-} 
+}
 .bt-list-post {
   display: flex;
   flex-direction: column;
@@ -145,6 +145,12 @@
   @extend .__bt-pagination-style;
 }
 
+.single:not(.elementor-editor-active) {
+  .bt-post--content {
+    @extend .__bt-format-post-content;
+  }
+}
+
 .bt-main-post {
   .bt-post {
     &--featured {
@@ -222,7 +228,6 @@
       }
     }
     &--content {
-      @extend .__bt-format-post-content;
       &:after {
         content: "";
         display: block;
@@ -862,7 +867,7 @@
 
       @media(max-width: $break-md) {
         font-size: 20px;
-      } 
+      }
     }
 
     &-meta{
