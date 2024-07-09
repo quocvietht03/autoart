@@ -371,16 +371,16 @@
 .bt-elwg-page-breadcrumb {
   .bt-page-breadcrumb {
     position: relative;
-    font-size: 16px;
-    line-height: 150%;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
     color: #FFF;
     word-break: break-word;
     z-index: 3;
 
-    svg {
-      fill: $color-accent;
-      height: 16px;
-      margin-right: 4px;
+    span.bt-deli{
+      margin: 0 8px;
     }
   }
 }
