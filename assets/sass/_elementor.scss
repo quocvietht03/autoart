@@ -945,6 +945,15 @@
       @media(max-width: $break-sm) {
         grid-template-columns: repeat(1, 1fr);
       }
+
+      .bt-post{
+        min-height: 100%;
+        height: 100%;
+        &--inner{
+          min-height: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 
