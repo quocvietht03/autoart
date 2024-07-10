@@ -84,7 +84,7 @@ class Widget_PostGridStyle1 extends Widget_Base {
 				'name'       => 'thumbnail',
 				'label'      => __( 'Image Size', 'autoart' ),
 				'show_label' => true,
-				'default'    => 'medium',
+				'default'    => 'full',
 				'exclude'    => [ 'custom' ],
 			]
 		);
@@ -94,7 +94,7 @@ class Widget_PostGridStyle1 extends Widget_Base {
 				'label'   => __( 'Image Ratio', 'autoart' ),
 				'type'    => Controls_Manager::SLIDER,
 				'default' => [
-					'size' => 0.66,
+					'size' => 0.54,
 				],
 				'range' => [
 					'px' => [

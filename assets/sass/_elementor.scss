@@ -931,27 +931,34 @@
 }
 
 .bt-elwg-post-grid {
-  &--default {
-    @extend .__bt-post-style-default;
-
-    .bt-post-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      
-      @media(max-width: $break-md) {
-        grid-template-columns: repeat(2, 1fr);
+  &--default, &--style-1{
+    .bt-post{
+      min-height: 100%;
+      height: 100%;
+      &-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
       }
 
-      @media(max-width: $break-sm) {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      .bt-post{
+      &--inner{
         min-height: 100%;
         height: 100%;
-        &--inner{
-          min-height: 100%;
-          height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &--default {
+    @extend .__bt-post-style-default;
+    .bt-post{
+      &-grid{
+        @media(max-width: $break-md) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+  
+        @media(max-width: $break-sm) {
+          grid-template-columns: repeat(1, 1fr);
         }
       }
     }
@@ -959,18 +966,22 @@
 
   &--style-1 {
     @extend .__bt-post-style-1;
-
-    .bt-post-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(3, 1fr);
+    .bt-post{
+      &-grid{
+        gap: 20px;
+        @media(max-width: $break-tl) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+  
+        @media(max-width: $break-sm) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
     }
   }
 
   &--style-2 {
     @extend .__bt-post-style-2;
-
-
     .bt-post-grid {
       display: flex;
       flex-wrap: wrap;
