@@ -381,7 +381,7 @@ if ( ! function_exists( 'autoart_author_w_avatar' ) ) {
         ?>
       </div>
 
-      <h4 class="bt-post-author-w-avatar--name"> <span>By</span> <?php the_author(); ?> </h4>
+      <h4 class="bt-post-author-w-avatar--name"> <span><?php echo esc_html__('By ', 'autoart') ?></span> <?php the_author(); ?> </h4>
     </div>
   <?php }
 }

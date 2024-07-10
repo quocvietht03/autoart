@@ -91,7 +91,7 @@ class ElementorWidgets {
 			'list-image-text',
 			'card-image-text-grid',
 			'list-icon-text',
-      'list-faq',
+      		'list-faq',
 			'dealer-loop-item',
 		);
 

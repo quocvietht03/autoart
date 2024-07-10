@@ -1,20 +1,23 @@
 .widget {
   &:not(:last-child) {
-    margin-bottom: 52px;
+    margin-bottom: 50px;
   }
+
   .wp-block-group {
     margin: 0;
   }
+
   .wp-block-heading,
   .wg-title, .widget-title {
     @extend .__bt-block-heading-style;
   }
+
   ul, ol {
     list-style: none;
     margin: 0;
     padding: 0;
     li {
-      margin-bottom: 12px;
+      margin-bottom: 21px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -24,8 +27,29 @@
     margin: 12px 0 0;
   }
 
+  ul.wp-block-categories{
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    > li{
+      > a{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: start;
+        gap: 10px;
+        line-height: normal;
+        svg{
+          path{
+            fill: $color-accent;
+          }
+        }
+      }
+    }
+  }
+
   ul.wp-block-archives,
-  ul.wp-block-categories,
   ul.wp-block-page-list,
   &.widget_archive ul,
   &.widget_categories ul,
@@ -34,6 +58,8 @@
   &.widget_nav_menu ul,
   &.widget_recent_comments ul,
   &.widget_recent_entries ul {
+    background-color: #fff;
+    border-radius: 10px;
     li {
       position: relative;
       padding-left: 20px;
@@ -158,43 +184,59 @@
       color: $color-accent;
     }
   }
+
   .wp-block-search {
-    &__button {
-      padding: 15px;
+    &__label{
+      @extend .__bt-block-heading-style;
     }
-    &__icon-button {
-      .wp-block-search {
-        &__input {
-          padding-right: 65px;
-        }
+
+    &__inside-wrapper{
+      width: 100%;
+      position: relative;
+
+    }
+
+    &__input{
+      width: 100%;
+      padding: 21px 70px 22px 34px;
+      border:none;
+      border-radius: 10px;
+    }
+
+    &__input,  &__input::placeholder{
+      .elementor  & {
+        font-size: 16px !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        line-height: normal !important;
+        color: #999 !important;
+        font-family: $primary-font;
       }
-    }
-    &__button-outside {
-      
-    }
-    &__button-inside {
-      .wp-block-search {
-        &__inside-wrapper {
-          position: relative;
-          padding: 0;
-        }
-        &__input {
-          width: 100%;
-          padding-right: 100px;
-        }
-        &__button {
-          position: absolute;
-          right: 0;
-          top: 0;
-          height: 100%;
-          color: #FFF;
-          background: $color-accent;
-          margin: 0;
-          border-radius: 0 15px 15px 0;
-          svg {
-            fill: currentColor;
-          }
-        }
+    } 
+
+    &__button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 6px;
+      width: 56px;
+      height: 54px;
+      font-size: 0;
+      border-radius: 8px;
+      padding: 0;
+      &::before{
+        content: " ";
+        display: inline-block;
+        width: 22px;  
+        height: 22px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0LjQ3OTIgMTQuNDkzNUwxOS4yNSAxOS4yNU0xNi41IDkuNjI1QzE2LjUgMTMuNDIxOSAxMy40MjE5IDE2LjUgOS42MjUgMTYuNUM1LjgyODA0IDE2LjUgMi43NSAxMy40MjE5IDIuNzUgOS42MjVDMi43NSA1LjgyODA0IDUuODI4MDQgMi43NSA5LjYyNSAyLjc1QzEzLjQyMTkgMi43NSAxNi41IDUuODI4MDQgMTYuNSA5LjYyNVoiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=);
       }
     }
   }
