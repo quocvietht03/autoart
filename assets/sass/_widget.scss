@@ -1,6 +1,9 @@
 .widget {
   &:not(:last-child) {
     margin-bottom: 50px;
+    @media(max-width: $break-tl) {
+      margin-bottom: 40px;
+    }
   }
 
   .wp-block-group {
@@ -29,8 +32,13 @@
 
   ul.wp-block-categories{
     background-color: #fff;
-    padding: 40px;
+    padding: 40px 40px 42px 40px;
     border-radius: 10px;
+
+    @media(max-width: $break-xs) {
+      padding: 32px 15px;
+    }
+
     > li{
       > a{
         display: flex;
@@ -201,6 +209,10 @@
       padding: 21px 70px 22px 34px;
       border:none;
       border-radius: 10px;
+      
+      @media(max-width: $break-xs) {
+        padding-left: 15px;
+      }
     }
 
     &__input,  &__input::placeholder{

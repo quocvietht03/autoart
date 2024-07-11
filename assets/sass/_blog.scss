@@ -865,10 +865,12 @@
     }
 
     &--featured{
+      height: 100%;
       .bt-cover-image{
         padding-bottom: 0;
         min-height: 300px;
         border-radius: 20px 0px 0px 20px;
+        height: 100%;
         @media(max-width: $break-sm) {
           min-height: 280px;
           border-radius: 20px 20px 0 0;
@@ -923,6 +925,12 @@
         font-size: 20px;
       }
     }
+
+    // &--excerpt{
+    //   @media (min-width: 768px) {
+    //     margin-bottom: 20px;
+    //   }
+    // }
 
     &-meta{
       display: flex;

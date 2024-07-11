@@ -519,7 +519,7 @@
     left: 0;
     width: 5px;
     height: 100%;
-    background: var(--e-global-color-accent, #1FBECD);
+    background: $color-accent;
     max-height: 36px;
     transform: translateY(-50%);
   }
@@ -1156,6 +1156,12 @@
       bottom: 8px;
       right: 30px;
       z-index: 9;
+      @media(max-width: $break-xs) {
+        width: 7px;
+        height: 13px;
+        bottom: 7px;
+        right: 25px;
+      }
     }
 
     &::after{
@@ -1168,6 +1174,11 @@
       right: 13px;
       border-radius: 10px;
       z-index: 8;
+      @media(max-width: $break-xs) {
+        width: 40px;
+        height: 43px;
+        right: 10px;
+      }
     }
 
     input{
@@ -1178,9 +1189,19 @@
 
       &.tnp-email{
         height: 53px;
-        padding: 16px 67px 16px 58px;
+        // padding: 16px 67px 16px 58px;
+        padding-top: 16px;
+        padding-right: 67px;;
+        padding-bottom: 16px;
         max-width: 100%;
-        background-position: center left 26px;
+        @media (min-width: 768px) {
+          background-position: center left 26px;
+          padding-left: 58px;
+        }
+
+        @media(max-width: $break-xs) {
+          padding-right: 58px;
+        }
       }
 
       &.tnp-submit{
@@ -1196,6 +1217,32 @@
         right: 13px;
         background-color: transparent;
         z-index: 10;
+        @media(max-width: $break-xs) {
+          width: 40px;
+          height: 43px;
+          right: 10px;
+        }
+        
+        @media (max-width: 359.98px){
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+.elementor-element{
+  &.bt-colmn-sidebar{
+    @media (min-width: 1025px) and (max-width: $break-lg) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .bt-block-recent-posts{
+      .bt-post{
+        @media (min-width: 1025px) and (max-width: $break-lg) {
+          gap: 15px;
+        }
       }
     }
   }
