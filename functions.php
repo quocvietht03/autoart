@@ -101,7 +101,6 @@ require_once get_template_directory() . '/install/plugin-required.php';
 require_once get_template_directory() . '/install/import-pack/import-functions.php';
 
 /* CPT Load */
-require_once get_template_directory().'/framework/cpt-service.php';
 require_once get_template_directory().'/framework/cpt-car.php';
 require_once get_template_directory().'/framework/cpt-dealer.php';
 require_once get_template_directory().'/framework/cpt-testimonial.php';

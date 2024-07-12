@@ -3,7 +3,7 @@
 add_action( 'comment_form_logged_in_after', 'autoart_comment_rating_rating_field' );
 add_action( 'comment_form_after_fields', 'autoart_comment_rating_rating_field' );
 function autoart_comment_rating_rating_field () {
-	if(get_post_type() == 'service' || get_post_type() == 'car') {
+	if(get_post_type() == 'car') {
 		?>
 	  <div class="bt-form-rating">
 	    <label class="bt-form-rating__label"  for="rating"><?php echo esc_html__('Rating', 'autoart'); ?> <span class="required">*</span></label>

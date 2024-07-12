@@ -154,7 +154,7 @@ html :where(.editor-styles-wrapper) {
         fill: var(--e-global-color-accent, #1FBECD); }
 
 .select2-container, .elementor-editor-active .select2-container {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 150%;
   min-height: 56px; }
   .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow svg, .elementor-editor-active .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow svg {

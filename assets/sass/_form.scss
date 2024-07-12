@@ -1,9 +1,16 @@
 .gform_wrapper {
+  &.bt-get-price-form_wrapper {
+    .gform-field-label--type-inline {
+      --gf-local-color: #fff;
+      --gf-local-font-size: 18px;
+    }
+  }
   &.gform-theme--api,
   &.gform-theme--foundation {
     --gf-ctrl-choice-check-color: var(--e-global-color-accent, #1FBECD);
     --gf-form-gap-x: 12px;
     --gf-form-gap-y: 12px;
+    --gf-font-size-secondary: 18px;
   }
   .gform_heading {
     margin-bottom: 30px;
@@ -22,6 +29,7 @@
   .gform-body {
     input[type="checkbox"],
     input[type="radio"] {
+      margin-top: 2px;
       outline: none;
       box-shadow: none;
     }
