@@ -9079,9 +9079,9 @@ body {
 
 @media (min-width: 1450px) {
   .elementor-element.bt-col-container-left {
-    padding-left: calc((100% + 15px - var(--container-max-width)) / 2); }
+    padding-left: calc((100% + 5px - var(--container-max-width)) / 2); }
   .elementor-element.bt-col-container-right {
-    padding-right: calc((100% + 15px - var(--container-max-width)) / 2); } }
+    padding-right: calc((100% + 5px - var(--container-max-width)) / 2); } }
 
 @media (min-width: 768px) {
   .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-wrapper {
