@@ -50,11 +50,11 @@ if (!function_exists('autoart_enqueue_scripts')) {
 		wp_enqueue_script('select2', get_template_directory_uri().'/assets/libs/select2/select2.min.js', array('jquery'), '', true);
 		wp_enqueue_style('select2', get_template_directory_uri(). '/assets/libs/select2/select2.min.css',array(), false);
 		
-		/* Fonts */
+		/* Style */
 		wp_enqueue_style( 'autoart-fonts', autoart_fonts_url(), false );
-		wp_enqueue_style( 'autoart-main', get_template_directory_uri().'/assets/css/main.css',  array(), false );
+		wp_enqueue_style( 'autoart-main', get_template_directory_uri().'/assets/css/main.css',  array(), rand(9, 999999) );
 		wp_enqueue_style( 'autoart-style', get_template_directory_uri().'/style.css',  array(), false );
-		wp_enqueue_script( 'autoart-main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), '', true);
+		wp_enqueue_script( 'autoart-main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), rand(9, 999999), true);
 
 		/* Load custom style */
 		$custom_style = '';
