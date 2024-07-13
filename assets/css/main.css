@@ -695,7 +695,7 @@ img.alignright {
   padding: 8px 24px; }
 
 .bt-container {
-  max-width: var(--container-max-width, 1420px);
+  max-width: var(--container-max-width, 1450px);
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--container-default-padding-block-start, 15px);
@@ -9078,11 +9078,10 @@ body {
     font-size: 45px; } }
 
 @media (min-width: 1450px) {
-  .__bt-pd-container-full-width > .elementor-element:first-child, .elementor-element.bt-ss-buy-sell-car > .elementor-element:first-child > .elementor-element:first-child, .elementor-element.bt-find-your-dream-cars-home-3 > .elementor-element:first-child {
-    padding-left: calc((100% - var(--container-max-width)) / 2); } }
-@media (min-width: 1450px) {
-  .__bt-pd-container-full-width > .elementor-element:last-child, .elementor-element.bt-ss-buy-sell-car > .elementor-element:first-child > .elementor-element:last-child, .elementor-element.bt-find-your-dream-cars-home-3 > .elementor-element:last-child {
-    padding-right: calc((100% - var(--container-max-width)) / 2); } }
+  .elementor-element.bt-col-container-left {
+    padding-left: calc((100% + 15px - var(--container-max-width)) / 2); }
+  .elementor-element.bt-col-container-right {
+    padding-right: calc((100% + 15px - var(--container-max-width)) / 2); } }
 
 @media (min-width: 768px) {
   .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-wrapper {
