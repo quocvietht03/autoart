@@ -21,6 +21,7 @@
         min-height: 126px;
         min-width: 162px;
         border-radius: 10px;
+        box-sizing: border-box;
         @media (max-width: 359.98px) {
           min-width: 135px;
         }
@@ -62,7 +63,7 @@
       word-break: break-word;
       margin: 12px 0 0px 0;
 
-      .elementor  & {
+      .widget  & {
         font-size: 18px;
         line-height: 144.444%;
 
@@ -111,7 +112,7 @@
       margin-top: 13px;
       &--name{
         font-weight: 500;
-        .elementor & {
+        .widget & {
           @media(max-width: $break-xs) {
             font-size: 14px;
           }

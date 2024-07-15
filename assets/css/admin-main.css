@@ -1067,14 +1067,14 @@ html :where(.editor-styles-wrapper) {
       margin-bottom: 0; }
 .widget ul ul {
   margin: 12px 0 0; }
-.widget ul.wp-block-categories {
+.widget ul.wp-block-categories, .widget ul.wp-block-archives {
   background-color: #fff;
   padding: 40px 40px 42px 40px;
   border-radius: 10px; }
   @media (max-width: 519.98px) {
-    .widget ul.wp-block-categories {
+    .widget ul.wp-block-categories, .widget ul.wp-block-archives {
       padding: 32px 15px; } }
-  .widget ul.wp-block-categories > li > a {
+  .widget ul.wp-block-categories > li > a, .widget ul.wp-block-archives > li > a {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -1082,17 +1082,14 @@ html :where(.editor-styles-wrapper) {
     justify-content: start;
     gap: 10px;
     line-height: normal; }
-    .widget ul.wp-block-categories > li > a svg path {
+    .widget ul.wp-block-categories > li > a svg path, .widget ul.wp-block-archives > li > a svg path {
       fill: var(--e-global-color-accent, #1FBECD); }
-.widget ul.wp-block-archives,
 .widget ul.wp-block-page-list, .widget.widget_archive ul, .widget.widget_categories ul, .widget.widget_pages ul, .widget.widget_meta ul, .widget.widget_nav_menu ul, .widget.widget_recent_comments ul, .widget.widget_recent_entries ul {
   background-color: #fff;
   border-radius: 10px; }
-  .widget ul.wp-block-archives li,
   .widget ul.wp-block-page-list li, .widget.widget_archive ul li, .widget.widget_categories ul li, .widget.widget_pages ul li, .widget.widget_meta ul li, .widget.widget_nav_menu ul li, .widget.widget_recent_comments ul li, .widget.widget_recent_entries ul li {
     position: relative;
     padding-left: 20px; }
-    .widget ul.wp-block-archives li:before,
     .widget ul.wp-block-page-list li:before, .widget.widget_archive ul li:before, .widget.widget_categories ul li:before, .widget.widget_pages ul li:before, .widget.widget_meta ul li:before, .widget.widget_nav_menu ul li:before, .widget.widget_recent_comments ul li:before, .widget.widget_recent_entries ul li:before {
       content: "";
       position: absolute;
@@ -1275,7 +1272,8 @@ html :where(.editor-styles-wrapper) {
     .bt-block-recent-posts .bt-post--thumbnail .bt-cover-image {
       min-height: 126px;
       min-width: 162px;
-      border-radius: 10px; }
+      border-radius: 10px;
+      box-sizing: border-box; }
       @media (max-width: 359.98px) {
         .bt-block-recent-posts .bt-post--thumbnail .bt-cover-image {
           min-width: 135px; } }
@@ -1306,11 +1304,11 @@ html :where(.editor-styles-wrapper) {
     text-transform: capitalize;
     word-break: break-word;
     margin: 12px 0 0px 0; }
-    .elementor .bt-block-recent-posts .bt-post--title {
+    .widget .bt-block-recent-posts .bt-post--title {
       font-size: 18px;
       line-height: 144.444%; }
       @media (max-width: 519.98px) {
-        .elementor .bt-block-recent-posts .bt-post--title {
+        .widget .bt-block-recent-posts .bt-post--title {
           font-size: 16px; } }
     .bt-block-recent-posts .bt-post--title > a {
       color: inherit;
@@ -1343,7 +1341,7 @@ html :where(.editor-styles-wrapper) {
     .bt-block-recent-posts .bt-post-author-w-avatar--name {
       font-weight: 500; }
       @media (max-width: 519.98px) {
-        .elementor .bt-block-recent-posts .bt-post-author-w-avatar--name {
+        .widget .bt-block-recent-posts .bt-post-author-w-avatar--name {
           font-size: 14px; } }
 
 .bt-block-contact-information .bt-contact-information {
