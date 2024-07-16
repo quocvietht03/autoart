@@ -2764,7 +2764,8 @@ img.alignright {
       padding: 26px 63px 39px 180px;
       border-radius: 0 0 20px 20px;
       border: 1px solid #dadada;
-      border-top: none; }
+      border-top: none;
+      width: 100%; }
       .bt-comment-wrapper .bt-content .bt-text > *:first-child {
         margin-top: 0; }
       .bt-comment-wrapper .bt-content .bt-text > *:last-child {
@@ -3563,7 +3564,8 @@ body {
   margin-top: 70px;
   border-radius: 20px;
   flex-direction: column;
-  position: relative; }
+  position: relative;
+  min-height: 145px; }
   .bt-post-author--avatar {
     width: 90px;
     line-height: 0;
