@@ -9,7 +9,7 @@ if ( post_password_required() ) {
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h6 class="bt-heading-comment"><?php comments_number( esc_html__('Comment (0)', 'autoart'), esc_html__('Comment (1)', 'autoart'), esc_html__('Comments (%)', 'autoart') ); ?></h6>
+		<h6 class="bt-heading-comment"><span><?php echo esc_html__('Add A Review', 'autoart'); ?></span></h6>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav class="comment-navigation" role="navigation">

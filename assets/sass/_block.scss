@@ -4,7 +4,9 @@
     align-items: center;
     width: 100%;
     gap: 19px;
-
+    @media(max-width: $break-lg) and (min-width: $break-md){
+      gap: 10px;
+    }
     @media(max-width: $break-xs) {
       gap: 15px;
     }
@@ -22,7 +24,10 @@
         min-width: 162px;
         border-radius: 10px;
         box-sizing: border-box;
-        @media (max-width: 359.98px) {
+        @media(max-width: $break-lg) and (min-width: $break-md){
+          min-width: 135px;
+        }
+        @media (max-width: 390.98px) {
           min-width: 135px;
         }
       }
@@ -47,11 +52,14 @@
         background-color: $color-accent;
         border-radius: 5px;
         padding: 4px 11px 5px 15px;
+        @media(max-width: $break-lg) and (min-width: $break-md){
+          font-size: 14px;
+        }
         @media(max-width: $break-xs) {
           font-size: 14px;
         }
 
-        @media (max-width: 359.98px) {
+        @media (max-width: 390.98px) {
           font-size: 12px;
         }
       }
@@ -66,7 +74,9 @@
       .widget  & {
         font-size: 18px;
         line-height: 144.444%;
-
+        @media(max-width: $break-lg) and (min-width: $break-md){
+          font-size: 16px;
+        }
         @media(max-width: $break-xs) {
           font-size: 16px;
         }
@@ -89,7 +99,10 @@
       line-height: normal;
       color: $color-accent;
       gap: 11px;
-
+      @media(max-width: $break-lg) and (min-width: $break-md){
+        font-size: 14px;
+        gap: 8px;
+      }
       @media(max-width: $break-xs) {
         font-size: 14px;
       }
@@ -110,9 +123,25 @@
 
     &-author-w-avatar{
       margin-top: 13px;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      gap: 7px;
+      &--thumbnail{
+        display: flex;
+        align-items: center;
+        img{
+          height: 28px;
+          width: 28px;
+          border-radius: 50%;
+        }
+      }
       &--name{
         font-weight: 500;
         .widget & {
+          @media(max-width: $break-lg) and (min-width: $break-md){
+            font-size: 14px;
+          }
           @media(max-width: $break-xs) {
             font-size: 14px;
           }
@@ -127,7 +156,9 @@
     background: $color-accent;
     border-radius: 10px;
     padding: 36px 30px 36px 30px;
-
+    @media(max-width: $break-lg) and (min-width: $break-md){
+      padding: 32px 15px;
+    }
     @media(max-width: $break-xs) {
       padding: 32px 15px;
     }
@@ -135,6 +166,9 @@
     &-header{
       display: flex;
       gap: 20px;
+      @media(max-width: $break-lg) and (min-width: $break-md){
+        gap: 10px;
+      }
       @media(max-width: $break-xs) {
         gap: 10px;
       }

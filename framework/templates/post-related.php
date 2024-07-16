@@ -1,14 +1,21 @@
 <article <?php post_class('bt-post'); ?>>
   <div class="bt-post--inner">
-    <?php echo autoart_post_cover_featured_render('medium_large'); ?>
+    <?php echo autoart_post_cover_featured_render($args['image-size']); ?>
     <div class="bt-post--infor">
-      <?php echo autoart_post_publish_render(); ?>
-      <h3 class="bt-post--title">
-        <a href="<?php the_permalink(); ?>">
-          <?php the_title(); ?>
-        </a>
-      </h3>
-      <?php echo autoart_post_short_meta_render(); ?>
+      <div class="bt-post--auto-detailing"> 
+        <a href="<?php echo esc_url(get_permalink()) ?>"> <?php esc_html_e( 'Auto Detailing', 'autoart' ); ?> </a>
+      </div>
+
+      <?php echo autoart_post_title_render(); ?>
+
+      <div class="bt-post--info"> 
+        <?php 
+          echo autoart_post_publish_render();
+          echo autoart_author_icon_render();
+        ?>
+      </div>
+
+      <?php echo autoart_post_button_render('View Details') ?>
     </div>
   </div>
 </article>

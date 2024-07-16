@@ -24,13 +24,13 @@
       svg {
         width: 16px;
         height: auto;
-        fill: #CDCDCD;
+        fill: #cdcdcd;
       }
     }
     input:checked ~ label svg,
     input + label:hover ~ label svg,
     input + label:hover svg {
-      fill: #EFCF0A;
+      fill: #efcf0a;
     }
   }
 }
@@ -42,10 +42,10 @@
   line-height: 0;
   span {
     &.bt-filled svg {
-      fill: #EFCF0A;
+      fill: #efcf0a;
     }
     svg {
-      fill: #CDCDCD;
+      fill: #cdcdcd;
       width: 16px;
       height: auto;
     }
@@ -57,6 +57,39 @@
   .bt-heading-comment {
     @extend .__bt-block-heading-style;
     margin-bottom: 30px;
+    padding: 0;
+    z-index: 9;
+    text-transform: initial;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+    &::before {
+      z-index: 10;
+    }
+    &:after {
+      content: " ";
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background: #d9d9d9;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 8;
+    }
+    span {
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      color: inherit;
+      padding: 0 29px 0 18px;
+      position: relative;
+      z-index: 9;
+      background-color: #fff;
+      font-family: $primary-font;
+    }
   }
   .bt-comment-item {
     &.depth-5 {
@@ -68,12 +101,13 @@
       margin-left: 40px;
     }
   }
-  .trackback, .pingback {
+  .trackback,
+  .pingback {
     .bt-comment {
       padding: 30px;
-       .bt-avatar {
-         display: none;
-       }
+      .bt-avatar {
+        display: none;
+      }
     }
     .bt-content {
       width: 100%;
@@ -81,22 +115,18 @@
   }
   .bt-comment {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 20px;
-    background: #FFF;
-    margin-top: 30px;
-    padding: 30px 120px 30px 30px;
-    border: 1px solid #C7C7C7;
-    border-radius: 15px;
-    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
     .bt-avatar {
-      width: 64px;
+      width: 90px;
       line-height: 0;
+      position: absolute;
+      left: 38px;
+      border: 10px solid #ffff;
+      border-radius: 50%;
+      top: 20px;
       img {
         width: 100%;
-        border-radius: 15px;
+        border-radius: 50%;
       }
     }
   }
@@ -104,22 +134,45 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0 20px;
-    width: calc(100% - 84px);
+    .bt-meta {
+      background-color: $color-accent;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      padding: 18px 24px 18px 180px;
+      margin: 0;
+      border-radius: 20px 20px 0px 0px;
+      gap: 15px;
+      justify-content: space-between;
+    }
+    .bt-infor {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 54px;
+    }
     .bt-name {
       font-size: 22px;
       line-height: 24px;
       margin: 0;
+      color: #fff;
+      font-weight: 700;
+      text-transform: capitalize;
     }
     .bt-date {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 24px;
-      color: $color-accent;
+      color: #fff;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
     }
     .bt-text {
-      width: 100%;
-      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      padding: 26px 63px 39px 180px;
+      border-radius: 0 0 20px 20px;
+      border: 1px solid #dadada;
+      border-top: none;
       > *:first-child {
         margin-top: 0;
       }
@@ -128,28 +181,20 @@
       }
     }
     .comment-reply-link {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 104px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      color: #fff;
       font-family: $primary-font;
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
-      line-height: 100%;
-      text-decoration-line: underline;
+      line-height: normal;
       text-transform: uppercase;
-      color: $color-accent;
-      background: #F5F5F5;
-      border-radius: 0px 15px 15px 0px;
+      border-radius: 8px;
+      background: #111;
+      padding: 9px 26px;
     }
   }
   .comment-respond {
-    background: #F5F5F5;
+    background: #f5f5f5;
     margin-top: 52px;
     padding: 50px 45px;
     border-radius: 15px;
@@ -178,10 +223,12 @@
           text-decoration: underline;
         }
       }
-      .bt-form-author, .bt-form-email {
+      .bt-form-author,
+      .bt-form-email {
         width: calc(50% - 10px);
       }
-      .bt-form-message, .form-submit {
+      .bt-form-message,
+      .form-submit {
         width: 100%;
       }
       .form-submit {
@@ -195,23 +242,24 @@
         color: $color-primary;
         margin-bottom: 12px;
       }
-      input[type="text"], textarea {
+      input[type="text"],
+      textarea {
         width: 100%;
         max-width: calc(100% - 48px);
         min-height: unset;
       }
       input[type="submit"] {
-        font-family: $primary-font; 
+        font-family: $primary-font;
         text-transform: uppercase;
       }
     }
   }
-  @media(max-width: $break-lg) {
+  @media (max-width: $break-lg) {
     .bt-comment-item .bt-comment-item {
       margin-left: 30px;
     }
   }
-  @media(max-width: $break-sm) {
+  @media (max-width: $break-sm) {
     .bt-comment {
       padding: 30px 90px 30px 30px;
     }
@@ -228,11 +276,12 @@
       padding: 40px 30px;
     }
   }
-  @media(max-width: $break-xs) {
+  @media (max-width: $break-xs) {
     .bt-comment-item .bt-comment-item {
       margin-left: 30px;
     }
-    .trackback, .pingback {
+    .trackback,
+    .pingback {
       .bt-comment {
         padding: 30px 15px;
       }
@@ -264,7 +313,8 @@
     .comment-respond {
       padding: 30px 15px;
       .comment-form {
-        .bt-form-author, .bt-form-email {
+        .bt-form-author,
+        .bt-form-email {
           width: 100%;
         }
       }

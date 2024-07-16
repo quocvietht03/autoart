@@ -4,9 +4,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 80px 0;
+  padding: 70px 0;
   &.bt-has-distance {
-    padding-top: 180px;
+    padding-top: 122px;
+    margin-top: -64px;
   }
   &--overlay {
     position: absolute;
@@ -16,6 +17,11 @@
     height: 100%;
     z-index: 1;
   }
+  .bt-container{
+    display: flex;
+    gap: 25px;
+    align-items: flex-end;
+  }
   .bt-page-title {
     position: relative;
     font-size: 50px;
@@ -23,6 +29,11 @@
     word-break: break-word;
     margin: 0;
     z-index: 3;
+    overflow: hidden;
+    width: 550px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
   .bt-page-breadcrumb {
     position: relative;
@@ -30,8 +41,10 @@
     line-height: 150%;
     color: #FFF;
     word-break: break-word;
-    margin-top: 12px;
+    margin-bottom: 12px;
     z-index: 3;
+    display: flex;
+    gap: 8px;
     svg {
       fill: $color-accent;
       height: 16px;

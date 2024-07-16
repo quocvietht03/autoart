@@ -15,16 +15,6 @@ $recent_posts = wp_get_recent_posts(array(
 	<?php foreach( $recent_posts as $post_item ) { 
 		$author_id = get_the_author_meta( 'ID', $post_item['post_author'] ); 	
 	?>
-		<?php 
-			// echo "<pre>";
-			// echo print_r($post_item);
-			// echo "</pre>";	
-
-			// $a = get_the_terms( $post_item['ID'], 'category');
-			// echo "<pre>";
-			// echo print_r($a);
-			// echo "</pre>";	
-		?>
 		<div class="bt-post">		
 			<div class="bt-post--thumbnail">
 				<div class="bt-cover-image">
