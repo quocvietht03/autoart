@@ -535,9 +535,10 @@ if (!function_exists('autoart_related_posts')) {
     if ($list_posts->have_posts()) {
     ?>
       <div class="bt-related-posts">
-        <h2 class="bt-related-posts--heading">
-          <?php esc_html_e('Related Posts', 'autoart'); ?>
-        </h2>
+        <div class="bt-related-posts--heading">
+          <div class="bt-sub-text">Trusted Car Dealer Service</div>
+          <h2 class="bt-main-text">Related News & <span>Articals</span></h2>
+        </div>
         <div class="bt-related-posts--list bt-image-effect">
           <?php
           while ($list_posts->have_posts()) : $list_posts->the_post();
@@ -569,6 +570,7 @@ function autoart_comment_fields_custom_order($fields)
   $fields['author'] = $author_field;
   $fields['email'] = $email_field;
   $fields['comment'] = $comment_field;
+  $fields['cookies'] = $cookies_field;
   // done ordering, now return the fields:
   return $fields;
 }
@@ -591,22 +593,22 @@ if (!function_exists('autoart_custom_comment')) {
     ?>
     <<?php echo esc_html($tag); ?> <?php comment_class(empty($args['has_children']) ? 'bt-comment-item clearfix' : 'bt-comment-item parent clearfix') ?> id="comment-<?php comment_ID() ?>">
       <div class="bt-comment">
-        <div class="bt-avatar">
-          <?php
-          if (function_exists('get_field')) {
-            $avatar = get_field('avatar', 'user_' . $comment->user_id);
-          } else {
-            $avatar = array();
-          }
-          if (!empty($avatar)) {
-            echo '<img src="' . esc_url($avatar['url']) . '" alt="' . esc_attr($avatar['title']) . '" />';
-          } else {
-            if ($args['avatar_size'] != 0) echo get_avatar($comment, $args['avatar_size']);
-          }
-          ?>
-        </div>
         <div class="bt-content">
           <div class="bt-meta">
+            <div class="bt-avatar">
+              <?php
+              if (function_exists('get_field')) {
+                $avatar = get_field('avatar', 'user_' . $comment->user_id);
+              } else {
+                $avatar = array();
+              }
+              if (!empty($avatar)) {
+                echo '<img src="' . esc_url($avatar['url']) . '" alt="' . esc_attr($avatar['title']) . '" />';
+              } else {
+                if ($args['avatar_size'] != 0) echo get_avatar($comment, $args['avatar_size']);
+              }
+              ?>
+            </div>
             <div class="bt-infor">
               <h5 class="bt-name">
                 <?php echo get_comment_author(get_comment_ID()); ?>

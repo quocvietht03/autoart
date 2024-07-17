@@ -88,7 +88,7 @@
       font-size: 30px;
       font-style: normal;
       font-weight: 700;
-      line-height: 33px;
+      line-height: 130%;
       a {
         display: inline-block;
       }
@@ -109,6 +109,7 @@
         line-height: 150%;
         color: $color-text;
         display: flex;
+        font-weight: 500;
         .bt-post-author-w-avatar--name {
           font-weight: 500;
         }
@@ -135,18 +136,14 @@
       &.sticky {
         padding: 25px 15px;
       }
-      &--publish {
-        font-size: 14px;
-        svg {
-          width: 20px;
-          height: auto;
-        }
-      }
-      &--title {
-        font-size: 22px;
+      &--meta{
+        gap: 12px 15px;
       }
       &--meta .bt-meta {
         font-size: 14px;
+        .bt-post-author-w-avatar--name {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -194,6 +191,14 @@
         background-color: #fff;
         font-family: $primary-font;
       }
+      @media (max-width: $break-xs) {
+        font-size: 22px;
+        line-height: 130%;
+        text-align: left;
+        code{
+          display: inline-block;
+        }
+      }
     }
   }
 }
@@ -239,7 +244,7 @@
       font-size: 30px;
       font-style: normal;
       font-weight: 700;
-      line-height: 33px;
+      line-height: 130%;
       a {
         display: inline-block;
       }
@@ -249,7 +254,7 @@
       margin: 0 0 30px;
       display: flex;
       flex-wrap: wrap;
-      gap: 8px 32px;
+      gap: 12px 32px;
       border-radius: 10px;
       border: 1px solid #e1e1e1;
       padding: 17px 33px 17px 23px;
@@ -260,6 +265,7 @@
         line-height: 150%;
         color: $color-text;
         display: flex;
+        font-weight: 500;
         .bt-post-author-w-avatar--name {
           font-weight: 500;
         }
@@ -297,25 +303,24 @@
 
   @media (max-width: $break-xs) {
     .bt-post {
-      &--publish {
-        font-size: 14px;
-        svg {
-          width: 20px;
-          height: auto;
-        }
-      }
       &--title {
         font-size: 22px;
       }
+      &--meta{
+        gap: 12px 15px;
+      }
       &--meta .bt-meta {
         font-size: 14px;
+        .bt-post-author-w-avatar--name {
+          font-size: 14px;
+        }
       }
     }
   }
 }
 .bt-infor-tags-share {
   display: flex;
-  gap: 20px;
+  gap: 10px 20px;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 60px;
@@ -323,6 +328,9 @@
   border-radius: 10px;
   border: 1px solid #e1e1e1;
   align-items: center;
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  }
 }
 .bt-post-tags {
   display: flex;
@@ -462,6 +470,9 @@
   flex-direction: column;
   position: relative;
   min-height: 145px;
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  }
   &--avatar {
     width: 90px;
     line-height: 0;
@@ -474,6 +485,12 @@
       width: 100%;
       border-radius: 50%;
     }
+    @media (max-width: 600px) {
+      width: 70px;
+      left: 25px;
+      border: 5px solid #ffff;
+      top: 13px;
+    }
   }
   &--info {
     width: 100%;
@@ -485,7 +502,10 @@
     box-sizing: border-box;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 5px 15px;
+    @media (max-width: 600px) {
+      padding-left: 135px;
+    }
   }
   &--name {
     display: flex;
@@ -514,6 +534,9 @@
     border-radius: 0 0 20px 20px;
     border: 1px solid #dadada;
     border-top: none;
+    @media (max-width: 600px) {
+      padding: 30px 20px 30px 20px;
+    }
   }
   &--socials {
     @extend .__bt-socials-style;
@@ -530,13 +553,6 @@
     }
   }
   @media (max-width: $break-xs) {
-    padding: 30px 15px;
-    &--avatar {
-      width: 80px;
-    }
-    &--info {
-      width: calc(100% - 100px);
-    }
     &--name {
       font-size: 20px;
     }
@@ -631,6 +647,8 @@
       padding: 20px 0;
       align-items: center;
       margin-bottom: 17px;
+      flex-wrap: wrap;
+      row-gap: 10px;
     }
 
     &--publish,
@@ -650,13 +668,14 @@
       align-items: center;
       gap: 8px;
       padding-right: 22px;
-
+      margin-right: 17px;
+      border-right: 1px solid #d9d9d9;
       @media (max-width: $break-lg) {
         padding-right: 17px;
       }
-
       @media (max-width: $break-xs) {
         padding-right: 10px;
+        margin-right: 10px;
       }
 
       span {
@@ -674,18 +693,13 @@
     }
 
     &-author-icon {
-      padding: 0 0 0 17px;
       margin: 0;
       border: none;
       border-radius: 0;
       box-shadow: none;
       gap: 4px;
       align-items: center;
-      border-left: 1px solid #d9d9d9;
       display: flex;
-      @media (max-width: $break-xs) {
-        padding-left: 10px;
-      }
 
       svg {
         path {
@@ -700,6 +714,7 @@
         display: inline-block;
         line-height: normal;
         text-transform: capitalize;
+        margin: 0;
       }
     }
 
@@ -752,6 +767,7 @@
     &--warp {
       background: #fff;
       padding: 34px 30px 95px 30px;
+      border-radius: 0 0 20px 20px;
       @media (max-width: $break-lg) {
         padding-left: 15px;
         padding-right: 15px;
@@ -1076,7 +1092,8 @@
 .bt-related-posts {
   margin-top: 52px;
   &--heading {
-    @extend .__bt-block-heading-style;
+    @extend .__bt-section-heading-style;
+    text-align: left;
     margin-bottom: 30px;
   }
   &--list {
@@ -1086,6 +1103,9 @@
     @extend .__bt-post-style-default;
     .bt-post {
       width: calc(33.33% - 13.33px);
+      @media (max-width: $break-md) {
+        width: calc(50% - 10px);
+      }
       @media (max-width: $break-sm) {
         width: 100%;
       }

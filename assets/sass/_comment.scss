@@ -90,13 +90,14 @@
       background-color: #fff;
       font-family: $primary-font;
     }
-  }
-  .bt-comment-item {
-    &.depth-5 {
-      .bt-comment {
-        padding: 30px;
+    @media (max-width: $break-xs) {
+      text-align: left;
+      code{
+        display: inline-block;
       }
     }
+  }
+  .bt-comment-item {
     .bt-comment-item {
       margin-left: 40px;
     }
@@ -104,7 +105,6 @@
   .trackback,
   .pingback {
     .bt-comment {
-      padding: 30px;
       .bt-avatar {
         display: none;
       }
@@ -144,6 +144,8 @@
       border-radius: 20px 20px 0px 0px;
       gap: 15px;
       justify-content: space-between;
+      box-sizing: border-box;
+      flex-wrap: wrap;
     }
     .bt-infor {
       display: flex;
@@ -174,12 +176,16 @@
       border: 1px solid #dadada;
       border-top: none;
       width: 100%;
+      box-sizing: border-box;
       > *:first-child {
         margin-top: 0;
       }
       > *:last-child {
         margin-bottom: 0;
       }
+    }
+    .comment-awaiting-moderation {
+      color: #fff;
     }
     .comment-reply-link {
       color: #fff;
@@ -195,18 +201,25 @@
     }
   }
   .comment-respond {
-    background: #f5f5f5;
-    margin-top: 52px;
-    padding: 50px 45px;
-    border-radius: 15px;
+    margin-top: 50px;
+    border-radius: 20px;
     .comment-reply-title {
-      @extend .__bt-block-heading-style;
-      position: relative;
-      margin-bottom: 30px;
-      padding-right: 140px;
+      border-radius: 20px 20px 0px 0px;
+      background: #1fbecd;
+      padding: 25px 40px;
+      color: #fff;
+      font-size: 26px;
+      letter-spacing: 0.2px;
+      text-transform: initial;
+      line-height: normal;
+      font-weight: 700;
+      margin: 0;
       a {
         text-decoration: underline;
         text-underline-offset: 6px;
+        &:hover {
+          color: #fff;
+        }
       }
       small {
         position: absolute;
@@ -217,7 +230,11 @@
     .comment-form {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 23px;
+      padding: 39px 40px 46px 39px;
+      border-radius: 0 0 20px 20px;
+      border: 1px solid #dadada;
+      border-top: none;
       .bt-logged-in-as {
         width: 100%;
         a {
@@ -226,7 +243,53 @@
       }
       .bt-form-author,
       .bt-form-email {
-        width: calc(50% - 10px);
+        width: calc(50% - 12px);
+      }
+      .bt-form-cookies-consent {
+        display: flex;
+        align-items: baseline;
+        gap: 11px;
+        label {
+          margin: 0;
+          color: $color-text;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px;
+          @media (max-width: $break-xs) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+        input {
+          width: 22px;
+          height: 22px;
+          appearance: none;
+          -webkit-appearance: none;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          border: 1px solid #dadada;
+          border-radius: 5px;
+          position: relative;
+          top: 3px;
+          @media (max-width: $break-xs) {
+            top: 6px;
+          }
+          &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            transform: scale(0);
+            background-color: $color-accent;
+            clip-path: polygon(28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%);
+          }
+          &:checked {
+            &::before {
+              transform: scale(1);
+            }
+          }
+        }
       }
       .bt-form-message,
       .form-submit {
@@ -241,17 +304,19 @@
         font-weight: 700;
         line-height: 100%;
         color: $color-primary;
-        margin-bottom: 12px;
+        margin-bottom: 14px;
       }
       input[type="text"],
       textarea {
         width: 100%;
         max-width: calc(100% - 48px);
         min-height: unset;
+        display: block;
       }
       input[type="submit"] {
         font-family: $primary-font;
         text-transform: uppercase;
+        padding: 11px 46px;
       }
     }
   }
@@ -261,59 +326,56 @@
     }
   }
   @media (max-width: $break-sm) {
-    .bt-comment {
-      padding: 30px 90px 30px 30px;
-    }
     .bt-content {
       .bt-text {
         font-size: 16px;
       }
-      .comment-reply-link {
-        width: 84px;
-        font-size: 14px;
-      }
-    }
-    .comment-respond {
-      padding: 40px 30px;
     }
   }
   @media (max-width: $break-xs) {
     .bt-comment-item .bt-comment-item {
       margin-left: 30px;
     }
-    .trackback,
-    .pingback {
-      .bt-comment {
-        padding: 30px 15px;
-      }
-    }
     .bt-comment {
-      padding: 30px 15px 65px;
       .bt-avatar {
-        width: 42px;
-      }
-      .bt-content {
-        width: 100%;
+        width: 45px;
+        left: inherit;
+        border: 2px solid #ffff;
+        top: inherit;
+        position: relative;
       }
     }
     .bt-content {
+      .bt-infor {
+        gap: 10px;
+        align-items: baseline;
+      }
       .bt-name {
         font-size: 18px;
       }
       .bt-date {
         font-size: 14px;
       }
+      .bt-meta {
+        padding-left: 20px;
+        gap: 12px;
+        justify-content: normal;
+      }
+      .bt-text {
+        padding: 30px 20px;
+      }
       .comment-reply-link {
-        top: auto;
-        bottom: 0;
-        width: 100%;
-        height: 50px;
-        border-radius: 0 0 15px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        padding: 6px 20px;
       }
     }
     .comment-respond {
-      padding: 30px 15px;
+      .comment-reply-title {
+        padding: 20px;
+      }
       .comment-form {
+        padding: 30px 20px;
         .bt-form-author,
         .bt-form-email {
           width: 100%;
