@@ -473,7 +473,7 @@
         height: 100%;
         left: 50%;
         top: 50%;
-        background-image: url("../images/bg-heading.svg");
+        background-image: url("../images/brush-style2.svg");
         background-size: 100% 100%;
         transform: translate(-50%, -50%);
         z-index: -1;
@@ -577,6 +577,11 @@
     border-radius: 10px;
     &:not(.current, .dots):hover {
       color: $color-accent;
+      svg {
+        path {
+          fill: $color-accent;
+        }
+      }
     }
     &.current {
       width: 42px;

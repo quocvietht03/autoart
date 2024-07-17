@@ -971,7 +971,7 @@ img.alignright {
         height: 100%;
         left: 50%;
         top: 50%;
-        background-image: url("../images/bg-heading.svg");
+        background-image: url("../images/brush-style2.svg");
         background-size: 100% 100%;
         transform: translate(-50%, -50%);
         z-index: -1; }
@@ -1055,6 +1055,8 @@ img.alignright {
     border-radius: 10px; }
     .__bt-pagination-style .page-numbers:not(.current, .dots):hover, .bt-pagination .page-numbers:not(.current, .dots):hover, .woocommerce nav.woocommerce-pagination .page-numbers:not(.current, .dots):hover, .elementor-pagination .page-numbers:not(.current, .dots):hover {
       color: var(--e-global-color-accent, #1FBECD); }
+      .__bt-pagination-style .page-numbers:not(.current, .dots):hover svg path, .bt-pagination .page-numbers:not(.current, .dots):hover svg path, .woocommerce nav.woocommerce-pagination .page-numbers:not(.current, .dots):hover svg path, .elementor-pagination .page-numbers:not(.current, .dots):hover svg path {
+        fill: var(--e-global-color-accent, #1FBECD); }
     .__bt-pagination-style .page-numbers.current, .bt-pagination .page-numbers.current, .woocommerce nav.woocommerce-pagination .page-numbers.current, .elementor-pagination .page-numbers.current {
       width: 42px;
       color: #ffffff;

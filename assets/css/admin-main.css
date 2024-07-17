@@ -472,7 +472,7 @@ html :where(.editor-styles-wrapper) {
         height: 100%;
         left: 50%;
         top: 50%;
-        background-image: url("../images/bg-heading.svg");
+        background-image: url("../images/brush-style2.svg");
         background-size: 100% 100%;
         transform: translate(-50%, -50%);
         z-index: -1; }
@@ -556,6 +556,8 @@ html :where(.editor-styles-wrapper) {
     border-radius: 10px; }
     .__bt-pagination-style .page-numbers:not(.current, .dots):hover {
       color: var(--e-global-color-accent, #1FBECD); }
+      .__bt-pagination-style .page-numbers:not(.current, .dots):hover svg path {
+        fill: var(--e-global-color-accent, #1FBECD); }
     .__bt-pagination-style .page-numbers.current {
       width: 42px;
       color: #ffffff;
