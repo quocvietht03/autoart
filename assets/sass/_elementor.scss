@@ -1155,11 +1155,7 @@
   }
 }
 
-.bt-elwg-team-loop-item {
-  &--default {
-    @extend .__bt-team-style-default;
-  }
-}
+
 
 .bt-elwg-testimonial-slider {
   &--default {
@@ -2666,109 +2662,9 @@
     }
   }
 }
-
 // item dealers
 .bt-elwg-dealer-loop-item {
   &--default {
-    .bt-post {
-      &--inner {
-        position: relative;
-        overflow: hidden;
-
-        &:hover {
-          .bt-post {
-            &--avatar {
-              .bt-cover-image {
-                img {
-                  transform: scale(1.1);
-                }
-              }
-            }
-          }
-        }
-      }
-
-      &--avatar {
-        .bt-cover-image {
-          padding: 0;
-          min-height: 396px;
-          border-radius: 20px;
-
-          @media(max-width: $break-xs) {
-            min-height: 330px;
-          }
-
-          img {
-            transform: scale(1);
-            transition: all 3s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
-          }
-        }
-      }
-
-      &--content {
-        border: 1px solid #DADADA;
-        margin: -70px 20px 0 20px;
-        z-index: 9;
-        position: relative;
-        background: #fff;
-        border-radius: 20px;
-
-      }
-
-      &--titlejob {
-        padding: 20px 30px;
-
-        span {
-          font-size: 17px;
-          font-weight: 500;
-          line-height: 24px;
-          color: #767676;
-        }
-
-        @media(max-width: $break-xs) {
-          padding: 15px;
-        }
-      }
-
-      &--title {
-        margin: 0;
-
-        a {
-          font-size: 24px;
-          font-weight: 700;
-          line-height: 24px;
-          color: $color-primary;
-          display: inline-block;
-
-          &:hover {
-            color: $color-accent;
-          }
-        }
-
-      }
-
-      &--info {
-        background: #F1F1F1;
-        padding: 20px 30px;
-        border-radius: 0 0 20px 20px;
-
-        .bt-meta-item {
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 17.76px;
-          color: $color-accent;
-          display: flex;
-          grid-gap: 12px;
-
-          &:not(:last-child) {
-            margin-bottom: 12px;
-          }
-
-          svg {
-            fill: $color-accent;
-          }
-        }
-      }
-    }
+    @extend .__bt-dealer-style-default;
   }
 }

@@ -74,7 +74,6 @@ class ElementorWidgets {
 			'podcast-grid-style-2',
 			'podcast-loop-item',
 			'podcast-loop-item-style-1',
-			'team-loop-item',
 			'testimonial-slider',
 			'testimonial-loop-item',
 			'client-loop-item',
@@ -207,7 +206,6 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PodcastGridStyle2\Widget_PodcastGridStyle2());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PodcastLoopItem\Widget_PodcastLoopItem());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PodcastLoopItemStyle1\Widget_PodcastLoopItemStyle1());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\TeamLoopItem\Widget_TeamLoopItem());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\TestimonialSlider\Widget_TestimonialSlider());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\TestimonialLoopItem\Widget_TestimonialLoopItem());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ClientLoopItem\Widget_ClientLoopItem());

@@ -1,6 +1,6 @@
 <?php
 /*
- * Single Team
+ * Single Dealer
  */
 
 get_header();

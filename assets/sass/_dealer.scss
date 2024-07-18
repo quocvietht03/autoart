@@ -1,47 +1,95 @@
-.__bt-team-style-default {
+.__bt-dealer-style-default {
   .bt-post {
     &--inner {
       position: relative;
       overflow: hidden;
-      background: #FFF;
-      border: 1px solid #DBDBDB;
-      border-radius: 15px;
-      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
-    }
-    &--thumbnail {
-      line-height: 0;
-    }
-    &--infor {
-      text-align: center;
-      padding: 30px 15px;
-    }
-    &--title {
-      font-size: 22px;
-      margin: 0 0 4px;
-    }
-    &--job {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-    &--prf-link {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 150%;
-      color: $color-accent;
-      margin-bottom: 20px;
-      a {
-        text-decoration: underline;
+      &:hover {
+        .bt-post {
+          &--avatar {
+            .bt-cover-image {
+              img {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
       }
     }
-    &--social {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      a {
-        line-height: 0;
+    &--avatar {
+      .bt-cover-image {
+        padding: 0;
+        min-height: 396px;
+        border-radius: 20px;
+
+        @media (max-width: $break-xs) {
+          min-height: 330px;
+        }
+
         img {
-          width: auto;
-          height: 20px;
+          transform: scale(1);
+          transition: all 3s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
+        }
+      }
+    }
+
+    &--content {
+      margin: -70px 20px 0 20px;
+      z-index: 9;
+      position: relative;
+      border-radius: 20px;
+    }
+    &--titlejob {
+      padding: 29px 30px 17px 30px;
+      border: 1px solid #d4d4d4;
+      background: #fff;
+      border-radius: 20px 20px 0 0;
+      border-bottom: none;
+      span {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #767676;
+      }
+
+      @media (max-width: $break-xs) {
+        padding: 15px;
+      }
+    }
+
+    &--title {
+      margin: 0;
+      a {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        color: $color-primary;
+        display: inline-block;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+
+    &--info {
+      background: #f1f1f1;
+      padding: 23px 30px 22px;
+      border-radius: 0 0 20px 20px;
+
+      .bt-meta-item {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 17.76px;
+        color: $color-accent;
+        display: flex;
+        grid-gap: 12px;
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+
+        svg {
+          fill: $color-accent;
         }
       }
     }
@@ -76,17 +124,17 @@
           &--meta {
             display: flex;
             flex-wrap: wrap;
-            background: #FFFFFF;
+            background: #ffffff;
             overflow: hidden;
             margin-bottom: 30px;
-            border: 1px solid #DADADA;
+            border: 1px solid #dadada;
             border-radius: 10px;
           }
           &--meta-col {
             width: 33.33%;
             &:not(:last-child) {
               width: calc(33.33% - 1px);
-              border-right: 1px solid #DADADA;
+              border-right: 1px solid #dadada;
             }
           }
           &--meta-item {
@@ -147,7 +195,7 @@
           }
         }
 
-        @media(max-width: $break-sm) {
+        @media (max-width: $break-sm) {
           &--list {
             .bt-post {
               width: 100%;
@@ -165,10 +213,10 @@
         flex-direction: column;
         gap: 30px;
         .bt-sidebar-block {
-          background: #FFFFFF;
+          background: #ffffff;
           padding: 30px;
           overflow: hidden;
-          border: 1px solid #DADADA;
+          border: 1px solid #dadada;
           border-radius: 20px;
           .bt-block-heading {
             font-size: 30px;
@@ -176,28 +224,28 @@
             margin: 0 0 10px;
           }
           &.bt-contact-block {
-            color: #FFFFFF;
+            color: #ffffff;
             background: $color-accent;
             .gform_wrapper {
               .gform_heading {
                 .gform_title,
                 .gform_description {
-                  color: #FFFFFF;
+                  color: #ffffff;
                 }
               }
               .gform-body {
-                input:not([type="checkbox"],[type="radio"]),
+                input:not([type="checkbox"], [type="radio"]),
                 select,
                 textarea {
-                  color: #FFFFFF;
+                  color: #ffffff;
                   background: transparent;
-                  border-color: #FFFFFF;
+                  border-color: #ffffff;
                 }
               }
               .gform_footer {
                 input[type="submit"] {
                   color: $color-secondary !important;
-                  background: #FFFFFF !important;
+                  background: #ffffff !important;
                 }
               }
             }
@@ -230,27 +278,23 @@
       }
     }
 
-    @media(max-width: $break-lg) {
-
+    @media (max-width: $break-lg) {
     }
 
-    @media(max-width: $break-md) {
+    @media (max-width: $break-md) {
       &--main,
       &--sidebar {
         width: 100%;
       }
     }
 
-    @media(max-width: $break-sm) {
-
+    @media (max-width: $break-sm) {
     }
 
-    @media(max-width: $break-xs) {
-
+    @media (max-width: $break-xs) {
     }
 
-    @media(max-width: 420px) {
-
+    @media (max-width: 420px) {
     }
   }
 }
