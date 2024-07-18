@@ -857,79 +857,86 @@ img.alignright {
     border-radius: 10px;
     background-color: #f1f1f1; }
 
-.__bt-format-post-content > *:first-child, .single:not(.elementor-editor-active) .bt-post--content > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description > *:first-child {
-  margin-top: 0 !important; }
-.__bt-format-post-content > *:last-child, .single:not(.elementor-editor-active) .bt-post--content > *:last-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--content-inner > *:last-child, .single-podcast .bt-main-content-ss .bt-post--extra-content > *:last-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description > *:last-child {
-  margin-bottom: 0 !important; }
-.__bt-format-post-content h2, .single:not(.elementor-editor-active) .bt-post--content h2, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content h2, .single-podcast .bt-main-content-ss .bt-post--content-inner h2, .single-podcast .bt-main-content-ss .bt-post--extra-content h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description h2 {
-  font-size: 30px;
-  margin: 32px 0 16px; }
-.__bt-format-post-content h3, .single:not(.elementor-editor-active) .bt-post--content h3, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content h3, .single-podcast .bt-main-content-ss .bt-post--content-inner h3, .single-podcast .bt-main-content-ss .bt-post--extra-content h3, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description h3 {
-  font-size: 24px;
-  margin: 24px 0 12px; }
-.__bt-format-post-content blockquote, .single:not(.elementor-editor-active) .bt-post--content blockquote, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote {
-  position: relative;
-  background: #f1f1f1;
-  padding: 30px 30px 30px 125px;
-  border-radius: 10px 20px 20px 10px; }
-  .__bt-format-post-content blockquote > *:first-child, .single:not(.elementor-editor-active) .bt-post--content blockquote > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote > *:first-child {
+.__bt-format-post-content, .single:not(.elementor-editor-active) .bt-post--content, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content, .single-podcast .bt-main-content-ss .bt-post--content-inner, .single-podcast .bt-main-content-ss .bt-post--extra-content, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description {
+  font-size: 20px;
+  line-height: 165%; }
+  @media (max-width: 767.98px) {
+    .__bt-format-post-content, .single:not(.elementor-editor-active) .bt-post--content, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content, .single-podcast .bt-main-content-ss .bt-post--content-inner, .single-podcast .bt-main-content-ss .bt-post--extra-content, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description {
+      font-size: 16px; } }
+  .__bt-format-post-content > *:first-child, .single:not(.elementor-editor-active) .bt-post--content > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description > *:first-child {
     margin-top: 0 !important; }
-  .__bt-format-post-content blockquote cite, .single:not(.elementor-editor-active) .bt-post--content blockquote cite, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote cite, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote cite, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote cite, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote cite {
-    font-weight: 500;
-    color: var(--e-global-color-accent, #1FBECD); }
-  .__bt-format-post-content blockquote .bt-quote-icon, .single:not(.elementor-editor-active) .bt-post--content blockquote .bt-quote-icon, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 76px;
-    height: 76px;
-    background: #ffffff;
-    border-radius: 100px; }
-    .__bt-format-post-content blockquote .bt-quote-icon svg, .single:not(.elementor-editor-active) .bt-post--content blockquote .bt-quote-icon svg, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote .bt-quote-icon svg, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon svg, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon svg, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon svg {
-      color: var(--e-global-color-accent, #1FBECD); }
-.__bt-format-post-content ul, .single:not(.elementor-editor-active) .bt-post--content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner ul, .single-podcast .bt-main-content-ss .bt-post--extra-content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul {
-  list-style: none;
-  padding-left: 30px; }
-  @media (max-width: 519.98px) {
-    .__bt-format-post-content ul, .single:not(.elementor-editor-active) .bt-post--content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner ul, .single-podcast .bt-main-content-ss .bt-post--extra-content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul {
-      padding-left: 15px; } }
-  .__bt-format-post-content ul li, .single:not(.elementor-editor-active) .bt-post--content ul li, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li {
+  .__bt-format-post-content > *:last-child, .single:not(.elementor-editor-active) .bt-post--content > *:last-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--content-inner > *:last-child, .single-podcast .bt-main-content-ss .bt-post--extra-content > *:last-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description > *:last-child {
+    margin-bottom: 0 !important; }
+  .__bt-format-post-content h2, .single:not(.elementor-editor-active) .bt-post--content h2, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content h2, .single-podcast .bt-main-content-ss .bt-post--content-inner h2, .single-podcast .bt-main-content-ss .bt-post--extra-content h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description h2 {
+    font-size: 30px;
+    margin: 32px 0 16px; }
+  .__bt-format-post-content h3, .single:not(.elementor-editor-active) .bt-post--content h3, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content h3, .single-podcast .bt-main-content-ss .bt-post--content-inner h3, .single-podcast .bt-main-content-ss .bt-post--extra-content h3, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description h3 {
+    font-size: 24px;
+    margin: 24px 0 12px; }
+  .__bt-format-post-content blockquote, .single:not(.elementor-editor-active) .bt-post--content blockquote, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote {
     position: relative;
-    padding-left: 36px; }
-    .__bt-format-post-content ul li:not(:last-child), .single:not(.elementor-editor-active) .bt-post--content ul li:not(:last-child), .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li:not(:last-child), .single-podcast .bt-main-content-ss .bt-post--content-inner ul li:not(:last-child), .single-podcast .bt-main-content-ss .bt-post--extra-content ul li:not(:last-child), .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li:not(:last-child) {
-      margin-bottom: 12px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #d9d9d9; }
-    .__bt-format-post-content ul li .bt-ul-icon, .single:not(.elementor-editor-active) .bt-post--content ul li .bt-ul-icon, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li .bt-ul-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li .bt-ul-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li .bt-ul-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li .bt-ul-icon {
-      position: absolute;
-      top: 1px;
-      left: 0;
-      line-height: 0;
-      color: var(--e-global-color-accent, #1FBECD); }
-.__bt-format-post-content .wp-block-media-text, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text {
-  gap: 30px 50px; }
-  .__bt-format-post-content .wp-block-media-text__media, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__media, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__media, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__media, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__media, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__media {
-    overflow: hidden;
-    border-radius: 20px; }
-    .__bt-format-post-content .wp-block-media-text__media img, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__media img, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__media img, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__media img, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__media img, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__media img {
-      margin: 0 !important; }
-  .__bt-format-post-content .wp-block-media-text__content, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content {
-    padding: 0; }
-    .__bt-format-post-content .wp-block-media-text__content > *:first-child, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content > *:first-child {
+    background: #f1f1f1;
+    padding: 30px 30px 30px 125px;
+    border-radius: 10px 20px 20px 10px; }
+    .__bt-format-post-content blockquote > *:first-child, .single:not(.elementor-editor-active) .bt-post--content blockquote > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote > *:first-child {
       margin-top: 0 !important; }
-    .__bt-format-post-content .wp-block-media-text__content > *:last-child, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content > *:last-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content > *:last-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content > *:last-child {
-      margin-bottom: 0 !important; }
-    .__bt-format-post-content .wp-block-media-text__content ul, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content ul, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content ul,
-    .__bt-format-post-content .wp-block-media-text__content ol,
-    .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content ol,
-    .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content ol,
-    .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content ol,
-    .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content ol,
-    .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content ol {
-      padding-left: 0; }
+    .__bt-format-post-content blockquote cite, .single:not(.elementor-editor-active) .bt-post--content blockquote cite, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote cite, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote cite, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote cite, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote cite {
+      font-weight: 500;
+      color: var(--e-global-color-accent, #1FBECD); }
+    .__bt-format-post-content blockquote .bt-quote-icon, .single:not(.elementor-editor-active) .bt-post--content blockquote .bt-quote-icon, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 76px;
+      background: #ffffff;
+      border-radius: 100px; }
+      .__bt-format-post-content blockquote .bt-quote-icon svg, .single:not(.elementor-editor-active) .bt-post--content blockquote .bt-quote-icon svg, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote .bt-quote-icon svg, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon svg, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon svg, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon svg {
+        color: var(--e-global-color-accent, #1FBECD); }
+  .__bt-format-post-content ul, .single:not(.elementor-editor-active) .bt-post--content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner ul, .single-podcast .bt-main-content-ss .bt-post--extra-content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul {
+    list-style: none;
+    padding-left: 30px;
+    line-height: 1.4; }
+    @media (max-width: 519.98px) {
+      .__bt-format-post-content ul, .single:not(.elementor-editor-active) .bt-post--content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner ul, .single-podcast .bt-main-content-ss .bt-post--extra-content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul {
+        padding-left: 15px; } }
+    .__bt-format-post-content ul li, .single:not(.elementor-editor-active) .bt-post--content ul li, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li {
+      position: relative;
+      padding-left: 36px; }
+      .__bt-format-post-content ul li:not(:last-child), .single:not(.elementor-editor-active) .bt-post--content ul li:not(:last-child), .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li:not(:last-child), .single-podcast .bt-main-content-ss .bt-post--content-inner ul li:not(:last-child), .single-podcast .bt-main-content-ss .bt-post--extra-content ul li:not(:last-child), .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li:not(:last-child) {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #d9d9d9; }
+      .__bt-format-post-content ul li .bt-ul-icon, .single:not(.elementor-editor-active) .bt-post--content ul li .bt-ul-icon, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li .bt-ul-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li .bt-ul-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li .bt-ul-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li .bt-ul-icon {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        line-height: 0;
+        color: var(--e-global-color-accent, #1FBECD); }
+  .__bt-format-post-content .wp-block-media-text, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text {
+    gap: 30px 50px; }
+    .__bt-format-post-content .wp-block-media-text__media, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__media, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__media, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__media, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__media, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__media {
+      overflow: hidden;
+      border-radius: 20px; }
+      .__bt-format-post-content .wp-block-media-text__media img, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__media img, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__media img, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__media img, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__media img, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__media img {
+        margin: 0 !important; }
+    .__bt-format-post-content .wp-block-media-text__content, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content {
+      padding: 0; }
+      .__bt-format-post-content .wp-block-media-text__content > *:first-child, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content > *:first-child {
+        margin-top: 0 !important; }
+      .__bt-format-post-content .wp-block-media-text__content > *:last-child, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content > *:last-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content > *:last-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content > *:last-child {
+        margin-bottom: 0 !important; }
+      .__bt-format-post-content .wp-block-media-text__content ul, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content ul, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content ul,
+      .__bt-format-post-content .wp-block-media-text__content ol,
+      .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content ol,
+      .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content ol,
+      .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content ol,
+      .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content ol,
+      .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content ol {
+        padding-left: 0; }
 
 .__bt-section-heading-style, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading, .bt-related-posts--heading, .single-car .bt-related-posts-ss--heading, .single-podcast .bt-related-posts-ss--heading, .woocommerce .bt-main-product-ss .related .bt-related-heading {
   text-align: left;

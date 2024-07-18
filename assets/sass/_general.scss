@@ -342,6 +342,11 @@
   }
 }
 .__bt-format-post-content {
+  font-size: 20px;
+  line-height: 165%;
+  @media (max-width: $break-sm) {
+    font-size: 16px;
+  }
   > *:first-child {
     margin-top: 0 !important;
   }
@@ -387,6 +392,7 @@
   ul {
     list-style: none;
     padding-left: 30px;
+    line-height: 1.4;
     @media (max-width: $break-xs) {
       padding-left: 15px;
     }
@@ -488,7 +494,7 @@
   @media (max-width: $break-lg) {
     .bt-main-text {
       font-size: 46px;
-      &::before{
+      &::before {
         height: 30px;
       }
     }
@@ -517,7 +523,7 @@
     .bt-main-text {
       font-size: 32px;
       padding-left: 15px;
-      &::before{
+      &::before {
         height: 25px;
         top: 8px;
         transform: initial;
