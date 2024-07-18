@@ -1010,7 +1010,7 @@ img.alignright {
       max-width: 560px; } }
 
 .__bt-block-heading-style, .widget .wp-block-heading,
-.widget .wg-title, .widget .widget-title, .widget .wp-block-search__label, .bt-comment-wrapper .bt-heading-comment, .single:not(.elementor-editor-active) .bt-post--content h2, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-details-item h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .woocommerce-Reviews-title, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title {
+.widget .wg-title, .widget .widget-title, .widget .wp-block-search__label, .bt-comment-wrapper .bt-heading-comment, .single:not(.elementor-editor-active) .bt-post--content .bt-heading-line, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--heading, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-details-item h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .woocommerce-Reviews-title, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -1022,10 +1022,10 @@ img.alignright {
   padding-left: 17px; }
   @media (max-width: 767.98px) {
     .__bt-block-heading-style, .widget .wp-block-heading,
-    .widget .wg-title, .widget .widget-title, .widget .wp-block-search__label, .bt-comment-wrapper .bt-heading-comment, .single:not(.elementor-editor-active) .bt-post--content h2, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-details-item h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .woocommerce-Reviews-title, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title {
+    .widget .wg-title, .widget .widget-title, .widget .wp-block-search__label, .bt-comment-wrapper .bt-heading-comment, .single:not(.elementor-editor-active) .bt-post--content .bt-heading-line, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--heading, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-details-item h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .woocommerce-Reviews-title, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title {
       font-size: 20px; } }
   .__bt-block-heading-style::before, .widget .wp-block-heading::before,
-  .widget .wg-title::before, .widget .widget-title::before, .widget .wp-block-search__label::before, .bt-comment-wrapper .bt-heading-comment::before, .single:not(.elementor-editor-active) .bt-post--content h2::before, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-details-item h2::before, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information h2::before, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .woocommerce-Reviews-title::before, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title::before {
+  .widget .wg-title::before, .widget .widget-title::before, .widget .wp-block-search__label::before, .bt-comment-wrapper .bt-heading-comment::before, .single:not(.elementor-editor-active) .bt-post--content .bt-heading-line::before, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--heading::before, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-details-item h2::before, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-additional_information h2::before, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .woocommerce-Reviews-title::before, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews .comment-reply-title::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -2713,7 +2713,8 @@ img.alignright {
   display: flex;
   gap: 4px;
   font-size: 0;
-  line-height: 0; }
+  line-height: 0;
+  align-items: center; }
   .bt-comment-stars span.bt-filled svg {
     fill: #efcf0a; }
   .bt-comment-stars span svg {
@@ -2801,7 +2802,8 @@ img.alignright {
     .bt-comment-wrapper .bt-content .bt-infor {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 54px; }
+      gap: 10px 54px;
+      align-items: baseline; }
     .bt-comment-wrapper .bt-content .bt-name {
       font-size: 22px;
       line-height: 24px;
@@ -2814,7 +2816,10 @@ img.alignright {
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
-      line-height: normal; }
+      line-height: normal;
+      display: flex;
+      gap: 10px 21px;
+      align-items: baseline; }
     .bt-comment-wrapper .bt-content .bt-text {
       font-size: 18px;
       font-weight: 400;
@@ -3450,7 +3455,7 @@ body {
       .bt-list-post .bt-post--meta .bt-meta .bt-post-author-w-avatar--name {
         font-size: 14px; } }
 
-.single:not(.elementor-editor-active) .bt-post--content h2 {
+.single:not(.elementor-editor-active) .bt-post--content .bt-heading-line {
   padding: 0;
   z-index: 9;
   text-transform: initial;
@@ -3458,9 +3463,9 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 50px; }
-  .single:not(.elementor-editor-active) .bt-post--content h2::before {
+  .single:not(.elementor-editor-active) .bt-post--content .bt-heading-line::before {
     z-index: 10; }
-  .single:not(.elementor-editor-active) .bt-post--content h2:after {
+  .single:not(.elementor-editor-active) .bt-post--content .bt-heading-line:after {
     content: " ";
     display: inline-block;
     width: 100%;
@@ -3471,7 +3476,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     z-index: 8; }
-  .single:not(.elementor-editor-active) .bt-post--content h2 code {
+  .single:not(.elementor-editor-active) .bt-post--content .bt-heading-line code {
     font-size: inherit;
     line-height: inherit;
     font-weight: inherit;
@@ -3482,11 +3487,11 @@ body {
     background-color: #fff;
     font-family: var(--e-global-typography-primary-font-family, "DM Sans"); }
   @media (max-width: 519.98px) {
-    .single:not(.elementor-editor-active) .bt-post--content h2 {
+    .single:not(.elementor-editor-active) .bt-post--content .bt-heading-line {
       font-size: 22px;
       line-height: 130%;
       text-align: left; }
-      .single:not(.elementor-editor-active) .bt-post--content h2 code {
+      .single:not(.elementor-editor-active) .bt-post--content .bt-heading-line code {
         display: inline-block; } }
 
 .bt-main-post .bt-post--categories .bt-post-cat {
@@ -6058,9 +6063,15 @@ body {
     margin-bottom: 50px; }
     .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--thumbnail .bt-cover-image, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--thumbnail .wc-cover-image {
       border-radius: 20px; }
+    @media (max-width: 767.98px) {
+      .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--thumbnail {
+        margin-bottom: 30px; } }
   .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--title {
     font-size: 30px;
     margin: 0 0 30px; }
+    @media (max-width: 767.98px) {
+      .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--title {
+        margin-bottom: 20px; } }
   .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--meta {
     display: flex;
     flex-wrap: wrap;
@@ -6069,13 +6080,26 @@ body {
     margin-bottom: 30px;
     border: 1px solid #dadada;
     border-radius: 10px; }
+    @media (max-width: 767.98px) {
+      .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--meta {
+        flex-direction: column; } }
   .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--meta-col {
     width: 33.33%; }
     .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--meta-col:not(:last-child) {
       width: calc(33.33% - 1px);
       border-right: 1px solid #dadada; }
+    @media (max-width: 767.98px) {
+      .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--meta-col {
+        width: 100%; }
+        .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--meta-col:not(:last-child) {
+          width: 100%;
+          border-right: none;
+          border-bottom: 1px solid #dadada; } }
   .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--meta-item {
     padding: 18px 30px; }
+    @media (max-width: 767.98px) {
+      .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--meta-item {
+        padding: 12px 15px; } }
     .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--meta-item .bt-meta-item {
       position: relative;
       display: flex;
@@ -6094,7 +6118,8 @@ body {
       font-size: 14px;
       color: #848484; }
     .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--meta-item .bt-value {
-      font-weight: 500; }
+      font-weight: 500;
+      word-break: break-word; }
   .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content:after {
     content: "";
     display: block;
@@ -6104,21 +6129,65 @@ body {
   .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .page-links {
     margin-top: 40px; }
   .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss {
-    padding-top: 105px; }
+    padding-top: 100px; }
+    @media (max-width: 767.98px) {
+      .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss {
+        padding-top: 50px; } }
     .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--heading {
+      padding: 0;
+      z-index: 9;
+      text-transform: initial;
       font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 50px;
       margin: 0 0 40px; }
+      .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--heading::before {
+        z-index: 10; }
+      .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--heading:after {
+        content: " ";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background: #d9d9d9;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 8; }
+      .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--heading span {
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+        color: inherit;
+        padding: 0 29px 0 18px;
+        position: relative;
+        z-index: 9;
+        background-color: #fff;
+        font-family: var(--e-global-typography-primary-font-family, "DM Sans"); }
+      @media (max-width: 519.98px) {
+        .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--heading {
+          font-size: 22px;
+          line-height: 130%;
+          text-align: left; }
+          .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--heading span {
+            display: inline-block; } }
     .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list {
       display: flex;
       flex-wrap: wrap;
       gap: 30px; }
       .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post {
         width: calc(50% - 15px); }
+        .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post--inner {
+          width: 100%; }
     @media (max-width: 767.98px) {
       .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post {
         width: 100%; } }
   .single-dealer .bt-main-content-ss .bt-post .bt-review-ss {
     margin-top: 105px; }
+    @media (max-width: 767.98px) {
+      .single-dealer .bt-main-content-ss .bt-post .bt-review-ss {
+        margin-top: 50px; } }
   .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap {
     position: sticky;
     top: 30px;
@@ -6127,7 +6196,7 @@ body {
     gap: 30px; }
     .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block {
       background: #ffffff;
-      padding: 30px;
+      padding: 60px;
       overflow: hidden;
       border: 1px solid #dadada;
       border-radius: 20px; }
@@ -6137,39 +6206,58 @@ body {
         margin: 0 0 10px; }
       .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-contact-block {
         color: #ffffff;
-        background: var(--e-global-color-accent, #1FBECD); }
+        background: var(--e-global-color-accent, #1FBECD);
+        padding: 59px 60px 66px 60px; }
         .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-contact-block .gform_wrapper .gform_heading .gform_title,
         .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-contact-block .gform_wrapper .gform_heading .gform_description {
           color: #ffffff; }
+        @media (max-width: 519.98px) {
+          .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-contact-block .gform_wrapper .gform_heading .gform_title {
+            font-size: 32px; }
+          .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-contact-block .gform_wrapper .gform_heading .gform_description {
+            font-size: 18px; } }
         .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-contact-block .gform_wrapper .gform-body input:not([type="checkbox"], [type="radio"]),
         .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-contact-block .gform_wrapper .gform-body select,
         .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-contact-block .gform_wrapper .gform-body textarea {
           color: #ffffff;
           background: transparent;
-          border-color: #ffffff; }
+          border-color: #ffffff;
+          font-size: 16px;
+          font-weight: 500; }
         .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-contact-block .gform_wrapper .gform_footer input[type="submit"] {
           color: var(--e-global-color-secondary, #111) !important;
-          background: #ffffff !important; }
+          background: #ffffff !important;
+          color: #111 !important;
+          font-size: 17px !important;
+          padding: 17px 40px !important;
+          width: 100%; }
       .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-location-block .bt-location-text {
         position: relative;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 500;
         line-height: 150%;
         margin-bottom: 25px;
-        padding-left: 28px; }
+        padding-left: 31px;
+        color: var(--e-global-color-text, #555); }
         .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-location-block .bt-location-text svg {
           position: absolute;
           top: 2px;
           left: 0;
-          width: 22px;
+          width: 26px;
           height: auto;
           fill: var(--e-global-color-accent, #1FBECD); }
       .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-location-block .bt-location-map .bt-cover-iframe {
-        padding-bottom: 70%;
+        padding-bottom: 73%;
         border-radius: 10px; }
-@media (max-width: 991.98px) {
-  .single-dealer .bt-main-content-ss--main, .single-dealer .bt-main-content-ss--sidebar {
-    width: 100%; } }
+      @media (max-width: 1199.98px) and (min-width: 991.98px) {
+        .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block {
+          padding: 30px 20px !important; } }
+      @media (max-width: 519.98px) {
+        .single-dealer .bt-main-content-ss .bt-post .bt-sidebar-wrap .bt-sidebar-block {
+          padding: 30px 20px !important; } }
+  @media (max-width: 991.98px) {
+    .single-dealer .bt-main-content-ss .bt-post--main, .single-dealer .bt-main-content-ss .bt-post--sidebar {
+      width: 100%; } }
 
 .__bt-podcast-style-default .bt-post--inner, .single-podcast .bt-related-posts-ss--list .bt-post--inner, .bt-elwg-podcast-grid--default .bt-post--inner, .bt-elwg-podcast-grid--style-1 .bt-post--inner, .bt-elwg-podcast-loop-item--default .bt-post--inner {
   position: relative;
@@ -9470,10 +9558,20 @@ body {
     padding: 20px 0 20px 46px; }
 
 @media (min-width: 1200px) and (max-width: 1439.98px) {
-  .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h3, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h4, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h5, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h6 {
+  .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1,
+  .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2,
+  .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h3,
+  .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h4,
+  .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h5,
+  .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h6 {
     font-size: 55px; } }
 @media (min-width: 1025px) and (max-width: 1199.98px) {
-  .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h3, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h4, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h5, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h6 {
+  .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1,
+  .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2,
+  .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h3,
+  .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h4,
+  .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h5,
+  .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h6 {
     font-size: 45px; } }
 
 @media (min-width: 1450px) {
@@ -9564,7 +9662,7 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 0px 10px 10px 10px;
-    background: #FFF;
+    background: #fff;
     top: 50%;
     transform: translateY(-50%);
     z-index: -1; }
@@ -9586,5 +9684,20 @@ body {
   background-color: #fff;
   border: 6px solid var(--e-global-color-accent, #1FBECD);
   border-radius: 50%; }
+@media (max-width: 1199.98px) and (min-width: 1024.98px) {
+  .elementor-element.bt-find-your-dream-cars-home-3 .bt-col-container-right .elementor-button-wrapper .elementor-button {
+    padding: 13px 50px 14px 25px; } }
+@media (max-width: 1199.98px) and (min-width: 1024.98px) {
+  .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--titlejob {
+    padding: 20px 15px; }
+    .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--titlejob span {
+      font-size: 16px; }
+  .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--title a {
+    font-size: 20px; }
+  .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--info {
+    padding: 20px 15px; }
+  .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--content {
+    margin-left: 10px;
+    margin-right: 10px; } }
 
 /*# sourceMappingURL=main.css.map */

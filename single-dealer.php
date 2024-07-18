@@ -138,6 +138,15 @@ $d_whatsapp_link = get_field('whatsapp_link', get_the_ID());
 	    <?php endwhile; ?>
     </div>
 	</div>
+	<?php
+	if (function_exists('get_field')) {
+		$banner = get_field('dealer_banner_contact', 'options');
+		if (!empty($banner)) {
+			$id_template = $banner->ID;
+			echo do_shortcode('[elementor-template id="' . $id_template . '"]');
+		}
+	}
+	?>
 </main><!-- #main -->
 
 <?php get_footer(); ?>

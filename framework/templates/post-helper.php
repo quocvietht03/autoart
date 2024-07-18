@@ -536,8 +536,8 @@ if (!function_exists('autoart_related_posts')) {
     ?>
       <div class="bt-related-posts">
         <div class="bt-related-posts--heading">
-          <div class="bt-sub-text"><?php echo esc_html__( 'Trusted Car Dealer Service', 'autoart' ) ?></div>
-          <h2 class="bt-main-text"><?php echo esc_html__( 'Related News & ', 'autoart' ) ?><span><?php echo esc_html__( 'Articals', 'autoart' ) ?></span></h2>
+          <div class="bt-sub-text"><?php echo esc_html__('Trusted Car Dealer Service', 'autoart') ?></div>
+          <h2 class="bt-main-text"><?php echo esc_html__('Related News & ', 'autoart') ?><span><?php echo esc_html__('Articals', 'autoart') ?></span></h2>
         </div>
         <div class="bt-related-posts--list bt-image-effect">
           <?php
@@ -615,7 +615,13 @@ if (!function_exists('autoart_custom_comment')) {
               </h5>
               <div class="bt-date">
                 <?php echo get_comment_date(); ?>
+                <?php
+                if (get_post_type() == 'car' || get_post_type() == 'dealer') {
+                  do_action('autoart_comment_rating_display');
+                }
+                ?>
               </div>
+
               <?php if ($comment->comment_approved == '0') : ?>
                 <em class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', 'autoart'); ?></em>
               <?php endif; ?>

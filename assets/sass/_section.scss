@@ -1,4 +1,4 @@
-.__bt-heading-style{
+.__bt-heading-style {
     @media (min-width: 1200px) and (max-width: 1439.98px) {
         font-size: 55px;
     }
@@ -19,58 +19,58 @@
     }
 }
 
-.elementor-element{
-    &.bt-browse-used-cars{
-        .elementor-tabs{
-            .elementor-tabs-wrapper{
+.elementor-element {
+    &.bt-browse-used-cars {
+        .elementor-tabs {
+            .elementor-tabs-wrapper {
                 @media (min-width: 768px) {
                     background-color: #fff;
                     width: fit-content;
                     margin-left: auto;
                     margin-right: auto;
-                    filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.10));
+                    filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.1));
                     border-radius: 10px;
                     display: flex;
-                    flex-wrap:wrap;
+                    flex-wrap: wrap;
                     gap: 60px;
                     padding-right: 104px;
                     padding-left: 87px;
                 }
 
-                @media(max-width: $break-tl) {
+                @media (max-width: $break-tl) {
                     gap: 30px;
                     padding-right: 60px;
                     padding-left: 60px;
                 }
 
-                .elementor-tab-title{
+                .elementor-tab-title {
                     padding-left: 0;
                     padding-right: 0;
                     border-bottom: 3px solid transparent;
                     transition: $transition;
 
-                    @media(max-width: $break-sm) {
+                    @media (max-width: $break-sm) {
                         background-color: #fff;
                     }
 
-                    &.elementor-active{
+                    &.elementor-active {
                         position: relative;
                         border-color: $color-accent;
                     }
                 }
             }
 
-            .elementor-tabs-content-wrapper{
+            .elementor-tabs-content-wrapper {
                 background-color: transparent !important;
-                .elementor-tab-title{
-                    @media(max-width: $break-sm) {
+                .elementor-tab-title {
+                    @media (max-width: $break-sm) {
                         background-color: #fff;
                         border-bottom: 1px solid #eee;
                         border-radius: 10px;
                     }
                 }
 
-                .elementor-tab-content{
+                .elementor-tab-content {
                     background-color: transparent !important;
                     padding-left: 0;
                     padding-right: 0;
@@ -79,36 +79,40 @@
         }
     }
 
-    &.bt-ss-buy-sell-car{
+    &.bt-ss-buy-sell-car {
         > .elementor-element {
-            .elementor-widget-image{
+            .elementor-widget-image {
                 transform: translateX(-50%);
             }
         }
     }
 
-    &.bt-hero-home{
+    &.bt-hero-home {
         .bt-elwg-highlighted-heading {
-            h1, h2, h3, h4, h5, h6{
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
                 @extend .__bt-heading-style;
             }
         }
 
-        .elementor-widget-image{
-            &.bt-hero-image{
-                > .elementor-widget-container{
+        .elementor-widget-image {
+            &.bt-hero-image {
+                > .elementor-widget-container {
                     @media (min-width: 1025px) and (max-width: 1600.98px) {
                         margin-right: 0;
                     }
                 }
             }
         }
-
     }
 
-    &.bt-what-we-offer-home-3{
+    &.bt-what-we-offer-home-3 {
         position: relative;
-        &::after{
+        &::after {
             content: " ";
             display: inline-block;
             position: absolute;
@@ -120,75 +124,112 @@
             clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
             background: #fff;
 
-            @media(max-width: $break-sm) {
+            @media (max-width: $break-sm) {
                 height: 30px;
             }
         }
     }
 
-    &.bt-find-your-dream-cars-home-3{
-        > .elementor-element{
-            &:first-child{
+    &.bt-find-your-dream-cars-home-3 {
+        > .elementor-element {
+            &:first-child {
                 clip-path: polygon(0 0, 100% 0, 91% 100%, 0% 100%);
 
-                @media(max-width: $break-tl) {
+                @media (max-width: $break-tl) {
                     clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
                 }
             }
 
-            .elementor-widget-heading{
-                h2.elementor-heading-title{
+            .elementor-widget-heading {
+                h2.elementor-heading-title {
                     position: relative;
                     padding-left: 25.45px;
                     z-index: 9;
 
-                    @media(max-width: $break-sm) {
+                    @media (max-width: $break-sm) {
                         padding-left: 15px;
                     }
 
-                    &::after, &::before{
+                    &::after,
+                    &::before {
                         content: " ";
                         display: inline-block;
                         position: absolute;
                         left: 0;
                     }
 
-                    &::before{
+                    &::before {
                         width: 100px;
                         height: 100px;
                         border-radius: 0px 10px 10px 10px;
-                        background: #FFF;
-                        top:50%;
+                        background: #fff;
+                        top: 50%;
                         transform: translateY(-50%);
                         z-index: -1;
 
-                        @media(max-width: $break-sm) {
+                        @media (max-width: $break-sm) {
                             width: 70px;
                             height: 70px;
                         }
                     }
 
-                    &::after{
+                    &::after {
                         width: 17px;
                         height: 17px;
                         background-color: $color-accent;
-                        top:0;
+                        top: 0;
                     }
                 }
             }
         }
 
-        .elementor-widget-icon-box{
-            .elementor-icon-box-icon{
-                a{
+        .elementor-widget-icon-box {
+            .elementor-icon-box-icon {
+                a {
                     width: 48px;
                     height: 48px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     background-color: #fff;
-                    border:6px solid $color-accent;
+                    border: 6px solid $color-accent;
                     border-radius: 50%;
+                }
+            }
+        }
+
+        .bt-col-container-right {
+            .elementor-button-wrapper {
+                .elementor-button {
+                    @media (max-width: $break-lg) and (min-width: $break-tl) {
+                        padding: 13px 50px 14px 25px;
+                    }
+                }
+            }
+        }
+    }
+    &.bt-section-dealer {
+        @media (max-width: $break-lg) and (min-width: $break-tl) {
+            .bt-elwg-dealer-loop-item--default {
+                .bt-post {
+                    &--titlejob {
+                        padding: 20px 15px;
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                    &--title {
+                        a {
+                            font-size: 20px;
+                        }
+                    }
+                    &--info {
+                        padding: 20px 15px;
+                    }
+                    &--content {
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
                 }
             }
         }

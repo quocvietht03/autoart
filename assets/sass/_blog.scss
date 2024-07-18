@@ -136,7 +136,7 @@
       &.sticky {
         padding: 25px 15px;
       }
-      &--meta{
+      &--meta {
         gap: 12px 15px;
       }
       &--meta .bt-meta {
@@ -156,7 +156,7 @@
 .single:not(.elementor-editor-active) {
   .bt-post--content {
     @extend .__bt-format-post-content;
-    h2 {
+    .bt-heading-line {
       @extend .__bt-block-heading-style;
       padding: 0;
       z-index: 9;
@@ -195,7 +195,7 @@
         font-size: 22px;
         line-height: 130%;
         text-align: left;
-        code{
+        code {
           display: inline-block;
         }
       }
@@ -306,7 +306,7 @@
       &--title {
         font-size: 22px;
       }
-      &--meta{
+      &--meta {
         gap: 12px 15px;
       }
       &--meta .bt-meta {

@@ -1191,7 +1191,7 @@
         },
         {
             "key": "field_6530f0658c230",
-            "label": "Teams",
+            "label": "Dealers",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -1208,29 +1208,9 @@
             "selected": 0
         },
         {
-            "key": "field_65a8c5dcd03d4",
-            "label": "Search Filter Results",
-            "name": "team_search_filter_results",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
-        },
-        {
             "key": "field_6539eb81df4cd",
-            "label": "Related Posts",
-            "name": "team_related_posts",
+            "label": "Car By Dealer",
+            "name": "car_by_dealer",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -1243,26 +1223,6 @@
             },
             "layout": "block",
             "sub_fields": [
-                {
-                    "key": "field_6539eb81df4ce",
-                    "label": "Sub Heading",
-                    "name": "sub_heading",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
                 {
                     "key": "field_6539eb81df4cf",
                     "label": "Heading",
@@ -1282,46 +1242,6 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
-                },
-                {
-                    "key": "field_653b3d55150c8",
-                    "label": "Text Heading",
-                    "name": "text_heading",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "placeholder": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_6539eb81df4d1",
-                    "label": "Bottom Text",
-                    "name": "bottom_text",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "placeholder": "",
-                    "new_lines": ""
                 },
                 {
                     "key": "field_6539eb81df4d0",
@@ -1346,6 +1266,36 @@
                     "append": ""
                 }
             ]
+        },
+        {
+            "key": "field_6698c421a3eb0",
+            "label": "Find Your Dream Cars",
+            "name": "dealer_banner_contact",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "elementor_library"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": [
+                "elementor_library_type:section"
+            ],
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 1,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
         },
         {
             "key": "field_6538b8aeac301",
@@ -1846,5 +1796,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721196621
+    "modified": 1721290048
 }
