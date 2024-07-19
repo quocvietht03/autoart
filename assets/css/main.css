@@ -877,12 +877,15 @@ img.alignright {
     position: relative;
     background: #f1f1f1;
     padding: 30px 30px 30px 125px;
-    border-radius: 10px 20px 20px 10px; }
+    border-radius: 10px 20px 20px 10px;
+    font-style: italic;
+    color: var(--e-global-color-primary, #222); }
     .__bt-format-post-content blockquote > *:first-child, .single:not(.elementor-editor-active) .bt-post--content blockquote > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote > *:first-child {
       margin-top: 0 !important; }
     .__bt-format-post-content blockquote cite, .single:not(.elementor-editor-active) .bt-post--content blockquote cite, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote cite, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote cite, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote cite, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote cite {
       font-weight: 500;
-      color: var(--e-global-color-accent, #1FBECD); }
+      color: var(--e-global-color-accent, #1FBECD);
+      font-style: normal; }
     .__bt-format-post-content blockquote .bt-quote-icon, .single:not(.elementor-editor-active) .bt-post--content blockquote .bt-quote-icon, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon {
       position: absolute;
       top: 30px;
@@ -2210,12 +2213,11 @@ img.alignright {
         margin-top: 0;
         padding-top: 60px; }
       .bt-site-titlebar .bt-page-title {
-        font-size: 36px; }
+        font-size: 32px;
+        width: 100%;
+        max-width: 100%; }
       .bt-site-titlebar .bt-page-breadcrumb {
         font-size: 16px; } }
-  @media (max-width: 767.98px) {
-    .bt-site-titlebar .bt-page-title {
-      font-size: 32px; } }
 
 .widget:not(:last-child) {
   margin-bottom: 50px; }

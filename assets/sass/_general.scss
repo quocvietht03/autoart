@@ -366,12 +366,15 @@
     background: #f1f1f1;
     padding: 30px 30px 30px 125px;
     border-radius: 10px 20px 20px 10px;
+    font-style: italic;
+    color: $color-primary;
     > *:first-child {
       margin-top: 0 !important;
     }
     cite {
       font-weight: 500;
       color: $color-accent;
+      font-style: normal;
     }
     .bt-quote-icon {
       position: absolute;

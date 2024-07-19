@@ -383,12 +383,15 @@ html :where(.editor-styles-wrapper) {
     position: relative;
     background: #f1f1f1;
     padding: 30px 30px 30px 125px;
-    border-radius: 10px 20px 20px 10px; }
+    border-radius: 10px 20px 20px 10px;
+    font-style: italic;
+    color: var(--e-global-color-primary, #222); }
     .__bt-format-post-content blockquote > *:first-child {
       margin-top: 0 !important; }
     .__bt-format-post-content blockquote cite {
       font-weight: 500;
-      color: var(--e-global-color-accent, #1FBECD); }
+      color: var(--e-global-color-accent, #1FBECD);
+      font-style: normal; }
     .__bt-format-post-content blockquote .bt-quote-icon {
       position: absolute;
       top: 30px;

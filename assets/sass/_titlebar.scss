@@ -70,15 +70,12 @@
       padding-top: 60px;
     }
     .bt-page-title {
-      font-size: 36px;
+      font-size: 32px;
+      width: 100%;
+      max-width: 100%;
     }
     .bt-page-breadcrumb {
       font-size: 16px;
-    }
-  }
-  @media (max-width: $break-sm) {
-    .bt-page-title {
-      font-size: 32px;
     }
   }
 }
