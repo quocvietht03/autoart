@@ -342,8 +342,6 @@
   }
 }
 .__bt-format-post-content {
-  font-size: 20px;
-  line-height: 165%;
   @media (max-width: $break-sm) {
     font-size: 16px;
   }
@@ -492,7 +490,7 @@
   .bt-head-text {
     font-size: 20px;
     max-width: 640px;
-    margin: 10px auto 0;
+    margin: 10px 0 0 0;
   }
   @media (max-width: $break-lg) {
     .bt-main-text {
@@ -1295,4 +1293,7 @@
       }
     }
   }
+}
+.dialog-lightbox-widget .elementor-slideshow__header {
+  width: auto
 }

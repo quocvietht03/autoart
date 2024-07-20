@@ -54,6 +54,10 @@ html :where(.editor-styles-wrapper) {
   font-weight: 400;
   line-height: 167%;
   color: var(--e-global-color-text, #555); }
+  @media (max-width: 1440px) and (min-width: 1024.98px) {
+    body.elementor-default,
+    html :where(.editor-styles-wrapper).elementor-default {
+      font-size: 18px; } }
   @media (max-width: 1199.98px) {
     body,
     html :where(.editor-styles-wrapper) {
@@ -790,7 +794,7 @@ img.alignright {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical; }
 
-.__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .woocommerce .woocommerce-loop-product__thumbnail .button,
+.__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .__bt-single-car-style-2 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .woocommerce .woocommerce-loop-product__thumbnail .button,
 .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--message a, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input {
   display: inline-block;
   font-size: 18px;
@@ -806,13 +810,13 @@ img.alignright {
   font-family: var(--e-global-typography-primary-font-family, "DM Sans");
   height: auto;
   min-height: auto; }
-  .__bt-button-style:hover, button:hover, input[type="submit"]:hover, .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-elwg-contact-information .bt-contact-information--button:hover, .__bt-button-outline-style:hover, .__bt-button-outline-dark-style:hover, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a:hover, .bt-srq-box--book-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn:hover, .woocommerce .woocommerce-loop-product__thumbnail .button:hover,
-  .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:hover, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--message a:hover, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:hover, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:hover, .__bt-button-style:focus, button:focus, input[type="submit"]:focus, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-elwg-contact-information .bt-contact-information--button:focus, .__bt-button-outline-style:focus, .__bt-button-outline-dark-style:focus, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a:focus, .bt-srq-box--book-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn:focus, .woocommerce .woocommerce-loop-product__thumbnail .button:focus,
+  .__bt-button-style:hover, button:hover, input[type="submit"]:hover, .__bt-button-dark-style:hover, .__bt-contact-information-style .bt-contact-information--button:hover, .bt-elwg-contact-information .bt-contact-information--button:hover, .__bt-button-outline-style:hover, .__bt-button-outline-dark-style:hover, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .__bt-single-car-style-2 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a:hover, .bt-srq-box--book-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:hover, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn:hover, .woocommerce .woocommerce-loop-product__thumbnail .button:hover,
+  .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:hover, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--message a:hover, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:hover, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:hover, .__bt-button-style:focus, button:focus, input[type="submit"]:focus, .__bt-button-dark-style:focus, .__bt-contact-information-style .bt-contact-information--button:focus, .bt-elwg-contact-information .bt-contact-information--button:focus, .__bt-button-outline-style:focus, .__bt-button-outline-dark-style:focus, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .__bt-single-car-style-2 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a:focus, .bt-srq-box--book-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-message-btn:focus, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn:focus, .woocommerce .woocommerce-loop-product__thumbnail .button:focus,
   .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart:focus, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--message a:focus, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button:focus, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input:focus {
     color: #ffffff;
     background: var(--e-global-color-accent, #1FBECD); }
   @media (max-width: 519.98px) {
-    .__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .woocommerce .woocommerce-loop-product__thumbnail .button,
+    .__bt-button-style, button, input[type="submit"], .__bt-button-dark-style, .__bt-contact-information-style .bt-contact-information--button, .bt-elwg-contact-information .bt-contact-information--button, .__bt-button-outline-style, .__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .__bt-single-car-style-2 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a, .bt-srq-box--book-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .bt-elwg-cars-wishlist--default .bt-table--col.bt-car-seller .bt-seller-btn, .woocommerce .woocommerce-loop-product__thumbnail .button,
     .woocommerce .woocommerce-loop-product__thumbnail .added_to_cart, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--message a, .woocommerce .bt-main-product-ss div.product div.summary form.cart .button, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-reviews #respond .form-submit input {
       font-size: 16px;
       padding: 12px 30px; } }
@@ -830,11 +834,11 @@ img.alignright {
     color: #ffffff;
     background: var(--e-global-color-accent, #1FBECD); }
 
-.__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a {
+.__bt-button-outline-dark-style, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .__bt-single-car-style-2 .bt-post--section .bt-location-title .bt-location-link, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title .bt-location-link, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a {
   color: var(--e-global-color-primary, #222);
   background: #ffffff;
   border: 3px solid var(--e-global-color-primary, #222); }
-  .__bt-button-outline-dark-style:hover, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a:hover, .__bt-button-outline-dark-style:focus, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a:focus {
+  .__bt-button-outline-dark-style:hover, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .__bt-single-car-style-2 .bt-post--section .bt-location-title .bt-location-link:hover, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title .bt-location-link:hover, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:hover, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a:hover, .__bt-button-outline-dark-style:focus, .__bt-single-car-style-1 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .__bt-single-car-style-2 .bt-post--section .bt-location-title .bt-location-link:focus, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title .bt-location-link:focus, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn:focus, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer--whatsapp a:focus {
     color: #ffffff;
     background: var(--e-global-color-secondary, #111); }
 
@@ -857,89 +861,86 @@ img.alignright {
     border-radius: 10px;
     background-color: #f1f1f1; }
 
-.__bt-format-post-content, .single:not(.elementor-editor-active) .bt-post--content, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content, .single-podcast .bt-main-content-ss .bt-post--content-inner, .single-podcast .bt-main-content-ss .bt-post--extra-content, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description {
-  font-size: 20px;
-  line-height: 165%; }
-  @media (max-width: 767.98px) {
-    .__bt-format-post-content, .single:not(.elementor-editor-active) .bt-post--content, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content, .single-podcast .bt-main-content-ss .bt-post--content-inner, .single-podcast .bt-main-content-ss .bt-post--extra-content, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description {
-      font-size: 16px; } }
-  .__bt-format-post-content > *:first-child, .single:not(.elementor-editor-active) .bt-post--content > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description > *:first-child {
+@media (max-width: 767.98px) {
+  .__bt-format-post-content, .single:not(.elementor-editor-active) .bt-post--content, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content, .single-podcast .bt-main-content-ss .bt-post--content-inner, .single-podcast .bt-main-content-ss .bt-post--extra-content, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description {
+    font-size: 16px; } }
+.__bt-format-post-content > *:first-child, .single:not(.elementor-editor-active) .bt-post--content > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description > *:first-child {
+  margin-top: 0 !important; }
+.__bt-format-post-content > *:last-child, .single:not(.elementor-editor-active) .bt-post--content > *:last-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--content-inner > *:last-child, .single-podcast .bt-main-content-ss .bt-post--extra-content > *:last-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description > *:last-child {
+  margin-bottom: 0 !important; }
+.__bt-format-post-content h2, .single:not(.elementor-editor-active) .bt-post--content h2, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content h2, .single-podcast .bt-main-content-ss .bt-post--content-inner h2, .single-podcast .bt-main-content-ss .bt-post--extra-content h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description h2 {
+  font-size: 30px;
+  margin: 32px 0 16px; }
+.__bt-format-post-content h3, .single:not(.elementor-editor-active) .bt-post--content h3, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content h3, .single-podcast .bt-main-content-ss .bt-post--content-inner h3, .single-podcast .bt-main-content-ss .bt-post--extra-content h3, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description h3 {
+  font-size: 24px;
+  margin: 24px 0 12px; }
+.__bt-format-post-content blockquote, .single:not(.elementor-editor-active) .bt-post--content blockquote, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote {
+  position: relative;
+  background: #f1f1f1;
+  padding: 30px 30px 30px 125px;
+  border-radius: 10px 20px 20px 10px;
+  font-style: italic;
+  color: var(--e-global-color-primary, #222); }
+  .__bt-format-post-content blockquote > *:first-child, .single:not(.elementor-editor-active) .bt-post--content blockquote > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote > *:first-child {
     margin-top: 0 !important; }
-  .__bt-format-post-content > *:last-child, .single:not(.elementor-editor-active) .bt-post--content > *:last-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--content-inner > *:last-child, .single-podcast .bt-main-content-ss .bt-post--extra-content > *:last-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description > *:last-child {
-    margin-bottom: 0 !important; }
-  .__bt-format-post-content h2, .single:not(.elementor-editor-active) .bt-post--content h2, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content h2, .single-podcast .bt-main-content-ss .bt-post--content-inner h2, .single-podcast .bt-main-content-ss .bt-post--extra-content h2, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description h2 {
-    font-size: 30px;
-    margin: 32px 0 16px; }
-  .__bt-format-post-content h3, .single:not(.elementor-editor-active) .bt-post--content h3, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content h3, .single-podcast .bt-main-content-ss .bt-post--content-inner h3, .single-podcast .bt-main-content-ss .bt-post--extra-content h3, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description h3 {
-    font-size: 24px;
-    margin: 24px 0 12px; }
-  .__bt-format-post-content blockquote, .single:not(.elementor-editor-active) .bt-post--content blockquote, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote {
+  .__bt-format-post-content blockquote cite, .single:not(.elementor-editor-active) .bt-post--content blockquote cite, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote cite, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote cite, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote cite, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote cite {
+    font-weight: 500;
+    color: var(--e-global-color-accent, #1FBECD);
+    font-style: normal; }
+  .__bt-format-post-content blockquote .bt-quote-icon, .single:not(.elementor-editor-active) .bt-post--content blockquote .bt-quote-icon, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    background: #ffffff;
+    border-radius: 100px; }
+    .__bt-format-post-content blockquote .bt-quote-icon svg, .single:not(.elementor-editor-active) .bt-post--content blockquote .bt-quote-icon svg, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote .bt-quote-icon svg, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon svg, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon svg, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon svg {
+      color: var(--e-global-color-accent, #1FBECD); }
+.__bt-format-post-content ul, .single:not(.elementor-editor-active) .bt-post--content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner ul, .single-podcast .bt-main-content-ss .bt-post--extra-content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul {
+  list-style: none;
+  padding-left: 30px;
+  line-height: 1.4; }
+  @media (max-width: 519.98px) {
+    .__bt-format-post-content ul, .single:not(.elementor-editor-active) .bt-post--content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner ul, .single-podcast .bt-main-content-ss .bt-post--extra-content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul {
+      padding-left: 15px; } }
+  .__bt-format-post-content ul li, .single:not(.elementor-editor-active) .bt-post--content ul li, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li {
     position: relative;
-    background: #f1f1f1;
-    padding: 30px 30px 30px 125px;
-    border-radius: 10px 20px 20px 10px;
-    font-style: italic;
-    color: var(--e-global-color-primary, #222); }
-    .__bt-format-post-content blockquote > *:first-child, .single:not(.elementor-editor-active) .bt-post--content blockquote > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote > *:first-child {
-      margin-top: 0 !important; }
-    .__bt-format-post-content blockquote cite, .single:not(.elementor-editor-active) .bt-post--content blockquote cite, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote cite, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote cite, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote cite, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote cite {
-      font-weight: 500;
-      color: var(--e-global-color-accent, #1FBECD);
-      font-style: normal; }
-    .__bt-format-post-content blockquote .bt-quote-icon, .single:not(.elementor-editor-active) .bt-post--content blockquote .bt-quote-icon, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon {
+    padding-left: 36px; }
+    .__bt-format-post-content ul li:not(:last-child), .single:not(.elementor-editor-active) .bt-post--content ul li:not(:last-child), .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li:not(:last-child), .single-podcast .bt-main-content-ss .bt-post--content-inner ul li:not(:last-child), .single-podcast .bt-main-content-ss .bt-post--extra-content ul li:not(:last-child), .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li:not(:last-child) {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #d9d9d9; }
+    .__bt-format-post-content ul li .bt-ul-icon, .single:not(.elementor-editor-active) .bt-post--content ul li .bt-ul-icon, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li .bt-ul-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li .bt-ul-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li .bt-ul-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li .bt-ul-icon {
       position: absolute;
-      top: 30px;
-      left: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 76px;
-      height: 76px;
-      background: #ffffff;
-      border-radius: 100px; }
-      .__bt-format-post-content blockquote .bt-quote-icon svg, .single:not(.elementor-editor-active) .bt-post--content blockquote .bt-quote-icon svg, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content blockquote .bt-quote-icon svg, .single-podcast .bt-main-content-ss .bt-post--content-inner blockquote .bt-quote-icon svg, .single-podcast .bt-main-content-ss .bt-post--extra-content blockquote .bt-quote-icon svg, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description blockquote .bt-quote-icon svg {
-        color: var(--e-global-color-accent, #1FBECD); }
-  .__bt-format-post-content ul, .single:not(.elementor-editor-active) .bt-post--content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner ul, .single-podcast .bt-main-content-ss .bt-post--extra-content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul {
-    list-style: none;
-    padding-left: 30px;
-    line-height: 1.4; }
-    @media (max-width: 519.98px) {
-      .__bt-format-post-content ul, .single:not(.elementor-editor-active) .bt-post--content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner ul, .single-podcast .bt-main-content-ss .bt-post--extra-content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul {
-        padding-left: 15px; } }
-    .__bt-format-post-content ul li, .single:not(.elementor-editor-active) .bt-post--content ul li, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li {
-      position: relative;
-      padding-left: 36px; }
-      .__bt-format-post-content ul li:not(:last-child), .single:not(.elementor-editor-active) .bt-post--content ul li:not(:last-child), .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li:not(:last-child), .single-podcast .bt-main-content-ss .bt-post--content-inner ul li:not(:last-child), .single-podcast .bt-main-content-ss .bt-post--extra-content ul li:not(:last-child), .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li:not(:last-child) {
-        margin-bottom: 12px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #d9d9d9; }
-      .__bt-format-post-content ul li .bt-ul-icon, .single:not(.elementor-editor-active) .bt-post--content ul li .bt-ul-icon, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content ul li .bt-ul-icon, .single-podcast .bt-main-content-ss .bt-post--content-inner ul li .bt-ul-icon, .single-podcast .bt-main-content-ss .bt-post--extra-content ul li .bt-ul-icon, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description ul li .bt-ul-icon {
-        position: absolute;
-        top: 1px;
-        left: 0;
-        line-height: 0;
-        color: var(--e-global-color-accent, #1FBECD); }
-  .__bt-format-post-content .wp-block-media-text, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text {
-    gap: 30px 50px; }
-    .__bt-format-post-content .wp-block-media-text__media, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__media, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__media, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__media, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__media, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__media {
-      overflow: hidden;
-      border-radius: 20px; }
-      .__bt-format-post-content .wp-block-media-text__media img, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__media img, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__media img, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__media img, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__media img, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__media img {
-        margin: 0 !important; }
-    .__bt-format-post-content .wp-block-media-text__content, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content {
-      padding: 0; }
-      .__bt-format-post-content .wp-block-media-text__content > *:first-child, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content > *:first-child {
-        margin-top: 0 !important; }
-      .__bt-format-post-content .wp-block-media-text__content > *:last-child, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content > *:last-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content > *:last-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content > *:last-child {
-        margin-bottom: 0 !important; }
-      .__bt-format-post-content .wp-block-media-text__content ul, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content ul, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content ul,
-      .__bt-format-post-content .wp-block-media-text__content ol,
-      .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content ol,
-      .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content ol,
-      .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content ol,
-      .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content ol,
-      .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content ol {
-        padding-left: 0; }
+      top: 1px;
+      left: 0;
+      line-height: 0;
+      color: var(--e-global-color-accent, #1FBECD); }
+.__bt-format-post-content .wp-block-media-text, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text {
+  gap: 30px 50px; }
+  .__bt-format-post-content .wp-block-media-text__media, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__media, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__media, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__media, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__media, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__media {
+    overflow: hidden;
+    border-radius: 20px; }
+    .__bt-format-post-content .wp-block-media-text__media img, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__media img, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__media img, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__media img, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__media img, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__media img {
+      margin: 0 !important; }
+  .__bt-format-post-content .wp-block-media-text__content, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content {
+    padding: 0; }
+    .__bt-format-post-content .wp-block-media-text__content > *:first-child, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content > *:first-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content > *:first-child, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content > *:first-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content > *:first-child {
+      margin-top: 0 !important; }
+    .__bt-format-post-content .wp-block-media-text__content > *:last-child, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content > *:last-child, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content > *:last-child, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content > *:last-child, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content > *:last-child {
+      margin-bottom: 0 !important; }
+    .__bt-format-post-content .wp-block-media-text__content ul, .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content ul, .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content ul, .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content ul, .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content ul, .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content ul,
+    .__bt-format-post-content .wp-block-media-text__content ol,
+    .single:not(.elementor-editor-active) .bt-post--content .wp-block-media-text__content ol,
+    .single-dealer .bt-main-content-ss .bt-post .bt-main-posts-ss .bt-post--content .wp-block-media-text__content ol,
+    .single-podcast .bt-main-content-ss .bt-post--content-inner .wp-block-media-text__content ol,
+    .single-podcast .bt-main-content-ss .bt-post--extra-content .wp-block-media-text__content ol,
+    .woocommerce .bt-main-product-ss div.product .woocommerce-tabs #tab-description .wp-block-media-text__content ol {
+      padding-left: 0; }
 
 .__bt-section-heading-style, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading, .bt-related-posts--heading, .single-car .bt-related-posts-ss--heading, .single-podcast .bt-related-posts-ss--heading, .woocommerce .bt-main-product-ss .related .bt-related-heading {
   text-align: left;
@@ -988,7 +989,7 @@ img.alignright {
   .__bt-section-heading-style .bt-head-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-head-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-head-text, .bt-related-posts--heading .bt-head-text, .single-car .bt-related-posts-ss--heading .bt-head-text, .single-podcast .bt-related-posts-ss--heading .bt-head-text, .woocommerce .bt-main-product-ss .related .bt-related-heading .bt-head-text {
     font-size: 20px;
     max-width: 640px;
-    margin: 10px auto 0; }
+    margin: 10px 0 0 0; }
   @media (max-width: 1199.98px) {
     .__bt-section-heading-style .bt-main-text, .bt-social-mcn-ss.bt-style-1 .bt-social-mcn-ss--heading .bt-main-text, .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading .bt-main-text, .bt-related-posts--heading .bt-main-text, .single-car .bt-related-posts-ss--heading .bt-main-text, .single-podcast .bt-related-posts-ss--heading .bt-main-text, .woocommerce .bt-main-product-ss .related .bt-related-heading .bt-main-text {
       font-size: 46px; }
@@ -1434,10 +1435,10 @@ img.alignright {
       .bt-social-mcn-ss.bt-style-2 .bt-social-mcn-ss--heading {
         max-width: 430px; } }
 
-.__bt-newsletter-form-style form, .__bt-newsletter-form-style-2 form, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form, .elementor-widget-shortcode .tnp-subscription-minimal form {
+.__bt-newsletter-form-style form, .__bt-newsletter-form-style-2 form, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form, .elementor-widget-shortcode .tnp-subscription-minimal form {
   position: relative;
   text-align: left !important; }
-  .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
+  .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
     width: 100%;
     max-width: calc(100% - 30px);
     border-radius: 15px;
@@ -1450,23 +1451,23 @@ img.alignright {
     padding: 29.22px 210px 27.78px 66.7px;
     height: 79px; }
     @media (max-width: 1024.98px) {
-      .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
+      .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
         padding: 29.22px 160px 27.78px 50.7px;
         background-position: center left 20px; } }
     @media (max-width: 767.98px) {
-      .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
+      .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
         height: 70px;
         padding: 20px 105px 20px 42px;
         background-position: center left 15px; } }
     @media (max-width: 359.98px) {
-      .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
+      .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email {
         max-width: 100%;
         padding-right: 15px; } }
-  .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email,
+  .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email,
   .__bt-newsletter-form-style form input.tnp-email::placeholder,
   .__bt-newsletter-form-style-2 form input.tnp-email::placeholder,
   .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email::placeholder,
-  .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email::placeholder,
+  .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email::placeholder,
   .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email::placeholder,
   .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email::placeholder {
     font-size: 17px;
@@ -1476,15 +1477,15 @@ img.alignright {
     color: var(--e-global-color-text, #555);
     font-family: var(--e-global-typography-text-font-family, "DM Sans"); }
     @media (max-width: 767.98px) {
-      .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email,
+      .__bt-newsletter-form-style form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email,
       .__bt-newsletter-form-style form input.tnp-email::placeholder,
       .__bt-newsletter-form-style-2 form input.tnp-email::placeholder,
       .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email::placeholder,
-      .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email::placeholder,
+      .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email::placeholder,
       .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email::placeholder,
       .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email::placeholder {
         font-size: 16px; } }
-  .__bt-newsletter-form-style form input.tnp-submit, .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+  .__bt-newsletter-form-style form input.tnp-submit, .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
     position: absolute;
     top: 50%;
     right: 0;
@@ -1508,14 +1509,14 @@ img.alignright {
     justify-content: center;
     margin: 0; }
     @media (max-width: 1024.98px) {
-      .__bt-newsletter-form-style form input.tnp-submit, .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+      .__bt-newsletter-form-style form input.tnp-submit, .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
         min-width: 150px;
         padding: 0 22px; } }
     @media (max-width: 767.98px) {
-      .__bt-newsletter-form-style form input.tnp-submit, .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+      .__bt-newsletter-form-style form input.tnp-submit, .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
         height: 47px; } }
     @media (max-width: 575.98px) {
-      .__bt-newsletter-form-style form input.tnp-submit, .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+      .__bt-newsletter-form-style form input.tnp-submit, .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
         font-size: 14px;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -1524,7 +1525,7 @@ img.alignright {
         width: 130px;
         padding: 0 5px; } }
     @media (max-width: 359.98px) {
-      .__bt-newsletter-form-style form input.tnp-submit, .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
+      .__bt-newsletter-form-style form input.tnp-submit, .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit, .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit {
         position: relative;
         top: inherit;
         bottom: inherit;
@@ -1532,11 +1533,11 @@ img.alignright {
         width: 100%;
         margin-top: 16px; } }
 
-.__bt-newsletter-form-style-2 form::before, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::before, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form::before, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::before, .__bt-newsletter-form-style-2 form::after, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::after, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form::after, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::after {
+.__bt-newsletter-form-style-2 form::before, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::before, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form::before, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::before, .__bt-newsletter-form-style-2 form::after, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::after, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form::after, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::after {
   content: " ";
   display: inline-block;
   position: absolute; }
-.__bt-newsletter-form-style-2 form::before, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::before, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form::before, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::before {
+.__bt-newsletter-form-style-2 form::before, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::before, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form::before, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::before {
   width: 9px;
   height: 15px;
   background-position: center;
@@ -1547,12 +1548,12 @@ img.alignright {
   right: 30px;
   z-index: 9; }
   @media (max-width: 519.98px) {
-    .__bt-newsletter-form-style-2 form::before, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::before, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form::before, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::before {
+    .__bt-newsletter-form-style-2 form::before, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::before, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form::before, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::before {
       width: 7px;
       height: 13px;
       bottom: 7px;
       right: 25px; } }
-.__bt-newsletter-form-style-2 form::after, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::after, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form::after, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::after {
+.__bt-newsletter-form-style-2 form::after, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::after, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form::after, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::after {
   width: 45px;
   height: 48px;
   background-color: var(--e-global-color-secondary, #111);
@@ -1563,27 +1564,27 @@ img.alignright {
   border-radius: 10px;
   z-index: 8; }
   @media (max-width: 519.98px) {
-    .__bt-newsletter-form-style-2 form::after, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::after, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form::after, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::after {
+    .__bt-newsletter-form-style-2 form::after, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form::after, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form::after, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form::after {
       width: 40px;
       height: 43px;
       right: 10px; } }
-.__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email::placeholder, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email::placeholder, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email::placeholder, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email::placeholder {
+.__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email, .__bt-newsletter-form-style-2 form input.tnp-email::placeholder, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email::placeholder, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email::placeholder, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email::placeholder {
   font-size: 16px;
   line-height: normal; }
-.__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email {
+.__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email {
   height: 53px;
   padding-top: 16px;
   padding-right: 67px;
   padding-bottom: 16px;
   max-width: 100%; }
   @media (min-width: 768px) {
-    .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email {
+    .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email {
       background-position: center left 26px;
       padding-left: 58px; } }
   @media (max-width: 519.98px) {
-    .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email {
+    .__bt-newsletter-form-style-2 form input.tnp-email, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-email, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-email, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-email {
       padding-right: 58px; } }
-.__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit {
+.__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit {
   font-size: 0;
   width: 45px;
   height: 48px;
@@ -1597,12 +1598,12 @@ img.alignright {
   background-color: transparent;
   z-index: 10; }
   @media (max-width: 519.98px) {
-    .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit {
+    .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit {
       width: 40px;
       height: 43px;
       right: 10px; } }
   @media (max-width: 359.98px) {
-    .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-contact-information .bt-contact-information--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit {
+    .__bt-newsletter-form-style-2 form input.tnp-submit, .elementor-element.bt-newsletter-footer-style-3 .elementor-widget-shortcode .tnp-subscription-minimal form input.tnp-submit, .bt-block-subscribe-contact .bt-subscribe-contact--form .tnp-subscription-minimal form input.tnp-submit, .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-newsletter--form form input.tnp-submit {
       position: absolute; } }
 
 @media (min-width: 1025px) and (max-width: 1199.98px) {
@@ -1612,6 +1613,9 @@ img.alignright {
 @media (min-width: 1025px) and (max-width: 1199.98px) {
   .elementor-element.bt-colmn-sidebar .bt-block-recent-posts .bt-post {
     gap: 15px; } }
+
+.dialog-lightbox-widget .elementor-slideshow__header {
+  width: auto; }
 
 /*
 * Import
@@ -2178,7 +2182,7 @@ img.alignright {
     position: relative;
     font-size: 50px;
     color: #fff;
-    word-break: break-word;
+    word-break: break-all;
     margin: 0;
     z-index: 3;
     overflow: hidden;
@@ -2551,47 +2555,47 @@ img.alignright {
         .widget .bt-block-recent-posts .bt-post-author-w-avatar--name {
           font-size: 14px; } }
 
-.bt-block-contact-information .bt-contact-information {
+.bt-block-subscribe-contact .bt-subscribe-contact {
   background: var(--e-global-color-accent, #1FBECD);
   border-radius: 10px;
   padding: 36px 30px 36px 30px; }
   @media (max-width: 1199.98px) and (min-width: 991.98px) {
-    .bt-block-contact-information .bt-contact-information {
+    .bt-block-subscribe-contact .bt-subscribe-contact {
       padding: 32px 15px; } }
   @media (max-width: 519.98px) {
-    .bt-block-contact-information .bt-contact-information {
+    .bt-block-subscribe-contact .bt-subscribe-contact {
       padding: 32px 15px; } }
-  .bt-block-contact-information .bt-contact-information-header {
+  .bt-block-subscribe-contact .bt-subscribe-contact-header {
     display: flex;
     gap: 20px; }
     @media (max-width: 1199.98px) and (min-width: 991.98px) {
-      .bt-block-contact-information .bt-contact-information-header {
+      .bt-block-subscribe-contact .bt-subscribe-contact-header {
         gap: 10px; } }
     @media (max-width: 519.98px) {
-      .bt-block-contact-information .bt-contact-information-header {
+      .bt-block-subscribe-contact .bt-subscribe-contact-header {
         gap: 10px; } }
-    .bt-block-contact-information .bt-contact-information-header svg {
+    .bt-block-subscribe-contact .bt-subscribe-contact-header svg {
       width: 100%;
       height: auto;
       max-width: 50px; }
-  .bt-block-contact-information .bt-contact-information--heading {
+  .bt-block-subscribe-contact .bt-subscribe-contact--heading {
     font-size: 24px;
     line-height: normal;
     color: #fff;
     margin: 0; }
     @media (max-width: 519.98px) {
-      .bt-block-contact-information .bt-contact-information--heading {
+      .bt-block-subscribe-contact .bt-subscribe-contact--heading {
         font-size: 20px; } }
-  .bt-block-contact-information .bt-contact-information--desc {
+  .bt-block-subscribe-contact .bt-subscribe-contact--desc {
     color: #fff;
     font-size: 16px;
     font-weight: 500;
     line-height: normal;
     margin: 2px 0 0 0; }
     @media (max-width: 519.98px) {
-      .bt-block-contact-information .bt-contact-information--desc {
+      .bt-block-subscribe-contact .bt-subscribe-contact--desc {
         font-size: 14px; } }
-  .bt-block-contact-information .bt-contact-information--form {
+  .bt-block-subscribe-contact .bt-subscribe-contact--form {
     margin-top: 22px; }
 
 .gform_wrapper.bt-get-price-form_wrapper .gform-field-label--type-inline {
@@ -3360,7 +3364,7 @@ body {
       padding: 75px 0; } }
 
 .bt-sidebar {
-  font-size: 16px;
+  font-size: 18px;
   background: #f1f1f1;
   padding: 30px;
   border-radius: 20px; }
@@ -3658,6 +3662,10 @@ body {
   transition: all 3s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
 .bt-post--featured:hover img {
   transform: scale(1.1); }
+
+.bt-post--excerpt {
+  font-size: 18px;
+  line-height: 166.667%; }
 
 .elementor .bt-post--title {
   font-size: 22px;
@@ -4234,13 +4242,13 @@ body {
         margin-left: 0; } }
 
 .__bt-post-car-default, .bt-car-layout .bt-post, .single-car .bt-related-posts-ss--list .bt-post, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post, .bt-elwg-car-loop-item--default .bt-post {
-  background: #FFFFFF;
+  background: #ffffff;
   overflow: hidden; }
   .__bt-post-car-default .bt-post--inner, .bt-car-layout .bt-post .bt-post--inner, .single-car .bt-related-posts-ss--list .bt-post .bt-post--inner, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--inner, .bt-elwg-car-loop-item--default .bt-post .bt-post--inner {
     position: relative;
     overflow: hidden;
-    background: #FFFFFF;
-    border: 1px solid #DADADA;
+    background: #ffffff;
+    border: 1px solid #dadada;
     border-radius: 20px; }
   .__bt-post-car-default .bt-post--thumbnail, .bt-car-layout .bt-post .bt-post--thumbnail, .single-car .bt-related-posts-ss--list .bt-post .bt-post--thumbnail, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--thumbnail, .bt-elwg-car-loop-item--default .bt-post .bt-post--thumbnail {
     position: relative; }
@@ -4256,14 +4264,14 @@ body {
       justify-content: center;
       width: 44px;
       height: 44px;
-      background: #FFFFFF;
-      border: 1px solid #D6D6D6;
+      background: #ffffff;
+      border: 1px solid #d6d6d6;
       border-radius: 100px;
-      transition: all .3s; }
+      transition: all 0.3s; }
       .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn.added, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn.added, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn.added {
         background: var(--e-global-color-accent, #1FBECD); }
         .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn.added svg, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
-          fill: #FFFFFF; }
+          fill: #ffffff; }
       .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn svg, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn svg, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn svg, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn svg {
         fill: var(--e-global-color-accent, #1FBECD); }
   .__bt-post-car-default .bt-post--infor, .bt-car-layout .bt-post .bt-post--infor, .single-car .bt-related-posts-ss--list .bt-post .bt-post--infor, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--infor, .bt-elwg-car-loop-item--default .bt-post .bt-post--infor {
@@ -4275,7 +4283,7 @@ body {
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
-    color: #FFFFFF;
+    color: #ffffff;
     background: var(--e-global-color-accent, #1FBECD);
     padding: 10px 30px;
     border-radius: 0 10px 10px 0;
@@ -4293,7 +4301,7 @@ body {
       font-size: 16px;
       line-height: 150%;
       color: inherit;
-      background: #F1F1F1;
+      background: #f1f1f1;
       padding: 8px 15px;
       border-radius: 10px; }
   .__bt-post-car-default .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--title, .bt-elwg-car-loop-item--default .bt-post .bt-post--title {
@@ -4305,7 +4313,7 @@ body {
     height: 69px;
     overflow-x: auto;
     overflow-y: hidden;
-    border-top: 1px solid #DADADA; }
+    border-top: 1px solid #dadada; }
   .__bt-post-car-default .bt-post--meta-row, .bt-car-layout .bt-post .bt-post--meta-row, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-row, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-row, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-row {
     position: absolute;
     top: 0;
@@ -4319,7 +4327,7 @@ body {
     width: 100%;
     padding: 12px 16px; }
     .__bt-post-car-default .bt-post--meta-col:not(:last-child), .bt-car-layout .bt-post .bt-post--meta-col:not(:last-child), .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-col:not(:last-child), .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-col:not(:last-child), .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-col:not(:last-child) {
-      border-right: 1px solid #DADADA; }
+      border-right: 1px solid #dadada; }
   .__bt-post-car-default .bt-post--meta-item, .bt-car-layout .bt-post .bt-post--meta-item, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item {
     position: relative;
     min-width: 86px;
@@ -4351,16 +4359,16 @@ body {
     text-transform: uppercase;
     line-height: 20px;
     color: var(--e-global-color-accent, #1FBECD);
-    background: #F1F1F1;
+    background: #f1f1f1;
     padding: 18px 20px; }
     .__bt-post-car-default .bt-post--readmore a svg path, .bt-car-layout .bt-post .bt-post--readmore a svg path, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a svg path, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a svg path, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a svg path {
       stroke: var(--e-global-color-accent, #1FBECD);
-      transition: all .3s; }
+      transition: all 0.3s; }
     .__bt-post-car-default .bt-post--readmore a:hover, .bt-car-layout .bt-post .bt-post--readmore a:hover, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a:hover, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a:hover, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a:hover {
-      color: #FFFFFF;
+      color: #ffffff;
       background: var(--e-global-color-accent, #1FBECD); }
       .__bt-post-car-default .bt-post--readmore a:hover svg path, .bt-car-layout .bt-post .bt-post--readmore a:hover svg path, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a:hover svg path, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a:hover svg path, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a:hover svg path {
-        stroke: #FFFFFF; }
+        stroke: #ffffff; }
 
 .__bt-post-car-style-1, .bt-elwg-car-loop-item--style-1 .bt-post {
   position: relative;
@@ -4368,8 +4376,8 @@ body {
   .__bt-post-car-style-1 .bt-post--inner, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--inner {
     position: relative;
     overflow: hidden;
-    background: #FFFFFF;
-    border: 1px solid #DADADA;
+    background: #ffffff;
+    border: 1px solid #dadada;
     border-radius: 20px; }
   .__bt-post-car-style-1 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--thumbnail {
     position: relative; }
@@ -4397,14 +4405,14 @@ body {
       justify-content: center;
       width: 44px;
       height: 44px;
-      background: #FFFFFF;
-      border: 1px solid #D6D6D6;
+      background: #ffffff;
+      border: 1px solid #d6d6d6;
       border-radius: 100px;
-      transition: all .3s; }
+      transition: all 0.3s; }
       .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn.added {
         background: var(--e-global-color-accent, #1FBECD); }
         .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
-          fill: #FFFFFF; }
+          fill: #ffffff; }
       .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn svg {
         fill: var(--e-global-color-accent, #1FBECD); }
   .__bt-post-car-style-1 .bt-post--infor-inner, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--infor-inner {
@@ -4413,7 +4421,7 @@ body {
     max-width: 380px;
     min-height: 58px;
     font-size: 22px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0 0 20px; }
   .__bt-post-car-style-1 .bt-post--body-price, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--body-price {
     display: inline-flex;
@@ -4427,21 +4435,21 @@ body {
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 10px 25px 10px 0; }
   .__bt-post-car-style-1 .bt-post--price, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--price {
     font-size: 20px;
     font-weight: 500;
     line-height: 150%;
     color: var(--e-global-color-accent, #1FBECD);
-    background: #FFFFFF;
+    background: #ffffff;
     padding: 10px 25px; }
     .__bt-post-car-style-1 .bt-post--price a, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--price a {
       display: inline-block;
       font-size: 16px;
       line-height: 150%;
       color: inherit;
-      background: #F1F1F1;
+      background: #f1f1f1;
       padding: 8px 15px;
       border-radius: 10px; }
   .__bt-post-car-style-1 .bt-post--meta, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta {
@@ -4466,7 +4474,7 @@ body {
         right: 0;
         width: 1px;
         height: calc(100% - 32px);
-        background: #AEAEAE; }
+        background: #aeaeae; }
   .__bt-post-car-style-1 .bt-post--meta-item, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item {
     display: flex;
     flex-direction: column; }
@@ -4478,12 +4486,12 @@ body {
     .__bt-post-car-style-1 .bt-post--meta-item .bt-label, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item .bt-label {
       font-size: 14px;
       line-height: 150%;
-      color: #AFAFAF; }
+      color: #afafaf; }
     .__bt-post-car-style-1 .bt-post--meta-item .bt-value, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item .bt-value {
       font-size: 16px;
       font-weight: 500;
       line-height: 150%;
-      color: #FFFFFF; }
+      color: #ffffff; }
   .__bt-post-car-style-1 .bt-post--readmore a, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a {
     display: flex;
     align-items: center;
@@ -4494,25 +4502,25 @@ body {
     text-transform: uppercase;
     line-height: 20px;
     color: var(--e-global-color-accent, #1FBECD);
-    background: #F1F1F1;
+    background: #f1f1f1;
     padding: 18px 20px; }
     .__bt-post-car-style-1 .bt-post--readmore a svg path, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a svg path {
       stroke: var(--e-global-color-accent, #1FBECD);
-      transition: all .3s; }
+      transition: all 0.3s; }
     .__bt-post-car-style-1 .bt-post--readmore a:hover, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a:hover {
-      color: #FFFFFF;
+      color: #ffffff;
       background: var(--e-global-color-accent, #1FBECD); }
       .__bt-post-car-style-1 .bt-post--readmore a:hover svg path, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a:hover svg path {
-        stroke: #FFFFFF; }
+        stroke: #ffffff; }
 
 .__bt-post-car-style-2, .bt-elwg-car-loop-item--style-2 .bt-post {
-  background: #FFFFFF;
+  background: #ffffff;
   overflow: hidden; }
   .__bt-post-car-style-2 .bt-post--inner, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--inner {
     position: relative;
     overflow: hidden;
-    background: #FFFFFF;
-    border: 1px solid #DADADA;
+    background: #ffffff;
+    border: 1px solid #dadada;
     border-radius: 20px; }
   .__bt-post-car-style-2 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--thumbnail {
     position: relative; }
@@ -4528,14 +4536,14 @@ body {
       justify-content: center;
       width: 44px;
       height: 44px;
-      background: #FFFFFF;
-      border: 1px solid #D6D6D6;
+      background: #ffffff;
+      border: 1px solid #d6d6d6;
       border-radius: 100px;
-      transition: all .3s; }
+      transition: all 0.3s; }
       .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn.added {
         background: var(--e-global-color-accent, #1FBECD); }
         .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
-          fill: #FFFFFF; }
+          fill: #ffffff; }
       .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn svg {
         fill: var(--e-global-color-accent, #1FBECD); }
   .__bt-post-car-style-2 .bt-post--infor, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--infor {
@@ -4564,7 +4572,7 @@ body {
       font-size: 16px;
       line-height: 150%;
       color: inherit;
-      background: #F1F1F1;
+      background: #f1f1f1;
       padding: 8px 15px;
       border-radius: 10px; }
   .__bt-post-car-style-2 .bt-post--title, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--title {
@@ -4576,7 +4584,7 @@ body {
     height: 52px;
     overflow-x: auto;
     padding-top: 20px;
-    border-top: 1px solid #DADADA; }
+    border-top: 1px solid #dadada; }
   .__bt-post-car-style-2 .bt-post--meta-row, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-row {
     display: flex;
     white-space: nowrap;
@@ -4589,7 +4597,7 @@ body {
     .__bt-post-car-style-2 .bt-post--meta-col:not(:last-child), .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-col:not(:last-child) {
       margin-right: 20px;
       padding-right: 20px;
-      border-right: 1px solid #DADADA; }
+      border-right: 1px solid #dadada; }
   .__bt-post-car-style-2 .bt-post--meta-item, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item {
     position: relative;
     padding-left: 30px; }
@@ -4618,16 +4626,16 @@ body {
     text-transform: uppercase;
     line-height: 20px;
     color: var(--e-global-color-accent, #1FBECD);
-    background: #F1F1F1;
+    background: #f1f1f1;
     padding: 18px 20px; }
     .__bt-post-car-style-2 .bt-post--readmore a svg path, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a svg path {
       stroke: var(--e-global-color-accent, #1FBECD);
-      transition: all .3s; }
+      transition: all 0.3s; }
     .__bt-post-car-style-2 .bt-post--readmore a:hover, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a:hover {
-      color: #FFFFFF;
+      color: #ffffff;
       background: var(--e-global-color-accent, #1FBECD); }
       .__bt-post-car-style-2 .bt-post--readmore a:hover svg path, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a:hover svg path {
-        stroke: #FFFFFF; }
+        stroke: #ffffff; }
 
 .__bt-post-car-style-3, .bt-elwg-car-loop-item--style-3 .bt-post {
   position: relative;
@@ -4635,8 +4643,8 @@ body {
   .__bt-post-car-style-3 .bt-post--inner, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--inner {
     position: relative;
     overflow: hidden;
-    background: #FFFFFF;
-    border: 1px solid #DADADA;
+    background: #ffffff;
+    border: 1px solid #dadada;
     border-radius: 20px; }
   .__bt-post-car-style-3 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--thumbnail {
     position: relative; }
@@ -4664,14 +4672,14 @@ body {
       justify-content: center;
       width: 44px;
       height: 44px;
-      background: #FFFFFF;
-      border: 1px solid #D6D6D6;
+      background: #ffffff;
+      border: 1px solid #d6d6d6;
       border-radius: 100px;
-      transition: all .3s; }
+      transition: all 0.3s; }
       .__bt-post-car-style-3 .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--icon-btn .bt-icon-btn.added {
         background: var(--e-global-color-accent, #1FBECD); }
         .__bt-post-car-style-3 .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
-          fill: #FFFFFF; }
+          fill: #ffffff; }
       .__bt-post-car-style-3 .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--icon-btn .bt-icon-btn svg {
         fill: var(--e-global-color-accent, #1FBECD); }
   .__bt-post-car-style-3 .bt-post--infor-inner, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--infor-inner {
@@ -4680,14 +4688,14 @@ body {
     max-width: 380px;
     min-height: 58px;
     font-size: 22px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0 0 20px; }
   .__bt-post-car-style-3 .bt-post--body, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--body {
     display: inline-flex;
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
-    color: #FFFFFF;
+    color: #ffffff;
     background: var(--e-global-color-accent, #1FBECD);
     margin-left: -30px;
     padding: 10px 30px;
@@ -4696,7 +4704,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     line-height: 150%;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-top: 20px;
     margin-bottom: 8px; }
     .__bt-post-car-style-3 .bt-post--price a, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--price a {
@@ -4704,14 +4712,14 @@ body {
       font-size: 16px;
       line-height: 150%;
       color: inherit;
-      background: #F1F1F1;
+      background: #f1f1f1;
       padding: 8px 15px;
       border-radius: 10px; }
   .__bt-post-car-style-3 .bt-post--meta, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta {
     position: relative;
     max-width: 450px;
     height: 69px;
-    background: #FFFFFF;
+    background: #ffffff;
     margin-left: -30px;
     padding-left: 30px;
     border-radius: 0px 10px 10px 0px;
@@ -4729,7 +4737,7 @@ body {
     width: 100%;
     padding: 12px 16px; }
     .__bt-post-car-style-3 .bt-post--meta-col:nth-child(2n), .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta-col:nth-child(2n) {
-      background: #F8F8FF; }
+      background: #f8f8ff; }
   .__bt-post-car-style-3 .bt-post--meta-item, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta-item {
     position: relative;
     min-width: 86px;
@@ -4760,7 +4768,7 @@ body {
   justify-content: space-between;
   padding-bottom: 40px;
   margin-bottom: 50px;
-  border-bottom: 1px solid #D9D9D9; }
+  border-bottom: 1px solid #d9d9d9; }
   .bt-car-topbar > div {
     display: flex;
     flex-wrap: wrap;
@@ -4785,8 +4793,8 @@ body {
       min-height: 48px; }
       .bt-car-topbar .bt-car-sort-block .select2-container .select2-selection--single {
         height: 48px;
-        background-color: #F1F1F1;
-        border-color: #F1F1F1; }
+        background-color: #f1f1f1;
+        border-color: #f1f1f1; }
       .bt-car-topbar .bt-car-sort-block .select2-container--default .select2-selection--single .select2-selection__rendered {
         line-height: 48px; }
       .bt-car-topbar .bt-car-sort-block .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -4802,22 +4810,22 @@ body {
       justify-content: center;
       width: 46px;
       height: 46px;
-      background: #FFFFFF; }
+      background: #ffffff; }
       .bt-car-topbar .bt-car-view-block .bt-view-type.bt-view-grid {
-        border-top: 1px solid #DADADA;
-        border-left: 1px solid #DADADA;
-        border-bottom: 1px solid #DADADA;
+        border-top: 1px solid #dadada;
+        border-left: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
         border-radius: 10px 0 0 10px; }
       .bt-car-topbar .bt-car-view-block .bt-view-type.bt-view-list {
-        border-top: 1px solid #DADADA;
-        border-right: 1px solid #DADADA;
-        border-bottom: 1px solid #DADADA;
+        border-top: 1px solid #dadada;
+        border-right: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
         border-radius: 0 10px 10px 0; }
       .bt-car-topbar .bt-car-view-block .bt-view-type.active {
         background: var(--e-global-color-accent, #1FBECD);
         border-color: var(--e-global-color-accent, #1FBECD); }
         .bt-car-topbar .bt-car-view-block .bt-view-type.active svg path {
-          stroke: #FFFFFF; }
+          stroke: #ffffff; }
       .bt-car-topbar .bt-car-view-block .bt-view-type svg {
         width: 28px;
         height: auto; }
@@ -4826,7 +4834,7 @@ body {
   transform: translateY(-30px); }
 
 .bt-car-sidebar .bt-car-filter-form {
-  background: #F1F1F1;
+  background: #f1f1f1;
   padding: 30px;
   border-radius: 20px; }
 .bt-car-sidebar .bt-car-filter-fields {
@@ -4834,14 +4842,14 @@ body {
   flex-direction: column;
   gap: 20px; }
 .bt-car-sidebar .bt-form-field {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 10px; }
   .bt-car-sidebar .bt-form-field.bt-field-type-search {
     position: relative;
     display: flex; }
     .bt-car-sidebar .bt-form-field.bt-field-type-search input {
       width: 100%;
-      border-color: #FFFFFF; }
+      border-color: #ffffff; }
     .bt-car-sidebar .bt-form-field.bt-field-type-search a {
       position: absolute;
       top: 5px;
@@ -4851,7 +4859,7 @@ body {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: #FFFFFF;
+      color: #ffffff;
       background: var(--e-global-color-accent, #1FBECD);
       border-radius: 8px; }
     .bt-car-sidebar .bt-form-field.bt-field-type-search svg {
@@ -4861,9 +4869,9 @@ body {
     padding: 20px 24px; }
     .bt-car-sidebar .bt-form-field.bt-field-type-slider .bt-field-slider {
       height: 5px;
-      background: #FFFFFF;
+      background: #ffffff;
       margin: 15px 10px;
-      border-color: #D9D9D9;
+      border-color: #d9d9d9;
       box-shadow: none; }
       .bt-car-sidebar .bt-form-field.bt-field-type-slider .bt-field-slider .noUi-connect {
         background: var(--e-global-color-accent, #1FBECD); }
@@ -4884,9 +4892,9 @@ body {
       font-size: 16px;
       line-height: 150%; }
   .bt-car-sidebar .bt-form-field.bt-field-type-select select {
-    border-color: #FFFFFF; }
+    border-color: #ffffff; }
   .bt-car-sidebar .bt-form-field.bt-field-type-select .select2-container--default .select2-selection--single {
-    border-color: #FFFFFF; }
+    border-color: #ffffff; }
   .bt-car-sidebar .bt-form-field.bt-field-type-multi {
     padding: 20px 24px; }
     .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list {
@@ -4911,15 +4919,15 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #FFF;
-        border: 1px solid #D9D9D9;
+        background: #fff;
+        border: 1px solid #d9d9d9;
         border-radius: 5px; }
       .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-item svg {
         fill: var(--e-global-color-accent, #1FBECD);
         width: 16px;
         height: auto;
         opacity: 0;
-        transition: all .3s; }
+        transition: all 0.3s; }
       .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-item a {
         color: inherit; }
   .bt-car-sidebar .bt-form-field .bt-field-title {
@@ -4985,7 +4993,7 @@ body {
     z-index: 9999;
     opacity: 0;
     transform: translateX(-100%);
-    transition: all .5s; }
+    transition: all 0.5s; }
     .bt-car-sidebar .bt-car-filter-form {
       border-radius: 0; }
 
@@ -4999,7 +5007,7 @@ body {
     background: rgba(0, 0, 0, 0.83);
     opacity: 0;
     visibility: hidden;
-    transition: all .3s; } }
+    transition: all 0.3s; } }
 .bt-filter-results {
   position: relative;
   min-height: 540px; }
@@ -5009,7 +5017,7 @@ body {
   .bt-filter-results .bt-loading-wave {
     opacity: 0;
     visibility: hidden;
-    transition: all .3s; }
+    transition: all 0.3s; }
 
 .bt-car-layout {
   display: flex;
@@ -5020,7 +5028,7 @@ body {
     @media (max-width: 767.98px) {
       .bt-car-layout[data-view=""] .bt-post, .bt-car-layout[data-view="grid"] .bt-post {
         width: 100%; } }
-  @media (min-width: 768px) {
+  @media (min-width: 767.98px) {
     .bt-car-layout[data-view="list"] .bt-post {
       width: 100%; }
       .bt-car-layout[data-view="list"] .bt-post--inner {
@@ -5080,16 +5088,16 @@ body {
   .__bt-single-car-style-1 .bt-post--meta, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta {
     display: flex;
     flex-wrap: wrap;
-    background: #FFFFFF;
+    background: #ffffff;
     overflow: hidden;
     margin-bottom: 50px;
-    border: 1px solid #DADADA;
+    border: 1px solid #dadada;
     border-radius: 10px; }
   .__bt-single-car-style-1 .bt-post--meta-col, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-col {
     width: 25%; }
     .__bt-single-car-style-1 .bt-post--meta-col:not(:last-child), .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-col:not(:last-child) {
       width: calc(25% - 1px);
-      border-right: 1px solid #DADADA; }
+      border-right: 1px solid #dadada; }
   .__bt-single-car-style-1 .bt-post--meta-item, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-item {
     padding: 18px 30px; }
     .__bt-single-car-style-1 .bt-post--meta-item .bt-meta-item, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-item .bt-meta-item {
@@ -5150,11 +5158,11 @@ body {
       left: 25px;
       width: calc(100% - 25px);
       height: 1px;
-      background: #D9D9D9;
+      background: #d9d9d9;
       z-index: -1; }
     .__bt-single-car-style-1 .bt-post--section .bt-title-ss span, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-title-ss span {
       display: inline-block;
-      background: #FFFFFF;
+      background: #ffffff;
       padding-right: 30px; }
   .__bt-single-car-style-1 .bt-post--section .bt-meta-list, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-meta-list {
     display: flex;
@@ -5165,7 +5173,7 @@ body {
       display: flex;
       position: relative;
       padding: 10px 0 10px 36px;
-      border-bottom: 1px solid #D9D9D9; }
+      border-bottom: 1px solid #d9d9d9; }
       .__bt-single-car-style-1 .bt-post--section .bt-meta-list .bt-meta-item svg, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-meta-list .bt-meta-item svg {
         position: absolute;
         left: 0;
@@ -5184,7 +5192,7 @@ body {
       display: flex;
       position: relative;
       padding: 10px 0 10px 36px;
-      border-bottom: 1px solid #D9D9D9; }
+      border-bottom: 1px solid #d9d9d9; }
       .__bt-single-car-style-1 .bt-post--section .bt-feature-list .bt-feature-item svg, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-feature-list .bt-feature-item svg {
         position: absolute;
         left: 0;
@@ -5217,13 +5225,13 @@ body {
     flex-direction: column;
     gap: 30px; }
     .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block {
-      background: #FFFFFF;
+      background: #ffffff;
       overflow: hidden;
-      border: 1px solid #DADADA;
+      border: 1px solid #dadada;
       border-radius: 20px; }
       .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car {
         position: relative;
-        color: #FFFFFF;
+        color: #ffffff;
         background: var(--e-global-color-accent, #1FBECD);
         padding: 30px; }
         .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-sale-body, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-sale-body {
@@ -5233,7 +5241,7 @@ body {
           font-size: 16px;
           font-weight: 500;
           line-height: 150%;
-          color: #FFFFFF;
+          color: #ffffff;
           background: var(--e-global-color-secondary, #111);
           padding: 10px 30px;
           border-radius: 0 10px 10px 0; }
@@ -5250,14 +5258,14 @@ body {
             justify-content: center;
             width: 44px;
             height: 44px;
-            background: #FFF;
-            border: 1px solid #D6D6D6;
+            background: #fff;
+            border: 1px solid #d6d6d6;
             border-radius: 100px;
-            transition: all .3s; }
+            transition: all 0.3s; }
             .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-sale-icon-btn .bt-icon-btn.added, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-sale-icon-btn .bt-icon-btn.added {
               background: var(--e-global-color-accent, #1FBECD); }
               .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-sale-icon-btn .bt-icon-btn.added svg, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-sale-icon-btn .bt-icon-btn.added svg {
-                fill: #FFFFFF; }
+                fill: #ffffff; }
             .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-sale-icon-btn .bt-icon-btn svg, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-sale-icon-btn .bt-icon-btn svg {
               fill: var(--e-global-color-accent, #1FBECD); }
         .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-sale-price, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-sale-price {
@@ -5271,14 +5279,14 @@ body {
             font-weight: 500;
             line-height: 150%;
             color: var(--e-global-color-accent, #1FBECD);
-            background: #FFFFFF;
+            background: #ffffff;
             padding: 8px 15px;
             border-radius: 10px; }
         .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-offer-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-car .bt-offer-btn {
           display: inline-flex;
           align-items: center;
           gap: 10px;
-          color: #FFFFFF;
+          color: #ffffff;
           text-decoration: underline;
           text-underline-offset: 3px; }
       .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer {
@@ -5310,7 +5318,7 @@ body {
           line-height: 150%;
           padding: 10px 0 10px 28px; }
           .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-meta .bt-meta-item:not(:last-child), .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-meta .bt-meta-item:not(:last-child) {
-            border-bottom: 1px solid #D9D9D9; }
+            border-bottom: 1px solid #d9d9d9; }
           .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-meta .bt-meta-item svg, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-meta .bt-meta-item svg {
             position: absolute;
             top: 10px;
@@ -5322,21 +5330,27 @@ body {
           display: flex;
           flex-direction: column;
           gap: 10px; }
+          .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-message-btn {
+            padding: 24px 40px; }
+          .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn {
+            padding: 21px 40px; }
           .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-view-all-link, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer .bt-dealer-action .bt-view-all-link {
             display: flex;
             justify-content: center;
             text-decoration: underline;
             text-underline-offset: 3px;
-            margin-top: 15px; }
+            margin-top: 15px;
+            font-size: 18px; }
       .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title {
         background: var(--e-global-color-accent, #1FBECD);
         padding: 28px 30px; }
         .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title h3, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title h3 {
           font-size: 22px;
-          color: #FFFFFF;
+          color: #ffffff;
           margin: 0; }
       .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content {
-        padding: 25px 30px; }
+        padding: 25px 30px;
+        font-size: 18px; }
         .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content ul, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content ul {
           margin: 0; }
       .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-view-detail .bt-view-detail-btn, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-view-detail .bt-view-detail-btn {
@@ -5349,10 +5363,10 @@ body {
         line-height: 24px;
         text-transform: uppercase;
         color: var(--e-global-color-accent, #1FBECD);
-        background: #F1F1F1;
-        padding: 18px 20px; }
+        background: #f1f1f1;
+        padding: 17px 20px; }
         .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-view-detail .bt-view-detail-btn:hover, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-view-detail .bt-view-detail-btn:hover {
-          color: #FFFFFF;
+          color: #ffffff;
           background: var(--e-global-color-accent, #1FBECD); }
   @media (max-width: 1199.98px) {
     .__bt-single-car-style-1 .bt-post--meta-item, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-item {
@@ -5368,11 +5382,11 @@ body {
     .__bt-single-car-style-1 .bt-post--meta-col, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-col {
       width: 50%; }
       .__bt-single-car-style-1 .bt-post--meta-col:first-child, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-col:first-child {
-        border-bottom: 1px solid #D9D9D9; }
+        border-bottom: 1px solid #d9d9d9; }
       .__bt-single-car-style-1 .bt-post--meta-col:nth-child(2), .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-col:nth-child(2) {
         width: 50%;
         border-right: none;
-        border-bottom: 1px solid #D9D9D9; }
+        border-bottom: 1px solid #d9d9d9; }
       .__bt-single-car-style-1 .bt-post--meta-col:not(:last-child, :nth-child(2)), .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-col:not(:last-child, :nth-child(2)) {
         width: calc(50% - 1px); }
     .__bt-single-car-style-1 .bt-post--section .bt-meta-list .bt-meta-item, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--section .bt-meta-list .bt-meta-item,
@@ -5391,23 +5405,465 @@ body {
     .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer,
     .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-block .bt-sale-dealer {
       padding: 30px 15px; }
-    .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content {
-      padding: 25px 15px; } }
+    .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content,
+    .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title,
+    .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title {
+      padding: 25px 15px; }
+    .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title h3, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title h3 {
+      font-size: 20px; } }
   @media (max-width: 420px) {
     .__bt-single-car-style-1 .bt-post--meta-col, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-col {
       width: 100% !important;
       border-right: none !important; }
       .__bt-single-car-style-1 .bt-post--meta-col:not(:last-child), .single-car .bt-main-content-ss.bt-layout-style1 .bt-post--meta-col:not(:last-child) {
-        border-bottom: 1px solid #D9D9D9 !important; } }
+        border-bottom: 1px solid #d9d9d9 !important; } }
 
+@media (max-width: 767.98px) {
+  .__bt-single-car-style-2, .single-car .bt-main-content-ss.bt-layout-style2 {
+    padding: 60px 0; } }
 .__bt-single-car-style-2 .bt-post, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post {
   position: relative; }
+  .__bt-single-car-style-2 .bt-post--infor, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--infor {
+    display: flex;
+    gap: 130px;
+    flex-wrap: wrap;
+    margin-bottom: 50px; }
+    @media (max-width: 1360px) {
+      .__bt-single-car-style-2 .bt-post--infor, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--infor {
+        gap: 20px; } }
+  .__bt-single-car-style-2 .bt-post--info, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--info {
+    width: calc(64% - 65px); }
+    @media (max-width: 1360px) {
+      .__bt-single-car-style-2 .bt-post--info, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--info {
+        width: calc(68% - 10px); } }
+  .__bt-single-car-style-2 .bt-post--sale-car, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car {
+    width: calc(36% - 65px); }
+    @media (max-width: 1360px) {
+      .__bt-single-car-style-2 .bt-post--sale-car, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car {
+        width: calc(32% - 10px); } }
+    .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car {
+      overflow: hidden;
+      border-radius: 20px;
+      position: relative;
+      color: #ffffff;
+      background: var(--e-global-color-accent, #1FBECD);
+      padding: 30px 30px 37px; }
+      .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car .bt-sale-body, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car .bt-sale-body {
+        position: absolute;
+        top: 30px;
+        left: -1px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 150%;
+        color: #ffffff;
+        background: var(--e-global-color-secondary, #111);
+        padding: 10px 30px;
+        border-radius: 0 10px 10px 0; }
+        .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car .bt-sale-body a, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car .bt-sale-body a {
+          color: inherit; }
+      .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car .bt-sale-icon-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car .bt-sale-icon-btn {
+        display: flex;
+        justify-content: flex-end;
+        gap: 5px;
+        margin-bottom: 25px; }
+        .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car .bt-sale-icon-btn .bt-icon-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car .bt-sale-icon-btn .bt-icon-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 44px;
+          height: 44px;
+          background: #fff;
+          border: 1px solid #d6d6d6;
+          border-radius: 100px;
+          transition: all 0.3s; }
+          .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car .bt-sale-icon-btn .bt-icon-btn.added, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car .bt-sale-icon-btn .bt-icon-btn.added {
+            background: var(--e-global-color-accent, #1FBECD); }
+            .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car .bt-sale-icon-btn .bt-icon-btn.added svg, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car .bt-sale-icon-btn .bt-icon-btn.added svg {
+              fill: #ffffff; }
+          .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car .bt-sale-icon-btn .bt-icon-btn svg, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car .bt-sale-icon-btn .bt-icon-btn svg {
+            fill: var(--e-global-color-accent, #1FBECD); }
+      .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car .bt-sale-price, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car .bt-sale-price {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 150%;
+        margin-bottom: 10px; }
+        .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car .bt-sale-price a, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car .bt-sale-price a {
+          display: inline-block;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 150%;
+          color: var(--e-global-color-accent, #1FBECD);
+          background: #ffffff;
+          padding: 8px 15px;
+          border-radius: 10px; }
+      .__bt-single-car-style-2 .bt-post--sale-car .bt-sale-car .bt-offer-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car .bt-sale-car .bt-offer-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 3px; }
+  .__bt-single-car-style-2 .bt-post--title, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--title {
+    font-size: 36px;
+    margin: 0 0 16px; }
+  .__bt-single-car-style-2 .bt-post--location, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--location {
+    position: relative;
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 40px;
+    padding-left: 28px; }
+    .__bt-single-car-style-2 .bt-post--location svg, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--location svg {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 22px;
+      height: auto;
+      fill: var(--e-global-color-accent, #1FBECD); }
+  .__bt-single-car-style-2 .bt-post--meta, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta {
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffff;
+    overflow: hidden;
+    border: 1px solid #dadada;
+    border-radius: 10px; }
+  .__bt-single-car-style-2 .bt-post--meta-col, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-col {
+    width: 25%; }
+    .__bt-single-car-style-2 .bt-post--meta-col:not(:last-child), .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-col:not(:last-child) {
+      width: calc(25% - 1px);
+      border-right: 1px solid #dadada; }
+  .__bt-single-car-style-2 .bt-post--meta-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-item {
+    padding: 23px 30px; }
+    .__bt-single-car-style-2 .bt-post--meta-item .bt-meta-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-item .bt-meta-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+      line-height: 150%;
+      padding-left: 32px; }
+    .__bt-single-car-style-2 .bt-post--meta-item svg, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-item svg {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 22px;
+      height: auto;
+      color: var(--e-global-color-accent, #1FBECD); }
+    .__bt-single-car-style-2 .bt-post--meta-item .bt-label, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-item .bt-label {
+      font-size: 14px;
+      color: #848484; }
+  .__bt-single-car-style-2 .bt-post--gallery, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 70px; }
+    .__bt-single-car-style-2 .bt-post--gallery .bt-img-thumbnail, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-img-thumbnail {
+      width: calc(60% - 10px); }
+      .__bt-single-car-style-2 .bt-post--gallery .bt-img-thumbnail .bt-image-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-img-thumbnail .bt-image-item {
+        width: 100%; }
+        .__bt-single-car-style-2 .bt-post--gallery .bt-img-thumbnail .bt-image-item .bt-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-img-thumbnail .bt-image-item .bt-cover-image, .__bt-single-car-style-2 .bt-post--gallery .bt-img-thumbnail .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-single-car-style-2 .bt-post--gallery .bt-img-thumbnail .bt-image-item .wc-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-img-thumbnail .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-img-thumbnail .bt-image-item .wc-cover-image {
+          padding-bottom: 62%; }
+    .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: calc(40% - 10px); }
+      .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item.no-thumb, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item.no-thumb {
+        width: 100%; }
+        .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item.no-thumb .bt-image-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item.no-thumb .bt-image-item {
+          width: calc(25% - 15px); }
+          .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item.no-thumb .bt-image-item .bt-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item.no-thumb .bt-image-item .bt-cover-image, .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item.no-thumb .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item.no-thumb .bt-image-item .wc-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item.no-thumb .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item.no-thumb .bt-image-item .wc-cover-image {
+            padding-bottom: 70%; }
+    .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item-full, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item-full {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; }
+      .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item-full .bt-image-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item-full .bt-image-item {
+        width: calc(25% - 15px); }
+        .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item-full .bt-image-item .bt-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item-full .bt-image-item .bt-cover-image, .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item-full .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item-full .bt-image-item .wc-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item-full .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item-full .bt-image-item .wc-cover-image {
+          padding-bottom: 70%; }
+    .__bt-single-car-style-2 .bt-post--gallery .bt-image-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-image-item {
+      width: calc(50% - 10px);
+      display: block; }
+      .__bt-single-car-style-2 .bt-post--gallery .bt-image-item .bt-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-image-item .bt-cover-image, .__bt-single-car-style-2 .bt-post--gallery .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-single-car-style-2 .bt-post--gallery .bt-image-item .wc-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-image-item .wc-cover-image {
+        padding-bottom: 93.3%;
+        border-radius: 20px; }
+  .__bt-single-car-style-2 .bt-post--thumbnail, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--thumbnail {
+    margin-bottom: 72px; }
+    .__bt-single-car-style-2 .bt-post--thumbnail .bt-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--thumbnail .bt-cover-image, .__bt-single-car-style-2 .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-single-car-style-2 .bt-post--thumbnail .wc-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--thumbnail .wc-cover-image {
+      border-radius: 20px; }
+  .__bt-single-car-style-2 .bt-post--wrap, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; }
+  .__bt-single-car-style-2 .bt-post--inner, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--inner {
+    width: calc(66.66% - 15px); }
+  .__bt-single-car-style-2 .bt-post--sidebar, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sidebar {
+    width: calc(33.33% - 15px); }
+  .__bt-single-car-style-2 .bt-post--section:not(:last-child), .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section:not(:last-child) {
+    margin-bottom: 77px; }
+  .__bt-single-car-style-2 .bt-post--section .bt-title-ss, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-title-ss {
+    position: relative;
+    font-size: 30px;
+    margin: 0 0 25px;
+    padding-left: 20px;
+    z-index: 1;
+    line-height: 120%; }
+    .__bt-single-car-style-2 .bt-post--section .bt-title-ss:before, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-title-ss:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--e-global-color-accent, #1FBECD); }
+    .__bt-single-car-style-2 .bt-post--section .bt-title-ss:after, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-title-ss:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 25px;
+      width: calc(100% - 25px);
+      height: 1px;
+      background: #d9d9d9;
+      z-index: -1; }
+    .__bt-single-car-style-2 .bt-post--section .bt-title-ss span, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-title-ss span {
+      display: inline-block;
+      background: #ffffff;
+      padding-right: 30px; }
+  .__bt-single-car-style-2 .bt-post--section .bt-meta-list, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-meta-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px; }
+    .__bt-single-car-style-2 .bt-post--section .bt-meta-list .bt-meta-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-meta-list .bt-meta-item {
+      width: calc(33.33% - 13.33px);
+      display: flex;
+      position: relative;
+      border: 1px solid #d9d9d9;
+      box-sizing: border-box;
+      border-radius: 10px;
+      margin-top: 10px;
+      padding: 16px 22px 16px 61px;
+      justify-content: space-between; }
+      .__bt-single-car-style-2 .bt-post--section .bt-meta-list .bt-meta-item svg, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-meta-list .bt-meta-item svg {
+        position: absolute;
+        left: 25px;
+        top: 17px;
+        width: 26px;
+        height: auto;
+        color: var(--e-global-color-accent, #1FBECD); }
+      .__bt-single-car-style-2 .bt-post--section .bt-meta-list .bt-meta-item .bt-label, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-meta-list .bt-meta-item .bt-label {
+        width: 55%; }
+      .__bt-single-car-style-2 .bt-post--section .bt-meta-list .bt-meta-item .bt-value, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-meta-list .bt-meta-item .bt-value {
+        width: 45%; }
+  .__bt-single-car-style-2 .bt-post--section .bt-feature-list, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px; }
+    .__bt-single-car-style-2 .bt-post--section .bt-feature-list .bt-feature-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-feature-list .bt-feature-item {
+      width: calc(50% - 46px);
+      display: flex;
+      position: relative;
+      padding: 10px 0 10px 36px;
+      border-bottom: 1px solid #d9d9d9; }
+      .__bt-single-car-style-2 .bt-post--section .bt-feature-list .bt-feature-item svg, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-feature-list .bt-feature-item svg {
+        position: absolute;
+        left: 0;
+        top: 13px;
+        width: 26px;
+        height: auto;
+        color: var(--e-global-color-accent, #1FBECD); }
+  .__bt-single-car-style-2 .bt-post--section .bt-location-title, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px; }
+    .__bt-single-car-style-2 .bt-post--section .bt-location-title .bt-location-text, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title .bt-location-text {
+      position: relative;
+      padding-left: 28px; }
+      .__bt-single-car-style-2 .bt-post--section .bt-location-title .bt-location-text svg, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title .bt-location-text svg {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 22px;
+        height: auto;
+        fill: var(--e-global-color-accent, #1FBECD); }
+  .__bt-single-car-style-2 .bt-post--section .bt-location-map .bt-cover-iframe, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-map .bt-cover-iframe {
+    border-radius: 20px; }
+  .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap {
+    position: sticky;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; }
+    .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block {
+      background: #ffffff;
+      overflow: hidden;
+      border: 1px solid #dadada;
+      border-radius: 20px; }
+      .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer {
+        padding: 30px; }
+        .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-title, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-title {
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--e-global-color-primary, #222);
+          margin-bottom: 25px; }
+        .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-infor, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-infor {
+          position: relative;
+          padding-left: 76px;
+          margin-bottom: 30px; }
+        .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-avatar, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-avatar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 64px; }
+          .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-avatar .bt-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-avatar .bt-cover-image, .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-avatar .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-avatar .wc-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-avatar .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-avatar .wc-cover-image {
+            padding-bottom: 100%;
+            border-radius: 100%; }
+        .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-name, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-name {
+          font-size: 22px;
+          font-weight: 600;
+          margin: 0 0 5px; }
+        .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-meta .bt-meta-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-meta .bt-meta-item {
+          position: relative;
+          font-size: 16px;
+          line-height: 150%;
+          padding: 10px 0 10px 28px; }
+          .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-meta .bt-meta-item:not(:last-child), .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-meta .bt-meta-item:not(:last-child) {
+            border-bottom: 1px solid #d9d9d9; }
+          .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-meta .bt-meta-item svg, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-meta .bt-meta-item svg {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 22px;
+            height: auto;
+            fill: var(--e-global-color-accent, #1FBECD); }
+        .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action {
+          display: flex;
+          flex-direction: column;
+          gap: 10px; }
+          .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-message-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-message-btn {
+            padding: 24px 40px; }
+          .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-whatsapp-btn {
+            padding: 21px 40px; }
+          .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-view-all-link, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer .bt-dealer-action .bt-view-all-link {
+            display: flex;
+            justify-content: center;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            margin-top: 15px;
+            font-size: 18px; }
+      .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title {
+        background: var(--e-global-color-accent, #1FBECD);
+        padding: 28px 30px; }
+        .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title h3, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title h3 {
+          font-size: 22px;
+          color: #ffffff;
+          margin: 0; }
+      .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content {
+        padding: 25px 30px;
+        font-size: 18px; }
+        .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content ul, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content ul {
+          margin: 0; }
+      .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-view-detail .bt-view-detail-btn, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-view-detail .bt-view-detail-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: var(--e-global-color-accent, #1FBECD);
+        background: #f1f1f1;
+        padding: 17px 20px; }
+        .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-view-detail .bt-view-detail-btn:hover, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-view-detail .bt-view-detail-btn:hover {
+          color: #ffffff;
+          background: var(--e-global-color-accent, #1FBECD); }
+  @media (max-width: 1199.98px) {
+    .__bt-single-car-style-2 .bt-post--title, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--title {
+      font-size: 30px; }
+    .__bt-single-car-style-2 .bt-post--location, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--location {
+      margin-bottom: 25px; }
+    .__bt-single-car-style-2 .bt-post--meta-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-item {
+      padding: 15px; } }
+  @media (max-width: 1024.98px) {
+    .__bt-single-car-style-2 .bt-post--info, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--info, .__bt-single-car-style-2 .bt-post--sale-car, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sale-car, .__bt-single-car-style-2 .bt-post--inner, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--inner, .__bt-single-car-style-2 .bt-post--sidebar, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--sidebar {
+      width: 100%; }
+    .__bt-single-car-style-2 .bt-post--section:not(:last-child), .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section:not(:last-child) {
+      margin-bottom: 50px; }
+    .__bt-single-car-style-2 .bt-post--section .bt-meta-list .bt-meta-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-meta-list .bt-meta-item {
+      width: calc(50% - 10px); } }
+  @media (max-width: 767.98px) {
+    .__bt-single-car-style-2 .bt-post--title, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--title {
+      font-size: 28px; }
+    .__bt-single-car-style-2 .bt-post--location, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--location {
+      font-size: 18px; }
+    .__bt-single-car-style-2 .bt-post--meta-col, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-col {
+      width: 50%; }
+      .__bt-single-car-style-2 .bt-post--meta-col:first-child, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-col:first-child {
+        border-bottom: 1px solid #d9d9d9; }
+      .__bt-single-car-style-2 .bt-post--meta-col:nth-child(2), .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-col:nth-child(2) {
+        width: 50%;
+        border-right: none;
+        border-bottom: 1px solid #d9d9d9; }
+      .__bt-single-car-style-2 .bt-post--meta-col:not(:last-child, :nth-child(2)), .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-col:not(:last-child, :nth-child(2)) {
+        width: calc(50% - 1px); }
+    .__bt-single-car-style-2 .bt-post--thumbnail, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--thumbnail {
+      margin-bottom: 50px; }
+    .__bt-single-car-style-2 .bt-post--gallery, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery {
+      gap: 16px;
+      margin-bottom: 50px; }
+      .__bt-single-car-style-2 .bt-post--gallery .bt-img-thumbnail, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-img-thumbnail {
+        width: 100%; }
+      .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item {
+        width: 100%;
+        gap: 16px; }
+        .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item .bt-image-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item .bt-image-item {
+          width: calc(50% - 8px); }
+          .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item .bt-image-item .bt-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item .bt-image-item .bt-cover-image, .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item .bt-image-item .wc-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item .bt-image-item .wc-cover-image {
+            padding-bottom: 70%; }
+      .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item-full, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item-full {
+        gap: 16px; }
+        .__bt-single-car-style-2 .bt-post--gallery .bt-list-image-item-full .bt-image-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-list-image-item-full .bt-image-item {
+          width: calc(50% - 8px); }
+      .__bt-single-car-style-2 .bt-post--gallery .bt-image-item .bt-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-image-item .bt-cover-image, .__bt-single-car-style-2 .bt-post--gallery .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-single-car-style-2 .bt-post--gallery .bt-image-item .wc-cover-image, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-image-item .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--gallery .bt-image-item .wc-cover-image {
+        border-radius: 10px; }
+    .__bt-single-car-style-2 .bt-post--section .bt-meta-list .bt-meta-item, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-meta-list .bt-meta-item,
+    .__bt-single-car-style-2 .bt-post--section .bt-feature-list .bt-feature-item,
+    .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-feature-list .bt-feature-item {
+      width: 100%; }
+    .__bt-single-car-style-2 .bt-post--section .bt-location-title, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--section .bt-location-title {
+      flex-direction: column;
+      align-items: flex-start; } }
+  @media (max-width: 519.98px) {
+    .__bt-single-car-style-2 .bt-post--title, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--title {
+      font-size: 24px; }
+    .__bt-single-car-style-2 .bt-post--location, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--location {
+      font-size: 16px; }
+    .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-sale-dealer-block .bt-sale-dealer {
+      padding: 30px 15px; }
+    .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-content,
+    .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title,
+    .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title {
+      padding: 25px 15px; }
+    .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title h3, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap .bt-sidebar-block.bt-safety-block .bt-safety-title h3 {
+      font-size: 20px; } }
+  @media (max-width: 420px) {
+    .__bt-single-car-style-2 .bt-post--meta-col, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-col {
+      width: 100% !important;
+      border-right: none !important; }
+      .__bt-single-car-style-2 .bt-post--meta-col:not(:last-child), .single-car .bt-main-content-ss.bt-layout-style2 .bt-post--meta-col:not(:last-child) {
+        border-bottom: 1px solid #d9d9d9 !important; } }
 
 .__bt-single-car-style-3 .bt-post, .single-car .bt-main-content-ss.bt-layout-style3 .bt-post {
   position: relative; }
 
 .single-car .bt-related-posts-ss {
   padding-bottom: 105px; }
+  @media (max-width: 767.98px) {
+    .single-car .bt-related-posts-ss {
+      padding-bottom: 70px; } }
   .single-car .bt-related-posts-ss--list {
     display: flex;
     flex-wrap: wrap;
@@ -5429,9 +5885,9 @@ body {
       width: 100%; } }
 
 .bt-elwg-cars-wishlist--default .bt-table {
-  background: #FFFFFF;
+  background: #ffffff;
   overflow: hidden;
-  border: 1px solid #DADADA;
+  border: 1px solid #dadada;
   border-radius: 20px; }
   .bt-elwg-cars-wishlist--default .bt-table--head {
     background: var(--e-global-color-accent, #1FBECD); }
@@ -5439,7 +5895,7 @@ body {
       font-size: 18px;
       font-weight: 600;
       line-height: 150%;
-      color: #FFFFFF; }
+      color: #ffffff; }
   .bt-elwg-cars-wishlist--default .bt-table--body {
     position: relative;
     display: flex;
@@ -5449,12 +5905,12 @@ body {
     min-height: 165px; }
   .bt-elwg-cars-wishlist--default .bt-table .bt-car-list {
     width: 100%;
-    transition: all .3s; }
+    transition: all 0.3s; }
   .bt-elwg-cars-wishlist--default .bt-table--row {
     display: flex;
     align-items: center; }
     .bt-elwg-cars-wishlist--default .bt-table--row.bt-car-item:not(:last-child) {
-      border-bottom: 1px solid #DADADA; }
+      border-bottom: 1px solid #dadada; }
   .bt-elwg-cars-wishlist--default .bt-table--col {
     width: 15%;
     padding: 20px 15px; }
@@ -5507,7 +5963,7 @@ body {
       .bt-elwg-cars-wishlist--default .bt-table--col.bt-social-share .bt-post-share {
         margin: 0; }
   .bt-elwg-cars-wishlist--default .bt-table--foot {
-    border-top: 1px solid #DADADA; }
+    border-top: 1px solid #dadada; }
   .bt-elwg-cars-wishlist--default .bt-table .bt-no-results {
     font-size: 20px;
     font-weight: 500;
@@ -5560,10 +6016,10 @@ body {
 .__bt-cars-compare-table .bt-table, .bt-elwg-cars-compare--default .bt-table, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table {
   position: relative;
   min-width: 1000px;
-  background: #FFFFFF;
+  background: #ffffff;
   overflow-x: auto;
   overflow-y: hidden;
-  border: 1px solid #DADADA;
+  border: 1px solid #dadada;
   border-radius: 20px; }
   .__bt-cars-compare-table .bt-table--row, .bt-elwg-cars-compare--default .bt-table--row, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--row {
     display: flex; }
@@ -5571,11 +6027,11 @@ body {
     width: 26.67%;
     min-width: 260px;
     padding: 15px;
-    border-bottom: 1px solid #DADADA; }
+    border-bottom: 1px solid #dadada; }
     .__bt-cars-compare-table .bt-table--col:first-child, .bt-elwg-cars-compare--default .bt-table--col:first-child, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col:first-child {
       width: 20%;
       min-width: 210px;
-      background: #F1F1F1; }
+      background: #f1f1f1; }
   .__bt-cars-compare-table .bt-table--foot .bt-table--col, .bt-elwg-cars-compare--default .bt-table--foot .bt-table--col, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--foot .bt-table--col {
     border-bottom: none; }
   .__bt-cars-compare-table .bt-table--foot .bt-social-share, .bt-elwg-cars-compare--default .bt-table--foot .bt-social-share, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--foot .bt-social-share {
@@ -5602,12 +6058,12 @@ body {
       width: 44px;
       height: 44px;
       color: var(--e-global-color-accent, #1FBECD);
-      background: #FFFFFF;
-      border: 1px solid #D6D6D6;
+      background: #ffffff;
+      border: 1px solid #d6d6d6;
       border-radius: 100px;
-      transition: all .3s; }
+      transition: all 0.3s; }
       .__bt-cars-compare-table .bt-table .bt-car-remove a:hover, .bt-elwg-cars-compare--default .bt-table .bt-car-remove a:hover, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-remove a:hover {
-        color: #FFFFFF;
+        color: #ffffff;
         background: var(--e-global-color-accent, #1FBECD); }
       .__bt-cars-compare-table .bt-table .bt-car-remove a.deleting svg, .bt-elwg-cars-compare--default .bt-table .bt-car-remove a.deleting svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-remove a.deleting svg {
         opacity: 0; }
@@ -5681,9 +6137,9 @@ body {
   opacity: 1;
   visibility: visible; }
 .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--inner {
-  background: #FFF;
+  background: #fff;
   overflow: hidden;
-  border: 1px solid #DADADA;
+  border: 1px solid #dadada;
   border-radius: 20px; }
 .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars {
   display: flex; }
@@ -5713,7 +6169,7 @@ body {
         font-size: 16px;
         line-height: 150%;
         color: inherit;
-        background: #F1F1F1;
+        background: #f1f1f1;
         padding: 8px 15px;
         border-radius: 10px; }
     .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta {
@@ -5733,7 +6189,7 @@ body {
       .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta-col:not(:last-child) {
         margin-right: 30px;
         padding-right: 30px;
-        border-right: 1px solid #DADADA; }
+        border-right: 1px solid #dadada; }
     .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta-item {
       position: relative;
       min-width: 86px;
@@ -5765,7 +6221,7 @@ body {
       left: 50%;
       height: calc(100% - 80px);
       width: 1px;
-      background: #D9D9D9; }
+      background: #d9d9d9; }
     .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--divider span {
       position: absolute;
       top: 50%;
@@ -5777,7 +6233,7 @@ body {
       height: 50px;
       font-size: 16px;
       font-weight: 700;
-      color: #FFFFFF;
+      color: #ffffff;
       background: var(--e-global-color-accent, #1FBECD);
       border-radius: 100px;
       transform: translate(-50%, -50%); }
@@ -5789,7 +6245,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
     background: #111111;
     padding: 20px; }
     .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--compare a:hover {
@@ -5807,14 +6263,14 @@ body {
   padding: 60px 30px;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s;
+  transition: all 0.3s;
   z-index: 99999; }
   .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--popup .bt-close-popup {
     position: absolute;
     top: 30px;
     right: 30px;
     line-height: 0;
-    color: #FFFFFF; }
+    color: #ffffff; }
     .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--popup .bt-close-popup svg {
       width: 30px;
       height: 30px; }
@@ -5862,7 +6318,7 @@ body {
     justify-content: center;
     width: 56px;
     height: 56px;
-    background: #F0F0F0;
+    background: #f0f0f0;
     border-radius: 100px; }
     .bt-elwg-mini-wishlist .bt-mini-wishlist--icon svg {
       fill: var(--e-global-color-accent, #1FBECD);
@@ -5879,7 +6335,7 @@ body {
     height: 20px;
     font-size: 13px;
     font-weight: 500;
-    color: #FFFFFF;
+    color: #ffffff;
     background: var(--e-global-color-accent, #1FBECD);
     padding: 3px;
     border-radius: 50px; }
@@ -5888,14 +6344,14 @@ body {
     top: 100%;
     right: 0;
     min-width: 400px;
-    background: #FFFFFF;
+    background: #ffffff;
     padding: 30px;
     z-index: 99;
     opacity: 0;
     visibility: hidden;
     border-radius: 0 0 20px 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: all .3s; }
+    transition: all 0.3s; }
   .bt-elwg-mini-wishlist .bt-mini-wishlist--head {
     font-size: 30px;
     margin: 0 0 20px; }
@@ -5909,7 +6365,7 @@ body {
     gap: 15px;
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #DADADA; }
+    border-bottom: 1px solid #dadada; }
     .bt-elwg-mini-wishlist .bt-mini-wishlist--item:last-child {
       margin-bottom: 0; }
     .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-remove {
@@ -5977,7 +6433,7 @@ body {
     justify-content: center;
     width: 56px;
     height: 56px;
-    background: #F0F0F0;
+    background: #f0f0f0;
     border-radius: 100px; }
     .bt-elwg-mini-compare .bt-mini-compare--icon svg {
       fill: var(--e-global-color-accent, #1FBECD);
@@ -5994,7 +6450,7 @@ body {
     height: 20px;
     font-size: 13px;
     font-weight: 500;
-    color: #FFFFFF;
+    color: #ffffff;
     background: var(--e-global-color-accent, #1FBECD);
     padding: 3px;
     border-radius: 50px; }

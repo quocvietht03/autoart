@@ -13,7 +13,7 @@
   }
 }
 .bt-sidebar {
-  font-size: 16px;
+  font-size: 18px;
   background: #f1f1f1;
   padding: 30px;
   border-radius: 20px;
@@ -412,6 +412,8 @@
 }
 
 .bt-post--excerpt {
+  font-size: 18px;
+  line-height: 166.667%;
   @extend .__bt-max-line-ellipsis;
 }
 

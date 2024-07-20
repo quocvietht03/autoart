@@ -1,6 +1,6 @@
 {
     "key": "group_65276d4a0b8df",
-    "title": "Widget - Contact Information",
+    "title": "Widget - Subscribe Contact",
     "fields": [
         {
             "key": "field_65276d4a865ac",
@@ -68,7 +68,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/widget-contact-information"
+                "value": "acf\/widget-subscribe-contact"
             }
         ]
     ],
@@ -81,5 +81,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720601903
+    "modified": 1721441602
 }

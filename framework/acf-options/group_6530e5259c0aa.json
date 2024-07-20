@@ -1190,6 +1190,36 @@
             ]
         },
         {
+            "key": "field_669b1f268eb97",
+            "label": "Section Car Insurance",
+            "name": "section_car_insurance",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "elementor_library"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": [
+                "elementor_library_type:section"
+            ],
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 1,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
             "key": "field_6530f0658c230",
             "label": "Dealers",
             "name": "",
@@ -1796,5 +1826,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721290048
+    "modified": 1721442286
 }
