@@ -119,7 +119,7 @@ class Widget_HighlightedHeading extends Widget_Base {
 					'default' => 'start',
 					'toggle' => true,
 					'selectors' => [
-						'{{WRAPPER}} .bt-elwg-highlighted-heading' => 'justify-content: {{VALUE}};',
+						'{{WRAPPER}} .bt-elwg-highlighted-heading' => 'justify-content: {{VALUE}};text-align:{{VALUE}}',
 					],
 				]
 			);

@@ -234,4 +234,61 @@
             }
         }
     }
+    &.bt-tabs-featured-cars {
+        .elementor-tabs {
+            &-wrapper {
+                border-bottom: 1px solid #d9d9d9;
+                overflow: initial;
+                display: flex;
+                justify-content: center;
+                .elementor-tab-title {
+                    padding: 0 0 17px 0;
+                    margin: 0px 20px;
+                    border-bottom: 3px solid transparent !important;
+                    position: relative;
+                    bottom: -1px;
+                    &.elementor-active {
+                        border-color: $color-accent !important;
+                    }
+                    @media (max-width: $break-xs) {
+                        margin: 0px 10px;
+                    }
+                }
+            }
+            &-content-wrapper {
+                .elementor-tab-title {
+                    display: none;
+                }
+                .elementor-tab-content {
+                    padding: 40px 0 0 0;
+                }
+            }
+        }
+    }
+    &.bt-loop-slider-car {
+        @media (max-width: 1760px) {
+            .elementor-swiper-button {
+                padding: 20px !important;
+                &.elementor-swiper-button-next {
+                    right: 1% !important;
+                }
+                &.elementor-swiper-button-prev {
+                    left: 1% !important;
+                }
+            }
+        }
+        @media (min-width: 1630px) {
+            .swiper-pagination {
+                display: none;
+            }
+            .swiper.elementor-loop-container {
+                padding-bottom: 0 !important;
+            }
+        }
+        @media (max-width: 1630px) {
+            .elementor-swiper-button {
+                display: none !important;
+            }
+        }
+    }
 }

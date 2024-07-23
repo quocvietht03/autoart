@@ -221,7 +221,7 @@
       @extend .__bt-max-line-ellipsis;
       max-width: 380px;
       min-height: 58px;
-      font-size: 22px;
+      font-size: 24px;
       color: #ffffff;
       margin: 0 0 20px;
     }
@@ -242,10 +242,10 @@
       padding: 10px 25px 10px 0;
     }
     &--price {
-      font-size: 20px;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: 700;
       line-height: 150%;
-      color: $color-accent;
+      color: $color-primary;
       background: #ffffff;
       padding: 10px 25px;
       a {
@@ -262,7 +262,7 @@
       @extend .__scrollbar_style;
       max-width: 380px;
       overflow-x: auto;
-      margin: 25px 0 21px;
+      margin: 25px 0 5px;
       padding-bottom: 4px;
     }
     &--meta-row {
@@ -647,7 +647,276 @@
     }
   }
 }
-
+.__bt-post-car-style-4 {
+  position: relative;
+  padding: 0 15px;
+  .bt-post {
+    &--inner {
+      position: relative;
+    }
+    &--thumbnail {
+      padding-left: 10px;
+      position: absolute;
+      width: 40%;
+      z-index: 999;
+      top: 50%;
+      transform: translateY(-50%);
+      padding-left: 10px;
+      @media (max-width: $break-tl) {
+        top: initial;
+        transform: translateX(-50%);
+        padding-left: 0;
+        left: 50%;
+        width: 50%;
+        position: relative;
+        margin-bottom: -100px;
+        width: 60%;
+      }
+      @media (max-width: 600px) {
+        margin-bottom: -70px;
+        width: 80%;
+      }
+      .bt-cover-image {
+        background: transparent;
+        img {
+          object-fit: contain;
+          transform: scale(1);
+        }
+      }
+    }
+    &--infor {
+      position: relative;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 74px 120px 83px;
+      margin-left: 20%;
+      padding-left: 27%;
+      @media (max-width: 1275px) {
+        padding-left: 21%;
+      }
+      @media (max-width: $break-tl) {
+        padding-left: 60px;
+        margin: 0;
+        padding-top: 120px;
+      }
+      @media (max-width: 600px) {
+        padding: 80px 55px 30px 15px;
+      }
+    }
+    &--infor-inner {
+      position: relative;
+      max-width: 540px;
+    }
+    &--icon-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      gap: 5px;
+      .bt-icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: #ffffff;
+        border: 1px solid #d6d6d6;
+        border-radius: 100px;
+        transition: all 0.3s;
+        &.added {
+          background: $color-accent;
+          svg {
+            fill: #ffffff;
+          }
+        }
+        svg {
+          fill: $color-accent;
+        }
+      }
+    }
+    &--body {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+      position: absolute;
+      border-radius: 10px 0px 0px 10px;
+      background: $color-accent;
+      color: #fff;
+      right: 0;
+      top: 30px;
+      padding: 8px 25px 8px 29px;
+      @media (max-width: $break-tl) {
+        top: inherit;
+        position: relative;
+        display: inline-block;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 6px 30px;
+      }
+    }
+    &--color {
+      right: 0;
+      position: absolute;
+      border-radius: 10px 10px 0 0;
+      background: #111;
+      padding: 21px 31px 22px 33px;
+      top: 109px;
+      transform: translateY(-79px) rotate(-90deg);
+      transform-origin: right bottom;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      .bt-label {
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        margin-right: 20px;
+      }
+      .bt-value {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: inline-block;
+        border: 1px solid #fff;
+      }
+      @media (max-width: $break-tl) {
+        top: calc(15% + 75px);
+      }
+      @media (max-width: 600px) {
+        padding: 10px 20px;
+        .bt-label {
+          font-size: 14px;
+          line-height: 22px;
+          margin-right: 10px;
+        }
+        .bt-value {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    &--info-inner {
+      padding: 30px 30px 24px;
+    }
+    &--price-rating {
+      display: flex;
+      display: flex;
+      align-items: center;
+      gap: 4px 24px;
+      margin-bottom: 20px;
+    }
+    &--avg-rating {
+      @extend .__avg-rating-style;
+    }
+    &--price {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 150%;
+      color: $color-accent;
+      margin-bottom: 5px;
+      @media (max-width: 600px) {
+        margin-bottom: 20px;
+        padding-top: 10px;
+      }
+      a {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 150%;
+        color: inherit;
+        background: #f1f1f1;
+        padding: 8px 15px;
+        border-radius: 10px;
+      }
+    }
+    &--title {
+      @extend .__bt-max-line-ellipsis;
+      min-height: 58px;
+      font-size: 24px;
+      margin: 0;
+      padding-right: 120px;
+      margin-bottom: 10px;
+      line-height: 150%;
+      @media (max-width: 600px) {
+        font-size: 18px;
+        padding-right: 0;
+        margin-bottom: 0;
+        line-height: 150%;
+      }
+      a {
+        max-width: 350px;
+        display: block;
+      }
+    }
+    &--excerpt {
+      margin-bottom: 27px;
+      @media (max-width: 600px) {
+        margin-bottom: 16px;
+        font-size: 14px;
+      }
+    }
+    &--meta {
+      position: relative;
+    }
+    &--meta-col {
+      &:not(:last-child) {
+        margin-bottom: 17px;
+        padding-bottom: 17px;
+        border-bottom: 1px solid #dadada;
+        @media (max-width: 600px) {
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+    &--meta-item {
+      position: relative;
+      padding-left: 45px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      align-items: center;
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 26px;
+        height: auto;
+        color: $color-accent;
+      }
+      span {
+        display: block;
+      }
+      .bt-label {
+        color: $color-text;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .bt-value {
+        color: $color-accent;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      @media (max-width: 600px) {
+        padding-left: 30px;
+        svg {
+          width: 22px;
+        }
+        .bt-label {
+          font-size: 14px;
+        }
+        .bt-value {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
 .bt-car-topbar {
   display: flex;
   flex-wrap: wrap;

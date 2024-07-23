@@ -303,6 +303,31 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_669f1a762ed3e",
+            "label": "Images Transparent",
+            "name": "images_transparent",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -323,5 +348,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712548251
+    "modified": 1721703109
 }

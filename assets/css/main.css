@@ -787,7 +787,7 @@ img.alignright {
   .bt-tabs .bt-panel-item.bt-is-active {
     display: block; }
 
-.__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title, .bt-post--excerpt, .__bt-post-car-default .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--title, .bt-elwg-car-loop-item--default .bt-post .bt-post--title, .__bt-post-car-style-1 .bt-post--title, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--title, .__bt-post-car-style-2 .bt-post--title, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--title, .__bt-post-car-style-3 .bt-post--title, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--title, .__bt-cars-compare-table .bt-table .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--title, .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-title {
+.__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title, .bt-post--excerpt, .__bt-post-car-default .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--title, .bt-elwg-car-loop-item--default .bt-post .bt-post--title, .__bt-post-car-style-1 .bt-post--title, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--title, .__bt-post-car-style-2 .bt-post--title, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--title, .__bt-post-car-style-3 .bt-post--title, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--title, .__bt-post-car-style-4 .bt-post--title, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--title, .__bt-cars-compare-table .bt-table .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--title, .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-title {
   overflow: hidden;
   width: 100%;
   display: -webkit-box;
@@ -1089,32 +1089,32 @@ img.alignright {
     .__bt-pagination-style.next, .next.bt-pagination, .woocommerce nav.next.woocommerce-pagination, .next.elementor-pagination {
       margin-left: 0; } }
 
-.__avg-rating-style, .__bt-post-car-style-2 .bt-post--avg-rating, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating {
+.__avg-rating-style, .__bt-post-car-style-2 .bt-post--avg-rating, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating, .__bt-post-car-style-4 .bt-post--avg-rating, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating {
   display: flex;
   align-items: center;
   gap: 4px; }
-  .__avg-rating-style .bt-rating-stars, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars {
+  .__avg-rating-style .bt-rating-stars, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars {
     display: flex;
     gap: 4px;
     font-size: 0;
     line-height: 0; }
-    .__avg-rating-style .bt-rating-stars span, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span {
+    .__avg-rating-style .bt-rating-stars span, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span {
       position: relative;
       color: #cdcdcd; }
-      .__avg-rating-style .bt-rating-stars span.bt-filled, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled {
+      .__avg-rating-style .bt-rating-stars span.bt-filled, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span.bt-filled, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled {
         color: #efcf0a; }
-      .__avg-rating-style .bt-rating-stars span.bt-filled-half, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half {
+      .__avg-rating-style .bt-rating-stars span.bt-filled-half, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half {
         position: relative; }
-        .__avg-rating-style .bt-rating-stars span.bt-filled-half svg:last-child, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child {
+        .__avg-rating-style .bt-rating-stars span.bt-filled-half svg:last-child, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child {
           position: absolute;
           top: 0;
           left: 0;
           fill: #efcf0a; }
-      .__avg-rating-style .bt-rating-stars span svg, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span svg {
+      .__avg-rating-style .bt-rating-stars span svg, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span svg, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span svg, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span svg {
         fill: currentColor;
         width: 16px;
         height: auto; }
-  .__avg-rating-style .bt-rating-count, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-count, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-count {
+  .__avg-rating-style .bt-rating-count, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-count, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-count, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-count, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-count {
     font-size: 16px; }
 
 .__bt-socials-style, .bt-post-author--socials, .bt-elwg-site-social,
@@ -4422,7 +4422,7 @@ body {
   .__bt-post-car-style-1 .bt-post--title, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--title {
     max-width: 380px;
     min-height: 58px;
-    font-size: 22px;
+    font-size: 24px;
     color: #ffffff;
     margin: 0 0 20px; }
   .__bt-post-car-style-1 .bt-post--body-price, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--body-price {
@@ -4440,10 +4440,10 @@ body {
     color: #ffffff;
     padding: 10px 25px 10px 0; }
   .__bt-post-car-style-1 .bt-post--price, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--price {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 150%;
-    color: var(--e-global-color-accent, #1FBECD);
+    color: var(--e-global-color-primary, #222);
     background: #ffffff;
     padding: 10px 25px; }
     .__bt-post-car-style-1 .bt-post--price a, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--price a {
@@ -4457,7 +4457,7 @@ body {
   .__bt-post-car-style-1 .bt-post--meta, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta {
     max-width: 380px;
     overflow-x: auto;
-    margin: 25px 0 21px;
+    margin: 25px 0 5px;
     padding-bottom: 4px; }
   .__bt-post-car-style-1 .bt-post--meta-row, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-row {
     display: flex;
@@ -4761,6 +4761,234 @@ body {
       font-size: 16px;
       font-weight: 500;
       line-height: 150%; }
+
+.__bt-post-car-style-4, .bt-elwg-car-loop-item--style-4 .bt-post {
+  position: relative;
+  padding: 0 15px; }
+  .__bt-post-car-style-4 .bt-post--inner, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--inner {
+    position: relative; }
+  .__bt-post-car-style-4 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--thumbnail {
+    padding-left: 10px;
+    position: absolute;
+    width: 40%;
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px; }
+    @media (max-width: 1024.98px) {
+      .__bt-post-car-style-4 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--thumbnail {
+        top: initial;
+        transform: translateX(-50%);
+        padding-left: 0;
+        left: 50%;
+        width: 50%;
+        position: relative;
+        margin-bottom: -100px;
+        width: 60%; } }
+    @media (max-width: 600px) {
+      .__bt-post-car-style-4 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--thumbnail {
+        margin-bottom: -70px;
+        width: 80%; } }
+    .__bt-post-car-style-4 .bt-post--thumbnail .bt-cover-image, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--thumbnail .bt-cover-image, .__bt-post-car-style-4 .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-post-car-style-4 .bt-post--thumbnail .wc-cover-image, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--thumbnail .wc-cover-image {
+      background: transparent; }
+      .__bt-post-car-style-4 .bt-post--thumbnail .bt-cover-image img, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--thumbnail .bt-cover-image img, .__bt-post-car-style-4 .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image img, .woocommerce .woocommerce-loop-product__thumbnail .__bt-post-car-style-4 .bt-post--thumbnail .wc-cover-image img, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image img, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--thumbnail .wc-cover-image img {
+        object-fit: contain;
+        transform: scale(1); }
+  .__bt-post-car-style-4 .bt-post--infor, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--infor {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 74px 120px 83px;
+    margin-left: 20%;
+    padding-left: 27%; }
+    @media (max-width: 1275px) {
+      .__bt-post-car-style-4 .bt-post--infor, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--infor {
+        padding-left: 21%; } }
+    @media (max-width: 1024.98px) {
+      .__bt-post-car-style-4 .bt-post--infor, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--infor {
+        padding-left: 60px;
+        margin: 0;
+        padding-top: 120px; } }
+    @media (max-width: 600px) {
+      .__bt-post-car-style-4 .bt-post--infor, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--infor {
+        padding: 80px 55px 30px 15px; } }
+  .__bt-post-car-style-4 .bt-post--infor-inner, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--infor-inner {
+    position: relative;
+    max-width: 540px; }
+  .__bt-post-car-style-4 .bt-post--icon-btn, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--icon-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 5px; }
+    .__bt-post-car-style-4 .bt-post--icon-btn .bt-icon-btn, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--icon-btn .bt-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: #ffffff;
+      border: 1px solid #d6d6d6;
+      border-radius: 100px;
+      transition: all 0.3s; }
+      .__bt-post-car-style-4 .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--icon-btn .bt-icon-btn.added {
+        background: var(--e-global-color-accent, #1FBECD); }
+        .__bt-post-car-style-4 .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
+          fill: #ffffff; }
+      .__bt-post-car-style-4 .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--icon-btn .bt-icon-btn svg {
+        fill: var(--e-global-color-accent, #1FBECD); }
+  .__bt-post-car-style-4 .bt-post--body, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--body {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    position: absolute;
+    border-radius: 10px 0px 0px 10px;
+    background: var(--e-global-color-accent, #1FBECD);
+    color: #fff;
+    right: 0;
+    top: 30px;
+    padding: 8px 25px 8px 29px; }
+    @media (max-width: 1024.98px) {
+      .__bt-post-car-style-4 .bt-post--body, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--body {
+        top: inherit;
+        position: relative;
+        display: inline-block;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 6px 30px; } }
+  .__bt-post-car-style-4 .bt-post--color, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--color {
+    right: 0;
+    position: absolute;
+    border-radius: 10px 10px 0 0;
+    background: #111;
+    padding: 21px 31px 22px 33px;
+    top: 109px;
+    transform: translateY(-79px) rotate(-90deg);
+    transform-origin: right bottom;
+    display: flex;
+    align-items: center;
+    gap: 5px; }
+    .__bt-post-car-style-4 .bt-post--color .bt-label, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--color .bt-label {
+      color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+      margin-right: 20px; }
+    .__bt-post-car-style-4 .bt-post--color .bt-value, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--color .bt-value {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 1px solid #fff; }
+    @media (max-width: 1024.98px) {
+      .__bt-post-car-style-4 .bt-post--color, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--color {
+        top: calc(15% + 75px); } }
+    @media (max-width: 600px) {
+      .__bt-post-car-style-4 .bt-post--color, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--color {
+        padding: 10px 20px; }
+        .__bt-post-car-style-4 .bt-post--color .bt-label, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--color .bt-label {
+          font-size: 14px;
+          line-height: 22px;
+          margin-right: 10px; }
+        .__bt-post-car-style-4 .bt-post--color .bt-value, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--color .bt-value {
+          width: 20px;
+          height: 20px; } }
+  .__bt-post-car-style-4 .bt-post--info-inner, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--info-inner {
+    padding: 30px 30px 24px; }
+  .__bt-post-car-style-4 .bt-post--price-rating, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--price-rating {
+    display: flex;
+    display: flex;
+    align-items: center;
+    gap: 4px 24px;
+    margin-bottom: 20px; }
+  .__bt-post-car-style-4 .bt-post--price, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--price {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--e-global-color-accent, #1FBECD);
+    margin-bottom: 5px; }
+    @media (max-width: 600px) {
+      .__bt-post-car-style-4 .bt-post--price, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--price {
+        margin-bottom: 20px;
+        padding-top: 10px; } }
+    .__bt-post-car-style-4 .bt-post--price a, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--price a {
+      display: inline-block;
+      font-size: 16px;
+      line-height: 150%;
+      color: inherit;
+      background: #f1f1f1;
+      padding: 8px 15px;
+      border-radius: 10px; }
+  .__bt-post-car-style-4 .bt-post--title, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--title {
+    min-height: 58px;
+    font-size: 24px;
+    margin: 0;
+    padding-right: 120px;
+    margin-bottom: 10px;
+    line-height: 150%; }
+    @media (max-width: 600px) {
+      .__bt-post-car-style-4 .bt-post--title, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--title {
+        font-size: 18px;
+        padding-right: 0;
+        margin-bottom: 0;
+        line-height: 150%; } }
+    .__bt-post-car-style-4 .bt-post--title a, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--title a {
+      max-width: 350px;
+      display: block; }
+  .__bt-post-car-style-4 .bt-post--excerpt, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--excerpt {
+    margin-bottom: 27px; }
+    @media (max-width: 600px) {
+      .__bt-post-car-style-4 .bt-post--excerpt, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--excerpt {
+        margin-bottom: 16px;
+        font-size: 14px; } }
+  .__bt-post-car-style-4 .bt-post--meta, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta {
+    position: relative; }
+  .__bt-post-car-style-4 .bt-post--meta-col:not(:last-child), .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-col:not(:last-child) {
+    margin-bottom: 17px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #dadada; }
+    @media (max-width: 600px) {
+      .__bt-post-car-style-4 .bt-post--meta-col:not(:last-child), .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-col:not(:last-child) {
+        margin-bottom: 10px;
+        padding-bottom: 10px; } }
+  .__bt-post-car-style-4 .bt-post--meta-item, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-item {
+    position: relative;
+    padding-left: 45px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center; }
+    .__bt-post-car-style-4 .bt-post--meta-item svg, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-item svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: auto;
+      color: var(--e-global-color-accent, #1FBECD); }
+    .__bt-post-car-style-4 .bt-post--meta-item span, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-item span {
+      display: block; }
+    .__bt-post-car-style-4 .bt-post--meta-item .bt-label, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-item .bt-label {
+      color: var(--e-global-color-text, #555);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal; }
+    .__bt-post-car-style-4 .bt-post--meta-item .bt-value, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-item .bt-value {
+      color: var(--e-global-color-accent, #1FBECD);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal; }
+    @media (max-width: 600px) {
+      .__bt-post-car-style-4 .bt-post--meta-item, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-item {
+        padding-left: 30px; }
+        .__bt-post-car-style-4 .bt-post--meta-item svg, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-item svg {
+          width: 22px; }
+        .__bt-post-car-style-4 .bt-post--meta-item .bt-label, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-item .bt-label {
+          font-size: 14px; }
+        .__bt-post-car-style-4 .bt-post--meta-item .bt-value, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--meta-item .bt-value {
+          font-size: 14px; } }
 
 .bt-car-topbar {
   display: flex;
@@ -10650,5 +10878,40 @@ body {
   .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--content {
     margin-left: 10px;
     margin-right: 10px; } }
+.elementor-element.bt-tabs-featured-cars .elementor-tabs-wrapper {
+  border-bottom: 1px solid #d9d9d9;
+  overflow: initial;
+  display: flex;
+  justify-content: center; }
+  .elementor-element.bt-tabs-featured-cars .elementor-tabs-wrapper .elementor-tab-title {
+    padding: 0 0 17px 0;
+    margin: 0px 20px;
+    border-bottom: 3px solid transparent !important;
+    position: relative;
+    bottom: -1px; }
+    .elementor-element.bt-tabs-featured-cars .elementor-tabs-wrapper .elementor-tab-title.elementor-active {
+      border-color: var(--e-global-color-accent, #1FBECD) !important; }
+    @media (max-width: 519.98px) {
+      .elementor-element.bt-tabs-featured-cars .elementor-tabs-wrapper .elementor-tab-title {
+        margin: 0px 10px; } }
+.elementor-element.bt-tabs-featured-cars .elementor-tabs-content-wrapper .elementor-tab-title {
+  display: none; }
+.elementor-element.bt-tabs-featured-cars .elementor-tabs-content-wrapper .elementor-tab-content {
+  padding: 40px 0 0 0; }
+@media (max-width: 1760px) {
+  .elementor-element.bt-loop-slider-car .elementor-swiper-button {
+    padding: 20px !important; }
+    .elementor-element.bt-loop-slider-car .elementor-swiper-button.elementor-swiper-button-next {
+      right: 1% !important; }
+    .elementor-element.bt-loop-slider-car .elementor-swiper-button.elementor-swiper-button-prev {
+      left: 1% !important; } }
+@media (min-width: 1630px) {
+  .elementor-element.bt-loop-slider-car .swiper-pagination {
+    display: none; }
+  .elementor-element.bt-loop-slider-car .swiper.elementor-loop-container {
+    padding-bottom: 0 !important; } }
+@media (max-width: 1630px) {
+  .elementor-element.bt-loop-slider-car .elementor-swiper-button {
+    display: none !important; } }
 
 /*# sourceMappingURL=main.css.map */

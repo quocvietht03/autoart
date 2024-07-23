@@ -35,7 +35,7 @@ function autoart_car_register() {
     'has_archive'     => true,
 		'menu_icon'       => 'dashicons-admin-post',
 		'rewrite'         => array('slug' => $cpt_slug), // Permalinks format
-		'show_in_rest' 		=> true,
+		'show_in_rest' 		=> false,
 		'supports'        => array('title', 'editor', 'thumbnail', 'comments')
   );
 
@@ -1629,3 +1629,54 @@ function autoart_cars_compare() {
 }
 add_action( 'wp_ajax_autoart_cars_compare', 'autoart_cars_compare' );
 add_action( 'wp_ajax_nopriv_autoart_cars_compare', 'autoart_cars_compare' );
+/* query id elementor upcoming */
+function bt_custom_upcoming_cars_query($query)
+{
+	if (isset($query)) {
+		$meta_query = array(
+			array(
+				'key' => 'car_featured_status',
+				'value' => 'upcoming',
+				'compare' => '='
+			)
+		);
+
+		$query->set('post_type', 'car');
+		$query->set('meta_query', $meta_query);
+	}
+}
+add_action('elementor/query/bt_upcoming_cars', 'bt_custom_upcoming_cars_query');
+/* query id elementor trending */
+function bt_custom_trending_cars_query($query)
+{
+	if (isset($query)) {
+		$meta_query = array(
+			array(
+				'key' => 'car_featured_status',
+				'value' => 'trending',
+				'compare' => '='
+			)
+		);
+
+		$query->set('post_type', 'car');
+		$query->set('meta_query', $meta_query);
+	}
+}
+add_action('elementor/query/bt_trending_cars', 'bt_custom_trending_cars_query');
+/* query id elementor popular */
+function bt_custom_popular_cars_query($query)
+{
+	if (isset($query)) {
+		$meta_query = array(
+			array(
+				'key' => 'car_featured_status',
+				'value' => 'popular',
+				'compare' => '='
+			)
+		);
+
+		$query->set('post_type', 'car');
+		$query->set('meta_query', $meta_query);
+	}
+}
+add_action('elementor/query/bt_popular_cars', 'bt_custom_popular_cars_query');

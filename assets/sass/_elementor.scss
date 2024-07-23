@@ -2499,6 +2499,11 @@
       @extend .__bt-post-car-style-3;
     }
   }
+  &--style-4 {
+    .bt-post {
+      @extend .__bt-post-car-style-4;
+    }
+  }
 }
 
 .bt-elwg-list-icon-text {
