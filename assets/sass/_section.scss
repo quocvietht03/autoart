@@ -109,7 +109,46 @@
             }
         }
     }
-
+    &.elementor-grid-4.woocommerce{
+        @media (max-width: $break-lg) and (min-width: $break-tl) {
+        .woocommerce-loop-product{
+            &__infor{
+                padding: 20px;
+                max-width: calc(100% - 20px);
+            }
+            &__title{
+                font-size: 20px;
+            }
+        }
+       }
+    }
+    &.bt-loop-blog-home-2 {
+        @media (max-width: 1215px) and (min-width: $break-tl) {
+            .bt-elwg-post-loop-item--style-2 {
+                .bt-post {
+                    &--inner-right {
+                        padding: 60px 15px 65px 15px;
+                    }
+                    &--title {
+                        font-size: 20px;
+                    }
+                    .bt-post-meta {
+                        padding: 10px;
+                        .bt-post-author-w-avatar {
+                            padding-right: 10px;
+                            margin-right: 10px;
+                        }
+                        .bt-post-author-w-avatar--name {
+                            font-size: 14px;
+                        }
+                        .bt-reading-time {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     &.bt-what-we-offer-home-3 {
         position: relative;
         &::after {
@@ -234,8 +273,8 @@
             }
         }
     }
-    &.bt-text-explore{
-        a{
+    &.bt-text-explore {
+        a {
             color: $color-accent;
             text-decoration: underline;
             font-weight: 500;

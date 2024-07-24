@@ -7915,6 +7915,8 @@ body {
   word-break: initial; }
   .woocommerce .woocommerce-loop-product .star-rating * {
     word-break: initial; }
+.woocommerce .woocommerce-loop-product a.woocommerce-LoopProduct-link {
+  width: 100%; }
 .woocommerce .woocommerce-loop-product__title {
   font-size: 24px;
   line-height: 100%;
@@ -10807,6 +10809,26 @@ body {
 @media (min-width: 1025px) and (max-width: 1600.98px) {
   .elementor-element.bt-hero-home .elementor-widget-image.bt-hero-image > .elementor-widget-container {
     margin-right: 0; } }
+@media (max-width: 1199.98px) and (min-width: 1024.98px) {
+  .elementor-element.elementor-grid-4.woocommerce .woocommerce-loop-product__infor {
+    padding: 20px;
+    max-width: calc(100% - 20px); }
+  .elementor-element.elementor-grid-4.woocommerce .woocommerce-loop-product__title {
+    font-size: 20px; } }
+@media (max-width: 1215px) and (min-width: 1024.98px) {
+  .elementor-element.bt-loop-blog-home-2 .bt-elwg-post-loop-item--style-2 .bt-post--inner-right {
+    padding: 60px 15px 65px 15px; }
+  .elementor-element.bt-loop-blog-home-2 .bt-elwg-post-loop-item--style-2 .bt-post--title {
+    font-size: 20px; }
+  .elementor-element.bt-loop-blog-home-2 .bt-elwg-post-loop-item--style-2 .bt-post .bt-post-meta {
+    padding: 10px; }
+    .elementor-element.bt-loop-blog-home-2 .bt-elwg-post-loop-item--style-2 .bt-post .bt-post-meta .bt-post-author-w-avatar {
+      padding-right: 10px;
+      margin-right: 10px; }
+    .elementor-element.bt-loop-blog-home-2 .bt-elwg-post-loop-item--style-2 .bt-post .bt-post-meta .bt-post-author-w-avatar--name {
+      font-size: 14px; }
+    .elementor-element.bt-loop-blog-home-2 .bt-elwg-post-loop-item--style-2 .bt-post .bt-post-meta .bt-reading-time {
+      font-size: 14px; } }
 .elementor-element.bt-what-we-offer-home-3 {
   position: relative; }
   .elementor-element.bt-what-we-offer-home-3::after {
