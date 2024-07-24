@@ -347,13 +347,13 @@ class Widget_CardImageTextGrid extends Widget_Base {
 					?>
 					<div class="item-card-image-text"> 
 						<div class="item-card-image-text-inner">
-							<div class="item-card-image-text--thumbnail">
+							<a href="<?php echo esc_url($item['citg_image']['url'])  ?>" class="item-card-image-text--thumbnail elementor-clickable" data-elementor-lightbox-slideshow="bt-card-car">
 								<?php if( !empty( $attachment ) ) {
 										echo '<img src=" ' . esc_url( $attachment[0] ) . ' " alt="">';
 									} else {
 										echo '<img src=" ' . esc_url( $item['citg_image']['url'] ) . ' " alt="image">';
 								} ?>
-							</div>
+							</a>
 
 							<div class="item-card-image-text--content"> 
 								<?php if(!empty($item['citg_text'])): ?>

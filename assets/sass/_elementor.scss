@@ -1830,11 +1830,11 @@
       &--thumbnail {
         width: 100%;
         height: auto;
-
+        display: block;
         img {
           @extend .bt-image-absolute;
           object-position: center;
-          transition: $transition;
+          transition: all 3s cubic-bezier(0.11, 0.52, 0.53, 0.79);
         }
       }
 
