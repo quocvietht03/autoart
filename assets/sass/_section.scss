@@ -234,6 +234,12 @@
             }
         }
     }
+    &.bt-text-explore{
+        a{
+            color: $color-accent;
+            text-decoration: underline;
+        }
+    }
     &.bt-tabs-featured-cars {
         .elementor-tabs {
             &-wrapper {

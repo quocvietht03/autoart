@@ -10878,6 +10878,9 @@ body {
   .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--content {
     margin-left: 10px;
     margin-right: 10px; } }
+.elementor-element.bt-text-explore a {
+  color: var(--e-global-color-accent, #1FBECD);
+  text-decoration: underline; }
 .elementor-element.bt-tabs-featured-cars .elementor-tabs-wrapper {
   border-bottom: 1px solid #d9d9d9;
   overflow: initial;
