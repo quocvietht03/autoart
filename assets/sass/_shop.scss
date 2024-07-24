@@ -163,6 +163,10 @@
     }
     .star-rating {
       margin: 12px 0 0 0;
+      word-break: initial;
+      * {
+        word-break: initial;
+      }
     }
 
     &__title {
