@@ -70,7 +70,7 @@
                 background-color: transparent !important;
                 .elementor-tab-title {
                     @media (max-width: $break-sm) {
-                    display: none;
+                        display: none;
                     }
                 }
 
@@ -88,6 +88,12 @@
                                     fill: #fff;
                                 }
                             }
+                        }
+                    }
+                    .elementor-widget-image-box {
+                        .elementor-image-box-img{
+                            overflow: hidden;
+                            border-radius: 20px;
                         }
                     }
                     .bt-tab-make-grid {
@@ -147,6 +153,28 @@
                 &__title {
                     font-size: 20px;
                 }
+            }
+        }
+    }
+    &.bt-grid-item-about-home2 {
+        .elementor-widget-icon-box {
+            &::before {
+                position: absolute;
+                content: "";
+                width: 119px;
+                height: 119px;
+                border: 2px solid $color-accent;
+                border-radius: 50%;
+                top: -57px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .elementor-widget-container {
+                position: relative;
+                z-index: 1;
+            }
+            .elementor-icon-box-wrapper {
+                margin-top: -50px;
             }
         }
     }

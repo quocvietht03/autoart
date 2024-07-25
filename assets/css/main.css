@@ -10817,6 +10817,9 @@ body {
         color: #fff; }
       .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-content .elementor-widget-icon-box > .elementor-widget-container:hover svg {
         fill: #fff; }
+    .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-content .elementor-widget-image-box .elementor-image-box-img {
+      overflow: hidden;
+      border-radius: 20px; }
     .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-content .bt-tab-make-grid .elementor-widget-image-box > .elementor-widget-container:hover {
       background: var(--e-global-color-accent, #1FBECD); }
       .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-content .bt-tab-make-grid .elementor-widget-image-box > .elementor-widget-container:hover .elementor-image-box-title {
@@ -10832,6 +10835,21 @@ body {
     max-width: calc(100% - 20px); }
   .elementor-element.elementor-grid-4.woocommerce .woocommerce-loop-product__title {
     font-size: 20px; } }
+.elementor-element.bt-grid-item-about-home2 .elementor-widget-icon-box::before {
+  position: absolute;
+  content: "";
+  width: 119px;
+  height: 119px;
+  border: 2px solid var(--e-global-color-accent, #1FBECD);
+  border-radius: 50%;
+  top: -57px;
+  left: 50%;
+  transform: translateX(-50%); }
+.elementor-element.bt-grid-item-about-home2 .elementor-widget-icon-box .elementor-widget-container {
+  position: relative;
+  z-index: 1; }
+.elementor-element.bt-grid-item-about-home2 .elementor-widget-icon-box .elementor-icon-box-wrapper {
+  margin-top: -50px; }
 @media (max-width: 1215px) and (min-width: 1024.98px) {
   .elementor-element.bt-loop-blog-home-2 .bt-elwg-post-loop-item--style-2 .bt-post--inner-right {
     padding: 60px 15px 65px 15px; }
