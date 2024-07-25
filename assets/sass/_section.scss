@@ -23,26 +23,30 @@
     &.bt-browse-used-cars {
         .elementor-tabs {
             .elementor-tabs-wrapper {
-                @media (min-width: 768px) {
-                    background-color: #fff;
-                    width: fit-content;
-                    margin-left: auto;
-                    margin-right: auto;
-                    filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.1));
-                    border-radius: 10px;
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 60px;
-                    padding-right: 104px;
-                    padding-left: 87px;
-                }
+                background-color: #fff;
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.1));
+                border-radius: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 60px;
+                padding-right: 104px;
+                padding-left: 87px;
 
                 @media (max-width: $break-tl) {
                     gap: 30px;
                     padding-right: 60px;
                     padding-left: 60px;
                 }
-
+                @media (max-width: 600px) {
+                    row-gap: 10px;
+                    padding: 10px;
+                    max-width: 330px;
+                    margin: 0 auto;
+                    justify-content: center;
+                }
                 .elementor-tab-title {
                     padding-left: 0;
                     padding-right: 0;
@@ -52,7 +56,9 @@
                     @media (max-width: $break-sm) {
                         background-color: #fff;
                     }
-
+                    @media (max-width: 600px) {
+                        padding: 5px 0;
+                    }
                     &.elementor-active {
                         position: relative;
                         border-color: $color-accent;
@@ -64,34 +70,32 @@
                 background-color: transparent !important;
                 .elementor-tab-title {
                     @media (max-width: $break-sm) {
-                        background-color: #fff;
-                        border-bottom: 1px solid #eee;
-                        border-radius: 10px;
+                    display: none;
                     }
                 }
 
                 .elementor-tab-content {
                     background-color: transparent !important;
                     padding: 40px 0 0 0;
-                    .elementor-widget-icon-box{
-                        > .elementor-widget-container{
-                            &:hover{
+                    .elementor-widget-icon-box {
+                        > .elementor-widget-container {
+                            &:hover {
                                 background: $color-accent;
-                                a{
+                                a {
                                     color: #fff;
                                 }
-                                svg{
+                                svg {
                                     fill: #fff;
                                 }
                             }
                         }
                     }
-                    .bt-tab-make-grid{
-                        .elementor-widget-image-box{
-                            > .elementor-widget-container{
-                                &:hover{
+                    .bt-tab-make-grid {
+                        .elementor-widget-image-box {
+                            > .elementor-widget-container {
+                                &:hover {
                                     background: $color-accent;
-                                    .elementor-image-box-title{
+                                    .elementor-image-box-title {
                                         color: #fff;
                                     }
                                 }
@@ -133,18 +137,18 @@
             }
         }
     }
-    &.elementor-grid-4.woocommerce{
+    &.elementor-grid-4.woocommerce {
         @media (max-width: $break-lg) and (min-width: $break-tl) {
-        .woocommerce-loop-product{
-            &__infor{
-                padding: 20px;
-                max-width: calc(100% - 20px);
-            }
-            &__title{
-                font-size: 20px;
+            .woocommerce-loop-product {
+                &__infor {
+                    padding: 20px;
+                    max-width: calc(100% - 20px);
+                }
+                &__title {
+                    font-size: 20px;
+                }
             }
         }
-       }
     }
     &.bt-loop-blog-home-2 {
         @media (max-width: 1215px) and (min-width: $break-tl) {
