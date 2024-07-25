@@ -72,8 +72,32 @@
 
                 .elementor-tab-content {
                     background-color: transparent !important;
-                    padding-left: 0;
-                    padding-right: 0;
+                    padding: 40px 0 0 0;
+                    .elementor-widget-icon-box{
+                        > .elementor-widget-container{
+                            &:hover{
+                                background: $color-accent;
+                                a{
+                                    color: #fff;
+                                }
+                                svg{
+                                    fill: #fff;
+                                }
+                            }
+                        }
+                    }
+                    .bt-tab-make-grid{
+                        .elementor-widget-image-box{
+                            > .elementor-widget-container{
+                                &:hover{
+                                    background: $color-accent;
+                                    .elementor-image-box-title{
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

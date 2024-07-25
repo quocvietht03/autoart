@@ -10803,8 +10803,17 @@ body {
       border-radius: 10px; } }
   .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-content {
     background-color: transparent !important;
-    padding-left: 0;
-    padding-right: 0; }
+    padding: 40px 0 0 0; }
+    .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-content .elementor-widget-icon-box > .elementor-widget-container:hover {
+      background: var(--e-global-color-accent, #1FBECD); }
+      .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-content .elementor-widget-icon-box > .elementor-widget-container:hover a {
+        color: #fff; }
+      .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-content .elementor-widget-icon-box > .elementor-widget-container:hover svg {
+        fill: #fff; }
+    .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-content .bt-tab-make-grid .elementor-widget-image-box > .elementor-widget-container:hover {
+      background: var(--e-global-color-accent, #1FBECD); }
+      .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-content .bt-tab-make-grid .elementor-widget-image-box > .elementor-widget-container:hover .elementor-image-box-title {
+        color: #fff; }
 .elementor-element.bt-ss-buy-sell-car > .elementor-element .elementor-widget-image {
   transform: translateX(-50%); }
 @media (min-width: 1025px) and (max-width: 1600.98px) {
