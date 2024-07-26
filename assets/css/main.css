@@ -9084,53 +9084,80 @@ body {
       background: var(--e-global-color-accent, #1FBECD); }
 
 .woocommerce-account .woocommerce {
-  max-width: 600px;
+  max-width: 1250px;
   margin: 0 auto; }
 .woocommerce-account.logged-in .woocommerce {
   max-width: unset; }
 .woocommerce-account h2 {
   font-size: 30px;
   line-height: 40px;
-  margin: 0 0 30px; }
-.woocommerce-account .woocommerce form.login {
+  margin: 0 auto 30px;
+  max-width: 600px; }
+.woocommerce-account .woocommerce form.login,
+.woocommerce-account .woocommerce form.register,
+.woocommerce-account .woocommerce form.lost_reset_password {
   background: #f5f5f5;
   margin: 0;
   padding: 60px 40px;
   border: none;
-  border-radius: 15px; }
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box; }
   @media (max-width: 519.98px) {
-    .woocommerce-account .woocommerce form.login {
+    .woocommerce-account .woocommerce form.login,
+    .woocommerce-account .woocommerce form.register,
+    .woocommerce-account .woocommerce form.lost_reset_password {
       padding: 40px 20px; } }
-  .woocommerce-account .woocommerce form.login .form-row {
+  .woocommerce-account .woocommerce form.login .form-row,
+  .woocommerce-account .woocommerce form.register .form-row,
+  .woocommerce-account .woocommerce form.lost_reset_password .form-row {
     position: relative;
-    margin-bottom: 20px; }
-    .woocommerce-account .woocommerce form.login .form-row label {
+    margin-bottom: 20px;
+    width: 100%; }
+    .woocommerce-account .woocommerce form.login .form-row label,
+    .woocommerce-account .woocommerce form.register .form-row label,
+    .woocommerce-account .woocommerce form.lost_reset_password .form-row label {
       font-family: var(--e-global-typography-primary-font-family, "DM Sans");
       font-weight: 500;
       display: block;
       width: 100%;
       margin-bottom: 4px; }
-      .woocommerce-account .woocommerce form.login .form-row label.woocommerce-form-login__rememberme {
+      .woocommerce-account .woocommerce form.login .form-row label.woocommerce-form-login__rememberme,
+      .woocommerce-account .woocommerce form.register .form-row label.woocommerce-form-login__rememberme,
+      .woocommerce-account .woocommerce form.lost_reset_password .form-row label.woocommerce-form-login__rememberme {
         position: absolute;
         top: 12px;
         left: 150px;
         margin-bottom: 0; }
         @media (max-width: 360px) {
-          .woocommerce-account .woocommerce form.login .form-row label.woocommerce-form-login__rememberme {
+          .woocommerce-account .woocommerce form.login .form-row label.woocommerce-form-login__rememberme,
+          .woocommerce-account .woocommerce form.register .form-row label.woocommerce-form-login__rememberme,
+          .woocommerce-account .woocommerce form.lost_reset_password .form-row label.woocommerce-form-login__rememberme {
             position: static;
             margin-bottom: 15px; } }
-    .woocommerce-account .woocommerce form.login .form-row input {
+    .woocommerce-account .woocommerce form.login .form-row input,
+    .woocommerce-account .woocommerce form.register .form-row input,
+    .woocommerce-account .woocommerce form.lost_reset_password .form-row input {
       border-radius: 15px; }
-      .woocommerce-account .woocommerce form.login .form-row input[type="checkbox"] {
+      .woocommerce-account .woocommerce form.login .form-row input[type="checkbox"],
+      .woocommerce-account .woocommerce form.register .form-row input[type="checkbox"],
+      .woocommerce-account .woocommerce form.lost_reset_password .form-row input[type="checkbox"] {
         min-height: unset; }
-  .woocommerce-account .woocommerce form.login .lost_password {
+  .woocommerce-account .woocommerce form.login .lost_password,
+  .woocommerce-account .woocommerce form.register .lost_password,
+  .woocommerce-account .woocommerce form.lost_reset_password .lost_password {
     margin: 0; }
-    .woocommerce-account .woocommerce form.login .lost_password a {
+    .woocommerce-account .woocommerce form.login .lost_password a,
+    .woocommerce-account .woocommerce form.register .lost_password a,
+    .woocommerce-account .woocommerce form.lost_reset_password .lost_password a {
       font-family: var(--e-global-typography-primary-font-family, "DM Sans");
       font-weight: 700;
       text-decoration: underline;
       color: var(--e-global-color-accent, #1FBECD); }
-  .woocommerce-account .woocommerce form.login .button {
+  .woocommerce-account .woocommerce form.login .button,
+  .woocommerce-account .woocommerce form.register .button,
+  .woocommerce-account .woocommerce form.lost_reset_password .button {
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
