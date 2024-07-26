@@ -9388,7 +9388,7 @@ body {
     .bt-elwg-site-social-style-2 a svg {
       fill: var(--e-global-color-secondary, #111);
       width: auto;
-      height: 18px;
+      height: 20px;
       transition: all 0.25s ease-in-out; }
     .bt-elwg-site-social-style-2 a:hover svg {
       fill: var(--e-global-color-accent, #1FBECD); }
