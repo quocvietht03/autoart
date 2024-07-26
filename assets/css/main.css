@@ -1995,8 +1995,8 @@ img.alignright {
       padding-left: 0px; } }
   @media (min-width: 1025px) and (max-width: 1199.98px) {
     .elementor-location-header .elementor-element.bt-header-nav-style-1 .elementor-widget-button .elementor-widget-container .elementor-button-link {
-      padding-left: 24px;
-      padding-right: 25px; } }
+      font-size: 16px;
+      padding: 10px; } }
   @media (min-width: 1025px) and (max-width: 1199.98px) {
     .elementor-location-header .elementor-element.bt-header-nav-style-1 .elementor-widget-social-icons > .elementor-widget-container {
       margin: 0 15px; } }
@@ -2010,10 +2010,25 @@ img.alignright {
     box-shadow: -25px 4px 25px rgba(0, 0, 0, 0.2); }
   .elementor-location-header .elementor-element.bt-header-nav-style-1.elementor-sticky--active > .e-con-inner > .elementor-element {
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2); }
+    .elementor-location-header .elementor-element.bt-header-nav-style-1.elementor-sticky--active > .e-con-inner > .elementor-element .elementor-nav-menu--main .elementor-item {
+      padding-top: 34px;
+      padding-bottom: 34px; }
   .elementor-location-header .elementor-element.bt-header-nav-style-1.elementor-sticky--active .bt-elwg-mini-wishlist .bt-mini-wishlist {
     padding: 20px 0; }
   .elementor-location-header .elementor-element.bt-header-nav-style-1.elementor-sticky--active .bt-elwg-mini-compare .bt-mini-compare {
     padding: 20px 0; }
+  @media (max-width: 1370px) and (min-width: 1199.98px) {
+    .elementor-location-header .elementor-element.bt-header-nav-style-1 > .e-con-inner > .elementor-element .elementor-nav-menu--main .menu-item .elementor-item {
+      margin: 0 8px; }
+    .elementor-location-header .elementor-element.bt-header-nav-style-1 > .e-con-inner > .elementor-element .elementor-nav-menu--main .menu-item:first-child .elementor-item {
+      margin-left: 0; }
+    .elementor-location-header .elementor-element.bt-header-nav-style-1 > .e-con-inner > .elementor-element .elementor-nav-menu--main .menu-item:last-child .elementor-item {
+      margin-right: 0; } }
+  @media (max-width: 1199.98px) and (min-width: 1024.98px) {
+    .elementor-location-header .elementor-element.bt-header-nav-style-1 > .e-con-inner > .elementor-element .elementor-nav-menu--main .menu-item .elementor-item {
+      font-size: 16px; }
+    .elementor-location-header .elementor-element.bt-header-nav-style-1 > .e-con-inner > .elementor-element .bt-col-btn-action-header {
+      margin: 0 10px; } }
   @media (max-width: 767px) {
     .elementor-location-header .elementor-element.bt-header-nav-style-1 .bt-elwg-mini-wishlist .bt-mini-wishlist {
       padding: 20px 0; }

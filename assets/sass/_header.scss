@@ -486,8 +486,8 @@
       .elementor-widget-container {
         .elementor-button-link {
           @media (min-width: 1025px) and (max-width: 1199.98px) {
-            padding-left: 24px;
-            padding-right: 25px;
+            font-size: 16px;
+            padding: 10px;
           }
         }
       }
@@ -523,6 +523,12 @@
       > .e-con-inner {
         > .elementor-element {
           box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+          .elementor-nav-menu--main {
+            .elementor-item {
+              padding-top: 34px;
+              padding-bottom: 34px;
+            }
+          }
         }
       }
       .bt-elwg-mini-wishlist {
@@ -533,6 +539,45 @@
       .bt-elwg-mini-compare {
         .bt-mini-compare {
           padding: 20px 0;
+        }
+      }
+    }
+    @media (max-width: 1370px) and (min-width: $break-lg) {
+      > .e-con-inner {
+        > .elementor-element {
+          .elementor-nav-menu--main {
+            .menu-item {
+              .elementor-item {
+                margin: 0 8px;
+              }
+              &:first-child {
+                .elementor-item {
+                  margin-left: 0;
+                }
+              }
+              &:last-child {
+                .elementor-item {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: $break-lg) and (min-width: $break-tl) {
+      > .e-con-inner {
+        > .elementor-element {
+          .elementor-nav-menu--main {
+            .menu-item {
+              .elementor-item {
+                font-size: 16px;
+              }
+            }
+          }
+          .bt-col-btn-action-header {
+            margin: 0 10px;
+          }
         }
       }
     }
