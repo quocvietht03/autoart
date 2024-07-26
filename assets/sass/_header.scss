@@ -713,8 +713,13 @@
     }
   }
 }
+body.admin-bar .dialog-type-lightbox.bt-menu-mobile-popup {
+  position: fixed;
+  top: 45px;
+}
 
 .bt-menu-mobile-popup {
+  position: fixed !important;
   .elementor-nav-menu {
     a.has-submenu {
       display: flex;
@@ -737,13 +742,13 @@
       a.elementor-sub-item {
         position: relative;
         padding-left: 50px;
-        font-size: 17px !important;
         color: $color-text;
+        font-size: 15px !important;
         border: none;
         &:before {
           content: "";
           position: absolute;
-          top: 25px;
+          top: 20px;
           left: 20px;
           width: 18px;
           height: 1px;
