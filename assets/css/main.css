@@ -2158,6 +2158,8 @@ img.alignright {
 @media (min-width: 1025px) and (max-width: 1199.98px) {
   .elementor-element.bt-footer-style-1 > .elementor-element:first-child h2.elementor-heading-title {
     font-size: 20px; } }
+.elementor-element.bt-footer-style-1 > .elementor-element:first-child .bt-elwg-site-social-style-2 svg {
+  font-size: 20px; }
 @media (min-width: 1200px) and (max-width: 1379.98px) {
   .elementor-element.bt-footer-style-1 > .elementor-element:first-child .elementor-widget-icon-list > .elementor-widget-container {
     padding-left: 15px; } }
@@ -9388,7 +9390,7 @@ body {
     .bt-elwg-site-social-style-2 a svg {
       fill: var(--e-global-color-secondary, #111);
       width: auto;
-      height: 20px;
+      height: 18px;
       transition: all 0.25s ease-in-out; }
     .bt-elwg-site-social-style-2 a:hover svg {
       fill: var(--e-global-color-accent, #1FBECD); }
