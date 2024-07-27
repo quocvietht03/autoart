@@ -91,7 +91,7 @@
                         }
                     }
                     .elementor-widget-image-box {
-                        .elementor-image-box-img{
+                        .elementor-image-box-img {
                             overflow: hidden;
                             border-radius: 20px;
                         }
@@ -355,6 +355,45 @@
                     @media (max-width: $break-xs) {
                         margin: 0px 10px;
                     }
+                }
+            }
+            &-content-wrapper {
+                .elementor-tab-title {
+                    display: none;
+                }
+                .elementor-tab-content {
+                    padding: 40px 0 0 0;
+                }
+            }
+        }
+    }
+    &.bt-tabs-popular-cars {
+        .elementor-tabs {
+            &-wrapper {
+                border-bottom: 1px solid #d9d9d9;
+                overflow: initial;
+                display: flex;
+                justify-content: flex-start;
+                .elementor-tab-title {
+                    padding: 0 0 17px 0;
+                    border-bottom: 3px solid transparent !important;
+                    position: relative;
+                    bottom: -1px;
+                    &:not(:last-child) {
+                        margin: 0 50px 0 0;
+                    }
+                    &.elementor-active {
+                        border-color: $color-accent !important;
+                    }
+                    @media (max-width: $break-sm) {
+                        margin: 0 20px !important;
+                    }
+                    @media (max-width: $break-xs) {
+                        margin: 0 10px !important;
+                    }
+                }
+                @media (max-width: $break-sm) {
+                    justify-content: center;
                 }
             }
             &-content-wrapper {

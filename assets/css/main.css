@@ -4697,7 +4697,6 @@ body {
     position: relative;
     overflow: hidden;
     background: #ffffff;
-    border: 1px solid #dadada;
     border-radius: 20px; }
   .__bt-post-car-style-3 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--thumbnail {
     position: relative; }
@@ -11046,6 +11045,33 @@ body {
 .elementor-element.bt-tabs-featured-cars .elementor-tabs-content-wrapper .elementor-tab-title {
   display: none; }
 .elementor-element.bt-tabs-featured-cars .elementor-tabs-content-wrapper .elementor-tab-content {
+  padding: 40px 0 0 0; }
+.elementor-element.bt-tabs-popular-cars .elementor-tabs-wrapper {
+  border-bottom: 1px solid #d9d9d9;
+  overflow: initial;
+  display: flex;
+  justify-content: flex-start; }
+  .elementor-element.bt-tabs-popular-cars .elementor-tabs-wrapper .elementor-tab-title {
+    padding: 0 0 17px 0;
+    border-bottom: 3px solid transparent !important;
+    position: relative;
+    bottom: -1px; }
+    .elementor-element.bt-tabs-popular-cars .elementor-tabs-wrapper .elementor-tab-title:not(:last-child) {
+      margin: 0 50px 0 0; }
+    .elementor-element.bt-tabs-popular-cars .elementor-tabs-wrapper .elementor-tab-title.elementor-active {
+      border-color: var(--e-global-color-accent, #1FBECD) !important; }
+    @media (max-width: 767.98px) {
+      .elementor-element.bt-tabs-popular-cars .elementor-tabs-wrapper .elementor-tab-title {
+        margin: 0 20px !important; } }
+    @media (max-width: 519.98px) {
+      .elementor-element.bt-tabs-popular-cars .elementor-tabs-wrapper .elementor-tab-title {
+        margin: 0 10px !important; } }
+  @media (max-width: 767.98px) {
+    .elementor-element.bt-tabs-popular-cars .elementor-tabs-wrapper {
+      justify-content: center; } }
+.elementor-element.bt-tabs-popular-cars .elementor-tabs-content-wrapper .elementor-tab-title {
+  display: none; }
+.elementor-element.bt-tabs-popular-cars .elementor-tabs-content-wrapper .elementor-tab-content {
   padding: 40px 0 0 0; }
 @media (max-width: 1760px) {
   .elementor-element.bt-loop-slider-car .elementor-swiper-button {
