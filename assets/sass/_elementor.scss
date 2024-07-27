@@ -2525,14 +2525,15 @@
     width: 75%;
     display: flex;
     overflow-x: auto;
+    padding-left: 10px;
     .item-icon-text {
       display: flex;
       align-items: center;
       justify-content: center;
       width: auto;
-      min-width: 195px;
+      min-width: 165px;
       position: relative;
-      padding: 0 15px;
+      padding: 0 40px;
       &:not(:last-child):after {
         content: "";
         position: absolute;
@@ -2546,7 +2547,7 @@
       &-inner {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 17px;
         height: 100%;
       }
       &--icon {
