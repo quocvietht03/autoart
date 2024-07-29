@@ -1,3 +1,25 @@
+.gform-theme--framework
+  :where(
+    :not(html):not(iframe):not(canvas):not(img):not(svg):not(video)
+      :not(svg *):not(symbol *):not(.gform-theme__no-reset--el)
+      :not(.gform-theme__no-reset--children *):not(.gform-theme__disable)
+      :not(.gform-theme__disable *):not(.gform-theme__disable-reset)
+      :not(.gform-theme__disable-reset *):not(.gform_heading *):not(.gfield--type-html *)
+      :not(.gfield--type-section *):not(.form_saved_message > *)
+      :not(.form_saved_message_sent > *):not(.gform_confirmation_message *)
+      :not(.wp-editor-container):not(.mce-tinymce):not(.mce-tinymce *)
+      :not(.wp-editor-area):not(.gfield_description > *)
+      :not(.gform-field-label--type-inline > :not(span))
+  ) {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  display: revert;
+  all: revert-layer;
+}
 .gform_wrapper {
   &.bt-get-price-form_wrapper {
     .gform-field-label--type-inline {
@@ -7,7 +29,7 @@
   }
   &.gform-theme--api,
   &.gform-theme--foundation {
-    --gf-ctrl-choice-check-color: var(--e-global-color-accent, #1FBECD);
+    --gf-ctrl-choice-check-color: var(--e-global-color-accent, #1fbecd);
     --gf-form-gap-x: 12px;
     --gf-form-gap-y: 12px;
     --gf-font-size-secondary: 18px;
@@ -33,7 +55,7 @@
       outline: none;
       box-shadow: none;
     }
-    input:not([type="checkbox"],[type="radio"]),
+    input:not([type="checkbox"], [type="radio"]),
     select,
     textarea {
       font-size: 16px;
@@ -41,9 +63,9 @@
       line-height: 150%;
       height: auto;
       color: $color-text;
-      background: #FFFFFF;
+      background: #ffffff;
       padding: 16px 24px;
-      border: 1px solid #DADADA;
+      border: 1px solid #dadada;
       border-radius: 10px;
       outline: none;
       box-shadow: none;
@@ -61,7 +83,7 @@
       line-height: 150% !important;
       text-transform: uppercase !important;
       text-align: center !important;
-      color: #FFFFFF !important;
+      color: #ffffff !important;
       background: $color-accent !important;
       padding: 16px 40px !important;
       border: none !important;

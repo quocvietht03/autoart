@@ -2651,11 +2651,31 @@ body.admin-bar .dialog-type-lightbox.bt-menu-mobile-popup {
   .bt-block-subscribe-contact .bt-subscribe-contact--form {
     margin-top: 22px; }
 
+.gform-theme--framework
+:where(:not(html):not(iframe):not(canvas):not(img):not(svg):not(video)
+:not(svg *):not(symbol *):not(.gform-theme__no-reset--el)
+:not(.gform-theme__no-reset--children *):not(.gform-theme__disable)
+:not(.gform-theme__disable *):not(.gform-theme__disable-reset)
+:not(.gform-theme__disable-reset *):not(.gform_heading *):not(.gfield--type-html *)
+:not(.gfield--type-section *):not(.form_saved_message > *)
+:not(.form_saved_message_sent > *):not(.gform_confirmation_message *)
+:not(.wp-editor-container):not(.mce-tinymce):not(.mce-tinymce *)
+:not(.wp-editor-area):not(.gfield_description > *)
+:not(.gform-field-label--type-inline > :not(span))) {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  display: revert;
+  all: revert-layer; }
+
 .gform_wrapper.bt-get-price-form_wrapper .gform-field-label--type-inline {
   --gf-local-color: #fff;
   --gf-local-font-size: 18px; }
 .gform_wrapper.gform-theme--api, .gform_wrapper.gform-theme--foundation {
-  --gf-ctrl-choice-check-color: var(--e-global-color-accent, #1FBECD);
+  --gf-ctrl-choice-check-color: var(--e-global-color-accent, #1fbecd);
   --gf-form-gap-x: 12px;
   --gf-form-gap-y: 12px;
   --gf-font-size-secondary: 18px; }
@@ -2683,9 +2703,9 @@ body.admin-bar .dialog-type-lightbox.bt-menu-mobile-popup {
   line-height: 150%;
   height: auto;
   color: var(--e-global-color-text, #555);
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 16px 24px;
-  border: 1px solid #DADADA;
+  border: 1px solid #dadada;
   border-radius: 10px;
   outline: none;
   box-shadow: none; }
@@ -2699,7 +2719,7 @@ body.admin-bar .dialog-type-lightbox.bt-menu-mobile-popup {
   line-height: 150% !important;
   text-transform: uppercase !important;
   text-align: center !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   background: var(--e-global-color-accent, #1FBECD) !important;
   padding: 16px 40px !important;
   border: none !important;
@@ -11074,6 +11094,58 @@ body {
 @media (max-width: 1480px) {
   .elementor-element.bt-col-content-featured-cars-home1 {
     padding-left: 15px; } }
+.elementor-element.bt-form-get-price-form .gform_wrapper.gform-theme--api, .elementor-element.bt-form-get-price-form .gform_wrapper.gform-theme--foundation {
+  --gf-form-gap-x: 21px;
+  --gf-form-gap-y: 20px; }
+.elementor-element.bt-form-get-price-form .gform_wrapper .gform-body .select2-selection--single {
+  font-size: 16px;
+  font-weight: 400;
+  background: #fff;
+  padding: 0 18px 0 35px;
+  border: none;
+  color: #333;
+  height: 64px; }
+  .elementor-element.bt-form-get-price-form .gform_wrapper .gform-body .select2-selection--single .select2-selection__arrow {
+    width: 40px;
+    height: 64px;
+    top: 0; }
+.elementor-element.bt-form-get-price-form .gform_wrapper .gform-body input:not([type="checkbox"], [type="radio"]),
+.elementor-element.bt-form-get-price-form .gform_wrapper .gform-body select,
+.elementor-element.bt-form-get-price-form .gform_wrapper .gform-body textarea {
+  background: #fff;
+  border: none;
+  height: 64px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 16px 35px; }
+.elementor-element.bt-form-get-price-form .gform_wrapper .gform-body .ginput_container_text {
+  position: relative; }
+  .elementor-element.bt-form-get-price-form .gform_wrapper .gform-body .ginput_container_text input {
+    padding-left: 65px; }
+  .elementor-element.bt-form-get-price-form .gform_wrapper .gform-body .ginput_container_text:before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTE0LjQ3OTIgMTQuNDkzNUwxOS4yNSAxOS4yNU0xNi41IDkuNjI1QzE2LjUgMTMuNDIxOSAxMy40MjE5IDE2LjUgOS42MjUgMTYuNUM1LjgyODA0IDE2LjUgMi43NSAxMy40MjE5IDIuNzUgOS42MjVDMi43NSA1LjgyODA0IDUuODI4MDQgMi43NSA5LjYyNSAyLjc1QzEzLjQyMTkgMi43NSAxNi41IDUuODI4MDQgMTYuNSA5LjYyNVoiIHN0cm9rZT0iIzU1NTU1NSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%); }
+.elementor-element.bt-form-get-price-form .gform_wrapper .gform-body .gfield_checkbox .gform-field-label {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500; }
+.elementor-element.bt-form-get-price-form .gform_wrapper .gform_footer {
+  margin-top: 29px; }
+  .elementor-element.bt-form-get-price-form .gform_wrapper .gform_footer input[type="submit"] {
+    padding: 18px 50px !important;
+    width: 100% !important; }
 @media (max-width: 1760px) {
   .elementor-element.bt-loop-slider-car .elementor-swiper-button {
     padding: 20px !important; }
