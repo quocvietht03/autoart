@@ -2530,8 +2530,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: auto;
-      min-width: 165px;
+      width: auto; 
       position: relative;
       padding: 0 40px;
       &:not(:last-child):after {
@@ -2573,7 +2572,6 @@
     }
     &--items {
       width: 100%;
-      justify-content: center;
     }
   }
 }

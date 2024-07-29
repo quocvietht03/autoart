@@ -406,6 +406,11 @@
             }
         }
     }
+    &.bt-col-content-featured-cars-home1 {
+        @media (max-width: 1480px) {
+            padding-left: 15px;
+        }
+    }
     &.bt-loop-slider-car {
         @media (max-width: 1760px) {
             .elementor-swiper-button {
