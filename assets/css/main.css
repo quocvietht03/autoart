@@ -10915,6 +10915,44 @@ body {
   .elementor-element.bt-col-container-right {
     padding-right: calc((100% + 5px - var(--container-max-width)) / 2); } }
 
+/* slider home 2 */
+.bt-price-slider-home-1 {
+  transform: translate(0, 0) !important;
+  left: inherit !important;
+  right: -69px;
+  top: 48% !important;
+  margin: 0;
+  min-width: 101px; }
+
+.bt-price-slider-home-1 .n2-ss-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.bt-icon-phone-slider-home-1.n2-ss-layer > .n2-ss-layer-col > .n2-ss-layer:first-child {
+  transform: translate(0, 0) !important;
+  left: -40px !important;
+  top: -26px !important;
+  min-width: 72px;
+  min-height: 72px; }
+
+@media (max-width: 567px) {
+  .bt-icon-phone-slider-home-1.n2-ss-layer > .n2-ss-layer-col > .n2-ss-layer:first-child {
+    left: 0% !important;
+    top: 0% !important; } }
+@media (max-width: 700.98px) {
+  .bt-slider-1-home-1 .bt-year-slider .n2-ss-layer-row-inner {
+    display: flex;
+    align-items: flex-end; } }
+/* slider home 3 */
+.bt-heading-one-line > .n2-ss-layer-content {
+  flex-direction: row;
+  max-width: fit-content;
+  position: relative; }
+
+.bt-heading-one-line > .n2-ss-layer-content > div {
+  width: auto; }
+
 .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-wrapper {
   background-color: #fff;
   width: fit-content;
