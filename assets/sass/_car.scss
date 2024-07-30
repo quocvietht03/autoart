@@ -3504,6 +3504,9 @@
         &--item {
           width: 100%;
           padding: 30px;
+          @media (max-width: $break-lg) and (min-width: $break-tl) {
+            padding: 20px 15px;
+          }
           .bt-post {
             &--featured {
               margin-bottom: 20px;
