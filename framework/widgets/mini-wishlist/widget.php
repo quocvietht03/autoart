@@ -90,7 +90,7 @@ class Widget_MiniWishlist extends Widget_Base {
 
 		?>
 		<div class="bt-elwg-mini-wishlist">
-			<form class="bt-mini-wishlist-form" action="" method="post">
+			<form id="bt-mini-wishlist-form" class="bt-mini-wishlist-form" action="" method="post">
 				<input type="hidden" class="bt-carwishlistcookie" name="carwishlistcookie" value="<?php echo esc_attr($carwishlist); ?>">
 
 				<div class="bt-mini-wishlist">
