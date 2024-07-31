@@ -367,6 +367,18 @@
             }
         }
     }
+    &.bt-section-vehicles-solution{
+        @media (max-width: $break-lg) and (min-width: $break-tl) {
+            > .e-con-inner{
+                gap: 15px;
+                .bt-elwg-highlighted-heading{
+                    h2{
+                        font-size: 60px;
+                    }
+                }
+            }
+        }
+    }
     &.bt-section-dealer {
         @media (max-width: $break-lg) and (min-width: $break-tl) {
             .bt-elwg-dealer-loop-item--default {

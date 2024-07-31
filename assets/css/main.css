@@ -11130,6 +11130,11 @@ body {
     .elementor-element.bt-find-your-dream-cars-home-3 .bt-col-container-right .elementor-button-wrapper .elementor-button {
       padding: 13px 50px 14px 25px; } }
 @media (max-width: 1199.98px) and (min-width: 1024.98px) {
+  .elementor-element.bt-section-vehicles-solution > .e-con-inner {
+    gap: 15px; }
+    .elementor-element.bt-section-vehicles-solution > .e-con-inner .bt-elwg-highlighted-heading h2 {
+      font-size: 60px; } }
+@media (max-width: 1199.98px) and (min-width: 1024.98px) {
   .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--titlejob {
     padding: 20px 15px; }
     .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--titlejob span {
