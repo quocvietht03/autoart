@@ -289,6 +289,7 @@
     }
 
     &.bt-find-your-dream-cars-home-3 {
+        overflow-x: clip;
         > .elementor-element {
             &:first-child {
                 clip-path: polygon(0 0, 100% 0, 91% 100%, 0% 100%);
