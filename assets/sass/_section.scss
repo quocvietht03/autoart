@@ -382,6 +382,19 @@
                     }
                 }
             }
+            &.e-con-full{
+                > .elementor-element{
+                    &:first-child{
+                        padding-top: 80px;
+                        padding-bottom: 80px;
+                        .bt-elwg-highlighted-heading{
+                            h2{
+                                font-size: 60px !important;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     &.bt-section-dealer {

@@ -11138,6 +11138,11 @@ body {
   .elementor-element.bt-section-vehicles-solution > .e-con-inner {
     gap: 15px; }
     .elementor-element.bt-section-vehicles-solution > .e-con-inner .bt-elwg-highlighted-heading h2 {
+      font-size: 60px !important; }
+  .elementor-element.bt-section-vehicles-solution.e-con-full > .elementor-element:first-child {
+    padding-top: 80px;
+    padding-bottom: 80px; }
+    .elementor-element.bt-section-vehicles-solution.e-con-full > .elementor-element:first-child .bt-elwg-highlighted-heading h2 {
       font-size: 60px !important; } }
 @media (max-width: 1199.98px) and (min-width: 1024.98px) {
   .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--titlejob {
