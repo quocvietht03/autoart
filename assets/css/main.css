@@ -10958,6 +10958,8 @@ body {
 .bt-heading-one-line > .n2-ss-layer-content > div {
   width: auto; }
 
+.elementor-element.bt-img-width-full a {
+  display: block; }
 .elementor-element.bt-browse-used-cars .elementor-tabs .elementor-tabs-wrapper {
   background-color: #fff;
   width: fit-content;
