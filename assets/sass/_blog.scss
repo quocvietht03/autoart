@@ -614,23 +614,26 @@
         padding-right: 15px;
       }
     }
-
-    &--auto-detailing {
+    &--categories {
       margin-top: -35px;
       z-index: 9;
       position: relative;
-      a {
-        background-color: $color-accent;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: normal;
-        width: 154px;
-        height: 35px;
+      .bt-post-cat {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        border-radius: 5px;
+        flex-wrap: wrap;
+        gap: 5px;
+        a {
+          background-color: $color-accent;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: normal;
+          height: auto;
+          border-radius: 5px;
+          padding: 7px 25px;
+        }
       }
     }
 

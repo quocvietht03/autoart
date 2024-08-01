@@ -3933,22 +3933,25 @@ body {
     .__bt-post-style-default .bt-post--content, .bt-related-posts--list .bt-post--content, .bt-elwg-post-grid--default .bt-post--content, .bt-elwg-post-loop-item--default .bt-post--content {
       padding-left: 15px;
       padding-right: 15px; } }
-.__bt-post-style-default .bt-post--auto-detailing, .bt-related-posts--list .bt-post--auto-detailing, .bt-elwg-post-grid--default .bt-post--auto-detailing, .bt-elwg-post-loop-item--default .bt-post--auto-detailing {
+.__bt-post-style-default .bt-post--categories, .bt-related-posts--list .bt-post--categories, .bt-elwg-post-grid--default .bt-post--categories, .bt-elwg-post-loop-item--default .bt-post--categories {
   margin-top: -35px;
   z-index: 9;
   position: relative; }
-  .__bt-post-style-default .bt-post--auto-detailing a, .bt-related-posts--list .bt-post--auto-detailing a, .bt-elwg-post-grid--default .bt-post--auto-detailing a, .bt-elwg-post-loop-item--default .bt-post--auto-detailing a {
-    background-color: var(--e-global-color-accent, #1FBECD);
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: normal;
-    width: 154px;
-    height: 35px;
+  .__bt-post-style-default .bt-post--categories .bt-post-cat, .bt-related-posts--list .bt-post--categories .bt-post-cat, .bt-elwg-post-grid--default .bt-post--categories .bt-post-cat, .bt-elwg-post-loop-item--default .bt-post--categories .bt-post-cat {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    border-radius: 5px; }
+    flex-wrap: wrap;
+    gap: 5px; }
+    .__bt-post-style-default .bt-post--categories .bt-post-cat a, .bt-related-posts--list .bt-post--categories .bt-post-cat a, .bt-elwg-post-grid--default .bt-post--categories .bt-post-cat a, .bt-elwg-post-loop-item--default .bt-post--categories .bt-post-cat a {
+      background-color: var(--e-global-color-accent, #1FBECD);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: normal;
+      height: auto;
+      border-radius: 5px;
+      padding: 7px 25px; }
 .__bt-post-style-default .bt-post--title, .bt-related-posts--list .bt-post--title, .bt-elwg-post-grid--default .bt-post--title, .bt-elwg-post-loop-item--default .bt-post--title {
   margin: 25px 0 0 0; }
   .__bt-post-style-default .bt-post--title a, .bt-related-posts--list .bt-post--title a, .bt-elwg-post-grid--default .bt-post--title a, .bt-elwg-post-loop-item--default .bt-post--title a {
@@ -11133,7 +11136,7 @@ body {
   .elementor-element.bt-section-vehicles-solution > .e-con-inner {
     gap: 15px; }
     .elementor-element.bt-section-vehicles-solution > .e-con-inner .bt-elwg-highlighted-heading h2 {
-      font-size: 60px; } }
+      font-size: 60px !important; } }
 @media (max-width: 1199.98px) and (min-width: 1024.98px) {
   .elementor-element.bt-section-dealer .bt-elwg-dealer-loop-item--default .bt-post--titlejob {
     padding: 20px 15px; }
