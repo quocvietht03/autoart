@@ -10953,10 +10953,18 @@ body {
 .bt-heading-one-line > .n2-ss-layer-content {
   flex-direction: row;
   max-width: fit-content;
-  position: relative; }
+  position: relative;
+  flex-wrap: wrap; }
 
 .bt-heading-one-line > .n2-ss-layer-content > div {
   width: auto; }
+
+.bt-button-slider-home3 > .n2-ss-layer-content {
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.bt-button-slider-home3 > .n2-ss-layer-content .n2-ss-layer:last-child .n2-ss-button-container a > div div {
+  text-decoration: underline !important; }
 
 .elementor-element.bt-img-width-full a {
   display: block; }

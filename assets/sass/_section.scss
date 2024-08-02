@@ -60,10 +60,19 @@
     flex-direction: row;
     max-width: fit-content;
     position: relative;
+    flex-wrap: wrap;
 }
 .bt-heading-one-line > .n2-ss-layer-content > div {
     width: auto;
 }
+.bt-button-slider-home3 > .n2-ss-layer-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.bt-button-slider-home3 > .n2-ss-layer-content .n2-ss-layer:last-child .n2-ss-button-container a > div div {
+    text-decoration: underline !important;
+}
+
 .elementor-element {
     &.bt-img-width-full {
         a {
@@ -639,10 +648,10 @@
                     &:last-child {
                         padding-left: 20px;
                         padding-right: 20px;
-                        .elementor-widget-button{
-                            .elementor-widget-container{
+                        .elementor-widget-button {
+                            .elementor-widget-container {
                                 margin-top: 10px;
-                                .elementor-button{
+                                .elementor-button {
                                     padding: 13px 24px;
                                 }
                             }
