@@ -622,6 +622,36 @@
             }
         }
     }
+    &.bt-section-ads {
+        @media (max-width: 1360px) and (min-width: $break-tl) {
+            > .e-con-inner {
+                > .elementor-element {
+                    &:first-child {
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        .elementor-button-wrapper {
+                            .elementor-button {
+                                min-width: 190px;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        .elementor-widget-button{
+                            .elementor-widget-container{
+                                margin-top: 10px;
+                                .elementor-button{
+                                    padding: 13px 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     &.bt-section-contact {
         > .e-con-inner {
             > .elementor-element {
