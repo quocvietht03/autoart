@@ -65,8 +65,8 @@
     width: auto;
 }
 .elementor-element {
-    &.bt-img-width-full{
-        a{
+    &.bt-img-width-full {
+        a {
             display: block;
         }
     }
@@ -372,23 +372,23 @@
             }
         }
     }
-    &.bt-section-vehicles-solution{
+    &.bt-section-vehicles-solution {
         @media (max-width: $break-lg) and (min-width: $break-tl) {
-            > .e-con-inner{
+            > .e-con-inner {
                 gap: 15px;
-                .bt-elwg-highlighted-heading{
-                    h2{
+                .bt-elwg-highlighted-heading {
+                    h2 {
                         font-size: 60px !important;
                     }
                 }
             }
-            &.e-con-full{
-                > .elementor-element{
-                    &:first-child{
+            &.e-con-full {
+                > .elementor-element {
+                    &:first-child {
                         padding-top: 80px;
                         padding-bottom: 80px;
-                        .bt-elwg-highlighted-heading{
-                            h2{
+                        .bt-elwg-highlighted-heading {
+                            h2 {
                                 font-size: 60px !important;
                             }
                         }
@@ -619,6 +619,99 @@
         @media (max-width: 1630px) {
             .elementor-swiper-button {
                 display: none !important;
+            }
+        }
+    }
+    &.bt-section-contact {
+        > .e-con-inner {
+            > .elementor-element {
+                .elementor-widget-bt-site-information-style-1 {
+                    .bt-elwg-site-infor {
+                        gap: 20px;
+                        @media (max-width: $break-sm) {
+                            gap: 15px;
+                        }
+                        &--item {
+                            border-radius: 10px;
+                            border: 1px solid #d9d9d9;
+                            width: calc(50% - 10px);
+                            display: flex;
+                            justify-content: center;
+                            padding: 22px 10px;
+                            font-size: 20px;
+                            gap: 15px;
+                            a {
+                                gap: 15px;
+                            }
+                            &:last-child {
+                                width: 100%;
+                            }
+                            @media (max-width: $break-sm) {
+                                width: 100%;
+                                justify-content: flex-start;
+                                padding: 10px;
+                                font-size: 18px;
+                            }
+                        }
+                        &--item-icon {
+                            background: #f1f1f1;
+                        }
+                    }
+                }
+                .gform_wrapper {
+                    &.gform-theme--api,
+                    &.gform-theme--foundation {
+                        --gf-form-gap-x: 12px;
+                        --gf-form-gap-y: 12px;
+                    }
+                    .gform_heading {
+                        .gform_description {
+                            color: #fff;
+                            margin: 0;
+                        }
+                    }
+                    .gform-body {
+                        input:not([type="checkbox"], [type="radio"]),
+                        select,
+                        textarea {
+                            height: 60px;
+                            font-size: 16px;
+                            font-weight: 500;
+                            padding: 16px 30px;
+                            border-radius: 10px;
+                            border: 2px solid #fff;
+                            background: transparent;
+                            color: #fff;
+                            @media (max-width: $break-xs) {
+                                height: 54px;
+                            }
+                        }
+                        textarea {
+                            height: 131px;
+                        }
+                    }
+                    .gform_footer {
+                        margin-top: 20px;
+                        input[type="submit"] {
+                            padding: 17px 50px !important;
+                            width: 100% !important;
+                            background: #fff !important;
+                            font-size: 17px !important;
+                            color: #111 !important;
+                        }
+                        @media (max-width: $break-xs) {
+                            margin-top: 18px;
+                            input[type="submit"] {
+                                padding: 15px 50px !important;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: $break-lg) and (min-width: $break-tl) {
+                    &:last-child {
+                        padding: 40px 30px;
+                    }
+                }
             }
         }
     }

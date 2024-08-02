@@ -11298,5 +11298,71 @@ body {
 @media (max-width: 1630px) {
   .elementor-element.bt-loop-slider-car .elementor-swiper-button {
     display: none !important; } }
+.elementor-element.bt-section-contact > .e-con-inner > .elementor-element .elementor-widget-bt-site-information-style-1 .bt-elwg-site-infor {
+  gap: 20px; }
+  @media (max-width: 767.98px) {
+    .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .elementor-widget-bt-site-information-style-1 .bt-elwg-site-infor {
+      gap: 15px; } }
+  .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .elementor-widget-bt-site-information-style-1 .bt-elwg-site-infor--item {
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    width: calc(50% - 10px);
+    display: flex;
+    justify-content: center;
+    padding: 22px 10px;
+    font-size: 20px;
+    gap: 15px; }
+    .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .elementor-widget-bt-site-information-style-1 .bt-elwg-site-infor--item a {
+      gap: 15px; }
+    .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .elementor-widget-bt-site-information-style-1 .bt-elwg-site-infor--item:last-child {
+      width: 100%; }
+    @media (max-width: 767.98px) {
+      .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .elementor-widget-bt-site-information-style-1 .bt-elwg-site-infor--item {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px;
+        font-size: 18px; } }
+  .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .elementor-widget-bt-site-information-style-1 .bt-elwg-site-infor--item-icon {
+    background: #f1f1f1; }
+.elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper.gform-theme--api, .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper.gform-theme--foundation {
+  --gf-form-gap-x: 12px;
+  --gf-form-gap-y: 12px; }
+.elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform_heading .gform_description {
+  color: #fff;
+  margin: 0; }
+.elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform-body input:not([type="checkbox"], [type="radio"]),
+.elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform-body select,
+.elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform-body textarea {
+  height: 60px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 30px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff; }
+  @media (max-width: 519.98px) {
+    .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform-body input:not([type="checkbox"], [type="radio"]),
+    .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform-body select,
+    .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform-body textarea {
+      height: 54px; } }
+.elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform-body textarea {
+  height: 131px; }
+.elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform_footer {
+  margin-top: 20px; }
+  .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform_footer input[type="submit"] {
+    padding: 17px 50px !important;
+    width: 100% !important;
+    background: #fff !important;
+    font-size: 17px !important;
+    color: #111 !important; }
+  @media (max-width: 519.98px) {
+    .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform_footer {
+      margin-top: 18px; }
+      .elementor-element.bt-section-contact > .e-con-inner > .elementor-element .gform_wrapper .gform_footer input[type="submit"] {
+        padding: 15px 50px !important; } }
+@media (max-width: 1199.98px) and (min-width: 1024.98px) {
+  .elementor-element.bt-section-contact > .e-con-inner > .elementor-element:last-child {
+    padding: 40px 30px; } }
 
 /*# sourceMappingURL=main.css.map */
