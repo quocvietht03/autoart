@@ -11386,5 +11386,27 @@ body {
 @media (max-width: 1199.98px) and (min-width: 1024.98px) {
   .elementor-element.bt-section-contact > .e-con-inner > .elementor-element:last-child {
     padding: 40px 30px; } }
+@media (max-width: 1199.98px) and (min-width: 1024.98px) {
+  .elementor-element.bt-section-exclusive-services .elementor-element.e-grid {
+    --e-con-grid-template-columns: repeat(2, 1fr); } }
+.elementor-element.bt-section-exclusive-services .elementor-element .elementor-widget-icon-box .elementor-icon-box-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center; }
+  .elementor-element.bt-section-exclusive-services .elementor-element .elementor-widget-icon-box .elementor-icon-box-wrapper .elementor-icon-box-icon {
+    position: absolute;
+    margin-bottom: 0; }
+    .elementor-element.bt-section-exclusive-services .elementor-element .elementor-widget-icon-box .elementor-icon-box-wrapper .elementor-icon-box-icon .elementor-icon {
+      border: 8px solid #fff; }
+  .elementor-element.bt-section-exclusive-services .elementor-element .elementor-widget-icon-box .elementor-icon-box-wrapper .elementor-icon-box-content {
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+    margin-left: 52px;
+    padding: 40px 15px 40px 73px; }
+    @media (max-width: 1024.98px) {
+      .elementor-element.bt-section-exclusive-services .elementor-element .elementor-widget-icon-box .elementor-icon-box-wrapper .elementor-icon-box-content {
+        margin-left: 42px;
+        padding: 40px 15px 40px 52px; } }
 
 /*# sourceMappingURL=main.css.map */
