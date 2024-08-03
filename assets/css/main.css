@@ -10911,6 +10911,35 @@ body {
     line-height: 30px;
     padding: 20px 0 20px 46px; }
 
+/* service Hours */
+.bt-elwg-service-hours--default .bt-service-hours {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .bt-elwg-service-hours--default .bt-service-hours .bt-service--item {
+    display: flex;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+    max-height: 51px; }
+    .bt-elwg-service-hours--default .bt-service-hours .bt-service--item:not(:last-child) {
+      border-bottom: 1px solid #60d6e1; }
+  .bt-elwg-service-hours--default .bt-service-hours .bt-service--title {
+    width: 45%; }
+  .bt-elwg-service-hours--default .bt-service-hours .bt-service--hours {
+    width: 55%; }
+  @media (max-width: 519.98px) {
+    .bt-elwg-service-hours--default .bt-service-hours .bt-service--item {
+      font-size: 18px;
+      line-height: 45px;
+      max-height: 45px; }
+    .bt-elwg-service-hours--default .bt-service-hours .bt-service--title {
+      width: 40%; }
+    .bt-elwg-service-hours--default .bt-service-hours .bt-service--hours {
+      width: 60%; } }
+
 @media (min-width: 1200px) and (max-width: 1439.98px) {
   .__bt-heading-style, .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h1,
   .elementor-element.bt-hero-home .bt-elwg-highlighted-heading h2,
@@ -11533,5 +11562,16 @@ body {
     @media (max-width: 639px) {
       .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform_footer {
         padding-bottom: 0; } }
+@media (max-width: 1410px) and (min-width: 1024.98px) {
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element:last-child {
+    padding-left: 20px;
+    padding-right: 20px; } }
+@media (max-width: 1199.98px) and (min-width: 1024.98px) {
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element:last-child .bt-service-hours .bt-service--item {
+    font-size: 18px; }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element:last-child .bt-service-hours .bt-service--title {
+    width: 40%; }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element:last-child .bt-service-hours .bt-service--hours {
+    width: 60%; } }
 
 /*# sourceMappingURL=main.css.map */

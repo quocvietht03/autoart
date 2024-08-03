@@ -90,6 +90,7 @@ class ElementorWidgets {
 			'list-icon-text',
       		'list-faq',
 			'dealer-loop-item',
+			'service-hours'
 		);
 
 		return $this->widgets;
@@ -227,6 +228,7 @@ class ElementorWidgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListIconText\Widget_ListIconText());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ListFaq\Widget_ListFaq());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\DealerLoopItem\Widget_DealerLoopItem());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ServiceHours\Widget_ServiceHours());
 	}
 
 	/**
