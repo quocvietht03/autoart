@@ -3465,11 +3465,25 @@ body {
   100% {
     -webkit-transform: translateX(-50%) translateZ(0);
     transform: translateX(-50%) translateZ(0); } }
+@keyframes effectMoveHorizontalZoom {
+  0% {
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1); }
+  50% {
+    -webkit-transform: translate3d(-10px, 0, 0) scale(0.99);
+    transform: translate3d(-10px, 0, 0) scale(0.99); }
+  100% {
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1); } }
 .bt-effect-move-horizontal {
-  animation: effectMoveHorizontal 2s linear infinite; }
+  animation: effectMoveHorizontal 3s linear infinite; }
 
 .bt-effect-move-horizontal-center {
   animation: effectMoveHorizontalCenter 2s linear infinite; }
+
+.bt-effect-move-horizontal-zoom {
+  animation: effectMoveHorizontalZoom 3s linear infinite;
+  transition: all 3s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
 
 .bt-page--content:after {
   content: "";
@@ -11408,5 +11422,116 @@ body {
       .elementor-element.bt-section-exclusive-services .elementor-element .elementor-widget-icon-box .elementor-icon-box-wrapper .elementor-icon-box-content {
         margin-left: 42px;
         padding: 40px 15px 40px 52px; } }
+.elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper {
+  padding: 34px 40px 47px 40px;
+  border-radius: 20px;
+  border: 1px solid #dadada; }
+  @media (max-width: 540px) {
+    .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper {
+      padding: 30px 20px; } }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper.gform-theme--api, .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper.gform-theme--foundation {
+    --gf-form-gap-x: 10px;
+    --gf-form-gap-y: 30px; }
+    @media (max-width: 639px) {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper.gform-theme--api, .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper.gform-theme--foundation {
+        --gf-form-gap-y: 20px; } }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform_heading {
+    display: none; }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield_label {
+    color: var(--e-global-color-primary, #222);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 1; }
+    .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield_label .gfield_required {
+      display: none; }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .select2-selection--single {
+    height: 60px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 16px 24px;
+    border-radius: 10px;
+    background: #f1f1f1;
+    color: var(--e-global-color-text, #555);
+    border: none; }
+    @media (max-width: 519.98px) {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .select2-selection--single {
+        height: 54px;
+        padding: 0 0 0 24px; } }
+    .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .select2-selection--single .select2-selection__arrow {
+      width: 40px;
+      height: 60px;
+      top: 0; }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body input:not([type="checkbox"], [type="radio"]),
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body select,
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body textarea {
+    height: 60px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 16px 24px;
+    border-radius: 10px;
+    background: #f1f1f1;
+    color: var(--e-global-color-text, #555);
+    border: none; }
+    @media (max-width: 519.98px) {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body input:not([type="checkbox"], [type="radio"]),
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body select,
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body textarea {
+        height: 54px; } }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield {
+    order: 1; }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--input-type-html {
+    order: 2;
+    position: absolute;
+    bottom: 52px;
+    left: 340px;
+    color: var(--e-global-color-text, #555);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    max-width: 450px;
+    right: 40px; }
+    @media (max-width: 1250px) and (min-width: 1024.98px) {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--input-type-html {
+        bottom: 40px;
+        left: 40px;
+        max-width: 100%; } }
+    @media (max-width: 840px) {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--input-type-html {
+        bottom: 40px;
+        left: 40px;
+        max-width: 100%; } }
+    @media (max-width: 639px) {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--input-type-html {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin-top: -10px;
+        font-size: 14px;
+        line-height: 1.6; } }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body #field_submit input {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160.2%;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background: var(--e-global-color-accent, #1FBECD);
+    padding: 16px 44px; }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform_footer {
+    margin-top: 0; }
+    @media (max-width: 1250px) and (min-width: 1024.98px) {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform_footer {
+        padding-bottom: 60px; } }
+    @media (max-width: 840px) {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform_footer {
+        padding-bottom: 60px; } }
+    @media (max-width: 639px) {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform_footer {
+        padding-bottom: 0; } }
 
 /*# sourceMappingURL=main.css.map */

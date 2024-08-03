@@ -493,10 +493,28 @@ body {
 	  transform: translateX(-50%) translateZ(0);
 	}
 }
+@keyframes effectMoveHorizontalZoom {
+	0% {
+	  -webkit-transform: translateZ(0) scale(1);
+	  transform: translateZ(0) scale(1);
+	}
+	50% {
+	  -webkit-transform: translate3d(-10px, 0, 0) scale(0.99);
+	  transform: translate3d(-10px, 0, 0) scale(0.99);
+	}
+	100% {
+	  -webkit-transform: translateZ(0) scale(1);
+	  transform: translateZ(0) scale(1);
+	}
+}
 
 .bt-effect-move-horizontal{
-	animation: effectMoveHorizontal 2s linear infinite;
+	animation: effectMoveHorizontal 3s linear infinite;
 }
 .bt-effect-move-horizontal-center{
 	animation: effectMoveHorizontalCenter 2s linear infinite;
+}
+.bt-effect-move-horizontal-zoom{
+	animation: effectMoveHorizontalZoom 3s linear infinite;
+	transition: all 3s cubic-bezier(.11,.52,.53,.79) 0s;
 }

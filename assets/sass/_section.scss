@@ -788,4 +788,137 @@
             }
         }
     }
+    &.bt-section-schedule-services {
+        > .e-con-inner {
+            > .elementor-element {
+                .gform_wrapper {
+                    padding: 34px 40px 47px 40px;
+                    border-radius: 20px;
+                    border: 1px solid #dadada;
+                    @media (max-width: 540px) {
+                        padding: 30px 20px;
+                    }
+                    &.gform-theme--api,
+                    &.gform-theme--foundation {
+                        --gf-form-gap-x: 10px;
+                        --gf-form-gap-y: 30px;
+                        @media (max-width: 639px) {
+                            --gf-form-gap-y: 20px;
+                        }
+                    }
+                    .gform_heading {
+                        display: none;
+                    }
+                    .gform-body {
+                        .gfield_label {
+                            color: $color-primary;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            margin-bottom: 14px;
+                            line-height: 1;
+                            .gfield_required {
+                                display: none;
+                            }
+                        }
+                        .select2-selection--single {
+                            height: 60px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            padding: 16px 24px;
+                            border-radius: 10px;
+                            background: #f1f1f1;
+                            color: $color-text;
+                            border: none;
+                            @media (max-width: $break-xs) {
+                                height: 54px;
+                                padding: 0 0 0 24px;
+                            }
+                            .select2-selection__arrow {
+                                width: 40px;
+                                height: 60px;
+                                top: 0;
+                            }
+                        }
+                        input:not([type="checkbox"], [type="radio"]),
+                        select,
+                        textarea {
+                            height: 60px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            padding: 16px 24px;
+                            border-radius: 10px;
+                            background: #f1f1f1;
+                            color: $color-text;
+                            border: none;
+                            @media (max-width: $break-xs) {
+                                height: 54px;
+                            }
+                        }
+                        .gfield {
+                            order: 1;
+                        }
+                        .gfield--input-type-html {
+                            order: 2;
+                            position: absolute;
+                            bottom: 52px;
+                            left: 340px;
+                            color: $color-text;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 26px;
+                            max-width: 450px;
+                            right: 40px;
+                            @media (max-width: 1250px) and (min-width: $break-tl) {
+                                bottom: 40px;
+                                left: 40px;
+                                max-width: 100%;
+                            }
+                            @media (max-width: 840px) {
+                                bottom: 40px;
+                                left: 40px;
+                                max-width: 100%;
+                            }
+                            @media (max-width: 639px) {
+                                position: relative;
+                                left: auto;
+                                right: auto;
+                                bottom: auto;
+                                margin-top: -10px;
+                                font-size: 14px;
+                                line-height: 1.6;
+                            }
+                        }
+
+                        #field_submit {
+                            input {
+                                color: #fff;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 160.2%;
+                                text-transform: uppercase;
+                                border-radius: 10px;
+                                background: $color-accent;
+                                padding: 16px 44px;
+                            }
+                        }
+                    }
+                    .gform_footer {
+                        margin-top: 0;
+                        @media (max-width: 1250px) and (min-width: $break-tl) {
+                            padding-bottom: 60px;
+                        }
+                        @media (max-width: 840px) {
+                            padding-bottom: 60px;
+                        }
+                        @media (max-width: 639px) {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
