@@ -11510,7 +11510,7 @@ body {
         height: 54px; } }
   .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield {
     order: 1; }
-  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--input-type-html {
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--type-html {
     order: 2;
     position: absolute;
     bottom: 52px;
@@ -11523,17 +11523,17 @@ body {
     max-width: 450px;
     right: 40px; }
     @media (max-width: 1250px) and (min-width: 1024.98px) {
-      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--input-type-html {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--type-html {
         bottom: 40px;
         left: 40px;
         max-width: 100%; } }
     @media (max-width: 840px) {
-      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--input-type-html {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--type-html {
         bottom: 40px;
         left: 40px;
         max-width: 100%; } }
     @media (max-width: 639px) {
-      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--input-type-html {
+      .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .gfield--type-html {
         position: relative;
         left: auto;
         right: auto;
