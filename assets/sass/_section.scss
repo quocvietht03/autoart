@@ -942,4 +942,17 @@
             }
         }
     }
+    &.bt-cars-search-no-condition{
+        .bt-elwg-cars-search--style-2{
+            padding-top: 0;
+            .bt-form-field{
+                &.bt-field-car_condition{
+                    display: none;
+                }
+            }
+            .bt-elwg-cars-search--form-top-search{
+                justify-content: center;
+            }
+        }
+    }
 }
