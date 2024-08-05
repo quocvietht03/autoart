@@ -725,7 +725,7 @@
 						});
 
 						// Pagination
-						$('.bt-car-pagination a').on('click', function (e) {
+						$('.bt-car-pagination-wrap').on('click', '.bt-car-pagination a', function (e) {
 							e.preventDefault();
 
 							var current_page = $(this).data('page');
@@ -877,7 +877,21 @@
 		}
 
 	}
-
+	/* Scroll Cars Grid List */
+	function AutoArtScrollCars(){
+		var $scrollContainer = $('.elementor-element.bt-scroll-cars-grid-list > .elementor-element');
+		$scrollContainer.on('scroll', function() {
+			var scrollTop = $(this).scrollTop();
+			var scrollHeight = $(this).prop('scrollHeight');
+			var containerHeight = $(this).height();
+	
+			if (scrollTop + containerHeight >= scrollHeight) {
+				$('.bt-scroll-cars-grid-list').removeClass('active');
+			} else {
+				$('.bt-scroll-cars-grid-list').addClass('active');
+			}
+		});
+	}
 	jQuery(document).ready(function ($) {
 		AutoArtSubmenuAuto();
 		AutoArtToggleMenuMobile();
@@ -897,6 +911,7 @@
 		AutoArtShop();
 		AutoArtUnitsCustom();
 		AutoArtAddIconList();
+		AutoArtScrollCars();
 	});
 
 	jQuery(window).on('resize', function () {

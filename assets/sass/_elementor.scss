@@ -2711,3 +2711,30 @@
     }
   }
 }
+.bt-elwg-cars-grid-list {
+  &--default {
+    .bt-car-filter-form-sortview {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .bt-car-layout[data-view=""] .bt-post,
+    .bt-car-layout[data-view="grid"] .bt-post {
+      @media (min-width: $break-sm) {
+        width: calc(50% - 10px);
+      }
+    }
+    @media (max-width: $break-xs) {
+      .bt-pagination {
+        margin-top: 40px;
+      }
+      .bt-car-topbar {
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        gap: 12px;
+      }
+    }
+  }
+}
