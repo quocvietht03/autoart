@@ -202,7 +202,7 @@ class Widget_CarsGridList extends Widget_Base
 			[
 				'label'   => esc_html__('Order By', 'autoart'),
 				'type'    => Controls_Manager::SELECT,
-				'default' => 'post_date',
+				'default' => 'date',
 				'options' => [
 					'date'  => __('Date', 'autoart'),
 					'title' => __('Title', 'autoart'),

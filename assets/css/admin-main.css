@@ -217,6 +217,15 @@ html :where(.editor-styles-wrapper) {
 .elementor-editor-active .select2-results__option {
   padding: 8px 24px; }
 
+.wp-admin .select2-container,
+.wp-admin .elementor-editor-active .select2-container {
+  font-size: 14px;
+  line-height: 150%;
+  min-height: auto; }
+  .wp-admin .select2-container .select2-selection--single,
+  .wp-admin .elementor-editor-active .select2-container .select2-selection--single {
+    padding: 0; }
+
 .bt-container {
   max-width: var(--container-max-width, 1450px);
   margin-left: auto;

@@ -25,7 +25,7 @@ if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
 global $product;
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $thumbnail_size    = apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' );
-$post_thumbnail_id = get_post_thumbnail_id( $product->id );
+$post_thumbnail_id = $product->get_image_id();
 $full_size_image   = wp_get_attachment_image_src( $post_thumbnail_id, $thumbnail_size );
 $placeholder       = has_post_thumbnail() ? 'with-images' : 'without-images';
 $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_classes', array(
@@ -82,8 +82,8 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 			);
 
 			if ( has_post_thumbnail() ) {
-				$html  = '<div data-thumb="' . get_the_post_thumbnail_url( $product->id, 'shop_thumbnail' ) . '" class="woocommerce-product-gallery__image woocommerce-product-zoom__image">';
-				$html .= get_the_post_thumbnail( $product->id, 'shop_single', $attributes );
+				$html  = '<div data-thumb="' . get_the_post_thumbnail_url( $product->get_id(), 'shop_thumbnail' ) . '" class="woocommerce-product-gallery__image woocommerce-product-zoom__image">';
+				$html .= get_the_post_thumbnail( $product->get_id(), 'shop_single', $attributes );
 				$html .= '</div>';
 			} else {
 				$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
@@ -91,7 +91,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 				$html .= '</div>';
 			}
 
-			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, get_post_thumbnail_id( $product->id ) );
+			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $product->get_image_id() );
 
 		}
 		?>

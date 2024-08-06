@@ -1604,6 +1604,36 @@
             ]
         },
         {
+            "key": "field_66b1765af0e94",
+            "label": "What We Offer",
+            "name": "what_we_offer",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "elementor_library"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": [
+                "elementor_library_type:section"
+            ],
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 1,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
             "key": "field_66975fc034fbe",
             "label": "Post",
             "name": "",
@@ -1826,5 +1856,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721442286
+    "modified": 1722906824
 }

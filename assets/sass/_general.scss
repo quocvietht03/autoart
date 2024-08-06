@@ -156,7 +156,17 @@
 .elementor-editor-active .select2-results__option {
   padding: 8px 24px;
 }
-
+.wp-admin {
+  .select2-container,
+  .elementor-editor-active .select2-container {
+    font-size: 14px;
+    line-height: 150%;
+    min-height: auto;
+    .select2-selection--single {
+      padding: 0;
+    }
+  }
+}
 .bt-container {
   max-width: $container;
   margin-left: auto;
@@ -1295,5 +1305,5 @@
   }
 }
 .dialog-lightbox-widget .elementor-slideshow__header {
-  width: auto
+  width: auto;
 }
