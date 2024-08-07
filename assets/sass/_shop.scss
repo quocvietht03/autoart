@@ -1517,6 +1517,17 @@
   .amount {
     font-family: $primary-font;
   }
+  .return-to-shop {
+    a {
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+      padding: 15px 35px;
+      color: #ffffff;
+      background: $color-accent;
+      border-radius: 15px;
+    }
+  }
   .woocommerce-cart-form {
     margin-bottom: 90px;
     .shop_table {
@@ -1881,7 +1892,7 @@
       td {
         padding: 15px 20px;
         border-bottom: none;
-        &.product-total{
+        &.product-total {
           border-right: none;
         }
       }

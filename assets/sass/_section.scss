@@ -892,6 +892,9 @@
                         }
 
                         #field_submit {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
                             input {
                                 color: #fff;
                                 font-size: 18px;
@@ -902,6 +905,7 @@
                                 border-radius: 10px;
                                 background: $color-accent;
                                 padding: 16px 44px;
+                                box-shadow: none;
                             }
                         }
                     }

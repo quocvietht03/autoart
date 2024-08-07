@@ -8987,6 +8987,14 @@ body {
 .woocommerce-cart th,
 .woocommerce-cart .amount {
   font-family: var(--e-global-typography-primary-font-family, "DM Sans"); }
+.woocommerce-cart .return-to-shop a {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 15px 35px;
+  color: #ffffff;
+  background: var(--e-global-color-accent, #1FBECD);
+  border-radius: 15px; }
 .woocommerce-cart .woocommerce-cart-form {
   margin-bottom: 90px; }
   .woocommerce-cart .woocommerce-cart-form .shop_table {
@@ -11737,16 +11745,21 @@ body {
         margin-top: -10px;
         font-size: 14px;
         line-height: 1.6; } }
-  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body #field_submit input {
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160.2%;
-    text-transform: uppercase;
-    border-radius: 10px;
-    background: var(--e-global-color-accent, #1FBECD);
-    padding: 16px 44px; }
+  .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body #field_submit {
+    display: flex;
+    align-items: center;
+    gap: 10px; }
+    .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body #field_submit input {
+      color: #fff;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160.2%;
+      text-transform: uppercase;
+      border-radius: 10px;
+      background: var(--e-global-color-accent, #1FBECD);
+      padding: 16px 44px;
+      box-shadow: none; }
   .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform_footer {
     margin-top: 0; }
     @media (max-width: 1250px) and (min-width: 1024.98px) {
