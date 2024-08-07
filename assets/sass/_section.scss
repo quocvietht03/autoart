@@ -679,6 +679,7 @@
                             padding: 22px 10px;
                             font-size: 20px;
                             gap: 15px;
+                            background: #fff;
                             a {
                                 gap: 15px;
                             }
@@ -698,6 +699,10 @@
                     }
                 }
                 .gform_wrapper {
+                    .gform_confirmation_message {
+                        text-align: left;
+                        color: #fff;
+                    }
                     &.gform-theme--api,
                     &.gform-theme--foundation {
                         --gf-form-gap-x: 12px;

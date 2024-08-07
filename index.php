@@ -34,7 +34,15 @@ get_template_part( 'framework/templates/site', 'titlebar');
 		</div>
 	</div>
 
-	<?php get_template_part( 'framework/templates/social', 'media-channels'); ?>
+	<?php
+	if (function_exists('get_field')) {
+		$banner = get_field('banner_sell_buy', 'options');
+		if (!empty($banner)) {
+			$id_template = $banner->ID;
+			echo do_shortcode('[elementor-template id="' . $id_template . '"]');
+		}
+	}
+	?>
 </main><!-- #main -->
 
 <?php get_footer(); ?>

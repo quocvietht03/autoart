@@ -365,25 +365,6 @@ body {
 	.bt-elwg-buble-background {
 		display: block;
 	}
-  .bt-social-mcn-ss {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-		&:before {
-			display: none;
-		}
-    .bt-bg-buble-effect {
-			position: absolute;
-		  top: 0;
-		  left: 0;
-			width: 100%;
-			height: 100%;
-      z-index: -1;
-			.buble {
-			  background: -webkit-radial-gradient(center bottom, ellipse cover, #ddd 0%,#fff 100%);
-			}
-    }
-  }
 }
 
 @keyframes effectBgScroll {

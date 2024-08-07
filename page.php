@@ -26,7 +26,7 @@ get_template_part( 'framework/templates/site', 'titlebar');
 		</div>
 	</div>
 
-	<?php get_template_part( 'framework/templates/social', 'media-channels'); ?>
+	
 </main><!-- #main -->
 
 <?php get_footer(); ?>

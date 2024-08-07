@@ -107,16 +107,9 @@ require_once get_template_directory() . '/install/import-pack/import-functions.p
 /* CPT Load */
 require_once get_template_directory() . '/framework/cpt-car.php';
 require_once get_template_directory() . '/framework/cpt-dealer.php';
-require_once get_template_directory() . '/framework/cpt-testimonial.php';
-require_once get_template_directory() . '/framework/cpt-podcast.php';
-require_once get_template_directory() . '/framework/cpt-client.php';
-require_once get_template_directory() . '/framework/cpt-pricing.php';
 
 /* ACF Options */
 require_once get_template_directory() . '/framework/acf-options.php';
-
-/* Shortcodes */
-require_once get_template_directory() . '/framework/shortcodes.php';
 
 /* Add Comment Rating */
 require_once get_template_directory() . '/framework/comment-rating.php';

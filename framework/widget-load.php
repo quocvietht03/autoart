@@ -74,15 +74,6 @@ class ElementorWidgets
 			'car-loop-item-style-2',
 			'car-loop-item-style-3',
 			'car-loop-item-style-4',
-			'podcast-grid',
-			'podcast-grid-style-1',
-			'podcast-grid-style-2',
-			'podcast-loop-item',
-			'podcast-loop-item-style-1',
-			'testimonial-slider',
-			'testimonial-loop-item',
-			'client-loop-item',
-			'pricing-tabs',
 			'orbit-circle',
 			'pattern-background',
 			'buble-background',
@@ -184,10 +175,10 @@ class ElementorWidgets
 		// Register Widgets
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\SiteInformation\Widget_SiteInformation());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\SiteInformationStyle1\Widget_SiteInformationStyle1());
-
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\SiteSocial\Widget_SiteSocial());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\SiteSocialStyle2\Widget_SiteSocialStyle2());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\SiteCopyright\Widget_SiteCopyright());
+
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\InstagramPosts\Widget_InstagramPosts());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ContactInformation\Widget_ContactInformation());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PageBreadcrumb\Widget_PageBreadcrumb());
@@ -211,15 +202,6 @@ class ElementorWidgets
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostLoopItem\Widget_PostLoopItem());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostLoopItemStyle1\Widget_PostLoopItemStyle1());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PostLoopItemStyle2\Widget_PostLoopItemStyle2());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PodcastGrid\Widget_PodcastGrid());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PodcastGridStyle1\Widget_PodcastGridStyle1());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PodcastGridStyle2\Widget_PodcastGridStyle2());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PodcastLoopItem\Widget_PodcastLoopItem());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PodcastLoopItemStyle1\Widget_PodcastLoopItemStyle1());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\TestimonialSlider\Widget_TestimonialSlider());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\TestimonialLoopItem\Widget_TestimonialLoopItem());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ClientLoopItem\Widget_ClientLoopItem());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PricingTabs\Widget_PricingTabs());
 
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\OrbitCircle\Widget_OrbitCircle());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\PatternBackground\Widget_PatternBackground());

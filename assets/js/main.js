@@ -777,23 +777,6 @@
 		}
 	}
 
-	/* Buble effect */
-	function AutoArtBubleEffect() {
-		if ($('.bt-bg-buble-enable').length > 0) {
-			var html = '<div class="bt-bg-buble-effect">' +
-				'<div class="bt-bubles-beblow"></div>' +
-				'<div class="bt-bubles-above"></div>'
-			'</div>';
-
-			$('.bt-social-mcn-ss').append(html);
-
-			for (let i = 0; i < 40; i++) {
-				$('.bt-bubles-beblow').append('<span class="buble"></span>');
-				$('.bt-bubles-above').append('<span class="buble"></span>');
-			}
-		}
-	}
-
 	/* Shop */
 	function AutoArtShop() {
 		if ($('.single-product').length > 0) {
@@ -908,7 +891,6 @@
 		AutoArtCarsFilter();
 		AutoArtOrbitEffect();
 		AutoArtCursorEffect();
-		AutoArtBubleEffect();
 		AutoArtShop();
 		AutoArtUnitsCustom();
 		AutoArtAddIconList();
