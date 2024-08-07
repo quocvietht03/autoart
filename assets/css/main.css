@@ -8476,6 +8476,9 @@ body {
       @media (max-width: 991.98px) {
         .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar {
           width: 100%; } }
+      .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-inner {
+        position: sticky;
+        top: 30px; }
       .woocommerce .bt-main-product-ss div.product .bt-product-details-and-sidebar .bt-product-sidebar-dealer {
         border-radius: 20px;
         border: 1px solid #dadada;
@@ -8995,6 +8998,9 @@ body {
   color: #ffffff;
   background: var(--e-global-color-accent, #1FBECD);
   border-radius: 15px; }
+  .woocommerce-cart .return-to-shop a:hover {
+    color: #ffffff;
+    background: #111111; }
 .woocommerce-cart .woocommerce-cart-form {
   margin-bottom: 90px; }
   .woocommerce-cart .woocommerce-cart-form .shop_table {

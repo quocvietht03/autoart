@@ -742,7 +742,10 @@
           @media (max-width: $break-md) {
             width: 100%;
           }
-
+          &-inner {
+            position: sticky;
+            top: 30px;
+          }
           &-dealer {
             border-radius: 20px;
             border: 1px solid #dadada;
@@ -1526,6 +1529,10 @@
       color: #ffffff;
       background: $color-accent;
       border-radius: 15px;
+      &:hover {
+        color: #ffffff;
+        background: #111111;
+      }
     }
   }
   .woocommerce-cart-form {
