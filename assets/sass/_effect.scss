@@ -499,3 +499,40 @@ body {
 	animation: effectMoveHorizontalZoom 3s linear infinite;
 	transition: all 3s cubic-bezier(.11,.52,.53,.79) 0s;
 }
+@-webkit-keyframes effectPlayButton {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 #fff;
+	}
+
+	70% {
+		-webkit-box-shadow: 0 0 0 30px transparent;
+	}
+
+	100% {
+		-webkit-box-shadow: 0 0 0 0 transparent;
+	}
+}
+
+@keyframes effectPlayButton {
+	0% {
+		box-shadow: 0 0 0 0 #fff;
+	}
+
+	70% {
+		box-shadow: 0 0 0 30px transparent;
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 transparent;
+	}
+}
+.bt-play-btn-effect {
+	.elementor-icon-box-icon {
+		-webkit-animation: effectPlayButton 2s infinite;
+		animation: effectPlayButton 2s infinite;
+		border-radius: 50%;
+		> a {
+			display: block;
+		}
+	}
+}
