@@ -527,6 +527,9 @@ body {
 	}
 }
 .bt-play-btn-effect {
+	.elementor-icon{
+		border-radius: 50%;
+	}
 	:hover {
 		.elementor-icon {
 			-webkit-animation: effectPlayButton 2s infinite;

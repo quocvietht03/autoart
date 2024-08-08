@@ -3254,6 +3254,8 @@ body {
     box-shadow: 0 0 0 30px transparent; }
   100% {
     box-shadow: 0 0 0 0 transparent; } }
+.bt-play-btn-effect .elementor-icon {
+  border-radius: 50%; }
 .bt-play-btn-effect :hover .elementor-icon {
   -webkit-animation: effectPlayButton 2s infinite;
   animation: effectPlayButton 2s infinite;
