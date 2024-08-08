@@ -558,8 +558,9 @@
 				},
 				success: function (response) {
 					if (response.success) {
-						// console.log(response.data);
-
+						document.querySelector('.bt-filter-scroll-pos').scrollIntoView({
+							behavior: 'smooth'
+						});
 						setTimeout(function () {
 							$carsgridlist.find('.bt-car-results-block').html(response.data['results']).fadeIn('slow');
 							$carsgridlist.find('.bt-car-layout').data(response.data['view']);

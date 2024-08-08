@@ -51,6 +51,9 @@ if (!function_exists('autoart_enqueue_scripts')) {
 			wp_enqueue_script('zoom-master', get_template_directory_uri() . '/assets/libs/zoom-master/jquery.zoom.min.js', array('jquery'), '', true);
 		}
 
+		wp_enqueue_script('nouislider', get_template_directory_uri() . '/assets/libs/nouislider/nouislider.min.js', array('jquery'), '', true);
+		wp_enqueue_style('nouislider', get_template_directory_uri() . '/assets/libs/nouislider/nouislider.css', array(), false);
+
 		wp_enqueue_script('select2', get_template_directory_uri() . '/assets/libs/select2/select2.min.js', array('jquery'), '', true);
 		wp_enqueue_style('select2', get_template_directory_uri() . '/assets/libs/select2/select2.min.css', array(), false);
 
@@ -168,7 +171,7 @@ if (function_exists('get_field')) {
 
 // Custom js Gravity
 add_action('gform_register_init_scripts', 'bt_custom_gform_init_script', 10, 2);
-function bt_custom_gform_init_script($form, $field_values)	
+function bt_custom_gform_init_script($form, $field_values)
 {
 	$script = "
 	function LoadJsCustom() {

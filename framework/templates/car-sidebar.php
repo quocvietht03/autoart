@@ -23,10 +23,13 @@
       </div>
 
       <?php
-
-      $field_title = __('Year', 'autoart');
-      $field_value = (isset($_GET['car_year'])) ? $_GET['car_year'] : '';
-      autoart_cars_field_select_number_html('car_year', $field_title, $field_value);
+ $field_title = __('Filter by Year', 'autoart');
+        $field_min_value = (isset($_GET['car_year_min'])) ? $_GET['car_year_min'] : '';
+        $field_max_value = (isset($_GET['car_year_max'])) ? $_GET['car_year_max'] : '';
+        autoart_cars_field_slider_html('car_year', $field_title, $field_min_value, $field_max_value);
+      // $field_title = __('Year', 'autoart');
+      // $field_value = (isset($_GET['car_year'])) ? $_GET['car_year'] : '';
+      // autoart_cars_field_select_number_html('car_year', $field_title, $field_value);
 
       $field_title = __('Price ($)', 'autoart');
       $field_value = (isset($_GET['car_price'])) ? $_GET['car_price'] : '';

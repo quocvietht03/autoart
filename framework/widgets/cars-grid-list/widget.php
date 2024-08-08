@@ -251,6 +251,7 @@ class Widget_CarsGridList extends Widget_Base
 
 		<div class="bt-elwg-cars-grid-list--default">
 			<div class="bt-cars-grid-list-template">
+				<div class="bt-filter-scroll-pos"></div>
 				<div class="bt-car-topbar">
 					<div class="bt-car-col-left">
 						<div class="bt-car-results-block">
