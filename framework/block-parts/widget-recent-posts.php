@@ -46,7 +46,7 @@ $recent_posts = wp_get_recent_posts(array(
 
 				<h3 class="bt-post--title"> 
 					<a href="<?php echo esc_url(get_permalink($post_item['ID'])) ?>"> 
-						<?php echo $post_item['post_title']; ?> 
+						<?php echo esc_html($post_item['post_title']); ?> 
 					</a>
 				</h3>
 

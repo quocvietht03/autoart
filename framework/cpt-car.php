@@ -224,7 +224,7 @@ function autoart_car_column_display($car_columns, $post_id)
 				$thumb = wp_get_attachment_image($thumbnail_id, array($width, $height), true);
 			}
 			if (isset($thumb)) {
-				echo $thumb; // No need to escape
+				echo wp_kses_post($thumb);
 			} else {
 				echo esc_html__('None', 'autoart');
 			}
@@ -233,7 +233,7 @@ function autoart_car_column_display($car_columns, $post_id)
 			// Display the car tags in the column view
 		case "car_categories":
 			if ($category_list = get_the_term_list($post_id, 'car_categories', '', ', ', '')) {
-				echo $category_list; // No need to escape
+				echo wp_kses_post($category_list);
 			} else {
 				echo esc_html__('None', 'autoart');
 			}
@@ -630,7 +630,7 @@ function autoart_cars_field_multiple_html($slug = '', $field_title = '', $field_
 				<?php } ?>
 			</div>
 
-			<input type="hidden" name="<?php echo esc_attr($slug); ?>" value="<?php echo $field_value; ?>">
+			<input type="hidden" name="<?php echo esc_attr($slug); ?>" value="<?php echo esc_attr($field_value); ?>">
 		</div>
 	<?php
 	}
@@ -646,7 +646,7 @@ function autoart_cars_pagination($current_page, $total_page)
 	?>
 	<nav class="bt-pagination bt-car-pagination" role="navigation">
 		<?php if (1 != $current_page) { ?>
-			<a class="prev page-numbers" href="#" data-page="<?php echo $current_page - 1; ?>"><svg width="19" height="16" viewBox="0 0 19 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+			<a class="prev page-numbers" href="#" data-page="<?php echo esc_attr($current_page - 1); ?>"><svg width="19" height="16" viewBox="0 0 19 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 					<path d="M9.71889 15.782L10.4536 15.0749C10.6275 14.9076 10.6275 14.6362 10.4536 14.4688L4.69684 8.92851L17.3672 8.92852C17.6131 8.92852 17.8125 8.73662 17.8125 8.49994L17.8125 7.49994C17.8125 7.26326 17.6131 7.07137 17.3672 7.07137L4.69684 7.07137L10.4536 1.53101C10.6275 1.36366 10.6275 1.0923 10.4536 0.924907L9.71889 0.2178C9.545 0.0504438 9.26304 0.0504438 9.08911 0.2178L1.31792 7.69691C1.14403 7.86426 1.14403 8.13562 1.31792 8.30301L9.08914 15.782C9.26304 15.9494 9.545 15.9494 9.71889 15.782Z"></path>
 				</svg> <?php echo esc_html__('Prev', 'autoart'); ?></a>
 		<?php } ?>
@@ -714,7 +714,7 @@ function autoart_cars_pagination($current_page, $total_page)
 		?>
 
 		<?php if ($total_page != $current_page) { ?>
-			<a class="next page-numbers" href="#" data-page="<?php echo $current_page + 1; ?>"><?php echo esc_html__('Next', 'autoart'); ?> <svg width="19" height="16" viewBox="0 0 19 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+			<a class="next page-numbers" href="#" data-page="<?php echo esc_attr($current_page + 1); ?>"><?php echo esc_html__('Next', 'autoart'); ?> <svg width="19" height="16" viewBox="0 0 19 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 					<path d="M9.28111 0.217951L8.54638 0.925058C8.37249 1.09242 8.37249 1.36377 8.54638 1.53117L14.3032 7.07149L1.63283 7.07149C1.38691 7.07149 1.18752 7.26338 1.18752 7.50006L1.18752 8.50006C1.18752 8.73674 1.38691 8.92863 1.63283 8.92863L14.3032 8.92863L8.54638 14.469C8.37249 14.6363 8.37249 14.9077 8.54638 15.0751L9.28111 15.7822C9.455 15.9496 9.73696 15.9496 9.91089 15.7822L17.6821 8.30309C17.856 8.13574 17.856 7.86438 17.6821 7.69699L9.91086 0.217952C9.73696 0.0505587 9.455 0.0505586 9.28111 0.217951Z"></path>
 				</svg></a>
 		<?php } ?>

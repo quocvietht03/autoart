@@ -266,14 +266,14 @@ class Widget_CarsGridList extends Widget_Base
 
 					<div class="bt-car-col-right">
 						<form class="bt-car-filter-form-sortview" action="" method="get">
-							<input type="hidden" name="orderby" value="<?php echo $settings['orderby']; ?>">
-							<input type="hidden" name="order" value="<?php echo $settings['order']; ?>">
-							<input type="hidden" name="posts_per_page" value="<?php echo $settings['posts_per_page']; ?>">
-							<input type="hidden" name="category" value="<?php echo implode(',', $settings['category']); ?>">
-							<input type="hidden" name="category_exclude" value="<?php echo implode(',', $settings['category_exclude']); ?>">
-							<input type="hidden" name="thumbnail_size" value="<?php echo $settings['thumbnail_size']; ?>">
-							<input type="hidden" class="bt-car-view-type" name="view_type" value="<?php if (isset($_GET['view_type'])) echo $_GET['view_type']; ?>">
-							<input type="hidden" class="bt-car-current-page" name="current_page" value="<?php if (isset($_GET['current_page'])) echo $_GET['current_page']; ?>">
+							<input type="hidden" name="orderby" value="<?php echo esc_attr($settings['orderby']); ?>">
+							<input type="hidden" name="order" value="<?php echo esc_attr($settings['order']); ?>">
+							<input type="hidden" name="posts_per_page" value="<?php echo esc_attr($settings['posts_per_page']); ?>">
+							<input type="hidden" name="category" value="<?php echo esc_attr(implode(',', $settings['category'])); ?>">
+							<input type="hidden" name="category_exclude" value="<?php echo esc_attr(implode(',', $settings['category_exclude'])); ?>">
+							<input type="hidden" name="thumbnail_size" value="<?php echo esc_attr($settings['thumbnail_size']); ?>">
+							<input type="hidden" class="bt-car-view-type" name="view_type" value="<?php if (isset($_GET['view_type'])) echo esc_attr($_GET['view_type']); ?>">
+							<input type="hidden" class="bt-car-current-page" name="current_page" value="<?php if (isset($_GET['current_page'])) echo esc_attr($_GET['current_page']); ?>">
 							<div class="bt-car-sort-block">
 								<span class="bt-sort-title">
 									<?php echo esc_html__('Sort by:', 'autoart'); ?>
@@ -293,22 +293,22 @@ class Widget_CarsGridList extends Widget_Base
 										<?php foreach ($sort_options as $key => $value) { ?>
 											<?php if (isset($_GET['sort_order']) && $key == $_GET['sort_order']) { ?>
 												<?php if ($key == $_GET['sort_order']) { ?>
-													<option value="<?php echo $key; ?>" selected="selected">
-														<?php echo $value; ?>
+													<option value="<?php echo esc_attr($key); ?>" selected="selected">
+														<?php echo esc_html($value); ?>
 													</option>
 												<?php } else { ?>
-													<option value="<?php echo $key; ?>">
-														<?php echo $value; ?>
+													<option value="<?php echo esc_attr($key); ?>">
+														<?php echo esc_html($value); ?>
 													</option>
 												<?php } ?>
 											<?php } else { ?>
 												<?php if ($key == 'date_high') { ?>
-													<option value="<?php echo $key; ?>" selected="selected">
-														<?php echo $value; ?>
+													<option value="<?php echo esc_attr($key); ?>" selected="selected">
+														<?php echo esc_html($value); ?>
 													</option>
 												<?php } else { ?>
-													<option value="<?php echo $key; ?>">
-														<?php echo $value; ?>
+													<option value="<?php echo esc_attr($key); ?>">
+														<?php echo esc_html($value); ?>
 													</option>
 												<?php } ?>
 											<?php } ?>

@@ -31,22 +31,22 @@
           <?php foreach ($sort_options as $key => $value) { ?>
             <?php if(isset($_GET['sort_order']) && $key == $_GET['sort_order']){ ?>
               <?php if($key == $_GET['sort_order']){ ?>
-                <option value="<?php echo $key; ?>" selected="selected">
-                  <?php echo $value; ?>
+                <option value="<?php echo esc_attr($key); ?>" selected="selected">
+                  <?php echo esc_html($value); ?>
                 </option>
               <?php } else { ?>
-                <option value="<?php echo $key; ?>">
-                  <?php echo $value; ?>
+                <option value="<?php echo esc_attr($key); ?>">
+                  <?php echo esc_html($value); ?>
                 </option>
               <?php } ?>
             <?php } else { ?>
               <?php if($key == 'date_high'){ ?>
-                <option value="<?php echo $key; ?>" selected="selected">
-                  <?php echo $value; ?>
+                <option value="<?php echo esc_attr($key); ?>" selected="selected">
+                  <?php echo esc_html($value); ?>
                 </option>
               <?php } else { ?>
-                <option value="<?php echo $key; ?>">
-                  <?php echo $value; ?>
+                <option value="<?php echo esc_attr($key); ?>">
+                  <?php echo esc_html($value); ?>
                 </option>
               <?php } ?>
             <?php } ?>

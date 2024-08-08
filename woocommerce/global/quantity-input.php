@@ -33,7 +33,7 @@ $label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 
 	 */
 	do_action( 'woocommerce_before_quantity_input_field' );
 	?>
-	<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
+	<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_html( $label ); ?></label>
 	<span class="qty-minus">
 		<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
 			<path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/>

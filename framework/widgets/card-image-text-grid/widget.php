@@ -339,7 +339,7 @@ class Widget_CardImageTextGrid extends Widget_Base {
 		}
 
 	?>
-		<div class="bt-elwg-card-image-text-grid --<?php echo $settings['citg_layout_style'] ?>">
+		<div class="bt-elwg-card-image-text-grid --<?php echo esc_attr($settings['citg_layout_style']) ?>">
 			<div class="bt-elwg-card-image-text-grid-inner"> 
 				<?php foreach ( $settings['list_card_image_text'] as $index => $item ): ?>
 					<?php 
@@ -357,7 +357,7 @@ class Widget_CardImageTextGrid extends Widget_Base {
 
 							<div class="item-card-image-text--content"> 
 								<?php if(!empty($item['citg_text'])): ?>
-										<h3> <?php echo $item['citg_text'] ?> </h3>
+										<h3> <?php echo esc_html($item['citg_text']) ?> </h3>
 								<?php endif;?>	
 									
 								<?php if(!empty($item['citg_link'])): ?>

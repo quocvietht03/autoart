@@ -391,7 +391,7 @@ class Widget_ListImageText extends Widget_Base {
 		}
 
 	?>
-		<div class="bt-elwg-list-image-text--<?php echo $settings['lit_layout_style'] ?>">
+		<div class="bt-elwg-list-image-text--<?php echo esc_attr($settings['lit_layout_style']) ?>">
 			<div class="bt-elwg-list-image-text-inner"> 
 				<?php foreach ( $settings['list'] as $index => $item ): ?>
 					<?php 
@@ -413,7 +413,7 @@ class Widget_ListImageText extends Widget_Base {
 							</div>
 
 							<?php if(!empty($item['lit_text'])): ?>
-								<h3> <?php echo $item['lit_text'] ?> </h3>
+								<h3> <?php echo esc_html($item['lit_text']) ?> </h3>
 							<?php endif;?>	
 							
 							<?php if(!empty($item['lit_link'])): ?>

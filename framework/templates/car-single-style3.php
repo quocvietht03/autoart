@@ -640,11 +640,11 @@ if (!empty($color_term)) {
           <div class="bt-panel-item--inner">
             <?php if (!empty($safety_tips['heading'])) { ?>
               <h3 class="bt-title-ss">
-                <?php echo '<span>' . $safety_tips['heading']  . '</span>'; ?>
+                <?php echo '<span>' . esc_html($safety_tips['heading'])  . '</span>'; ?>
               </h3>
             <?php } ?>
             <div class="bt-safety-content">
-              <?php echo $safety_tips['content'] ?>
+              <?php echo wp_kses_post($safety_tips['content']); ?>
             </div>
           </div>
         </div>

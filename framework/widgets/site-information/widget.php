@@ -286,7 +286,7 @@ class Widget_SiteInformation extends Widget_Base {
 		}
 	?>
 	
-		<div class="bt-elwg-site-infor bt-elwg-site-infor--default <?php echo $classes ?>">
+		<div class="bt-elwg-site-infor bt-elwg-site-infor--default <?php echo esc_attr($classes); ?>">
 			<?php get_template_part( 'framework/templates/site-information', 'style', array('layout' => 'default', 'data' => $settings['list'])); ?>
 	    </div>
 	

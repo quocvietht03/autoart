@@ -271,12 +271,12 @@ class Widget_ListFaq extends Widget_Base
                                     </defs>
                                 </svg>
                                 <?php if (!empty($item['faq_title'])): ?>
-                                    <h3> <?php echo $item['faq_title'] ?> </h3>
+                                    <h3> <?php echo esc_html($item['faq_title']) ?> </h3>
                                 <?php endif; ?>
                             </div>
                             <?php if (!empty($item['faq_content'])): ?>
                                 <div class="bt-item-content">
-                                    <?php echo esc_attr($item['faq_content']) ?>
+                                    <?php echo esc_html($item['faq_content']) ?>
                                 </div>
                             <?php endif; ?>
                         </div>
