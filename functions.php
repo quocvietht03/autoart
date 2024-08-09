@@ -63,23 +63,23 @@ if (!function_exists('autoart_enqueue_scripts')) {
 		wp_enqueue_style('autoart-style', get_template_directory_uri() . '/style.css',  array(), false);
 		wp_enqueue_script('autoart-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), rand(9, 999999), true);
 
-		/* Load custom style */
-		$custom_style = '';
-		$custom_style .= '.test{color: red;}';
+		if (function_exists('get_field')) {
+			$dev_mode = get_field('dev_mode', 'options');
+			/* Load custom style */
+			$custom_style = '';
 
-		if ($custom_style) {
-			wp_add_inline_style('autoart-style', $custom_style);
-		}
+			$custom_style = get_field('custom_css_code', 'options');
+			if ($dev_mode && !empty($custom_style)) {
+				wp_add_inline_style('autoart-style', $custom_style);
+			}
 
-		/* Custom script */
-		$custom_script = '';
-		if (isset($autoart_options['custom_js_code']) && $autoart_options['custom_js_code']) {
-			$custom_script .= $autoart_options['custom_js_code'];
+			/* Custom script */
+			$custom_script = '';
+			$custom_script = get_field('custom_js_code', 'options');
+			if ($dev_mode && !empty($custom_script)) {
+				wp_add_inline_script('autoart-main', $custom_script);
+			}
 		}
-		if ($custom_script) {
-			wp_add_inline_script('autoart-main', $custom_script);
-		}
-
 		/* Options to script */
 		$js_options = array(
 			'ajax_url' => admin_url('admin-ajax.php'),
