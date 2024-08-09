@@ -488,10 +488,10 @@
 
 			if ('list' == view_type) {
 				$carsgridlist.find('.bt-car-view-type').val(view_type);
-				$carsgridlist.find('.bt-car-layout').attr('data-view', view_type);
+				$carsgridlist.find('.bt-car-grid-layout').attr('data-view', view_type);
 			} else {
 				$carsgridlist.find('.bt-car-filter-form-sortview .bt-car-view-type').val('');
-				$carsgridlist.find('.bt-car-layout').attr('data-view', '');
+				$carsgridlist.find('.bt-car-grid-layout').attr('data-view', '');
 			}
 
 			$carsgridlist.find('.bt-car-view-block .bt-view-type').removeClass('active');
@@ -543,8 +543,6 @@
 				window.history.replaceState(null, null, window.location.pathname);
 			}
 
-			// console.log(param_ajax);
-
 			$.ajax({
 				type: 'POST',
 				dataType: 'json',
@@ -553,18 +551,18 @@
 				context: this,
 				beforeSend: function () {
 					$carsgridlist.find('.bt-filter-results').addClass('loading');
-					$carsgridlist.find('.bt-car-layout').fadeOut('fast');
+					$carsgridlist.find('.bt-car-grid-layout').fadeOut('fast');
 					$carsgridlist.find('.bt-car-pagination-wrap').fadeOut('fast');
 				},
 				success: function (response) {
 					if (response.success) {
-						document.querySelector('.bt-filter-scroll-pos').scrollIntoView({
+						$carsgridlist.find('.bt-filter-scroll-pos')[0].scrollIntoView({
 							behavior: 'smooth'
 						});
 						setTimeout(function () {
 							$carsgridlist.find('.bt-car-results-block').html(response.data['results']).fadeIn('slow');
-							$carsgridlist.find('.bt-car-layout').data(response.data['view']);
-							$carsgridlist.find('.bt-car-layout').html(response.data['items']).fadeIn('slow');
+							$carsgridlist.find('.bt-car-grid-layout').data(response.data['view']);
+							$carsgridlist.find('.bt-car-grid-layout').html(response.data['items']).fadeIn('slow');
 							$carsgridlist.find('.bt-car-pagination-wrap').html(response.data['pagination']).fadeIn('slow');
 							$carsgridlist.find('.bt-filter-results').removeClass('loading');
 
@@ -581,10 +579,10 @@
 
 							if ('list' == view_type) {
 								$carsgridlist.find('.bt-car-view-type').val(view_type);
-								$carsgridlist.find('.bt-car-layout').attr('data-view', view_type);
+								$carsgridlist.find('.bt-car-grid-layout').attr('data-view', view_type);
 							} else {
 								$carsgridlist.find('.bt-car-view-type').val('');
-								$carsgridlist.find('.bt-car-layout').attr('data-view', '');
+								$carsgridlist.find('.bt-car-grid-layout').attr('data-view', '');
 							}
 
 							$carsgridlist.find('.bt-car-view-block .bt-view-type').removeClass('active');
@@ -628,6 +626,7 @@
 		elementorFrontend.hooks.addAction('frontend/element_ready/bt-cars-search-style-2.default', CarsSearchHandler);
 		elementorFrontend.hooks.addAction('frontend/element_ready/bt-list-faq.default', FaqHandler);
 		elementorFrontend.hooks.addAction('frontend/element_ready/bt-cars-grid-list.default', CarsGridListHandler);
+		elementorFrontend.hooks.addAction('frontend/element_ready/bt-cars-grid.default', CarsGridListHandler);
 	});
 
 })(jQuery);

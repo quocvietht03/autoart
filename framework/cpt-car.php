@@ -1142,7 +1142,7 @@ function autoart_cars_grid_list_filter()
 	$wp_query = new \WP_Query($query_args);
 
 	$thumbnail_size = isset($_POST['thumbnail_size']) && $_POST['thumbnail_size'] != '' ? $_POST['thumbnail_size'] : 'medium_large';
-
+	$layout_style = isset($_POST['layout_style']) && $_POST['layout_style'] != '' ? $_POST['layout_style'] : 'default';
 	$current_page = isset($_POST['current_page']) && $_POST['current_page'] != '' ? absint($_POST['current_page']) : 1;
 	$total_page = $wp_query->max_num_pages;
 
@@ -1170,7 +1170,13 @@ function autoart_cars_grid_list_filter()
 		ob_start();
 		while ($wp_query->have_posts()) {
 			$wp_query->the_post();
-			get_template_part('framework/templates/car', 'style', array('image-size' => $thumbnail_size));
+			if ($layout_style  == 'default') {
+				get_template_part('framework/templates/car', 'style', array('image-size' => $settings['thumbnail_size']));
+			} elseif ($layout_style == 'style1') {
+				get_template_part('framework/templates/car', 'style1', array('image-size' => $settings['thumbnail_size']));
+			} else {
+				get_template_part('framework/templates/car', 'style2', array('image-size' => $settings['thumbnail_size']));
+			}
 		}
 
 		$output['items'] = ob_get_clean();

@@ -23,23 +23,45 @@
       </div>
 
       <?php
- $field_title = __('Filter by Year', 'autoart');
+      $archive_page = get_field('car_archive_page', 'options');
+      $filter_by_year = !empty($archive_page['filter_by_year']) ? $archive_page['filter_by_year'] : 'select';
+      $filter_by_price = !empty($archive_page['filter_by_price']) ? $archive_page['filter_by_price'] : 'select';
+      $filter_by_mileage = !empty($archive_page['filter_by_mileage']) ? $archive_page['filter_by_mileage'] : 'select';
+
+      if ($filter_by_year == 'slider') {
+        $field_title = __('Filter by Year', 'autoart');
         $field_min_value = (isset($_GET['car_year_min'])) ? $_GET['car_year_min'] : '';
         $field_max_value = (isset($_GET['car_year_max'])) ? $_GET['car_year_max'] : '';
         autoart_cars_field_slider_html('car_year', $field_title, $field_min_value, $field_max_value);
-      // $field_title = __('Year', 'autoart');
-      // $field_value = (isset($_GET['car_year'])) ? $_GET['car_year'] : '';
-      // autoart_cars_field_select_number_html('car_year', $field_title, $field_value);
+      } else {
+        $field_title = __('Year', 'autoart');
+        $field_value = (isset($_GET['car_year'])) ? $_GET['car_year'] : '';
+        autoart_cars_field_select_number_html('car_year', $field_title, $field_value);
+      }
 
-      $field_title = __('Price ($)', 'autoart');
-      $field_value = (isset($_GET['car_price'])) ? $_GET['car_price'] : '';
-      $field_step = 1000;
-      autoart_cars_field_select_range_html('car_price', $field_title, $field_value, $field_step);
+      if ($filter_by_price == 'slider') {
+        $field_title = __('Filter by Price ($)', 'autoart');
+        $field_min_value = (isset($_GET['car_price_min'])) ? $_GET['car_price_min'] : '';
+        $field_max_value = (isset($_GET['car_price_max'])) ? $_GET['car_price_max'] : '';
+        autoart_cars_field_slider_html('car_price', $field_title, $field_min_value, $field_max_value);
+      } else {
+        $field_title = __('Price ($)', 'autoart');
+        $field_value = (isset($_GET['car_price'])) ? $_GET['car_price'] : '';
+        $field_step = 1000;
+        autoart_cars_field_select_range_html('car_price', $field_title, $field_value, $field_step);
+      }
 
-      $field_title = __('Mileage (km)', 'autoart');
-      $field_value = (isset($_GET['car_mileage'])) ? $_GET['car_mileage'] : '';
-      $field_step = 10;
-      autoart_cars_field_select_range_html('car_mileage', $field_title, $field_value, $field_step);
+      if ($filter_by_mileage == 'slider') {
+        $field_title = __('Filter by Mileage (km)', 'autoart');
+        $field_min_value = (isset($_GET['car_mileage_min'])) ? $_GET['car_mileage_min'] : '';
+        $field_max_value = (isset($_GET['car_mileage_max'])) ? $_GET['car_mileage_max'] : '';
+        autoart_cars_field_slider_html('car_mileage', $field_title, $field_min_value, $field_max_value);
+      } else {
+        $field_title = __('Mileage (km)', 'autoart');
+        $field_value = (isset($_GET['car_mileage'])) ? $_GET['car_mileage'] : '';
+        $field_step = 10;
+        autoart_cars_field_select_range_html('car_mileage', $field_title, $field_value, $field_step);
+      }
 
       $field_name = __('Condition', 'autoart');
       $field_value = (isset($_GET['car_condition'])) ? $_GET['car_condition'] : '';

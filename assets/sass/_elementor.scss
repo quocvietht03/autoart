@@ -644,7 +644,6 @@
   }
 }
 
-
 .bt-elwg-post-grid {
   &--default,
   &--style-1 {
@@ -1920,10 +1919,120 @@
       justify-content: space-between;
       gap: 20px;
     }
-    .bt-car-layout[data-view=""] .bt-post,
-    .bt-car-layout[data-view="grid"] .bt-post {
-      @media (min-width: $break-sm) {
-        width: calc(50% - 10px);
+    .bt-car-grid-layout {
+      display: grid;
+      .bt-post {
+        width: 100%;
+      }
+      &.bt-layout-default {
+        .bt-post {
+          @extend .__bt-post-car-default;
+        }
+        &[data-view="list"] {
+          @media (min-width: $break-sm) {
+            .bt-post {
+              width: 100%;
+              &--inner {
+                display: flex;
+              }
+              &--thumbnail {
+                width: 50%;
+                .bt-cover-image {
+                  height: 100%;
+                  padding-bottom: 0;
+                }
+              }
+              &--featured {
+                height: 100%;
+                a {
+                  display: block;
+                  height: 100%;
+                }
+              }
+              &--infor {
+                width: 50%;
+              }
+              &--body {
+                position: absolute;
+                top: -1px;
+                left: 0;
+                border-radius: 0 0 10px 0;
+                transform: none;
+              }
+              &--info-inner {
+                padding: 60px 30px 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .bt-car-grid-layout[data-view=""],
+    .bt-car-grid-layout[data-view="grid"] {
+      &.bt-cols--2 {
+        @media (min-width: $break-sm) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      &.bt-cols--3 {
+        @media (min-width: $break-sm) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      &.bt-cols--4 {
+        @media (min-width: $break-sm) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+    @media (max-width: $break-xs) {
+      .bt-pagination {
+        margin-top: 40px;
+      }
+      .bt-car-topbar {
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        gap: 12px;
+      }
+    }
+  }
+}
+.bt-elwg-cars-grid {
+  &--default {
+    .bt-car-grid-layout {
+      display: grid;
+      &.bt-cols--2 {
+        @media (min-width: $break-sm) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      &.bt-cols--3 {
+        @media (min-width: $break-sm) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      &.bt-cols--4 {
+        @media (min-width: $break-sm) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      .bt-post {
+        width: 100%;
+      }
+      &.bt-layout-default {
+        .bt-post {
+          @extend .__bt-post-car-default;
+        }
+      }
+      &.bt-layout-style1 {
+        .bt-post {
+          @extend .__bt-post-car-style-1;
+        }
+      }
+      &.bt-layout-style2 {
+        .bt-post {
+          @extend .__bt-post-car-style-2;
+        }
       }
     }
     @media (max-width: $break-xs) {

@@ -338,7 +338,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
@@ -349,6 +349,75 @@
                     "step": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_66b57349cc40e",
+                    "label": "Filter by Year",
+                    "name": "filter_by_year",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "select": "Select",
+                        "slider": "Slider"
+                    },
+                    "default_value": "select",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_66b57408b850a",
+                    "label": "Filter by Price",
+                    "name": "filter_by_price",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "select": "Select",
+                        "slider": "Slider"
+                    },
+                    "default_value": "select",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_66b5742bb850b",
+                    "label": "Filter by Mileage",
+                    "name": "filter_by_mileage",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "select": "Select",
+                        "slider": "Slider"
+                    },
+                    "default_value": "select",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "layout": "horizontal"
                 }
             ]
         },
@@ -1075,5 +1144,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723021150
+    "modified": 1723167798
 }

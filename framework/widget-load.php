@@ -86,7 +86,8 @@ class ElementorWidgets
 			'list-faq',
 			'dealer-loop-item',
 			'service-hours',
-			'cars-grid-list'
+			'cars-grid-list',
+			'cars-grid'
 		);
 
 		return $this->widgets;
@@ -219,6 +220,7 @@ class ElementorWidgets
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\DealerLoopItem\Widget_DealerLoopItem());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\ServiceHours\Widget_ServiceHours());
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsGridList\Widget_CarsGridList());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\CarsGrid\Widget_CarsGrid());
 	}
 
 	/**

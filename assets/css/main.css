@@ -796,7 +796,7 @@ img.alignright {
   .bt-tabs .bt-panel-item.bt-is-active {
     display: block; }
 
-.__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title, .bt-post--excerpt, .__bt-post-car-default .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--title, .bt-elwg-car-loop-item--default .bt-post .bt-post--title, .__bt-post-car-style-1 .bt-post--title, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--title, .__bt-post-car-style-2 .bt-post--title, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--title, .__bt-post-car-style-3 .bt-post--title, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--title, .__bt-post-car-style-4 .bt-post--title, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--title, .__bt-cars-compare-table .bt-table .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--title, .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-title {
+.__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title, .bt-post--excerpt, .__bt-post-car-default .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--title, .bt-elwg-car-loop-item--default .bt-post .bt-post--title, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--title, .__bt-post-car-style-1 .bt-post--title, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--title, .__bt-post-car-style-2 .bt-post--title, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--title, .__bt-post-car-style-3 .bt-post--title, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--title, .__bt-post-car-style-4 .bt-post--title, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--title, .__bt-cars-compare-table .bt-table .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--title, .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-title {
   overflow: hidden;
   width: 100%;
   display: -webkit-box;
@@ -852,21 +852,21 @@ img.alignright {
     background: var(--e-global-color-secondary, #111); }
 
 .__scrollbar_style, .select2-container--default .select2-results > .select2-results__options,
-.elementor-editor-active .select2-container--default .select2-results > .select2-results__options, .__bt-post-car-default .bt-post--meta, .bt-car-layout .bt-post .bt-post--meta, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta, .__bt-post-car-style-1 .bt-post--meta, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta, .__bt-post-car-style-2 .bt-post--meta, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta, .__bt-post-car-style-3 .bt-post--meta, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta, .bt-car-sidebar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list, .__bt-cars-compare-table .bt-table, .bt-elwg-cars-compare--default .bt-table, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap, .bt-elwg-mini-wishlist .bt-mini-wishlist--list, .bt-elwg-list-icon-text--items, .elementor-element.bt-scroll-cars-grid-list > .elementor-element {
+.elementor-editor-active .select2-container--default .select2-results > .select2-results__options, .__bt-post-car-default .bt-post--meta, .bt-car-layout .bt-post .bt-post--meta, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta, .__bt-post-car-style-1 .bt-post--meta, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta, .__bt-post-car-style-2 .bt-post--meta, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta, .__bt-post-car-style-3 .bt-post--meta, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta, .bt-car-sidebar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list, .__bt-cars-compare-table .bt-table, .bt-elwg-cars-compare--default .bt-table, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap, .bt-elwg-mini-wishlist .bt-mini-wishlist--list, .bt-elwg-list-icon-text--items, .elementor-element.bt-scroll-cars-grid-list > .elementor-element {
   overflow-y: auto; }
   .__scrollbar_style::-webkit-scrollbar, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar,
-  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar, .bt-car-sidebar::-webkit-scrollbar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar, .__bt-cars-compare-table .bt-table::-webkit-scrollbar, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar, .bt-elwg-list-icon-text--items::-webkit-scrollbar, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar {
+  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar, .bt-car-sidebar::-webkit-scrollbar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar, .__bt-cars-compare-table .bt-table::-webkit-scrollbar, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar, .bt-elwg-list-icon-text--items::-webkit-scrollbar, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar {
     width: 3px;
     height: 3px;
     border-radius: 10px;
     background-color: #f1f1f1; }
   .__scrollbar_style::-webkit-scrollbar-thumb, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb,
-  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-sidebar::-webkit-scrollbar-thumb, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-thumb, .__bt-cars-compare-table .bt-table::-webkit-scrollbar-thumb, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar-thumb, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-thumb, .bt-elwg-list-icon-text--items::-webkit-scrollbar-thumb, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar-thumb {
+  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-sidebar::-webkit-scrollbar-thumb, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-thumb, .__bt-cars-compare-table .bt-table::-webkit-scrollbar-thumb, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar-thumb, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-thumb, .bt-elwg-list-icon-text--items::-webkit-scrollbar-thumb, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: var(--e-global-color-accent, #1FBECD);
     cursor: pointer; }
   .__scrollbar_style::-webkit-scrollbar-track, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track,
-  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar-track, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-track, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-track, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-car-sidebar::-webkit-scrollbar-track, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-track, .__bt-cars-compare-table .bt-table::-webkit-scrollbar-track, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar-track, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-track, .bt-elwg-list-icon-text--items::-webkit-scrollbar-track, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar-track {
+  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar-track, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-track, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-track, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-car-sidebar::-webkit-scrollbar-track, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-track, .__bt-cars-compare-table .bt-table::-webkit-scrollbar-track, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar-track, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-track, .bt-elwg-list-icon-text--items::-webkit-scrollbar-track, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: #f1f1f1; }
 
@@ -1096,32 +1096,32 @@ img.alignright {
     .__bt-pagination-style.next, .next.bt-pagination, .woocommerce nav.next.woocommerce-pagination, .next.elementor-pagination {
       margin-left: 0; } }
 
-.__avg-rating-style, .__bt-post-car-style-2 .bt-post--avg-rating, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating, .__bt-post-car-style-4 .bt-post--avg-rating, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating {
+.__avg-rating-style, .__bt-post-car-style-2 .bt-post--avg-rating, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--avg-rating, .__bt-post-car-style-4 .bt-post--avg-rating, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating {
   display: flex;
   align-items: center;
   gap: 4px; }
-  .__avg-rating-style .bt-rating-stars, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars {
+  .__avg-rating-style .bt-rating-stars, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--avg-rating .bt-rating-stars, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars {
     display: flex;
     gap: 4px;
     font-size: 0;
     line-height: 0; }
-    .__avg-rating-style .bt-rating-stars span, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span {
+    .__avg-rating-style .bt-rating-stars span, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--avg-rating .bt-rating-stars span, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span {
       position: relative;
       color: #cdcdcd; }
-      .__avg-rating-style .bt-rating-stars span.bt-filled, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span.bt-filled, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled {
+      .__avg-rating-style .bt-rating-stars span.bt-filled, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span.bt-filled, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled {
         color: #efcf0a; }
-      .__avg-rating-style .bt-rating-stars span.bt-filled-half, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half {
+      .__avg-rating-style .bt-rating-stars span.bt-filled-half, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half {
         position: relative; }
-        .__avg-rating-style .bt-rating-stars span.bt-filled-half svg:last-child, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child {
+        .__avg-rating-style .bt-rating-stars span.bt-filled-half svg:last-child, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span.bt-filled-half svg:last-child {
           position: absolute;
           top: 0;
           left: 0;
           fill: #efcf0a; }
-      .__avg-rating-style .bt-rating-stars span svg, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span svg, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span svg, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span svg {
+      .__avg-rating-style .bt-rating-stars span svg, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-stars span svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-stars span svg, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--avg-rating .bt-rating-stars span svg, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-stars span svg, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-stars span svg {
         fill: currentColor;
         width: 16px;
         height: auto; }
-  .__avg-rating-style .bt-rating-count, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-count, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-count, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-count, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-count {
+  .__avg-rating-style .bt-rating-count, .__bt-post-car-style-2 .bt-post--avg-rating .bt-rating-count, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--avg-rating .bt-rating-count, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--avg-rating .bt-rating-count, .__bt-post-car-style-4 .bt-post--avg-rating .bt-rating-count, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--avg-rating .bt-rating-count {
     font-size: 16px; }
 
 .__bt-socials-style, .bt-post-author--socials, .bt-elwg-site-social,
@@ -4154,24 +4154,24 @@ body {
         text-align: left;
         margin-left: 0; } }
 
-.__bt-post-car-default, .bt-car-layout .bt-post, .single-car .bt-related-posts-ss--list .bt-post, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post, .bt-elwg-car-loop-item--default .bt-post {
+.__bt-post-car-default, .bt-car-layout .bt-post, .single-car .bt-related-posts-ss--list .bt-post, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post, .bt-elwg-car-loop-item--default .bt-post, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post {
   background: #ffffff;
   overflow: hidden; }
-  .__bt-post-car-default .bt-post--inner, .bt-car-layout .bt-post .bt-post--inner, .single-car .bt-related-posts-ss--list .bt-post .bt-post--inner, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--inner, .bt-elwg-car-loop-item--default .bt-post .bt-post--inner {
+  .__bt-post-car-default .bt-post--inner, .bt-car-layout .bt-post .bt-post--inner, .single-car .bt-related-posts-ss--list .bt-post .bt-post--inner, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--inner, .bt-elwg-car-loop-item--default .bt-post .bt-post--inner, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--inner, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--inner {
     position: relative;
     overflow: hidden;
     background: #ffffff;
     border: 1px solid #dadada;
     border-radius: 20px; }
-  .__bt-post-car-default .bt-post--thumbnail, .bt-car-layout .bt-post .bt-post--thumbnail, .single-car .bt-related-posts-ss--list .bt-post .bt-post--thumbnail, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--thumbnail, .bt-elwg-car-loop-item--default .bt-post .bt-post--thumbnail {
+  .__bt-post-car-default .bt-post--thumbnail, .bt-car-layout .bt-post .bt-post--thumbnail, .single-car .bt-related-posts-ss--list .bt-post .bt-post--thumbnail, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--thumbnail, .bt-elwg-car-loop-item--default .bt-post .bt-post--thumbnail, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--thumbnail, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--thumbnail {
     position: relative; }
-  .__bt-post-car-default .bt-post--icon-btn, .bt-car-layout .bt-post .bt-post--icon-btn, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn {
+  .__bt-post-car-default .bt-post--icon-btn, .bt-car-layout .bt-post .bt-post--icon-btn, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--icon-btn, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--icon-btn {
     position: absolute;
     top: 20px;
     right: 20px;
     display: flex;
     gap: 5px; }
-    .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn {
+    .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--icon-btn .bt-icon-btn, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--icon-btn .bt-icon-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -4181,15 +4181,15 @@ body {
       border: 1px solid #d6d6d6;
       border-radius: 100px;
       transition: all 0.3s; }
-      .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn.added, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn.added, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn.added {
+      .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn.added, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn.added, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--icon-btn .bt-icon-btn.added {
         background: var(--e-global-color-accent, #1FBECD); }
-        .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn.added svg, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
+        .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn.added svg, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
           fill: #ffffff; }
-      .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn svg, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn svg, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn svg, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn svg {
+      .__bt-post-car-default .bt-post--icon-btn .bt-icon-btn svg, .bt-car-layout .bt-post .bt-post--icon-btn .bt-icon-btn svg, .single-car .bt-related-posts-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn svg, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--default .bt-post .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--icon-btn .bt-icon-btn svg {
         fill: var(--e-global-color-accent, #1FBECD); }
-  .__bt-post-car-default .bt-post--infor, .bt-car-layout .bt-post .bt-post--infor, .single-car .bt-related-posts-ss--list .bt-post .bt-post--infor, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--infor, .bt-elwg-car-loop-item--default .bt-post .bt-post--infor {
+  .__bt-post-car-default .bt-post--infor, .bt-car-layout .bt-post .bt-post--infor, .single-car .bt-related-posts-ss--list .bt-post .bt-post--infor, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--infor, .bt-elwg-car-loop-item--default .bt-post .bt-post--infor, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--infor, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--infor {
     position: relative; }
-  .__bt-post-car-default .bt-post--body, .bt-car-layout .bt-post .bt-post--body, .single-car .bt-related-posts-ss--list .bt-post .bt-post--body, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--body, .bt-elwg-car-loop-item--default .bt-post .bt-post--body {
+  .__bt-post-car-default .bt-post--body, .bt-car-layout .bt-post .bt-post--body, .single-car .bt-related-posts-ss--list .bt-post .bt-post--body, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--body, .bt-elwg-car-loop-item--default .bt-post .bt-post--body, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--body, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--body {
     position: absolute;
     top: 0;
     left: -1px;
@@ -4201,15 +4201,15 @@ body {
     padding: 10px 30px;
     border-radius: 0 10px 10px 0;
     transform: translateY(-50%); }
-  .__bt-post-car-default .bt-post--info-inner, .bt-car-layout .bt-post .bt-post--info-inner, .single-car .bt-related-posts-ss--list .bt-post .bt-post--info-inner, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--info-inner, .bt-elwg-car-loop-item--default .bt-post .bt-post--info-inner {
+  .__bt-post-car-default .bt-post--info-inner, .bt-car-layout .bt-post .bt-post--info-inner, .single-car .bt-related-posts-ss--list .bt-post .bt-post--info-inner, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--info-inner, .bt-elwg-car-loop-item--default .bt-post .bt-post--info-inner, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--info-inner, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--info-inner {
     padding: 40px 30px 24px; }
-  .__bt-post-car-default .bt-post--price, .bt-car-layout .bt-post .bt-post--price, .single-car .bt-related-posts-ss--list .bt-post .bt-post--price, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--price, .bt-elwg-car-loop-item--default .bt-post .bt-post--price {
+  .__bt-post-car-default .bt-post--price, .bt-car-layout .bt-post .bt-post--price, .single-car .bt-related-posts-ss--list .bt-post .bt-post--price, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--price, .bt-elwg-car-loop-item--default .bt-post .bt-post--price, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--price, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--price {
     font-size: 20px;
     font-weight: 500;
     line-height: 150%;
     color: var(--e-global-color-accent, #1FBECD);
     margin-bottom: 8px; }
-    .__bt-post-car-default .bt-post--price a, .bt-car-layout .bt-post .bt-post--price a, .single-car .bt-related-posts-ss--list .bt-post .bt-post--price a, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--price a, .bt-elwg-car-loop-item--default .bt-post .bt-post--price a {
+    .__bt-post-car-default .bt-post--price a, .bt-car-layout .bt-post .bt-post--price a, .single-car .bt-related-posts-ss--list .bt-post .bt-post--price a, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--price a, .bt-elwg-car-loop-item--default .bt-post .bt-post--price a, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--price a, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--price a {
       display: inline-block;
       font-size: 16px;
       line-height: 150%;
@@ -4217,52 +4217,52 @@ body {
       background: #f1f1f1;
       padding: 8px 15px;
       border-radius: 10px; }
-  .__bt-post-car-default .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--title, .bt-elwg-car-loop-item--default .bt-post .bt-post--title {
+  .__bt-post-car-default .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--title, .bt-elwg-car-loop-item--default .bt-post .bt-post--title, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--title {
     min-height: 58px;
     font-size: 22px;
     margin: 0; }
-  .__bt-post-car-default .bt-post--meta, .bt-car-layout .bt-post .bt-post--meta, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta {
+  .__bt-post-car-default .bt-post--meta, .bt-car-layout .bt-post .bt-post--meta, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta {
     position: relative;
     height: 69px;
     overflow-x: auto;
     overflow-y: hidden;
     border-top: 1px solid #dadada; }
-  .__bt-post-car-default .bt-post--meta-row, .bt-car-layout .bt-post .bt-post--meta-row, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-row, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-row, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-row {
+  .__bt-post-car-default .bt-post--meta-row, .bt-car-layout .bt-post .bt-post--meta-row, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-row, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-row, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-row, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-row, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-row {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     white-space: nowrap; }
-  .__bt-post-car-default .bt-post--meta-col, .bt-car-layout .bt-post .bt-post--meta-col, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-col, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-col, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-col {
+  .__bt-post-car-default .bt-post--meta-col, .bt-car-layout .bt-post .bt-post--meta-col, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-col, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-col, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-col, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-col, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-col {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 12px 16px; }
-    .__bt-post-car-default .bt-post--meta-col:not(:last-child), .bt-car-layout .bt-post .bt-post--meta-col:not(:last-child), .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-col:not(:last-child), .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-col:not(:last-child), .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-col:not(:last-child) {
+    .__bt-post-car-default .bt-post--meta-col:not(:last-child), .bt-car-layout .bt-post .bt-post--meta-col:not(:last-child), .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-col:not(:last-child), .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-col:not(:last-child), .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-col:not(:last-child), .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-col:not(:last-child), .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-col:not(:last-child) {
       border-right: 1px solid #dadada; }
-  .__bt-post-car-default .bt-post--meta-item, .bt-car-layout .bt-post .bt-post--meta-item, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item {
+  .__bt-post-car-default .bt-post--meta-item, .bt-car-layout .bt-post .bt-post--meta-item, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-item, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-item {
     position: relative;
     min-width: 86px;
     padding-left: 30px; }
-    .__bt-post-car-default .bt-post--meta-item svg, .bt-car-layout .bt-post .bt-post--meta-item svg, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item svg, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item svg, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item svg {
+    .__bt-post-car-default .bt-post--meta-item svg, .bt-car-layout .bt-post .bt-post--meta-item svg, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item svg, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item svg, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item svg, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-item svg, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-item svg {
       position: absolute;
       top: 4px;
       left: 0;
       width: 22px;
       height: auto;
       color: var(--e-global-color-accent, #1FBECD); }
-    .__bt-post-car-default .bt-post--meta-item span, .bt-car-layout .bt-post .bt-post--meta-item span, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item span, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item span, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item span {
+    .__bt-post-car-default .bt-post--meta-item span, .bt-car-layout .bt-post .bt-post--meta-item span, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item span, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item span, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item span, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-item span, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-item span {
       display: block; }
-    .__bt-post-car-default .bt-post--meta-item .bt-label, .bt-car-layout .bt-post .bt-post--meta-item .bt-label, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item .bt-label, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item .bt-label, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item .bt-label {
+    .__bt-post-car-default .bt-post--meta-item .bt-label, .bt-car-layout .bt-post .bt-post--meta-item .bt-label, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item .bt-label, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item .bt-label, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item .bt-label, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-item .bt-label, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-item .bt-label {
       font-size: 14px;
       line-height: 150%;
       color: #848484; }
-    .__bt-post-car-default .bt-post--meta-item .bt-value, .bt-car-layout .bt-post .bt-post--meta-item .bt-value, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item .bt-value, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item .bt-value, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item .bt-value {
+    .__bt-post-car-default .bt-post--meta-item .bt-value, .bt-car-layout .bt-post .bt-post--meta-item .bt-value, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta-item .bt-value, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta-item .bt-value, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta-item .bt-value, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-item .bt-value, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta-item .bt-value {
       font-size: 16px;
       font-weight: 500;
       line-height: 150%; }
-  .__bt-post-car-default .bt-post--readmore a, .bt-car-layout .bt-post .bt-post--readmore a, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a {
+  .__bt-post-car-default .bt-post--readmore a, .bt-car-layout .bt-post .bt-post--readmore a, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--readmore a, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--readmore a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4274,30 +4274,30 @@ body {
     color: var(--e-global-color-accent, #1FBECD);
     background: #f1f1f1;
     padding: 18px 20px; }
-    .__bt-post-car-default .bt-post--readmore a svg path, .bt-car-layout .bt-post .bt-post--readmore a svg path, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a svg path, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a svg path, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a svg path {
+    .__bt-post-car-default .bt-post--readmore a svg path, .bt-car-layout .bt-post .bt-post--readmore a svg path, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a svg path, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a svg path, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a svg path, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--readmore a svg path, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--readmore a svg path {
       stroke: var(--e-global-color-accent, #1FBECD);
       transition: all 0.3s; }
-    .__bt-post-car-default .bt-post--readmore a:hover, .bt-car-layout .bt-post .bt-post--readmore a:hover, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a:hover, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a:hover, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a:hover {
+    .__bt-post-car-default .bt-post--readmore a:hover, .bt-car-layout .bt-post .bt-post--readmore a:hover, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a:hover, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a:hover, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a:hover, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--readmore a:hover, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--readmore a:hover {
       color: #ffffff;
       background: var(--e-global-color-accent, #1FBECD); }
-      .__bt-post-car-default .bt-post--readmore a:hover svg path, .bt-car-layout .bt-post .bt-post--readmore a:hover svg path, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a:hover svg path, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a:hover svg path, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a:hover svg path {
+      .__bt-post-car-default .bt-post--readmore a:hover svg path, .bt-car-layout .bt-post .bt-post--readmore a:hover svg path, .single-car .bt-related-posts-ss--list .bt-post .bt-post--readmore a:hover svg path, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--readmore a:hover svg path, .bt-elwg-car-loop-item--default .bt-post .bt-post--readmore a:hover svg path, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--readmore a:hover svg path, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--readmore a:hover svg path {
         stroke: #ffffff; }
 
-.__bt-post-car-style-1, .bt-elwg-car-loop-item--style-1 .bt-post {
+.__bt-post-car-style-1, .bt-elwg-car-loop-item--style-1 .bt-post, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post {
   position: relative;
   overflow: hidden; }
-  .__bt-post-car-style-1 .bt-post--inner, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--inner {
+  .__bt-post-car-style-1 .bt-post--inner, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--inner, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--inner {
     position: relative;
     overflow: hidden;
     background: #ffffff;
     border: 1px solid #dadada;
     border-radius: 20px; }
-  .__bt-post-car-style-1 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--thumbnail {
+  .__bt-post-car-style-1 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--thumbnail, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--thumbnail {
     position: relative; }
-    .__bt-post-car-style-1 .bt-post--thumbnail .bt-cover-image, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--thumbnail .bt-cover-image, .__bt-post-car-style-1 .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-post-car-style-1 .bt-post--thumbnail .wc-cover-image, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--thumbnail .wc-cover-image {
+    .__bt-post-car-style-1 .bt-post--thumbnail .bt-cover-image, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--thumbnail .bt-cover-image, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--thumbnail .bt-cover-image, .__bt-post-car-style-1 .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-post-car-style-1 .bt-post--thumbnail .wc-cover-image, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--thumbnail .wc-cover-image, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--thumbnail .wc-cover-image {
       min-height: 400px;
       padding-bottom: 100%; }
-  .__bt-post-car-style-1 .bt-post--infor, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--infor {
+  .__bt-post-car-style-1 .bt-post--infor, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--infor, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--infor {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -4307,12 +4307,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background: rgba(17, 17, 17, 0.5); }
-  .__bt-post-car-style-1 .bt-post--icon-btn, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn {
+  .__bt-post-car-style-1 .bt-post--icon-btn, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--icon-btn {
     display: flex;
     gap: 5px;
     justify-content: flex-end;
     padding: 20px; }
-    .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn {
+    .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--icon-btn .bt-icon-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -4322,21 +4322,21 @@ body {
       border: 1px solid #d6d6d6;
       border-radius: 100px;
       transition: all 0.3s; }
-      .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn.added {
+      .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--icon-btn .bt-icon-btn.added {
         background: var(--e-global-color-accent, #1FBECD); }
-        .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
+        .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
           fill: #ffffff; }
-      .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn svg {
+      .__bt-post-car-style-1 .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--icon-btn .bt-icon-btn svg {
         fill: var(--e-global-color-accent, #1FBECD); }
-  .__bt-post-car-style-1 .bt-post--infor-inner, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--infor-inner {
+  .__bt-post-car-style-1 .bt-post--infor-inner, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--infor-inner, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--infor-inner {
     padding: 30px; }
-  .__bt-post-car-style-1 .bt-post--title, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--title {
+  .__bt-post-car-style-1 .bt-post--title, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--title {
     max-width: 380px;
     min-height: 58px;
     font-size: 24px;
     color: #ffffff;
     margin: 0 0 20px; }
-  .__bt-post-car-style-1 .bt-post--body-price, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--body-price {
+  .__bt-post-car-style-1 .bt-post--body-price, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--body-price, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--body-price {
     display: inline-flex;
     align-items: center;
     background: var(--e-global-color-accent, #1FBECD);
@@ -4344,20 +4344,20 @@ body {
     padding-left: 30px;
     overflow: hidden;
     border-radius: 0 10px 10px 0; }
-  .__bt-post-car-style-1 .bt-post--body, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--body {
+  .__bt-post-car-style-1 .bt-post--body, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--body, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--body {
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     color: #ffffff;
     padding: 10px 25px 10px 0; }
-  .__bt-post-car-style-1 .bt-post--price, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--price {
+  .__bt-post-car-style-1 .bt-post--price, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--price, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--price {
     font-size: 18px;
     font-weight: 700;
     line-height: 150%;
     color: var(--e-global-color-primary, #222);
     background: #ffffff;
     padding: 10px 25px; }
-    .__bt-post-car-style-1 .bt-post--price a, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--price a {
+    .__bt-post-car-style-1 .bt-post--price a, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--price a, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--price a {
       display: inline-block;
       font-size: 16px;
       line-height: 150%;
@@ -4365,22 +4365,22 @@ body {
       background: #f1f1f1;
       padding: 8px 15px;
       border-radius: 10px; }
-  .__bt-post-car-style-1 .bt-post--meta, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta {
+  .__bt-post-car-style-1 .bt-post--meta, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta {
     max-width: 380px;
     overflow-x: auto;
     margin: 25px 0 5px;
     padding-bottom: 4px; }
-  .__bt-post-car-style-1 .bt-post--meta-row, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-row {
+  .__bt-post-car-style-1 .bt-post--meta-row, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-row, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta-row {
     display: flex;
     white-space: nowrap; }
-  .__bt-post-car-style-1 .bt-post--meta-col, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-col {
+  .__bt-post-car-style-1 .bt-post--meta-col, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-col, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta-col {
     position: relative;
     display: flex;
     width: 100%; }
-    .__bt-post-car-style-1 .bt-post--meta-col:not(:last-child), .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-col:not(:last-child) {
+    .__bt-post-car-style-1 .bt-post--meta-col:not(:last-child), .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-col:not(:last-child), .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta-col:not(:last-child) {
       margin-right: 24px;
       padding-right: 24px; }
-      .__bt-post-car-style-1 .bt-post--meta-col:not(:last-child):after, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-col:not(:last-child):after {
+      .__bt-post-car-style-1 .bt-post--meta-col:not(:last-child):after, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-col:not(:last-child):after, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta-col:not(:last-child):after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -4388,24 +4388,24 @@ body {
         width: 1px;
         height: calc(100% - 32px);
         background: #aeaeae; }
-  .__bt-post-car-style-1 .bt-post--meta-item, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item {
+  .__bt-post-car-style-1 .bt-post--meta-item, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta-item {
     display: flex;
     flex-direction: column; }
-    .__bt-post-car-style-1 .bt-post--meta-item svg, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item svg {
+    .__bt-post-car-style-1 .bt-post--meta-item svg, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item svg, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta-item svg {
       width: 22px;
       height: auto;
       color: var(--e-global-color-accent, #1FBECD);
       margin-bottom: 10px; }
-    .__bt-post-car-style-1 .bt-post--meta-item .bt-label, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item .bt-label {
+    .__bt-post-car-style-1 .bt-post--meta-item .bt-label, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item .bt-label, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta-item .bt-label {
       font-size: 14px;
       line-height: 150%;
       color: #afafaf; }
-    .__bt-post-car-style-1 .bt-post--meta-item .bt-value, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item .bt-value {
+    .__bt-post-car-style-1 .bt-post--meta-item .bt-value, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta-item .bt-value, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta-item .bt-value {
       font-size: 16px;
       font-weight: 500;
       line-height: 150%;
       color: #ffffff; }
-  .__bt-post-car-style-1 .bt-post--readmore a, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a {
+  .__bt-post-car-style-1 .bt-post--readmore a, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--readmore a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4417,33 +4417,33 @@ body {
     color: var(--e-global-color-accent, #1FBECD);
     background: #f1f1f1;
     padding: 18px 20px; }
-    .__bt-post-car-style-1 .bt-post--readmore a svg path, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a svg path {
+    .__bt-post-car-style-1 .bt-post--readmore a svg path, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a svg path, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--readmore a svg path {
       stroke: var(--e-global-color-accent, #1FBECD);
       transition: all 0.3s; }
-    .__bt-post-car-style-1 .bt-post--readmore a:hover, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a:hover {
+    .__bt-post-car-style-1 .bt-post--readmore a:hover, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a:hover, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--readmore a:hover {
       color: #ffffff;
       background: var(--e-global-color-accent, #1FBECD); }
-      .__bt-post-car-style-1 .bt-post--readmore a:hover svg path, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a:hover svg path {
+      .__bt-post-car-style-1 .bt-post--readmore a:hover svg path, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--readmore a:hover svg path, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--readmore a:hover svg path {
         stroke: #ffffff; }
 
-.__bt-post-car-style-2, .bt-elwg-car-loop-item--style-2 .bt-post {
+.__bt-post-car-style-2, .bt-elwg-car-loop-item--style-2 .bt-post, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post {
   background: #ffffff;
   overflow: hidden; }
-  .__bt-post-car-style-2 .bt-post--inner, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--inner {
+  .__bt-post-car-style-2 .bt-post--inner, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--inner, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--inner {
     position: relative;
     overflow: hidden;
     background: #ffffff;
     border: 1px solid #dadada;
     border-radius: 20px; }
-  .__bt-post-car-style-2 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--thumbnail {
+  .__bt-post-car-style-2 .bt-post--thumbnail, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--thumbnail, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--thumbnail {
     position: relative; }
-  .__bt-post-car-style-2 .bt-post--icon-btn, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn {
+  .__bt-post-car-style-2 .bt-post--icon-btn, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--icon-btn {
     position: absolute;
     bottom: -22px;
     right: 20px;
     display: flex;
     gap: 5px; }
-    .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn {
+    .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--icon-btn .bt-icon-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -4453,34 +4453,34 @@ body {
       border: 1px solid #d6d6d6;
       border-radius: 100px;
       transition: all 0.3s; }
-      .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn.added {
+      .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn.added, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--icon-btn .bt-icon-btn.added {
         background: var(--e-global-color-accent, #1FBECD); }
-        .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
+        .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn.added svg, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--icon-btn .bt-icon-btn.added svg {
           fill: #ffffff; }
-      .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn svg {
+      .__bt-post-car-style-2 .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--icon-btn .bt-icon-btn svg, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--icon-btn .bt-icon-btn svg {
         fill: var(--e-global-color-accent, #1FBECD); }
-  .__bt-post-car-style-2 .bt-post--infor, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--infor {
+  .__bt-post-car-style-2 .bt-post--infor, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--infor, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--infor {
     position: relative; }
-  .__bt-post-car-style-2 .bt-post--body, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--body {
+  .__bt-post-car-style-2 .bt-post--body, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--body, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--body {
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     color: var(--e-global-color-accent, #1FBECD);
     margin-bottom: 4px; }
-  .__bt-post-car-style-2 .bt-post--info-inner, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--info-inner {
+  .__bt-post-car-style-2 .bt-post--info-inner, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--info-inner, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--info-inner {
     padding: 30px 30px 24px; }
-  .__bt-post-car-style-2 .bt-post--price-rating, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--price-rating {
+  .__bt-post-car-style-2 .bt-post--price-rating, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--price-rating, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--price-rating {
     display: flex;
     display: flex;
     align-items: center;
     gap: 4px 24px;
     margin-bottom: 20px; }
-  .__bt-post-car-style-2 .bt-post--price, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--price {
+  .__bt-post-car-style-2 .bt-post--price, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--price, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--price {
     font-size: 20px;
     font-weight: 500;
     line-height: 150%;
     color: var(--e-global-color-accent, #1FBECD); }
-    .__bt-post-car-style-2 .bt-post--price a, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--price a {
+    .__bt-post-car-style-2 .bt-post--price a, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--price a, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--price a {
       display: inline-block;
       font-size: 16px;
       line-height: 150%;
@@ -4488,48 +4488,48 @@ body {
       background: #f1f1f1;
       padding: 8px 15px;
       border-radius: 10px; }
-  .__bt-post-car-style-2 .bt-post--title, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--title {
+  .__bt-post-car-style-2 .bt-post--title, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--title {
     min-height: 58px;
     font-size: 22px;
     margin: 0; }
-  .__bt-post-car-style-2 .bt-post--meta, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta {
+  .__bt-post-car-style-2 .bt-post--meta, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta {
     position: relative;
     height: 52px;
     overflow-x: auto;
     padding-top: 20px;
     border-top: 1px solid #dadada; }
-  .__bt-post-car-style-2 .bt-post--meta-row, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-row {
+  .__bt-post-car-style-2 .bt-post--meta-row, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-row, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta-row {
     display: flex;
     white-space: nowrap;
     position: absolute;
     bottom: 4px;
     left: 0;
     width: 100%; }
-  .__bt-post-car-style-2 .bt-post--meta-col, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-col {
+  .__bt-post-car-style-2 .bt-post--meta-col, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-col, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta-col {
     display: flex; }
-    .__bt-post-car-style-2 .bt-post--meta-col:not(:last-child), .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-col:not(:last-child) {
+    .__bt-post-car-style-2 .bt-post--meta-col:not(:last-child), .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-col:not(:last-child), .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta-col:not(:last-child) {
       margin-right: 20px;
       padding-right: 20px;
       border-right: 1px solid #dadada; }
-  .__bt-post-car-style-2 .bt-post--meta-item, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item {
+  .__bt-post-car-style-2 .bt-post--meta-item, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta-item {
     position: relative;
     padding-left: 30px; }
-    .__bt-post-car-style-2 .bt-post--meta-item svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item svg {
+    .__bt-post-car-style-2 .bt-post--meta-item svg, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item svg, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta-item svg {
       position: absolute;
       top: 1px;
       left: 0;
       width: 22px;
       height: auto;
       color: var(--e-global-color-accent, #1FBECD); }
-    .__bt-post-car-style-2 .bt-post--meta-item span, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item span {
+    .__bt-post-car-style-2 .bt-post--meta-item span, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item span, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta-item span {
       display: block; }
-    .__bt-post-car-style-2 .bt-post--meta-item .bt-label, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item .bt-label {
+    .__bt-post-car-style-2 .bt-post--meta-item .bt-label, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item .bt-label, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta-item .bt-label {
       display: none; }
-    .__bt-post-car-style-2 .bt-post--meta-item .bt-value, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item .bt-value {
+    .__bt-post-car-style-2 .bt-post--meta-item .bt-value, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta-item .bt-value, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta-item .bt-value {
       font-size: 16px;
       font-weight: 500;
       line-height: 150%; }
-  .__bt-post-car-style-2 .bt-post--readmore a, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a {
+  .__bt-post-car-style-2 .bt-post--readmore a, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--readmore a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4541,13 +4541,13 @@ body {
     color: var(--e-global-color-accent, #1FBECD);
     background: #f1f1f1;
     padding: 18px 20px; }
-    .__bt-post-car-style-2 .bt-post--readmore a svg path, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a svg path {
+    .__bt-post-car-style-2 .bt-post--readmore a svg path, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a svg path, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--readmore a svg path {
       stroke: var(--e-global-color-accent, #1FBECD);
       transition: all 0.3s; }
-    .__bt-post-car-style-2 .bt-post--readmore a:hover, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a:hover {
+    .__bt-post-car-style-2 .bt-post--readmore a:hover, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a:hover, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--readmore a:hover {
       color: #ffffff;
       background: var(--e-global-color-accent, #1FBECD); }
-      .__bt-post-car-style-2 .bt-post--readmore a:hover svg path, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a:hover svg path {
+      .__bt-post-car-style-2 .bt-post--readmore a:hover svg path, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--readmore a:hover svg path, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--readmore a:hover svg path {
         stroke: #ffffff; }
 
 .__bt-post-car-style-3, .bt-elwg-car-loop-item--style-3 .bt-post {
@@ -10119,14 +10119,72 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 20px; }
+.bt-elwg-cars-grid-list--default .bt-car-grid-layout {
+  display: grid; }
+  .bt-elwg-cars-grid-list--default .bt-car-grid-layout .bt-post {
+    width: 100%; }
+  @media (min-width: 767.98px) {
+    .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post {
+      width: 100%; }
+      .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post--inner {
+        display: flex; }
+      .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post--thumbnail {
+        width: 50%; }
+        .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post--thumbnail .bt-cover-image, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post--thumbnail .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post--thumbnail .wc-cover-image {
+          height: 100%;
+          padding-bottom: 0; }
+      .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post--featured {
+        height: 100%; }
+        .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post--featured a {
+          display: block;
+          height: 100%; }
+      .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post--infor {
+        width: 50%; }
+      .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post--body {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        border-radius: 0 0 10px 0;
+        transform: none; }
+      .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default[data-view="list"] .bt-post--info-inner {
+        padding: 60px 30px 24px; } }
 @media (min-width: 767.98px) {
-  .bt-elwg-cars-grid-list--default .bt-car-layout[data-view=""] .bt-post,
-  .bt-elwg-cars-grid-list--default .bt-car-layout[data-view="grid"] .bt-post {
-    width: calc(50% - 10px); } }
+  .bt-elwg-cars-grid-list--default .bt-car-grid-layout[data-view=""].bt-cols--2,
+  .bt-elwg-cars-grid-list--default .bt-car-grid-layout[data-view="grid"].bt-cols--2 {
+    grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 767.98px) {
+  .bt-elwg-cars-grid-list--default .bt-car-grid-layout[data-view=""].bt-cols--3,
+  .bt-elwg-cars-grid-list--default .bt-car-grid-layout[data-view="grid"].bt-cols--3 {
+    grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 767.98px) {
+  .bt-elwg-cars-grid-list--default .bt-car-grid-layout[data-view=""].bt-cols--4,
+  .bt-elwg-cars-grid-list--default .bt-car-grid-layout[data-view="grid"].bt-cols--4 {
+    grid-template-columns: repeat(4, 1fr); } }
 @media (max-width: 519.98px) {
   .bt-elwg-cars-grid-list--default .bt-pagination {
     margin-top: 40px; }
   .bt-elwg-cars-grid-list--default .bt-car-topbar {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    gap: 12px; } }
+
+.bt-elwg-cars-grid--default .bt-car-grid-layout {
+  display: grid; }
+  @media (min-width: 767.98px) {
+    .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-cols--2 {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 767.98px) {
+    .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-cols--3 {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 767.98px) {
+    .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-cols--4 {
+      grid-template-columns: repeat(4, 1fr); } }
+  .bt-elwg-cars-grid--default .bt-car-grid-layout .bt-post {
+    width: 100%; }
+@media (max-width: 519.98px) {
+  .bt-elwg-cars-grid--default .bt-pagination {
+    margin-top: 40px; }
+  .bt-elwg-cars-grid--default .bt-car-topbar {
     padding-bottom: 20px;
     margin-bottom: 30px;
     gap: 12px; } }
