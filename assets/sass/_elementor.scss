@@ -1768,10 +1768,11 @@
   @media (max-width: $break-md) {
     &--title {
       width: 100%;
-      min-height: 117px;
+      min-height: 75px;
     }
     &--items {
       width: 100%;
+      min-height: 75px;
     }
   }
 }

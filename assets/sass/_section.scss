@@ -997,4 +997,28 @@
             }
         }
     }
+    &.bt-tab-preload {
+        .elementor-tabs-content-wrapper {
+            position: relative;
+            &.loading {
+                .bt-content-load {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .bt-content-load {
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+                z-index: 2;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                .bt-loading-wave{
+                    top: 15%;
+                }
+            }
+        }
+    }
 }

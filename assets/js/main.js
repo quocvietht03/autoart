@@ -862,17 +862,30 @@
 
 	}
 	/* Scroll Cars Grid List */
-	function AutoArtScrollCars(){
+	function AutoArtScrollCars() {
 		var $scrollContainer = $('.elementor-element.bt-scroll-cars-grid-list > .elementor-element');
-		$scrollContainer.on('scroll', function() {
+		$scrollContainer.on('scroll', function () {
 			var scrollTop = $(this).scrollTop();
 			var scrollHeight = $(this).prop('scrollHeight');
 			var containerHeight = $(this).height();
-	
+
 			if (scrollTop + containerHeight >= scrollHeight) {
 				$('.bt-scroll-cars-grid-list').removeClass('active');
 			} else {
 				$('.bt-scroll-cars-grid-list').addClass('active');
+			}
+		});
+	}
+	function AutoArtLoadTab() {
+		var $tabload = $('.elementor-element.bt-tab-preload');
+		var $loading = $('<div class="bt-content-load"><span class="bt-loading-wave"></span></div>');
+		$tabload.find('.elementor-tabs-content-wrapper').prepend($loading);
+		$tabload.find('.elementor-tab-title').on('click', function () {
+			if (!$(this).hasClass('elementor-active')) {
+				$tabload.find('.elementor-tabs-content-wrapper').addClass('loading');
+				setTimeout(function () {
+					$tabload.find('.elementor-tabs-content-wrapper').removeClass('loading');
+				}, 500);
 			}
 		});
 	}
@@ -895,6 +908,7 @@
 		AutoArtUnitsCustom();
 		AutoArtAddIconList();
 		AutoArtScrollCars();
+		AutoArtLoadTab();
 	});
 
 	jQuery(window).on('resize', function () {
