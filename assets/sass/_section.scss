@@ -1005,6 +1005,9 @@
                     opacity: 1;
                     visibility: visible;
                 }
+                .elementor-tab-content{
+                    opacity: 0;
+                }
             }
             .bt-content-load {
                 opacity: 0;
@@ -1014,7 +1017,6 @@
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                background: #fff;
                 .bt-loading-wave{
                     top: 150px;
                 }
