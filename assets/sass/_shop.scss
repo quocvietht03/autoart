@@ -1825,11 +1825,12 @@
       border-radius: 10px;
     }
     .select2-container--default {
-      height: 58px;
+      height: 50px;
       .select2-selection--single {
-        height: 58px;
+        height: 50px;
         border-color: #ececec;
         border-radius: 10px;
+        padding: 0;
         .select2-selection__rendered {
           line-height: 58px;
           color: $color-text;
