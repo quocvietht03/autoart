@@ -10458,6 +10458,8 @@ body {
     background-color: #fff;
     border: 6px solid var(--e-global-color-accent, #1FBECD);
     border-radius: 50%; }
+  .elementor-element.bt-find-your-dream-cars-home-3 .elementor-widget-icon-box .elementor-icon-box-content a:hover {
+    color: currentColor; }
   @media (max-width: 1199.98px) and (min-width: 1024.98px) {
     .elementor-element.bt-find-your-dream-cars-home-3 .bt-col-container-right .elementor-button-wrapper .elementor-button {
       padding: 13px 50px 14px 25px; } }

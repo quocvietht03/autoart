@@ -369,6 +369,13 @@
                     border-radius: 50%;
                 }
             }
+            .elementor-icon-box-content{
+                a{
+                    &:hover{
+                        color: currentColor;
+                    }
+                }
+            }
         }
 
         .bt-col-container-right {
