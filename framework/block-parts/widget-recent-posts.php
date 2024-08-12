@@ -18,7 +18,7 @@ $recent_posts = wp_get_recent_posts(array(
 		<div class="bt-post">		
 			<div class="bt-post--thumbnail">
 				<div class="bt-cover-image">
-					<?php echo get_the_post_thumbnail($post_item['ID'], 'large'); ?>
+					<?php echo get_the_post_thumbnail($post_item['ID'], 'medium_large'); ?>
 				</div>
 				
 				<div class="bt-post--categories"> 
