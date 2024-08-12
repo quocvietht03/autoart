@@ -8484,6 +8484,9 @@ body {
     background: #111111; }
 .woocommerce-cart .woocommerce-cart-form {
   margin-bottom: 90px; }
+  @media (max-width: 767.98px) {
+    .woocommerce-cart .woocommerce-cart-form {
+      margin-bottom: 45px; } }
   .woocommerce-cart .woocommerce-cart-form .shop_table {
     overflow: hidden;
     border-radius: 15px; }

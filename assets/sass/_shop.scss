@@ -1537,6 +1537,9 @@
   }
   .woocommerce-cart-form {
     margin-bottom: 90px;
+    @media(max-width:$break-sm){
+      margin-bottom: 45px;
+    }
     .shop_table {
       overflow: hidden;
       border-radius: 15px;
