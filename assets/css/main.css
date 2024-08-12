@@ -5199,6 +5199,9 @@ body {
       .bt-car-layout[data-view="list"] .bt-post--info-inner {
         padding: 60px 30px 24px; } }
 
+@media (max-width: 991.98px) {
+  .post-type-archive-car .bt-main-content-ss {
+    padding-top: 45px; } }
 .post-type-archive-car .bt-main-post-row {
   flex-direction: row-reverse; }
   @media (max-width: 991.98px) {

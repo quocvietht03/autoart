@@ -1303,6 +1303,11 @@
 }
 
 .post-type-archive-car {
+  .bt-main-content-ss {
+    @media (max-width: $break-md) {
+      padding-top: 45px;
+    }
+  }
   .bt-main-post-row {
     flex-direction: row-reverse;
     @media (max-width: $break-md) {
