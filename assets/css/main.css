@@ -10675,6 +10675,9 @@ body {
       margin-top: 18px; }
       .elementor-element.bt-form-get-price-form .gform_wrapper .gform_footer input[type="submit"] {
         padding: 15px 50px !important; } }
+.elementor-element.bt-form-get-price-form .gform_wrapper .gform_confirmation_message {
+  text-align: left;
+  color: #fff; }
 @media (max-width: 1760px) {
   .elementor-element.bt-loop-slider-car .elementor-swiper-button {
     padding: 20px !important; }
