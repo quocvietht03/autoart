@@ -34,6 +34,7 @@ function autoart_dealer_register()
 		'show_ui'         => true,
 		'capability_type' => 'post',
 		'hierarchical'    => false,
+		'has_archive' => true,
 		'menu_icon'       => 'dashicons-admin-post',
 		'rewrite'         => array('slug' => $cpt_slug), // Permalinks format
 		'show_in_rest' 		=> true,

@@ -20,6 +20,7 @@
   display: revert;
   all: revert-layer;
 }
+
 .gform_wrapper {
   &.bt-get-price-form_wrapper {
     .gform-field-label--type-inline {
@@ -33,6 +34,7 @@
     --gf-form-gap-x: 12px;
     --gf-form-gap-y: 12px;
     --gf-font-size-secondary: 18px;
+    --gf-color-primary: #1fbecd;
   }
   .gform_heading {
     margin-bottom: 30px;
@@ -76,7 +78,14 @@
     }
   }
   .gform_footer {
+    flex-wrap: nowrap !important;
+    position: relative;
+    > *:not(input) {
+      position: absolute;
+      right: 10px;
+    }
     input[type="submit"] {
+      position: relative;
       display: inline-block !important;
       font-size: 18px !important;
       font-weight: 700 !important;
@@ -88,6 +97,7 @@
       padding: 16px 40px !important;
       border: none !important;
       border-radius: 10px !important;
+      box-shadow: none !important;
       &.gform-button--width-full {
         width: 100% !important;
       }
@@ -101,4 +111,12 @@
     font-weight: 500;
     text-align: center;
   }
+}
+body #gform_wrapper_3[data-form-index="0"].gform-theme,
+body #gform_wrapper_2[data-form-index="0"].gform-theme {
+  --gf-color-primary: var(--e-global-color-accent, #1fbecd);
+}
+body #gform_wrapper_1[data-form-index="0"].gform-theme,
+body #gform_wrapper_4[data-form-index="0"].gform-theme {
+  --gf-color-primary: #ffffff;
 }

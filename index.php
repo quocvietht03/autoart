@@ -1,6 +1,6 @@
 <?php
 get_header();
-get_template_part( 'framework/templates/site', 'titlebar');
+get_template_part('framework/templates/site', 'titlebar');
 
 ?>
 <main id="bt_main" class="bt-site-main">
@@ -9,25 +9,25 @@ get_template_part( 'framework/templates/site', 'titlebar');
 			<div class="bt-main-post-row">
 				<div class="bt-main-post-col">
 					<?php
-						if( have_posts() ) {
-							?>
-								<div class="bt-list-post">
-									<?php
-										while ( have_posts() ) : the_post();
-											get_template_part( 'framework/templates/post');
-										endwhile;
-									?>
-								</div>
+					if (have_posts()) {
+					?>
+						<div class="bt-list-post-grid">
 							<?php
-							autoart_paging_nav();
-						} else {
-							get_template_part( 'framework/templates/post', 'none');
-						}
+							while (have_posts()) : the_post();
+								get_template_part('framework/templates/post', 'style', array('image-size' => 'large', 'layout' => 'default'));
+							endwhile;
+							?>
+						</div>
+					<?php
+						autoart_paging_nav();
+					} else {
+						get_template_part('framework/templates/post', 'none');
+					}
 					?>
 				</div>
 				<div class="bt-sidebar-col">
 					<div class="bt-sidebar">
-						<?php if(is_active_sidebar('main-sidebar')) echo get_sidebar('main-sidebar'); ?>
+						<?php if (is_active_sidebar('main-sidebar')) echo get_sidebar('main-sidebar'); ?>
 					</div>
 				</div>
 			</div>

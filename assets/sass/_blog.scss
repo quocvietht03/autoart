@@ -148,7 +148,14 @@
     }
   }
 }
-
+.bt-list-post-grid {
+  display: grid;
+  gap: 20px;
+  @extend .__bt-post-style-default;
+  @media (min-width: $break-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .bt-pagination {
   @extend .__bt-pagination-style;
 }
@@ -639,6 +646,8 @@
 
     &--title {
       margin: 25px 0 0 0;
+      font-size: 22px;
+      line-height: 136.364%;
       a {
         display: inline-block;
       }
@@ -1200,4 +1209,7 @@
       }
     }
   }
+}
+.bt-container-search {
+  max-width: 1000px;
 }

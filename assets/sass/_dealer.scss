@@ -95,7 +95,36 @@
     }
   }
 }
-
+.bt-list-dealer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  @extend .__bt-dealer-style-default;
+  .bt-post {
+    &--avatar {
+      .bt-cover-image {
+        box-sizing: border-box;
+        padding-bottom: calc(0.66 * 100%);
+        @media (max-width: $break-sm) {
+          padding-bottom: calc(1.2 * 100%);
+        }
+      }
+    }
+    &--title {
+      font-size: 22px;
+      line-height: 136.364%;
+    }
+  }
+  @media (max-width: $break-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: $break-tl) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $break-sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .single-dealer {
   .bt-main-content-ss {
     .bt-post {
@@ -116,14 +145,14 @@
             .bt-cover-image {
               border-radius: 20px;
             }
-            @media(max-width: $break-sm){
+            @media (max-width: $break-sm) {
               margin-bottom: 30px;
             }
           }
           &--title {
             font-size: 30px;
             margin: 0 0 30px;
-            @media(max-width: $break-sm){
+            @media (max-width: $break-sm) {
               margin-bottom: 20px;
             }
           }
@@ -135,7 +164,7 @@
             margin-bottom: 30px;
             border: 1px solid #dadada;
             border-radius: 10px;
-            @media(max-width: $break-sm){
+            @media (max-width: $break-sm) {
               flex-direction: column;
             }
           }
@@ -145,7 +174,7 @@
               width: calc(33.33% - 1px);
               border-right: 1px solid #dadada;
             }
-            @media(max-width: $break-sm){
+            @media (max-width: $break-sm) {
               width: 100%;
               &:not(:last-child) {
                 width: 100%;
@@ -156,7 +185,7 @@
           }
           &--meta-item {
             padding: 18px 30px;
-            @media(max-width: $break-sm){
+            @media (max-width: $break-sm) {
               padding: 12px 15px;
             }
             .bt-meta-item {
@@ -202,7 +231,7 @@
       }
       .bt-car-by-dealer-ss {
         padding-top: 100px;
-        @media(max-width: $break-sm){
+        @media (max-width: $break-sm) {
           padding-top: 50px;
         }
         &--heading {
@@ -257,7 +286,7 @@
           .bt-post {
             @extend .__bt-post-car-default;
             width: calc(50% - 15px);
-            &--inner{
+            &--inner {
               width: 100%;
             }
           }
@@ -273,7 +302,7 @@
       }
       .bt-review-ss {
         margin-top: 105px;
-        @media(max-width: $break-sm){
+        @media (max-width: $break-sm) {
           margin-top: 50px;
         }
       }
@@ -304,11 +333,11 @@
                 .gform_description {
                   color: #ffffff;
                 }
-                @media(max-width: $break-xs){
-                  .gform_title{
+                @media (max-width: $break-xs) {
+                  .gform_title {
                     font-size: 32px;
                   }
-                  .gform_description{
+                  .gform_description {
                     font-size: 18px;
                   }
                 }
@@ -364,7 +393,7 @@
           @media (max-width: $break-lg) and (min-width: $break-md) {
             padding: 30px 20px !important;
           }
-          @media(max-width: $break-xs){
+          @media (max-width: $break-xs) {
             padding: 30px 20px !important;
           }
         }
