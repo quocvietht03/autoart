@@ -366,7 +366,7 @@ function autoart_list_meta_value($meta_key = '')
 	return $value_arr;
 }
 
-function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $field_min_value = '', $field_max_value = '')
+function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $field_min_value = '', $field_max_value = '', $field_range_step = 1, $field_number_format = false)
 {
 	if (empty($meta_key)) {
 		return;
@@ -386,7 +386,7 @@ function autoart_cars_field_slider_html($meta_key = '', $field_title = '', $fiel
 	<input type="hidden" id="<?php echo 'bt_field_min_value_' . $meta_key; ?>" name="<?php echo esc_attr($meta_key)  . '_min'; ?>" value="<?php echo esc_attr($field_min_value); ?>">
 	<input type="hidden" id="<?php echo 'bt_field_max_value_' . $meta_key; ?>" name="<?php echo esc_attr($meta_key) . '_max'; ?>" value="<?php echo esc_attr($field_max_value); ?>">
 
-	<div class="bt-form-field bt-field-type-slider <?php echo 'bt-field-' . $meta_key; ?>" data-meta-key="<?php echo esc_attr($meta_key); ?>" data-range-min="<?php echo intval($min_value); ?>" data-range-max="<?php echo intval($max_value); ?>" data-start-min="<?php echo intval($start_min_value); ?>" data-start-max="<?php echo intval($start_max_value); ?>">
+	<div class="bt-form-field bt-field-type-slider <?php echo 'bt-field-' . $meta_key; ?>" data-meta-key="<?php echo esc_attr($meta_key); ?>" data-range-min="<?php echo intval($min_value); ?>" data-range-max="<?php echo intval($max_value); ?>" data-start-min="<?php echo intval($start_min_value); ?>" data-start-max="<?php echo intval($start_max_value); ?>" data-range-step="<?php echo intval($field_range_step); ?>" " data-number-format="<?php echo intval($field_number_format); ?>">
 		<?php
 		if (!empty($field_title)) {
 			echo '<div class="bt-field-title">' . $field_title . '</div>';

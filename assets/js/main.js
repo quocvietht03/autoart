@@ -547,11 +547,13 @@
 					startMin = $(this).data('start-min'),
 					startMax = $(this).data('start-max'),
 					rangeMin = $(this).data('range-min'),
-					rangeMax = $(this).data('range-max');
+					rangeMax = $(this).data('range-max'),
+					rangeStep = $(this).data('range-step'),
+					numberFormat = $(this).data('number-format');
 
 				noUiSlider.create(slider, {
 					start: [startMin, startMax],
-					step: 1,
+					step: rangeStep,
 					connect: true,
 					range: {
 						'min': rangeMin,
@@ -560,13 +562,24 @@
 				});
 
 				slider.noUiSlider.on('update', function (values, handle) {
-					document.getElementById('bt_min_value_' + metaKey).innerHTML = parseInt(values[0]);
-					document.getElementById('bt_max_value_' + metaKey).innerHTML = parseInt(values[1]);
+					if(numberFormat == 1) {
+						document.getElementById('bt_min_value_' + metaKey).innerHTML = parseInt(values[0]).toLocaleString();
+						document.getElementById('bt_max_value_' + metaKey).innerHTML = parseInt(values[1]).toLocaleString();
+					} else {
+						document.getElementById('bt_min_value_' + metaKey).innerHTML = parseInt(values[0]);
+						document.getElementById('bt_max_value_' + metaKey).innerHTML = parseInt(values[1]);
+					}
 				});
 
 				slider.noUiSlider.on('change', function (values, handle) {
-					$('#bt_field_min_value_' + metaKey).val(parseInt(values[0]));
-					$('#bt_field_max_value_' + metaKey).val(parseInt(values[1]));
+					if(numberFormat == 1) {
+						$('#bt_field_min_value_' + metaKey).val(parseInt(values[0])).toLocaleString();
+						$('#bt_field_max_value_' + metaKey).val(parseInt(values[1])).toLocaleString();
+					} else {
+						$('#bt_field_min_value_' + metaKey).val(parseInt(values[0]));
+						$('#bt_field_max_value_' + metaKey).val(parseInt(values[1]));
+					}
+					
 					$('.bt-car-filter-form .bt-car-current-page').val('');
 					$('.bt-car-filter-form').submit();
 				});
