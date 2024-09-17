@@ -10090,14 +10090,18 @@ body {
     .bt-elwg-list-icon-text--items .item-icon-text--icon {
       color: #ffffff;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      transition: all .3s; }
       .bt-elwg-list-icon-text--items .item-icon-text--icon svg {
         width: 32px;
         height: auto; }
     .bt-elwg-list-icon-text--items .item-icon-text--heading {
       font-size: 20px;
       font-weight: 500;
-      color: #ffffff; }
+      color: #ffffff;
+      transition: all .3s; }
+    .bt-elwg-list-icon-text--items .item-icon-text a:hover .item-icon-text--icon, .bt-elwg-list-icon-text--items .item-icon-text a:hover .item-icon-text--heading {
+      color: var(--e-global-color-accent, #1FBECD); }
 @media (max-width: 991.98px) {
   .bt-elwg-list-icon-text--title {
     width: 100%;
@@ -10664,7 +10668,8 @@ body {
   color: #fff;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500; }
+  font-weight: 500;
+  cursor: pointer; }
 .elementor-element.bt-form-get-price-form .gform_wrapper .gform_footer {
   margin-top: 29px; }
   .elementor-element.bt-form-get-price-form .gform_wrapper .gform_footer input[type="submit"] {
@@ -10839,7 +10844,8 @@ body {
     .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body .select2-selection--single .select2-selection__arrow {
       width: 40px;
       height: 60px;
-      top: 0; }
+      top: 0;
+      right: -20px; }
   .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body input:not([type="checkbox"], [type="radio"]),
   .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body select,
   .elementor-element.bt-section-schedule-services > .e-con-inner > .elementor-element .gform_wrapper .gform-body textarea {

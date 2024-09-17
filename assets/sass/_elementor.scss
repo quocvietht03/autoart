@@ -1753,6 +1753,7 @@
         color: #ffffff;
         display: flex;
         align-items: center;
+        transition: all .3s;
         svg {
           width: 32px;
           height: auto;
@@ -1762,6 +1763,15 @@
         font-size: 20px;
         font-weight: 500;
         color: #ffffff;
+        transition: all .3s;
+      }
+      a:hover {
+        .item-icon-text {
+          &--icon,
+          &--heading {
+            color: $color-accent;
+          }
+        }
       }
     }
   }

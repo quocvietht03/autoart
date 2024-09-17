@@ -594,6 +594,7 @@
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 500;
+                        cursor: pointer;
                     }
                 }
             }
@@ -854,6 +855,7 @@
                                 width: 40px;
                                 height: 60px;
                                 top: 0;
+                                right: -20px;
                             }
                         }
                         input:not([type="checkbox"], [type="radio"]),

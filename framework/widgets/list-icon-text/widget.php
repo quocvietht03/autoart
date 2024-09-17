@@ -237,6 +237,17 @@ class Widget_ListIconText extends Widget_Base {
 		);
 
 		$this->add_control(
+			'lict_icon_color_hover',[
+				'label'     => esc_html__( 'Color Hover', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
+				'selectors' => [
+					'{{WRAPPER}} .item-icon-text a:hover .item-icon-text--icon' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
 			'lict_text_style',
 			[
 				'label' => __( 'Text', 'autoart' ),
@@ -251,6 +262,17 @@ class Widget_ListIconText extends Widget_Base {
 				'default'   => '',
 				'selectors' => [
 					'{{WRAPPER}} .item-icon-text--heading' => 'color: {{VALUE}};',
+				],
+			]
+		);
+		
+		$this->add_control(
+			'lict_text_color_hover',[
+				'label'     => esc_html__( 'Color Hover', 'autoart' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '',
+				'selectors' => [
+					'{{WRAPPER}} .item-icon-text a:hover .item-icon-text--heading' => 'color: {{VALUE}};',
 				],
 			]
 		);
