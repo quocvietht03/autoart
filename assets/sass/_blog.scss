@@ -13,10 +13,15 @@
   }
 }
 .bt-sidebar {
+  position: sticky;
+  top: 126px;
   font-size: 18px;
   background: #f1f1f1;
   padding: 30px;
   border-radius: 20px;
+  .admin-bar & {
+    top: 156px;
+  }
   @media (max-width: $break-lg) and (min-width: $break-md) {
     padding: 20px;
   }

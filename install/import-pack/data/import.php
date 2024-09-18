@@ -19,6 +19,16 @@ $plugin_includes = array(
     'source'   => IMPORT_REMOTE_SERVER_PLUGIN_DOWNLOAD . 'advanced-custom-fields-pro.zip',
   ),
   array(
+    'name'     => __( 'Smart Slider 3 Pro', 'autoart' ),
+    'slug'     => 'nextend-smart-slider3-pro',
+    'source'   => IMPORT_REMOTE_SERVER_PLUGIN_DOWNLOAD . 'nextend-smart-slider3-pro.zip',
+  ),
+  array(
+    'name'     => __( 'Gravity Forms', 'autoart' ),
+    'slug'     => 'gravityforms',
+    'source'   => IMPORT_REMOTE_SERVER_PLUGIN_DOWNLOAD . 'gravityforms.zip',
+  ),
+  array(
     'name'     => __( 'Newsletter', 'autoart' ),
     'slug'     => 'newsletter',
   ),
@@ -31,11 +41,11 @@ $plugin_includes = array(
 
 return apply_filters( 'autoart/import_pack/package_demo', [
     [
-        'package_name' => 'autoart-main',
-        'preview' => get_template_directory_uri() . '/screenshot.jpg',
-        'url_demo' => 'https://autoart.beplusthemes.com/',
-        'title' => __( 'AutoArt Demo', 'autoart' ),
-        'description' => __( 'AutoArt main demo.', 'autoart' ),
-        'plugins' => $plugin_includes,
+        'package_name'  => 'autoart-main',
+        'preview'       => get_template_directory_uri() . '/screenshot.jpg',
+        'url_demo'      => 'https://autoart.beplusthemes.com/',
+        'title'         => __( 'AutoArt Demo', 'autoart' ),
+        'description'   => __( 'AutoArt main demo.', 'autoart' ),
+        'plugins'       => $plugin_includes,
     ],
 ] );

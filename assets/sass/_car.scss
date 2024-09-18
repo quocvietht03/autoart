@@ -1525,7 +1525,7 @@
     }
     .bt-sidebar-wrap {
       position: sticky;
-      top: 30px;
+      top: 126px;
       display: flex;
       flex-direction: column;
       gap: 30px;
@@ -2182,7 +2182,7 @@
     }
     .bt-sidebar-wrap {
       position: sticky;
-      top: 30px;
+      top: 126px;
       display: flex;
       flex-direction: column;
       gap: 30px;
@@ -3912,5 +3912,14 @@
       padding: 3px;
       border-radius: 50px;
     }
+  }
+}
+
+.admin-bar {
+  .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap, 
+  &.single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap,
+  .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap, 
+  &.single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap {
+    top: 156px;
   }
 }

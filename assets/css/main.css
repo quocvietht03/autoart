@@ -3291,10 +3291,14 @@ body {
       padding: 75px 0; } }
 
 .bt-sidebar {
+  position: sticky;
+  top: 126px;
   font-size: 18px;
   background: #f1f1f1;
   padding: 30px;
   border-radius: 20px; }
+  .admin-bar .bt-sidebar {
+    top: 156px; }
   @media (max-width: 1199.98px) and (min-width: 991.98px) {
     .bt-sidebar {
       padding: 20px; } }
@@ -5399,7 +5403,7 @@ body {
     border-radius: 20px; }
   .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap, .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap {
     position: sticky;
-    top: 30px;
+    top: 126px;
     display: flex;
     flex-direction: column;
     gap: 30px; }
@@ -5891,7 +5895,7 @@ body {
     border-radius: 20px; }
   .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap, .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap {
     position: sticky;
-    top: 30px;
+    top: 126px;
     display: flex;
     flex-direction: column;
     gap: 30px; }
@@ -7118,6 +7122,12 @@ body {
     background: var(--e-global-color-accent, #1FBECD);
     padding: 3px;
     border-radius: 50px; }
+
+.admin-bar .__bt-single-car-style-1 .bt-post .bt-sidebar-wrap, .admin-bar .single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap, .single-car .admin-bar .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap, .admin-bar.single-car .bt-main-content-ss.bt-layout-style1 .bt-post .bt-sidebar-wrap,
+.admin-bar .__bt-single-car-style-2 .bt-post .bt-sidebar-wrap,
+.admin-bar .single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap,
+.single-car .admin-bar .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap, .admin-bar.single-car .bt-main-content-ss.bt-layout-style2 .bt-post .bt-sidebar-wrap {
+  top: 156px; }
 
 .__bt-dealer-style-default .bt-post--inner, .bt-list-dealer .bt-post--inner, .bt-elwg-dealer-loop-item--default .bt-post--inner {
   position: relative;
