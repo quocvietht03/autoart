@@ -30,7 +30,7 @@ function let_to_num( $size ) {
 }
 
 $environment = array(
-  'site_url'                  => get_option( 'siteurl' ),
+  'home_url'                  => get_option( 'siteurl' ),
   'wp_memory_limit'           => let_to_num( @ini_get( 'memory_limit' ) ),
   'php_version'               => phpversion(),
   'php_post_max_size'         => let_to_num( ini_get( 'post_max_size' ) ),
@@ -51,7 +51,7 @@ $environment = array(
       <div class="help"><?php echo esc_html__( 'The root URL of your site.', 'autoart' ); ?></div>
     </div>
     <div class="value">
-      <?php echo esc_html( $environment['site_url'] ); ?>
+      <?php echo esc_html( $environment['home_url'] ); ?>
     </div>
   </div>
 

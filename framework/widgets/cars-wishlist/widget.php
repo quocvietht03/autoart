@@ -235,9 +235,7 @@ class Widget_CarsWishlist extends Widget_Base {
 
 						<div class="bt-table--foot">
 							<div class="bt-table--row">
-								<div class="bt-table--col bt-social-share">
-									<?php echo $this->post_social_share(); ?>
-								</div>
+								<?php echo '<div class="bt-table--col bt-social-share">' . $this->post_social_share() . '</div>'; ?>
 							</div>
 						</div>
 					</div>
