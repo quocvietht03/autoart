@@ -499,11 +499,13 @@
 
     .elementor-widget-bt-site-information {
       .bt-elwg-site-infor {
+        @media (max-width: 767.98px) {
+          justify-content: center;
+        }
         &--item {
           @media (min-width: 1025px) and (max-width: 1379.98px) {
             font-size: 14px;
           }
-
           @media (max-width: 374.98px) {
             text-align: center;
           }
@@ -679,7 +681,9 @@
       @media (min-width: 1025px) and (max-width: 1379.98px) {
         column-gap: 18px !important;
       }
-
+      @media (max-width: 767.98px) {
+        justify-content: center;
+      }
       &--item {
         @media (min-width: 1200px) and (max-width: 1439px) {
           font-size: 14px !important;
@@ -723,9 +727,13 @@
         .bt-elwg-mini-wishlist {
           .bt-mini-wishlist {
             padding: 23px 0;
-            transition:
-              padding 0.3s,
-              font-size 0.3s;
+            transition: padding 0.3s, font-size 0.3s;
+            @media (max-width: 519.98px) {
+              &--content {
+                min-width: 85vw;
+                right: -65px;
+              }
+            }
           }
         }
         .bt-elwg-mini-compare {
