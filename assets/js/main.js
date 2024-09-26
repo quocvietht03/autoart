@@ -349,6 +349,79 @@
 		}
 	}
 
+	function AutoArtCarWishlistLoad() {
+		var wishlist_cookie = getCookie('carwishlistcookie'),
+			wishlist_arr = wishlist_cookie.split(','),
+			wishlist_count = wishlist_arr.length;
+
+		if ($('.elementor-widget-bt-mini-wishlist').length > 0) {
+			$('.bt-mini-wishlist--count').text(wishlist_count);
+		}
+		
+		if ($('.bt-car-wishlist-btn').length > 0) {
+			for (var i = 0; i < wishlist_count; i++) {
+				$('.bt-car-wishlist-btn[data-id="' + wishlist_arr[i]+ '"]').addClass('added');
+			}
+		}
+
+		if ($('.elementor-widget-bt-cars-wishlist').length > 0) {
+			var param_ajax = {
+				action: 'autoart_cars_wishlist',
+				carwishlistcookie: wishlist_cookie
+			};
+	
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				url: AJ_Options.ajax_url,
+				data: param_ajax,
+				context: this,
+				beforeSend: function () {
+					$('.bt-table--body').addClass('loading');
+				},
+				success: function (response) {
+					if (response.success) {
+						// console.log(response.data);
+						setTimeout(function () {
+							$('.bt-mini-wishlist--count').text(response.data['count']);
+							$('.bt-car-list').html(response.data['items']).fadeIn('slow');
+							$('.bt-table--body').removeClass('loading');
+	
+							$('.bt-car-remove-wishlist').on('click', function (e) {
+								e.preventDefault();
+	
+								$(this).addClass('deleting');
+	
+								var car_id = $(this).data('id').toString(),
+									wishlist_str = $('.bt-carwishlistcookie').val(),
+									wishlist_arr = wishlist_str.split(','),
+									index = wishlist_arr.indexOf(car_id);
+	
+								if (index > -1) {
+									wishlist_arr.splice(index, 1);
+								}
+	
+								wishlist_str = wishlist_arr.toString();
+								$('.bt-carwishlistcookie').val(wishlist_str);
+								setCookie('carwishlistcookie', wishlist_str, 7);
+								$('#bt-mini-wishlist-form').submit();
+								$('.bt-cars-wishlist-form').submit();
+	
+								$('.bt-car-wishlist-btn[data-id="' + car_id + '"]').removeClass('added');
+							});
+						}, 500);
+	
+					} else {
+						console.log('error');
+					}
+				},
+				error: function (jqXHR, textStatus, errorThrown) {
+					console.log('The following error occured: ' + textStatus, errorThrown);
+				}
+			});
+		}
+	}
+
 	/* Car compare */
 	function AutoArtCarCompare() {
 		if ($('.bt-car-compare-btn').length > 0) {
@@ -465,6 +538,79 @@
 		}
 	}
 
+	function AutoArtCarCompareLoad() {
+		var compare_cookie = getCookie('carcomparecookie'),
+			compare_arr = compare_cookie.split(','),
+			compare_count = compare_arr.length;
+
+		if ($('.elementor-widget-bt-mini-compare').length > 0) {
+			$('.bt-mini-compare--count').text(compare_count);
+		}
+		
+		if ($('.bt-car-compare-btn').length > 0) {
+			for (var i = 0; i < compare_count; i++) {
+				$('.bt-car-compare-btn[data-id="' + compare_arr[i]+ '"]').addClass('added');
+			}
+		}
+
+		if ($('.elementor-widget-bt-cars-compare').length > 0) {
+			var param_ajax = {
+				action: 'autoart_cars_compare',
+				carcomparecookie: compare_cookie
+			};
+
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				url: AJ_Options.ajax_url,
+				data: param_ajax,
+				context: this,
+				beforeSend: function () {
+					$('.bt-table').addClass('loading');
+				},
+				success: function (response) {
+					if (response.success) {
+						// console.log(response.data);
+						setTimeout(function () {
+							$('.bt-mini-compare--count').text(response.data['count']);
+							$('.bt-table--body').html(response.data['items']).fadeIn('slow');
+							$('.bt-table').removeClass('loading');
+
+							$('.bt-car-remove a').on('click', function (e) {
+								e.preventDefault();
+
+								$(this).addClass('deleting');
+
+								var car_id = $(this).data('id').toString(),
+									compare_str = $('.bt-carcomparecookie').val(),
+									compare_arr = compare_str.split(','),
+									index = compare_arr.indexOf(car_id);
+
+								if (index > -1) {
+									compare_arr.splice(index, 1);
+								}
+
+								compare_str = compare_arr.toString();
+								$('.bt-carcomparecookie').val(compare_str);
+								setCookie('carcomparecookie', compare_str, 7);
+								$('.bt-cars-compare-form').submit();
+
+								$('.bt-car-compare-btn[data-id="' + car_id + '"]').removeClass('added');
+							});
+						}, 500);
+
+					} else {
+						console.log('error');
+					}
+				},
+				error: function (jqXHR, textStatus, errorThrown) {
+					console.log('The following error occured: ' + textStatus, errorThrown);
+				}
+			});
+			
+		}
+	}
+
 	/* Cars sidebar toggle */
 	function AutoArtCarSidebarToggle() {
 		if ($('.bt-car-sidebar-toggle').length > 0) {
@@ -491,7 +637,9 @@
 			}
 		});
 
-		$('.bt-car-filter-form  .bt-field-type-search a').on('click', function () {
+		$('.bt-car-filter-form  .bt-field-type-search a').on('click', function (e) {
+			e.preventDefault();
+
 			$('.bt-car-filter-form .bt-car-current-page').val('');
 			$('.bt-car-filter-form').submit();
 		});
@@ -663,6 +811,11 @@
 				if ('' !== param_val) {
 					param_out.push(param);
 					param_ajax[param_key] = param_val.replace(/%2C/g, ',');
+
+					if(param_key == 'search_keyword') {
+						param_ajax[param_key] = param_val.replace(/%20/g, ' ');
+					}
+					
 				}
 			});
 
@@ -904,7 +1057,9 @@
 		AutoArtGallerSlider();
 		AutoArtGallerCarousel();
 		AutoArtCarWishlist();
+		AutoArtCarWishlistLoad();
 		AutoArtCarCompare();
+		AutoArtCarCompareLoad();
 		AutoArtCarSidebarToggle();
 		AutoArtCarsFilter();
 		AutoArtOrbitEffect();
