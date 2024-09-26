@@ -354,11 +354,11 @@
 			wishlist_arr = wishlist_cookie.split(','),
 			wishlist_count = wishlist_arr.length;
 
-		if ($('.elementor-widget-bt-mini-wishlist').length > 0) {
+		if (wishlist_cookie != '' && $('.elementor-widget-bt-mini-wishlist').length > 0) {
 			$('.bt-mini-wishlist--count').text(wishlist_count);
 		}
 		
-		if ($('.bt-car-wishlist-btn').length > 0) {
+		if (wishlist_cookie != '' && $('.bt-car-wishlist-btn').length > 0) {
 			for (var i = 0; i < wishlist_count; i++) {
 				$('.bt-car-wishlist-btn[data-id="' + wishlist_arr[i]+ '"]').addClass('added');
 			}
@@ -542,12 +542,12 @@
 		var compare_cookie = getCookie('carcomparecookie'),
 			compare_arr = compare_cookie.split(','),
 			compare_count = compare_arr.length;
-
-		if ($('.elementor-widget-bt-mini-compare').length > 0) {
+		
+		if (compare_cookie != '' && $('.elementor-widget-bt-mini-compare').length > 0) {
 			$('.bt-mini-compare--count').text(compare_count);
 		}
 		
-		if ($('.bt-car-compare-btn').length > 0) {
+		if (compare_cookie != '' && $('.bt-car-compare-btn').length > 0) {
 			for (var i = 0; i < compare_count; i++) {
 				$('.bt-car-compare-btn[data-id="' + compare_arr[i]+ '"]').addClass('added');
 			}
