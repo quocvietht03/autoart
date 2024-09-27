@@ -537,7 +537,7 @@ if (!function_exists('autoart_related_posts')) {
       <div class="bt-related-posts">
         <div class="bt-related-posts--heading">
           <div class="bt-sub-text"><?php echo esc_html__('Trusted Car Dealer Service', 'autoart') ?></div>
-          <h2 class="bt-main-text"><?php echo esc_html__('Related News & ', 'autoart') ?><span><?php echo esc_html__('Articals', 'autoart') ?></span></h2>
+          <h2 class="bt-main-text"><?php echo esc_html__('Related News & ', 'autoart') ?><span><?php echo esc_html__('Articles', 'autoart') ?></span></h2>
         </div>
         <div class="bt-related-posts--list bt-image-effect">
           <?php
