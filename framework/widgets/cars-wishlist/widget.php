@@ -145,6 +145,8 @@ class Widget_CarsWishlist extends Widget_Base {
 						</div>
 
 						<div class="bt-table--body">
+							<span class="bt-loading-wave"></span>
+							
 							<?php if(!empty($car_ids)) { ?>
 								<div class="bt-car-list">
 									<?php foreach ($car_ids as $key => $id) { ?>

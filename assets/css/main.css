@@ -777,6 +777,7 @@ img.alignright {
   left: 50%;
   width: 80px;
   height: 80px;
+  z-index: 99;
   transform: translate(-50%, -50%); }
   .bt-loading-wave::after, .bt-loading-wave::before {
     content: "";
@@ -796,7 +797,7 @@ img.alignright {
   .bt-tabs .bt-panel-item.bt-is-active {
     display: block; }
 
-.__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title, .bt-post--excerpt, .__bt-post-car-default .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--title, .bt-elwg-car-loop-item--default .bt-post .bt-post--title, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--title, .__bt-post-car-style-1 .bt-post--title, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--title, .__bt-post-car-style-2 .bt-post--title, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--title, .__bt-post-car-style-3 .bt-post--title, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--title, .__bt-post-car-style-4 .bt-post--title, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--title, .__bt-cars-compare-table .bt-table .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--title, .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-title {
+.__bt-max-line-ellipsis, .bt-block-recent-posts .bt-post--title, .bt-post--excerpt, .__bt-post-car-default .bt-post--title, .bt-car-layout .bt-post .bt-post--title, .single-car .bt-related-posts-ss--list .bt-post .bt-post--title, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--title, .bt-elwg-car-loop-item--default .bt-post .bt-post--title, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--title, .__bt-post-car-style-1 .bt-post--title, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--title, .__bt-post-car-style-2 .bt-post--title, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--title, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--title, .__bt-post-car-style-3 .bt-post--title, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--title, .__bt-post-car-style-4 .bt-post--title, .bt-elwg-car-loop-item--style-4 .bt-post .bt-post--title, .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--title, .bt-elwg-mini-wishlist .bt-mini-wishlist--item .bt-car-title {
   overflow: hidden;
   width: 100%;
   display: -webkit-box;
@@ -852,21 +853,21 @@ img.alignright {
     background: var(--e-global-color-secondary, #111); }
 
 .__scrollbar_style, .select2-container--default .select2-results > .select2-results__options,
-.elementor-editor-active .select2-container--default .select2-results > .select2-results__options, .__bt-post-car-default .bt-post--meta, .bt-car-layout .bt-post .bt-post--meta, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta, .__bt-post-car-style-1 .bt-post--meta, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta, .__bt-post-car-style-2 .bt-post--meta, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta, .__bt-post-car-style-3 .bt-post--meta, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta, .bt-car-sidebar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list, .__bt-cars-compare-table .bt-table, .bt-elwg-cars-compare--default .bt-table, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap, .bt-elwg-mini-wishlist .bt-mini-wishlist--list, .bt-elwg-list-icon-text--items, .elementor-element.bt-scroll-cars-grid-list > .elementor-element {
+.elementor-editor-active .select2-container--default .select2-results > .select2-results__options, .__bt-post-car-default .bt-post--meta, .bt-car-layout .bt-post .bt-post--meta, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta, .__bt-post-car-style-1 .bt-post--meta, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta, .__bt-post-car-style-2 .bt-post--meta, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta, .__bt-post-car-style-3 .bt-post--meta, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta, .bt-car-sidebar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list, .__bt-cars-compare-table .bt-table .bt-car-list, .bt-elwg-cars-compare--default .bt-table .bt-car-list, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-list, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap, .bt-elwg-mini-wishlist .bt-mini-wishlist--list, .bt-elwg-list-icon-text--items, .elementor-element.bt-scroll-cars-grid-list > .elementor-element {
   overflow-y: auto; }
   .__scrollbar_style::-webkit-scrollbar, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar,
-  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar, .bt-car-sidebar::-webkit-scrollbar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar, .__bt-cars-compare-table .bt-table::-webkit-scrollbar, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar, .bt-elwg-list-icon-text--items::-webkit-scrollbar, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar {
+  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta::-webkit-scrollbar, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar, .bt-car-sidebar::-webkit-scrollbar, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar, .__bt-cars-compare-table .bt-table .bt-car-list::-webkit-scrollbar, .bt-elwg-cars-compare--default .bt-table .bt-car-list::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-list::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar, .bt-elwg-list-icon-text--items::-webkit-scrollbar, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar {
     width: 3px;
     height: 3px;
     border-radius: 10px;
     background-color: #f1f1f1; }
   .__scrollbar_style::-webkit-scrollbar-thumb, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb,
-  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-sidebar::-webkit-scrollbar-thumb, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-thumb, .__bt-cars-compare-table .bt-table::-webkit-scrollbar-thumb, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar-thumb, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-thumb, .bt-elwg-list-icon-text--items::-webkit-scrollbar-thumb, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar-thumb {
+  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar-thumb, .bt-car-sidebar::-webkit-scrollbar-thumb, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-thumb, .__bt-cars-compare-table .bt-table .bt-car-list::-webkit-scrollbar-thumb, .bt-elwg-cars-compare--default .bt-table .bt-car-list::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-list::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar-thumb, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-thumb, .bt-elwg-list-icon-text--items::-webkit-scrollbar-thumb, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: var(--e-global-color-accent, #1FBECD);
     cursor: pointer; }
   .__scrollbar_style::-webkit-scrollbar-track, .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track,
-  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar-track, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-track, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-track, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-car-sidebar::-webkit-scrollbar-track, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-track, .__bt-cars-compare-table .bt-table::-webkit-scrollbar-track, .bt-elwg-cars-compare--default .bt-table::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar-track, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-track, .bt-elwg-list-icon-text--items::-webkit-scrollbar-track, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar-track {
+  .elementor-editor-active .select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track, .__bt-post-car-default .bt-post--meta::-webkit-scrollbar-track, .bt-car-layout .bt-post .bt-post--meta::-webkit-scrollbar-track, .single-car .bt-related-posts-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-track, .single-dealer .bt-main-content-ss .bt-post .bt-car-by-dealer-ss--list .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--default .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid-list--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-default .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-1 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-1 .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style1 .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-2 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-2 .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-grid--default .bt-car-grid-layout.bt-layout-style2 .bt-post .bt-post--meta::-webkit-scrollbar-track, .__bt-post-car-style-3 .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-car-loop-item--style-3 .bt-post .bt-post--meta::-webkit-scrollbar-track, .bt-car-sidebar::-webkit-scrollbar-track, .bt-car-sidebar .bt-form-field.bt-field-type-multi .bt-field-list::-webkit-scrollbar-track, .__bt-cars-compare-table .bt-table .bt-car-list::-webkit-scrollbar-track, .bt-elwg-cars-compare--default .bt-table .bt-car-list::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-list::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item .bt-post--meta::-webkit-scrollbar-track, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap::-webkit-scrollbar-track, .bt-elwg-mini-wishlist .bt-mini-wishlist--list::-webkit-scrollbar-track, .bt-elwg-list-icon-text--items::-webkit-scrollbar-track, .elementor-element.bt-scroll-cars-grid-list > .elementor-element::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: #f1f1f1; }
 
@@ -6564,6 +6565,9 @@ body {
   overflow: hidden;
   border: 1px solid #dadada;
   border-radius: 20px; }
+  .bt-elwg-cars-wishlist--default .bt-table .bt-loading-wave {
+    opacity: 0;
+    visibility: hidden; }
   .bt-elwg-cars-wishlist--default .bt-table--head {
     background: var(--e-global-color-accent, #1FBECD); }
     .bt-elwg-cars-wishlist--default .bt-table--head span {
@@ -6578,6 +6582,14 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 165px; }
+    .bt-elwg-cars-wishlist--default .bt-table--body.loading {
+      max-height: 90vh;
+      overflow: hidden; }
+      .bt-elwg-cars-wishlist--default .bt-table--body.loading .bt-loading-wave {
+        opacity: 1;
+        visibility: visible; }
+      .bt-elwg-cars-wishlist--default .bt-table--body.loading .bt-car-list {
+        opacity: 0; }
   .bt-elwg-cars-wishlist--default .bt-table .bt-car-list {
     width: 100%;
     transition: all 0.3s; }
@@ -6690,123 +6702,172 @@ body {
 
 .__bt-cars-compare-table .bt-table, .bt-elwg-cars-compare--default .bt-table, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table {
   position: relative;
-  min-width: 1000px;
-  background: #ffffff;
-  overflow-x: auto;
-  overflow-y: hidden;
+  font-size: 20px;
+  line-height: 150%;
+  overflow: hidden;
   border: 1px solid #dadada;
   border-radius: 20px; }
-  .__bt-cars-compare-table .bt-table--row, .bt-elwg-cars-compare--default .bt-table--row, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--row {
-    display: flex; }
-  .__bt-cars-compare-table .bt-table--col, .bt-elwg-cars-compare--default .bt-table--col, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col {
-    width: 26.67%;
-    min-width: 260px;
-    padding: 15px;
-    border-bottom: 1px solid #dadada; }
-    .__bt-cars-compare-table .bt-table--col:first-child, .bt-elwg-cars-compare--default .bt-table--col:first-child, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col:first-child {
-      width: 20%;
-      min-width: 210px;
-      background: #f1f1f1; }
-  .__bt-cars-compare-table .bt-table--foot .bt-table--col, .bt-elwg-cars-compare--default .bt-table--foot .bt-table--col, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--foot .bt-table--col {
-    border-bottom: none; }
-  .__bt-cars-compare-table .bt-table--foot .bt-social-share, .bt-elwg-cars-compare--default .bt-table--foot .bt-social-share, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--foot .bt-social-share {
-    width: 100%;
-    background: transparent; }
-  .__bt-cars-compare-table .bt-table .bt-label, .bt-elwg-cars-compare--default .bt-table .bt-label, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-label {
+  .__bt-cars-compare-table .bt-table--head, .bt-elwg-cars-compare--default .bt-table--head, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--e-global-color-primary, #222); }
-  .__bt-cars-compare-table .bt-table .bt-car-infor, .bt-elwg-cars-compare--default .bt-table .bt-car-infor, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-infor {
-    position: relative; }
-  .__bt-cars-compare-table .bt-table .bt-car-remove, .bt-elwg-cars-compare--default .bt-table .bt-car-remove, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-remove {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    line-height: 0;
-    z-index: 9; }
-    .__bt-cars-compare-table .bt-table .bt-car-remove a, .bt-elwg-cars-compare--default .bt-table .bt-car-remove a, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-remove a {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      color: var(--e-global-color-accent, #1FBECD);
-      background: #ffffff;
-      border: 1px solid #d6d6d6;
-      border-radius: 100px;
-      transition: all 0.3s; }
-      .__bt-cars-compare-table .bt-table .bt-car-remove a:hover, .bt-elwg-cars-compare--default .bt-table .bt-car-remove a:hover, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-remove a:hover {
-        color: #ffffff;
-        background: var(--e-global-color-accent, #1FBECD); }
-      .__bt-cars-compare-table .bt-table .bt-car-remove a.deleting svg, .bt-elwg-cars-compare--default .bt-table .bt-car-remove a.deleting svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-remove a.deleting svg {
-        opacity: 0; }
-        .__bt-cars-compare-table .bt-table .bt-car-remove a.deleting svg:last-child, .bt-elwg-cars-compare--default .bt-table .bt-car-remove a.deleting svg:last-child, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-remove a.deleting svg:last-child {
-          opacity: 1; }
-      .__bt-cars-compare-table .bt-table .bt-car-remove a svg, .bt-elwg-cars-compare--default .bt-table .bt-car-remove a svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-remove a svg {
-        width: 20px;
-        height: auto; }
-        .__bt-cars-compare-table .bt-table .bt-car-remove a svg:last-child, .bt-elwg-cars-compare--default .bt-table .bt-car-remove a svg:last-child, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-remove a svg:last-child {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          opacity: 0;
-          margin: -10px 0 0 -10px;
-          animation-name: effectSpin;
-          animation-duration: 1s;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear; }
-  .__bt-cars-compare-table .bt-table .bt-car-thumb, .bt-elwg-cars-compare--default .bt-table .bt-car-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-thumb {
-    margin-bottom: 20px; }
-    .__bt-cars-compare-table .bt-table .bt-car-thumb .bt-cover-image, .bt-elwg-cars-compare--default .bt-table .bt-car-thumb .bt-cover-image, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-thumb .bt-cover-image, .__bt-cars-compare-table .bt-table .bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-cars-compare-table .bt-table .bt-car-thumb .wc-cover-image, .bt-elwg-cars-compare--default .bt-table .bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-compare--default .bt-table .bt-car-thumb .wc-cover-image, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-thumb .wc-cover-image {
-      border-radius: 15px; }
-  .__bt-cars-compare-table .bt-table .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-title {
-    font-size: 22px;
-    margin-bottom: 15px; }
-  .__bt-cars-compare-table .bt-table .bt-car-price, .bt-elwg-cars-compare--default .bt-table .bt-car-price, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-price {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--e-global-color-accent, #1FBECD); }
-  .__bt-cars-compare-table .bt-table .bt-car-add-compare .bt-car-thumb svg, .bt-elwg-cars-compare--default .bt-table .bt-car-add-compare .bt-car-thumb svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-add-compare .bt-car-thumb svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 32px;
-    height: auto;
-    transform: translate(-50%, -50%); }
-  .__bt-cars-compare-table .bt-table .bt-car-add-compare .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-add-compare .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-add-compare .bt-car-title {
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
-    color: #999999; }
-  .__bt-cars-compare-table .bt-table .bt-feature-item, .bt-elwg-cars-compare--default .bt-table .bt-feature-item, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-feature-item {
+    color: var(--e-global-color-primary, #222);
+    background: #f1f1f1; }
+  .__bt-cars-compare-table .bt-table--body, .bt-elwg-cars-compare--default .bt-table--body, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--body {
     position: relative;
-    padding-left: 36px; }
-    .__bt-cars-compare-table .bt-table .bt-feature-item:not(:last-child), .bt-elwg-cars-compare--default .bt-table .bt-feature-item:not(:last-child), .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-feature-item:not(:last-child) {
-      margin-bottom: 12px; }
-    .__bt-cars-compare-table .bt-table .bt-feature-item svg, .bt-elwg-cars-compare--default .bt-table .bt-feature-item svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-feature-item svg {
+    margin-left: 20%; }
+    .__bt-cars-compare-table .bt-table--body.loading, .bt-elwg-cars-compare--default .bt-table--body.loading, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--body.loading {
+      max-height: 90vh;
+      overflow: hidden; }
+      .__bt-cars-compare-table .bt-table--body.loading .bt-loading-wave, .bt-elwg-cars-compare--default .bt-table--body.loading .bt-loading-wave, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--body.loading .bt-loading-wave {
+        opacity: 1;
+        visibility: visible; }
+      .__bt-cars-compare-table .bt-table--body.loading .bt-car-list, .bt-elwg-cars-compare--default .bt-table--body.loading .bt-car-list, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--body.loading .bt-car-list {
+        opacity: 0; }
+    .__bt-cars-compare-table .bt-table--body .bt-loading-wave, .bt-elwg-cars-compare--default .bt-table--body .bt-loading-wave, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--body .bt-loading-wave {
+      opacity: 0;
+      visibility: hidden; }
+  .__bt-cars-compare-table .bt-table--foot, .bt-elwg-cars-compare--default .bt-table--foot, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--foot {
+    position: relative;
+    margin-left: 20%;
+    border-top: 1px solid #dadada; }
+  .__bt-cars-compare-table .bt-table--col, .bt-elwg-cars-compare--default .bt-table--col, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col {
+    padding: 15px;
+    min-height: 61px; }
+    .__bt-cars-compare-table .bt-table--col:not(:last-child), .bt-elwg-cars-compare--default .bt-table--col:not(:last-child), .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col:not(:last-child) {
+      border-bottom: 1px solid #dadada; }
+    .__bt-cars-compare-table .bt-table--col:not(.bt-car-information, .bt-car-features), .bt-elwg-cars-compare--default .bt-table--col:not(.bt-car-information, .bt-car-features), .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col:not(.bt-car-information, .bt-car-features) {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    .__bt-cars-compare-table .bt-table--col.bt-car-add-compare, .bt-elwg-cars-compare--default .bt-table--col.bt-car-add-compare, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col.bt-car-add-compare, .__bt-cars-compare-table .bt-table--col.bt-car-information, .bt-elwg-cars-compare--default .bt-table--col.bt-car-information, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col.bt-car-information {
+      min-height: 391px; }
+  .__bt-cars-compare-table .bt-table .bt-car-list, .bt-elwg-cars-compare--default .bt-table .bt-car-list, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-list {
+    display: flex; }
+  .__bt-cars-compare-table .bt-table .bt-car-item, .bt-elwg-cars-compare--default .bt-table .bt-car-item, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item {
+    width: 33.33%;
+    min-width: 320px; }
+    .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-information, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-information, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-information {
+      position: relative; }
+    .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-remove, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-remove, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-remove {
       position: absolute;
-      left: 0;
-      top: 2px;
-      width: 26px;
-      height: auto;
+      top: 30px;
+      right: 30px;
+      line-height: 0;
+      z-index: 9; }
+      .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-remove a, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-remove a, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-remove a {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        color: var(--e-global-color-accent, #1FBECD);
+        background: #ffffff;
+        border: 1px solid #d6d6d6;
+        border-radius: 100px;
+        transition: all 0.3s; }
+        .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-remove a:hover, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-remove a:hover, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-remove a:hover {
+          color: #ffffff;
+          background: var(--e-global-color-accent, #1FBECD); }
+        .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-remove a.deleting svg, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-remove a.deleting svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-remove a.deleting svg {
+          opacity: 0; }
+          .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-remove a.deleting svg:last-child, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-remove a.deleting svg:last-child, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-remove a.deleting svg:last-child {
+            opacity: 1; }
+        .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-remove a svg, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-remove a svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-remove a svg {
+          width: 20px;
+          height: auto; }
+          .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-remove a svg:last-child, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-remove a svg:last-child, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-remove a svg:last-child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            margin: -10px 0 0 -10px;
+            animation-name: effectSpin;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; }
+    .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-thumb, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-thumb, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-thumb {
+      margin-bottom: 20px; }
+      .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-thumb .bt-cover-image, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-thumb .bt-cover-image, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-thumb .bt-cover-image, .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-thumb .wc-cover-image, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-thumb .wc-cover-image, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-thumb .woocommerce .woocommerce-loop-product__thumbnail .wc-cover-image, .woocommerce .woocommerce-loop-product__thumbnail .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-thumb .wc-cover-image {
+        border-radius: 15px; }
+    .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-title {
+      font-size: 22px;
+      margin-bottom: 15px; }
+    .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-price, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-price, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-price {
+      font-size: 20px;
+      font-weight: 500;
       color: var(--e-global-color-accent, #1FBECD); }
-  .__bt-cars-compare-table .bt-table .bt-post-share, .bt-elwg-cars-compare--default .bt-table .bt-post-share, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-post-share {
-    margin-top: 0; }
+    .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-add-compare .bt-car-thumb svg, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-add-compare .bt-car-thumb svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-add-compare .bt-car-thumb svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 32px;
+      height: auto;
+      transform: translate(-50%, -50%); }
+    .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-add-compare .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-add-compare .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-add-compare .bt-car-title {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+      color: #999999; }
+    .__bt-cars-compare-table .bt-table .bt-car-item .bt-feature-item, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-feature-item, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-feature-item {
+      position: relative;
+      padding-left: 36px; }
+      .__bt-cars-compare-table .bt-table .bt-car-item .bt-feature-item:not(:last-child), .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-feature-item:not(:last-child), .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-feature-item:not(:last-child) {
+        margin-bottom: 12px; }
+      .__bt-cars-compare-table .bt-table .bt-car-item .bt-feature-item svg, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-feature-item svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-feature-item svg {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 26px;
+        height: auto;
+        color: var(--e-global-color-accent, #1FBECD); }
+  @media (max-width: 991.98px) {
+    .__bt-cars-compare-table .bt-table, .bt-elwg-cars-compare--default .bt-table, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table {
+      font-size: 18px; }
+      .__bt-cars-compare-table .bt-table--head, .bt-elwg-cars-compare--default .bt-table--head, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--head {
+        width: 135px;
+        font-size: 14px; }
+      .__bt-cars-compare-table .bt-table--body, .bt-elwg-cars-compare--default .bt-table--body, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--body, .__bt-cars-compare-table .bt-table--foot, .bt-elwg-cars-compare--default .bt-table--foot, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--foot {
+        margin-left: 135px; }
+      .__bt-cars-compare-table .bt-table--col.bt-car-information, .bt-elwg-cars-compare--default .bt-table--col.bt-car-information, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col.bt-car-information, .__bt-cars-compare-table .bt-table--col.bt-car-add-compare, .bt-elwg-cars-compare--default .bt-table--col.bt-car-add-compare, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col.bt-car-add-compare {
+        min-height: 391px; }
+      .__bt-cars-compare-table .bt-table .bt-car-item, .bt-elwg-cars-compare--default .bt-table .bt-car-item, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item {
+        min-width: 280px; }
+        .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-title {
+          font-size: 20px; }
+        .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-price, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-price, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-price {
+          font-size: 18px; }
+        .__bt-cars-compare-table .bt-table .bt-car-item .bt-feature-item, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-feature-item, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-feature-item {
+          padding-left: 32px; }
+          .__bt-cars-compare-table .bt-table .bt-car-item .bt-feature-item svg, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-feature-item svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-feature-item svg {
+            width: 22px; } }
   @media (max-width: 767.98px) {
-    .__bt-cars-compare-table .bt-table--col, .bt-elwg-cars-compare--default .bt-table--col, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col {
-      min-width: 220px; }
-      .__bt-cars-compare-table .bt-table--col:first-child, .bt-elwg-cars-compare--default .bt-table--col:first-child, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col:first-child {
-        min-width: 160px; }
-    .__bt-cars-compare-table .bt-table .bt-label, .bt-elwg-cars-compare--default .bt-table .bt-label, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-label {
-      font-size: 14px; }
-    .__bt-cars-compare-table .bt-table .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-title {
-      font-size: 20px; } }
-
-.bt-elwg-cars-compare--default {
-  overflow: auto; }
+    .__bt-cars-compare-table .bt-table, .bt-elwg-cars-compare--default .bt-table, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table {
+      font-size: 16px; }
+      .__bt-cars-compare-table .bt-table--head, .bt-elwg-cars-compare--default .bt-table--head, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--head {
+        width: 115px;
+        font-size: 13px; }
+      .__bt-cars-compare-table .bt-table--body, .bt-elwg-cars-compare--default .bt-table--body, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--body, .__bt-cars-compare-table .bt-table--foot, .bt-elwg-cars-compare--default .bt-table--foot, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--foot {
+        margin-left: 115px; }
+      .__bt-cars-compare-table .bt-table--col.bt-car-information, .bt-elwg-cars-compare--default .bt-table--col.bt-car-information, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col.bt-car-information, .__bt-cars-compare-table .bt-table--col.bt-car-add-compare, .bt-elwg-cars-compare--default .bt-table--col.bt-car-add-compare, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col.bt-car-add-compare {
+        min-height: 270px; }
+      .__bt-cars-compare-table .bt-table .bt-car-item, .bt-elwg-cars-compare--default .bt-table .bt-car-item, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item {
+        min-width: 230px; }
+        .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-title, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-title, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-title {
+          font-size: 18px; }
+        .__bt-cars-compare-table .bt-table .bt-car-item .bt-car-price, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-car-price, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-car-price {
+          font-size: 16px; }
+        .__bt-cars-compare-table .bt-table .bt-car-item .bt-feature-item, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-feature-item, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-feature-item {
+          padding-left: 30px; }
+          .__bt-cars-compare-table .bt-table .bt-car-item .bt-feature-item svg, .bt-elwg-cars-compare--default .bt-table .bt-car-item .bt-feature-item svg, .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item .bt-feature-item svg {
+            width: 20px; } }
 
 .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare.bt-is-active .bt-cars-quick-compare--popup {
   opacity: 1;
@@ -6954,13 +7015,12 @@ body {
       height: 30px; }
 .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap {
   max-width: 1000px;
-  max-height: 100%;
-  overflow: auto; }
+  max-height: 100%; }
   .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table {
-    min-width: 620px;
+    background: #FFFFFF;
     border-radius: 5px; }
-    .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table--col {
-      width: 40%; }
+    .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare--wrap .bt-table .bt-car-item {
+      width: 50%; }
 @media (max-width: 767.98px) {
   .bt-elwg-cars-quick-compare--default .bt-cars-quick-compare .bt-cars--item {
     padding: 30px 16px; } }

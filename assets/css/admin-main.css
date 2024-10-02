@@ -283,6 +283,7 @@ html :where(.editor-styles-wrapper) {
   left: 50%;
   width: 80px;
   height: 80px;
+  z-index: 99;
   transform: translate(-50%, -50%); }
   .bt-loading-wave::after, .bt-loading-wave::before {
     content: "";
