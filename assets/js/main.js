@@ -1091,6 +1091,8 @@
 			}
 		});
 	}
+
+	/* Load Tab */
 	function AutoArtLoadTab() {
 		var $tabload = $('.elementor-element.bt-tab-preload');
 		var $loading = $('<div class="bt-content-load"><span class="bt-loading-wave"></span></div>');
@@ -1104,6 +1106,22 @@
 			}
 		});
 	}
+
+	/* Gravity Form Select2 */
+	function Autoart_GF_Select2() {
+		if (jQuery('select.gfield_select').length > 0) {
+			jQuery('select.gfield_select').select2();
+		}
+		var dropdownIcon = '<svg width=\"14\" height=\"8\" viewBox=\"0 0 14 8\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">' +
+						   '<path d=\"M1.23061 0.901437C0.872656 1.2594 0.872656 1.83984 1.23061 2.1978L5.71522 6.67791C6.43123 7.39328 7.59155 7.393 8.30728 6.67736L12.7901 2.1945C13.1481 1.83654 13.1481 1.2561 12.7901 0.898128C12.4321 0.540142 11.8517 0.540142 11.4937 0.898128L7.65691 4.73495C7.29895 5.093 6.71851 5.093 6.36056 4.73495L2.52696 0.901437C2.16901 0.543451 1.58867 0.543451 1.23061 0.901437Z\"/>' +
+						   '</svg>';
+		jQuery('.select2-selection__arrow').html(dropdownIcon);
+	}
+
+	jQuery(document).on('gform_post_render', function(){
+		Autoart_GF_Select2();
+	});
+
 	jQuery(document).ready(function ($) {
 		AutoArtSubmenuAuto();
 		AutoArtToggleMenuMobile();
@@ -1124,6 +1142,8 @@
 		AutoArtUnitsCustom();
 		AutoArtScrollCars();
 		AutoArtLoadTab();
+		Autoart_GF_Select2();
+		
 	});
 
 	jQuery(window).on('resize', function () {
