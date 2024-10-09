@@ -72,6 +72,9 @@
       outline: none;
       box-shadow: none;
     }
+    select.select2-hidden-accessible {
+      width: 100% !important;
+    }
     textarea {
       min-block-size: auto !important;
       height: 130px;

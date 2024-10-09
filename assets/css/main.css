@@ -2569,6 +2569,8 @@ body.admin-bar .dialog-type-lightbox.bt-menu-mobile-popup {
   border-radius: 10px;
   outline: none;
   box-shadow: none; }
+.gform_wrapper .gform-body select.select2-hidden-accessible {
+  width: 100% !important; }
 .gform_wrapper .gform-body textarea {
   min-block-size: auto !important;
   height: 130px; }
