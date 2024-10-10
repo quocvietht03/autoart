@@ -10,7 +10,7 @@
       :not(.wp-editor-container):not(.mce-tinymce):not(.mce-tinymce *)
       :not(.wp-editor-area):not(.gfield_description > *)
       :not(.gform-field-label--type-inline > :not(span))
-  ) {
+  ) path {
   margin: 0;
   padding: 0;
   border: none;
@@ -19,6 +19,7 @@
   color: inherit;
   display: revert;
   all: revert-layer;
+  fill: currentColor;
 }
 
 .gform_wrapper {

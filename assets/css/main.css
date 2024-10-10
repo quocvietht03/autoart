@@ -2520,7 +2520,7 @@ body.admin-bar .dialog-type-lightbox.bt-menu-mobile-popup {
 :not(.form_saved_message_sent > *):not(.gform_confirmation_message *)
 :not(.wp-editor-container):not(.mce-tinymce):not(.mce-tinymce *)
 :not(.wp-editor-area):not(.gfield_description > *)
-:not(.gform-field-label--type-inline > :not(span))) {
+:not(.gform-field-label--type-inline > :not(span))) path {
   margin: 0;
   padding: 0;
   border: none;
@@ -2528,7 +2528,8 @@ body.admin-bar .dialog-type-lightbox.bt-menu-mobile-popup {
   font: inherit;
   color: inherit;
   display: revert;
-  all: revert-layer; }
+  all: revert-layer;
+  fill: currentColor; }
 
 .gform_wrapper.bt-get-price-form_wrapper .gform-field-label--type-inline {
   --gf-local-color: #fff;
