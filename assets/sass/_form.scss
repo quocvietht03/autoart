@@ -1,3 +1,14 @@
+.admin-bar {
+  .select2-container--open .select2-dropdown {
+    transform: translateY(32px);
+  }
+  .gform_wrapper {
+    .select2-container--open .select2-dropdown {
+      transform: translateY(0);
+    }
+  }
+}
+
 .gform-theme--framework
   :where(
     :not(html):not(iframe):not(canvas):not(img):not(svg):not(video)

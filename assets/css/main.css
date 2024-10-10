@@ -2510,6 +2510,11 @@ body.admin-bar .dialog-type-lightbox.bt-menu-mobile-popup {
   .bt-block-subscribe-contact .bt-subscribe-contact--form {
     margin-top: 22px; }
 
+.admin-bar .select2-container--open .select2-dropdown {
+  transform: translateY(32px); }
+.admin-bar .gform_wrapper .select2-container--open .select2-dropdown {
+  transform: translateY(0); }
+
 .gform-theme--framework
 :where(:not(html):not(iframe):not(canvas):not(img):not(svg):not(video)
 :not(svg *):not(symbol *):not(.gform-theme__no-reset--el)

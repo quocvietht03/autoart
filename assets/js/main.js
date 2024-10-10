@@ -707,7 +707,10 @@
 		});
 
 		// Sort order
-		$('.bt-car-sort-block select').select2();
+		$('.bt-car-sort-block select').select2({
+			dropdownParent: $('.bt-sort-field'),
+			minimumResultsForSearch: -1
+		});
 		$('.bt-car-sort-block select').on('change', function () {
 			var sort_val = $(this).val();
 
@@ -798,7 +801,10 @@
 
 		// Filter single tax
 		if ($('.bt-field-type-select').length > 0) {
-			$('.bt-field-type-select select').select2();
+			$('.bt-field-type-select select').select2({
+				dropdownParent: $('.bt-field-type-select'),
+				minimumResultsForSearch: -1
+			});
 
 			$('.bt-field-type-select select').on('change', function () {
 				$('.bt-car-filter-form .bt-car-current-page').val('');
@@ -1111,7 +1117,7 @@
 	function Autoart_GF_Select2() {
 		if (jQuery('select.gfield_select').length > 0) {
 			jQuery('select.gfield_select').select2({
-				dropdownParent: $(".gform_wrapper"),
+				dropdownParent: $('.gform_wrapper'),
 				minimumResultsForSearch: -1
 			 });
 		}
