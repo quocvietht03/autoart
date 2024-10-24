@@ -1131,6 +1131,16 @@
 		Autoart_GF_Select2();
 	});
 
+	/* Copyright Current Year */
+	function AutoArtCopyrightCurrentYear() {
+		var searchTerm = '{Year}',
+			replaceWith = new Date().getFullYear();
+		
+		$('.bt-elwg-site-copyright').each( function() {
+			this.innerHTML = this.innerHTML.replace(searchTerm, replaceWith);
+		});
+	}
+
 	jQuery(document).ready(function ($) {
 		AutoArtSubmenuAuto();
 		AutoArtToggleMenuMobile();
@@ -1152,7 +1162,8 @@
 		AutoArtScrollCars();
 		AutoArtLoadTab();
 		Autoart_GF_Select2();
-		
+		AutoArtCopyrightCurrentYear();
+
 	});
 
 	jQuery(window).on('resize', function () {
