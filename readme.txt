@@ -21,4 +21,10 @@ Text Domain: autoart
 = 1.0 =
 * Released: Feb 17, 2024
 
+= 1.2 =
+* Released: Dec 20, 2024
+- update new version wordpress and plguins
+- Update Woocommerce outdate templates
+- Update small issue
+
 ====End ====
