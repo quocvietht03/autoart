@@ -279,33 +279,6 @@ function autoart_car_create_pages_support()
 }
 add_action('init', 'autoart_car_create_pages_support', 1);
 
-/* Cars wishlist */
-function autoart_is_wishlist($post_id)
-{
-	if (isset($_COOKIE['carwishlistcookie']) && $_COOKIE['carwishlistcookie'] != '') {
-		$car_wishlist = explode(',', $_COOKIE['carwishlistcookie']);
-
-		if (in_array((string)$post_id, $car_wishlist)) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-}
-
-/* Cars compare */
-function autoart_is_compare($post_id)
-{
-	if (isset($_COOKIE['carcomparecookie']) && $_COOKIE['carcomparecookie'] != '') {
-		$car_compare = explode(',', $_COOKIE['carcomparecookie']);
-
-		if (in_array((string)$post_id, $car_compare)) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-}
 
 /* Cars filter */
 function autoart_end_meta_value($end = 'max', $meta_key = '')
@@ -1197,8 +1170,8 @@ add_action('wp_ajax_nopriv_autoart_cars_grid_list_filter', 'autoart_cars_grid_li
 
 function autoart_cars_wishlist()
 {
-	if (isset($_POST['carwishlistcookie']) && !empty($_POST['carwishlistcookie'])) {
-		$car_ids = explode(',', $_COOKIE['carwishlistcookie']);
+	if (isset($_POST['carwishlistlocal']) && !empty($_POST['carwishlistlocal'])) {
+		$car_ids = explode(',', $_POST['carwishlistlocal']);
 		$output['count'] = count($car_ids);
 
 		ob_start();
@@ -1293,8 +1266,8 @@ add_action('wp_ajax_nopriv_autoart_cars_wishlist', 'autoart_cars_wishlist');
 
 function autoart_mini_wishlist()
 {
-	if (isset($_POST['carwishlistcookie']) && !empty($_POST['carwishlistcookie'])) {
-		$car_ids = explode(',', $_COOKIE['carwishlistcookie']);
+	if (isset($_POST['carwishlistlocal']) && !empty($_POST['carwishlistlocal'])) {
+		$car_ids = explode(',', $_POST['carwishlistlocal']);
 		$output['count'] = count($car_ids);
 
 
@@ -1361,8 +1334,8 @@ function autoart_cars_compare()
 	$car_ids = array();
 
 	$ex_items = count($car_ids) < 3 ? 3 - count($car_ids) : 0;
-	if (isset($_POST['carcomparecookie']) && !empty($_POST['carcomparecookie'])) {
-		$car_ids = explode(',', $_COOKIE['carcomparecookie']);
+	if (isset($_POST['carcomparelocal']) && !empty($_POST['carcomparelocal'])) {
+		$car_ids = explode(',', $_POST['carcomparelocal']);
 		$output['count'] = count($car_ids);
 	}
 	$ex_items = count($car_ids) < 3 ? 3 - count($car_ids) : 0;

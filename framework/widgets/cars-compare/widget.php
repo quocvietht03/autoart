@@ -110,17 +110,12 @@ class Widget_CarsCompare extends Widget_Base {
 		$carcompare = '';
 		$car_ids = array();
 
-		if(isset($_COOKIE['carcomparecookie']) && !empty($_COOKIE['carcomparecookie'])) {
-			$carcompare = $_COOKIE['carcomparecookie'];
-			$car_ids = explode(',', $carcompare);
-		}
-
 		$ex_items = count($car_ids) < 3 ? 3 - count($car_ids) : 0;
 
     ?>
 		<div class="bt-elwg-cars-compare--default">
 			<form class="bt-cars-compare-form" action="" method="post">
-				<input type="hidden" class="bt-carcomparecookie" name="carcomparecookie" value="<?php echo esc_attr($carcompare); ?>">
+				<input type="hidden" class="bt-carcomparelocal" name="carcomparelocal" value="">
 
 				<div class="bt-table">
 					<div class="bt-table--head">

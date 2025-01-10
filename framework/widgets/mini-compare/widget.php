@@ -61,11 +61,6 @@ class Widget_MiniCompare extends Widget_Base {
 		$carcompare = '';
 		$car_ids = array();
 
-		if(isset($_COOKIE['carcomparecookie']) && !empty($_COOKIE['carcomparecookie'])) {
-			$carcompare = $_COOKIE['carcomparecookie'];
-			$car_ids = explode(',', $carcompare);
-		}
-
 		?>
 		<div class="bt-elwg-mini-compare">
 			<div class="bt-mini-compare">

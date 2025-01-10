@@ -123,31 +123,6 @@
 		}
 	}
 
-	/* Set cookie */
-	function setCookie(cname, cvalue, exdays) {
-		const d = new Date();
-		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-		let expires = "expires=" + d.toUTCString();
-		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-	}
-
-	/* Get cookie */
-	function getCookie(cname) {
-		let name = cname + "=";
-		let decodedCookie = decodeURIComponent(document.cookie);
-		let ca = decodedCookie.split(';');
-		for (let i = 0; i < ca.length; i++) {
-			let c = ca[i];
-			while (c.charAt(0) == ' ') {
-				c = c.substring(1);
-			}
-			if (c.indexOf(name) == 0) {
-				return c.substring(name.length, c.length);
-			}
-		}
-		return "";
-	}
-
 	/* Car wishlist */
 	function AutoArtCarWishlist() {
 		if ($('.bt-car-wishlist-btn').length > 0) {
@@ -155,21 +130,23 @@
 				e.preventDefault();
 
 				var post_id = $(this).data('id').toString(),
-					wishlist_cookie = getCookie('carwishlistcookie');
-
-				if (wishlist_cookie == '') {
-					setCookie('carwishlistcookie', post_id, 7);
+					wishlist_local = window.localStorage.getItem('carwishlistlocal');
+				if (!wishlist_local) {
+					window.localStorage.setItem('carwishlistlocal', post_id);
+					wishlist_local = window.localStorage.getItem('carwishlistlocal');
 					$(this).addClass('added');
-					$('.bt-carwishlistcookie').val(post_id);
+					$('.bt-carwishlistlocal').val(post_id);
 				} else {
-					var wishlist_arr = wishlist_cookie.split(',');
+					var wishlist_arr = wishlist_local.split(',');
 
 					if (wishlist_arr.includes(post_id)) {
 						window.location.href = '/cars-wishlist/';
 					} else {
-						setCookie('carwishlistcookie', wishlist_cookie + ',' + post_id, 7);
+						window.localStorage.setItem('carwishlistlocal', wishlist_local + ',' + post_id);
+						wishlist_local = window.localStorage.getItem('carwishlistlocal');
 						$(this).addClass('added');
-						$('.bt-carwishlistcookie').val(wishlist_cookie + ',' + post_id);
+						console.log
+						$('.bt-carwishlistlocal').val(wishlist_local);
 					}
 				}
 
@@ -185,7 +162,7 @@
 				$(this).addClass('deleting');
 
 				var car_id = $(this).data('id').toString(),
-					wishlist_str = $('.bt-carwishlistcookie').val(),
+					wishlist_str = $('.bt-carwishlistlocal').val(),
 					wishlist_arr = wishlist_str.split(','),
 					index = wishlist_arr.indexOf(car_id);
 
@@ -194,8 +171,8 @@
 				}
 
 				wishlist_str = wishlist_arr.toString();
-				$('.bt-carwishlistcookie').val(wishlist_str);
-				setCookie('carwishlistcookie', wishlist_str, 7);
+				$('.bt-carwishlistlocal').val(wishlist_str);
+				window.localStorage.setItem('carwishlistlocal', wishlist_str);
 				$('#bt-mini-wishlist-form').submit();
 				$('.bt-cars-wishlist-form').submit();
 
@@ -206,7 +183,7 @@
 			$('.bt-cars-wishlist-form').submit(function () {
 				var param_ajax = {
 					action: 'autoart_cars_wishlist',
-					carwishlistcookie: $('.bt-carwishlistcookie').val()
+					carwishlistlocal: $('.bt-carwishlistlocal').val()
 				};
 
 				$.ajax({
@@ -232,7 +209,7 @@
 									$(this).addClass('deleting');
 
 									var car_id = $(this).data('id').toString(),
-										wishlist_str = $('.bt-carwishlistcookie').val(),
+										wishlist_str = $('.bt-carwishlistlocal').val(),
 										wishlist_arr = wishlist_str.split(','),
 										index = wishlist_arr.indexOf(car_id);
 
@@ -241,8 +218,8 @@
 									}
 
 									wishlist_str = wishlist_arr.toString();
-									$('.bt-carwishlistcookie').val(wishlist_str);
-									setCookie('carwishlistcookie', wishlist_str, 7);
+									$('.bt-carwishlistlocal').val(wishlist_str);
+									window.localStorage.setItem('carwishlistlocal', wishlist_str);
 									$('#bt-mini-wishlist-form').submit();
 									$('.bt-cars-wishlist-form').submit();
 
@@ -270,7 +247,7 @@
 				$(this).addClass('deleting');
 
 				var car_id = $(this).data('id').toString(),
-					wishlist_str = $('.bt-carwishlistcookie').val(),
+					wishlist_str = $('.bt-carwishlistlocal').val(),
 					wishlist_arr = wishlist_str.split(','),
 					index = wishlist_arr.indexOf(car_id);
 
@@ -279,8 +256,8 @@
 				}
 
 				wishlist_str = wishlist_arr.toString();
-				$('.bt-carwishlistcookie').val(wishlist_str);
-				setCookie('carwishlistcookie', wishlist_str, 7);
+				$('.bt-carwishlistlocal').val(wishlist_str);
+				window.localStorage.setItem('carwishlistlocal', wishlist_str);
 				$('#bt-mini-wishlist-form').submit();
 				$('.bt-cars-wishlist-form').submit();
 
@@ -291,7 +268,7 @@
 			$('#bt-mini-wishlist-form').submit(function () {
 				var param_ajax = {
 					action: 'autoart_mini_wishlist',
-					carwishlistcookie: $('.bt-carwishlistcookie').val()
+					carwishlistlocal: $('.bt-carwishlistlocal').val()
 				};
 
 				$.ajax({
@@ -317,7 +294,7 @@
 									$(this).addClass('deleting');
 
 									var car_id = $(this).data('id').toString(),
-										wishlist_str = $('.bt-carwishlistcookie').val(),
+										wishlist_str = $('.bt-carwishlistlocal').val(),
 										wishlist_arr = wishlist_str.split(','),
 										index = wishlist_arr.indexOf(car_id);
 
@@ -326,8 +303,8 @@
 									}
 
 									wishlist_str = wishlist_arr.toString();
-									$('.bt-carwishlistcookie').val(wishlist_str);
-									setCookie('carwishlistcookie', wishlist_str, 7);
+									$('.bt-carwishlistlocal').val(wishlist_str);
+									window.localStorage.setItem('carwishlistlocal', wishlist_str);
 									$('#bt-mini-wishlist-form').submit();
 									$('.bt-cars-wishlist-form').submit();
 
@@ -350,29 +327,23 @@
 	}
 
 	function AutoArtCarWishlistLoad() {
-		var wishlist_cookie = getCookie('carwishlistcookie'),
-			wishlist_arr = wishlist_cookie.split(','),
+		var wishlist_local = window.localStorage.getItem('carwishlistlocal'),
+			wishlist_arr = wishlist_local.split(','),
 			wishlist_count = wishlist_arr.length;
 
-		if (wishlist_cookie != '' && $('.elementor-widget-bt-mini-wishlist').length > 0) {
+		if (wishlist_local && $('.elementor-widget-bt-mini-wishlist').length > 0) {
 			$('.bt-mini-wishlist--count').text(wishlist_count);
-			$('.bt-carwishlistcookie').val(wishlist_cookie);
-		}
-		
-		if (wishlist_cookie != '' && $('.bt-car-wishlist-btn').length > 0) {
-			for (var i = 0; i < wishlist_count; i++) {
-				$('.bt-car-wishlist-btn[data-id="' + wishlist_arr[i]+ '"]').addClass('added');
-			}
+			$('.bt-carwishlistlocal').val(wishlist_local);
 		}
 
 		if ($('.elementor-widget-bt-cars-wishlist').length > 0) {
-			$('.bt-carwishlistcookie').val(wishlist_cookie);
-			
+			$('.bt-carwishlistlocal').val(wishlist_local);
+
 			var param_ajax = {
 				action: 'autoart_cars_wishlist',
-				carwishlistcookie: wishlist_cookie
+				carwishlistlocal: wishlist_local
 			};
-	
+
 			$.ajax({
 				type: 'POST',
 				dataType: 'json',
@@ -389,31 +360,31 @@
 							$('.bt-mini-wishlist--count').text(response.data['count']);
 							$('.bt-car-list').html(response.data['items']).fadeIn('slow');
 							$('.bt-table--body').removeClass('loading');
-	
+
 							$('.bt-car-remove-wishlist').on('click', function (e) {
 								e.preventDefault();
-	
+
 								$(this).addClass('deleting');
-	
+
 								var car_id = $(this).data('id').toString(),
-									wishlist_str = $('.bt-carwishlistcookie').val(),
+									wishlist_str = $('.bt-carwishlistlocal').val(),
 									wishlist_arr = wishlist_str.split(','),
 									index = wishlist_arr.indexOf(car_id);
-	
+
 								if (index > -1) {
 									wishlist_arr.splice(index, 1);
 								}
-	
+
 								wishlist_str = wishlist_arr.toString();
-								$('.bt-carwishlistcookie').val(wishlist_str);
-								setCookie('carwishlistcookie', wishlist_str, 7);
+								$('.bt-carwishlistlocal').val(wishlist_str);
+								window.localStorage.setItem('carwishlistlocal', wishlist_str);
 								$('#bt-mini-wishlist-form').submit();
 								$('.bt-cars-wishlist-form').submit();
-	
+
 								$('.bt-car-wishlist-btn[data-id="' + car_id + '"]').removeClass('added');
 							});
 						}, 1000);
-	
+
 					} else {
 						console.log('error');
 					}
@@ -427,7 +398,7 @@
 		if ($('.elementor-widget-bt-mini-wishlist').length > 0) {
 			var param_ajax = {
 				action: 'autoart_mini_wishlist',
-				carwishlistcookie: wishlist_cookie
+				carwishlistlocal: wishlist_local
 			};
 
 			$.ajax({
@@ -453,7 +424,7 @@
 								$(this).addClass('deleting');
 
 								var car_id = $(this).data('id').toString(),
-									wishlist_str = $('.bt-carwishlistcookie').val(),
+									wishlist_str = $('.bt-carwishlistlocal').val(),
 									wishlist_arr = wishlist_str.split(','),
 									index = wishlist_arr.indexOf(car_id);
 
@@ -462,8 +433,8 @@
 								}
 
 								wishlist_str = wishlist_arr.toString();
-								$('.bt-carwishlistcookie').val(wishlist_str);
-								setCookie('carwishlistcookie', wishlist_str, 7);
+								$('.bt-carwishlistlocal').val(wishlist_str);
+								window.localStorage.setItem('carwishlistlocal', wishlist_str);
 								$('#bt-mini-wishlist-form').submit();
 								$('.bt-cars-wishlist-form').submit();
 
@@ -489,20 +460,22 @@
 				e.preventDefault();
 
 				var post_id = $(this).data('id').toString(),
-					compare_cookie = getCookie('carcomparecookie'),
+					compare_local = window.localStorage.getItem('carcomparelocal'),
 					count = 0;
 
-				if (compare_cookie == '') {
-					setCookie('carcomparecookie', post_id, 7);
+				if (!compare_local) {
+					window.localStorage.setItem('carcomparelocal', post_id);
+					compare_local = window.localStorage.getItem('carcomparelocal');
 					$(this).addClass('added');
 					count = 1;
 				} else {
-					var compare_arr = compare_cookie.split(',');
+					var compare_arr = compare_local.split(',');
 
 					if (compare_arr.includes(post_id)) {
 						window.location.href = '/cars-compare/';
 					} else {
-						setCookie('carcomparecookie', compare_cookie + ',' + post_id, 7);
+						window.localStorage.setItem('carcomparelocal', compare_local + ',' + post_id);
+						compare_local = window.localStorage.getItem('carcomparelocal');
 						$(this).addClass('added');
 
 						count = compare_arr.length + 1;
@@ -521,7 +494,7 @@
 				$(this).addClass('deleting');
 
 				var car_id = $(this).data('id').toString(),
-					compare_str = $('.bt-carcomparecookie').val(),
+					compare_str = $('.bt-carcomparelocal').val(),
 					compare_arr = compare_str.split(','),
 					index = compare_arr.indexOf(car_id);
 
@@ -530,8 +503,8 @@
 				}
 
 				compare_str = compare_arr.toString();
-				$('.bt-carcomparecookie').val(compare_str);
-				setCookie('carcomparecookie', compare_str, 7);
+				$('.bt-carcomparelocal').val(compare_str);
+				window.localStorage.setItem('carcomparelocal', compare_str);
 				$('.bt-cars-compare-form').submit();
 
 				$('.bt-car-compare-btn[data-id="' + car_id + '"]').removeClass('added');
@@ -541,7 +514,7 @@
 			$('.bt-cars-compare-form').submit(function () {
 				var param_ajax = {
 					action: 'autoart_cars_compare',
-					carcomparecookie: $('.bt-carcomparecookie').val()
+					carcomparelocal: $('.bt-carcomparelocal').val()
 				};
 
 				$.ajax({
@@ -567,7 +540,7 @@
 									$(this).addClass('deleting');
 
 									var car_id = $(this).data('id').toString(),
-										compare_str = $('.bt-carcomparecookie').val(),
+										compare_str = $('.bt-carcomparelocal').val(),
 										compare_arr = compare_str.split(','),
 										index = compare_arr.indexOf(car_id);
 
@@ -576,8 +549,8 @@
 									}
 
 									compare_str = compare_arr.toString();
-									$('.bt-carcomparecookie').val(compare_str);
-									setCookie('carcomparecookie', compare_str, 7);
+									$('.bt-carcomparelocal').val(compare_str);
+									window.localStorage.setItem('carcomparelocal', compare_str);
 									$('.bt-cars-compare-form').submit();
 
 									$('.bt-car-compare-btn[data-id="' + car_id + '"]').removeClass('added');
@@ -599,26 +572,20 @@
 	}
 
 	function AutoArtCarCompareLoad() {
-		var compare_cookie = getCookie('carcomparecookie'),
-			compare_arr = compare_cookie.split(','),
+		var compare_local = window.localStorage.getItem('carcomparelocal'),
+			compare_arr = compare_local.split(','),
 			compare_count = compare_arr.length;
-		
-		if (compare_cookie != '' && $('.elementor-widget-bt-mini-compare').length > 0) {
+
+		if (compare_local && $('.elementor-widget-bt-mini-compare').length > 0) {
 			$('.bt-mini-compare--count').text(compare_count);
-		}
-		
-		if (compare_cookie != '' && $('.bt-car-compare-btn').length > 0) {
-			for (var i = 0; i < compare_count; i++) {
-				$('.bt-car-compare-btn[data-id="' + compare_arr[i]+ '"]').addClass('added');
-			}
 		}
 
 		if ($('.elementor-widget-bt-cars-compare').length > 0) {
-			$('.bt-carcomparecookie').val(compare_cookie);
+			$('.bt-carcomparelocal').val(compare_local);
 
 			var param_ajax = {
 				action: 'autoart_cars_compare',
-				carcomparecookie: compare_cookie
+				carcomparelocal: compare_local
 			};
 
 			$.ajax({
@@ -644,7 +611,7 @@
 								$(this).addClass('deleting');
 
 								var car_id = $(this).data('id').toString(),
-									compare_str = $('.bt-carcomparecookie').val(),
+									compare_str = $('.bt-carcomparelocal').val(),
 									compare_arr = compare_str.split(','),
 									index = compare_arr.indexOf(car_id);
 
@@ -653,8 +620,8 @@
 								}
 
 								compare_str = compare_arr.toString();
-								$('.bt-carcomparecookie').val(compare_str);
-								setCookie('carcomparecookie', compare_str, 7);
+								$('.bt-carcomparelocal').val(compare_str);
+								window.localStorage.setItem('carcomparelocal', compare_str);
 								$('.bt-cars-compare-form').submit();
 
 								$('.bt-car-compare-btn[data-id="' + car_id + '"]').removeClass('added');
@@ -669,10 +636,32 @@
 					console.log('The following error occured: ' + textStatus, errorThrown);
 				}
 			});
-			
+
 		}
 	}
+	function AutoArtCarButtonStatus() {
+		var productCompare = localStorage.getItem('carcomparelocal');
+		var productCompareArray = productCompare ? productCompare.split(',') : [];
+		var productWishlist = localStorage.getItem('carwishlistlocal');
+		var productWishlistArray = productWishlist ? productWishlist.split(',') : [];
 
+		$('.bt-car-compare-btn').each(function () {
+			var productId = $(this).data('id');
+			if (productCompareArray.includes(productId.toString())) {
+				$(this).addClass('added');
+			} else {
+				$(this).removeClass('added');
+			}
+		});
+		$('.bt-car-wishlist-btn').each(function () {
+			var productId = $(this).data('id');
+			if (productWishlistArray.includes(productId.toString())) {
+				$(this).addClass('added');
+			} else {
+				$(this).removeClass('added');
+			}
+		});
+	}
 	/* Cars sidebar toggle */
 	function AutoArtCarSidebarToggle() {
 		if ($('.bt-car-sidebar-toggle').length > 0) {
@@ -775,7 +764,7 @@
 				});
 
 				slider.noUiSlider.on('update', function (values, handle) {
-					if(numberFormat == 1) {
+					if (numberFormat == 1) {
 						document.getElementById('bt_min_value_' + metaKey).innerHTML = parseInt(values[0]).toLocaleString();
 						document.getElementById('bt_max_value_' + metaKey).innerHTML = parseInt(values[1]).toLocaleString();
 					} else {
@@ -785,14 +774,14 @@
 				});
 
 				slider.noUiSlider.on('change', function (values, handle) {
-					if(numberFormat == 1) {
+					if (numberFormat == 1) {
 						$('#bt_field_min_value_' + metaKey).val(parseInt(values[0])).toLocaleString();
 						$('#bt_field_max_value_' + metaKey).val(parseInt(values[1])).toLocaleString();
 					} else {
 						$('#bt_field_min_value_' + metaKey).val(parseInt(values[0]));
 						$('#bt_field_max_value_' + metaKey).val(parseInt(values[1]));
 					}
-					
+
 					$('.bt-car-filter-form .bt-car-current-page').val('');
 					$('.bt-car-filter-form').submit();
 				});
@@ -880,10 +869,10 @@
 					param_out.push(param);
 					param_ajax[param_key] = param_val.replace(/%2C/g, ',');
 
-					if(param_key == 'search_keyword') {
+					if (param_key == 'search_keyword') {
 						param_ajax[param_key] = param_val.replace(/%20/g, ' ');
 					}
-					
+
 				}
 			});
 
@@ -930,6 +919,7 @@
 							// Wishlist & Compare
 							AutoArtCarWishlist();
 							AutoArtCarCompare();
+							AutoArtCarButtonStatus();
 						}, 1000);
 
 						// View type
@@ -965,6 +955,7 @@
 
 							$('.bt-car-filter-form').submit();
 						});
+						
 					} else {
 						console.log('error');
 					}
@@ -1052,15 +1043,15 @@
 		}
 
 		var dropdownIcon = '<svg width="14" height="8" viewBox="0 0 14 8" fill="currentColor" xmlns="http://www.w3.org/2000/svg">' +
-				'<path d="M1.23061 0.901437C0.872656 1.2594 0.872656 1.83984 1.23061 2.1978L5.71522 6.67791C6.43123 7.39328 7.59155 7.393 8.30728 6.67736L12.7901 2.1945C13.1481 1.83654 13.1481 1.2561 12.7901 0.898128C12.4321 0.540142 11.8517 0.540142 11.4937 0.898128L7.65691 4.73495C7.29895 5.093 6.71851 5.093 6.36056 4.73495L2.52696 0.901437C2.16901 0.543451 1.58867 0.543451 1.23061 0.901437Z"/>' +
+			'<path d="M1.23061 0.901437C0.872656 1.2594 0.872656 1.83984 1.23061 2.1978L5.71522 6.67791C6.43123 7.39328 7.59155 7.393 8.30728 6.67736L12.7901 2.1945C13.1481 1.83654 13.1481 1.2561 12.7901 0.898128C12.4321 0.540142 11.8517 0.540142 11.4937 0.898128L7.65691 4.73495C7.29895 5.093 6.71851 5.093 6.36056 4.73495L2.52696 0.901437C2.16901 0.543451 1.58867 0.543451 1.23061 0.901437Z"/>' +
 			'</svg>',
 			quoteIcon = '<span class="bt-quote-icon"><svg width="38" height="38" viewBox="0 0 38 38" fill="currentColor" xmlns="http://www.w3.org/2000/svg">' +
 				'<path d="M29.1329 33.0577C34.0301 33.0577 38 29.0867 38 24.1879C38 19.2907 34.0301 15.3197 29.1329 15.3197C29.1329 15.3197 29.1758 12.025 31.8525 7.28298C32.1498 6.33283 31.6198 5.321 30.669 5.02539C29.9945 4.8132 29.2846 5.01945 28.8263 5.49957C22.6717 12.2312 20.2625 20.1539 20.2625 24.1879C20.2625 29.0867 24.2323 33.0577 29.1329 33.0577Z"/>' +
 				'<path d="M8.87122 33.0577C13.7684 33.0577 17.7383 29.0867 17.7383 24.1879C17.7383 19.2907 13.7684 15.3197 8.87122 15.3197C8.87122 15.3197 8.91412 12.025 11.5907 7.28298C11.8881 6.33283 11.358 5.321 10.4073 5.02539C9.73275 4.8132 9.02292 5.01945 8.56462 5.49957C2.40996 12.2312 0.000741959 20.1539 0.000741959 24.1879C0.000741959 29.0867 3.97063 33.0577 8.87122 33.0577Z"/>' +
-			'</svg></span>',
+				'</svg></span>',
 			ulIcon = '<span class="bt-ul-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">' +
 				'<path fill-rule="evenodd" clip-rule="evenodd" d="M14.8948 0.536215C14.3234 0.190003 13.6681 0.00695801 13 0.00695801C12.3319 0.00695801 11.6766 0.190003 11.1053 0.536215L2.574 5.70696C2.03639 6.03272 1.59185 6.49158 1.28329 7.03924C0.974733 7.5869 0.812585 8.20486 0.8125 8.83346V17.1665C0.812585 17.7951 0.974733 18.413 1.28329 18.9607C1.59185 19.5084 2.03639 19.9672 2.574 20.293L11.1053 25.4637C11.6766 25.8099 12.3319 25.993 13 25.993C13.6681 25.993 14.3234 25.8099 14.8948 25.4637L23.426 20.293C23.9636 19.9672 24.4082 19.5084 24.7167 18.9607C25.0253 18.413 25.1874 17.7951 25.1875 17.1665V8.83346C25.1874 8.20486 25.0253 7.5869 24.7167 7.03924C24.4082 6.49158 23.9636 6.03272 23.426 5.70696L14.8948 0.536215ZM16.6075 9.29496C16.7191 9.17522 16.8536 9.07918 17.0031 9.01257C17.1526 8.94596 17.314 8.91014 17.4777 8.90725C17.6413 8.90437 17.8038 8.93447 17.9556 8.99577C18.1074 9.05706 18.2452 9.1483 18.3609 9.26403C18.4767 9.37976 18.5679 9.51761 18.6292 9.66937C18.6905 9.82112 18.7206 9.98367 18.7177 10.1473C18.7148 10.311 18.679 10.4723 18.6124 10.6218C18.5458 10.7713 18.4497 10.9059 18.33 11.0175L11.83 17.5175C11.6015 17.7457 11.2917 17.8739 10.9688 17.8739C10.6458 17.8739 10.336 17.7457 10.1075 17.5175L6.8575 14.2675C6.64222 14.0364 6.52502 13.7309 6.53059 13.4151C6.53616 13.0994 6.66407 12.7981 6.88736 12.5748C7.11066 12.3515 7.41191 12.2236 7.72765 12.2181C8.04339 12.2125 8.34897 12.3297 8.58 12.545L10.9688 14.9337L16.6075 9.29496Z"/>' +
-			'</svg></span>';
+				'</svg></span>';
 
 		if ($('select.select2-hidden-accessible').length > 0) {
 			$('.select2-selection__arrow').html(dropdownIcon);
@@ -1068,7 +1059,7 @@
 
 		if ($('.bt-post--content').length > 0) {
 			$('.bt-post--content blockquote').append(quoteIcon);
-			
+
 			$('.bt-post--content ul.wp-block-list > li').append(ulIcon);
 		}
 
@@ -1119,15 +1110,15 @@
 			jQuery('select.gfield_select').select2({
 				dropdownParent: $('.gform_wrapper'),
 				minimumResultsForSearch: -1
-			 });
+			});
 		}
 		var dropdownIcon = '<svg width=\"14\" height=\"8\" viewBox=\"0 0 14 8\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">' +
-						   '<path d=\"M1.23061 0.901437C0.872656 1.2594 0.872656 1.83984 1.23061 2.1978L5.71522 6.67791C6.43123 7.39328 7.59155 7.393 8.30728 6.67736L12.7901 2.1945C13.1481 1.83654 13.1481 1.2561 12.7901 0.898128C12.4321 0.540142 11.8517 0.540142 11.4937 0.898128L7.65691 4.73495C7.29895 5.093 6.71851 5.093 6.36056 4.73495L2.52696 0.901437C2.16901 0.543451 1.58867 0.543451 1.23061 0.901437Z\"/>' +
-						   '</svg>';
+			'<path d=\"M1.23061 0.901437C0.872656 1.2594 0.872656 1.83984 1.23061 2.1978L5.71522 6.67791C6.43123 7.39328 7.59155 7.393 8.30728 6.67736L12.7901 2.1945C13.1481 1.83654 13.1481 1.2561 12.7901 0.898128C12.4321 0.540142 11.8517 0.540142 11.4937 0.898128L7.65691 4.73495C7.29895 5.093 6.71851 5.093 6.36056 4.73495L2.52696 0.901437C2.16901 0.543451 1.58867 0.543451 1.23061 0.901437Z\"/>' +
+			'</svg>';
 		jQuery('.select2-selection__arrow').html(dropdownIcon);
 	}
 
-	jQuery(document).on('gform_post_render', function(){
+	jQuery(document).on('gform_post_render', function () {
 		Autoart_GF_Select2();
 	});
 
@@ -1135,8 +1126,8 @@
 	function AutoArtCopyrightCurrentYear() {
 		var searchTerm = '{Year}',
 			replaceWith = new Date().getFullYear();
-		
-		$('.bt-elwg-site-copyright').each( function() {
+
+		$('.bt-elwg-site-copyright').each(function () {
 			this.innerHTML = this.innerHTML.replace(searchTerm, replaceWith);
 		});
 	}
@@ -1163,7 +1154,7 @@
 		AutoArtLoadTab();
 		Autoart_GF_Select2();
 		AutoArtCopyrightCurrentYear();
-
+		AutoArtCarButtonStatus();
 	});
 
 	jQuery(window).on('resize', function () {

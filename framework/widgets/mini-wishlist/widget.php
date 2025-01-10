@@ -83,15 +83,10 @@ class Widget_MiniWishlist extends Widget_Base {
 		$carwishlist = '';
 		$car_ids = array();
 
-		if(isset($_COOKIE['carwishlistcookie']) && !empty($_COOKIE['carwishlistcookie'])) {
-			$carwishlist = $_COOKIE['carwishlistcookie'];
-			$car_ids = explode(',', $carwishlist);
-		}
-
 		?>
 		<div class="bt-elwg-mini-wishlist">
 			<form id="bt-mini-wishlist-form" class="bt-mini-wishlist-form" action="" method="post">
-				<input type="hidden" class="bt-carwishlistcookie" name="carwishlistcookie" value="<?php echo esc_attr($carwishlist); ?>">
+				<input type="hidden" class="bt-carwishlistlocal" name="carwishlistlocal" value="">
 
 				<div class="bt-mini-wishlist">
 					<div class="bt-mini-wishlist--icon">
