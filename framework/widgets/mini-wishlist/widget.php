@@ -153,10 +153,10 @@ class Widget_MiniWishlist extends Widget_Base {
 								</div>
 								<div class="bt-mini-wishlist--link">
 									<?php
-										if(is_post_type_archive('car')) {
-											echo '<a href="/cars-wishlist/">' . esc_html__('View Your Wishlist', 'autoart') . '</a>';
-										} else {
+										if (is_page('cars-wishlist')) {
 											echo '<a href="/cars/">' . esc_html__('Back To All Cars', 'autoart') . '</a>';
+										} else {
+											echo '<a href="/cars-wishlist/">' . esc_html__('View Your Wishlist', 'autoart') . '</a>';
 										}
 									?>
 								</div>
