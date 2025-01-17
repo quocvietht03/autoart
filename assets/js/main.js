@@ -327,10 +327,9 @@
 	}
 
 	function AutoArtCarWishlistLoad() {
-		var wishlist_local = window.localStorage.getItem('carwishlistlocal'),
-			wishlist_arr = wishlist_local.split(','),
-			wishlist_count = wishlist_arr.length;
-
+		var wishlist_local = window.localStorage.getItem('carwishlistlocal');
+		var wishlist_arr = wishlist_local ? wishlist_local.split(',') : [];
+		var wishlist_count = wishlist_arr.length;
 		if (wishlist_local && $('.elementor-widget-bt-mini-wishlist').length > 0) {
 			$('.bt-mini-wishlist--count').text(wishlist_count);
 			$('.bt-carwishlistlocal').val(wishlist_local);
@@ -572,9 +571,9 @@
 	}
 
 	function AutoArtCarCompareLoad() {
-		var compare_local = window.localStorage.getItem('carcomparelocal'),
-			compare_arr = compare_local.split(','),
-			compare_count = compare_arr.length;
+		var compare_local = window.localStorage.getItem('carcomparelocal');
+		var	compare_arr = compare_local ? compare_local.split(',') : [];
+		var	compare_count = compare_arr.length;
 
 		if (compare_local && $('.elementor-widget-bt-mini-compare').length > 0) {
 			$('.bt-mini-compare--count').text(compare_count);
@@ -955,7 +954,7 @@
 
 							$('.bt-car-filter-form').submit();
 						});
-						
+
 					} else {
 						console.log('error');
 					}
