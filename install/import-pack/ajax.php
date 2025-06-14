@@ -39,37 +39,22 @@ if( ! function_exists( 'autoart_import_pack_import_action_ajax_callback' ) ) {
 
         extract( $_POST );
 
-        if( ! isset( $data['form_data'] ) ) {
+        if( ! isset( $data['form_data'] ) || ! isset( $data['form_data'][$data['action_type']] ) || ! function_exists( $data['form_data'][$data['action_type']] ) || $data['form_data'][$data['action_type']] !== 'autoart_import_pack_backup_site_skip_func' ) {
             wp_send_json( [
                 'success' => true,
                 'type' => 'error',
-                'message' => __( 'Error: Form data not defined!', 'autoart' ),
+                'message' => __( 'Demo import failed. Please open a ticket for support!', 'autoart' ),
             ] );
-        }
-
-        if( ! isset( $data['form_data'][$data['action_type']] ) ) {
+        } else {
+            $result = call_user_func( $data['form_data'][$data['action_type']] );
             wp_send_json( [
                 'success' => true,
-                'type' => 'error',
-                'message' => __( 'Error: Missing function ajax callback!', 'autoart' ),
+                'type' => 'success',
+                'result' => $result,
             ] );
         }
 
-        if( ! function_exists( $data['form_data'][$data['action_type']] ) ) {
-            wp_send_json( [
-                'success' => true,
-                'type' => 'error',
-                'message' => __( 'Error: Function ajax not defined!', 'autoart' ),
-            ] );
-        }
-
-        $result = call_user_func( $data['form_data'][$data['action_type']] );
-
-        wp_send_json( [
-            'success' => true,
-            'type' => 'success',
-            'result' => $result,
-        ] ); exit();
+        exit();
     }
 
     add_action( 'wp_ajax_autoart_import_pack_import_action_ajax_callback', 'autoart_import_pack_import_action_ajax_callback' );
