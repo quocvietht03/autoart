@@ -789,10 +789,7 @@
 
 		// Filter single tax
 		if ($('.bt-field-type-select').length > 0) {
-			$('.bt-field-type-select select').select2({
-				dropdownParent: $('.bt-field-type-select'),
-				minimumResultsForSearch: -1
-			});
+			$('.bt-field-type-select select').select2();
 
 			$('.bt-field-type-select select').on('change', function () {
 				$('.bt-car-filter-form .bt-car-current-page').val('');
